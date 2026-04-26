@@ -4,6 +4,7 @@ require("dotenv").config();
 
 const states = require("./data/states");
 const { calculateFederalIncomeTax } = require("./calculators/federalIncomeTax");
+const { calculateSelfEmploymentTax } = require("./calculators/selfEmploymentTax");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -71,6 +72,24 @@ app.post("/:stateSlug-income-tax-calculator", (req, res) => {
     pageTitle: `${state.name} Income Tax Calculator`,
     state,
     states,
+    result,
+    form: req.body
+  });
+});
+
+app.get("/self-employment-tax-calculator", (req, res) => {
+  res.render("self-employment-tax-calculator", {
+    pageTitle: "Self-Employment Tax Calculator",
+    result: null,
+    form: {}
+  });
+});
+
+app.post("/self-employment-tax-calculator", (req, res) => {
+  const result = calculateSelfEmploymentTax(req.body);
+
+  res.render("self-employment-tax-calculator", {
+    pageTitle: "Self-Employment Tax Calculator",
     result,
     form: req.body
   });
