@@ -101,6 +101,114 @@
     </section>
   </main>
 
+  <section class="container content seo-content">
+  <p class="eyebrow dark"><%= state.name %> Tax Calculator Guide</p>
+  <h2>About this <%= state.name %> income tax calculator</h2>
+
+  <% if (state.hasIncomeTax) { %>
+    <p>
+      This <%= state.name %> income tax calculator page helps users estimate federal income tax
+      while reviewing state-specific tax information. State income tax rules can vary by filing
+      status, deductions, credits, taxable income, and local rules, so the state estimate should
+      be treated as a planning estimate only.
+    </p>
+  <% } else { %>
+    <p>
+      <%= state.name %> does not have a broad-based state income tax. This page focuses on
+      estimating federal income tax while showing that the state income tax estimate is $0
+      for broad-based state income tax purposes.
+    </p>
+  <% } %>
+
+  <div class="seo-grid">
+    <div class="seo-mini-card">
+      <h3>Federal estimate</h3>
+      <p>
+        The calculator estimates federal taxable income, federal tax after credits,
+        refund or amount owed, and related federal tax details.
+      </p>
+    </div>
+
+    <div class="seo-mini-card">
+      <h3><%= state.name %> tax note</h3>
+      <% if (state.hasIncomeTax) { %>
+        <p>
+          <%= state.name %> has state-specific income tax rules that may require additional
+          deductions, exemptions, credits, or state tax tables.
+        </p>
+      <% } else { %>
+        <p>
+          <%= state.name %> does not have a broad-based state income tax, but residents may
+          still pay other taxes such as sales tax, property tax, or local taxes.
+        </p>
+      <% } %>
+    </div>
+
+    <div class="seo-mini-card">
+      <h3>Estimate only</h3>
+      <p>
+        Results are for educational planning only and should not be used as tax, legal,
+        accounting, or financial advice.
+      </p>
+    </div>
+  </div>
+
+  <h2><%= state.name %> income tax FAQ</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3>Does <%= state.name %> have state income tax?</h3>
+      <% if (state.hasIncomeTax) { %>
+        <p>
+          Yes. <%= state.name %> has state income tax rules that may apply to residents
+          and some nonresidents. The final amount can depend on income, filing status,
+          deductions, credits, and state-specific rules.
+        </p>
+      <% } else { %>
+        <p>
+          <%= state.name %> does not have a broad-based state income tax. However, residents
+          may still owe federal income tax and may pay other types of state or local taxes.
+        </p>
+      <% } %>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does this calculator include all <%= state.name %> tax rules?</h3>
+      <p>
+        No. This calculator is designed for simple estimates. It may not include every
+        state deduction, credit, exemption, local tax rule, or special tax situation.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why does my refund or amount owed change?</h3>
+      <p>
+        Your estimate changes when income, filing status, deductions, withholding, or credits
+        change. Withholding is especially important because it affects whether the calculator
+        shows a refund or an amount owed.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use this for tax filing?</h3>
+      <p>
+        No. This page is for planning and educational estimates only. For filing, use official
+        tax forms, tax software, or a qualified tax professional.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What should I check after using this calculator?</h3>
+      <p>
+        Review your filing status, income, withholding, credits, deductions, and any state-specific
+        tax rules that may apply to your situation.
+      </p>
+    </div>
+  </div>
+
+  <p class="last-updated">Last updated: April 2026</p>
+</section>
+
   <section class="container content">
     <h2>All State Calculators</h2>
     <div class="state-list">

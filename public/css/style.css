@@ -444,3 +444,75 @@ footer p {
 footer {
   margin-top: 50px;
 }
+
+/* SEO content and FAQ sections */
+.seo-content {
+  margin-top: 34px;
+}
+
+.seo-content h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  letter-spacing: -0.04em;
+  margin: 0 0 14px;
+  color: #0b1b46;
+}
+
+.seo-content h3 {
+  font-size: 1.2rem;
+  margin: 28px 0 8px;
+  color: #0b1b46;
+}
+
+.seo-content p {
+  color: #5a6b8a;
+  line-height: 1.85;
+  margin: 0 0 16px;
+}
+
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.seo-mini-card {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.seo-mini-card h3 {
+  margin-top: 0;
+}
+
+.faq-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.faq-item {
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.faq-item h3 {
+  margin-top: 0;
+}
+
+.last-updated {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .seo-grid {
+    grid-template-columns: 1fr;
+  }
+}
