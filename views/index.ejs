@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %></title>
+  <meta name="description" content="Free U.S. tax calculators for income tax, state income tax, sales tax, self-employment tax, and capital gains tax.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-icon">💵</span>
+        <span>MyTaxCalcs</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/income-tax-calculator">Income Tax</a>
+        <a href="/california-income-tax-calculator">States</a>
+        <a href="/disclaimer">Disclaimer</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content centered">
+      <p class="eyebrow">Free U.S. Tax Calculators</p>
+      <h1>Simple tax estimates start here</h1>
+      <p>
+        Free calculators for federal income tax, state tax, sales tax,
+        self-employment tax, and capital gains planning.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="/income-tax-calculator">Calculate Income Tax</a>
+        <a class="button secondary" href="#state-calculators">View State Calculators</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="card-grid feature-grid">
+      <a class="card feature-card" href="/income-tax-calculator">
+        <div class="icon-box">📊</div>
+        <h2>Income Tax</h2>
+        <p>Estimate federal taxable income, refund, amount owed, and effective tax rate.</p>
+        <span class="card-link">Start Calculating →</span>
+      </a>
+
+      <a class="card feature-card" href="/california-income-tax-calculator">
+        <div class="icon-box">🌉</div>
+        <span class="badge">POPULAR</span>
+        <h2>California Tax</h2>
+        <p>Estimate federal tax for California residents and prepare for state tax planning.</p>
+        <span class="card-link">Start Calculating →</span>
+      </a>
+
+      <a class="card feature-card" href="/texas-income-tax-calculator">
+        <div class="icon-box">⭐</div>
+        <h2>Texas Tax</h2>
+        <p>Estimate federal tax for Texas residents with no broad-based state income tax.</p>
+        <span class="card-link">Start Calculating →</span>
+      </a>
+
+      <a class="card feature-card" href="/florida-income-tax-calculator">
+        <div class="icon-box">☀️</div>
+        <h2>Florida Tax</h2>
+        <p>Estimate federal tax for Florida residents with no broad-based state income tax.</p>
+        <span class="card-link">Start Calculating →</span>
+      </a>
+    </section>
+
+    <section class="content" id="state-calculators">
+      <div class="section-heading">
+        <p class="eyebrow dark">All 50 States</p>
+        <h2>State Income Tax Calculators</h2>
+        <p>Choose your state to estimate federal tax and view state-specific tax calculator pages.</p>
+      </div>
+
+      <div class="state-list">
+        <% states.forEach(function(state) { %>
+          <a href="/<%= state.slug %>-income-tax-calculator"><%= state.name %></a>
+        <% }) %>
+      </div>
+    </section>
+
+    <section class="content disclaimer-box">
+      <h2>Tax estimate disclaimer</h2>
+      <p>
+        MyTaxCalcs provides estimates for educational purposes only. It is not tax,
+        legal, accounting, or financial advice. Consult a qualified tax professional
+        before making tax decisions.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms">Terms</a>
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/contact">Contact</a>
+    <p>© 2026 MyTaxCalcs.com</p>
+  </footer>
+</body>
+</html>

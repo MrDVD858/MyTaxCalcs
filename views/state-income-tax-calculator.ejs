@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= state.name %> Income Tax Calculator | MyTaxCalcs</title>
+  <meta name="description" content="Use our free <%= state.name %> income tax calculator to estimate federal taxes and state tax information.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="small-header">
+    <nav class="nav">
+      <a href="/" class="logo">MyTaxCalcs</a>
+      <div>
+        <a href="/income-tax-calculator">Income Tax</a>
+        <a href="/contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container two-column">
+    <section class="card">
+      <h1><%= state.name %> Income Tax Calculator</h1>
+
+      <% if (state.hasIncomeTax) { %>
+        <p>Estimate your federal tax while detailed <%= state.name %> state tax formulas are added.</p>
+      <% } else { %>
+        <p><%= state.name %> does not have a broad-based state income tax. Use this page to estimate your federal income tax.</p>
+      <% } %>
+
+      <form method="POST" action="/<%= state.slug %>-income-tax-calculator" class="form">
+        <label>
+          Gross annual income
+          <input type="number" name="grossIncome" value="<%= form.grossIncome || '' %>" placeholder="85000" required>
+        </label>
+
+        <label>
+          Filing status
+          <select name="filingStatus">
+            <option value="single">Single</option>
+            <option value="marriedJoint">Married Filing Jointly</option>
+            <option value="marriedSeparate">Married Filing Separately</option>
+            <option value="headHousehold">Head of Household</option>
+          </select>
+        </label>
+
+        <label>
+          Deduction type
+          <select name="deductionType">
+            <option value="standard">Standard deduction</option>
+            <option value="itemized">Itemized deduction</option>
+          </select>
+        </label>
+
+        <label>
+          Itemized deduction amount
+          <input type="number" name="itemizedDeduction" value="<%= form.itemizedDeduction || '' %>" placeholder="0">
+        </label>
+
+        <label>
+          Federal tax withheld
+          <input type="number" name="federalWithheld" value="<%= form.federalWithheld || '' %>" placeholder="12000">
+        </label>
+
+        <label>
+          Tax credits
+          <input type="number" name="taxCredits" value="<%= form.taxCredits || '' %>" placeholder="0">
+        </label>
+
+        <button type="submit">Calculate Estimate</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Estimated Results</h2>
+
+      <% if (!result) { %>
+        <p class="muted">Enter your information to see your estimate.</p>
+      <% } else { %>
+        <div class="results">
+          <p><span>Taxable income:</span> <strong>$<%= Math.round(result.taxableIncome).toLocaleString() %></strong></p>
+          <p><span>Federal tax after credits:</span> <strong>$<%= Math.round(result.federalTaxAfterCredits).toLocaleString() %></strong></p>
+
+          <% if (state.hasIncomeTax) { %>
+            <p><span><%= state.name %> state tax:</span> <strong>Coming soon</strong></p>
+          <% } else { %>
+            <p><span><%= state.name %> state income tax:</span> <strong>$0</strong></p>
+          <% } %>
+
+          <% if (result.refundOrOwed >= 0) { %>
+            <p><span>Estimated federal refund:</span> <strong>$<%= Math.round(result.refundOrOwed).toLocaleString() %></strong></p>
+          <% } else { %>
+            <p><span>Estimated federal amount owed:</span> <strong>$<%= Math.abs(Math.round(result.refundOrOwed)).toLocaleString() %></strong></p>
+          <% } %>
+        </div>
+      <% } %>
+
+      <p class="disclaimer">Estimate only. Not tax, legal, accounting, or financial advice.</p>
+    </section>
+  </main>
+
+  <section class="container content">
+    <h2>All State Calculators</h2>
+    <div class="state-list">
+      <% states.forEach(function(item) { %>
+        <a href="/<%= item.slug %>-income-tax-calculator"><%= item.name %></a>
+      <% }) %>
+    </div>
+  </section>
+
+  <footer>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms">Terms</a>
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/contact">Contact</a>
+    <p>© 2026 MyTaxCalcs.com</p>
+  </footer>
+</body>
+</html>
