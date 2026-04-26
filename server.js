@@ -92,6 +92,13 @@ app.get("/contact", (req, res) => {
   res.render("contact", { pageTitle: "Contact" });
 });
 
+app.get("/about", (req, res) => {
+  res.render("about", {
+    pageTitle: "About MyTaxCalcs"
+  });
+});
+
+
 app.listen(PORT, () => {
   console.log(`MyTaxCalcs running at http://localhost:${PORT}`);
 });
