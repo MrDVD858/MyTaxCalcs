@@ -9,6 +9,7 @@ const staticUrls = [
   "/income-tax-calculator",
   "/self-employment-tax-calculator",
   "/capital-gains-tax-calculator",
+  "/sales-tax-calculator",
   "/about",
   "/contact",
   "/privacy-policy",

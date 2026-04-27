@@ -3,6 +3,7 @@ const path = require("path");
 require("dotenv").config();
 
 const states = require("./data/states");
+const { calculateSalesTax } = require("./calculators/salesTax");
 const { calculateFederalIncomeTax } = require("./calculators/federalIncomeTax");
 const { calculateSelfEmploymentTax } = require("./calculators/selfEmploymentTax");
 const { calculateCapitalGainsTax } = require("./calculators/capitalGainsTax");
@@ -109,6 +110,24 @@ app.post("/capital-gains-tax-calculator", (req, res) => {
 
   res.render("capital-gains-tax-calculator", {
     pageTitle: "Capital Gains Tax Calculator",
+    result,
+    form: req.body
+  });
+});
+
+app.get("/sales-tax-calculator", (req, res) => {
+  res.render("sales-tax-calculator", {
+    pageTitle: "Sales Tax Calculator",
+    result: null,
+    form: {}
+  });
+});
+
+app.post("/sales-tax-calculator", (req, res) => {
+  const result = calculateSalesTax(req.body);
+
+  res.render("sales-tax-calculator", {
+    pageTitle: "Sales Tax Calculator",
     result,
     form: req.body
   });

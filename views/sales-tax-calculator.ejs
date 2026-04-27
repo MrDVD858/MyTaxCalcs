@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %> | MyTaxCalcs</title>
+  <meta name="description" content="Use the free sales tax calculator to estimate sales tax, combined tax rate, taxable amount, discounts, and final purchase total.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="google-site-verification" content="TT2j7SglafccBK-Nfk4l1XVIDXEJdSmyQJf2wL9QY0o" />
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="small-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-icon">💵</span>
+        <span>MyTaxCalcs</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/income-tax-calculator">Income Tax</a>
+        <a href="/self-employment-tax-calculator">Self-Employment</a>
+        <a href="/capital-gains-tax-calculator">Capital Gains</a>
+        <a href="/sales-tax-calculator">Sales Tax</a>
+        <a href="/about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container two-column">
+    <section class="card">
+      <h1>Sales Tax Calculator</h1>
+      <p>Estimate sales tax and final purchase total using a state rate, local rate, and optional discount.</p>
+
+      <form method="POST" action="/sales-tax-calculator" class="form">
+        <label>
+          Purchase amount
+          <input type="number" name="purchaseAmount" value="<%= form.purchaseAmount || '' %>" placeholder="250" min="0" step="0.01" required>
+        </label>
+
+        <label>
+          Discount amount
+          <input type="number" name="discountAmount" value="<%= form.discountAmount || '' %>" placeholder="0" min="0" step="0.01">
+        </label>
+
+        <label>
+          State sales tax rate (%)
+          <input type="number" name="stateTaxRate" value="<%= form.stateTaxRate || '' %>" placeholder="7.25" min="0" step="0.001" required>
+        </label>
+
+        <label>
+          Local/additional tax rate (%)
+          <input type="number" name="localTaxRate" value="<%= form.localTaxRate || '' %>" placeholder="1.00" min="0" step="0.001">
+        </label>
+
+        <button type="submit">Calculate Sales Tax</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Estimated Results</h2>
+
+      <% if (!result) { %>
+        <p class="muted">Enter a purchase amount and sales tax rate to estimate your total.</p>
+      <% } else { %>
+        <div class="results">
+          <p><span>Purchase amount:</span> <strong>$<%= result.purchaseAmount.toFixed(2) %></strong></p>
+          <p><span>Discount amount:</span> <strong>$<%= result.discountAmount.toFixed(2) %></strong></p>
+          <p><span>Taxable amount:</span> <strong>$<%= result.taxableAmount.toFixed(2) %></strong></p>
+          <p><span>State sales tax rate:</span> <strong><%= result.stateTaxRate.toFixed(3) %>%</strong></p>
+          <p><span>Local/additional rate:</span> <strong><%= result.localTaxRate.toFixed(3) %>%</strong></p>
+          <p><span>Combined tax rate:</span> <strong><%= result.combinedTaxRate.toFixed(3) %>%</strong></p>
+          <p><span>Estimated sales tax:</span> <strong>$<%= result.salesTax.toFixed(2) %></strong></p>
+          <p><span>Final total:</span> <strong>$<%= result.finalTotal.toFixed(2) %></strong></p>
+        </div>
+      <% } %>
+
+      <p class="disclaimer">Estimate only. Actual sales tax may vary by location, item type, exemption, and local rules.</p>
+    </section>
+  </main>
+
+  <section class="container content seo-content">
+    <p class="eyebrow dark">Sales Tax Guide</p>
+    <h2>How this sales tax calculator works</h2>
+    <p>
+      This calculator estimates sales tax by applying a combined tax rate to the taxable purchase amount.
+      You can enter a state sales tax rate, local or additional tax rate, and optional discount to estimate
+      the final purchase total.
+    </p>
+
+    <div class="seo-grid">
+      <div class="seo-mini-card">
+        <h3>Taxable amount</h3>
+        <p>
+          The taxable amount is the purchase amount after subtracting the discount amount entered.
+          This calculator applies the tax rate to that taxable amount.
+        </p>
+      </div>
+
+      <div class="seo-mini-card">
+        <h3>Combined rate</h3>
+        <p>
+          The combined rate is the state sales tax rate plus any local, city, county, or additional rate
+          you enter.
+        </p>
+      </div>
+
+      <div class="seo-mini-card">
+        <h3>Final total</h3>
+        <p>
+          The final total is the taxable amount plus the estimated sales tax. Actual totals may vary
+          depending on local rules and item exemptions.
+        </p>
+      </div>
+    </div>
+
+    <h2>Sales tax FAQ</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What is sales tax?</h3>
+        <p>
+          Sales tax is a tax applied to certain purchases. The rate can vary by state, city,
+          county, district, and item type.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does this calculator automatically know my local tax rate?</h3>
+        <p>
+          No. This version uses the rates you enter. That helps keep the calculator flexible
+          because sales tax rates can vary by exact location.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is a combined sales tax rate?</h3>
+        <p>
+          A combined sales tax rate is the total of the state rate plus any local or additional
+          rates that apply to the purchase.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Are all purchases taxable?</h3>
+        <p>
+          No. Some items may be exempt, partially exempt, or taxed differently depending on the state
+          and local rules. Examples may include groceries, medicine, clothing, or services.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I use this for business tax filing?</h3>
+        <p>
+          No. This calculator is for educational estimates only. Businesses should use official state
+          and local tax guidance, tax software, or a qualified tax professional.
+        </p>
+      </div>
+    </div>
+
+    <p class="last-updated">Last updated: April 2026</p>
+  </section>
+
+  <footer>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms">Terms</a>
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/contact">Contact</a>
+    <p>© 2026 MyTaxCalcs.com</p>
+  </footer>
+</body>
+</html>
