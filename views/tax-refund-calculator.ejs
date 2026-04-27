@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %> | MyTaxCalcs</title>
+  <meta name="description" content="Use the free tax refund calculator to estimate your federal refund or amount owed based on income, deductions, credits, withholding, and estimated payments.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="google-site-verification" content="TT2j7SglafccBK-Nfk4l1XVIDXEJdSmyQJf2wL9QY0o" />
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="small-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-icon">💵</span>
+        <span>MyTaxCalcs</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/income-tax-calculator">Income Tax</a>
+        <a href="/tax-refund-calculator">Tax Refund</a>
+        <a href="/self-employment-tax-calculator">Self-Employment</a>
+        <a href="/capital-gains-tax-calculator">Capital Gains</a>
+        <a href="/sales-tax-calculator">Sales Tax</a>
+        <a href="/about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container two-column">
+    <section class="card">
+      <h1>Tax Refund Calculator</h1>
+      <p>Estimate whether you may receive a federal tax refund or owe additional federal tax.</p>
+
+      <form method="POST" action="/tax-refund-calculator" class="form">
+        <label>
+          Gross annual income
+          <input type="number" name="grossIncome" value="<%= form.grossIncome || '' %>" placeholder="85000" min="0" step="0.01" required>
+        </label>
+
+        <label>
+          Filing status
+          <select name="filingStatus">
+            <option value="single" <%= form.filingStatus === "single" ? "selected" : "" %>>Single</option>
+            <option value="marriedJoint" <%= form.filingStatus === "marriedJoint" ? "selected" : "" %>>Married Filing Jointly</option>
+            <option value="marriedSeparate" <%= form.filingStatus === "marriedSeparate" ? "selected" : "" %>>Married Filing Separately</option>
+            <option value="headHousehold" <%= form.filingStatus === "headHousehold" ? "selected" : "" %>>Head of Household</option>
+          </select>
+        </label>
+
+        <label>
+          Deduction type
+          <select name="deductionType">
+            <option value="standard" <%= !form.deductionType || form.deductionType === "standard" ? "selected" : "" %>>Standard deduction</option>
+            <option value="itemized" <%= form.deductionType === "itemized" ? "selected" : "" %>>Itemized deduction</option>
+          </select>
+        </label>
+
+        <label>
+          Itemized deduction amount
+          <input type="number" name="itemizedDeduction" value="<%= form.itemizedDeduction || '' %>" placeholder="0" min="0" step="0.01">
+        </label>
+
+        <label>
+          Federal tax withheld
+          <input type="number" name="federalWithheld" value="<%= form.federalWithheld || '' %>" placeholder="12000" min="0" step="0.01">
+        </label>
+
+        <label>
+          Estimated tax payments
+          <input type="number" name="estimatedPayments" value="<%= form.estimatedPayments || '' %>" placeholder="0" min="0" step="0.01">
+        </label>
+
+        <label>
+          Other tax payments
+          <input type="number" name="otherPayments" value="<%= form.otherPayments || '' %>" placeholder="0" min="0" step="0.01">
+        </label>
+
+        <label>
+          Non-refundable tax credits
+          <input type="number" name="nonRefundableCredits" value="<%= form.nonRefundableCredits || '' %>" placeholder="0" min="0" step="0.01">
+        </label>
+
+        <label>
+          Refundable tax credits
+          <input type="number" name="refundableCredits" value="<%= form.refundableCredits || '' %>" placeholder="0" min="0" step="0.01">
+        </label>
+
+        <button type="submit">Calculate Refund Estimate</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Estimated Results</h2>
+
+      <% if (!result) { %>
+        <p class="muted">Enter your income, withholding, payments, and credits to estimate your refund or amount owed.</p>
+      <% } else { %>
+        <div class="results">
+          <p><span>Tax year:</span> <strong><%= result.taxYear %></strong></p>
+          <p><span>Gross income:</span> <strong>$<%= Math.round(result.grossIncome).toLocaleString() %></strong></p>
+          <p><span>Deduction:</span> <strong>$<%= Math.round(result.deduction).toLocaleString() %></strong></p>
+          <p><span>Taxable income:</span> <strong>$<%= Math.round(result.taxableIncome).toLocaleString() %></strong></p>
+          <p><span>Federal tax before credits:</span> <strong>$<%= Math.round(result.federalTaxBeforeCredits).toLocaleString() %></strong></p>
+          <p><span>Non-refundable credits:</span> <strong>$<%= Math.round(result.nonRefundableCredits).toLocaleString() %></strong></p>
+          <p><span>Tax after non-refundable credits:</span> <strong>$<%= Math.round(result.federalTaxAfterNonRefundableCredits).toLocaleString() %></strong></p>
+          <p><span>Federal tax withheld:</span> <strong>$<%= Math.round(result.federalWithheld).toLocaleString() %></strong></p>
+          <p><span>Estimated tax payments:</span> <strong>$<%= Math.round(result.estimatedPayments).toLocaleString() %></strong></p>
+          <p><span>Other payments:</span> <strong>$<%= Math.round(result.otherPayments).toLocaleString() %></strong></p>
+          <p><span>Refundable credits:</span> <strong>$<%= Math.round(result.refundableCredits).toLocaleString() %></strong></p>
+          <p><span>Total payments and refundable credits:</span> <strong>$<%= Math.round(result.totalPayments).toLocaleString() %></strong></p>
+
+          <% if (result.refundOrOwed >= 0) { %>
+            <p><span>Estimated refund:</span> <strong>$<%= Math.round(result.refundOrOwed).toLocaleString() %></strong></p>
+          <% } else { %>
+            <p><span>Estimated amount owed:</span> <strong>$<%= Math.abs(Math.round(result.refundOrOwed)).toLocaleString() %></strong></p>
+          <% } %>
+
+          <p><span>Effective tax rate:</span> <strong><%= (result.effectiveTaxRate * 100).toFixed(1) %>%</strong></p>
+          <p><span>Marginal tax rate:</span> <strong><%= (result.marginalRate * 100).toFixed(1) %>%</strong></p>
+        </div>
+      <% } %>
+
+      <p class="disclaimer">Estimate only. Not tax, legal, accounting, or financial advice.</p>
+    </section>
+  </main>
+
+  <section class="container content seo-content">
+    <p class="eyebrow dark">Tax Refund Guide</p>
+    <h2>How this tax refund calculator works</h2>
+    <p>
+      This tax refund calculator estimates whether you may receive a federal refund or owe
+      additional tax by comparing your estimated federal tax liability with your withholding,
+      estimated payments, other payments, and refundable credits.
+    </p>
+
+    <div class="seo-grid">
+      <div class="seo-mini-card">
+        <h3>Refund estimate</h3>
+        <p>
+          A refund may occur when total tax payments and refundable credits are greater than
+          your estimated federal tax after non-refundable credits.
+        </p>
+      </div>
+
+      <div class="seo-mini-card">
+        <h3>Amount owed estimate</h3>
+        <p>
+          You may owe additional tax if your estimated federal tax is greater than your withholding,
+          estimated payments, other payments, and refundable credits.
+        </p>
+      </div>
+
+      <div class="seo-mini-card">
+        <h3>Credits and payments</h3>
+        <p>
+          Non-refundable credits can reduce your tax to zero. Refundable credits and payments can
+          increase your refund estimate.
+        </p>
+      </div>
+    </div>
+
+    <h2>Tax refund FAQ</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What is a tax refund?</h3>
+        <p>
+          A tax refund is money returned to you when your tax payments and refundable credits are
+          greater than your final tax liability.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Why might I owe taxes instead of getting a refund?</h3>
+        <p>
+          You may owe taxes if not enough was withheld from your paycheck, if you had self-employment
+          income, investment income, fewer credits, or other taxable income without enough payments.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the difference between non-refundable and refundable credits?</h3>
+        <p>
+          A non-refundable credit can reduce your tax liability, but generally does not create a refund
+          by itself. A refundable credit may increase your refund even if your tax is already zero.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does this calculator include state refunds?</h3>
+        <p>
+          No. This calculator focuses on federal refund estimates. State tax refunds depend on each
+          state’s tax rules, withholding, credits, and filing requirements.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I use this to file my taxes?</h3>
+        <p>
+          No. This calculator is for educational estimates only. For filing, use official tax forms,
+          tax software, or a qualified tax professional.
+        </p>
+      </div>
+    </div>
+
+    <p class="last-updated">Last updated: April 2026</p>
+  </section>
+
+  <footer>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms">Terms</a>
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/contact">Contact</a>
+    <p>© 2026 MyTaxCalcs.com</p>
+  </footer>
+</body>
+</html>

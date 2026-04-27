@@ -3,6 +3,7 @@ const path = require("path");
 require("dotenv").config();
 
 const states = require("./data/states");
+const { calculateTaxRefund } = require("./calculators/taxRefund");
 const { calculatePayrollTax } = require("./calculators/payrollTax");
 const { calculateSalesTax } = require("./calculators/salesTax");
 const { calculateFederalIncomeTax } = require("./calculators/federalIncomeTax");
@@ -152,6 +153,23 @@ app.post("/payroll-tax-calculator", (req, res) => {
   });
 });
 
+app.get("/tax-refund-calculator", (req, res) => {
+  res.render("tax-refund-calculator", {
+    pageTitle: "Tax Refund Calculator",
+    result: null,
+    form: {}
+  });
+});
+
+app.post("/tax-refund-calculator", (req, res) => {
+  const result = calculateTaxRefund(req.body);
+
+  res.render("tax-refund-calculator", {
+    pageTitle: "Tax Refund Calculator",
+    result,
+    form: req.body
+  });
+});
 
 app.get("/privacy-policy", (req, res) => {
   res.render("privacy-policy", { pageTitle: "Privacy Policy" });
