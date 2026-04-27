@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %> | MyTaxCalcs</title>
+  <meta name="description" content="Use the free capital gains tax calculator to estimate short-term and long-term capital gains tax, net investment income tax, and total estimated tax.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="google-site-verification" content="TT2j7SglafccBK-Nfk4l1XVIDXEJdSmyQJf2wL9QY0o" />
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="small-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-icon">💵</span>
+        <span>MyTaxCalcs</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/income-tax-calculator">Income Tax</a>
+        <a href="/self-employment-tax-calculator">Self-Employment</a>
+        <a href="/capital-gains-tax-calculator">Capital Gains</a>
+        <a href="/california-income-tax-calculator">States</a>
+        <a href="/about">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container two-column">
+    <section class="card">
+      <h1>Capital Gains Tax Calculator</h1>
+      <p>Estimate federal tax on the profit from selling stocks, crypto, real estate, or other assets.</p>
+
+      <form method="POST" action="/capital-gains-tax-calculator" class="form">
+        <label>
+          Filing status
+          <select name="filingStatus">
+            <option value="single" <%= form.filingStatus === "single" ? "selected" : "" %>>Single</option>
+            <option value="marriedJoint" <%= form.filingStatus === "marriedJoint" ? "selected" : "" %>>Married Filing Jointly</option>
+            <option value="marriedSeparate" <%= form.filingStatus === "marriedSeparate" ? "selected" : "" %>>Married Filing Separately</option>
+            <option value="headHousehold" <%= form.filingStatus === "headHousehold" ? "selected" : "" %>>Head of Household</option>
+          </select>
+        </label>
+
+        <label>
+          Holding period
+          <select name="holdingPeriod">
+            <option value="long" <%= form.holdingPeriod === "long" ? "selected" : "" %>>Long-term, more than 1 year</option>
+            <option value="short" <%= form.holdingPeriod === "short" ? "selected" : "" %>>Short-term, 1 year or less</option>
+          </select>
+        </label>
+
+        <label>
+          Sale price
+          <input type="number" name="salePrice" value="<%= form.salePrice || '' %>" placeholder="150000" min="0" required>
+        </label>
+
+        <label>
+          Purchase price / cost basis
+          <input type="number" name="purchasePrice" value="<%= form.purchasePrice || '' %>" placeholder="80000" min="0" required>
+        </label>
+
+        <label>
+          Selling costs
+          <input type="number" name="sellingCosts" value="<%= form.sellingCosts || '' %>" placeholder="5000" min="0">
+        </label>
+
+        <label>
+          Capital improvements
+          <input type="number" name="improvements" value="<%= form.improvements || '' %>" placeholder="0" min="0">
+        </label>
+
+        <label>
+          Capital losses to offset gains
+          <input type="number" name="capitalLosses" value="<%= form.capitalLosses || '' %>" placeholder="0" min="0">
+        </label>
+
+        <label>
+          Other taxable income
+          <input type="number" name="otherTaxableIncome" value="<%= form.otherTaxableIncome || '' %>" placeholder="85000" min="0">
+        </label>
+
+        <button type="submit">Calculate Capital Gains Tax</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Estimated Results</h2>
+
+      <% if (!result) { %>
+        <p class="muted">Enter sale, basis, income, and holding period information to estimate capital gains tax.</p>
+      <% } else { %>
+        <div class="results">
+          <p><span>Tax year:</span> <strong><%= result.taxYear %></strong></p>
+          <p><span>Sale price:</span> <strong>$<%= Math.round(result.salePrice).toLocaleString() %></strong></p>
+          <p><span>Adjusted basis:</span> <strong>$<%= Math.round(result.adjustedBasis).toLocaleString() %></strong></p>
+          <p><span>Gross capital gain:</span> <strong>$<%= Math.round(result.grossGain).toLocaleString() %></strong></p>
+          <p><span>Capital losses:</span> <strong>$<%= Math.round(result.capitalLosses).toLocaleString() %></strong></p>
+          <p><span>Net taxable gain:</span> <strong>$<%= Math.round(result.netGain).toLocaleString() %></strong></p>
+          <p><span>Estimated capital gains tax:</span> <strong>$<%= Math.round(result.estimatedCapitalGainsTax).toLocaleString() %></strong></p>
+          <p><span>Estimated NIIT:</span> <strong>$<%= Math.round(result.estimatedNIIT).toLocaleString() %></strong></p>
+          <p><span>Total estimated tax:</span> <strong>$<%= Math.round(result.totalEstimatedTax).toLocaleString() %></strong></p>
+          <p><span>Effective tax rate on gain:</span> <strong><%= (result.effectiveCapitalGainsRate * 100).toFixed(1) %>%</strong></p>
+        </div>
+
+        <p class="state-message"><%= result.taxMethod %></p>
+      <% } %>
+
+      <p class="disclaimer">Estimate only. Not tax, legal, accounting, investment, or financial advice.</p>
+    </section>
+  </main>
+
+  <section class="container content seo-content">
+    <p class="eyebrow dark">Capital Gains Tax Guide</p>
+    <h2>How this capital gains tax calculator works</h2>
+    <p>
+      This calculator estimates the federal tax that may apply when you sell an asset for more
+      than your adjusted basis. It can be used for planning around stocks, crypto, real estate,
+      business property, or other assets, but it does not replace official tax software or a tax professional.
+    </p>
+
+    <div class="seo-grid">
+      <div class="seo-mini-card">
+        <h3>Cost basis</h3>
+        <p>
+          Cost basis generally starts with what you paid for the asset. This calculator also lets
+          you add selling costs and capital improvements to estimate adjusted basis.
+        </p>
+      </div>
+
+      <div class="seo-mini-card">
+        <h3>Short-term gains</h3>
+        <p>
+          Short-term gains are generally gains on assets held for one year or less and are estimated
+          using ordinary federal income tax brackets.
+        </p>
+      </div>
+
+      <div class="seo-mini-card">
+        <h3>Long-term gains</h3>
+        <p>
+          Long-term gains are generally gains on assets held for more than one year and may qualify
+          for lower federal capital gains tax rates.
+        </p>
+      </div>
+    </div>
+
+    <h2>Capital gains tax FAQ</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>What is capital gains tax?</h3>
+        <p>
+          Capital gains tax is tax on profit from selling an asset for more than its adjusted basis.
+          The tax treatment can depend on the asset type, holding period, filing status, income, and losses.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the difference between short-term and long-term capital gains?</h3>
+        <p>
+          Short-term gains generally apply to assets held for one year or less. Long-term gains generally
+          apply to assets held for more than one year and may qualify for lower federal tax rates.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Does this calculator include state capital gains tax?</h3>
+        <p>
+          No. This calculator focuses on federal estimates. Some states tax capital gains as ordinary income,
+          while others may have different rules or no state income tax.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is Net Investment Income Tax?</h3>
+        <p>
+          Net Investment Income Tax is an additional federal tax that may apply to certain investment income
+          when income is above specific thresholds. This calculator includes a simplified NIIT estimate.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I use this calculator for tax filing?</h3>
+        <p>
+          No. This calculator is for educational planning only. For filing, use official tax forms,
+          tax software, or a qualified tax professional.
+        </p>
+      </div>
+    </div>
+
+    <p class="last-updated">Last updated: April 2026</p>
+  </section>
+
+  <footer>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms">Terms</a>
+    <a href="/disclaimer">Disclaimer</a>
+    <a href="/contact">Contact</a>
+    <p>© 2026 MyTaxCalcs.com</p>
+  </footer>
+</body>
+</html>

@@ -5,6 +5,7 @@ require("dotenv").config();
 const states = require("./data/states");
 const { calculateFederalIncomeTax } = require("./calculators/federalIncomeTax");
 const { calculateSelfEmploymentTax } = require("./calculators/selfEmploymentTax");
+const { calculateCapitalGainsTax } = require("./calculators/capitalGainsTax");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -90,6 +91,24 @@ app.post("/self-employment-tax-calculator", (req, res) => {
 
   res.render("self-employment-tax-calculator", {
     pageTitle: "Self-Employment Tax Calculator",
+    result,
+    form: req.body
+  });
+});
+
+app.get("/capital-gains-tax-calculator", (req, res) => {
+  res.render("capital-gains-tax-calculator", {
+    pageTitle: "Capital Gains Tax Calculator",
+    result: null,
+    form: {}
+  });
+});
+
+app.post("/capital-gains-tax-calculator", (req, res) => {
+  const result = calculateCapitalGainsTax(req.body);
+
+  res.render("capital-gains-tax-calculator", {
+    pageTitle: "Capital Gains Tax Calculator",
     result,
     form: req.body
   });

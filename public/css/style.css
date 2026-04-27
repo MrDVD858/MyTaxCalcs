@@ -85,7 +85,7 @@ a {
   min-height: 420px;
   display: grid;
   place-items: center;
-  padding: 80px 24px 145px;
+  padding: 110px 24px 145px;
 }
 
 .hero-content {
@@ -163,7 +163,7 @@ button {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
