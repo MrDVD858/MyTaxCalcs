@@ -3,6 +3,7 @@ const path = require("path");
 require("dotenv").config();
 
 const states = require("./data/states");
+const { calculatePayrollTax } = require("./calculators/payrollTax");
 const { calculateSalesTax } = require("./calculators/salesTax");
 const { calculateFederalIncomeTax } = require("./calculators/federalIncomeTax");
 const { calculateSelfEmploymentTax } = require("./calculators/selfEmploymentTax");
@@ -132,6 +133,25 @@ app.post("/sales-tax-calculator", (req, res) => {
     form: req.body
   });
 });
+
+app.get("/payroll-tax-calculator", (req, res) => {
+  res.render("payroll-tax-calculator", {
+    pageTitle: "Payroll Tax Calculator",
+    result: null,
+    form: {}
+  });
+});
+
+app.post("/payroll-tax-calculator", (req, res) => {
+  const result = calculatePayrollTax(req.body);
+
+  res.render("payroll-tax-calculator", {
+    pageTitle: "Payroll Tax Calculator",
+    result,
+    form: req.body
+  });
+});
+
 
 app.get("/privacy-policy", (req, res) => {
   res.render("privacy-policy", { pageTitle: "Privacy Policy" });
