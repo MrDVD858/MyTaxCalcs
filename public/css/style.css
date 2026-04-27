@@ -548,3 +548,11 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+.calculators-directory {
+  margin-top: 34px;
+}
+
+.calculators-directory .feature-card {
+  min-height: 260px;
+}

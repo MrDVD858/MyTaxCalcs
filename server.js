@@ -171,6 +171,12 @@ app.post("/tax-refund-calculator", (req, res) => {
   });
 });
 
+app.get("/calculators", (req, res) => {
+  res.render("calculators", {
+    pageTitle: "Tax Calculators"
+  });
+});
+
 app.get("/privacy-policy", (req, res) => {
   res.render("privacy-policy", { pageTitle: "Privacy Policy" });
 });

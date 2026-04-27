@@ -6,6 +6,7 @@ const baseUrl = "https://mytaxcalcs.com";
 
 const staticUrls = [
   "/",
+  "/calculators",
   "/income-tax-calculator",
   "/tax-refund-calculator",
   "/self-employment-tax-calculator",
