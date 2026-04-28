@@ -91,6 +91,20 @@
         <span class="card-link">View State Calculators →</span>
       </a>
     </section>
+  
+    <section class="page-card state-directory-section" id="state-calculators">
+      <p class="eyebrow dark">All 50 States</p>
+        <h2>State income tax calculators</h2>
+        <p>
+        Choose your state to estimate federal tax and review state-specific income tax information.
+        </p>
+
+        <div class="state-list">
+        <% states.forEach(function(state) { %>
+        <a href="/<%= state.slug %>-income-tax-calculator"><%= state.name %></a>
+        <% }) %>
+      </div>
+    </section>
   </main>
 
   <footer>

@@ -173,7 +173,8 @@ app.post("/tax-refund-calculator", (req, res) => {
 
 app.get("/calculators", (req, res) => {
   res.render("calculators", {
-    pageTitle: "Tax Calculators"
+    pageTitle: "Tax Calculators",
+    states
   });
 });
 
