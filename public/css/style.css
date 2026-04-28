@@ -556,3 +556,59 @@ footer {
 .calculators-directory .feature-card {
   min-height: 260px;
 }
+
+/* Sitewide footer */
+.site-footer {
+  background: #111426;
+  color: #ffffff;
+  padding: 42px 24px 24px;
+  margin-top: 60px;
+}
+
+.footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.footer-brand h2,
+.footer-column h3 {
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.footer-brand p,
+.footer-column p,
+.footer-bottom {
+  color: #b8c0d9;
+  line-height: 1.7;
+}
+
+.footer-column a {
+  display: block;
+  color: #dbe4ff;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-column a:hover {
+  color: #22c55e;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 18px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
