@@ -247,6 +247,14 @@ ${urls}
   res.send(xml);
 });
 
+// Add this route to server.js before app.listen()
+// Place it near the sitemap route
+
+app.get("/ads.txt", (req, res) => {
+  res.header("Content-Type", "text/plain");
+  res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
+});
+
 app.listen(PORT, () => {
   console.log(`MyTaxCalcs running at http://localhost:${PORT}`);
 });
