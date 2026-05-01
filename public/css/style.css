@@ -25,7 +25,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   color: var(--text);
   background: var(--light);
   line-height: 1.6;
@@ -57,7 +57,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-weight: 800;
   font-size: 1.25rem;
   color: var(--white);
@@ -186,7 +186,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .hero h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-weight: 800;
   font-size: clamp(2.75rem, 6vw, 5rem);
   line-height: 1.05;
@@ -272,7 +272,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .stat strong {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--white);
@@ -346,7 +346,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .calc-card-body h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   color: var(--text);
@@ -428,7 +428,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .state-featured-card h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: 1.15rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -461,7 +461,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .section-header h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.75rem);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -551,7 +551,7 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-weight: 800;
   font-size: 1.15rem;
   color: var(--white);
@@ -566,7 +566,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .footer-column h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -692,7 +692,7 @@ input:focus, select:focus {
 }
 
 .page-card h1 {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: 3rem;
   line-height: 1.1;
   margin: 0 0 24px;
@@ -727,7 +727,7 @@ input:focus, select:focus {
 .seo-content { margin-top: 34px; }
 
 .seo-content h2 {
-  font-family: 'Syne', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
   font-size: clamp(1.7rem,3vw,2.4rem);
   letter-spacing: -0.04em;
   margin: 0 0 14px;
