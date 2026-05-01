@@ -1305,3 +1305,66 @@ input:focus, select:focus {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── LEGAL PAGES (Privacy, Terms, Disclaimer) ── */
+.legal-layout {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 24px;
+  align-items: start;
+}
+
+.legal-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: 0 4px 20px rgba(15,23,42,0.06);
+}
+
+.legal-section {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 16px;
+  padding-bottom: 0;
+}
+
+.legal-section h2 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.legal-section p {
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 0.975rem;
+  margin: 0;
+}
+
+.legal-section a {
+  color: var(--green);
+  font-weight: 600;
+}
+
+.legal-section a:hover {
+  text-decoration: underline;
+}
+
+.legal-sidebar {
+  display: grid;
+  gap: 18px;
+}
+
+@media (max-width: 900px) {
+  .legal-layout {
+    grid-template-columns: 1fr;
+  }
+}
