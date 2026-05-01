@@ -200,6 +200,52 @@ app.get("/about", (req, res) => {
   });
 });
 
+// Add this route to server.js before app.listen()
+
+app.get("/sitemap.xml", (req, res) => {
+  const baseUrl = "https://mytaxcalcs.com";
+
+  const staticPages = [
+    "",
+    "/calculators",
+    "/income-tax-calculator",
+    "/self-employment-tax-calculator",
+    "/capital-gains-tax-calculator",
+    "/sales-tax-calculator",
+    "/payroll-tax-calculator",
+    "/tax-refund-calculator",
+    "/about",
+    "/contact",
+    "/privacy-policy",
+    "/terms",
+    "/disclaimer",
+  ];
+
+  const stateUrls = states.map(
+    (s) => `/${s.slug}-income-tax-calculator`
+  );
+
+  const allUrls = [...staticPages, ...stateUrls];
+
+  const urls = allUrls
+    .map(
+      (path) => `
+  <url>
+    <loc>${baseUrl}${path}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>${path === "" ? "1.0" : "0.8"}</priority>
+  </url>`
+    )
+    .join("");
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>`;
+
+  res.header("Content-Type", "application/xml");
+  res.send(xml);
+});
 
 app.listen(PORT, () => {
   console.log(`MyTaxCalcs running at http://localhost:${PORT}`);
