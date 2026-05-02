@@ -928,8 +928,7 @@ input:focus, select:focus {
 
 .input-wrap {
   position: relative;
-  display: flex;
-  align-items: center;
+  display: block;
   width: 100%;
 }
 
@@ -947,7 +946,7 @@ input:focus, select:focus {
 }
 
 .input-wrap input {
-  padding-left: 28px;
+  padding-left: 26px !important;
   width: 100%;
 }
 
