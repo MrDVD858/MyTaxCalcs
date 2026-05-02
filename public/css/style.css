@@ -930,19 +930,25 @@ input:focus, select:focus {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .input-prefix {
   position: absolute;
   left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--muted);
   font-weight: 600;
   font-size: 0.95rem;
   pointer-events: none;
+  z-index: 1;
+  line-height: 1;
 }
 
 .input-wrap input {
-  padding-left: 26px;
+  padding-left: 28px;
+  width: 100%;
 }
 
 .form-group input,
