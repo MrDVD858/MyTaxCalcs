@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <title><%= state.name %> Income Tax Calculator | MyTaxCalcs</title>
-  <meta name="description" content="Use our free <%= state.name %> income tax calculator to estimate federal taxes and review <%= state.name %> state tax information.">
+  <meta name="description" content="Free <%= state.name %> income tax calculator. <%= state.hasIncomeTax ? "State income tax rates: " + state.brackets + "." : state.name + " has no state income tax." %> Estimate your federal and state tax for 2024.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="<%= state.name %> Income Tax Calculator | MyTaxCalcs">
+  <meta property="og:description" content="Free <%= state.name %> income tax calculator. Estimate your federal and state taxes for 2024.">
+  <meta property="og:url" content="https://mytaxcalcs.com/<%= state.slug %>-income-tax-calculator">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MyTaxCalcs">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -56,7 +61,7 @@
       <div class="section-label"><%= state.name %> Tax Estimator</div>
       <h1><%= state.name %> Income Tax Calculator</h1>
       <% if (state.hasIncomeTax) { %>
-        <p>Estimate your federal income tax as a <%= state.name %> resident and review state tax information.</p>
+        <p>Estimate your federal income tax as a <%= state.name %> resident. <%= state.name %> state income tax rates: <strong style="color:#4ade80;"><%= state.brackets %></strong>.</p>
       <% } else { %>
         <p><%= state.name %> has no broad-based state income tax. Estimate your federal income tax below.</p>
       <% } %>
@@ -170,8 +175,15 @@
         <h2>About this <%= state.name %> income tax calculator</h2>
         <% if (state.hasIncomeTax) { %>
           <p>This <%= state.name %> income tax calculator page helps users estimate federal income tax while reviewing state-specific tax information. State income tax rules can vary by filing status, deductions, credits, taxable income, and local rules, so the state estimate should be treated as a planning estimate only.</p>
+          <div style="background:#f0fdf4;border:1px solid rgba(34,197,94,0.25);border-left:4px solid #22c55e;border-radius:8px;padding:16px 20px;margin:20px 0;">
+            <p style="margin:0;font-size:0.9rem;color:#0f172a;"><strong><%= state.name %> State Income Tax:</strong> <%= state.note %></p>
+            <p style="margin:8px 0 0;font-size:0.85rem;color:#64748b;">Tax rate range: <strong><%= state.brackets %></strong> &nbsp;|&nbsp; Top rate: <strong><%= state.topRate %>%</strong></p>
+          </div>
         <% } else { %>
           <p><%= state.name %> does not have a broad-based state income tax. This page focuses on estimating federal income tax while showing that the state income tax estimate is $0 for broad-based state income tax purposes.</p>
+          <div style="background:#f0fdf4;border:1px solid rgba(34,197,94,0.25);border-left:4px solid #22c55e;border-radius:8px;padding:16px 20px;margin:20px 0;">
+            <p style="margin:0;font-size:0.9rem;color:#0f172a;"><strong><%= state.name %> Tax Note:</strong> <%= state.noTaxNote %></p>
+          </div>
         <% } %>
 
         <div class="seo-grid">
