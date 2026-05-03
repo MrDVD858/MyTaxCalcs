@@ -2,26 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= pageTitle %> | MyTaxCalcs</title>
-  <meta name="description" content="Use the free self-employment tax calculator to estimate Social Security tax, Medicare tax, total self-employment tax, and quarterly payments.">
+  <title>Free Self-Employment Tax Calculator 2025 | MyTaxCalcs</title>
+  <meta name="description" content="Free self-employment tax calculator for 2025. Estimate Social Security tax, Medicare tax, total SE tax, deductible half, and quarterly estimated payment for freelancers and contractors.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Free Self-Employment Tax Calculator | MyTaxCalcs">
-  <meta property="og:description" content="Estimate Social Security and Medicare tax for freelance, contractor, and gig income.">
+  <meta property="og:title" content="Free Self-Employment Tax Calculator 2025 | MyTaxCalcs">
+  <meta property="og:description" content="Estimate Social Security and Medicare tax for freelance, contractor, and gig income in 2025.">
   <meta property="og:url" content="https://mytaxcalcs.com/self-employment-tax-calculator">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Free Self-Employment Tax Calculator | MyTaxCalcs">
-  <meta name="twitter:description" content="Estimate Social Security and Medicare tax for freelance, contractor, and gig income.">
+  <meta name="twitter:title" content="Free Self-Employment Tax Calculator 2025 | MyTaxCalcs">
+  <meta name="twitter:description" content="Estimate 2025 self-employment tax for freelancers, contractors, and gig workers.">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+  <style>
+    .breadcrumb{max-width:780px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
+    .calc-page{max-width:780px;margin:0 auto;padding:0 24px 60px}
+    .calc-page-header{padding:28px 0 24px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#2563eb;background:#eff6ff;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .calc-page-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .calc-page-header p{font-size:1rem;color:#6b7280;margin:0;max-width:580px}
+    .calc-card-form{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+    .calc-card-form h2{font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 20px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:580px){.form-grid{grid-template-columns:1fr}}
+    .form-field{display:flex;flex-direction:column;gap:5px}
+    .form-field.full{grid-column:1/-1}
+    .form-field label{font-size:.82rem;font-weight:600;color:#374151}
+    .input-wrap{position:relative;display:flex;align-items:center}
+    .input-prefix{position:absolute;left:12px;font-size:.95rem;color:#9ca3af;pointer-events:none}
+    .input-wrap input{padding-left:28px}
+    .form-field input,.form-field select{border:1px solid #d1d5db;border-radius:8px;padding:9px 13px;font-size:.95rem;color:#111827;background:#f9fafb;transition:border-color .15s;width:100%;box-sizing:border-box}
+    .form-field input:focus,.form-field select:focus{outline:none;border-color:#16a34a;background:#fff}
+    .form-actions{margin-top:22px}
+    .btn-calc{background:#16a34a;color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;display:inline-flex;align-items:center;gap:8px}
+    .btn-calc:hover{background:#15803d;transform:translateY(-1px)}
+    .result-card{background:linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%);border:1px solid #bfdbfe;border-radius:16px;padding:28px 32px;margin-bottom:24px}
+    .result-card-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+    .result-icon{width:38px;height:38px;background:#2563eb;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .result-card-header h2{font-size:1rem;font-weight:700;color:#1e3a8a;margin:0}
+    .result-primary{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:16px}
+    .result-primary .result-label{font-size:.85rem;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:4px}
+    .result-primary .result-amount{font-size:2.4rem;font-weight:800;color:#dc2626}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:520px){.result-grid{grid-template-columns:1fr}}
+    .result-item{background:#fff;border-radius:10px;padding:14px 16px}
+    .result-item .ri-label{font-size:.78rem;color:#6b7280;font-weight:500;margin-bottom:3px}
+    .result-item .ri-value{font-size:1.15rem;font-weight:700;color:#111827}
+    .result-item .ri-value.green{color:#16a34a}.result-item .ri-value.red{color:#dc2626}
+    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .hiw-section{margin:48px 0 0}
+    .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px}
+    .hiw-section h2,.faq-section h2,.related-section h2{font-size:1.5rem;font-weight:800;color:#111827;margin:0 0 8px}
+    .hiw-section>p{color:#6b7280;margin:0 0 24px;font-size:.95rem}
+    .hiw-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+    .hiw-step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px}
+    .hiw-step-num{min-width:32px;height:32px;background:#eff6ff;border:2px solid #bfdbfe;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:#2563eb}
+    .hiw-step-body h3{font-size:.9rem;font-weight:700;color:#111827;margin:0 0 4px}
+    .hiw-step-body p{font-size:.85rem;color:#6b7280;margin:0}
+    .formula-box{background:#111827;border-radius:12px;padding:20px 24px;margin-bottom:24px;overflow-x:auto}
+    .formula-box-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#6b7280;margin-bottom:10px}
+    .formula-box code{font-family:'Courier New',monospace;font-size:.85rem;color:#dbeafe;line-height:1.7;display:block;white-space:pre}
+    .formula-box code .comment{color:#4b5563}.formula-box code .highlight{color:#93c5fd}
+    .faq-section{margin:48px 0 0}
+    .faq-section h2{margin-bottom:20px}
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    .faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .faq-question{width:100%;background:none;border:none;padding:17px 20px;text-align:left;font-size:.92rem;font-weight:600;color:#111827;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-question:hover{background:#f9fafb}
+    .faq-chevron{min-width:20px;height:20px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .faq-item.open .faq-chevron{transform:rotate(180deg);background:#dbeafe}
+    .faq-answer{display:none;padding:0 20px 17px;font-size:.88rem;color:#6b7280;line-height:1.65}
+    .faq-item.open .faq-answer{display:block}
+    .related-section{margin:48px 0 0}
+    .related-section h2{margin-bottom:16px}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:380px){.related-grid{grid-template-columns:1fr}}
+    .related-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:8px}
+    .related-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
+    .related-card-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+    .related-card strong{font-size:.88rem;font-weight:700;color:#111827}
+    .related-card span{font-size:.78rem;color:#9ca3af}
+    .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+    .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
+    .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+  </style>
 </head>
 <body>
+
   <header class="site-header">
     <nav class="nav">
       <a href="/" class="logo">
@@ -46,113 +123,244 @@
     </nav>
   </header>
 
-  <section class="calc-hero">
-    <div class="calc-hero-inner">
-      <div class="section-label">Freelance & Contractor Tax</div>
-      <h1>Self-Employment Tax Calculator</h1>
-      <p>Estimate Social Security and Medicare taxes for freelance, contractor, gig, or small business income.</p>
-    </div>
-  </section>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/calculators">Calculators</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>Self-Employment Tax Calculator</span>
+  </nav>
 
-  <main class="calc-main">
-    <div class="calc-layout">
-      <section class="calc-form-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon" style="background:#eff6ff; color:#2563eb;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-          </div>
-          <h2>Your Income Information</h2>
-        </div>
-        <form method="POST" action="/self-employment-tax-calculator" class="calc-form">
-          <div class="form-group">
-            <label>Tax Year</label>
-            <select name="taxYear">
-              <option value="2025" <%= form.taxYear === "2025" ? "selected" : "" %>>2025</option>
-              <option value="2026" <%= form.taxYear === "2026" ? "selected" : "" %>>2026</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Gross Self-Employment Income</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="grossIncome" value="<%= form.grossIncome || '' %>" placeholder="75,000" required></div>
-          </div>
-          <div class="form-group">
-            <label>Business Expenses</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="businessExpenses" value="<%= form.businessExpenses || '' %>" placeholder="15,000"></div>
-          </div>
-          <button type="submit" class="calc-submit-btn">Calculate Self-Employment Tax <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        </form>
-      </section>
+  <main>
+    <div class="calc-page">
 
-      <section class="calc-results-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon" style="background:#eff6ff; color:#2563eb;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h2>Estimated Results</h2>
+      <div class="calc-page-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Freelance and Contractor Tax
         </div>
-        <% if (!result) { %>
-          <div class="results-empty">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-            <p>Enter your income and expenses to estimate self-employment tax.</p>
+        <h1>Self-Employment Tax Calculator</h1>
+        <p>Estimate Social Security and Medicare taxes for 2025 freelance, contractor, gig, or small business income. Includes deductible half and quarterly payment estimate.</p>
+      </div>
+
+      <% if (result) { %>
+      <div class="result-card">
+        <div class="result-card-header">
+          <div class="result-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
-        <% } else { %>
-          <div class="results-grid">
-            <div class="result-row"><span>Tax Year</span><strong><%= result.taxYear %></strong></div>
-            <div class="result-row"><span>Gross Income</span><strong>$<%= Math.round(result.grossIncome).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Business Expenses</span><strong>$<%= Math.round(result.businessExpenses).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Net Profit</span><strong>$<%= Math.round(result.netProfit).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Amount Subject to SE Tax</span><strong>$<%= Math.round(result.seTaxableIncome).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Social Security Portion</span><strong>$<%= Math.round(result.socialSecurityTax).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Medicare Portion</span><strong>$<%= Math.round(result.medicareTax).toLocaleString() %></strong></div>
-            <div class="result-row result-highlight owed">
-              <span>Total Self-Employment Tax</span>
-              <strong>$<%= Math.round(result.totalSelfEmploymentTax).toLocaleString() %></strong>
+          <h2>Your Self-Employment Tax Estimate</h2>
+        </div>
+        <div class="result-primary">
+          <span class="result-label">Total Self-Employment Tax</span>
+          <span class="result-amount">$<%= Math.round(result.totalSelfEmploymentTax).toLocaleString() %></span>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="ri-label">Net Profit</div>
+            <div class="ri-value">$<%= Math.round(result.netProfit).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">SE Taxable Income (92.35%)</div>
+            <div class="ri-value">$<%= Math.round(result.seTaxableIncome).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Social Security Portion (12.4%)</div>
+            <div class="ri-value red">$<%= Math.round(result.socialSecurityTax).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Medicare Portion (2.9%)</div>
+            <div class="ri-value red">$<%= Math.round(result.medicareTax).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Deductible Half of SE Tax</div>
+            <div class="ri-value green">$<%= Math.round(result.deductibleHalf).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Est. Quarterly Payment</div>
+            <div class="ri-value">$<%= Math.round(result.estimatedQuarterlyPayment).toLocaleString() %></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <% } %>
+
+      <div class="calc-card-form">
+        <h2>Enter Your Income Information</h2>
+        <form method="POST" action="/self-employment-tax-calculator">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="taxYear">Tax Year</label>
+              <select id="taxYear" name="taxYear">
+                <option value="2025" <%= (!form.taxYear || form.taxYear === '2025') ? 'selected' : '' %>>2025</option>
+                <option value="2026" <%= form.taxYear === '2026' ? 'selected' : '' %>>2026</option>
+              </select>
             </div>
-            <div class="result-row"><span>Deductible Half of SE Tax</span><strong>$<%= Math.round(result.deductibleHalf).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Est. Quarterly Payment</span><strong>$<%= Math.round(result.estimatedQuarterlyPayment).toLocaleString() %></strong></div>
+            <div class="form-field">
+              <label for="grossIncome">Gross Self-Employment Income</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="grossIncome" name="grossIncome" min="0" step="any" value="<%= form.grossIncome || '' %>" placeholder="75000" required>
+              </div>
+            </div>
+            <div class="form-field full">
+              <label for="businessExpenses">Business Expenses</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="businessExpenses" name="businessExpenses" min="0" step="any" value="<%= form.businessExpenses || '' %>" placeholder="15000">
+              </div>
+            </div>
           </div>
-        <% } %>
-        <div class="results-disclaimer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Estimate only. Not tax, legal, accounting, or financial advice.
-        </div>
-      </section>
-    </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-calc">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Calculate Self-Employment Tax
+            </button>
+          </div>
+        </form>
+      </div>
 
-    <div class="calc-content-wrapper">
-      <section class="content seo-content">
-        <p class="eyebrow dark">Self-Employment Tax Guide</p>
-        <h2>How this self-employment tax calculator works</h2>
-        <p>This calculator estimates self-employment tax for people who earn income as freelancers, independent contractors, gig workers, sole proprietors, or small business owners. It subtracts business expenses from gross self-employment income, estimates net profit, and calculates Social Security and Medicare tax.</p>
-        <div class="seo-grid">
-          <div class="seo-mini-card"><h3>What it includes</h3><p>Gross self-employment income, business expenses, estimated net profit, Social Security tax, Medicare tax, and total self-employment tax.</p></div>
-          <div class="seo-mini-card"><h3>Quarterly planning</h3><p>The quarterly estimate divides self-employment tax by four to help with planning, but it does not replace IRS estimated tax calculations.</p></div>
-          <div class="seo-mini-card"><h3>What it excludes</h3><p>Federal income tax, state tax, credits, deductions, penalties, additional Medicare tax, or every business tax situation.</p></div>
+      <div class="hiw-section">
+        <div class="section-eyebrow">How It Works</div>
+        <h2>How Self-Employment Tax Is Calculated</h2>
+        <p>When you work for yourself, you pay both the employee and employer share of FICA taxes. Here is the exact calculation chain.</p>
+        <div class="hiw-steps">
+          <div class="hiw-step">
+            <div class="hiw-step-num">1</div>
+            <div class="hiw-step-body">
+              <h3>Calculate Net Profit</h3>
+              <p>Subtract your deductible business expenses from gross self-employment income to find net profit. This is your starting point for SE tax.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">2</div>
+            <div class="hiw-step-body">
+              <h3>Apply the 92.35% Rule</h3>
+              <p>The IRS allows you to reduce net profit by 7.65% before applying SE tax rates. This accounts for the employer-equivalent portion you are effectively deducting. The result is your SE taxable income.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">3</div>
+            <div class="hiw-step-body">
+              <h3>Apply SE Tax Rates</h3>
+              <p>Social Security tax is 12.4% on SE taxable income up to the annual wage base. Medicare tax is 2.9% on all SE taxable income with no limit. Together these form the 15.3% SE tax rate.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">4</div>
+            <div class="hiw-step-body">
+              <h3>Deductible Half Reduces Income Tax</h3>
+              <p>You can deduct half of your SE tax when calculating your adjusted gross income on your federal return. This partially offsets the burden of paying both sides of FICA.</p>
+            </div>
+          </div>
         </div>
-        <h2>Self-employment tax FAQ</h2>
+        <div class="formula-box">
+          <div class="formula-box-label">Formula Reference</div>
+          <code><span class="comment">// Step 1 - Net Profit</span>
+<span class="highlight">Net Profit</span>         = Gross Income - Business Expenses
+
+<span class="comment">// Step 2 - SE Taxable Income</span>
+<span class="highlight">SE Taxable Income</span>  = Net Profit x 0.9235
+
+<span class="comment">// Step 3 - SE Tax (2025 rates)</span>
+<span class="highlight">Social Security</span>    = SE Taxable Income x 12.4%  (up to $176,100)
+<span class="highlight">Medicare</span>           = SE Taxable Income x 2.9%
+<span class="highlight">Total SE Tax</span>       = Social Security + Medicare
+
+<span class="comment">// Step 4 - Deductible Half</span>
+<span class="highlight">Deductible Half</span>    = Total SE Tax x 0.50</code>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="faq-section">
+        <div class="section-eyebrow">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
-          <div class="faq-item"><h3>What is self-employment tax?</h3><p>Self-employment tax is the Social Security and Medicare tax paid by people who work for themselves. It is separate from regular federal income tax.</p></div>
-          <div class="faq-item"><h3>Who usually pays self-employment tax?</h3><p>Freelancers, independent contractors, sole proprietors, gig workers, and some small business owners may owe self-employment tax if they have net earnings from self-employment.</p></div>
-          <div class="faq-item"><h3>Does this calculator include income tax?</h3><p>No. This page estimates self-employment tax only. You may also owe federal income tax, state income tax, and other taxes depending on your situation.</p></div>
-          <div class="faq-item"><h3>Why is only part of net profit subject to self-employment tax?</h3><p>Self-employment tax is generally calculated on 92.35% of net earnings from self-employment. This calculator uses that general rule for planning estimates.</p></div>
-          <div class="faq-item"><h3>Should I use this for filing taxes?</h3><p>No. Use this as an educational estimate only. For filing, use official IRS forms, tax software, or a qualified tax professional.</p></div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is self-employment tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Self-employment tax is the Social Security and Medicare tax that self-employed individuals pay. Employees split FICA contributions with their employer at 7.65% each. Self-employed individuals pay both sides, totaling 15.3%, though they can deduct half on their federal return.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Who pays self-employment tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Generally anyone with net earnings from self-employment of $400 or more must pay SE tax. This includes freelancers, independent contractors, sole proprietors, gig workers, and some partners and LLC members.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Why is only 92.35% of net profit subject to SE tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The IRS allows you to reduce net self-employment income by 7.65% before calculating SE tax. This mirrors how an employee's wages are reduced by the employer's FICA contribution. It creates parity between employees and self-employed individuals.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Does this calculator include federal income tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">No. This calculator estimates SE tax only. You may also owe federal income tax on your net self-employment profit. Use the Income Tax Calculator to estimate your total federal income tax liability separately.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">When are quarterly estimated tax payments due?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The IRS generally requires quarterly estimated tax payments on April 15, June 15, September 15, and January 15 of the following year. These payments cover both self-employment tax and federal income tax on self-employment income.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I deduct business expenses to reduce SE tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Yes. Legitimate business expenses reduce your net profit, which directly reduces the income subject to SE tax. Common deductible expenses include home office, mileage, equipment, software subscriptions, and professional fees. Always keep records and consult a tax professional for your specific situation.</div>
+          </div>
         </div>
-        <p class="last-updated">Last updated: April 2026</p>
-      </section>
-      <section class="content related-calculators">
-        <p class="eyebrow dark">Related Calculators</p>
-        <h2>More tax calculators</h2>
+      </div>
+
+      <div class="related-section">
+        <h2>Related Tax Calculators</h2>
         <div class="related-grid">
-          <a href="/income-tax-calculator">Income Tax Calculator</a>
-          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
-          <a href="/capital-gains-tax-calculator">Capital Gains Tax</a>
-          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
-          <a href="/payroll-tax-calculator">Payroll Tax Calculator</a>
-          <a href="/calculators">All Calculators</a>
+          <a class="related-card" href="/income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg></div>
+            <strong>Income Tax Calculator</strong>
+            <span>Estimate annual federal tax and effective rate</span>
+          </a>
+          <a class="related-card" href="/tax-refund-calculator">
+            <div class="related-card-icon" style="background:#f0fdf4;color:#15803d;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <strong>Tax Refund Calculator</strong>
+            <span>Estimate your refund or balance owed</span>
+          </a>
+          <a class="related-card" href="/capital-gains-tax-calculator">
+            <div class="related-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg></div>
+            <strong>Capital Gains Tax</strong>
+            <span>Estimate tax on asset sales and investments</span>
+          </a>
+          <a class="related-card" href="/payroll-tax-calculator">
+            <div class="related-card-icon" style="background:#fff1f2;color:#e11d48;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+            <strong>Payroll Tax Calculator</strong>
+            <span>Estimate take-home pay and withholding</span>
+          </a>
+          <a class="related-card" href="/sales-tax-calculator">
+            <div class="related-card-icon" style="background:#fdf4ff;color:#9333ea;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg></div>
+            <strong>Sales Tax Calculator</strong>
+            <span>Calculate purchase total with tax</span>
+          </a>
+          <a class="related-card" href="/california-income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+            <strong>State Tax Calculators</strong>
+            <span>Income tax estimates for all 50 states</span>
+          </a>
         </div>
-      </section>
+      </div>
+
+      <div class="page-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only using 2025 SE tax rates. It does not account for additional Medicare tax, state taxes, every business deduction type, or your full tax situation. It is not tax, legal, or financial advice. Consult a qualified tax professional before making tax or business decisions.</p>
+      </div>
+
     </div>
   </main>
 
@@ -183,8 +391,22 @@
           <a href="/disclaimer">Disclaimer</a>
         </div>
       </div>
-      <div class="footer-bottom"><p>© 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
+      <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
     </div>
   </footer>
+
+  <script>
+    (function(){
+      var items=document.querySelectorAll('.faq-item');
+      items.forEach(function(item){
+        var btn=item.querySelector('.faq-question');
+        btn.addEventListener('click',function(){
+          var isOpen=item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+          if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

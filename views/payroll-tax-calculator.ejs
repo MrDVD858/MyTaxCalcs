@@ -2,26 +2,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= pageTitle %> | MyTaxCalcs</title>
-  <meta name="description" content="Use the free payroll tax calculator to estimate federal withholding, Social Security tax, Medicare tax, state withholding, and net paycheck amount.">
+  <title>Free Payroll Tax Calculator 2025 | MyTaxCalcs</title>
+  <meta name="description" content="Free payroll tax calculator for 2025. Estimate federal withholding, Social Security tax, Medicare tax, state withholding, and net take-home pay per paycheck.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Free Payroll Tax Calculator | MyTaxCalcs">
-  <meta property="og:description" content="Estimate paycheck withholding, Social Security, Medicare, state withholding, and net pay.">
+  <meta property="og:title" content="Free Payroll Tax Calculator 2025 | MyTaxCalcs">
+  <meta property="og:description" content="Estimate paycheck withholding, Social Security, Medicare, state withholding, and net pay for 2025.">
   <meta property="og:url" content="https://mytaxcalcs.com/payroll-tax-calculator">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Free Payroll Tax Calculator | MyTaxCalcs">
-  <meta name="twitter:description" content="Estimate paycheck withholding, Social Security, Medicare, state withholding, and net pay.">
+  <meta name="twitter:title" content="Free Payroll Tax Calculator 2025 | MyTaxCalcs">
+  <meta name="twitter:description" content="Estimate your 2025 paycheck taxes and take-home pay for free.">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+  <style>
+    .breadcrumb{max-width:780px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
+    .calc-page{max-width:780px;margin:0 auto;padding:0 24px 60px}
+    .calc-page-header{padding:28px 0 24px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#e11d48;background:#fff1f2;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .calc-page-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .calc-page-header p{font-size:1rem;color:#6b7280;margin:0;max-width:580px}
+    .calc-card-form{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+    .calc-card-form h2{font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 20px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:580px){.form-grid{grid-template-columns:1fr}}
+    .form-field{display:flex;flex-direction:column;gap:5px}
+    .form-field.full{grid-column:1/-1}
+    .form-field label{font-size:.82rem;font-weight:600;color:#374151}
+    .input-wrap{position:relative;display:flex;align-items:center}
+    .input-prefix{position:absolute;left:12px;font-size:.95rem;color:#9ca3af;pointer-events:none}
+    .input-wrap input{padding-left:28px}
+    .form-field input,.form-field select{border:1px solid #d1d5db;border-radius:8px;padding:9px 13px;font-size:.95rem;color:#111827;background:#f9fafb;transition:border-color .15s;width:100%;box-sizing:border-box}
+    .form-field input:focus,.form-field select:focus{outline:none;border-color:#16a34a;background:#fff}
+    .form-actions{margin-top:22px}
+    .btn-calc{background:#16a34a;color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;display:inline-flex;align-items:center;gap:8px}
+    .btn-calc:hover{background:#15803d;transform:translateY(-1px)}
+    .result-card{background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);border:1px solid #bbf7d0;border-radius:16px;padding:28px 32px;margin-bottom:24px}
+    .result-card-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+    .result-icon{width:38px;height:38px;background:#16a34a;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .result-card-header h2{font-size:1rem;font-weight:700;color:#14532d;margin:0}
+    .result-primary{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:16px}
+    .result-primary .result-label{font-size:.85rem;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:4px}
+    .result-primary .result-amount{font-size:2.4rem;font-weight:800;color:#15803d}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:520px){.result-grid{grid-template-columns:1fr}}
+    .result-item{background:#fff;border-radius:10px;padding:14px 16px}
+    .result-item .ri-label{font-size:.78rem;color:#6b7280;font-weight:500;margin-bottom:3px}
+    .result-item .ri-value{font-size:1.15rem;font-weight:700;color:#111827}
+    .result-item .ri-value.red{color:#dc2626}
+    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .hiw-section{margin:48px 0 0}
+    .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px}
+    .hiw-section h2,.faq-section h2,.related-section h2{font-size:1.5rem;font-weight:800;color:#111827;margin:0 0 8px}
+    .hiw-section>p{color:#6b7280;margin:0 0 24px;font-size:.95rem}
+    .hiw-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+    .hiw-step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px}
+    .hiw-step-num{min-width:32px;height:32px;background:#f0fdf4;border:2px solid #bbf7d0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:#16a34a}
+    .hiw-step-body h3{font-size:.9rem;font-weight:700;color:#111827;margin:0 0 4px}
+    .hiw-step-body p{font-size:.85rem;color:#6b7280;margin:0}
+    .formula-box{background:#111827;border-radius:12px;padding:20px 24px;margin-bottom:24px;overflow-x:auto}
+    .formula-box-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#6b7280;margin-bottom:10px}
+    .formula-box code{font-family:'Courier New',monospace;font-size:.85rem;color:#d1fae5;line-height:1.7;display:block;white-space:pre}
+    .formula-box code .comment{color:#4b5563}.formula-box code .highlight{color:#34d399}
+    .faq-section{margin:48px 0 0}
+    .faq-section h2{margin-bottom:20px}
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    .faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .faq-question{width:100%;background:none;border:none;padding:17px 20px;text-align:left;font-size:.92rem;font-weight:600;color:#111827;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-question:hover{background:#f9fafb}
+    .faq-chevron{min-width:20px;height:20px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .faq-item.open .faq-chevron{transform:rotate(180deg);background:#dcfce7}
+    .faq-answer{display:none;padding:0 20px 17px;font-size:.88rem;color:#6b7280;line-height:1.65}
+    .faq-item.open .faq-answer{display:block}
+    .related-section{margin:48px 0 0}
+    .related-section h2{margin-bottom:16px}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:380px){.related-grid{grid-template-columns:1fr}}
+    .related-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:8px}
+    .related-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
+    .related-card-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+    .related-card strong{font-size:.88rem;font-weight:700;color:#111827}
+    .related-card span{font-size:.78rem;color:#9ca3af}
+    .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+    .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
+    .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+  </style>
 </head>
 <body>
+
   <header class="site-header">
     <nav class="nav">
       <a href="/" class="logo">
@@ -46,147 +123,283 @@
     </nav>
   </header>
 
-  <section class="calc-hero">
-    <div class="calc-hero-inner">
-      <div class="section-label">Paycheck Tax Estimator</div>
-      <h1>Payroll Tax Calculator</h1>
-      <p>Estimate paycheck withholding, FICA taxes, optional state withholding, and take-home pay.</p>
-    </div>
-  </section>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/calculators">Calculators</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>Payroll Tax Calculator</span>
+  </nav>
 
-  <main class="calc-main">
-    <div class="calc-layout">
-      <section class="calc-form-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon" style="background:#fff1f2; color:#e11d48;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-          </div>
-          <h2>Paycheck Information</h2>
-        </div>
-        <form method="POST" action="/payroll-tax-calculator" class="calc-form">
-          <div class="form-group">
-            <label>Gross Pay Per Paycheck</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="grossPay" value="<%= form.grossPay || '' %>" placeholder="2,500.00" step="0.01" required></div>
-          </div>
-          <div class="form-group">
-            <label>Pay Frequency</label>
-            <select name="payFrequency">
-              <option value="weekly" <%= form.payFrequency === "weekly" ? "selected" : "" %>>Weekly</option>
-              <option value="biweekly" <%= !form.payFrequency || form.payFrequency === "biweekly" ? "selected" : "" %>>Biweekly</option>
-              <option value="semimonthly" <%= form.payFrequency === "semimonthly" ? "selected" : "" %>>Semi-monthly</option>
-              <option value="monthly" <%= form.payFrequency === "monthly" ? "selected" : "" %>>Monthly</option>
-              <option value="annual" <%= form.payFrequency === "annual" ? "selected" : "" %>>Annual</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Filing Status</label>
-            <select name="filingStatus">
-              <option value="single" <%= form.filingStatus === "single" ? "selected" : "" %>>Single</option>
-              <option value="marriedJoint" <%= form.filingStatus === "marriedJoint" ? "selected" : "" %>>Married Filing Jointly</option>
-              <option value="marriedSeparate" <%= form.filingStatus === "marriedSeparate" ? "selected" : "" %>>Married Filing Separately</option>
-              <option value="headHousehold" <%= form.filingStatus === "headHousehold" ? "selected" : "" %>>Head of Household</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Pre-Tax Deductions Per Paycheck</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="preTaxDeductions" value="<%= form.preTaxDeductions || '' %>" placeholder="200.00" step="0.01"></div>
-          </div>
-          <div class="form-group">
-            <label>Post-Tax Deductions Per Paycheck</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="postTaxDeductions" value="<%= form.postTaxDeductions || '' %>" placeholder="0.00" step="0.01"></div>
-          </div>
-          <div class="form-group">
-            <label>Extra Federal Withholding Per Paycheck</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="federalExtraWithholding" value="<%= form.federalExtraWithholding || '' %>" placeholder="0.00" step="0.01"></div>
-          </div>
-          <div class="form-group">
-            <label>State Withholding Rate (%)</label>
-            <div class="input-wrap"><span class="input-prefix">%</span>
-            <input type="number" name="stateTaxRate" value="<%= form.stateTaxRate || '' %>" placeholder="5.0" step="0.001"></div>
-          </div>
-          <div class="form-group">
-            <label>Year-to-Date Wages Before This Paycheck</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="ytdWagesBeforeThisPaycheck" value="<%= form.ytdWagesBeforeThisPaycheck || '' %>" placeholder="0.00" step="0.01"></div>
-          </div>
-          <button type="submit" class="calc-submit-btn">Calculate Payroll Taxes <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        </form>
-      </section>
+  <main>
+    <div class="calc-page">
 
-      <section class="calc-results-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon" style="background:#fff1f2; color:#e11d48;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h2>Estimated Results</h2>
+      <div class="calc-page-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          Paycheck Tax Estimator
         </div>
-        <% if (!result) { %>
-          <div class="results-empty">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-            <p>Enter paycheck details to estimate payroll taxes and net pay.</p>
+        <h1>Payroll Tax Calculator</h1>
+        <p>Estimate federal withholding, Social Security tax, Medicare tax, optional state withholding, and take-home pay per paycheck for 2025.</p>
+      </div>
+
+      <% if (result) { %>
+      <div class="result-card">
+        <div class="result-card-header">
+          <div class="result-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
           </div>
-        <% } else { %>
-          <div class="results-grid">
-            <div class="result-row"><span>Tax Year</span><strong><%= result.taxYear %></strong></div>
-            <div class="result-row"><span>Gross Pay</span><strong>$<%= result.grossPay.toFixed(2) %></strong></div>
-            <div class="result-row"><span>Taxable Pay Estimate</span><strong>$<%= result.taxablePay.toFixed(2) %></strong></div>
-            <div class="result-row"><span>Federal Withholding Est.</span><strong>$<%= result.estimatedFederalWithholding.toFixed(2) %></strong></div>
-            <div class="result-row"><span>Social Security Tax</span><strong>$<%= result.socialSecurityTax.toFixed(2) %></strong></div>
-            <div class="result-row"><span>Medicare Tax</span><strong>$<%= result.medicareTax.toFixed(2) %></strong></div>
-            <div class="result-row"><span>Additional Medicare Tax</span><strong>$<%= result.additionalMedicareTax.toFixed(2) %></strong></div>
-            <div class="result-row"><span>State Withholding Est.</span><strong>$<%= result.stateWithholding.toFixed(2) %></strong></div>
-            <div class="result-row"><span>Total Tax Estimate</span><strong>$<%= result.totalTaxes.toFixed(2) %></strong></div>
-            <div class="result-row"><span>Post-Tax Deductions</span><strong>$<%= result.postTaxDeductions.toFixed(2) %></strong></div>
-            <div class="result-row result-highlight refund">
-              <span>Estimated Net Pay</span>
-              <strong>$<%= result.netPay.toFixed(2) %></strong>
+          <h2>Your Paycheck Estimate</h2>
+        </div>
+        <div class="result-primary">
+          <span class="result-label">Estimated Net Pay</span>
+          <span class="result-amount">$<%= result.netPay.toFixed(2) %></span>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="ri-label">Gross Pay</div>
+            <div class="ri-value">$<%= result.grossPay.toFixed(2) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Federal Withholding Est.</div>
+            <div class="ri-value red">$<%= result.estimatedFederalWithholding.toFixed(2) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Social Security Tax</div>
+            <div class="ri-value red">$<%= result.socialSecurityTax.toFixed(2) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Medicare Tax</div>
+            <div class="ri-value red">$<%= result.medicareTax.toFixed(2) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">State Withholding Est.</div>
+            <div class="ri-value red">$<%= result.stateWithholding.toFixed(2) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Total Taxes This Check</div>
+            <div class="ri-value red">$<%= result.totalTaxes.toFixed(2) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Est. Annual Net Pay</div>
+            <div class="ri-value">$<%= result.estimatedAnnualNetPay.toFixed(2) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Additional Medicare Tax</div>
+            <div class="ri-value">$<%= result.additionalMedicareTax.toFixed(2) %></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <% } %>
+
+      <div class="calc-card-form">
+        <h2>Enter Your Paycheck Information</h2>
+        <form method="POST" action="/payroll-tax-calculator">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="grossPay">Gross Pay Per Paycheck</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="grossPay" name="grossPay" min="0" step="0.01" value="<%= form.grossPay || '' %>" placeholder="2500.00" required>
+              </div>
             </div>
-            <div class="result-row"><span>Est. Annual Net Pay</span><strong>$<%= result.estimatedAnnualNetPay.toFixed(2) %></strong></div>
+            <div class="form-field">
+              <label for="payFrequency">Pay Frequency</label>
+              <select id="payFrequency" name="payFrequency">
+                <option value="weekly" <%= form.payFrequency === 'weekly' ? 'selected' : '' %>>Weekly</option>
+                <option value="biweekly" <%= (!form.payFrequency || form.payFrequency === 'biweekly') ? 'selected' : '' %>>Biweekly</option>
+                <option value="semimonthly" <%= form.payFrequency === 'semimonthly' ? 'selected' : '' %>>Semi-monthly</option>
+                <option value="monthly" <%= form.payFrequency === 'monthly' ? 'selected' : '' %>>Monthly</option>
+                <option value="annual" <%= form.payFrequency === 'annual' ? 'selected' : '' %>>Annual</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="filingStatus">Filing Status</label>
+              <select id="filingStatus" name="filingStatus">
+                <option value="single" <%= (!form.filingStatus || form.filingStatus === 'single') ? 'selected' : '' %>>Single</option>
+                <option value="marriedJoint" <%= form.filingStatus === 'marriedJoint' ? 'selected' : '' %>>Married Filing Jointly</option>
+                <option value="marriedSeparate" <%= form.filingStatus === 'marriedSeparate' ? 'selected' : '' %>>Married Filing Separately</option>
+                <option value="headHousehold" <%= form.filingStatus === 'headHousehold' ? 'selected' : '' %>>Head of Household</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="preTaxDeductions">Pre-Tax Deductions Per Paycheck</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="preTaxDeductions" name="preTaxDeductions" min="0" step="0.01" value="<%= form.preTaxDeductions || '' %>" placeholder="200.00">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="postTaxDeductions">Post-Tax Deductions Per Paycheck</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="postTaxDeductions" name="postTaxDeductions" min="0" step="0.01" value="<%= form.postTaxDeductions || '' %>" placeholder="0.00">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="federalExtraWithholding">Extra Federal Withholding Per Paycheck</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="federalExtraWithholding" name="federalExtraWithholding" min="0" step="0.01" value="<%= form.federalExtraWithholding || '' %>" placeholder="0.00">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="stateTaxRate">State Withholding Rate (%)</label>
+              <div class="input-wrap"><span class="input-prefix">%</span>
+                <input type="number" id="stateTaxRate" name="stateTaxRate" min="0" step="0.001" value="<%= form.stateTaxRate || '' %>" placeholder="5.0">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="ytdWagesBeforeThisPaycheck">Year-to-Date Wages Before This Check</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="ytdWagesBeforeThisPaycheck" name="ytdWagesBeforeThisPaycheck" min="0" step="0.01" value="<%= form.ytdWagesBeforeThisPaycheck || '' %>" placeholder="0.00">
+              </div>
+            </div>
           </div>
-        <% } %>
-        <div class="results-disclaimer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Estimate only. Actual withholding may vary based on Form W-4, benefits, state rules, local taxes, and employer settings.
-        </div>
-      </section>
-    </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-calc">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              Calculate Payroll Taxes
+            </button>
+          </div>
+        </form>
+      </div>
 
-    <div class="calc-content-wrapper">
-      <section class="content seo-content">
-        <p class="eyebrow dark">Payroll Tax Guide</p>
-        <h2>How this payroll tax calculator works</h2>
-        <p>This payroll tax calculator estimates paycheck deductions by annualizing your gross pay, applying a simplified federal income tax estimate, calculating Social Security and Medicare taxes, and subtracting optional state withholding and post-tax deductions.</p>
-        <div class="seo-grid">
-          <div class="seo-mini-card"><h3>Federal withholding</h3><p>The federal withholding estimate is based on annualized taxable pay, filing status, the standard deduction, and federal tax brackets. It is not a full Form W-4 calculation.</p></div>
-          <div class="seo-mini-card"><h3>FICA taxes</h3><p>FICA generally includes Social Security tax and Medicare tax. Social Security has an annual wage base limit, while Medicare tax does not.</p></div>
-          <div class="seo-mini-card"><h3>Net paycheck</h3><p>Estimated net pay is calculated by subtracting pre-tax deductions, estimated taxes, and post-tax deductions from gross pay.</p></div>
+      <div class="hiw-section">
+        <div class="section-eyebrow">How It Works</div>
+        <h2>How Payroll Taxes Are Calculated</h2>
+        <p>Every paycheck has several layers of tax deductions. Here is the order in which they are applied.</p>
+        <div class="hiw-steps">
+          <div class="hiw-step">
+            <div class="hiw-step-num">1</div>
+            <div class="hiw-step-body">
+              <h3>Subtract Pre-Tax Deductions</h3>
+              <p>Pre-tax deductions like 401(k) contributions and health insurance premiums reduce your taxable pay before federal withholding is calculated.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">2</div>
+            <div class="hiw-step-body">
+              <h3>Estimate Federal Withholding</h3>
+              <p>Your annualized taxable pay is run through 2025 federal tax brackets based on your filing status. The result is divided back to per-paycheck withholding.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">3</div>
+            <div class="hiw-step-body">
+              <h3>Calculate FICA Taxes</h3>
+              <p>Social Security tax is 6.2% up to the annual wage base ($176,100 for 2025). Medicare tax is 1.45% on all wages, plus an additional 0.9% above $200,000.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">4</div>
+            <div class="hiw-step-body">
+              <h3>Subtract All Deductions for Net Pay</h3>
+              <p>Federal withholding, FICA taxes, state withholding, and post-tax deductions are all subtracted from gross pay to estimate your take-home amount.</p>
+            </div>
+          </div>
         </div>
-        <h2>Payroll tax FAQ</h2>
+        <div class="formula-box">
+          <div class="formula-box-label">Formula Reference</div>
+          <code><span class="comment">// FICA Rates (2025)</span>
+<span class="highlight">Social Security</span>  = Taxable Wages x 6.2%  (up to $176,100 YTD)
+<span class="highlight">Medicare</span>         = Taxable Wages x 1.45% (no wage base limit)
+<span class="highlight">Add. Medicare</span>    = Wages above $200,000 x 0.9%
+
+<span class="comment">// Net Pay</span>
+<span class="highlight">Taxable Pay</span>      = Gross Pay - Pre-Tax Deductions
+<span class="highlight">Net Pay</span>          = Gross Pay - Federal WH - SS - Medicare - State WH - Post-Tax</code>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="faq-section">
+        <div class="section-eyebrow">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
-          <div class="faq-item"><h3>What taxes usually come out of a paycheck?</h3><p>Common paycheck deductions include federal income tax withholding, Social Security tax, Medicare tax, state income tax withholding, local taxes, benefits, retirement contributions, and other deductions.</p></div>
-          <div class="faq-item"><h3>Is this the same as an official payroll withholding calculation?</h3><p>No. This calculator provides a simplified estimate. Actual payroll withholding may depend on your Form W-4, employer payroll system, pre-tax benefit rules, state rules, and local taxes.</p></div>
-          <div class="faq-item"><h3>What is Social Security tax?</h3><p>Social Security tax is part of FICA payroll tax. Employees pay a percentage of covered wages up to the annual Social Security wage base.</p></div>
-          <div class="faq-item"><h3>What is Medicare tax?</h3><p>Medicare tax is another part of FICA payroll tax. It generally applies to all covered wages, and higher wages may also be subject to Additional Medicare Tax withholding.</p></div>
-          <div class="faq-item"><h3>Why is my actual paycheck different?</h3><p>Actual paycheck amounts may differ because of health insurance, retirement deductions, employer benefits, local taxes, W-4 settings, payroll rounding, bonuses, overtime, and other items.</p></div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What taxes usually come out of a paycheck?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Common deductions include federal income tax withholding, Social Security tax (6.2%), Medicare tax (1.45%), state income tax withholding, local taxes in some areas, and any benefits or retirement deductions your employer offers.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is the Social Security wage base for 2025?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The Social Security wage base for 2025 is $176,100. Once your year-to-date wages exceed this amount, Social Security tax stops for the remainder of the year. Medicare tax has no wage base limit.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is Additional Medicare Tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">An additional 0.9% Medicare tax applies to wages above $200,000 for a single filer. Employers are required to withhold this once wages exceed that threshold in a year, regardless of your filing status.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How do pre-tax deductions reduce my taxes?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Pre-tax deductions like traditional 401(k) contributions and health insurance premiums reduce the portion of your paycheck subject to federal income tax withholding. This lowers your taxable pay and therefore your estimated withholding, increasing your net pay.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Why is this estimate different from my actual paycheck?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Actual paycheck amounts vary based on your specific Form W-4 settings, employer payroll system, benefit elections, local taxes, bonuses, overtime, rounding, and other payroll adjustments. This calculator provides a simplified estimate.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I adjust my withholding to get a bigger paycheck?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Yes. You can submit an updated Form W-4 to your employer to adjust your federal withholding. Reducing withholding increases your take-home pay each period but may result in a smaller refund or a balance owed at tax time.</div>
+          </div>
         </div>
-        <p class="last-updated">Last updated: April 2026</p>
-      </section>
-      <section class="content related-calculators">
-        <p class="eyebrow dark">Related Calculators</p>
-        <h2>More tax calculators</h2>
+      </div>
+
+      <div class="related-section">
+        <h2>Related Tax Calculators</h2>
         <div class="related-grid">
-          <a href="/income-tax-calculator">Income Tax Calculator</a>
-          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
-          <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
-          <a href="/capital-gains-tax-calculator">Capital Gains Tax</a>
-          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
-          <a href="/calculators">All Calculators</a>
+          <a class="related-card" href="/income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg></div>
+            <strong>Income Tax Calculator</strong>
+            <span>Estimate annual federal tax and effective rate</span>
+          </a>
+          <a class="related-card" href="/tax-refund-calculator">
+            <div class="related-card-icon" style="background:#f0fdf4;color:#15803d;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <strong>Tax Refund Calculator</strong>
+            <span>Estimate your refund or balance owed</span>
+          </a>
+          <a class="related-card" href="/self-employment-tax-calculator">
+            <div class="related-card-icon" style="background:#eff6ff;color:#2563eb;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <strong>Self-Employment Tax</strong>
+            <span>FICA taxes for freelancers and contractors</span>
+          </a>
+          <a class="related-card" href="/capital-gains-tax-calculator">
+            <div class="related-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg></div>
+            <strong>Capital Gains Tax</strong>
+            <span>Estimate tax on stocks, crypto, real estate</span>
+          </a>
+          <a class="related-card" href="/sales-tax-calculator">
+            <div class="related-card-icon" style="background:#fdf4ff;color:#9333ea;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg></div>
+            <strong>Sales Tax Calculator</strong>
+            <span>Calculate purchase total with tax</span>
+          </a>
+          <a class="related-card" href="/california-income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+            <strong>State Tax Calculators</strong>
+            <span>Income tax estimates for all 50 states</span>
+          </a>
         </div>
-      </section>
+      </div>
+
+      <div class="page-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only. Actual withholding depends on your Form W-4, employer payroll system, state rules, local taxes, and benefit elections. It is not tax, legal, or financial advice. Consult a qualified tax professional for specific guidance.</p>
+      </div>
+
     </div>
   </main>
 
@@ -217,8 +430,22 @@
           <a href="/disclaimer">Disclaimer</a>
         </div>
       </div>
-      <div class="footer-bottom"><p>© 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
+      <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
     </div>
   </footer>
+
+  <script>
+    (function(){
+      var items=document.querySelectorAll('.faq-item');
+      items.forEach(function(item){
+        var btn=item.querySelector('.faq-question');
+        btn.addEventListener('click',function(){
+          var isOpen=item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+          if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

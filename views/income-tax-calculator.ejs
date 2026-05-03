@@ -2,28 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= pageTitle %> | MyTaxCalcs</title>
-  <meta name="description" content="Use our free income tax calculator to estimate federal taxable income, tax owed, refund, effective tax rate, and marginal tax rate.">
+  <title>Free Income Tax Calculator 2025 | MyTaxCalcs</title>
+  <meta name="description" content="Free federal income tax calculator for 2025. Estimate taxable income, federal tax owed, refund or amount owed, effective tax rate, and marginal tax rate.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Free Income Tax Calculator | MyTaxCalcs">
-  <meta property="og:description" content="Estimate your federal income tax, taxable income, refund, effective tax rate, and marginal tax rate for free.">
+  <meta property="og:title" content="Free Income Tax Calculator 2025 | MyTaxCalcs">
+  <meta property="og:description" content="Estimate your 2025 federal income tax, taxable income, refund, effective tax rate, and marginal tax rate for free.">
   <meta property="og:url" content="https://mytaxcalcs.com/income-tax-calculator">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Free Income Tax Calculator | MyTaxCalcs">
-  <meta name="twitter:description" content="Estimate your federal income tax, taxable income, refund, effective tax rate, and marginal tax rate for free.">
+  <meta name="twitter:title" content="Free Income Tax Calculator 2025 | MyTaxCalcs">
+  <meta name="twitter:description" content="Estimate your 2025 federal income tax, taxable income, refund, effective rate, and marginal rate.">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
   <link rel="stylesheet" href="/css/style.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+  <style>
+    .breadcrumb{max-width:780px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
+    .calc-page{max-width:780px;margin:0 auto;padding:0 24px 60px}
+    .calc-page-header{padding:28px 0 24px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;background:#ecfdf5;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .calc-page-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .calc-page-header p{font-size:1rem;color:#6b7280;margin:0;max-width:580px}
+    .calc-card-form{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:32px;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+    .calc-card-form h2{font-size:1.1rem;font-weight:700;color:#111827;margin:0 0 20px}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:580px){.form-grid{grid-template-columns:1fr}}
+    .form-field{display:flex;flex-direction:column;gap:5px}
+    .form-field.full{grid-column:1/-1}
+    .form-field label{font-size:.82rem;font-weight:600;color:#374151}
+    .input-wrap{position:relative;display:flex;align-items:center}
+    .input-prefix{position:absolute;left:12px;font-size:.95rem;color:#9ca3af;pointer-events:none}
+    .input-wrap input{padding-left:28px}
+    .form-field input,.form-field select{border:1px solid #d1d5db;border-radius:8px;padding:9px 13px;font-size:.95rem;color:#111827;background:#f9fafb;transition:border-color .15s;width:100%;box-sizing:border-box}
+    .form-field input:focus,.form-field select:focus{outline:none;border-color:#16a34a;background:#fff}
+    .form-actions{margin-top:22px}
+    .btn-calc{background:#16a34a;color:#fff;border:none;border-radius:10px;padding:12px 28px;font-size:1rem;font-weight:700;cursor:pointer;transition:background .15s,transform .1s;display:inline-flex;align-items:center;gap:8px}
+    .btn-calc:hover{background:#15803d;transform:translateY(-1px)}
+    .result-card{background:linear-gradient(135deg,#f0fdf4 0%,#dcfce7 100%);border:1px solid #bbf7d0;border-radius:16px;padding:28px 32px;margin-bottom:24px}
+    .result-card-header{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+    .result-icon{width:38px;height:38px;background:#16a34a;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .result-card-header h2{font-size:1rem;font-weight:700;color:#14532d;margin:0}
+    .result-primary{background:#fff;border-radius:12px;padding:20px 24px;margin-bottom:16px}
+    .result-primary .result-label{font-size:.85rem;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:4px}
+    .result-primary .result-amount{font-size:2.4rem;font-weight:800;color:#15803d}
+    .result-primary .result-amount.owed{color:#dc2626}
+    .result-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:520px){.result-grid{grid-template-columns:1fr}}
+    .result-item{background:#fff;border-radius:10px;padding:14px 16px}
+    .result-item .ri-label{font-size:.78rem;color:#6b7280;font-weight:500;margin-bottom:3px}
+    .result-item .ri-value{font-size:1.15rem;font-weight:700;color:#111827}
+    .result-item .ri-value.green{color:#16a34a}.result-item .ri-value.red{color:#dc2626}
+    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .hiw-section{margin:48px 0 0}
+    .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px}
+    .hiw-section h2,.faq-section h2,.related-section h2{font-size:1.5rem;font-weight:800;color:#111827;margin:0 0 8px}
+    .hiw-section>p{color:#6b7280;margin:0 0 24px;font-size:.95rem}
+    .hiw-steps{display:flex;flex-direction:column;gap:16px;margin-bottom:24px}
+    .hiw-step{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 20px}
+    .hiw-step-num{min-width:32px;height:32px;background:#f0fdf4;border:2px solid #bbf7d0;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:800;color:#16a34a}
+    .hiw-step-body h3{font-size:.9rem;font-weight:700;color:#111827;margin:0 0 4px}
+    .hiw-step-body p{font-size:.85rem;color:#6b7280;margin:0}
+    .formula-box{background:#111827;border-radius:12px;padding:20px 24px;margin-bottom:24px;overflow-x:auto}
+    .formula-box-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#6b7280;margin-bottom:10px}
+    .formula-box code{font-family:'Courier New',monospace;font-size:.85rem;color:#d1fae5;line-height:1.7;display:block;white-space:pre}
+    .formula-box code .comment{color:#4b5563}.formula-box code .highlight{color:#34d399}
+    .faq-section{margin:48px 0 0}
+    .faq-section h2{margin-bottom:20px}
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    .faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .faq-question{width:100%;background:none;border:none;padding:17px 20px;text-align:left;font-size:.92rem;font-weight:600;color:#111827;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-question:hover{background:#f9fafb}
+    .faq-chevron{min-width:20px;height:20px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .faq-item.open .faq-chevron{transform:rotate(180deg);background:#dcfce7}
+    .faq-answer{display:none;padding:0 20px 17px;font-size:.88rem;color:#6b7280;line-height:1.65}
+    .faq-item.open .faq-answer{display:block}
+    .related-section{margin:48px 0 0}
+    .related-section h2{margin-bottom:16px}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:380px){.related-grid{grid-template-columns:1fr}}
+    .related-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:8px}
+    .related-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
+    .related-card-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+    .related-card strong{font-size:.88rem;font-weight:700;color:#111827}
+    .related-card span{font-size:.78rem;color:#9ca3af}
+    .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+    .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
+    .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+  </style>
 </head>
 <body>
 
-  <!-- ── HEADER ── -->
   <header class="site-header">
     <nav class="nav">
       <a href="/" class="logo">
@@ -48,230 +124,283 @@
     </nav>
   </header>
 
-  <!-- ── PAGE HERO ── -->
-  <section class="calc-hero">
-    <div class="calc-hero-inner">
-      <div class="section-label">Federal Tax Estimator</div>
-      <h1>Free Income Tax Calculator</h1>
-      <p>Estimate your federal income tax, taxable income, refund, or amount owed for 2024.</p>
-    </div>
-  </section>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/calculators">Calculators</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>Income Tax Calculator</span>
+  </nav>
 
-  <!-- ── CALCULATOR ── -->
-  <main class="calc-main">
-    <div class="calc-layout">
+  <main>
+    <div class="calc-page">
 
-      <!-- FORM -->
-      <section class="calc-form-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h4M7 12h8"/></svg>
-          </div>
-          <h2>Your Tax Information</h2>
+      <div class="calc-page-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+          Federal Tax Estimator
         </div>
+        <h1>Free Income Tax Calculator</h1>
+        <p>Estimate your 2025 federal income tax, taxable income, refund or amount owed, effective tax rate, and marginal tax rate.</p>
+      </div>
 
-        <form method="POST" action="/income-tax-calculator" class="calc-form">
-          <div class="form-group">
-            <label for="grossIncome">Gross Annual Income</label>
-            <div class="input-wrap">
-              <span class="input-prefix">$</span>
-              <input type="number" id="grossIncome" name="grossIncome" value="<%= form.grossIncome || '' %>" placeholder="85,000" required>
+      <% if (result) { %>
+      <div class="result-card">
+        <div class="result-card-header">
+          <div class="result-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+          </div>
+          <h2>Your Income Tax Estimate</h2>
+        </div>
+        <div class="result-primary">
+          <span class="result-label"><%= result.refundOrOwed >= 0 ? 'Estimated Refund' : 'Estimated Amount Owed' %></span>
+          <span class="result-amount <%= result.refundOrOwed >= 0 ? '' : 'owed' %>">$<%= Math.abs(Math.round(result.refundOrOwed)).toLocaleString() %></span>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="ri-label">Gross Income</div>
+            <div class="ri-value">$<%= Math.round(result.grossIncome).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Deduction Used</div>
+            <div class="ri-value">$<%= Math.round(result.deduction).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Taxable Income</div>
+            <div class="ri-value">$<%= Math.round(result.taxableIncome).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Federal Tax After Credits</div>
+            <div class="ri-value red">$<%= Math.round(result.federalTaxAfterCredits).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Effective Tax Rate</div>
+            <div class="ri-value"><%= (result.effectiveTaxRate * 100).toFixed(1) %>%</div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Marginal Tax Rate</div>
+            <div class="ri-value"><%= (result.marginalRate * 100).toFixed(1) %>%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      <% } %>
+
+      <div class="calc-card-form">
+        <h2>Enter Your Tax Information</h2>
+        <form method="POST" action="/income-tax-calculator">
+          <div class="form-grid">
+            <div class="form-field full">
+              <label for="grossIncome">Gross Annual Income</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="grossIncome" name="grossIncome" min="0" step="any"
+                  value="<%= form.grossIncome || '' %>" placeholder="85000" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="filingStatus">Filing Status</label>
+              <select id="filingStatus" name="filingStatus">
+                <option value="single" <%= (!form.filingStatus || form.filingStatus === 'single') ? 'selected' : '' %>>Single</option>
+                <option value="marriedJoint" <%= form.filingStatus === 'marriedJoint' ? 'selected' : '' %>>Married Filing Jointly</option>
+                <option value="marriedSeparate" <%= form.filingStatus === 'marriedSeparate' ? 'selected' : '' %>>Married Filing Separately</option>
+                <option value="headHousehold" <%= form.filingStatus === 'headHousehold' ? 'selected' : '' %>>Head of Household</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="deductionType">Deduction Type</label>
+              <select id="deductionType" name="deductionType">
+                <option value="standard" <%= (!form.deductionType || form.deductionType === 'standard') ? 'selected' : '' %>>Standard Deduction</option>
+                <option value="itemized" <%= form.deductionType === 'itemized' ? 'selected' : '' %>>Itemized Deduction</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="itemizedDeduction">Itemized Deduction Amount</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="itemizedDeduction" name="itemizedDeduction" min="0" step="any"
+                  value="<%= form.itemizedDeduction || '' %>" placeholder="0">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="federalWithheld">Federal Tax Withheld</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="federalWithheld" name="federalWithheld" min="0" step="any"
+                  value="<%= form.federalWithheld || '' %>" placeholder="12000">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="taxCredits">Tax Credits</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="taxCredits" name="taxCredits" min="0" step="any"
+                  value="<%= form.taxCredits || '' %>" placeholder="0">
+              </div>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="filingStatus">Filing Status</label>
-            <select id="filingStatus" name="filingStatus">
-              <option value="single" <%= form.filingStatus === 'single' ? 'selected' : '' %>>Single</option>
-              <option value="marriedJoint" <%= form.filingStatus === 'marriedJoint' ? 'selected' : '' %>>Married Filing Jointly</option>
-              <option value="marriedSeparate" <%= form.filingStatus === 'marriedSeparate' ? 'selected' : '' %>>Married Filing Separately</option>
-              <option value="headHousehold" <%= form.filingStatus === 'headHousehold' ? 'selected' : '' %>>Head of Household</option>
-            </select>
+          <div class="form-actions">
+            <button type="submit" class="btn-calc">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+              Calculate Income Tax
+            </button>
           </div>
-
-          <div class="form-group">
-            <label for="deductionType">Deduction Type</label>
-            <select id="deductionType" name="deductionType">
-              <option value="standard" <%= form.deductionType === 'standard' ? 'selected' : '' %>>Standard Deduction</option>
-              <option value="itemized" <%= form.deductionType === 'itemized' ? 'selected' : '' %>>Itemized Deduction</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="itemizedDeduction">Itemized Deduction Amount</label>
-            <div class="input-wrap">
-              <span class="input-prefix">$</span>
-              <input type="number" id="itemizedDeduction" name="itemizedDeduction" value="<%= form.itemizedDeduction || '' %>" placeholder="0">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="federalWithheld">Federal Tax Withheld</label>
-            <div class="input-wrap">
-              <span class="input-prefix">$</span>
-              <input type="number" id="federalWithheld" name="federalWithheld" value="<%= form.federalWithheld || '' %>" placeholder="12,000">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="taxCredits">Tax Credits</label>
-            <div class="input-wrap">
-              <span class="input-prefix">$</span>
-              <input type="number" id="taxCredits" name="taxCredits" value="<%= form.taxCredits || '' %>" placeholder="0">
-            </div>
-          </div>
-
-          <button type="submit" class="calc-submit-btn">
-            Calculate Tax Estimate
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
         </form>
-      </section>
+      </div>
 
-      <!-- RESULTS -->
-      <section class="calc-results-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon" style="background:#f0fdf4; color:#16a34a;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-          </div>
-          <h2>Estimated Results</h2>
-        </div>
-
-        <% if (!result) { %>
-          <div class="results-empty">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-            <p>Enter your information and click <strong>Calculate</strong> to see your tax estimate.</p>
-          </div>
-        <% } else { %>
-          <div class="results-grid">
-            <div class="result-row">
-              <span>Gross Income</span>
-              <strong>$<%= Math.round(result.grossIncome).toLocaleString() %></strong>
-            </div>
-            <div class="result-row">
-              <span>Deduction</span>
-              <strong>$<%= Math.round(result.deduction).toLocaleString() %></strong>
-            </div>
-            <div class="result-row">
-              <span>Taxable Income</span>
-              <strong>$<%= Math.round(result.taxableIncome).toLocaleString() %></strong>
-            </div>
-            <div class="result-row">
-              <span>Federal Tax After Credits</span>
-              <strong>$<%= Math.round(result.federalTaxAfterCredits).toLocaleString() %></strong>
-            </div>
-            <div class="result-row">
-              <span>Federal Tax Withheld</span>
-              <strong>$<%= Math.round(result.federalWithheld).toLocaleString() %></strong>
-            </div>
-
-            <div class="result-row result-highlight <%= result.refundOrOwed >= 0 ? 'refund' : 'owed' %>">
-              <% if (result.refundOrOwed >= 0) { %>
-                <span>Estimated Refund</span>
-                <strong>$<%= Math.round(result.refundOrOwed).toLocaleString() %></strong>
-              <% } else { %>
-                <span>Estimated Amount Owed</span>
-                <strong>$<%= Math.abs(Math.round(result.refundOrOwed)).toLocaleString() %></strong>
-              <% } %>
-            </div>
-
-            <div class="result-row">
-              <span>Effective Tax Rate</span>
-              <strong><%= (result.effectiveTaxRate * 100).toFixed(1) %>%</strong>
-            </div>
-            <div class="result-row">
-              <span>Marginal Tax Rate</span>
-              <strong><%= (result.marginalRate * 100).toFixed(1) %>%</strong>
+      <div class="hiw-section">
+        <div class="section-eyebrow">How It Works</div>
+        <h2>How Federal Income Tax Is Calculated</h2>
+        <p>The IRS uses a progressive bracket system. Here is how this calculator walks through each step.</p>
+        <div class="hiw-steps">
+          <div class="hiw-step">
+            <div class="hiw-step-num">1</div>
+            <div class="hiw-step-body">
+              <h3>Start With Gross Income</h3>
+              <p>Gross income includes wages, salaries, tips, self-employment income, and other taxable income before any deductions.</p>
             </div>
           </div>
-        <% } %>
-
-        <div class="results-disclaimer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Estimate only. Not tax, legal, accounting, or financial advice.
-        </div>
-      </section>
-
-    </div>
-
-    <!-- ── SEO CONTENT ── -->
-    <div class="calc-content-wrapper">
-      <section class="content seo-content">
-        <p class="eyebrow dark">Income Tax Calculator Guide</p>
-        <h2>How this income tax calculator works</h2>
-        <p>This income tax calculator estimates federal income tax by using your gross income, filing status, deduction choice, federal withholding, and tax credits. It then estimates taxable income, federal tax after credits, effective tax rate, marginal tax rate, and whether you may receive a refund or owe additional federal tax.</p>
-
-        <div class="seo-grid">
-          <div class="seo-mini-card">
-            <h3>What it includes</h3>
-            <p>Gross income, standard or itemized deductions, filing status, federal withholding, and tax credits entered by the user.</p>
+          <div class="hiw-step">
+            <div class="hiw-step-num">2</div>
+            <div class="hiw-step-body">
+              <h3>Subtract Your Deduction</h3>
+              <p>You can take the standard deduction for your filing status or itemize. Whichever is larger reduces your taxable income more.</p>
+            </div>
           </div>
-          <div class="seo-mini-card">
-            <h3>What it estimates</h3>
-            <p>Taxable income, estimated federal tax, refund or amount owed, effective tax rate, and marginal tax rate.</p>
+          <div class="hiw-step">
+            <div class="hiw-step-num">3</div>
+            <div class="hiw-step-body">
+              <h3>Apply Tax Brackets Progressively</h3>
+              <p>Each bracket rate only applies to income within that bracket range, not your entire income. Lower brackets are always filled first.</p>
+            </div>
           </div>
-          <div class="seo-mini-card">
-            <h3>What it excludes</h3>
-            <p>Every tax credit, phaseout, local tax, alternative minimum tax, Medicare surtax, or special tax situation.</p>
+          <div class="hiw-step">
+            <div class="hiw-step-num">4</div>
+            <div class="hiw-step-body">
+              <h3>Subtract Credits and Withholding</h3>
+              <p>Tax credits reduce your tax dollar for dollar. Subtracting withholding and credits from your tax liability gives the refund or balance owed.</p>
+            </div>
           </div>
         </div>
+        <div class="formula-box">
+          <div class="formula-box-label">Formula Reference</div>
+          <code><span class="comment">// Step 1 - Taxable Income</span>
+<span class="highlight">Taxable Income</span>   = Gross Income - Deduction
 
-        <h2>Frequently asked questions</h2>
+<span class="comment">// Step 2 - 2025 Federal Brackets (Single filer)</span>
+10%  on income up to $11,925
+12%  on $11,925 to $48,475
+22%  on $48,475 to $103,350
+24%  on $103,350 to $197,300
+32%  on $197,300 to $250,525
+35%  on $250,525 to $626,350
+37%  above $626,350
+
+<span class="comment">// Step 3 - Refund or Owed</span>
+<span class="highlight">Balance</span>          = (Tax - Credits) - Federal Withheld</code>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="faq-section">
+        <div class="section-eyebrow">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
           <div class="faq-item">
-            <h3>Is this income tax calculator exact?</h3>
-            <p>No. This calculator provides an estimate only. Your actual tax result may differ based on credits, deductions, dependents, retirement contributions, business income, state taxes, and other tax rules.</p>
+            <button class="faq-question" aria-expanded="false">Is this income tax calculator exact?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">No. This calculator provides an estimate only. Your actual result may differ based on credits, deductions, dependents, retirement contributions, business income, state taxes, and other tax rules.</div>
           </div>
           <div class="faq-item">
-            <h3>What is taxable income?</h3>
-            <p>Taxable income is the amount of income left after subtracting deductions from gross income. This calculator estimates taxable income based on the deduction option you select.</p>
+            <button class="faq-question" aria-expanded="false">What is taxable income?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Taxable income is the portion of your gross income remaining after subtracting deductions. The IRS applies tax brackets to this amount, not your full gross income.</div>
           </div>
           <div class="faq-item">
-            <h3>What is the difference between marginal and effective tax rate?</h3>
-            <p>A marginal tax rate is the rate applied to the last portion of taxable income. An effective tax rate is the estimated total federal tax divided by gross income.</p>
+            <button class="faq-question" aria-expanded="false">What is the difference between marginal and effective tax rate?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Your marginal rate is the rate applied to the last dollar of your taxable income. Your effective rate is total estimated tax divided by gross income. Most people's effective rate is meaningfully lower than their marginal rate.</div>
           </div>
           <div class="faq-item">
-            <h3>Does this calculator include state income tax?</h3>
-            <p>This page focuses on federal income tax. Use the state calculator pages for state-specific tax information and estimates.</p>
+            <button class="faq-question" aria-expanded="false">Should I take the standard or itemized deduction?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Take whichever is larger. Common itemized deductions include mortgage interest, state and local taxes (up to $10,000), and charitable contributions. The 2025 standard deduction is $15,000 for single filers and $30,000 for married filing jointly.</div>
           </div>
           <div class="faq-item">
-            <h3>Should I use standard or itemized deductions?</h3>
-            <p>Many taxpayers use the standard deduction, but some may itemize if their eligible deductions are higher. This calculator lets you compare either approach.</p>
+            <button class="faq-question" aria-expanded="false">Does this calculator include state income tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">No, this page estimates federal income tax only. Use the state calculator pages linked below for state-specific estimates.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What tax year does this calculator use?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">This calculator uses 2025 federal tax brackets and standard deduction amounts. Tax brackets are adjusted annually for inflation by the IRS.</div>
           </div>
         </div>
-        <p class="last-updated">Last updated: April 2026</p>
-      </section>
+      </div>
 
-      <section class="content related-calculators">
-        <p class="eyebrow dark">Related Calculators</p>
-        <h2>More tax calculators</h2>
+      <div class="related-section">
+        <h2>Related Tax Calculators</h2>
         <div class="related-grid">
-          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
-          <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
-          <a href="/capital-gains-tax-calculator">Capital Gains Tax</a>
-          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
-          <a href="/payroll-tax-calculator">Payroll Tax Calculator</a>
-          <a href="/calculators">All Calculators</a>
+          <a class="related-card" href="/tax-refund-calculator">
+            <div class="related-card-icon" style="background:#f0fdf4;color:#15803d;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <strong>Tax Refund Calculator</strong>
+            <span>Estimate your federal refund or balance owed</span>
+          </a>
+          <a class="related-card" href="/self-employment-tax-calculator">
+            <div class="related-card-icon" style="background:#eff6ff;color:#2563eb;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <strong>Self-Employment Tax</strong>
+            <span>Social Security and Medicare for freelancers</span>
+          </a>
+          <a class="related-card" href="/capital-gains-tax-calculator">
+            <div class="related-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg></div>
+            <strong>Capital Gains Tax</strong>
+            <span>Estimate tax on stocks, crypto, and real estate</span>
+          </a>
+          <a class="related-card" href="/payroll-tax-calculator">
+            <div class="related-card-icon" style="background:#fff1f2;color:#e11d48;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+            <strong>Payroll Tax Calculator</strong>
+            <span>Estimate take-home pay and withholding</span>
+          </a>
+          <a class="related-card" href="/sales-tax-calculator">
+            <div class="related-card-icon" style="background:#fdf4ff;color:#9333ea;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg></div>
+            <strong>Sales Tax Calculator</strong>
+            <span>Calculate total purchase cost with tax</span>
+          </a>
+          <a class="related-card" href="/california-income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+            <strong>State Tax Calculators</strong>
+            <span>Income tax estimates for all 50 states</span>
+          </a>
         </div>
-      </section>
-    </div>
+      </div>
 
+      <div class="page-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only using 2025 federal tax brackets. It does not account for all credits, deductions, alternative minimum tax, or every tax situation. It is not tax, legal, or financial advice. Consult a qualified tax professional before making tax decisions.</p>
+      </div>
+
+    </div>
   </main>
 
-  <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="footer-logo">
-            <span class="logo-mark">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/>
-                <rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
-                <rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
-                <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
-              </svg>
-            </span>
+            <span class="logo-mark"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/></svg></span>
             MyTaxCalcs
           </a>
           <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
@@ -297,10 +426,23 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p>
+        <p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p>
       </div>
     </div>
   </footer>
 
+  <script>
+    (function(){
+      var items=document.querySelectorAll('.faq-item');
+      items.forEach(function(item){
+        var btn=item.querySelector('.faq-question');
+        btn.addEventListener('click',function(){
+          var isOpen=item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+          if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

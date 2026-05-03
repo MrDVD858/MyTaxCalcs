@@ -2,26 +2,342 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= pageTitle %> | MyTaxCalcs</title>
-  <meta name="description" content="Use the free capital gains tax calculator to estimate short-term and long-term capital gains tax, net investment income tax, and total estimated tax.">
+  <title>Capital Gains Tax Calculator 2025 | MyTaxCalcs</title>
+  <meta name="description" content="Free capital gains tax calculator for 2025. Estimate short-term and long-term federal tax on stocks, crypto, real estate, and other asset sales. Includes NIIT.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="Free Capital Gains Tax Calculator | MyTaxCalcs">
-  <meta property="og:description" content="Estimate short-term and long-term capital gains tax on stocks, crypto, real estate, or other assets.">
+  <meta property="og:title" content="Capital Gains Tax Calculator 2025 | MyTaxCalcs">
+  <meta property="og:description" content="Estimate your 2025 federal capital gains tax on stocks, crypto, real estate, and other assets. Includes Net Investment Income Tax (NIIT).">
   <meta property="og:url" content="https://mytaxcalcs.com/capital-gains-tax-calculator">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Free Capital Gains Tax Calculator | MyTaxCalcs">
-  <meta name="twitter:description" content="Estimate short-term and long-term capital gains tax on stocks, crypto, real estate, or other assets.">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/favicon.png">
+  <meta name="twitter:title" content="Capital Gains Tax Calculator 2025 | MyTaxCalcs">
+  <meta name="twitter:description" content="Estimate your 2025 federal capital gains tax. Includes NIIT and long-term vs short-term rates.">
+
   <link rel="stylesheet" href="/css/style.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+
+  <style>
+    /* ── BREADCRUMB ── */
+    .breadcrumb {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 14px 24px 0;
+      font-size: 0.8rem;
+      color: #6b7280;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: #16a34a; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: #d1d5db; font-size: 0.75rem; }
+
+    /* ── CALCULATOR LAYOUT ── */
+    .calc-page { max-width: 780px; margin: 0 auto; padding: 0 24px 60px; }
+
+    .calc-page-header { padding: 28px 0 24px; }
+    .calc-page-header .page-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #d97706;
+      background: #fef3c7;
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 12px;
+    }
+    .calc-page-header h1 { font-size: 2rem; font-weight: 800; line-height: 1.2; margin: 0 0 10px; color: #111827; }
+    .calc-page-header p { font-size: 1rem; color: #6b7280; margin: 0; max-width: 580px; }
+
+    /* ── FORM CARD ── */
+    .calc-card-form {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+    .calc-card-form h2 { font-size: 1.1rem; font-weight: 700; color: #111827; margin: 0 0 20px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } }
+
+    .form-field { display: flex; flex-direction: column; gap: 5px; }
+    .form-field.full { grid-column: 1 / -1; }
+    .form-field label { font-size: 0.82rem; font-weight: 600; color: #374151; }
+    .form-field input, .form-field select {
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      padding: 9px 13px;
+      font-size: 0.95rem;
+      color: #111827;
+      background: #f9fafb;
+      transition: border-color 0.15s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .form-field input:focus, .form-field select:focus {
+      outline: none;
+      border-color: #16a34a;
+      background: #fff;
+    }
+
+    .form-actions { margin-top: 22px; }
+    .btn-calc {
+      background: #16a34a;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-calc:hover { background: #15803d; transform: translateY(-1px); }
+
+    /* ── RESULT CARD ── */
+    .result-card {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border: 1px solid #bbf7d0;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 24px;
+    }
+    .result-card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .result-card-header .result-icon {
+      width: 38px; height: 38px;
+      background: #16a34a;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .result-card-header h2 { font-size: 1rem; font-weight: 700; color: #14532d; margin: 0; }
+
+    .result-primary {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .result-primary .result-label { font-size: 0.85rem; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; }
+    .result-primary .result-amount { font-size: 2.4rem; font-weight: 800; color: #15803d; }
+
+    .result-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 520px) { .result-grid { grid-template-columns: 1fr; } }
+
+    .result-item {
+      background: #fff;
+      border-radius: 10px;
+      padding: 14px 16px;
+    }
+    .result-item .ri-label { font-size: 0.78rem; color: #6b7280; font-weight: 500; margin-bottom: 3px; }
+    .result-item .ri-value { font-size: 1.15rem; font-weight: 700; color: #111827; }
+    .result-item .ri-value.positive { color: #16a34a; }
+    .result-item .ri-value.warning { color: #d97706; }
+
+    .result-method {
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      font-style: italic;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.5);
+      border-radius: 8px;
+    }
+
+    /* ── AD ZONE ── */
+    .ad-zone {
+      text-align: center;
+      margin: 28px 0;
+      min-height: 90px;
+    }
+    .ad-zone-label {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .hiw-section { margin: 48px 0 0; }
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #16a34a;
+      margin-bottom: 8px;
+    }
+    .hiw-section h2 { font-size: 1.5rem; font-weight: 800; color: #111827; margin: 0 0 8px; }
+    .hiw-section > p { color: #6b7280; margin: 0 0 24px; font-size: 0.95rem; }
+
+    .hiw-steps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+    .hiw-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .hiw-step-num {
+      min-width: 32px; height: 32px;
+      background: #f0fdf4;
+      border: 2px solid #bbf7d0;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #16a34a;
+    }
+    .hiw-step-body h3 { font-size: 0.9rem; font-weight: 700; color: #111827; margin: 0 0 4px; }
+    .hiw-step-body p { font-size: 0.85rem; color: #6b7280; margin: 0; }
+
+    .formula-box {
+      background: #111827;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+    .formula-box-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+    .formula-box code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      color: #d1fae5;
+      line-height: 1.7;
+      display: block;
+      white-space: pre;
+    }
+    .formula-box code .comment { color: #4b5563; }
+    .formula-box code .highlight { color: #34d399; }
+
+    /* ── FAQ ── */
+    .faq-section { margin: 48px 0 0; }
+    .faq-section h2 { font-size: 1.5rem; font-weight: 800; color: #111827; margin: 0 0 20px; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    .faq-item {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 17px 20px;
+      text-align: left;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #111827;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .faq-question:hover { background: #f9fafb; }
+    .faq-chevron {
+      min-width: 20px; height: 20px;
+      border-radius: 50%;
+      background: #f3f4f6;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.2s;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); background: #dcfce7; }
+    .faq-answer {
+      display: none;
+      padding: 0 20px 17px;
+      font-size: 0.88rem;
+      color: #6b7280;
+      line-height: 1.65;
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ── RELATED CALCULATORS ── */
+    .related-section { margin: 48px 0 0; }
+    .related-section h2 { font-size: 1.5rem; font-weight: 800; color: #111827; margin: 0 0 16px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    @media (max-width: 580px) { .related-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 380px) { .related-grid { grid-template-columns: 1fr; } }
+
+    .related-card {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 18px 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .related-card:hover {
+      border-color: #16a34a;
+      box-shadow: 0 4px 12px rgba(22,163,74,0.1);
+      transform: translateY(-2px);
+    }
+    .related-card-icon {
+      width: 36px; height: 36px;
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 2px;
+    }
+    .related-card strong { font-size: 0.88rem; font-weight: 700; color: #111827; }
+    .related-card span { font-size: 0.78rem; color: #9ca3af; }
+
+    /* ── DISCLAIMER ── */
+    .page-disclaimer {
+      margin: 40px 0 0;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .page-disclaimer svg { color: #9ca3af; min-width: 18px; margin-top: 1px; }
+    .page-disclaimer p { font-size: 0.82rem; color: #6b7280; margin: 0; line-height: 1.55; }
+  </style>
 </head>
 <body>
+
+  <!-- ── HEADER ── -->
   <header class="site-header">
     <nav class="nav">
       <a href="/" class="logo">
@@ -42,155 +358,379 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </div>
-      <a class="nav-cta" href="/calculators">All Calculators</a>
+      <a class="nav-cta" href="/income-tax-calculator">Get Started</a>
     </nav>
   </header>
 
-  <section class="calc-hero">
-    <div class="calc-hero-inner">
-      <div class="section-label">Stocks, Crypto & Real Estate</div>
-      <h1>Capital Gains Tax Calculator</h1>
-      <p>Estimate federal tax on the profit from selling stocks, crypto, real estate, or other assets.</p>
-    </div>
-  </section>
+  <!-- ── BREADCRUMB ── -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/calculators">Calculators</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>Capital Gains Tax Calculator</span>
+  </nav>
 
-  <main class="calc-main">
-    <div class="calc-layout">
-      <section class="calc-form-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon" style="background:#fef3c7; color:#d97706;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-          </div>
-          <h2>Asset Sale Information</h2>
-        </div>
-        <form method="POST" action="/capital-gains-tax-calculator" class="calc-form">
-          <div class="form-group">
-            <label>Filing Status</label>
-            <select name="filingStatus">
-              <option value="single" <%= form.filingStatus === "single" ? "selected" : "" %>>Single</option>
-              <option value="marriedJoint" <%= form.filingStatus === "marriedJoint" ? "selected" : "" %>>Married Filing Jointly</option>
-              <option value="marriedSeparate" <%= form.filingStatus === "marriedSeparate" ? "selected" : "" %>>Married Filing Separately</option>
-              <option value="headHousehold" <%= form.filingStatus === "headHousehold" ? "selected" : "" %>>Head of Household</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Holding Period</label>
-            <select name="holdingPeriod">
-              <option value="long" <%= form.holdingPeriod === "long" ? "selected" : "" %>>Long-term (more than 1 year)</option>
-              <option value="short" <%= form.holdingPeriod === "short" ? "selected" : "" %>>Short-term (1 year or less)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Sale Price</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="salePrice" value="<%= form.salePrice || '' %>" placeholder="150,000" required></div>
-          </div>
-          <div class="form-group">
-            <label>Purchase Price / Cost Basis</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="purchasePrice" value="<%= form.purchasePrice || '' %>" placeholder="80,000" required></div>
-          </div>
-          <div class="form-group">
-            <label>Selling Costs</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="sellingCosts" value="<%= form.sellingCosts || '' %>" placeholder="5,000"></div>
-          </div>
-          <div class="form-group">
-            <label>Capital Improvements</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="improvements" value="<%= form.improvements || '' %>" placeholder="0"></div>
-          </div>
-          <div class="form-group">
-            <label>Capital Losses to Offset Gains</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="capitalLosses" value="<%= form.capitalLosses || '' %>" placeholder="0"></div>
-          </div>
-          <div class="form-group">
-            <label>Other Taxable Income</label>
-            <div class="input-wrap"><span class="input-prefix">$</span>
-            <input type="number" name="otherTaxableIncome" value="<%= form.otherTaxableIncome || '' %>" placeholder="85,000"></div>
-          </div>
-          <button type="submit" class="calc-submit-btn">Calculate Capital Gains Tax <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
-        </form>
-      </section>
+  <main>
+    <div class="calc-page">
 
-      <section class="calc-results-card">
-        <div class="calc-form-header">
-          <div class="calc-form-icon" style="background:#fef3c7; color:#d97706;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h2>Estimated Results</h2>
+      <!-- ── PAGE HEADER ── -->
+      <div class="calc-page-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+          Capital Gains Tax
         </div>
-        <% if (!result) { %>
-          <div class="results-empty">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-            <p>Enter sale, basis, income, and holding period information to estimate capital gains tax.</p>
+        <h1>Capital Gains Tax Calculator</h1>
+        <p>Estimate your 2025 federal capital gains tax on stocks, crypto, real estate, and other asset sales. Includes Net Investment Income Tax (NIIT).</p>
+      </div>
+
+      <!-- ── RESULT (shown after POST) ── -->
+      <% if (result) { %>
+      <div class="result-card">
+        <div class="result-card-header">
+          <div class="result-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
           </div>
-        <% } else { %>
-          <div class="results-grid">
-            <div class="result-row"><span>Tax Year</span><strong><%= result.taxYear %></strong></div>
-            <div class="result-row"><span>Sale Price</span><strong>$<%= Math.round(result.salePrice).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Adjusted Basis</span><strong>$<%= Math.round(result.adjustedBasis).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Gross Capital Gain</span><strong>$<%= Math.round(result.grossGain).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Capital Losses</span><strong>$<%= Math.round(result.capitalLosses).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Net Taxable Gain</span><strong>$<%= Math.round(result.netGain).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Est. Capital Gains Tax</span><strong>$<%= Math.round(result.estimatedCapitalGainsTax).toLocaleString() %></strong></div>
-            <div class="result-row"><span>Estimated NIIT</span><strong>$<%= Math.round(result.estimatedNIIT).toLocaleString() %></strong></div>
-            <div class="result-row result-highlight owed">
-              <span>Total Estimated Tax</span>
-              <strong>$<%= Math.round(result.totalEstimatedTax).toLocaleString() %></strong>
+          <h2>Your Capital Gains Tax Estimate</h2>
+        </div>
+
+        <div class="result-primary">
+          <span class="result-label">Total Estimated Tax</span>
+          <span class="result-amount">$<%= result.totalEstimatedTax.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) %></span>
+        </div>
+
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="ri-label">Net Capital Gain</div>
+            <div class="ri-value">$<%= result.netGain.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Adjusted Basis</div>
+            <div class="ri-value">$<%= result.adjustedBasis.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Capital Gains Tax</div>
+            <div class="ri-value warning">$<%= result.estimatedCapitalGainsTax.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Net Investment Income Tax (3.8%)</div>
+            <div class="ri-value warning">$<%= result.estimatedNIIT.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}) %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Effective Gains Rate</div>
+            <div class="ri-value"><%= (result.effectiveCapitalGainsRate * 100).toFixed(2) %>%</div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Holding Period</div>
+            <div class="ri-value positive"><%= result.holdingPeriod === 'long' ? 'Long-term' : 'Short-term' %></div>
+          </div>
+        </div>
+
+        <div class="result-method"><%= result.taxMethod %></div>
+      </div>
+
+      <!-- ── LEADERBOARD AD (after results) ── -->
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <% } %>
+
+      <!-- ── CALCULATOR FORM ── -->
+      <div class="calc-card-form">
+        <h2>Enter Your Details</h2>
+        <form method="POST" action="/capital-gains-tax-calculator">
+          <div class="form-grid">
+
+            <div class="form-field">
+              <label for="salePrice">Sale Price ($)</label>
+              <input type="number" id="salePrice" name="salePrice" min="0" step="any"
+                value="<%= form.salePrice || '' %>" placeholder="e.g. 250000" required>
             </div>
-            <div class="result-row"><span>Effective Rate on Gain</span><strong><%= (result.effectiveCapitalGainsRate * 100).toFixed(1) %>%</strong></div>
-          </div>
-          <% if (result.taxMethod) { %><p style="font-size:0.82rem;color:var(--muted);margin-top:12px;padding:0 4px;"><%= result.taxMethod %></p><% } %>
-        <% } %>
-        <div class="results-disclaimer">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Estimate only. Not tax, legal, accounting, investment, or financial advice.
-        </div>
-      </section>
-    </div>
 
-    <div class="calc-content-wrapper">
-      <section class="content seo-content">
-        <p class="eyebrow dark">Capital Gains Tax Guide</p>
-        <h2>How this capital gains tax calculator works</h2>
-        <p>This calculator estimates the federal tax that may apply when you sell an asset for more than your adjusted basis. It can be used for planning around stocks, crypto, real estate, business property, or other assets, but it does not replace official tax software or a tax professional.</p>
-        <div class="seo-grid">
-          <div class="seo-mini-card"><h3>Cost basis</h3><p>Cost basis generally starts with what you paid for the asset. This calculator also lets you add selling costs and capital improvements to estimate adjusted basis.</p></div>
-          <div class="seo-mini-card"><h3>Short-term gains</h3><p>Short-term gains are generally gains on assets held for one year or less and are estimated using ordinary federal income tax brackets.</p></div>
-          <div class="seo-mini-card"><h3>Long-term gains</h3><p>Long-term gains are generally gains on assets held for more than one year and may qualify for lower federal capital gains tax rates.</p></div>
+            <div class="form-field">
+              <label for="purchasePrice">Original Purchase Price ($)</label>
+              <input type="number" id="purchasePrice" name="purchasePrice" min="0" step="any"
+                value="<%= form.purchasePrice || '' %>" placeholder="e.g. 150000" required>
+            </div>
+
+            <div class="form-field">
+              <label for="improvements">Improvements Added ($)</label>
+              <input type="number" id="improvements" name="improvements" min="0" step="any"
+                value="<%= form.improvements || '' %>" placeholder="e.g. 15000">
+            </div>
+
+            <div class="form-field">
+              <label for="sellingCosts">Selling Costs ($)</label>
+              <input type="number" id="sellingCosts" name="sellingCosts" min="0" step="any"
+                value="<%= form.sellingCosts || '' %>" placeholder="e.g. 5000">
+            </div>
+
+            <div class="form-field">
+              <label for="capitalLosses">Capital Loss Carryover ($)</label>
+              <input type="number" id="capitalLosses" name="capitalLosses" min="0" step="any"
+                value="<%= form.capitalLosses || '' %>" placeholder="e.g. 0">
+            </div>
+
+            <div class="form-field">
+              <label for="otherTaxableIncome">Other Taxable Income ($)</label>
+              <input type="number" id="otherTaxableIncome" name="otherTaxableIncome" min="0" step="any"
+                value="<%= form.otherTaxableIncome || '' %>" placeholder="e.g. 75000" required>
+            </div>
+
+            <div class="form-field">
+              <label for="filingStatus">Filing Status</label>
+              <select id="filingStatus" name="filingStatus">
+                <option value="single" <%= (form.filingStatus === 'single' || !form.filingStatus) ? 'selected' : '' %>>Single</option>
+                <option value="marriedJoint" <%= form.filingStatus === 'marriedJoint' ? 'selected' : '' %>>Married Filing Jointly</option>
+                <option value="marriedSeparate" <%= form.filingStatus === 'marriedSeparate' ? 'selected' : '' %>>Married Filing Separately</option>
+                <option value="headHousehold" <%= form.filingStatus === 'headHousehold' ? 'selected' : '' %>>Head of Household</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="holdingPeriod">Holding Period</label>
+              <select id="holdingPeriod" name="holdingPeriod">
+                <option value="long" <%= (form.holdingPeriod === 'long' || !form.holdingPeriod) ? 'selected' : '' %>>Long-term (held over 1 year)</option>
+                <option value="short" <%= form.holdingPeriod === 'short' ? 'selected' : '' %>>Short-term (held 1 year or less)</option>
+              </select>
+            </div>
+
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-calc">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+              Calculate Capital Gains Tax
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- ── HOW IT WORKS ── -->
+      <div class="hiw-section">
+        <div class="section-eyebrow">How It Works</div>
+        <h2>How Capital Gains Tax Is Calculated</h2>
+        <p>Your tax depends on how long you held the asset and your total income. Here is the step-by-step process we use.</p>
+
+        <div class="hiw-steps">
+          <div class="hiw-step">
+            <div class="hiw-step-num">1</div>
+            <div class="hiw-step-body">
+              <h3>Calculate Adjusted Basis</h3>
+              <p>Start with your original purchase price, then add the cost of any improvements and selling expenses. This is your adjusted basis.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">2</div>
+            <div class="hiw-step-body">
+              <h3>Find Your Net Capital Gain</h3>
+              <p>Subtract the adjusted basis from your sale price to get the gross gain. Then subtract any capital loss carryover to get the net gain.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">3</div>
+            <div class="hiw-step-body">
+              <h3>Apply the Right Tax Rate</h3>
+              <p>Long-term gains (held over 1 year) use preferential 0%, 15%, or 20% rates. Short-term gains are taxed as ordinary income using your marginal bracket.</p>
+            </div>
+          </div>
+          <div class="hiw-step">
+            <div class="hiw-step-num">4</div>
+            <div class="hiw-step-body">
+              <h3>Add Net Investment Income Tax</h3>
+              <p>High earners may owe an additional 3.8% NIIT on the lesser of net investment income or the amount by which MAGI exceeds the threshold for your filing status.</p>
+            </div>
+          </div>
         </div>
-        <h2>Capital gains tax FAQ</h2>
+
+        <div class="formula-box">
+          <div class="formula-box-label">Formula Reference</div>
+          <code><span class="comment">// Step 1: Adjusted Basis</span>
+<span class="highlight">Adjusted Basis</span>  = Purchase Price + Improvements + Selling Costs
+
+<span class="comment">// Step 2: Net Gain</span>
+<span class="highlight">Gross Gain</span>       = Sale Price - Adjusted Basis
+<span class="highlight">Net Gain</span>         = Gross Gain - Capital Loss Carryover
+
+<span class="comment">// Step 3: Long-term rates (2025, Single filer)</span>
+0%  rate applies up to $48,350 of taxable income
+15% rate applies from $48,350 to $533,400
+20% rate applies above $533,400
+
+<span class="comment">// Step 4: Net Investment Income Tax</span>
+<span class="highlight">NIIT (3.8%)</span>      = min(Net Gain, max(MAGI - Threshold, 0))</code>
+        </div>
+      </div>
+
+      <!-- ── MID-PAGE AD ── -->
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- ── FAQ ── -->
+      <div class="faq-section">
+        <div class="section-eyebrow">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
         <div class="faq-list">
-          <div class="faq-item"><h3>What is capital gains tax?</h3><p>Capital gains tax is tax on profit from selling an asset for more than its adjusted basis. The tax treatment can depend on the asset type, holding period, filing status, income, and losses.</p></div>
-          <div class="faq-item"><h3>What is the difference between short-term and long-term capital gains?</h3><p>Short-term gains generally apply to assets held for one year or less. Long-term gains generally apply to assets held for more than one year and may qualify for lower federal tax rates.</p></div>
-          <div class="faq-item"><h3>Does this calculator include state capital gains tax?</h3><p>No. This calculator focuses on federal estimates. Some states tax capital gains as ordinary income, while others may have different rules or no state income tax.</p></div>
-          <div class="faq-item"><h3>What is Net Investment Income Tax?</h3><p>Net Investment Income Tax is an additional federal tax that may apply to certain investment income when income is above specific thresholds. This calculator includes a simplified NIIT estimate.</p></div>
-          <div class="faq-item"><h3>Can I use this calculator for tax filing?</h3><p>No. This calculator is for educational planning only. For filing, use official tax forms, tax software, or a qualified tax professional.</p></div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is the difference between short-term and long-term capital gains?
+              <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              Short-term capital gains apply when you sell an asset held for one year or less. They are taxed at your ordinary income tax rate, which can be as high as 37%. Long-term capital gains apply to assets held longer than one year and benefit from lower preferential rates of 0%, 15%, or 20% depending on your total taxable income.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What is the Net Investment Income Tax (NIIT)?
+              <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              The NIIT is an additional 3.8% tax on investment income for higher earners. It applies to the lesser of your net investment income or the amount by which your modified adjusted gross income (MAGI) exceeds $200,000 for single filers or $250,000 for married filing jointly. Capital gains count as investment income for NIIT purposes.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              What counts as an improvement when calculating adjusted basis?
+              <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              Improvements are capital expenditures that add value to the asset or extend its useful life, such as a home addition, new roof, or kitchen remodel. Regular maintenance and repairs do not count. For investments, broker commissions and transaction fees paid at purchase can also be added to your basis.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Can capital losses offset my capital gains?
+              <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              Yes. Capital losses from selling assets at a loss can offset capital gains dollar for dollar. If your total losses exceed your total gains, you can deduct up to $3,000 of the excess loss against ordinary income per year. Any remaining unused loss carries forward to future tax years indefinitely.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Are crypto and stock gains taxed the same way?
+              <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              Yes, the IRS treats cryptocurrency as property, not currency. This means crypto gains and losses follow the same short-term and long-term capital gains rules as stocks and real estate. Each sale, exchange, or use of crypto to buy goods or services is a taxable event.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Does this calculator include state capital gains taxes?
+              <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-answer">
+              No, this calculator estimates federal capital gains tax only. Most states tax capital gains as ordinary income at the state level. A few states like Texas and Florida have no state income tax. For a full picture, check your state's income tax rate and add it to your federal estimate.
+            </div>
+          </div>
+
         </div>
-        <p class="last-updated">Last updated: April 2026</p>
-      </section>
-      <section class="content related-calculators">
-        <p class="eyebrow dark">Related Calculators</p>
-        <h2>More tax calculators</h2>
+      </div>
+
+      <!-- ── RELATED CALCULATORS ── -->
+      <div class="related-section">
+        <h2>Related Tax Calculators</h2>
         <div class="related-grid">
-          <a href="/income-tax-calculator">Income Tax Calculator</a>
-          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
-          <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
-          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
-          <a href="/payroll-tax-calculator">Payroll Tax Calculator</a>
-          <a href="/calculators">All Calculators</a>
+
+          <a class="related-card" href="/income-tax-calculator">
+            <div class="calc-card-icon related-card-icon" style="background:#ecfdf5; color:#16a34a;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <strong>Income Tax Calculator</strong>
+            <span>Estimate your federal income tax and effective rate</span>
+          </a>
+
+          <a class="related-card" href="/tax-refund-calculator">
+            <div class="calc-card-icon related-card-icon" style="background:#f0fdf4; color:#15803d;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <strong>Tax Refund Calculator</strong>
+            <span>Estimate your federal refund or amount owed</span>
+          </a>
+
+          <a class="related-card" href="/self-employment-tax-calculator">
+            <div class="calc-card-icon related-card-icon" style="background:#eff6ff; color:#2563eb;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <strong>Self-Employment Tax</strong>
+            <span>Calculate Social Security and Medicare taxes</span>
+          </a>
+
+          <a class="related-card" href="/payroll-tax-calculator">
+            <div class="calc-card-icon related-card-icon" style="background:#fff1f2; color:#e11d48;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <strong>Payroll Tax Calculator</strong>
+            <span>Estimate take-home pay and withholding</span>
+          </a>
+
+          <a class="related-card" href="/sales-tax-calculator">
+            <div class="calc-card-icon related-card-icon" style="background:#fdf4ff; color:#9333ea;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
+            </div>
+            <strong>Sales Tax Calculator</strong>
+            <span>Calculate total purchase cost with tax</span>
+          </a>
+
+          <a class="related-card" href="/california-income-tax-calculator">
+            <div class="calc-card-icon related-card-icon" style="background:#fef3c7; color:#d97706;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            </div>
+            <strong>State Tax Calculators</strong>
+            <span>Income tax estimates for all 50 states</span>
+          </a>
+
         </div>
-      </section>
+      </div>
+
+      <!-- ── PAGE DISCLAIMER ── -->
+      <div class="page-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only using 2025 federal tax brackets. It does not account for state capital gains taxes, depreciation recapture, installment sales, or other special rules. It is not tax, legal, or financial advice. Consult a qualified tax professional before making investment or tax decisions.</p>
+      </div>
+
     </div>
   </main>
 
+  <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="footer-logo"><span class="logo-mark"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/></svg></span>MyTaxCalcs</a>
+          <a href="/" class="footer-logo">
+            <span class="logo-mark">
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                <rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/>
+                <rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+                <rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+                <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
+              </svg>
+            </span>
+            MyTaxCalcs
+          </a>
           <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
         </div>
         <div class="footer-column">
@@ -213,8 +753,32 @@
           <a href="/disclaimer">Disclaimer</a>
         </div>
       </div>
-      <div class="footer-bottom"><p>© 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
+      <div class="footer-bottom">
+        <p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- ── FAQ ACCORDION SCRIPT ── -->
+  <script>
+    (function() {
+      var items = document.querySelectorAll('.faq-item');
+      items.forEach(function(item) {
+        var btn = item.querySelector('.faq-question');
+        btn.addEventListener('click', function() {
+          var isOpen = item.classList.contains('open');
+          items.forEach(function(i) {
+            i.classList.remove('open');
+            i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+          });
+          if (!isOpen) {
+            item.classList.add('open');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+    })();
+  </script>
+
 </body>
 </html>
