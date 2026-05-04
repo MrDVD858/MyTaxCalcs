@@ -176,7 +176,7 @@ app.post("/tax-refund-calculator", (req, res) => {
   });
 });
 
-// ── SEO GUIDE PAGES ───────────────────────────────────────────────────────────
+// ── SEO GUIDES: TAX BRACKETS ──────────────────────────────────────────────────
 app.get("/tax-brackets-2025", (req, res) => {
   res.render("tax-brackets-2025", {
     pageTitle: "2025 Federal Income Tax Brackets: Every Rate and Threshold"
@@ -189,6 +189,7 @@ app.get("/tax-brackets-2026", (req, res) => {
   });
 });
 
+// ── SEO GUIDES: STANDARD DEDUCTION ───────────────────────────────────────────
 app.get("/standard-deduction-2025", (req, res) => {
   res.render("standard-deduction-2025", {
     pageTitle: "Standard Deduction 2025: Amounts, Rules, and How It Works"
@@ -201,9 +202,69 @@ app.get("/standard-deduction-2026", (req, res) => {
   });
 });
 
+app.get("/standard-deduction-vs-itemized", (req, res) => {
+  res.render("standard-deduction-vs-itemized", {
+    pageTitle: "Standard Deduction vs Itemized Deductions: Which Saves More?"
+  });
+});
+
+// ── SEO GUIDES: CAPITAL GAINS ─────────────────────────────────────────────────
 app.get("/capital-gains-tax-rates-2025", (req, res) => {
   res.render("capital-gains-tax-rates-2025", {
     pageTitle: "Capital Gains Tax Rates 2025: Long-Term, Short-Term, and NIIT"
+  });
+});
+
+app.get("/capital-gains-tax-rates-2026", (req, res) => {
+  res.render("capital-gains-tax-rates-2026", {
+    pageTitle: "Capital Gains Tax Rates 2026: Projected Rates and Thresholds"
+  });
+});
+
+// ── SEO GUIDES: FICA AND SELF-EMPLOYMENT ──────────────────────────────────────
+app.get("/fica-tax-rate-2025", (req, res) => {
+  res.render("fica-tax-rate-2025", {
+    pageTitle: "FICA Tax Rate 2025: Social Security and Medicare Rates"
+  });
+});
+
+app.get("/self-employment-tax-rate-2025", (req, res) => {
+  res.render("self-employment-tax-rate-2025", {
+    pageTitle: "Self-Employment Tax Rate 2025: 15.3% Explained"
+  });
+});
+
+// ── SEO GUIDES: PAYMENTS AND DEADLINES ───────────────────────────────────────
+app.get("/quarterly-estimated-taxes", (req, res) => {
+  res.render("quarterly-estimated-taxes", {
+    pageTitle: "Quarterly Estimated Taxes: Due Dates, Rules, and How to Pay"
+  });
+});
+
+app.get("/tax-filing-deadline-2026", (req, res) => {
+  res.render("tax-filing-deadline-2026", {
+    pageTitle: "Tax Filing Deadline 2026: All Key Dates Explained"
+  });
+});
+
+// ── SEO GUIDES: INCOME AND EMPLOYMENT ────────────────────────────────────────
+app.get("/w2-vs-1099", (req, res) => {
+  res.render("w2-vs-1099", {
+    pageTitle: "W-2 vs 1099: Tax Differences Explained"
+  });
+});
+
+// ── SEO GUIDES: INVESTMENT AND RETIREMENT ────────────────────────────────────
+app.get("/roth-ira-conversion-tax", (req, res) => {
+  res.render("roth-ira-conversion-tax", {
+    pageTitle: "Roth IRA Conversion Tax: How It Works and When to Convert"
+  });
+});
+
+// ── SEO GUIDES: CREDITS ───────────────────────────────────────────────────────
+app.get("/child-tax-credit-2025", (req, res) => {
+  res.render("child-tax-credit-2025", {
+    pageTitle: "Child Tax Credit 2025: Amount, Rules, and Who Qualifies"
   });
 });
 
@@ -233,24 +294,33 @@ app.get("/sitemap.xml", (req, res) => {
   const baseUrl = "https://mytaxcalcs.com";
 
   const staticPages = [
-    { path: "",                             priority: "1.0", freq: "weekly"  },
-    { path: "/calculators",                 priority: "0.9", freq: "monthly" },
-    { path: "/income-tax-calculator",       priority: "0.9", freq: "monthly" },
-    { path: "/tax-refund-calculator",       priority: "0.9", freq: "monthly" },
+    { path: "",                                priority: "1.0", freq: "weekly"  },
+    { path: "/calculators",                    priority: "0.9", freq: "monthly" },
+    { path: "/income-tax-calculator",          priority: "0.9", freq: "monthly" },
+    { path: "/tax-refund-calculator",          priority: "0.9", freq: "monthly" },
     { path: "/self-employment-tax-calculator", priority: "0.8", freq: "monthly" },
     { path: "/capital-gains-tax-calculator",   priority: "0.8", freq: "monthly" },
-    { path: "/sales-tax-calculator",        priority: "0.8", freq: "monthly" },
-    { path: "/payroll-tax-calculator",      priority: "0.8", freq: "monthly" },
-    { path: "/tax-brackets-2025",           priority: "0.9", freq: "monthly" },
-    { path: "/tax-brackets-2026",           priority: "0.8", freq: "monthly" },
-    { path: "/standard-deduction-2025",     priority: "0.9", freq: "monthly" },
-    { path: "/standard-deduction-2026",     priority: "0.8", freq: "monthly" },
-    { path: "/capital-gains-tax-rates-2025",priority: "0.8", freq: "monthly" },
-    { path: "/about",                       priority: "0.5", freq: "monthly" },
-    { path: "/contact",                     priority: "0.5", freq: "monthly" },
-    { path: "/privacy-policy",              priority: "0.3", freq: "yearly"  },
-    { path: "/terms",                       priority: "0.3", freq: "yearly"  },
-    { path: "/disclaimer",                  priority: "0.3", freq: "yearly"  },
+    { path: "/sales-tax-calculator",           priority: "0.8", freq: "monthly" },
+    { path: "/payroll-tax-calculator",         priority: "0.8", freq: "monthly" },
+    { path: "/tax-brackets-2025",              priority: "0.9", freq: "monthly" },
+    { path: "/tax-brackets-2026",              priority: "0.8", freq: "monthly" },
+    { path: "/standard-deduction-2025",        priority: "0.9", freq: "monthly" },
+    { path: "/standard-deduction-2026",        priority: "0.8", freq: "monthly" },
+    { path: "/standard-deduction-vs-itemized", priority: "0.8", freq: "yearly"  },
+    { path: "/capital-gains-tax-rates-2025",   priority: "0.8", freq: "monthly" },
+    { path: "/capital-gains-tax-rates-2026",   priority: "0.8", freq: "monthly" },
+    { path: "/fica-tax-rate-2025",             priority: "0.8", freq: "monthly" },
+    { path: "/self-employment-tax-rate-2025",  priority: "0.8", freq: "monthly" },
+    { path: "/quarterly-estimated-taxes",      priority: "0.8", freq: "monthly" },
+    { path: "/tax-filing-deadline-2026",       priority: "0.9", freq: "monthly" },
+    { path: "/w2-vs-1099",                     priority: "0.8", freq: "yearly"  },
+    { path: "/roth-ira-conversion-tax",        priority: "0.8", freq: "yearly"  },
+    { path: "/child-tax-credit-2025",          priority: "0.8", freq: "monthly" },
+    { path: "/about",                          priority: "0.5", freq: "monthly" },
+    { path: "/contact",                        priority: "0.5", freq: "monthly" },
+    { path: "/privacy-policy",                 priority: "0.3", freq: "yearly"  },
+    { path: "/terms",                          priority: "0.3", freq: "yearly"  },
+    { path: "/disclaimer",                     priority: "0.3", freq: "yearly"  },
   ];
 
   const stateUrls = states.map((s) => ({
@@ -262,14 +332,12 @@ app.get("/sitemap.xml", (req, res) => {
   const allUrls = [...staticPages, ...stateUrls];
 
   const urls = allUrls
-    .map(
-      (page) => `
+    .map((page) => `
   <url>
     <loc>${baseUrl}${page.path}</loc>
     <changefreq>${page.freq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`
-    )
+  </url>`)
     .join("");
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
@@ -285,24 +353,6 @@ ${urls}
 app.get("/ads.txt", (req, res) => {
   res.header("Content-Type", "text/plain");
   res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
-});
-
-app.get("/fica-tax-rate-2025", (req, res) => {
-  res.render("fica-tax-rate-2025", {
-    pageTitle: "FICA Tax Rate 2025: Social Security and Medicare Rates"
-  });
-});
-
-app.get("/self-employment-tax-rate-2025", (req, res) => {
-  res.render("self-employment-tax-rate-2025", {
-    pageTitle: "Self-Employment Tax Rate 2025: 15.3% Explained"
-  });
-});
-
-app.get("/quarterly-estimated-taxes", (req, res) => {
-  res.render("quarterly-estimated-taxes", {
-    pageTitle: "Quarterly Estimated Taxes: Due Dates, Rules, and How to Pay"
-  });
 });
 
 // ── START ─────────────────────────────────────────────────────────────────────
