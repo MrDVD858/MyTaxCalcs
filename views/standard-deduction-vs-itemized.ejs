@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %> | MyTaxCalcs</title>
+  <meta name="description" content="Standard deduction vs itemized deductions: which saves more tax? In 2025 the standard deduction is $15,000 for single filers. Most taxpayers take the standard deduction. Here is how to decide.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Standard Deduction vs Itemized Deductions 2025 | MyTaxCalcs">
+  <meta property="og:description" content="How to choose between the standard deduction and itemizing in 2025. See which method reduces your tax more and when itemizing actually makes sense.">
+  <meta property="og:url" content="https://mytaxcalcs.com/standard-deduction-vs-itemized">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MyTaxCalcs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Standard Deduction vs Itemized 2025 | MyTaxCalcs">
+  <meta name="twitter:description" content="Which deduction method saves more tax in 2025? Standard deduction is $15,000 for single filers. Here is how to decide.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Should I take the standard deduction or itemize in 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Take whichever produces the larger deduction. In 2025, the standard deduction is $15,000 for single filers and $30,000 for married filing jointly. If your total eligible itemized deductions including mortgage interest, state and local taxes (up to $10,000), and charitable contributions exceed your standard deduction, itemizing saves more tax. About 90% of taxpayers take the standard deduction."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What counts as an itemized deduction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common itemized deductions include mortgage interest on your primary and secondary home, state and local income or sales taxes plus property taxes (combined cap of $10,000), charitable contributions to qualifying organizations, and medical expenses exceeding 7.5% of your adjusted gross income. Miscellaneous deductions subject to the 2% AGI floor were largely eliminated after 2017."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I switch between standard and itemized deductions each year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You choose your deduction method each year when you file. There is no requirement to use the same method year after year. Many taxpayers switch to itemizing in years when they have large charitable gifts, high medical expenses, or significant mortgage interest, then switch back to the standard deduction in other years."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .breadcrumb{max-width:780px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
+    .qa-page{max-width:780px;margin:0 auto;padding:0 24px 60px}
+    .qa-header{padding:28px 0 24px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;background:#ecfdf5;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .qa-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .qa-header .qa-meta{font-size:.8rem;color:#9ca3af;margin:0 0 14px}
+    .qa-header p{font-size:1rem;color:#6b7280;margin:0;max-width:600px;line-height:1.6}
+    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .qa-section{margin:40px 0 0}
+    .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px}
+    .qa-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 14px}
+    .qa-section p{font-size:.95rem;color:#6b7280;line-height:1.65;margin:0 0 14px}
+    .qa-section p:last-child{margin-bottom:0}
+    /* Compare cards */
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+    @media(max-width:520px){.compare-grid{grid-template-columns:1fr}}
+    .compare-card{border-radius:14px;padding:20px}
+    .compare-card.std{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #bbf7d0}
+    .compare-card.itm{background:linear-gradient(135deg,#eff6ff,#dbeafe);border:1px solid #bfdbfe}
+    .compare-card h3{font-size:1rem;font-weight:800;margin:0 0 4px}
+    .compare-card.std h3{color:#14532d}
+    .compare-card.itm h3{color:#1e3a8a}
+    .compare-card .amount{font-size:1.8rem;font-weight:800;margin:8px 0 4px}
+    .compare-card.std .amount{color:#15803d}
+    .compare-card.itm .amount{color:#2563eb}
+    .compare-card .sub{font-size:.78rem;color:#6b7280;margin-bottom:12px}
+    .compare-card ul{margin:0;padding:0 0 0 16px;font-size:.83rem;color:#374151;line-height:1.7}
+    /* Decision tool */
+    .decision-box{background:#fff;border:2px solid #e5e7eb;border-radius:14px;padding:24px;margin:16px 0}
+    .decision-box h3{font-size:1rem;font-weight:700;color:#111827;margin:0 0 16px}
+    .decision-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #f3f4f6;font-size:.9rem}
+    .decision-row:last-child{border-bottom:none;padding-top:14px;margin-top:4px}
+    .decision-row .item{color:#374151;font-weight:500}
+    .decision-row .enter{font-size:.8rem;color:#9ca3af;border:1px solid #e5e7eb;border-radius:6px;padding:4px 10px;min-width:100px;text-align:right}
+    .decision-row.total .item{font-weight:700;color:#111827}
+    .decision-row.total .enter{font-weight:700;color:#16a34a;border-color:#bbf7d0;background:#f0fdf4}
+    /* Itemized list table */
+    .facts-table{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .facts-table th{background:#f9fafb;padding:11px 16px;text-align:left;font-size:.8rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #e5e7eb}
+    .facts-table td{padding:12px 16px;font-size:.9rem;color:#111827;border-bottom:1px solid #f3f4f6;vertical-align:top}
+    .facts-table tr:last-child td{border-bottom:none}
+    .facts-table td:first-child{font-weight:600;color:#374151}
+    .facts-table .highlight-row td{background:#f0fdf4;color:#15803d;font-weight:700}
+    /* Who benefits table */
+    .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+    @media(max-width:520px){.who-grid{grid-template-columns:1fr}}
+    .who-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px}
+    .who-card h3{font-size:.85rem;font-weight:700;margin:0 0 12px;text-transform:uppercase;letter-spacing:.05em}
+    .who-card.std h3{color:#15803d}
+    .who-card.itm h3{color:#2563eb}
+    .who-card ul{margin:0;padding:0 0 0 16px;font-size:.85rem;color:#374151;line-height:1.8}
+    /* Callouts */
+    .info-callout{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .info-callout p{font-size:.88rem;color:#1e3a8a;margin:0;line-height:1.55}
+    .tip-callout{background:#fef3c7;border:1px solid #fde68a;border-left:4px solid #f59e0b;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .tip-callout p{font-size:.88rem;color:#78350f;margin:0;line-height:1.55}
+    /* FAQ */
+    .faq-section{margin:48px 0 0}
+    .faq-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 20px}
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    .faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .faq-question{width:100%;background:none;border:none;padding:17px 20px;text-align:left;font-size:.92rem;font-weight:600;color:#111827;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-question:hover{background:#f9fafb}
+    .faq-chevron{min-width:20px;height:20px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .faq-item.open .faq-chevron{transform:rotate(180deg);background:#dcfce7}
+    .faq-answer{display:none;padding:0 20px 17px;font-size:.88rem;color:#6b7280;line-height:1.65}
+    .faq-item.open .faq-answer{display:block}
+    /* Related */
+    .related-section{margin:48px 0 0}
+    .related-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 16px}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:380px){.related-grid{grid-template-columns:1fr}}
+    .related-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:8px}
+    .related-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
+    .related-card-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+    .related-card strong{font-size:.88rem;font-weight:700;color:#111827}
+    .related-card span{font-size:.78rem;color:#9ca3af}
+    .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+    .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
+    .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-mark">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/>
+            <rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
+          </svg>
+        </span>
+        <span>MyTaxCalcs</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculators">Calculators</a>
+        <a href="/california-income-tax-calculator">States</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="/income-tax-calculator">Calculate Your Tax</a>
+    </nav>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/calculators">Tax Guides</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>Standard Deduction vs Itemized</span>
+  </nav>
+
+  <main>
+    <div class="qa-page">
+
+      <div class="qa-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+          Tax Guide
+        </div>
+        <h1>Standard Deduction vs Itemized Deductions: Which Saves More?</h1>
+        <p class="qa-meta">Updated April 2026 &nbsp;|&nbsp; Covers tax year 2025 &nbsp;|&nbsp; Evergreen guide</p>
+        <p>Every taxpayer must choose one: the standard deduction or itemized deductions. You take whichever is larger. For most people the standard deduction wins, but if you have a mortgage, large charitable gifts, or high state taxes, itemizing may save you more.</p>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="qa-section">
+        <div class="section-eyebrow">Side by Side</div>
+        <h2>Standard Deduction vs Itemized: At a Glance</h2>
+
+        <div class="compare-grid">
+          <div class="compare-card std">
+            <h3>Standard Deduction</h3>
+            <div class="amount">$15,000</div>
+            <div class="sub">Single filer, 2025 (MFJ: $30,000)</div>
+            <ul>
+              <li>Fixed amount set by IRS</li>
+              <li>No receipts or records needed</li>
+              <li>Faster and simpler to claim</li>
+              <li>Used by roughly 90% of filers</li>
+              <li>Adjusted annually for inflation</li>
+            </ul>
+          </div>
+          <div class="compare-card itm">
+            <h3>Itemized Deductions</h3>
+            <div class="amount">Varies</div>
+            <div class="sub">Based on your actual eligible expenses</div>
+            <ul>
+              <li>Sum of eligible expense categories</li>
+              <li>Requires documentation and receipts</li>
+              <li>Must file Schedule A with return</li>
+              <li>Used by roughly 10% of filers</li>
+              <li>Can exceed standard deduction for some</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-callout">
+          <p><strong>The rule is simple:</strong> Add up your itemized deductions. If the total is more than your standard deduction amount, itemize. If less, take the standard deduction. You cannot combine both methods in the same year.</p>
+        </div>
+      </div>
+
+      <div class="qa-section">
+        <div class="section-eyebrow">What You Can Itemize</div>
+        <h2>Complete List of Itemized Deductions for 2025</h2>
+
+        <table class="facts-table">
+          <thead>
+            <tr><th>Deduction Category</th><th>2025 Rules and Limits</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Mortgage Interest</td><td>Interest on up to $750,000 of mortgage debt on your primary and one secondary home (loans originated after Dec 15, 2017). Older loans: $1 million limit.</td></tr>
+            <tr><td>State and Local Taxes (SALT)</td><td>Combined deduction for state income or sales taxes plus property taxes, capped at $10,000 per return ($5,000 married filing separately)</td></tr>
+            <tr><td>Charitable Contributions</td><td>Cash donations up to 60% of AGI to qualifying organizations. Non-cash donations up to 50% of AGI. Must have written acknowledgment for donations of $250 or more.</td></tr>
+            <tr><td>Medical and Dental Expenses</td><td>Only the amount exceeding 7.5% of your adjusted gross income (AGI). High medical years can make this significant.</td></tr>
+            <tr><td>Casualty and Theft Losses</td><td>Only losses from federally declared disasters, limited to losses exceeding 10% of AGI plus $100 per event</td></tr>
+            <tr><td>Gambling Losses</td><td>Deductible only up to the amount of gambling winnings reported as income</td></tr>
+            <tr class="highlight-row"><td>$10,000 SALT cap is the biggest limiter</td><td>Many taxpayers in high-tax states like California and New York cannot deduct their full state and local taxes paid</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qa-section">
+        <div class="section-eyebrow">Who Benefits Most</div>
+        <h2>When Each Method Tends to Win</h2>
+
+        <div class="who-grid">
+          <div class="who-card std">
+            <h3>Standard Deduction Usually Wins For</h3>
+            <ul>
+              <li>Renters with no mortgage interest</li>
+              <li>Lower and moderate income earners</li>
+              <li>Taxpayers in low or no state income tax states</li>
+              <li>Those with few charitable contributions</li>
+              <li>Early-career workers with simple finances</li>
+              <li>Retirees without a mortgage</li>
+            </ul>
+          </div>
+          <div class="who-card itm">
+            <h3>Itemizing May Win For</h3>
+            <ul>
+              <li>Homeowners with large mortgage balances</li>
+              <li>High earners in high-tax states</li>
+              <li>Generous charitable donors</li>
+              <li>Those with significant medical expenses</li>
+              <li>Taxpayers with home equity loan interest</li>
+              <li>Anyone with SALT deductions near $10,000</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tip-callout">
+          <p><strong>The breakeven test:</strong> For a single filer in 2025, you need more than $15,000 in total itemized deductions to benefit from itemizing. For married filing jointly, you need more than $30,000. A quick estimate: if your mortgage interest plus state and local taxes alone exceed your standard deduction threshold, itemizing almost certainly wins.</p>
+        </div>
+      </div>
+
+      <div class="qa-section">
+        <div class="section-eyebrow">Strategy</div>
+        <h2>Bunching: How to Maximize Itemized Deductions</h2>
+        <p>If your itemized deductions are consistently close to but below the standard deduction threshold, bunching is a strategy worth considering.</p>
+        <p>Bunching means concentrating deductible expenses into alternating years so that in year one your itemized deductions well exceed the standard deduction and in year two you take the standard deduction. A common example is making two years worth of charitable donations in a single tax year.</p>
+
+        <div class="info-callout">
+          <p><strong>Example:</strong> A single filer with $12,000 in typical annual itemized deductions cannot beat the $15,000 standard deduction. But if they donate $6,000 in Year 1 instead of $3,000, their itemized deductions reach $15,000, equaling the standard. In Year 2 with no donation they take the $15,000 standard deduction. Net result over two years: same total donations, larger total deduction.</p>
+        </div>
+
+        <p>Donor-advised funds are useful for bunching charitable contributions. You make a large contribution to the fund in one year, take the full deduction, then grant money out to charities over multiple years.</p>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="faq-section">
+        <div class="section-eyebrow">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Should I take the standard deduction or itemize in 2025?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Take whichever is larger. Add up your mortgage interest, state and local taxes paid (capped at $10,000), charitable contributions, and any eligible medical expenses above 7.5% of AGI. If that total exceeds $15,000 (single) or $30,000 (married jointly), itemizing saves more. For most taxpayers the standard deduction is larger and simpler.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I itemize if I do not own a home?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Yes, homeownership is not required to itemize. Renters can potentially itemize through large charitable contributions, significant medical expenses, or other eligible deductions. However, without mortgage interest and property taxes it is unusual for renters to exceed the standard deduction threshold.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">If I am married, do my spouse and I have to use the same deduction method?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Yes, if you are married filing separately, both spouses must use the same method. If one itemizes, the other cannot take the standard deduction and must also itemize (even if their itemized deductions are zero). If you are married filing jointly, you file a single return with one combined deduction choice.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Does the mortgage interest deduction still make sense after the TCJA?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">It depends on your loan size, rate, and other deductions. The Tax Cuts and Jobs Act of 2017 nearly doubled the standard deduction, which reduced the benefit of itemizing for many homeowners. On a smaller or older mortgage with a low rate, annual interest may not exceed the standard deduction threshold on its own. Run both scenarios to compare.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I deduct home office expenses when itemizing?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Employee home office expenses are no longer deductible as a miscellaneous itemized deduction since the Tax Cuts and Jobs Act of 2017. Self-employed individuals can still deduct home office expenses, but that deduction is taken on Schedule C as a business expense, not as an itemized deduction on Schedule A. It reduces your self-employment income regardless of whether you itemize.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I switch between standard and itemized deductions each year?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Yes. You make the choice fresh each year when you file. There is no requirement to use the same method in consecutive years. Many taxpayers itemize in years with large charitable contributions, high medical costs, or a new mortgage with significant interest, then switch to the standard deduction in other years.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="related-section">
+        <h2>Related Calculators and Guides</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg></div>
+            <strong>Income Tax Calculator</strong>
+            <span>Compare standard vs itemized deduction scenarios</span>
+          </a>
+          <a class="related-card" href="/standard-deduction-2025">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <strong>Standard Deduction 2025</strong>
+            <span>Official amounts for all filing statuses</span>
+          </a>
+          <a class="related-card" href="/tax-refund-calculator">
+            <div class="related-card-icon" style="background:#f0fdf4;color:#15803d;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <strong>Tax Refund Calculator</strong>
+            <span>Estimate your refund using either deduction method</span>
+          </a>
+          <a class="related-card" href="/tax-brackets-2025">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <strong>2025 Tax Brackets</strong>
+            <span>Rates applied to taxable income after deductions</span>
+          </a>
+          <a class="related-card" href="/standard-deduction-2026">
+            <div class="related-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <strong>Standard Deduction 2026</strong>
+            <span>Projected amounts for next year planning</span>
+          </a>
+          <a class="related-card" href="/capital-gains-tax-calculator">
+            <div class="related-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg></div>
+            <strong>Capital Gains Tax Calculator</strong>
+            <span>Deductions do not reduce capital gains tax directly</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> This page provides general tax information for educational purposes based on 2025 IRS rules. Individual deduction eligibility varies based on your specific situation. It is not tax, legal, or financial advice. Consult a qualified tax professional before making deduction decisions.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="logo-mark"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/></svg></span>MyTaxCalcs</a>
+          <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Tax Calculators</h3>
+          <a href="/calculators">All Calculators</a>
+          <a href="/income-tax-calculator">Income Tax Calculator</a>
+          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
+          <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
+          <a href="/capital-gains-tax-calculator">Capital Gains Tax</a>
+          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
+          <a href="/payroll-tax-calculator">Payroll Tax Calculator</a>
+        </div>
+        <div class="footer-column">
+          <h3>Tax Guides</h3>
+          <a href="/tax-brackets-2025">2025 Tax Brackets</a>
+          <a href="/tax-brackets-2026">2026 Tax Brackets</a>
+          <a href="/standard-deduction-2025">Standard Deduction 2025</a>
+          <a href="/capital-gains-tax-rates-2025">Capital Gains Rates 2025</a>
+          <a href="/fica-tax-rate-2025">FICA Tax Rate 2025</a>
+          <a href="/self-employment-tax-rate-2025">SE Tax Rate 2025</a>
+          <a href="/quarterly-estimated-taxes">Quarterly Estimated Taxes</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var items=document.querySelectorAll('.faq-item');
+      items.forEach(function(item){
+        var btn=item.querySelector('.faq-question');
+        btn.addEventListener('click',function(){
+          var isOpen=item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+          if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expired','true');}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
