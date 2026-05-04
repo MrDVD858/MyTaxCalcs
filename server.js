@@ -287,6 +287,24 @@ app.get("/ads.txt", (req, res) => {
   res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
 });
 
+app.get("/fica-tax-rate-2025", (req, res) => {
+  res.render("fica-tax-rate-2025", {
+    pageTitle: "FICA Tax Rate 2025: Social Security and Medicare Rates"
+  });
+});
+
+app.get("/self-employment-tax-rate-2025", (req, res) => {
+  res.render("self-employment-tax-rate-2025", {
+    pageTitle: "Self-Employment Tax Rate 2025: 15.3% Explained"
+  });
+});
+
+app.get("/quarterly-estimated-taxes", (req, res) => {
+  res.render("quarterly-estimated-taxes", {
+    pageTitle: "Quarterly Estimated Taxes: Due Dates, Rules, and How to Pay"
+  });
+});
+
 // ── START ─────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
   console.log(`MyTaxCalcs running at http://localhost:${PORT}`);
