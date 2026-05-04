@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %> | MyTaxCalcs</title>
+  <meta name="description" content="Projected 2026 standard deduction amounts: approximately $15,500 for single filers and $31,000 for married filing jointly. Official IRS amounts expected October 2026.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Standard Deduction 2026: Projected Amounts by Filing Status | MyTaxCalcs">
+  <meta property="og:description" content="Projected 2026 standard deduction amounts for every filing status. Official IRS figures expected October 2026.">
+  <meta property="og:url" content="https://mytaxcalcs.com/standard-deduction-2026">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MyTaxCalcs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Standard Deduction 2026 (Projected) | MyTaxCalcs">
+  <meta name="twitter:description" content="Projected 2026 standard deduction: approx. $15,500 single, $31,000 married jointly. Official IRS amounts coming October 2026.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the standard deduction for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The official 2026 standard deduction has not yet been announced by the IRS. Based on inflation trends, the projected amount is approximately $15,500 for single filers and $31,000 for married filing jointly. The IRS typically announces official amounts in October or November 2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When will the IRS announce the 2026 standard deduction?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IRS typically releases official inflation-adjusted tax figures for the upcoming year in October or November. The 2026 standard deduction amounts are expected to be announced around October or November 2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the standard deduction adjusted each year?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IRS adjusts the standard deduction annually using the Chained Consumer Price Index (C-CPI-U). The adjustment reflects inflation over the prior 12-month measurement period. Years with lower inflation produce smaller increases; years with higher inflation produce larger increases."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .breadcrumb{max-width:780px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
+    .qa-page{max-width:780px;margin:0 auto;padding:0 24px 60px}
+    .qa-header{padding:28px 0 24px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;background:#ecfdf5;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .qa-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .qa-header .qa-meta{font-size:.8rem;color:#9ca3af;margin:0 0 14px}
+    .qa-header p{font-size:1rem;color:#6b7280;margin:0;max-width:600px;line-height:1.6}
+    .year-nav{display:flex;gap:10px;margin:20px 0 0;flex-wrap:wrap}
+    .year-nav a{font-size:.85rem;font-weight:600;padding:7px 16px;border-radius:8px;text-decoration:none;border:1px solid #e5e7eb;color:#6b7280;background:#fff;transition:all .15s}
+    .year-nav a:hover{border-color:#16a34a;color:#16a34a}
+    .year-nav a.active{background:#16a34a;color:#fff;border-color:#16a34a}
+    /* Projected banner */
+    .projected-banner{background:#fef3c7;border:1px solid #fde68a;border-radius:12px;padding:14px 18px;margin:20px 0;display:flex;gap:10px;align-items:flex-start}
+    .projected-banner svg{color:#d97706;min-width:18px;margin-top:1px}
+    .projected-banner p{font-size:.88rem;color:#78350f;margin:0;line-height:1.55}
+    .projected-banner strong{color:#92400e}
+    /* Quick answer */
+    .quick-answer{background:linear-gradient(135deg,#fef3c7 0%,#fde68a 100%);border:1px solid #fcd34d;border-radius:16px;padding:24px 28px;margin:24px 0}
+    .qa-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#92400e;margin-bottom:10px}
+    .quick-answer h2{font-size:1.1rem;font-weight:800;color:#78350f;margin:0 0 6px}
+    .quick-answer .qa-sublabel{font-size:.8rem;color:#92400e;margin:0 0 16px}
+    .qa-amounts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    @media(max-width:500px){.qa-amounts{grid-template-columns:1fr}}
+    .qa-amount-item{background:#fff;border-radius:10px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+    .qa-amount-item .filing{font-size:.85rem;font-weight:600;color:#374151}
+    .qa-amount-item .amount{font-size:1.2rem;font-weight:800;color:#d97706}
+    .qa-amount-item .amount-note{font-size:.7rem;color:#9ca3af;display:block;text-align:right;margin-top:2px}
+    /* Ad */
+    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    /* Sections */
+    .qa-section{margin:40px 0 0}
+    .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px}
+    .qa-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 14px}
+    .qa-section p{font-size:.95rem;color:#6b7280;line-height:1.65;margin:0 0 14px}
+    .qa-section p:last-child{margin-bottom:0}
+    /* Table */
+    .facts-table{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .facts-table th{background:#f9fafb;padding:11px 16px;text-align:left;font-size:.8rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #e5e7eb}
+    .facts-table td{padding:12px 16px;font-size:.9rem;color:#111827;border-bottom:1px solid #f3f4f6;vertical-align:top}
+    .facts-table tr:last-child td{border-bottom:none}
+    .facts-table td:first-child{font-weight:600;color:#374151;white-space:nowrap}
+    .facts-table .proj-row td{color:#d97706;font-weight:700}
+    .facts-table .proj-row td:first-child{color:#374151}
+    /* Compare */
+    .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+    @media(max-width:500px){.compare-grid{grid-template-columns:1fr}}
+    .compare-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px}
+    .compare-card.proj{border-color:#fcd34d;background:#fffbeb}
+    .compare-card h3{font-size:.85rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;margin:0 0 12px}
+    .compare-card.proj h3{color:#92400e}
+    .compare-row{display:flex;justify-content:space-between;font-size:.88rem;padding:5px 0;border-bottom:1px solid #f3f4f6}
+    .compare-row:last-child{border-bottom:none}
+    .compare-row span:first-child{color:#6b7280}
+    .compare-row span:last-child{font-weight:700;color:#111827}
+    .compare-card.proj .compare-row span:last-child{color:#d97706}
+    /* Callouts */
+    .info-callout{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .info-callout p{font-size:.88rem;color:#1e3a8a;margin:0;line-height:1.55}
+    .tip-callout{background:#fef3c7;border:1px solid #fde68a;border-left:4px solid #f59e0b;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .tip-callout p{font-size:.88rem;color:#78350f;margin:0;line-height:1.55}
+    /* How it adjusts */
+    .timeline{display:flex;flex-direction:column;gap:0;margin:16px 0}
+    .timeline-row{display:grid;grid-template-columns:80px 1fr 120px;gap:12px;align-items:center;padding:10px 16px;background:#fff;border:1px solid #e5e7eb;border-bottom:none;font-size:.88rem}
+    .timeline-row:first-child{border-radius:12px 12px 0 0}
+    .timeline-row:last-child{border-bottom:1px solid #e5e7eb;border-radius:0 0 12px 12px}
+    .timeline-row .yr{font-weight:700;color:#374151}
+    .timeline-row .desc{color:#6b7280}
+    .timeline-row .amt{font-weight:700;color:#111827;text-align:right}
+    .timeline-row.current .yr{color:#16a34a}
+    .timeline-row.current .amt{color:#16a34a}
+    .timeline-row.proj-row-t .yr{color:#d97706}
+    .timeline-row.proj-row-t .amt{color:#d97706}
+    .timeline-row.proj-row-t{background:#fffbeb}
+    /* FAQ */
+    .faq-section{margin:48px 0 0}
+    .faq-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 20px}
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    .faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .faq-question{width:100%;background:none;border:none;padding:17px 20px;text-align:left;font-size:.92rem;font-weight:600;color:#111827;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-question:hover{background:#f9fafb}
+    .faq-chevron{min-width:20px;height:20px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .faq-item.open .faq-chevron{transform:rotate(180deg);background:#dcfce7}
+    .faq-answer{display:none;padding:0 20px 17px;font-size:.88rem;color:#6b7280;line-height:1.65}
+    .faq-item.open .faq-answer{display:block}
+    /* Related */
+    .related-section{margin:48px 0 0}
+    .related-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 16px}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:380px){.related-grid{grid-template-columns:1fr}}
+    .related-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:8px}
+    .related-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
+    .related-card-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+    .related-card strong{font-size:.88rem;font-weight:700;color:#111827}
+    .related-card span{font-size:.78rem;color:#9ca3af}
+    /* Disclaimer */
+    .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+    .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
+    .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-mark">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/>
+            <rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
+          </svg>
+        </span>
+        <span>MyTaxCalcs</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculators">Calculators</a>
+        <a href="/california-income-tax-calculator">States</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="/income-tax-calculator">Calculate Your Tax</a>
+    </nav>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/calculators">Tax Guides</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>Standard Deduction 2026</span>
+  </nav>
+
+  <main>
+    <div class="qa-page">
+
+      <div class="qa-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          Tax Guide
+        </div>
+        <h1>Standard Deduction 2026: Projected Amounts and What to Expect</h1>
+        <p class="qa-meta">Updated May 2026 &nbsp;|&nbsp; Projected estimates only &nbsp;|&nbsp; Official IRS amounts expected October 2026</p>
+        <p>The IRS has not yet announced the official 2026 standard deduction. Based on current inflation data and the C-CPI-U adjustment method, the projected amount is approximately $15,500 for single filers and $31,000 for married filing jointly. This page will be updated when the IRS releases official figures.</p>
+        <div class="year-nav">
+          <a href="/standard-deduction-2025">2025 Amounts (Official)</a>
+          <a href="/standard-deduction-2026" class="active">2026 Amounts (Projected)</a>
+        </div>
+      </div>
+
+      <!-- Projected warning banner -->
+      <div class="projected-banner">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <p><strong>These are projected estimates, not official IRS figures.</strong> The IRS typically announces inflation-adjusted tax amounts for the upcoming year in October or November. This page will be updated to reflect official 2026 amounts as soon as they are released. For filing your 2025 return right now, use the <a href="/standard-deduction-2025" style="color:#92400e;font-weight:600;">confirmed 2025 amounts</a>.</p>
+      </div>
+
+      <!-- Quick answer in amber to signal projected -->
+      <div class="quick-answer">
+        <div class="qa-label">Projected Estimate</div>
+        <h2>2026 Standard Deduction by Filing Status</h2>
+        <p class="qa-sublabel">Based on ~2.5% inflation adjustment. Official IRS amounts expected October 2026.</p>
+        <div class="qa-amounts">
+          <div class="qa-amount-item">
+            <span class="filing">Single</span>
+            <div>
+              <span class="amount">~$15,500</span>
+              <span class="amount-note">projected</span>
+            </div>
+          </div>
+          <div class="qa-amount-item">
+            <span class="filing">Married Filing Jointly</span>
+            <div>
+              <span class="amount">~$31,000</span>
+              <span class="amount-note">projected</span>
+            </div>
+          </div>
+          <div class="qa-amount-item">
+            <span class="filing">Head of Household</span>
+            <div>
+              <span class="amount">~$23,200</span>
+              <span class="amount-note">projected</span>
+            </div>
+          </div>
+          <div class="qa-amount-item">
+            <span class="filing">Married Filing Separately</span>
+            <div>
+              <span class="amount">~$15,500</span>
+              <span class="amount-note">projected</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Year over year comparison -->
+      <div class="qa-section">
+        <div class="section-eyebrow">Year Over Year</div>
+        <h2>2025 vs. 2026 Standard Deduction Comparison</h2>
+        <p>The 2025 amounts are official. The 2026 column shows projections based on current inflation trends. Actual IRS amounts may differ slightly.</p>
+        <div class="compare-grid">
+          <div class="compare-card">
+            <h3>2025 (Official)</h3>
+            <div class="compare-row"><span>Single</span><span>$15,000</span></div>
+            <div class="compare-row"><span>Married Jointly</span><span>$30,000</span></div>
+            <div class="compare-row"><span>Head of Household</span><span>$22,500</span></div>
+            <div class="compare-row"><span>Married Separately</span><span>$15,000</span></div>
+          </div>
+          <div class="compare-card proj">
+            <h3>2026 (Projected)</h3>
+            <div class="compare-row"><span>Single</span><span>~$15,500</span></div>
+            <div class="compare-row"><span>Married Jointly</span><span>~$31,000</span></div>
+            <div class="compare-row"><span>Head of Household</span><span>~$23,200</span></div>
+            <div class="compare-row"><span>Married Separately</span><span>~$15,500</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How the adjustment works -->
+      <div class="qa-section">
+        <div class="section-eyebrow">How It Works</div>
+        <h2>How the IRS Adjusts the Standard Deduction Each Year</h2>
+        <p>The IRS uses the Chained Consumer Price Index (C-CPI-U) to calculate inflation adjustments for the standard deduction and most other tax figures. Here is the recent trend for single filers:</p>
+
+        <div class="timeline">
+          <div class="timeline-row">
+            <span class="yr">2022</span>
+            <span class="desc">High inflation year</span>
+            <span class="amt">$12,950</span>
+          </div>
+          <div class="timeline-row">
+            <span class="yr">2023</span>
+            <span class="desc">Large inflation adjustment</span>
+            <span class="amt">$13,850</span>
+          </div>
+          <div class="timeline-row">
+            <span class="yr">2024</span>
+            <span class="desc">Moderate adjustment</span>
+            <span class="amt">$14,600</span>
+          </div>
+          <div class="timeline-row current">
+            <span class="yr">2025</span>
+            <span class="desc">Official IRS amount</span>
+            <span class="amt">$15,000</span>
+          </div>
+          <div class="timeline-row proj-row-t">
+            <span class="yr">2026</span>
+            <span class="desc">Projected (~2.5% adj.)</span>
+            <span class="amt">~$15,500</span>
+          </div>
+        </div>
+
+        <div class="info-callout">
+          <p><strong>Why projections vary:</strong> Tax analysts project the standard deduction using C-CPI-U data from August of the prior year through August of the current year. The exact amount rounds to the nearest $50 per IRS rounding rules. Final figures are announced in the IRS revenue procedure each fall.</p>
+        </div>
+      </div>
+
+      <!-- Planning ahead section -->
+      <div class="qa-section">
+        <div class="section-eyebrow">Planning Ahead</div>
+        <h2>How to Use Projected 2026 Amounts for Planning</h2>
+        <p>Even though the 2026 standard deduction is not final, you can use projected amounts for tax planning decisions you make now.</p>
+
+        <table class="facts-table">
+          <thead>
+            <tr><th>Planning Situation</th><th>How to Use the 2026 Projection</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Adjusting paycheck withholding</td><td>Use projected amounts to estimate your 2026 taxable income and check if your current withholding is on track</td></tr>
+            <tr><td>Charitable giving strategy</td><td>If your projected itemized deductions will be close to the standard deduction threshold, consider bunching donations into one year</td></tr>
+            <tr><td>Timing large deductions</td><td>If you expect to itemize in 2026, consider timing mortgage closings or large charitable gifts to maximize that year's deductions</td></tr>
+            <tr><td>Retirement income planning</td><td>Use projected standard deduction to estimate taxable income and Roth conversion opportunities for 2026</td></tr>
+            <tr class="proj-row"><td>Estimated quarterly tax payments</td><td>Use projected deduction to estimate your 2026 federal income tax for quarterly payment planning</td></tr>
+          </tbody>
+        </table>
+
+        <div class="tip-callout">
+          <p><strong>Bookmark this page:</strong> We will update the 2026 amounts to official figures as soon as the IRS releases them, typically in October or November 2026. The 2025 page uses fully confirmed amounts right now for anyone filing their current return.</p>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="faq-section">
+        <div class="section-eyebrow">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is the standard deduction for 2026?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The official 2026 standard deduction has not yet been announced by the IRS. Based on current inflation trends and the C-CPI-U adjustment method, the projected amount is approximately $15,500 for single filers, $31,000 for married filing jointly, $23,200 for head of household, and $15,500 for married filing separately. The IRS will release official figures around October or November 2026.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">When will the IRS announce the 2026 standard deduction?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The IRS typically releases official inflation-adjusted tax figures for the upcoming year in October or November via a revenue procedure publication. The 2025 amounts were announced in IRS Rev. Proc. 2024-40. The 2026 amounts are expected around the same time in fall 2026.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Will the standard deduction increase in 2026?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Most likely yes. The standard deduction has increased every year since the Tax Cuts and Jobs Act of 2017 due to annual inflation adjustments. Based on current C-CPI-U data, the 2026 increase is projected to be roughly $400 to $600 for single filers over the 2025 amount, though the final amount depends on inflation through August 2026.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Should I be using 2025 or 2026 amounts right now?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">For filing your 2025 tax return (due April 2026, or October 2026 with extension), use the official 2025 standard deduction amounts. The 2026 projected amounts are for planning purposes only, such as adjusting your withholding or estimating quarterly payments for income you earn in 2026.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How is the standard deduction calculated each year?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The IRS adjusts the standard deduction using the Chained Consumer Price Index (C-CPI-U), which measures inflation across a wide range of consumer goods and services. The adjustment is calculated for a specific 12-month window and rounded to the nearest $50 per IRS rounding rules. Higher inflation produces larger annual increases.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What happens to the standard deduction after 2025 under current law?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The higher standard deduction amounts introduced by the Tax Cuts and Jobs Act of 2017 were originally set to expire after 2025. However, the Tax Relief for American Families and Workers Act extended several provisions. Tax legislation can change these rules, so monitoring IRS announcements in late 2025 and 2026 is advisable for the most current information.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="related-section">
+        <h2>Related Tools and Guides</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/standard-deduction-2025">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <strong>Standard Deduction 2025</strong>
+            <span>Official confirmed amounts for your 2025 return</span>
+          </a>
+          <a class="related-card" href="/income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg></div>
+            <strong>Income Tax Calculator</strong>
+            <span>Estimate tax using standard or itemized deduction</span>
+          </a>
+          <a class="related-card" href="/tax-refund-calculator">
+            <div class="related-card-icon" style="background:#f0fdf4;color:#15803d;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+            <strong>Tax Refund Calculator</strong>
+            <span>Estimate your 2025 refund or balance owed</span>
+          </a>
+          <a class="related-card" href="/self-employment-tax-calculator">
+            <div class="related-card-icon" style="background:#eff6ff;color:#2563eb;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <strong>Self-Employment Tax</strong>
+            <span>Social Security and Medicare for freelancers</span>
+          </a>
+          <a class="related-card" href="/payroll-tax-calculator">
+            <div class="related-card-icon" style="background:#fff1f2;color:#e11d48;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+            <strong>Payroll Tax Calculator</strong>
+            <span>Estimate take-home pay and withholding</span>
+          </a>
+          <a class="related-card" href="/capital-gains-tax-calculator">
+            <div class="related-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg></div>
+            <strong>Capital Gains Tax</strong>
+            <span>Estimate tax on stocks, crypto, real estate</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> The 2026 standard deduction amounts on this page are projections based on current inflation data and historical IRS adjustment methodology. They are not official IRS figures. This page is for educational planning purposes only and is not tax, legal, or financial advice. Always use confirmed IRS figures when filing your return. Consult a qualified tax professional for advice specific to your situation.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="logo-mark"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/></svg></span>MyTaxCalcs</a>
+          <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Tax Calculators</h3>
+          <a href="/calculators">All Calculators</a>
+          <a href="/income-tax-calculator">Income Tax Calculator</a>
+          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
+          <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
+          <a href="/capital-gains-tax-calculator">Capital Gains Tax</a>
+          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
+          <a href="/payroll-tax-calculator">Payroll Tax Calculator</a>
+        </div>
+        <div class="footer-column">
+          <h3>Site Links</h3>
+          <a href="/california-income-tax-calculator">State Tax Calculators</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var items=document.querySelectorAll('.faq-item');
+      items.forEach(function(item){
+        var btn=item.querySelector('.faq-question');
+        btn.addEventListener('click',function(){
+          var isOpen=item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+          if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

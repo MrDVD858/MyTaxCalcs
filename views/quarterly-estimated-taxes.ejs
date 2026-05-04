@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %> | MyTaxCalcs</title>
+  <meta name="description" content="How to pay quarterly estimated taxes in 2025 and 2026. Due dates, who must pay, safe harbor rules, and how to calculate your payment. Covers self-employed, freelancers, and investors.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Quarterly Estimated Taxes 2025: Due Dates, Rules, and How to Pay | MyTaxCalcs">
+  <meta property="og:description" content="Quarterly estimated tax due dates, safe harbor rules, and how to calculate payments for self-employed individuals and investors.">
+  <meta property="og:url" content="https://mytaxcalcs.com/quarterly-estimated-taxes">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MyTaxCalcs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Quarterly Estimated Taxes 2025 | MyTaxCalcs">
+  <meta name="twitter:description" content="Quarterly estimated tax due dates and how to calculate payments for freelancers and investors.">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "When are quarterly estimated taxes due in 2025?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 2025 quarterly estimated tax due dates are: April 15, 2025 (Q1), June 16, 2025 (Q2), September 15, 2025 (Q3), and January 15, 2026 (Q4). If a due date falls on a weekend or holiday, it moves to the next business day."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who has to pay quarterly estimated taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You generally must pay quarterly estimated taxes if you expect to owe at least $1,000 in federal tax after withholding and credits, and your withholding covers less than 90% of your current year tax or 100% of last year's tax (110% if AGI exceeded $150,000). This commonly applies to self-employed individuals, freelancers, investors, retirees, and anyone with significant income not subject to withholding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the safe harbor for quarterly estimated taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The safe harbor rule lets you avoid underpayment penalties by paying at least 100% of last year's tax liability in equal quarterly installments (or 110% if your prior year AGI exceeded $150,000). Alternatively, pay at least 90% of the current year's actual tax liability. Meeting either threshold avoids the underpayment penalty even if you owe at filing."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    .breadcrumb{max-width:780px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
+    .qa-page{max-width:780px;margin:0 auto;padding:0 24px 60px}
+    .qa-header{padding:28px 0 24px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;background:#ecfdf5;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .qa-header h1{font-size:2rem;font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .qa-header .qa-meta{font-size:.8rem;color:#9ca3af;margin:0 0 14px}
+    .qa-header p{font-size:1rem;color:#6b7280;margin:0;max-width:600px;line-height:1.6}
+    /* Due dates timeline */
+    .due-dates{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+    @media(max-width:480px){.due-dates{grid-template-columns:1fr}}
+    .due-date-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 18px;display:flex;align-items:center;gap:14px}
+    .due-date-card.past{opacity:.6}
+    .due-date-num{min-width:44px;height:44px;border-radius:10px;background:#ecfdf5;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .due-date-num .q{font-size:.65rem;font-weight:700;color:#16a34a;text-transform:uppercase}
+    .due-date-num .n{font-size:1.2rem;font-weight:800;color:#15803d;line-height:1}
+    .due-date-body .date{font-size:.9rem;font-weight:700;color:#111827}
+    .due-date-body .period{font-size:.78rem;color:#6b7280}
+    .due-date-card.current .due-date-num{background:#16a34a}
+    .due-date-card.current .due-date-num .q,.due-date-card.current .due-date-num .n{color:#fff}
+    .due-date-card.current{border-color:#16a34a;box-shadow:0 0 0 1px #16a34a}
+    /* Ad */
+    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    /* Sections */
+    .qa-section{margin:40px 0 0}
+    .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px}
+    .qa-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 14px}
+    .qa-section p{font-size:.95rem;color:#6b7280;line-height:1.65;margin:0 0 14px}
+    .qa-section p:last-child{margin-bottom:0}
+    .facts-table{width:100%;border-collapse:collapse;margin:16px 0;background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .facts-table th{background:#f9fafb;padding:11px 16px;text-align:left;font-size:.8rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #e5e7eb}
+    .facts-table td{padding:12px 16px;font-size:.9rem;color:#111827;border-bottom:1px solid #f3f4f6;vertical-align:top}
+    .facts-table tr:last-child td{border-bottom:none}
+    .facts-table td:first-child{font-weight:600;color:#374151}
+    .facts-table .highlight-row td{background:#f0fdf4;color:#15803d;font-weight:700}
+    .formula-box{background:#111827;border-radius:12px;padding:20px 24px;margin:16px 0;overflow-x:auto}
+    .formula-box-label{font-size:.7rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#6b7280;margin-bottom:10px}
+    .formula-box code{font-family:'Courier New',monospace;font-size:.85rem;color:#d1fae5;line-height:1.7;display:block;white-space:pre}
+    .formula-box code .comment{color:#4b5563}
+    .formula-box code .highlight{color:#34d399}
+    .example-calc{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px 24px;margin:16px 0}
+    .example-calc h3{font-size:.9rem;font-weight:700;color:#111827;margin:0 0 14px}
+    .example-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f3f4f6;font-size:.88rem}
+    .example-row:last-child{border-bottom:none;padding-top:10px;margin-top:4px}
+    .example-row .label{color:#6b7280}
+    .example-row .value{font-weight:700;color:#111827}
+    .example-row.total .label{font-weight:700;color:#111827}
+    .example-row.total .value{color:#16a34a;font-size:1rem}
+    .info-callout{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .info-callout p{font-size:.88rem;color:#1e3a8a;margin:0;line-height:1.55}
+    .tip-callout{background:#fef3c7;border:1px solid #fde68a;border-left:4px solid #f59e0b;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .tip-callout p{font-size:.88rem;color:#78350f;margin:0;line-height:1.55}
+    .warning-callout{background:#fff7ed;border:1px solid #fed7aa;border-left:4px solid #ea580c;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .warning-callout p{font-size:.88rem;color:#7c2d12;margin:0;line-height:1.55}
+    .faq-section{margin:48px 0 0}
+    .faq-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 20px}
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    .faq-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .faq-question{width:100%;background:none;border:none;padding:17px 20px;text-align:left;font-size:.92rem;font-weight:600;color:#111827;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .faq-question:hover{background:#f9fafb}
+    .faq-chevron{min-width:20px;height:20px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;transition:transform .2s}
+    .faq-item.open .faq-chevron{transform:rotate(180deg);background:#dcfce7}
+    .faq-answer{display:none;padding:0 20px 17px;font-size:.88rem;color:#6b7280;line-height:1.65}
+    .faq-item.open .faq-answer{display:block}
+    .related-section{margin:48px 0 0}
+    .related-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 16px}
+    .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:580px){.related-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:380px){.related-grid{grid-template-columns:1fr}}
+    .related-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:8px}
+    .related-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
+    .related-card-icon{width:36px;height:36px;border-radius:9px;display:flex;align-items:center;justify-content:center;margin-bottom:2px}
+    .related-card strong{font-size:.88rem;font-weight:700;color:#111827}
+    .related-card span{font-size:.78rem;color:#9ca3af}
+    .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
+    .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
+    .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-mark">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/>
+            <rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
+          </svg>
+        </span>
+        <span>MyTaxCalcs</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculators">Calculators</a>
+        <a href="/california-income-tax-calculator">States</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="/self-employment-tax-calculator">Calculate SE Tax</a>
+    </nav>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/calculators">Tax Guides</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>Quarterly Estimated Taxes</span>
+  </nav>
+
+  <main>
+    <div class="qa-page">
+
+      <div class="qa-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Tax Guide
+        </div>
+        <h1>Quarterly Estimated Taxes: Due Dates, Rules, and How to Pay</h1>
+        <p class="qa-meta">Updated May 2026 &nbsp;|&nbsp; Covers 2025 and 2026 tax years &nbsp;|&nbsp; Based on IRS Form 1040-ES guidance</p>
+        <p>If you are self-employed, a freelancer, investor, or have income without withholding, you likely need to pay estimated taxes four times a year. Missing payments or underpaying can trigger an IRS penalty even if you get a refund at filing.</p>
+      </div>
+
+      <!-- Due dates -->
+      <div class="qa-section">
+        <div class="section-eyebrow">2025 Due Dates</div>
+        <h2>2025 Quarterly Estimated Tax Due Dates</h2>
+        <p>The IRS requires four estimated payments per year. Note that Q2 covers only two months while Q1, Q3, and Q4 each cover roughly three months.</p>
+
+        <div class="due-dates">
+          <div class="due-date-card past">
+            <div class="due-date-num"><span class="q">Q1</span><span class="n">1</span></div>
+            <div class="due-date-body">
+              <div class="date">April 15, 2025</div>
+              <div class="period">Income earned Jan 1 - Mar 31, 2025</div>
+            </div>
+          </div>
+          <div class="due-date-card past">
+            <div class="due-date-num"><span class="q">Q2</span><span class="n">2</span></div>
+            <div class="due-date-body">
+              <div class="date">June 16, 2025</div>
+              <div class="period">Income earned Apr 1 - May 31, 2025</div>
+            </div>
+          </div>
+          <div class="due-date-card past">
+            <div class="due-date-num"><span class="q">Q3</span><span class="n">3</span></div>
+            <div class="due-date-body">
+              <div class="date">September 15, 2025</div>
+              <div class="period">Income earned Jun 1 - Aug 31, 2025</div>
+            </div>
+          </div>
+          <div class="due-date-card past">
+            <div class="due-date-num"><span class="q">Q4</span><span class="n">4</span></div>
+            <div class="due-date-body">
+              <div class="date">January 15, 2026</div>
+              <div class="period">Income earned Sep 1 - Dec 31, 2025</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-callout">
+          <p><strong>2026 estimated tax due dates:</strong> April 15, 2026 (Q1) &nbsp;|&nbsp; June 15, 2026 (Q2) &nbsp;|&nbsp; September 15, 2026 (Q3) &nbsp;|&nbsp; January 15, 2027 (Q4). If you filed and paid your 2025 return in full by January 31, 2026, you may skip the Q4 2025 payment.</p>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Who must pay -->
+      <div class="qa-section">
+        <div class="section-eyebrow">Who Must Pay</div>
+        <h2>Do You Need to Pay Quarterly Estimated Taxes?</h2>
+        <p>You generally must pay quarterly estimated taxes if all three of the following apply.</p>
+
+        <table class="facts-table">
+          <thead>
+            <tr><th>Condition</th><th>Details</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>You expect to owe at least $1,000</td><td>Total federal tax after withholding and credits for the year will be $1,000 or more</td></tr>
+            <tr><td>Withholding is insufficient</td><td>Your withholding and credits cover less than 90% of your current year tax liability</td></tr>
+            <tr><td>Prior year test not met</td><td>Withholding and credits are also less than 100% of last year's tax (110% if prior year AGI exceeded $150,000)</td></tr>
+          </tbody>
+        </table>
+
+        <table class="facts-table">
+          <thead>
+            <tr><th>Common situations requiring estimated payments</th><th>Why</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Freelancers and independent contractors</td><td>No employer withholding on 1099 income</td></tr>
+            <tr><td>Sole proprietors and self-employed</td><td>Both SE tax and income tax not withheld</td></tr>
+            <tr><td>Investors with capital gains or dividends</td><td>Investment income has no automatic withholding</td></tr>
+            <tr><td>Retirees with pension or IRA income</td><td>Withholding may be insufficient or not elected</td></tr>
+            <tr><td>Side gig workers with a day job</td><td>W-2 withholding may not cover side income</td></tr>
+            <tr class="highlight-row"><td>Partners and S-Corp shareholders</td><td>Pass-through income not subject to payroll withholding</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Safe harbor -->
+      <div class="qa-section">
+        <div class="section-eyebrow">Safe Harbor</div>
+        <h2>The Safe Harbor Rule: How to Avoid Underpayment Penalties</h2>
+        <p>You can avoid the IRS underpayment penalty by meeting either of two safe harbor thresholds. You do not need to predict your exact tax liability perfectly.</p>
+
+        <table class="facts-table">
+          <thead>
+            <tr><th>Safe Harbor Method</th><th>Requirement</th><th>Best For</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Prior year tax method</td><td>Pay 100% of last year's total tax in equal quarterly installments (110% if prior year AGI exceeded $150,000)</td><td>Unpredictable income, variable freelance earnings</td></tr>
+            <tr><td>Current year 90% method</td><td>Pay at least 90% of your actual current year tax liability across all four payments</td><td>Predictable income, lower tax year than prior year</td></tr>
+            <tr class="highlight-row"><td>Most freelancers use</td><td>Prior year method because it requires no estimation of current year income</td><td>Simplest approach if income varies</td></tr>
+          </tbody>
+        </table>
+
+        <div class="warning-callout">
+          <p><strong>The penalty still applies even if you get a refund.</strong> If you underpaid during the year, the IRS charges a small underpayment penalty on the amount underpaid for each quarter it was late, even if your total return results in a refund. Meeting a safe harbor threshold is the only way to avoid it.</p>
+        </div>
+      </div>
+
+      <!-- How to calculate -->
+      <div class="qa-section">
+        <div class="section-eyebrow">How to Calculate</div>
+        <h2>Estimating Your Quarterly Payment Amount</h2>
+        <p>The most common approach for freelancers and self-employed individuals is the prior year safe harbor method.</p>
+
+        <div class="formula-box">
+          <div class="formula-box-label">Prior Year Safe Harbor Method</div>
+          <code><span class="comment">// Step 1 - Find last year's total tax</span>
+<span class="highlight">Prior Year Tax</span>     = Line 24 of your prior year Form 1040
+
+<span class="comment">// Step 2 - Apply the threshold</span>
+If prior year AGI was $150,000 or less:
+  <span class="highlight">Annual Target</span>   = Prior Year Tax x 100%
+If prior year AGI exceeded $150,000:
+  <span class="highlight">Annual Target</span>   = Prior Year Tax x 110%
+
+<span class="comment">// Step 3 - Divide into quarterly payments</span>
+<span class="highlight">Each Payment</span>       = Annual Target / 4
+
+<span class="comment">// Example: Prior year tax was $12,000, AGI under $150,000</span>
+Annual target    = $12,000 x 100% = $12,000
+Each payment     = $12,000 / 4    = $3,000 per quarter</code>
+        </div>
+
+        <div class="example-calc">
+          <h3>Freelancer with $75,000 net profit estimating 2025 quarterly payments</h3>
+          <div class="example-row">
+            <span class="label">Prior year total tax (Form 1040, Line 24)</span>
+            <span class="value">$14,200</span>
+          </div>
+          <div class="example-row">
+            <span class="label">Prior year AGI (under $150,000 threshold)</span>
+            <span class="value">100% safe harbor</span>
+          </div>
+          <div class="example-row">
+            <span class="label">Annual payment target</span>
+            <span class="value">$14,200</span>
+          </div>
+          <div class="example-row total">
+            <span class="label">Estimated payment each quarter</span>
+            <span class="value">$3,550</span>
+          </div>
+        </div>
+
+        <div class="tip-callout">
+          <p><strong>Better approach if income grew significantly:</strong> If your income is much higher than last year, the prior year method may leave you with a large balance due at filing. In that case, estimate your current year SE tax and income tax, divide by four, and pay that amount quarterly instead.</p>
+        </div>
+      </div>
+
+      <!-- How to pay -->
+      <div class="qa-section">
+        <div class="section-eyebrow">How to Pay</div>
+        <h2>How to Submit Quarterly Estimated Tax Payments</h2>
+
+        <table class="facts-table">
+          <thead>
+            <tr><th>Payment Method</th><th>How</th><th>Notes</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>IRS Direct Pay</td><td>Pay at irs.gov/payments directly from your bank account</td><td>Free, instant, no account needed</td></tr>
+            <tr><td>EFTPS</td><td>Electronic Federal Tax Payment System at eftps.gov</td><td>Free, requires enrollment, good for recurring payments</td></tr>
+            <tr><td>IRS2Go app</td><td>Mobile payment via Direct Pay or debit/credit card</td><td>Card payments carry a processing fee</td></tr>
+            <tr><td>Mail Form 1040-ES</td><td>Send check with the quarterly voucher to the IRS address for your state</td><td>Allow several days for delivery before the due date</td></tr>
+            <tr class="highlight-row"><td>Recommended</td><td>IRS Direct Pay for one-time payments or EFTPS for scheduled recurring payments</td><td>Both free and provide instant confirmation</td></tr>
+          </tbody>
+        </table>
+
+        <div class="info-callout">
+          <p><strong>Pay online for instant confirmation.</strong> IRS Direct Pay at irs.gov/directpay is the fastest and simplest method. You select "Estimated Tax" as the payment type, enter your tax year, and pay from your bank account. You receive immediate confirmation with a tracking number. No account registration is required.</p>
+        </div>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="faq-section">
+        <div class="section-eyebrow">FAQ</div>
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">When are quarterly estimated taxes due in 2025?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The 2025 quarterly estimated tax due dates are April 15, 2025 (Q1), June 16, 2025 (Q2), September 15, 2025 (Q3), and January 15, 2026 (Q4). If a due date falls on a weekend or federal holiday, it moves to the next business day.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What happens if I miss a quarterly payment?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">If you miss a quarterly payment or pay too little, the IRS charges an underpayment penalty. The penalty is calculated as the federal short-term interest rate plus 3 percentage points, applied to the underpaid amount for the number of days it was late. It is typically a few percentage points of the underpaid amount, not a flat fee.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Do I have to pay quarterly taxes if I have a W-2 job and a side gig?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Possibly yes. If your side gig income results in an additional tax liability of $1,000 or more above what your W-2 withholding covers, you may need to make estimated payments. One alternative is to increase your W-4 withholding at your day job to cover the side income, which avoids the need for separate quarterly payments.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I pay all four quarters at once?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">You can pay more than your required quarterly amount at any time, including paying the full year upfront with Q1. However, the IRS applies payments to the current quarter, so paying early for future quarters may not automatically satisfy the on-time requirement for each quarter. Check IRS instructions or consult a tax professional if you want to prepay the full year.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">How do estimated taxes affect my refund?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Quarterly estimated payments are credited against your total tax liability when you file. If your payments plus any withholding exceed your final tax liability, you receive the difference as a refund. If they fall short, you owe the balance at filing, plus a potential underpayment penalty if you missed a safe harbor threshold.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Are estimated taxes the same as self-employment tax?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">No. Estimated tax payments cover both self-employment tax and federal income tax together in one payment. You do not pay them separately. When calculating your quarterly payment amount, you need to estimate both your SE tax and your income tax liability, then divide the combined total by four.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="related-section">
+        <h2>Related Calculators and Guides</h2>
+        <div class="related-grid">
+          <a class="related-card" href="/self-employment-tax-calculator">
+            <div class="related-card-icon" style="background:#eff6ff;color:#2563eb;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <strong>SE Tax Calculator</strong>
+            <span>Estimate SE tax to include in quarterly payments</span>
+          </a>
+          <a class="related-card" href="/income-tax-calculator">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg></div>
+            <strong>Income Tax Calculator</strong>
+            <span>Estimate income tax portion of quarterly payment</span>
+          </a>
+          <a class="related-card" href="/self-employment-tax-rate-2025">
+            <div class="related-card-icon" style="background:#eff6ff;color:#2563eb;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg></div>
+            <strong>SE Tax Rate 2025</strong>
+            <span>How the 15.3% self-employment tax rate works</span>
+          </a>
+          <a class="related-card" href="/fica-tax-rate-2025">
+            <div class="related-card-icon" style="background:#fff1f2;color:#e11d48;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+            <strong>FICA Tax Rate 2025</strong>
+            <span>Employee equivalent of SE tax for comparison</span>
+          </a>
+          <a class="related-card" href="/tax-brackets-2025">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+            <strong>2025 Tax Brackets</strong>
+            <span>Income tax rates for estimating payments</span>
+          </a>
+          <a class="related-card" href="/standard-deduction-2025">
+            <div class="related-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
+            <strong>Standard Deduction 2025</strong>
+            <span>Reduces taxable income when estimating payments</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-disclaimer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> This page provides general estimated tax guidance for educational purposes based on IRS Form 1040-ES instructions. Individual situations vary based on income type, filing status, credits, and other factors. It is not tax, legal, or financial advice. Consult a qualified tax professional before making payment decisions.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="logo-mark"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/></svg></span>MyTaxCalcs</a>
+          <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Tax Calculators</h3>
+          <a href="/calculators">All Calculators</a>
+          <a href="/income-tax-calculator">Income Tax Calculator</a>
+          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
+          <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
+          <a href="/capital-gains-tax-calculator">Capital Gains Tax</a>
+          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
+          <a href="/payroll-tax-calculator">Payroll Tax Calculator</a>
+        </div>
+        <div class="footer-column">
+          <h3>Tax Guides</h3>
+          <a href="/tax-brackets-2025">2025 Tax Brackets</a>
+          <a href="/tax-brackets-2026">2026 Tax Brackets</a>
+          <a href="/standard-deduction-2025">Standard Deduction 2025</a>
+          <a href="/standard-deduction-2026">Standard Deduction 2026</a>
+          <a href="/capital-gains-tax-rates-2025">Capital Gains Rates 2025</a>
+          <a href="/california-income-tax-calculator">State Tax Calculators</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var items=document.querySelectorAll('.faq-item');
+      items.forEach(function(item){
+        var btn=item.querySelector('.faq-question');
+        btn.addEventListener('click',function(){
+          var isOpen=item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
+          if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

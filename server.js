@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
+// ── HOME ──────────────────────────────────────────────────────────────────────
 app.get("/", (req, res) => {
   res.render("index", {
     pageTitle: "MyTaxCalcs - Free Tax Calculators",
@@ -27,6 +28,15 @@ app.get("/", (req, res) => {
   });
 });
 
+// ── CALCULATOR HUB ────────────────────────────────────────────────────────────
+app.get("/calculators", (req, res) => {
+  res.render("calculators", {
+    pageTitle: "Tax Calculators",
+    states
+  });
+});
+
+// ── INCOME TAX ────────────────────────────────────────────────────────────────
 app.get("/income-tax-calculator", (req, res) => {
   res.render("income-tax-calculator", {
     pageTitle: "Free Income Tax Calculator",
@@ -38,7 +48,6 @@ app.get("/income-tax-calculator", (req, res) => {
 
 app.post("/income-tax-calculator", (req, res) => {
   const result = calculateFederalIncomeTax(req.body);
-
   res.render("income-tax-calculator", {
     pageTitle: "Free Income Tax Calculator",
     states,
@@ -47,13 +56,12 @@ app.post("/income-tax-calculator", (req, res) => {
   });
 });
 
+// ── STATE INCOME TAX ──────────────────────────────────────────────────────────
 app.get("/:stateSlug-income-tax-calculator", (req, res) => {
   const state = states.find((s) => s.slug === req.params.stateSlug);
-
   if (!state) {
     return res.status(404).send("State calculator not found.");
   }
-
   res.render("state-income-tax-calculator", {
     pageTitle: `${state.name} Income Tax Calculator`,
     state,
@@ -65,13 +73,10 @@ app.get("/:stateSlug-income-tax-calculator", (req, res) => {
 
 app.post("/:stateSlug-income-tax-calculator", (req, res) => {
   const state = states.find((s) => s.slug === req.params.stateSlug);
-
   if (!state) {
     return res.status(404).send("State calculator not found.");
   }
-
   const result = calculateFederalIncomeTax(req.body);
-
   res.render("state-income-tax-calculator", {
     pageTitle: `${state.name} Income Tax Calculator`,
     state,
@@ -81,6 +86,7 @@ app.post("/:stateSlug-income-tax-calculator", (req, res) => {
   });
 });
 
+// ── SELF-EMPLOYMENT TAX ───────────────────────────────────────────────────────
 app.get("/self-employment-tax-calculator", (req, res) => {
   res.render("self-employment-tax-calculator", {
     pageTitle: "Self-Employment Tax Calculator",
@@ -91,7 +97,6 @@ app.get("/self-employment-tax-calculator", (req, res) => {
 
 app.post("/self-employment-tax-calculator", (req, res) => {
   const result = calculateSelfEmploymentTax(req.body);
-
   res.render("self-employment-tax-calculator", {
     pageTitle: "Self-Employment Tax Calculator",
     result,
@@ -99,6 +104,7 @@ app.post("/self-employment-tax-calculator", (req, res) => {
   });
 });
 
+// ── CAPITAL GAINS TAX ─────────────────────────────────────────────────────────
 app.get("/capital-gains-tax-calculator", (req, res) => {
   res.render("capital-gains-tax-calculator", {
     pageTitle: "Capital Gains Tax Calculator",
@@ -109,7 +115,6 @@ app.get("/capital-gains-tax-calculator", (req, res) => {
 
 app.post("/capital-gains-tax-calculator", (req, res) => {
   const result = calculateCapitalGainsTax(req.body);
-
   res.render("capital-gains-tax-calculator", {
     pageTitle: "Capital Gains Tax Calculator",
     result,
@@ -117,6 +122,7 @@ app.post("/capital-gains-tax-calculator", (req, res) => {
   });
 });
 
+// ── SALES TAX ─────────────────────────────────────────────────────────────────
 app.get("/sales-tax-calculator", (req, res) => {
   res.render("sales-tax-calculator", {
     pageTitle: "Sales Tax Calculator",
@@ -127,7 +133,6 @@ app.get("/sales-tax-calculator", (req, res) => {
 
 app.post("/sales-tax-calculator", (req, res) => {
   const result = calculateSalesTax(req.body);
-
   res.render("sales-tax-calculator", {
     pageTitle: "Sales Tax Calculator",
     result,
@@ -135,6 +140,7 @@ app.post("/sales-tax-calculator", (req, res) => {
   });
 });
 
+// ── PAYROLL TAX ───────────────────────────────────────────────────────────────
 app.get("/payroll-tax-calculator", (req, res) => {
   res.render("payroll-tax-calculator", {
     pageTitle: "Payroll Tax Calculator",
@@ -145,7 +151,6 @@ app.get("/payroll-tax-calculator", (req, res) => {
 
 app.post("/payroll-tax-calculator", (req, res) => {
   const result = calculatePayrollTax(req.body);
-
   res.render("payroll-tax-calculator", {
     pageTitle: "Payroll Tax Calculator",
     result,
@@ -153,6 +158,7 @@ app.post("/payroll-tax-calculator", (req, res) => {
   });
 });
 
+// ── TAX REFUND ────────────────────────────────────────────────────────────────
 app.get("/tax-refund-calculator", (req, res) => {
   res.render("tax-refund-calculator", {
     pageTitle: "Tax Refund Calculator",
@@ -163,7 +169,6 @@ app.get("/tax-refund-calculator", (req, res) => {
 
 app.post("/tax-refund-calculator", (req, res) => {
   const result = calculateTaxRefund(req.body);
-
   res.render("tax-refund-calculator", {
     pageTitle: "Tax Refund Calculator",
     result,
@@ -171,13 +176,38 @@ app.post("/tax-refund-calculator", (req, res) => {
   });
 });
 
-app.get("/calculators", (req, res) => {
-  res.render("calculators", {
-    pageTitle: "Tax Calculators",
-    states
+// ── SEO GUIDE PAGES ───────────────────────────────────────────────────────────
+app.get("/tax-brackets-2025", (req, res) => {
+  res.render("tax-brackets-2025", {
+    pageTitle: "2025 Federal Income Tax Brackets: Every Rate and Threshold"
   });
 });
 
+app.get("/tax-brackets-2026", (req, res) => {
+  res.render("tax-brackets-2026", {
+    pageTitle: "2026 Tax Brackets: Projected Federal Income Tax Thresholds"
+  });
+});
+
+app.get("/standard-deduction-2025", (req, res) => {
+  res.render("standard-deduction-2025", {
+    pageTitle: "Standard Deduction 2025: Amounts, Rules, and How It Works"
+  });
+});
+
+app.get("/standard-deduction-2026", (req, res) => {
+  res.render("standard-deduction-2026", {
+    pageTitle: "Standard Deduction 2026: Projected Amounts by Filing Status"
+  });
+});
+
+app.get("/capital-gains-tax-rates-2025", (req, res) => {
+  res.render("capital-gains-tax-rates-2025", {
+    pageTitle: "Capital Gains Tax Rates 2025: Long-Term, Short-Term, and NIIT"
+  });
+});
+
+// ── STATIC PAGES ──────────────────────────────────────────────────────────────
 app.get("/privacy-policy", (req, res) => {
   res.render("privacy-policy", { pageTitle: "Privacy Policy" });
 });
@@ -195,45 +225,49 @@ app.get("/contact", (req, res) => {
 });
 
 app.get("/about", (req, res) => {
-  res.render("about", {
-    pageTitle: "About MyTaxCalcs"
-  });
+  res.render("about", { pageTitle: "About MyTaxCalcs" });
 });
 
-// Add this route to server.js before app.listen()
-
+// ── SITEMAP ───────────────────────────────────────────────────────────────────
 app.get("/sitemap.xml", (req, res) => {
   const baseUrl = "https://mytaxcalcs.com";
 
   const staticPages = [
-    "",
-    "/calculators",
-    "/income-tax-calculator",
-    "/self-employment-tax-calculator",
-    "/capital-gains-tax-calculator",
-    "/sales-tax-calculator",
-    "/payroll-tax-calculator",
-    "/tax-refund-calculator",
-    "/about",
-    "/contact",
-    "/privacy-policy",
-    "/terms",
-    "/disclaimer",
+    { path: "",                             priority: "1.0", freq: "weekly"  },
+    { path: "/calculators",                 priority: "0.9", freq: "monthly" },
+    { path: "/income-tax-calculator",       priority: "0.9", freq: "monthly" },
+    { path: "/tax-refund-calculator",       priority: "0.9", freq: "monthly" },
+    { path: "/self-employment-tax-calculator", priority: "0.8", freq: "monthly" },
+    { path: "/capital-gains-tax-calculator",   priority: "0.8", freq: "monthly" },
+    { path: "/sales-tax-calculator",        priority: "0.8", freq: "monthly" },
+    { path: "/payroll-tax-calculator",      priority: "0.8", freq: "monthly" },
+    { path: "/tax-brackets-2025",           priority: "0.9", freq: "monthly" },
+    { path: "/tax-brackets-2026",           priority: "0.8", freq: "monthly" },
+    { path: "/standard-deduction-2025",     priority: "0.9", freq: "monthly" },
+    { path: "/standard-deduction-2026",     priority: "0.8", freq: "monthly" },
+    { path: "/capital-gains-tax-rates-2025",priority: "0.8", freq: "monthly" },
+    { path: "/about",                       priority: "0.5", freq: "monthly" },
+    { path: "/contact",                     priority: "0.5", freq: "monthly" },
+    { path: "/privacy-policy",              priority: "0.3", freq: "yearly"  },
+    { path: "/terms",                       priority: "0.3", freq: "yearly"  },
+    { path: "/disclaimer",                  priority: "0.3", freq: "yearly"  },
   ];
 
-  const stateUrls = states.map(
-    (s) => `/${s.slug}-income-tax-calculator`
-  );
+  const stateUrls = states.map((s) => ({
+    path: `/${s.slug}-income-tax-calculator`,
+    priority: "0.7",
+    freq: "monthly"
+  }));
 
   const allUrls = [...staticPages, ...stateUrls];
 
   const urls = allUrls
     .map(
-      (path) => `
+      (page) => `
   <url>
-    <loc>${baseUrl}${path}</loc>
-    <changefreq>monthly</changefreq>
-    <priority>${path === "" ? "1.0" : "0.8"}</priority>
+    <loc>${baseUrl}${page.path}</loc>
+    <changefreq>${page.freq}</changefreq>
+    <priority>${page.priority}</priority>
   </url>`
     )
     .join("");
@@ -247,14 +281,31 @@ ${urls}
   res.send(xml);
 });
 
-// Add this route to server.js before app.listen()
-// Place it near the sitemap route
-
+// ── ADS.TXT ───────────────────────────────────────────────────────────────────
 app.get("/ads.txt", (req, res) => {
   res.header("Content-Type", "text/plain");
   res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
 });
 
+app.get("/fica-tax-rate-2025", (req, res) => {
+  res.render("fica-tax-rate-2025", {
+    pageTitle: "FICA Tax Rate 2025: Social Security and Medicare Rates"
+  });
+});
+
+app.get("/self-employment-tax-rate-2025", (req, res) => {
+  res.render("self-employment-tax-rate-2025", {
+    pageTitle: "Self-Employment Tax Rate 2025: 15.3% Explained"
+  });
+});
+
+app.get("/quarterly-estimated-taxes", (req, res) => {
+  res.render("quarterly-estimated-taxes", {
+    pageTitle: "Quarterly Estimated Taxes: Due Dates, Rules, and How to Pay"
+  });
+});
+
+// ── START ─────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
   console.log(`MyTaxCalcs running at http://localhost:${PORT}`);
 });
