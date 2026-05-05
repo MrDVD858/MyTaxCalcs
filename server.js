@@ -261,10 +261,48 @@ app.get("/roth-ira-conversion-tax", (req, res) => {
   });
 });
 
+app.get("/401k-contribution-limits-2025", (req, res) => {
+  res.render("401k-contribution-limits-2025", {
+    pageTitle: "401(k) Contribution Limits 2025: Employee and Employer Limits"
+  });
+});
+
+app.get("/hsa-contribution-limits-2025", (req, res) => {
+  res.render("hsa-contribution-limits-2025", {
+    pageTitle: "HSA Contribution Limits 2025: Rules, Tax Benefits, and How It Works"
+  });
+});
+
 // ── SEO GUIDES: CREDITS ───────────────────────────────────────────────────────
 app.get("/child-tax-credit-2025", (req, res) => {
   res.render("child-tax-credit-2025", {
     pageTitle: "Child Tax Credit 2025: Amount, Rules, and Who Qualifies"
+  });
+});
+
+// ── SEO GUIDES: TAX CONCEPTS ─────────────────────────────────────────────────
+app.get("/marginal-vs-effective-tax-rate", (req, res) => {
+  res.render("marginal-vs-effective-tax-rate", {
+    pageTitle: "Marginal vs Effective Tax Rate: What's the Difference?"
+  });
+});
+
+app.get("/bonus-tax-rate-2025", (req, res) => {
+  res.render("bonus-tax-rate-2025", {
+    pageTitle: "Bonus Tax Rate 2025: How Bonuses Are Taxed and What to Expect"
+  });
+});
+
+// ── SEO GUIDES: TAX HELP ──────────────────────────────────────────────────────
+app.get("/irs-payment-plan-guide", (req, res) => {
+  res.render("irs-payment-plan-guide", {
+    pageTitle: "IRS Payment Plan: How to Set Up an Installment Agreement in 2025"
+  });
+});
+
+app.get("/tax-extension-2026", (req, res) => {
+  res.render("tax-extension-2026", {
+    pageTitle: "Tax Extension 2026: How to File for an Extension and What It Means"
   });
 });
 
@@ -293,34 +331,51 @@ app.get("/about", (req, res) => {
 app.get("/sitemap.xml", (req, res) => {
   const baseUrl = "https://mytaxcalcs.com";
 
-  const staticPages = [
-    { path: "",                                priority: "1.0", freq: "weekly"  },
-    { path: "/calculators",                    priority: "0.9", freq: "monthly" },
-    { path: "/income-tax-calculator",          priority: "0.9", freq: "monthly" },
-    { path: "/tax-refund-calculator",          priority: "0.9", freq: "monthly" },
-    { path: "/self-employment-tax-calculator", priority: "0.8", freq: "monthly" },
-    { path: "/capital-gains-tax-calculator",   priority: "0.8", freq: "monthly" },
-    { path: "/sales-tax-calculator",           priority: "0.8", freq: "monthly" },
-    { path: "/payroll-tax-calculator",         priority: "0.8", freq: "monthly" },
-    { path: "/tax-brackets-2025",              priority: "0.9", freq: "monthly" },
-    { path: "/tax-brackets-2026",              priority: "0.8", freq: "monthly" },
-    { path: "/standard-deduction-2025",        priority: "0.9", freq: "monthly" },
-    { path: "/standard-deduction-2026",        priority: "0.8", freq: "monthly" },
-    { path: "/standard-deduction-vs-itemized", priority: "0.8", freq: "yearly"  },
-    { path: "/capital-gains-tax-rates-2025",   priority: "0.8", freq: "monthly" },
-    { path: "/capital-gains-tax-rates-2026",   priority: "0.8", freq: "monthly" },
-    { path: "/fica-tax-rate-2025",             priority: "0.8", freq: "monthly" },
-    { path: "/self-employment-tax-rate-2025",  priority: "0.8", freq: "monthly" },
-    { path: "/quarterly-estimated-taxes",      priority: "0.8", freq: "monthly" },
-    { path: "/tax-filing-deadline-2026",       priority: "0.9", freq: "monthly" },
-    { path: "/w2-vs-1099",                     priority: "0.8", freq: "yearly"  },
-    { path: "/roth-ira-conversion-tax",        priority: "0.8", freq: "yearly"  },
-    { path: "/child-tax-credit-2025",          priority: "0.8", freq: "monthly" },
-    { path: "/about",                          priority: "0.5", freq: "monthly" },
-    { path: "/contact",                        priority: "0.5", freq: "monthly" },
-    { path: "/privacy-policy",                 priority: "0.3", freq: "yearly"  },
-    { path: "/terms",                          priority: "0.3", freq: "yearly"  },
-    { path: "/disclaimer",                     priority: "0.3", freq: "yearly"  },
+  const guidePages = [
+    { path: "",                                 priority: "1.0", freq: "weekly"  },
+    { path: "/calculators",                     priority: "0.9", freq: "monthly" },
+    { path: "/income-tax-calculator",           priority: "0.9", freq: "monthly" },
+    { path: "/tax-refund-calculator",           priority: "0.9", freq: "monthly" },
+    { path: "/self-employment-tax-calculator",  priority: "0.8", freq: "monthly" },
+    { path: "/capital-gains-tax-calculator",    priority: "0.8", freq: "monthly" },
+    { path: "/sales-tax-calculator",            priority: "0.8", freq: "monthly" },
+    { path: "/payroll-tax-calculator",          priority: "0.8", freq: "monthly" },
+    // Tax brackets
+    { path: "/tax-brackets-2025",               priority: "0.9", freq: "monthly" },
+    { path: "/tax-brackets-2026",               priority: "0.8", freq: "monthly" },
+    // Standard deduction
+    { path: "/standard-deduction-2025",         priority: "0.9", freq: "monthly" },
+    { path: "/standard-deduction-2026",         priority: "0.8", freq: "monthly" },
+    { path: "/standard-deduction-vs-itemized",  priority: "0.8", freq: "yearly"  },
+    // Capital gains
+    { path: "/capital-gains-tax-rates-2025",    priority: "0.8", freq: "monthly" },
+    { path: "/capital-gains-tax-rates-2026",    priority: "0.8", freq: "monthly" },
+    // FICA and self-employment
+    { path: "/fica-tax-rate-2025",              priority: "0.8", freq: "monthly" },
+    { path: "/self-employment-tax-rate-2025",   priority: "0.8", freq: "monthly" },
+    // Payments and deadlines
+    { path: "/quarterly-estimated-taxes",       priority: "0.8", freq: "monthly" },
+    { path: "/tax-filing-deadline-2026",        priority: "0.9", freq: "monthly" },
+    { path: "/tax-extension-2026",              priority: "0.9", freq: "monthly" },
+    // Income and employment
+    { path: "/w2-vs-1099",                      priority: "0.8", freq: "yearly"  },
+    { path: "/bonus-tax-rate-2025",             priority: "0.8", freq: "monthly" },
+    // Investment and retirement
+    { path: "/roth-ira-conversion-tax",         priority: "0.8", freq: "yearly"  },
+    { path: "/401k-contribution-limits-2025",   priority: "0.8", freq: "monthly" },
+    { path: "/hsa-contribution-limits-2025",    priority: "0.8", freq: "monthly" },
+    // Credits
+    { path: "/child-tax-credit-2025",           priority: "0.8", freq: "monthly" },
+    // Tax concepts
+    { path: "/marginal-vs-effective-tax-rate",  priority: "0.8", freq: "yearly"  },
+    // Tax help
+    { path: "/irs-payment-plan-guide",          priority: "0.8", freq: "monthly" },
+    // Static
+    { path: "/about",                           priority: "0.5", freq: "monthly" },
+    { path: "/contact",                         priority: "0.5", freq: "monthly" },
+    { path: "/privacy-policy",                  priority: "0.3", freq: "yearly"  },
+    { path: "/terms",                           priority: "0.3", freq: "yearly"  },
+    { path: "/disclaimer",                      priority: "0.3", freq: "yearly"  },
   ];
 
   const stateUrls = states.map((s) => ({
@@ -329,7 +384,7 @@ app.get("/sitemap.xml", (req, res) => {
     freq: "monthly"
   }));
 
-  const allUrls = [...staticPages, ...stateUrls];
+  const allUrls = [...guidePages, ...stateUrls];
 
   const urls = allUrls
     .map((page) => `
