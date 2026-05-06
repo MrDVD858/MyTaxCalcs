@@ -5,9 +5,10 @@
   <title><%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs</title>
   <meta name="description" content="Free <%= state.name %> income tax calculator for 2025. <%= state.hasIncomeTax ? 'State income tax rates: ' + state.brackets + '.' : state.name + ' has no broad-based state income tax.' %> Estimate your federal income tax instantly.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="<%= canonical %>">
   <meta property="og:title" content="<%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs">
   <meta property="og:description" content="Free <%= state.name %> income tax calculator. Estimate your 2025 federal income tax and review state tax information.">
-  <meta property="og:url" content="https://mytaxcalcs.com/<%= state.slug %>-income-tax-calculator">
+  <meta property="og:url" content="<%= canonical %>">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
