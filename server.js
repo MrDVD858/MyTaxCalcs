@@ -385,11 +385,12 @@ app.get("/sitemap.xml", (req, res) => {
   }));
 
   const allUrls = [...guidePages, ...stateUrls];
-
+  const today = new Date().toISOString().split('T')[0];
   const urls = allUrls
     .map((page) => `
   <url>
     <loc>${baseUrl}${page.path}</loc>
+    <lastmod>${today}</lastmod>
     <changefreq>${page.freq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`)
