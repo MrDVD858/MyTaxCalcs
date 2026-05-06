@@ -40,6 +40,18 @@
     .guide-tag.projected{background:#fef3c7;color:#92400e}
     .state-featured-card .state-icon{width:40px;height:40px;border-radius:10px;background:#f0fdf4;display:flex;align-items:center;justify-content:center;margin-bottom:8px}
     .footer-site-desc{font-size:.75rem;color:rgba(255,255,255,0.35);display:block;margin-top:1px;margin-bottom:6px;font-weight:400}
+    .sister-section{max-width:1100px;margin:0 auto;padding:0 24px 56px}
+    .sister-inner{}
+    .sister-sub{font-size:.95rem;color:#6b7280;margin:6px 0 24px;max-width:560px}
+    .sister-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media(max-width:700px){.sister-grid{grid-template-columns:1fr}}
+    .sister-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:20px 18px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:10px}
+    .sister-card:hover{border-color:#16a34a;box-shadow:0 4px 14px rgba(22,163,74,.1);transform:translateY(-2px)}
+    .sister-card-icon{width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .sister-card-body{display:flex;flex-direction:column;gap:4px;flex:1}
+    .sister-card-body strong{font-size:.9rem;font-weight:700;color:#111827}
+    .sister-card-body span{font-size:.8rem;color:#6b7280;line-height:1.5}
+    .sister-card-link{font-size:.8rem;font-weight:600;color:#16a34a}
   </style>
 </head>
 <body>
@@ -376,6 +388,47 @@
           <% states.forEach(function(state) { %>
             <a href="/<%= state.slug %>-income-tax-calculator"><%= state.name %></a>
           <% }) %>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SISTER SITES ── -->
+    <section class="sister-section">
+      <div class="sister-inner">
+        <div class="section-label">Our Free Calculator Network</div>
+        <h2>More Free Calculators</h2>
+        <p class="sister-sub">MyTaxCalcs is part of a network of free financial calculators. Explore our sister sites for insurance, loan, and percentage tools.</p>
+        <div class="sister-grid">
+          <a class="sister-card" href="https://myinsurancecalcs.com" target="_blank" rel="noopener noreferrer">
+            <div class="sister-card-icon" style="background:#eff6ff;color:#2563eb;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="sister-card-body">
+              <strong>MyInsuranceCalcs.com</strong>
+              <span>Free insurance calculators for life, auto, home, and health coverage estimates.</span>
+            </div>
+            <span class="sister-card-link">Visit Site ↗</span>
+          </a>
+          <a class="sister-card" href="https://myloancalcs.com" target="_blank" rel="noopener noreferrer">
+            <div class="sister-card-icon" style="background:#fef3c7;color:#d97706;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div class="sister-card-body">
+              <strong>MyLoanCalcs.com</strong>
+              <span>Free loan and mortgage calculators for payments, interest, and amortization.</span>
+            </div>
+            <span class="sister-card-link">Visit Site ↗</span>
+          </a>
+          <a class="sister-card" href="https://mypctcalculator.com" target="_blank" rel="noopener noreferrer">
+            <div class="sister-card-icon" style="background:#f0fdf4;color:#16a34a;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="14.31" y1="8" x2="20.05" y2="17.94"/><line x1="9.69" y1="8" x2="21.17" y2="8"/><line x1="7.38" y1="12" x2="13.12" y2="2.06"/><line x1="9.69" y1="16" x2="3.95" y2="6.06"/><line x1="14.31" y1="16" x2="2.83" y2="16"/><line x1="16.62" y1="12" x2="10.88" y2="21.94"/></svg>
+            </div>
+            <div class="sister-card-body">
+              <strong>MyPctCalculator.com</strong>
+              <span>Free percentage calculators for tips, discounts, markups, and everyday math.</span>
+            </div>
+            <span class="sister-card-link">Visit Site ↗</span>
+          </a>
         </div>
       </div>
     </section>
