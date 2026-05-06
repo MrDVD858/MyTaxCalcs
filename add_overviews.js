@@ -1,5 +1,5 @@
 const fs = require('fs');
-const overviews = JSON.parse(fs.readFileSync('/home/claude/states_overview.json', 'utf8'));
+const overviews = JSON.parse(fs.readFileSync('./states_overview.json', 'utf8'));
 
 // Read states.js - user needs to provide path
 const statesPath = process.argv[2];
