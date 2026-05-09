@@ -33,6 +33,38 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does <%= state.name %> have a state income tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<% if (state.hasIncomeTax) { %>Yes. <%= state.name %> imposes a state income tax with a rate range of <%= state.brackets %>. The top marginal rate is <%= state.topRate %>%.<% } else { %>No. <%= state.name %> does not impose a broad-based state income tax on wages or salaries. Residents still owe federal income tax.<% } %>"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this calculator include <%= state.name %> state tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<% if (state.hasIncomeTax) { %>This calculator estimates federal income tax only. It does not compute <%= state.name %> state income tax (<%= state.brackets %>). Visit the <%= state.name %> Department of Revenue for state-specific estimates.<% } else { %>This calculator estimates federal income tax only. Because <%= state.name %> has no state income tax, there is no state income tax component to calculate for most residents.<% } %>"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What other taxes might <%= state.name %> residents owe?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Beyond federal income tax, <%= state.name %> residents may owe<% if (state.hasIncomeTax) { %> state income tax (<%= state.brackets %>),<% } %> sales tax on purchases, property tax on real estate, payroll taxes (Social Security and Medicare), and local taxes in some municipalities. Self-employed residents also owe self-employment tax on net earnings."
+        }
+      }
+    ]
+  }
+  </script>
   <style>
     .breadcrumb{max-width:780px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
     .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
@@ -401,6 +433,7 @@ Married Separately   $15,000</code>
         <h2><%= state.name %> Income Tax FAQ</h2>
         <div class="faq-list">
 
+          <!-- Q1: Does this state have income tax — fully dynamic -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               Does <%= state.name %> have a state income tax?
@@ -408,60 +441,73 @@ Married Separately   $15,000</code>
             </button>
             <div class="faq-answer">
               <% if (state.hasIncomeTax) { %>
-                Yes. <%= state.name %> has a state income tax with a rate range of <%= state.brackets %>. The top rate is <%= state.topRate %>%. Actual state tax owed depends on your income, filing status, applicable deductions, credits, and state-specific rules.
+                Yes. <%= state.name %> imposes a state income tax with a rate range of <%= state.brackets %>. The top marginal rate is <%= state.topRate %>%<% if (state.topRate === state.bottomRate) { %>, applied as a flat rate on all taxable income<% } else { %>, which applies to higher income levels<% } %>. Your actual <%= state.name %> tax liability depends on your income, filing status, deductions, and any credits or exemptions available under state law.
               <% } else { %>
-                <%= state.name %> does not have a broad-based state income tax. Residents do not pay a general state income tax on wages and salaries, though they may still owe federal income tax and other state or local taxes.
+                No. <%= state.name %> does not impose a broad-based state income tax on wages, salaries, or most personal income. Residents are not required to file a state income tax return for earned income, though they still owe federal income tax and may be subject to other state or local taxes depending on where they live.
               <% } %>
             </div>
           </div>
 
+          <!-- Q2: What does this calculator include — dynamic by state tax status -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               Does this calculator include <%= state.name %> state tax?
               <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
             </button>
             <div class="faq-answer">
-              This calculator estimates federal income tax only using 2025 federal brackets. It does not calculate your exact <%= state.name %> state income tax, which depends on state-specific rules, deductions, credits, and filing requirements. Use it for federal planning and review your state's department of revenue for a state tax estimate.
+              <% if (state.hasIncomeTax) { %>
+                This calculator estimates federal income tax only using 2025 federal brackets and standard deductions. It does not compute your <%= state.name %> state income tax, which uses its own brackets (<%= state.brackets %>), deductions, and credits that differ from federal rules. For a complete <%= state.name %> state tax estimate, visit the <%= state.name %> Department of Revenue or use tax software that supports state returns.
+              <% } else { %>
+                This calculator estimates federal income tax only. Because <%= state.name %> has no broad-based state income tax, there is no state income tax component to include. Your total income tax burden as a <%= state.name %> resident is primarily your federal tax liability, though you should still account for other state taxes such as sales tax and property tax when planning your overall finances.
+              <% } %>
             </div>
           </div>
 
+          <!-- Q3: How does withholding affect my refund — dynamic by state -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               Why does my refund estimate change when I adjust withholding?
               <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
             </button>
             <div class="faq-answer">
-              Your refund or balance owed is the difference between your estimated tax liability and the tax already withheld from your paychecks. Increasing withholding increases your estimated refund. Decreasing it increases your estimated balance owed. It is not extra money, just a change in when you pay.
+              Your estimated refund or balance owed is the difference between your total federal tax liability and the amount already withheld from your paychecks throughout the year. If your employer withholds more than your liability, you receive a refund. If less is withheld, you owe the difference at filing. <% if (state.hasIncomeTax) { %><%= state.name %> employers also withhold state income tax separately based on your state W-4 elections, which affects your state refund or balance independently of your federal result.<% } else { %>Because <%= state.name %> has no state income tax, your paycheck withholding for state purposes is zero — your only withholding adjustment that matters for income tax is your federal W-4.<% } %>
             </div>
           </div>
 
+          <!-- Q4: Effective vs marginal — dynamic example based on state top rate -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               What is the difference between effective and marginal tax rate?
               <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
             </button>
             <div class="faq-answer">
-              Your marginal rate is the rate applied to the last dollar of taxable income. Your effective rate is total estimated federal tax divided by gross income. Most people's effective rate is significantly lower than their marginal rate because lower income is taxed at lower rates first.
+              Your marginal rate is the federal bracket rate that applies to your last dollar of taxable income — for example, 22% or 24% depending on your income level. Your effective rate is your total estimated federal tax divided by your gross income, and it is almost always lower than your marginal rate because the progressive bracket system taxes lower income at lower rates first. <% if (state.hasIncomeTax) { %>The same concept applies to your <%= state.name %> state taxes: even with a top rate of <%= state.topRate %>%, most <%= state.name %> residents pay an effective state rate below that figure.<% } else { %>Since <%= state.name %> has no state income tax, only the federal effective and marginal rates apply to most residents' income tax planning.<% } %>
             </div>
           </div>
 
+          <!-- Q5: Can I file using this — dynamic state filing reference -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              Can I use this for filing my taxes?
+              Can I use this calculator to file my taxes?
               <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
             </button>
             <div class="faq-answer">
-              No. This calculator is for educational planning estimates only. For filing, use official IRS forms, IRS Free File, commercial tax software, or a qualified tax professional familiar with <%= state.name %> tax rules.
+              No. This calculator provides planning estimates only and cannot be used to file a tax return. To file your federal return, use IRS Free File (free for most filers), commercial tax software such as TurboTax or H&amp;R Block, or work with a qualified tax professional. <% if (state.hasIncomeTax) { %>For your <%= state.name %> state return, you will also need to file a separate state return using <%= state.name %>-specific forms or software that supports <%= state.name %> state returns. The <%= state.name %> Department of Revenue website provides official guidance and filing options.<% } else { %>Because <%= state.name %> has no state income tax, most residents only need to file a federal return, simplifying the overall filing process compared to residents of states with income taxes.<% } %>
             </div>
           </div>
 
+          <!-- Q6: Other taxes — fully dynamic by state tax type -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               What other taxes might <%= state.name %> residents owe?
               <span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
             </button>
             <div class="faq-answer">
-              Beyond federal and state income tax, <%= state.name %> residents may also owe sales tax on purchases, property tax on real estate, local income or occupational taxes in some municipalities, and payroll taxes on wages. Self-employed residents also pay self-employment tax on net earnings.
+              Beyond federal income tax, <%= state.name %> residents may be subject to several other taxes depending on their situation:
+              <% if (state.hasIncomeTax) { %>
+              <%= state.name %> state income tax (<%= state.brackets %>) is the most significant additional liability for most earners.
+              <% } %>
+              Sales tax applies to most retail purchases in <%= state.name %>. Property tax applies to real estate owners and is assessed at the local level. Payroll taxes — Social Security (6.2%) and Medicare (1.45%) — apply to all W-2 wages regardless of state. Self-employed <%= state.name %> residents also owe self-employment tax (15.3%) on net earnings. Local occupational or municipal income taxes may apply in certain cities or counties within <%= state.name %>.
             </div>
           </div>
 
