@@ -28,6 +28,9 @@ app.use((req, res, next) => {
 app.get("/", (req, res) => {
   res.render("index", {
     pageTitle: "MyTaxCalcs - Free Tax Calculators",
+    metaDescription: "Free U.S. tax calculators for income tax, state income tax, sales tax, self-employment tax, and capital gains tax. Estimate your 2025 federal tax instantly.",
+    ogTitle: "MyTaxCalcs - Free U.S. Tax Calculators",
+    ogDescription: "Free calculators for federal income tax, state tax, sales tax, self-employment tax, and capital gains planning.",
     states
   });
 });
@@ -35,7 +38,21 @@ app.get("/", (req, res) => {
 // ── CALCULATOR HUB ────────────────────────────────────────────────────────────
 app.get("/calculators", (req, res) => {
   res.render("calculators", {
-    pageTitle: "Tax Calculators",
+    pageTitle: "Tax Calculators | MyTaxCalcs",
+    metaDescription: "Browse all free U.S. tax calculators: income tax, self-employment, capital gains, sales tax, payroll, and refund estimators.",
+    ogTitle: "Free Tax Calculators | MyTaxCalcs",
+    ogDescription: "Browse all free U.S. tax calculators: income, self-employment, capital gains, sales tax, payroll, and refund.",
+    states
+  });
+});
+
+// ── STATES HUB ───────────────────────────────────────────────────────────────
+app.get("/states", (req, res) => {
+  res.render("states", {
+    pageTitle: "State Income Tax Calculators for All 50 States | MyTaxCalcs",
+    metaDescription: "Free state income tax calculators for all 50 U.S. states. Estimate your 2025 federal income tax and review state-specific tax rates and rules.",
+    ogTitle: "State Income Tax Calculators - All 50 States | MyTaxCalcs",
+    ogDescription: "Free income tax calculators for all 50 states. Estimate federal tax and review state income tax rates for 2025.",
     states
   });
 });
@@ -43,7 +60,10 @@ app.get("/calculators", (req, res) => {
 // ── INCOME TAX ────────────────────────────────────────────────────────────────
 app.get("/income-tax-calculator", (req, res) => {
   res.render("income-tax-calculator", {
-    pageTitle: "Free Income Tax Calculator",
+    pageTitle: "Free Income Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free federal income tax calculator for 2025. Estimate taxable income, federal tax owed, refund or amount owed, effective tax rate, and marginal tax rate.",
+    ogTitle: "Free Income Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate your 2025 federal income tax, taxable income, refund, effective tax rate, and marginal tax rate for free.",
     states,
     result: null,
     form: {}
@@ -53,7 +73,10 @@ app.get("/income-tax-calculator", (req, res) => {
 app.post("/income-tax-calculator", (req, res) => {
   const result = calculateFederalIncomeTax(req.body);
   res.render("income-tax-calculator", {
-    pageTitle: "Free Income Tax Calculator",
+    pageTitle: "Free Income Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free federal income tax calculator for 2025. Estimate taxable income, federal tax owed, refund or amount owed, effective tax rate, and marginal tax rate.",
+    ogTitle: "Free Income Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate your 2025 federal income tax, taxable income, refund, effective tax rate, and marginal tax rate for free.",
     states,
     result,
     form: req.body
@@ -66,8 +89,14 @@ app.get("/:stateSlug-income-tax-calculator", (req, res) => {
   if (!state) {
     return res.status(404).send("State calculator not found.");
   }
+  const stateTaxNote = state.hasIncomeTax
+    ? `State income tax rate range: ${state.brackets}.`
+    : `${state.name} has no broad-based state income tax.`;
   res.render("state-income-tax-calculator", {
-    pageTitle: `${state.name} Income Tax Calculator`,
+    pageTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
+    metaDescription: `Free ${state.name} income tax calculator for 2025. ${stateTaxNote} Estimate your federal income tax instantly.`,
+    ogTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
+    ogDescription: `Free ${state.name} income tax calculator. Estimate your 2025 federal income tax and review state tax information.`,
     state,
     states,
     result: null,
@@ -80,9 +109,15 @@ app.post("/:stateSlug-income-tax-calculator", (req, res) => {
   if (!state) {
     return res.status(404).send("State calculator not found.");
   }
+  const stateTaxNote = state.hasIncomeTax
+    ? `State income tax rate range: ${state.brackets}.`
+    : `${state.name} has no broad-based state income tax.`;
   const result = calculateFederalIncomeTax(req.body);
   res.render("state-income-tax-calculator", {
-    pageTitle: `${state.name} Income Tax Calculator`,
+    pageTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
+    metaDescription: `Free ${state.name} income tax calculator for 2025. ${stateTaxNote} Estimate your federal income tax instantly.`,
+    ogTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
+    ogDescription: `Free ${state.name} income tax calculator. Estimate your 2025 federal income tax and review state tax information.`,
     state,
     states,
     result,
@@ -93,7 +128,10 @@ app.post("/:stateSlug-income-tax-calculator", (req, res) => {
 // ── SELF-EMPLOYMENT TAX ───────────────────────────────────────────────────────
 app.get("/self-employment-tax-calculator", (req, res) => {
   res.render("self-employment-tax-calculator", {
-    pageTitle: "Self-Employment Tax Calculator",
+    pageTitle: "Self-Employment Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free self-employment tax calculator for 2025. Estimate Social Security and Medicare taxes for freelancers, contractors, and gig workers.",
+    ogTitle: "Self-Employment Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate your 2025 self-employment tax — Social Security and Medicare — for freelance and contractor income.",
     result: null,
     form: {}
   });
@@ -102,7 +140,10 @@ app.get("/self-employment-tax-calculator", (req, res) => {
 app.post("/self-employment-tax-calculator", (req, res) => {
   const result = calculateSelfEmploymentTax(req.body);
   res.render("self-employment-tax-calculator", {
-    pageTitle: "Self-Employment Tax Calculator",
+    pageTitle: "Self-Employment Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free self-employment tax calculator for 2025. Estimate Social Security and Medicare taxes for freelancers, contractors, and gig workers.",
+    ogTitle: "Self-Employment Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate your 2025 self-employment tax — Social Security and Medicare — for freelance and contractor income.",
     result,
     form: req.body
   });
@@ -111,7 +152,10 @@ app.post("/self-employment-tax-calculator", (req, res) => {
 // ── CAPITAL GAINS TAX ─────────────────────────────────────────────────────────
 app.get("/capital-gains-tax-calculator", (req, res) => {
   res.render("capital-gains-tax-calculator", {
-    pageTitle: "Capital Gains Tax Calculator",
+    pageTitle: "Capital Gains Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free capital gains tax calculator for 2025. Estimate short-term and long-term tax on stocks, crypto, real estate, and other asset sales.",
+    ogTitle: "Capital Gains Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate short-term and long-term capital gains tax on stocks, crypto, and real estate for 2025.",
     result: null,
     form: {}
   });
@@ -120,7 +164,10 @@ app.get("/capital-gains-tax-calculator", (req, res) => {
 app.post("/capital-gains-tax-calculator", (req, res) => {
   const result = calculateCapitalGainsTax(req.body);
   res.render("capital-gains-tax-calculator", {
-    pageTitle: "Capital Gains Tax Calculator",
+    pageTitle: "Capital Gains Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free capital gains tax calculator for 2025. Estimate short-term and long-term tax on stocks, crypto, real estate, and other asset sales.",
+    ogTitle: "Capital Gains Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate short-term and long-term capital gains tax on stocks, crypto, and real estate for 2025.",
     result,
     form: req.body
   });
@@ -129,7 +176,10 @@ app.post("/capital-gains-tax-calculator", (req, res) => {
 // ── SALES TAX ─────────────────────────────────────────────────────────────────
 app.get("/sales-tax-calculator", (req, res) => {
   res.render("sales-tax-calculator", {
-    pageTitle: "Sales Tax Calculator",
+    pageTitle: "Sales Tax Calculator | MyTaxCalcs",
+    metaDescription: "Free sales tax calculator. Estimate sales tax, combined tax rate, discount amount, and final purchase total for any U.S. state.",
+    ogTitle: "Sales Tax Calculator | MyTaxCalcs",
+    ogDescription: "Estimate sales tax and final purchase total for any U.S. state. Free and instant.",
     result: null,
     form: {}
   });
@@ -138,7 +188,10 @@ app.get("/sales-tax-calculator", (req, res) => {
 app.post("/sales-tax-calculator", (req, res) => {
   const result = calculateSalesTax(req.body);
   res.render("sales-tax-calculator", {
-    pageTitle: "Sales Tax Calculator",
+    pageTitle: "Sales Tax Calculator | MyTaxCalcs",
+    metaDescription: "Free sales tax calculator. Estimate sales tax, combined tax rate, discount amount, and final purchase total for any U.S. state.",
+    ogTitle: "Sales Tax Calculator | MyTaxCalcs",
+    ogDescription: "Estimate sales tax and final purchase total for any U.S. state. Free and instant.",
     result,
     form: req.body
   });
@@ -147,7 +200,10 @@ app.post("/sales-tax-calculator", (req, res) => {
 // ── PAYROLL TAX ───────────────────────────────────────────────────────────────
 app.get("/payroll-tax-calculator", (req, res) => {
   res.render("payroll-tax-calculator", {
-    pageTitle: "Payroll Tax Calculator",
+    pageTitle: "Payroll Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free payroll tax calculator for 2025. Estimate paycheck withholding, Social Security, Medicare, state withholding, and net take-home pay.",
+    ogTitle: "Payroll Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate paycheck withholding, FICA taxes, and net take-home pay for 2025.",
     result: null,
     form: {}
   });
@@ -156,7 +212,10 @@ app.get("/payroll-tax-calculator", (req, res) => {
 app.post("/payroll-tax-calculator", (req, res) => {
   const result = calculatePayrollTax(req.body);
   res.render("payroll-tax-calculator", {
-    pageTitle: "Payroll Tax Calculator",
+    pageTitle: "Payroll Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free payroll tax calculator for 2025. Estimate paycheck withholding, Social Security, Medicare, state withholding, and net take-home pay.",
+    ogTitle: "Payroll Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate paycheck withholding, FICA taxes, and net take-home pay for 2025.",
     result,
     form: req.body
   });
@@ -165,7 +224,10 @@ app.post("/payroll-tax-calculator", (req, res) => {
 // ── TAX REFUND ────────────────────────────────────────────────────────────────
 app.get("/tax-refund-calculator", (req, res) => {
   res.render("tax-refund-calculator", {
-    pageTitle: "Tax Refund Calculator",
+    pageTitle: "Tax Refund Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free tax refund calculator for 2025. Estimate your federal refund or amount owed using income, deductions, credits, and withholding.",
+    ogTitle: "Tax Refund Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate your 2025 federal tax refund or balance owed based on income, deductions, and withholding.",
     result: null,
     form: {}
   });
@@ -174,7 +236,10 @@ app.get("/tax-refund-calculator", (req, res) => {
 app.post("/tax-refund-calculator", (req, res) => {
   const result = calculateTaxRefund(req.body);
   res.render("tax-refund-calculator", {
-    pageTitle: "Tax Refund Calculator",
+    pageTitle: "Tax Refund Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free tax refund calculator for 2025. Estimate your federal refund or amount owed using income, deductions, credits, and withholding.",
+    ogTitle: "Tax Refund Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate your 2025 federal tax refund or balance owed based on income, deductions, and withholding.",
     result,
     form: req.body
   });
@@ -375,6 +440,7 @@ app.get("/sitemap.xml", (req, res) => {
     // Tax help
     { path: "/irs-payment-plan-guide",          priority: "0.8", freq: "monthly" },
     // Static
+    { path: "/states",                           priority: "0.9", freq: "monthly" },
     { path: "/about",                           priority: "0.5", freq: "monthly" },
     { path: "/contact",                         priority: "0.5", freq: "monthly" },
     { path: "/privacy-policy",                  priority: "0.3", freq: "yearly"  },
