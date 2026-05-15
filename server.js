@@ -19,14 +19,24 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, "public")));
+
+// ── CANONICAL REDIRECT (must be before static files) ──────────────────────────
 app.use((req, res, next) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host || '';
-  if (host.startsWith('www.')) {
-    return res.redirect(301, 'https://mytaxcalcs.com' + req.url);
+  const proto = req.headers['x-forwarded-proto'] || req.protocol;
+  const cleanHost = host.split(':')[0]; // strip port if present
+
+  const needsHttps = proto !== 'https';
+  const needsNonWww = cleanHost.startsWith('www.');
+
+  if (needsHttps || needsNonWww) {
+    return res.redirect(301, `https://mytaxcalcs.com${req.url}`);
   }
   next();
 });
+
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use((req, res, next) => {
   res.locals.canonical = `https://mytaxcalcs.com${req.path === '/' ? '' : req.path}`;
   next();
