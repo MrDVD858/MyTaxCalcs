@@ -765,64 +765,6 @@ const blogPosts = [
     ]
   },
   {
-    slug: "one-big-beautiful-bill-permanent-tax-changes",
-    title: "One Big Beautiful Bill: Permanent Tax Changes Every American Should Know",
-    date: "July 10, 2025",
-    dateISO: "2025-07-10",
-    author: "MyTaxCalcs Editorial",
-    category: "Tax Law Changes",
-    excerpt: "The One Big Beautiful Bill Act, signed July 4, 2025, made sweeping permanent changes to the U.S. tax code. Here's what changed and what it means for individual taxpayers.",
-    metaDescription: "The One Big Beautiful Bill Act permanently extended TCJA tax cuts, raised the standard deduction, added new deductions for tips, overtime, and seniors, and made other key tax changes. Full breakdown.",
-    ogTitle: "One Big Beautiful Bill: Permanent Tax Changes | MyTaxCalcs",
-    ogDescription: "The One Big Beautiful Bill, signed July 4, 2025, made sweeping permanent changes to U.S. tax law. Here's what every taxpayer needs to know.",
-    content: `
-      <p>On July 4, 2025, President Trump signed into law the <strong>One Big Beautiful Bill Act (OBBBA)</strong>, Public Law 119-21. The legislation makes permanent many of the individual tax provisions from the 2017 Tax Cuts and Jobs Act (TCJA) that were scheduled to expire at the end of 2025, while also adding new deductions and credits.</p>
-
-      <h2>Tax Rates Made Permanent</h2>
-      <p>The seven federal income tax rates from the TCJA — 10%, 12%, 22%, 24%, 32%, 35%, and 37% — are now permanent. Without the OBBBA, rates were scheduled to revert to higher pre-2017 levels (10%, 15%, 25%, 28%, 33%, 35%, 39.6%) beginning in 2026.</p>
-
-      <h2>Standard Deduction Made Permanent and Increased</h2>
-      <p>The higher standard deduction from the TCJA is now permanent. For <strong>tax year 2025</strong>, the OBBBA raised the standard deduction to:</p>
-      <ul>
-        <li>Single: $15,750</li>
-        <li>Married Filing Jointly: $31,500</li>
-        <li>Head of Household: $23,625</li>
-      </ul>
-
-      <h2>New: No Tax on Tips</h2>
-      <p>Workers in qualifying tip-receiving occupations (such as servers, bartenders, hotel staff, salon workers) can deduct up to <strong>$25,000 in qualified tips per year</strong> from federal income tax. This deduction applies for tax years 2025 through 2028. Tips must be reported on W-2, 1099, or Form 4137. The deduction phases out for income above $150,000 ($300,000 MFJ).</p>
-
-      <h2>New: No Tax on Overtime</h2>
-      <p>Workers can deduct the "half" portion of FLSA-required overtime compensation, up to <strong>$12,500 per year</strong> ($25,000 MFJ). Applies for tax years 2025–2028. Phases out above $150,000 ($300,000 MFJ).</p>
-
-      <h2>New: $6,000 Senior Deduction</h2>
-      <p>Taxpayers age 65 and older can claim an additional <strong>$6,000 deduction</strong> for tax years 2025–2028, on top of the standard deduction. Phases out above $75,000 ($150,000 MFJ).</p>
-
-      <h2>New: Car Loan Interest Deduction</h2>
-      <p>Interest paid on loans for new personal vehicles purchased after December 31, 2024 is deductible up to <strong>$10,000 per year</strong> for tax years 2025–2028. Phases out above $100,000 ($200,000 MFJ).</p>
-
-      <h2>SALT Cap Raised to $40,000</h2>
-      <p>The state and local tax (SALT) deduction cap increases from $10,000 to <strong>$40,000</strong> for tax years 2025–2029 (for taxpayers with income under $500,000). The cap increases 1% annually through 2029, then permanently reverts to $10,000.</p>
-
-      <h2>Child Tax Credit Increased</h2>
-      <p>The maximum child tax credit increases to <strong>$2,200 per qualifying child</strong> for tax year 2025, up from $2,000. The refundable portion (ACTC) remains up to $1,700.</p>
-
-      <h2>Personal Exemptions Permanently Eliminated</h2>
-      <p>The personal exemption (which was temporarily set to $0 under the TCJA) is now permanently eliminated. Taxpayers cannot claim per-person deductions as they did before 2018.</p>
-
-      <h2>Estate Tax Exclusion Made Permanent</h2>
-      <p>The higher estate and gift tax exclusion from the TCJA is made permanent. The 2026 exclusion is $15,000,000 per individual.</p>
-
-      <h2>Source</h2>
-      <p>All information sourced from <a href="https://www.irs.gov/newsroom/one-big-beautiful-bill-provisions" target="_blank" rel="noopener">IRS One Big Beautiful Bill Provisions</a> and <a href="https://www.irs.gov/newsroom/one-big-beautiful-bill-act-tax-deductions-for-working-americans-and-seniors" target="_blank" rel="noopener">IRS IR-2025-103</a>.</p>
-    `,
-    relatedLinks: [
-      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
-      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
-    ]
-  },
-  {
     slug: "2026-eitc-amt-estate-tax-updates",
     title: "2026 EITC, AMT, Estate Tax, and Gift Exclusion Updates from the IRS",
     date: "October 9, 2025",
