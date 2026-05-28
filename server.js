@@ -49,7 +49,8 @@ app.get("/", (req, res) => {
     metaDescription: "Free U.S. tax calculators for income tax, state income tax, sales tax, self-employment tax, and capital gains tax. Estimate your 2025 federal tax instantly.",
     ogTitle: "MyTaxCalcs - Free U.S. Tax Calculators",
     ogDescription: "Free calculators for federal income tax, state tax, sales tax, self-employment tax, and capital gains planning.",
-    states
+    states,
+    posts: blogPosts
   });
 });
 
@@ -266,130 +267,190 @@ app.post("/tax-refund-calculator", (req, res) => {
 // ── SEO GUIDES: TAX BRACKETS ──────────────────────────────────────────────────
 app.get("/tax-brackets-2025", (req, res) => {
   res.render("tax-brackets-2025", {
-    pageTitle: "2025 Federal Income Tax Brackets: Every Rate and Threshold"
+    pageTitle: "2025 Federal Income Tax Brackets: Every Rate and Threshold",
+    metaDescription: "2025 federal income tax brackets for all filing statuses. All 7 tax rates and income thresholds, sourced from IRS Revenue Procedure 2024-40.",
+    ogTitle: "2025 Federal Income Tax Brackets | MyTaxCalcs",
+    ogDescription: "All 7 federal tax rates and income thresholds for 2025 by filing status."
   });
 });
 
 app.get("/tax-brackets-2026", (req, res) => {
   res.render("tax-brackets-2026", {
-    pageTitle: "2026 Tax Brackets: Projected Federal Income Tax Thresholds"
+    pageTitle: "2026 Tax Brackets: Projected Federal Income Tax Thresholds",
+    metaDescription: "Projected 2026 federal income tax brackets and thresholds by filing status. Plan ahead with estimated inflation-adjusted rates.",
+    ogTitle: "2026 Tax Brackets: Projected Thresholds | MyTaxCalcs",
+    ogDescription: "Projected 2026 federal income tax brackets and thresholds for all filing statuses."
   });
 });
 
 // ── SEO GUIDES: STANDARD DEDUCTION ───────────────────────────────────────────
 app.get("/standard-deduction-2025", (req, res) => {
   res.render("standard-deduction-2025", {
-    pageTitle: "Standard Deduction 2025: Amounts, Rules, and How It Works"
+    pageTitle: "Standard Deduction 2025: Amounts, Rules, and How It Works",
+    metaDescription: "2025 standard deduction amounts by filing status. $15,000 for single filers, $30,000 for married filing jointly. Learn who qualifies and when to itemize.",
+    ogTitle: "Standard Deduction 2025: Amounts & Rules | MyTaxCalcs",
+    ogDescription: "Official 2025 standard deduction amounts by filing status and who qualifies."
   });
 });
 
 app.get("/standard-deduction-2026", (req, res) => {
   res.render("standard-deduction-2026", {
-    pageTitle: "Standard Deduction 2026: Projected Amounts by Filing Status"
+    pageTitle: "Standard Deduction 2026: Projected Amounts by Filing Status",
+    metaDescription: "Projected 2026 standard deduction amounts by filing status. Plan ahead with estimated inflation-adjusted figures for next tax year.",
+    ogTitle: "Standard Deduction 2026: Projected Amounts | MyTaxCalcs",
+    ogDescription: "Projected 2026 standard deduction amounts by filing status for forward tax planning."
   });
 });
 
 app.get("/standard-deduction-vs-itemized", (req, res) => {
   res.render("standard-deduction-vs-itemized", {
-    pageTitle: "Standard Deduction vs Itemized Deductions: Which Saves More?"
+    pageTitle: "Standard Deduction vs Itemized Deductions: Which Saves More?",
+    metaDescription: "Standard deduction vs itemized deductions explained. Learn which method lowers your tax bill more and when it makes sense to switch.",
+    ogTitle: "Standard vs Itemized Deductions | MyTaxCalcs",
+    ogDescription: "Find out whether the standard deduction or itemizing saves you more on your federal taxes."
   });
 });
 
 // ── SEO GUIDES: CAPITAL GAINS ─────────────────────────────────────────────────
 app.get("/capital-gains-tax-rates-2025", (req, res) => {
   res.render("capital-gains-tax-rates-2025", {
-    pageTitle: "Capital Gains Tax Rates 2025: Long-Term, Short-Term, and NIIT"
+    pageTitle: "Capital Gains Tax Rates 2025: Long-Term, Short-Term, and NIIT",
+    metaDescription: "2025 capital gains tax rates for long-term and short-term gains. Includes NIIT thresholds and income breakpoints by filing status.",
+    ogTitle: "Capital Gains Tax Rates 2025 | MyTaxCalcs",
+    ogDescription: "Long-term and short-term capital gains tax rates for 2025, including NIIT thresholds."
   });
 });
 
 app.get("/capital-gains-tax-rates-2026", (req, res) => {
   res.render("capital-gains-tax-rates-2026", {
-    pageTitle: "Capital Gains Tax Rates 2026: Projected Rates and Thresholds"
+    pageTitle: "Capital Gains Tax Rates 2026: Projected Rates and Thresholds",
+    metaDescription: "Projected 2026 capital gains tax rates for long-term and short-term gains. Estimated income thresholds by filing status.",
+    ogTitle: "Capital Gains Tax Rates 2026: Projected | MyTaxCalcs",
+    ogDescription: "Projected 2026 long-term and short-term capital gains tax rates by filing status."
   });
 });
 
 // ── SEO GUIDES: FICA AND SELF-EMPLOYMENT ──────────────────────────────────────
 app.get("/fica-tax-rate-2025", (req, res) => {
   res.render("fica-tax-rate-2025", {
-    pageTitle: "FICA Tax Rate 2025: Social Security and Medicare Rates"
+    pageTitle: "FICA Tax Rate 2025: Social Security and Medicare Rates",
+    metaDescription: "2025 FICA tax rates: 6.2% Social Security and 1.45% Medicare for employees. Learn about wage bases, employer matching, and the additional Medicare surtax.",
+    ogTitle: "FICA Tax Rate 2025: SS & Medicare Rates | MyTaxCalcs",
+    ogDescription: "2025 FICA tax rates for Social Security and Medicare, including wage base limits."
   });
 });
 
 app.get("/self-employment-tax-rate-2025", (req, res) => {
   res.render("self-employment-tax-rate-2025", {
-    pageTitle: "Self-Employment Tax Rate 2025: 15.3% Explained"
+    pageTitle: "Self-Employment Tax Rate 2025: 15.3% Explained",
+    metaDescription: "How the 15.3% self-employment tax rate works in 2025. Covers Social Security, Medicare, the deductible half, and how to calculate what you owe.",
+    ogTitle: "Self-Employment Tax Rate 2025: 15.3% Explained | MyTaxCalcs",
+    ogDescription: "How the 15.3% self-employment tax works in 2025 and how to calculate your SE tax bill."
   });
 });
 
 // ── SEO GUIDES: PAYMENTS AND DEADLINES ───────────────────────────────────────
 app.get("/quarterly-estimated-taxes", (req, res) => {
   res.render("quarterly-estimated-taxes", {
-    pageTitle: "Quarterly Estimated Taxes: Due Dates, Rules, and How to Pay"
+    pageTitle: "Quarterly Estimated Taxes: Due Dates, Rules, and How to Pay",
+    metaDescription: "Quarterly estimated tax payment guide for 2025. Covers due dates, safe harbor rules, how to calculate payments, and how to pay the IRS.",
+    ogTitle: "Quarterly Estimated Taxes: Due Dates & Rules | MyTaxCalcs",
+    ogDescription: "2025 quarterly estimated tax due dates, safe harbor rules, and how to pay the IRS."
   });
 });
 
 app.get("/tax-filing-deadline-2026", (req, res) => {
   res.render("tax-filing-deadline-2026", {
-    pageTitle: "Tax Filing Deadline 2026: All Key Dates Explained"
+    pageTitle: "Tax Filing Deadline 2026: All Key Dates Explained",
+    metaDescription: "2026 tax filing deadline is April 15, 2026. Learn about the October 15 extension deadline, estimated tax due dates, and all key IRS dates for 2026.",
+    ogTitle: "Tax Filing Deadline 2026: Key Dates | MyTaxCalcs",
+    ogDescription: "All key 2026 tax filing deadlines including April 15 original and October 15 extension dates."
   });
 });
 
 // ── SEO GUIDES: INCOME AND EMPLOYMENT ────────────────────────────────────────
 app.get("/w2-vs-1099", (req, res) => {
   res.render("w2-vs-1099", {
-    pageTitle: "W-2 vs 1099: Tax Differences Explained"
+    pageTitle: "W-2 vs 1099: Tax Differences Explained",
+    metaDescription: "W-2 vs 1099 tax differences explained. Learn how employee vs contractor status affects withholding, self-employment tax, deductions, and benefits.",
+    ogTitle: "W-2 vs 1099: Tax Differences Explained | MyTaxCalcs",
+    ogDescription: "How W-2 employee and 1099 contractor status differ for taxes, withholding, and deductions."
   });
 });
 
 // ── SEO GUIDES: INVESTMENT AND RETIREMENT ────────────────────────────────────
 app.get("/roth-ira-conversion-tax", (req, res) => {
   res.render("roth-ira-conversion-tax", {
-    pageTitle: "Roth IRA Conversion Tax: How It Works and When to Convert"
+    pageTitle: "Roth IRA Conversion Tax: How It Works and When to Convert",
+    metaDescription: "How Roth IRA conversions are taxed and when it makes sense to convert. Covers tax treatment, income thresholds, and strategies to minimize the tax hit.",
+    ogTitle: "Roth IRA Conversion Tax: How It Works | MyTaxCalcs",
+    ogDescription: "How Roth IRA conversions are taxed and the best strategies for deciding when to convert."
   });
 });
 
 app.get("/401k-contribution-limits-2025", (req, res) => {
   res.render("401k-contribution-limits-2025", {
-    pageTitle: "401(k) Contribution Limits 2025: Employee and Employer Limits"
+    pageTitle: "401(k) Contribution Limits 2025: Employee and Employer Limits",
+    metaDescription: "2025 401(k) contribution limits: $23,500 employee limit, $70,000 total limit, $31,000 catch-up limit for ages 50+. Includes Roth 401(k) and employer match rules.",
+    ogTitle: "401(k) Contribution Limits 2025 | MyTaxCalcs",
+    ogDescription: "2025 401(k) contribution limits for employees and employers, including catch-up rules."
   });
 });
 
 app.get("/hsa-contribution-limits-2025", (req, res) => {
   res.render("hsa-contribution-limits-2025", {
-    pageTitle: "HSA Contribution Limits 2025: Rules, Tax Benefits, and How It Works"
+    pageTitle: "HSA Contribution Limits 2025: Rules, Tax Benefits, and How It Works",
+    metaDescription: "2025 HSA contribution limits: $4,300 for self-only, $8,550 for family coverage. Learn about the triple tax advantage, HDHP requirements, and catch-up contributions.",
+    ogTitle: "HSA Contribution Limits 2025 | MyTaxCalcs",
+    ogDescription: "2025 HSA contribution limits, HDHP rules, and how the triple tax advantage works."
   });
 });
 
 // ── SEO GUIDES: CREDITS ───────────────────────────────────────────────────────
 app.get("/child-tax-credit-2025", (req, res) => {
   res.render("child-tax-credit-2025", {
-    pageTitle: "Child Tax Credit 2025: Amount, Rules, and Who Qualifies"
+    pageTitle: "Child Tax Credit 2025: Amount, Rules, and Who Qualifies",
+    metaDescription: "Child Tax Credit 2025: now permanent at $2,200 per qualifying child under the One Big Beautiful Bill Act. Learn income limits, refundable portion, and how to claim it.",
+    ogTitle: "Child Tax Credit 2025: Amount & Rules | MyTaxCalcs",
+    ogDescription: "Child Tax Credit is now permanent at $2,200 per child. Learn who qualifies and how to claim it."
   });
 });
 
 // ── SEO GUIDES: TAX CONCEPTS ─────────────────────────────────────────────────
 app.get("/marginal-vs-effective-tax-rate", (req, res) => {
   res.render("marginal-vs-effective-tax-rate", {
-    pageTitle: "Marginal vs Effective Tax Rate: What's the Difference?"
+    pageTitle: "Marginal vs Effective Tax Rate: What's the Difference?",
+    metaDescription: "Marginal vs effective tax rate explained clearly. Learn what each rate means, how to calculate them, and which one to use when making financial decisions.",
+    ogTitle: "Marginal vs Effective Tax Rate | MyTaxCalcs",
+    ogDescription: "Clear explanation of marginal vs effective tax rate and when to use each one."
   });
 });
 
 app.get("/bonus-tax-rate-2025", (req, res) => {
   res.render("bonus-tax-rate-2025", {
-    pageTitle: "Bonus Tax Rate 2025: How Bonuses Are Taxed and What to Expect"
+    pageTitle: "Bonus Tax Rate 2025: How Bonuses Are Taxed and What to Expect",
+    metaDescription: "How bonuses are taxed in 2025. The IRS flat withholding rate is 22% for most bonuses. Learn the aggregate method, supplemental wage rules, and strategies to reduce the hit.",
+    ogTitle: "Bonus Tax Rate 2025: How Bonuses Are Taxed | MyTaxCalcs",
+    ogDescription: "How the IRS taxes bonuses in 2025 and strategies to reduce bonus withholding."
   });
 });
 
 // ── SEO GUIDES: TAX HELP ──────────────────────────────────────────────────────
 app.get("/irs-payment-plan-guide", (req, res) => {
   res.render("irs-payment-plan-guide", {
-    pageTitle: "IRS Payment Plan: How to Set Up an Installment Agreement in 2025"
+    pageTitle: "IRS Payment Plan: How to Set Up an Installment Agreement in 2025",
+    metaDescription: "How to set up an IRS payment plan in 2025. Covers short-term and long-term installment agreements, eligibility, fees, and how to apply online.",
+    ogTitle: "IRS Payment Plan Guide 2025 | MyTaxCalcs",
+    ogDescription: "Step-by-step guide to setting up an IRS installment agreement to pay your tax bill over time."
   });
 });
 
 app.get("/tax-extension-2026", (req, res) => {
   res.render("tax-extension-2026", {
-    pageTitle: "Tax Extension 2026: How to File for an Extension and What It Means"
+    pageTitle: "Tax Extension 2026: How to File for an Extension and What It Means",
+    metaDescription: "How to file a 2026 tax extension using Form 4868. Extends your filing deadline to October 15 but not your payment deadline. Learn what to do and what to avoid.",
+    ogTitle: "Tax Extension 2026: How to File | MyTaxCalcs",
+    ogDescription: "How to file a 2026 tax extension with Form 4868 and what an extension does and doesn't cover."
   });
 });
 
@@ -412,6 +473,9 @@ app.get("/blog/:slug", (req, res) => {
   }
   res.render("blog-post", {
     pageTitle: `${post.title} | MyTaxCalcs`,
+    metaDescription: post.metaDescription || post.excerpt,
+    ogTitle: post.ogTitle || `${post.title} | MyTaxCalcs`,
+    ogDescription: post.ogDescription || post.excerpt,
     post
   });
 });
