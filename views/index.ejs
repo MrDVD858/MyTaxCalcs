@@ -25,11 +25,19 @@
   <style>
     .ad-zone{text-align:center;margin:0 auto 48px;max-width:1100px;padding:0 24px;min-height:90px}
     .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .hero-quick-links{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 24px;justify-content:center}
+    .hero-quick-links a{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);color:#fff;text-decoration:none;font-size:.82rem;font-weight:600;padding:8px 14px;border-radius:20px;transition:background .15s,border-color .15s;white-space:nowrap}
+    .hero-quick-links a:hover{background:rgba(255,255,255,0.22);border-color:rgba(255,255,255,0.4)}
+    .trust-bar{background:#f9fafb;border-top:1px solid #e5e7eb;border-bottom:1px solid #e5e7eb;padding:14px 24px;text-align:center}
+    .trust-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+    .trust-item{display:flex;align-items:center;gap:6px;font-size:.8rem;color:#6b7280;font-weight:500}
+    .trust-item svg{color:#16a34a;flex-shrink:0}
     .guides-wrapper{max-width:1100px;margin:0 auto;padding:0 24px 48px}
     .guides-wrapper .section-label{margin-bottom:16px}
     .guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:700px){.guides-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:700px){.hero-quick-links a{font-size:.78rem;padding:7px 11px}.guides-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:440px){.guides-grid{grid-template-columns:1fr}}
+    @media(max-width:700px){.blog-recent-grid{grid-template-columns:1fr!important}}
     .guide-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:6px}
     .guide-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
     .guide-card-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
@@ -90,14 +98,40 @@
         <span class="eyebrow-dot"></span>
         Free U.S. Tax Calculators
       </div>
-      <h1>Simple tax estimates<br><em>start here</em></h1>
-      <p class="hero-sub">Free calculators for federal income tax, state tax, sales tax, self-employment tax, and capital gains planning.</p>
+      <h1>Find out what you owe —<br><em>in 60 seconds</em></h1>
+      <p class="hero-sub">Free calculators for federal income tax, state tax, self-employment, capital gains, payroll, and more. No sign-up. No cost. Ever.</p>
+      <div class="hero-quick-links">
+        <a href="/income-tax-calculator">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+          Income Tax
+        </a>
+        <a href="/tax-refund-calculator">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          Tax Refund
+        </a>
+        <a href="/self-employment-tax-calculator">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          Self-Employment
+        </a>
+        <a href="/capital-gains-tax-calculator">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+          Capital Gains
+        </a>
+        <a href="/states">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+          State Tax
+        </a>
+        <a href="/payroll-tax-calculator">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          Payroll Tax
+        </a>
+      </div>
       <div class="hero-actions">
         <a class="btn btn-primary" href="/income-tax-calculator">
-          Calculate Income Tax
+          Start Calculating — It's Free
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a class="btn btn-ghost" href="#state-calculators">View State Calculators</a>
+        <a class="btn btn-ghost" href="#state-calculators">View All 50 States</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><strong>6</strong><span>Calculators</span></div>
@@ -110,6 +144,32 @@
       </div>
     </div>
   </section>
+
+  <!-- ── TRUST BAR ── -->
+  <div class="trust-bar">
+    <div class="trust-bar-inner">
+      <span class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        No sign-up required
+      </span>
+      <span class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Always free
+      </span>
+      <span class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        IRS-sourced data
+      </span>
+      <span class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        Updated for 2025 &amp; 2026
+      </span>
+      <span class="trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        All 50 states covered
+      </span>
+    </div>
+  </div>
 
   <main>
 
@@ -279,7 +339,7 @@
         <a class="guide-card" href="/child-tax-credit-2025">
           <div class="guide-card-icon" style="background:#ecfeff;color:#0891b2;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
           <strong>Child Tax Credit 2025</strong>
-          <span>Up to $2,000 per child, $1,700 refundable (ACTC)</span>
+          <span>Now permanent at $2,200 per child under the One Big Beautiful Bill Act</span>
           <span class="guide-tag official">Official</span>
         </a>
 
@@ -345,7 +405,7 @@
           <span class="state-badge">Popular</span>
           <div class="state-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
           <h3>California Tax</h3>
-          <p>Estimate federal tax for California residents and prepare for state tax planning.</p>
+          <p>Estimate federal income tax for California residents. State rates range from 1% to 13.3%.</p>
           <span class="calc-card-link">Start Calculating <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         </a>
 
@@ -390,6 +450,52 @@
             <a href="/<%= state.slug %>-income-tax-calculator"><%= state.name %></a>
           <% }) %>
         </div>
+      </div>
+    </section>
+
+    <!-- ── RECENT BLOG POSTS ── -->
+    <section style="max-width:1100px;margin:0 auto;padding:0 24px 56px">
+      <div class="section-label">Latest from the Blog</div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:#111827;margin:0 0 20px">IRS News &amp; Tax Updates</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+        <% posts.slice(0,3).forEach(function(post) { %>
+        <a href="/blog/<%= post.slug %>" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:8px;transition:border-color .15s,box-shadow .15s,transform .15s" onmouseover="this.style.borderColor='#16a34a';this.style.boxShadow='0 4px 12px rgba(22,163,74,.1)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e5e7eb';this.style.boxShadow='none';this.style.transform='none'">
+          <span style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#16a34a"><%= post.category %></span>
+          <strong style="font-size:.92rem;font-weight:700;color:#111827;line-height:1.4"><%= post.title %></strong>
+          <span style="font-size:.8rem;color:#6b7280;line-height:1.5"><%= post.excerpt.substring(0,100) %>...</span>
+          <span style="font-size:.78rem;color:#9ca3af;margin-top:auto"><%= post.date %></span>
+        </a>
+        <% }) %>
+      </div>
+      <div style="margin-top:20px;text-align:center">
+        <a href="/blog" style="display:inline-flex;align-items:center;gap:6px;color:#16a34a;font-weight:600;font-size:.9rem;text-decoration:none">
+          View all blog posts
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section style="max-width:780px;margin:0 auto;padding:0 24px 64px">
+      <div class="section-label">Common Questions</div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:#111827;margin:0 0 24px">Frequently Asked Questions</h2>
+      <div style="display:flex;flex-direction:column;gap:0;border:1px solid #e5e7eb;border-radius:14px;overflow:hidden">
+        <details style="border-bottom:1px solid #e5e7eb;padding:0">
+          <summary style="padding:18px 20px;font-weight:600;font-size:.92rem;color:#111827;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">Are these calculators free? <span style="color:#16a34a;font-size:1.2rem">+</span></summary>
+          <p style="padding:0 20px 18px;margin:0;font-size:.88rem;color:#4b5563;line-height:1.6">Yes — completely free, forever. No account, no trial, no credit card. Every calculator on MyTaxCalcs is and always will be free to use.</p>
+        </details>
+        <details style="border-bottom:1px solid #e5e7eb;padding:0">
+          <summary style="padding:18px 20px;font-weight:600;font-size:.92rem;color:#111827;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">How accurate are the results? <span style="color:#16a34a;font-size:1.2rem">+</span></summary>
+          <p style="padding:0 20px 18px;margin:0;font-size:.88rem;color:#4b5563;line-height:1.6">Our calculators use official IRS tax brackets, rates, and thresholds for 2025 and 2026. Results are estimates — your actual tax bill may vary based on credits, deductions, and other factors only a tax professional can fully account for.</p>
+        </details>
+        <details style="border-bottom:1px solid #e5e7eb;padding:0">
+          <summary style="padding:18px 20px;font-weight:600;font-size:.92rem;color:#111827;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">Do you cover all 50 states? <span style="color:#16a34a;font-size:1.2rem">+</span></summary>
+          <p style="padding:0 20px 18px;margin:0;font-size:.88rem;color:#4b5563;line-height:1.6">Yes. Every state has its own calculator page with state-specific income tax rates and notes. Nine states have no broad-based income tax — those pages reflect that clearly.</p>
+        </details>
+        <details style="padding:0">
+          <summary style="padding:18px 20px;font-weight:600;font-size:.92rem;color:#111827;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center">Is my data saved or shared? <span style="color:#16a34a;font-size:1.2rem">+</span></summary>
+          <p style="padding:0 20px 18px;margin:0;font-size:.88rem;color:#4b5563;line-height:1.6">No. We don't store any numbers you enter into our calculators. All calculations happen in your browser session and are not saved, logged, or shared.</p>
+        </details>
       </div>
     </section>
 
