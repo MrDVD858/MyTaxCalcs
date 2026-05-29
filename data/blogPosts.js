@@ -3,6 +3,340 @@
 
 const blogPosts = [
   {
+    slug: "how-to-calculate-your-effective-tax-rate",
+    title: "How to Calculate Your Effective Tax Rate (And Why It Matters More Than Your Bracket)",
+    date: "May 29, 2026",
+    dateISO: "2026-05-29",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Basics",
+    excerpt: "Most people know their tax bracket but confuse it with what they actually pay. Your effective tax rate is the real number — and it's almost always lower than your marginal rate. Here's how to calculate it.",
+    metaDescription: "Learn how to calculate your effective federal income tax rate for 2026. Understand the difference between marginal and effective rates, see worked examples, and use the formula to plan smarter.",
+    ogTitle: "How to Calculate Your Effective Tax Rate | MyTaxCalcs",
+    ogDescription: "Your tax bracket and your effective rate are not the same thing. Learn how to calculate your real tax rate and why it's the number that actually matters for financial planning.",
+    content: `
+<p>Ask most people what tax rate they pay and they'll tell you their bracket — "I'm in the 22% bracket." But that's not actually what they pay. Thanks to America's progressive tax system, almost no one pays their marginal rate on all of their income. The number that reflects what you truly pay is your <strong>effective tax rate</strong> — and for most people, it's meaningfully lower than their bracket.</p>
+
+<p>Understanding the difference between these two rates, and knowing how to calculate your own, is one of the most practical things you can do for your financial planning.</p>
+
+<h2>Marginal Rate vs. Effective Rate: The Core Difference</h2>
+<p>Your <strong>marginal tax rate</strong> is the rate that applies to your last dollar of taxable income — the top bracket you fall into. If you're a single filer with $60,000 in taxable income in 2026, your marginal rate is 22%. But you don't pay 22% on all $60,000.</p>
+<p>Your <strong>effective tax rate</strong> is your total federal tax liability divided by your total gross income. It accounts for the fact that the first dollars of your income are taxed at 10%, the next chunk at 12%, and only the income above the 22% threshold is taxed at 22%. The effective rate is always lower than the marginal rate for any taxpayer in a bracket above 10%.</p>
+
+<h2>How the Progressive Bracket System Works</h2>
+<p>The 2026 federal tax brackets for single filers:</p>
+<table>
+  <thead><tr><th>Bracket</th><th>Taxable Income Range</th><th>Tax on This Portion</th></tr></thead>
+  <tbody>
+    <tr><td>10%</td><td>$0 – $11,925</td><td>$1,192.50</td></tr>
+    <tr><td>12%</td><td>$11,926 – $48,475</td><td>$4,386.00</td></tr>
+    <tr><td>22%</td><td>$48,476 – $103,350</td><td>$12,092.50</td></tr>
+    <tr><td>24%</td><td>$103,351 – $197,300</td><td>$22,548.00</td></tr>
+    <tr><td>32%</td><td>$197,301 – $250,525</td><td>$17,031.00</td></tr>
+    <tr><td>35%</td><td>$250,526 – $626,350</td><td>$131,509.25</td></tr>
+    <tr><td>37%</td><td>Over $626,350</td><td>37% on excess</td></tr>
+  </tbody>
+</table>
+<p>Each bracket only applies to the income <em>within</em> that range — not your entire income. Think of the brackets as filling up like buckets: you fill the 10% bucket first, then the 12% bucket, and so on.</p>
+
+<h2>How to Calculate Your Effective Tax Rate</h2>
+<p>The formula is straightforward:</p>
+<p><strong>Effective Tax Rate = Total Federal Tax Owed ÷ Gross Income × 100</strong></p>
+<p>Note: some people calculate it as total tax divided by <em>taxable income</em> (after deductions) rather than gross income. Both are valid — just be consistent and know which version you're using. The gross income version is more useful for understanding your overall tax burden; the taxable income version shows efficiency of your deduction strategy.</p>
+
+<h2>Worked Example: Single Filer, $75,000 Gross Income</h2>
+<table>
+  <thead><tr><th>Step</th><th>Amount</th></tr></thead>
+  <tbody>
+    <tr><td>Gross income</td><td>$75,000</td></tr>
+    <tr><td>Standard deduction (2026)</td><td>−$16,100</td></tr>
+    <tr><td>Taxable income</td><td>$58,900</td></tr>
+    <tr><td>Tax on first $11,925 (10%)</td><td>$1,192.50</td></tr>
+    <tr><td>Tax on $11,926–$48,475 (12%)</td><td>$4,386.00</td></tr>
+    <tr><td>Tax on $48,476–$58,900 (22%)</td><td>$2,293.28</td></tr>
+    <tr><td><strong>Total federal tax</strong></td><td><strong>$7,871.78</strong></td></tr>
+    <tr><td>Effective rate (vs. gross income)</td><td><strong>10.5%</strong></td></tr>
+    <tr><td>Effective rate (vs. taxable income)</td><td><strong>13.4%</strong></td></tr>
+    <tr><td>Marginal rate</td><td>22%</td></tr>
+  </tbody>
+</table>
+<p>This filer is in the 22% bracket but pays an effective rate of only 10.5% on their gross income — less than half their marginal rate.</p>
+
+<h2>Effective Rates Across the Income Spectrum (2026, Single Filer)</h2>
+<table>
+  <thead><tr><th>Gross Income</th><th>Est. Federal Tax</th><th>Marginal Rate</th><th>Effective Rate</th></tr></thead>
+  <tbody>
+    <tr><td>$30,000</td><td>~$1,073</td><td>12%</td><td>3.6%</td></tr>
+    <tr><td>$60,000</td><td>~$6,308</td><td>22%</td><td>10.5%</td></tr>
+    <tr><td>$100,000</td><td>~$14,843</td><td>22%</td><td>14.8%</td></tr>
+    <tr><td>$150,000</td><td>~$27,043</td><td>24%</td><td>18.0%</td></tr>
+    <tr><td>$250,000</td><td>~$58,303</td><td>32%</td><td>23.3%</td></tr>
+    <tr><td>$500,000</td><td>~$150,553</td><td>35%</td><td>30.1%</td></tr>
+  </tbody>
+</table>
+<p>Even at $500,000 in income, a single filer's effective federal rate is 30% — not 35% or 37%. The progressive structure ensures that lower income is always taxed at lower rates first.</p>
+
+<h2>Why Your Effective Rate Is the Number That Matters</h2>
+<p>Your marginal rate tells you the cost of earning one more dollar — useful for decisions like whether to take on extra freelance work, convert a traditional IRA to a Roth, or exercise stock options in a given year. Your effective rate tells you what share of your total income actually goes to federal taxes — useful for budgeting, comparing your tax burden year over year, and evaluating whether deductions and credits are making a real difference.</p>
+<ul>
+  <li><strong>Marginal rate:</strong> "If I earn $10,000 more, what portion goes to taxes?"</li>
+  <li><strong>Effective rate:</strong> "Of everything I earned this year, what share went to the federal government?"</li>
+</ul>
+
+<h2>How Deductions Lower Your Effective Rate</h2>
+<p>Every dollar of deduction reduces your taxable income, which reduces your tax liability, which lowers your effective rate. At the 22% bracket, a $1,000 deduction saves $220 in tax. The 2026 standard deduction of $16,100 for single filers saves roughly $1,610–$2,200 in federal tax compared to having no deduction. This is why maximizing deductions — retirement contributions, HSA contributions, mortgage interest — is one of the most direct ways to lower your effective rate.</p>
+
+<h2>State Taxes and Your Combined Effective Rate</h2>
+<p>Federal effective rate is only part of the picture. Most states also impose an income tax. A California resident earning $75,000 faces a California effective rate of roughly 5–6% on top of their federal rate, bringing their combined effective rate to around 16–17%. Use our <a href="/states">state income tax calculators</a> to estimate your state burden alongside federal tax.</p>
+
+<p>Use our <a href="/income-tax-calculator">federal income tax calculator</a> to get your estimated total federal tax — the calculator shows both your effective and marginal rate in the results.</p>
+    `,
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
+      { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
+      { href: "/marginal-vs-effective-tax-rate", label: "Marginal vs. Effective Rate Guide" },
+    ],
+  },
+
+  {
+    slug: "w4-withholding-guide-2026",
+    title: "W-4 Withholding Guide 2026: How to Fill It Out and Avoid a Surprise Tax Bill",
+    date: "May 29, 2026",
+    dateISO: "2026-05-29",
+    author: "MyTaxCalcs Editorial",
+    category: "Filing Tips",
+    excerpt: "Your W-4 determines how much federal tax your employer withholds from every paycheck. Get it wrong and you'll either owe a lump sum at filing or give the IRS an interest-free loan all year. Here's how to get it right in 2026.",
+    metaDescription: "How to fill out your W-4 correctly in 2026. Learn what each step means, when to update your W-4, and how to use the IRS withholding estimator to avoid owing money or over-withholding.",
+    ogTitle: "W-4 Withholding Guide 2026: How to Fill It Out the Right Way",
+    ogDescription: "Your W-4 controls how much tax your employer withholds from each paycheck. Learn how to complete it correctly in 2026 to avoid a tax bill or an unnecessary refund.",
+    content: `
+<p>Every time you start a new job — or experience a major life change — your employer hands you a Form W-4, Employee's Withholding Certificate. This single form controls how much federal income tax is withheld from each paycheck. Fill it out correctly and your withholding roughly matches your actual tax liability. Get it wrong and you'll either owe a potentially large balance at filing, or overpay all year and wait for a refund you could have kept in your pocket.</p>
+
+<h2>Why the W-4 Matters</h2>
+<p>Your employer doesn't know your full financial picture — your spouse's income, your side gig, your deductions, your credits. The W-4 is how you communicate that information so your employer can estimate the right amount to withhold. If you provide inaccurate instructions, the responsibility for the resulting underpayment falls on you — not your employer.</p>
+
+<h2>The Five Steps of the 2026 W-4</h2>
+
+<h3>Step 1 — Personal Information (Required for Everyone)</h3>
+<p>Enter your name, address, Social Security number, and filing status. Your filing status here should match what you'll claim on your actual tax return: Single, Married Filing Jointly, or Head of Household. This is the only step that's mandatory.</p>
+
+<h3>Step 2 — Multiple Jobs or Spouse Works (Complete If Applicable)</h3>
+<p>If you have more than one job, or if you're married and your spouse also works, this step is critical. Without it, each employer withholds as if your job is your only income — which almost always results in too little withholding overall. You have three options: use the IRS Tax Withholding Estimator (most accurate), use the Multiple Jobs Worksheet on page 3 of the W-4 instructions, or check the box in Step 2(c) if there are exactly two jobs at similar pay rates.</p>
+
+<h3>Step 3 — Claim Dependents (Complete If Applicable)</h3>
+<p>If your total income is $400,000 or less (married filing jointly) or $200,000 or less (all other filers), you can claim credits here to reduce your withholding. For each qualifying child under 17, enter $2,200 (the 2026 Child Tax Credit amount). For other dependents, enter $500 per person.</p>
+
+<h3>Step 4 — Other Adjustments (Optional)</h3>
+<ul>
+  <li><strong>4(a) — Other income:</strong> If you have income not subject to withholding (freelance, investments, rentals), enter the expected annual amount. Your employer will withhold extra to cover it.</li>
+  <li><strong>4(b) — Deductions:</strong> If you plan to itemize, or have significant above-the-line deductions, use the Deductions Worksheet on page 3 to reduce withholding. New OBBBA deductions (tips, overtime, senior deduction) belong here too.</li>
+  <li><strong>4(c) — Extra withholding:</strong> A flat additional dollar amount per paycheck. Useful if you'd rather ensure you don't owe than optimize monthly cash flow.</li>
+</ul>
+
+<h3>Step 5 — Signature (Required)</h3>
+<p>Sign and date the form. An unsigned W-4 is invalid and your employer will treat you as Single with no adjustments — usually more withholding than necessary.</p>
+
+<h2>When Should You Update Your W-4?</h2>
+<table>
+  <thead><tr><th>Life Event</th><th>Effect on Withholding Needed</th></tr></thead>
+  <tbody>
+    <tr><td>New job or significant raise</td><td>Review for accuracy</td></tr>
+    <tr><td>Marriage</td><td>May need adjustment — combined income affects brackets</td></tr>
+    <tr><td>Divorce or separation</td><td>Update filing status immediately</td></tr>
+    <tr><td>New child or dependent</td><td>Add Child Tax Credit in Step 3 to reduce withholding</td></tr>
+    <tr><td>Child turns 17</td><td>Remove the $2,200 credit from Step 3</td></tr>
+    <tr><td>Started a side business</td><td>Add expected self-employment income in Step 4(a)</td></tr>
+    <tr><td>Bought a home</td><td>May itemize — enter deduction estimate in Step 4(b)</td></tr>
+    <tr><td>Large refund or tax bill last year</td><td>Strong signal to rebalance withholding</td></tr>
+    <tr><td>Eligible for new OBBBA deductions</td><td>Enter tips/overtime/senior deduction in Step 4(b)</td></tr>
+  </tbody>
+</table>
+
+<h2>Common W-4 Mistakes</h2>
+<ul>
+  <li><strong>Claiming "Exempt" when you're not:</strong> You can only claim exempt if you had zero tax liability last year AND expect zero this year. Improperly claiming exempt triggers a penalty.</li>
+  <li><strong>Skipping Step 2 with two jobs:</strong> The most common cause of owing at filing for dual-income households.</li>
+  <li><strong>Never updating it:</strong> A W-4 from five years ago may be significantly wrong for your current situation.</li>
+  <li><strong>Forgetting about side income:</strong> Gig work, freelance, or investment income not covered by withholding needs to either be estimated in Step 4(a) or covered by quarterly estimated payments.</li>
+</ul>
+
+<h2>How to Check If Your Withholding Is on Track</h2>
+<p>The most accurate tool is the <a href="https://www.irs.gov/individuals/tax-withholding-estimator" target="_blank" rel="noopener">IRS Tax Withholding Estimator</a> at IRS.gov. It tells you whether your current withholding will result in a refund, a balance owed, or a wash — and suggests the specific W-4 changes to reach your preferred outcome.</p>
+<p>You can also use our <a href="/tax-refund-calculator">Tax Refund Calculator</a> for a quick estimate, or our <a href="/income-tax-calculator">Income Tax Calculator</a> to see your full estimated federal tax liability and compare it to what's being withheld from your paychecks.</p>
+    `,
+    relatedLinks: [
+      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator" },
+    ],
+  },
+
+  {
+    slug: "short-term-vs-long-term-capital-gains-2026",
+    title: "Short-Term vs. Long-Term Capital Gains: What's the Difference and How Are They Taxed in 2026?",
+    date: "May 29, 2026",
+    dateISO: "2026-05-29",
+    author: "MyTaxCalcs Editorial",
+    category: "Investing & Taxes",
+    excerpt: "Selling an investment you've held for less than a year triggers short-term capital gains tax — taxed like ordinary income. Hold it for more than a year and you get the much lower long-term rates. Here's how both work in 2026.",
+    metaDescription: "Short-term capital gains are taxed as ordinary income (10%–37%). Long-term capital gains get preferential rates of 0%, 15%, or 20% in 2026. Learn the rules, thresholds, and planning strategies.",
+    ogTitle: "Short-Term vs. Long-Term Capital Gains Tax 2026 — Full Breakdown",
+    ogDescription: "How short-term and long-term capital gains are taxed differently in 2026. See the income thresholds for 0%, 15%, and 20% rates and learn strategies to legally pay less.",
+    content: `
+<p>When you sell an investment for more than you paid, the profit is a capital gain — and the IRS wants a share of it. But how much you owe depends heavily on one factor: <strong>how long you held the investment before selling</strong>. The tax code draws a sharp line at one year, and crossing it can dramatically reduce the taxes you owe on the same dollar amount of profit.</p>
+
+<h2>The One-Year Rule</h2>
+<ul>
+  <li><strong>Held 12 months or less:</strong> Short-term capital gain — taxed as ordinary income at your regular bracket rate</li>
+  <li><strong>Held more than 12 months:</strong> Long-term capital gain — taxed at preferential lower rates (0%, 15%, or 20%)</li>
+</ul>
+<p>The one-year threshold is a hard line. Selling one day before the anniversary date costs you the preferential long-term rate. For large gains, that one day can be worth thousands of dollars in additional taxes.</p>
+
+<h2>Short-Term Capital Gains Rates (2026)</h2>
+<p>Short-term gains are added to your ordinary income and taxed at your regular federal rate — the same as wages:</p>
+<table>
+  <thead><tr><th>Taxable Income (Single)</th><th>Short-Term Rate</th></tr></thead>
+  <tbody>
+    <tr><td>Up to $11,925</td><td>10%</td></tr>
+    <tr><td>$11,926 – $48,475</td><td>12%</td></tr>
+    <tr><td>$48,476 – $103,350</td><td>22%</td></tr>
+    <tr><td>$103,351 – $197,300</td><td>24%</td></tr>
+    <tr><td>$197,301 – $250,525</td><td>32%</td></tr>
+    <tr><td>$250,526 – $626,350</td><td>35%</td></tr>
+    <tr><td>Over $626,350</td><td>37%</td></tr>
+  </tbody>
+</table>
+
+<h2>Long-Term Capital Gains Rates (2026)</h2>
+<table>
+  <thead><tr><th>Rate</th><th>Single (Taxable Income)</th><th>Married Filing Jointly</th><th>Head of Household</th></tr></thead>
+  <tbody>
+    <tr><td><strong>0%</strong></td><td>Up to $48,350</td><td>Up to $96,700</td><td>Up to $64,750</td></tr>
+    <tr><td><strong>15%</strong></td><td>$48,351 – $533,400</td><td>$96,701 – $600,050</td><td>$64,751 – $566,700</td></tr>
+    <tr><td><strong>20%</strong></td><td>Over $533,400</td><td>Over $600,050</td><td>Over $566,700</td></tr>
+  </tbody>
+</table>
+<p>These thresholds apply to <em>taxable income including the gain</em>. A married couple with $80,000 in wages and the $32,200 standard deduction has $47,800 in taxable income from wages. They can realize up to $48,900 more in long-term gains ($96,700 − $47,800) and pay <em>zero</em> federal capital gains tax.</p>
+
+<h2>Side-by-Side Example: The Cost of Selling Early</h2>
+<p>You bought $50,000 of stock now worth $80,000 — a $30,000 gain. You're a single filer with $70,000 in other taxable income (22% bracket).</p>
+<table>
+  <thead><tr><th></th><th>Sell After 11 Months (Short-Term)</th><th>Sell After 13 Months (Long-Term)</th></tr></thead>
+  <tbody>
+    <tr><td>Gain amount</td><td>$30,000</td><td>$30,000</td></tr>
+    <tr><td>Tax rate</td><td>22%</td><td>15%</td></tr>
+    <tr><td>Federal tax on gain</td><td>$6,600</td><td>$4,500</td></tr>
+    <tr><td><strong>Tax saved by waiting 2 months</strong></td><td>—</td><td><strong>$2,100</strong></td></tr>
+  </tbody>
+</table>
+
+<h2>Net Investment Income Tax (NIIT)</h2>
+<p>High-income investors face an additional 3.8% NIIT on top of capital gains rates. It applies if MAGI exceeds $200,000 (single) or $250,000 (married jointly). These thresholds are not inflation-adjusted — more taxpayers get caught each year. At the top, high earners effectively face a <strong>23.8% federal rate</strong> on long-term gains.</p>
+
+<h2>Capital Loss Harvesting</h2>
+<p>Capital losses offset capital gains dollar-for-dollar. If losses exceed gains, you can deduct up to <strong>$3,000</strong> against ordinary income per year, with remaining losses carrying forward indefinitely. Tax-loss harvesting — selling underperformers to generate losses that offset gains — is a legitimate strategy. Watch the <strong>wash-sale rule</strong>: you can't repurchase a substantially identical investment within 30 days of the sale.</p>
+
+<h2>Special Cases</h2>
+<p><strong>Cryptocurrency:</strong> Treated as property. Every sale, trade, or use triggers a gain or loss. Short vs. long-term rules apply identically to crypto as to stocks.</p>
+<p><strong>Primary home sales:</strong> Exclude up to $250,000 of gain (single) or $500,000 (married) if you've owned and lived in the home for at least two of the past five years.</p>
+<p><strong>Inherited assets:</strong> Receive a stepped-up basis to fair market value at the date of death — effectively eliminating all gain accrued during the original owner's lifetime.</p>
+
+<h2>Planning Strategies</h2>
+<ul>
+  <li>Hold investments for more than one year whenever feasible</li>
+  <li>Harvest losses to offset gains in taxable accounts</li>
+  <li>Use IRAs and 401(k)s for high-growth investments — gains grow tax-deferred or tax-free</li>
+  <li>Time large sales in lower-income years when the 0% rate may apply</li>
+  <li>Donate appreciated assets to charity — avoid gains tax entirely and deduct the full fair market value</li>
+</ul>
+
+<p>Use our <a href="/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> to estimate what you'll owe. For your full federal tax picture, try our <a href="/income-tax-calculator">Income Tax Calculator</a>.</p>
+    `,
+    relatedLinks: [
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/capital-gains-tax-guide-2026", label: "Capital Gains Tax Guide 2026" },
+    ],
+  },
+
+  {
+    slug: "self-employment-tax-guide-2026",
+    title: "Self-Employment Tax 2026: What You Owe, How to Calculate It, and How to Reduce It",
+    date: "May 29, 2026",
+    dateISO: "2026-05-29",
+    author: "MyTaxCalcs Editorial",
+    category: "Self-Employment",
+    excerpt: "Self-employed workers pay a 15.3% self-employment tax on top of income tax — but there are legitimate ways to reduce it. Here's how SE tax works in 2026, how to calculate what you owe, and the deductions that lower your bill.",
+    metaDescription: "Self-employment tax is 15.3% on net self-employment income in 2026, up to the $184,500 Social Security wage base. Learn how to calculate it, deduct half of it, and use business expenses to reduce what you owe.",
+    ogTitle: "Self-Employment Tax 2026: How to Calculate It and Reduce It",
+    ogDescription: "The 15.3% self-employment tax covers Social Security and Medicare for freelancers and sole proprietors. Learn how it's calculated in 2026 and the legal ways to lower your bill.",
+    content: `
+<p>When you work as a freelancer, independent contractor, sole proprietor, or gig worker, you don't have an employer splitting payroll taxes with you. Instead, you pay <strong>self-employment (SE) tax</strong> — covering both the employee and employer portions of Social Security and Medicare. In 2026, that rate is <strong>15.3%</strong> on your net self-employment income, on top of ordinary federal income tax.</p>
+
+<h2>2026 Self-Employment Tax Rates and Wage Base</h2>
+<table>
+  <thead><tr><th>Component</th><th>Rate</th><th>Applies To</th></tr></thead>
+  <tbody>
+    <tr><td>Social Security</td><td>12.4%</td><td>Net SE income up to $184,500</td></tr>
+    <tr><td>Medicare</td><td>2.9%</td><td>All net SE income (no cap)</td></tr>
+    <tr><td>Additional Medicare</td><td>0.9%</td><td>SE income above $200,000 single / $250,000 married</td></tr>
+    <tr><td><strong>Total (under wage base)</strong></td><td><strong>15.3%</strong></td><td>Net SE income up to $184,500</td></tr>
+    <tr><td><strong>Total (over wage base)</strong></td><td><strong>2.9%</strong></td><td>Net SE income above $184,500</td></tr>
+  </tbody>
+</table>
+
+<h2>How to Calculate Your Self-Employment Tax</h2>
+<p>The IRS applies SE tax to <strong>92.35% of your net self-employment income</strong> — not the full 100%. This adjustment accounts for the fact that employees don't pay FICA on the employer's share. Step by step:</p>
+<ol>
+  <li>Net SE income = Gross SE income − business deductions</li>
+  <li>SE tax base = Net SE income × 92.35%</li>
+  <li>SE tax = SE tax base × 15.3% (on the portion up to $184,500) + 2.9% on any excess</li>
+</ol>
+
+<h2>Worked Example: Freelancer Earning $80,000</h2>
+<table>
+  <thead><tr><th>Step</th><th>Amount</th></tr></thead>
+  <tbody>
+    <tr><td>Gross freelance income</td><td>$80,000</td></tr>
+    <tr><td>Business expenses</td><td>−$12,000</td></tr>
+    <tr><td>Net self-employment income</td><td>$68,000</td></tr>
+    <tr><td>× 92.35%</td><td>$62,798</td></tr>
+    <tr><td>SE tax (15.3%)</td><td>$9,608</td></tr>
+    <tr><td>Deductible half of SE tax (reduces income tax)</td><td>−$4,804</td></tr>
+  </tbody>
+</table>
+
+<h2>The SE Tax Deduction: You Get Half Back</h2>
+<p>The IRS allows self-employed individuals to deduct <strong>half of their SE tax</strong> from gross income when calculating income tax. This is an above-the-line deduction — it reduces your AGI without needing to itemize. In the example above, the $4,804 deduction reduces the income subject to income tax, partially offsetting the SE tax burden.</p>
+
+<h2>Business Deductions That Reduce SE Tax</h2>
+<p>Business deductions reduce your <em>net self-employment income</em> — which lowers both income tax AND SE tax. Every dollar of legitimate business expense saves you income tax at your marginal rate <em>plus</em> SE tax at 15.3%. Common deductible expenses include:</p>
+<ul>
+  <li>Business mileage (72.5¢/mile in 2026) or actual vehicle expenses</li>
+  <li>Home office deduction (must be used exclusively and regularly for business)</li>
+  <li>Equipment, software, and business subscriptions</li>
+  <li>Health insurance premiums (self-employed health insurance deduction)</li>
+  <li>Half of self-employment tax paid</li>
+  <li>Retirement contributions to SEP-IRA or Solo 401(k)</li>
+  <li>Professional development and education</li>
+  <li>Business phone and internet (business-use portion only)</li>
+</ul>
+
+<h2>Retirement Accounts: The Most Powerful Tool</h2>
+<p>A SEP-IRA allows contributions of up to 25% of net SE income, up to $69,000 for 2026. A Solo 401(k) allows an employee contribution of $24,500 plus up to 25% of net SE income as a profit-sharing contribution. These contributions reduce your income tax significantly — though they don't reduce SE tax itself (SE tax is calculated before retirement deductions).</p>
+
+<h2>Quarterly Estimated Payments</h2>
+<p>Because no employer withholds from your pay, you're expected to pay SE tax and income tax quarterly. The 2026 due dates are April 15, June 16, September 15, and January 15, 2027. A practical rule of thumb: set aside <strong>28–30% of every payment you receive</strong> for taxes. This covers SE tax (~15%) plus income tax (~13–15% effective rate) for most self-employed workers in the 22% bracket.</p>
+
+<p>Use our <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> to estimate your exact SE tax for 2026. For your full tax picture including both SE tax and income tax, try our <a href="/income-tax-calculator">Income Tax Calculator</a>.</p>
+    `,
+    relatedLinks: [
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/self-employed-quarterly-taxes-guide-2026", label: "Quarterly Estimated Tax Guide" },
+    ],
+  },
+
+  {
     slug: "irs-dirty-dozen-tax-scams-2026",
     title: "IRS Dirty Dozen 2026: 12 Tax Scams Every American Should Know About",
     date: "May 15, 2026",
@@ -160,13 +494,24 @@ const blogPosts = [
 <h2>What You Should Do Now</h2>
 <p>These changes take effect for the 2026 tax year — meaning they apply to income earned between January 1 and December 31, 2026, reported on returns filed in early 2027. There are still practical steps to take now:</p>
 <ol>
-  <li><strong>Review your W-4 withholding</strong> if you had a major life change in 2025 or 2026 (new job, marriage, child, large bonus). Updated bracket thresholds mean your withholding from last year may no longer match what you'll owe.</li>
-  <li><strong>Max out retirement contributions</strong>. Higher 401(k) and IRA limits give you more room to reduce taxable income.</li>
-  <li><strong>Compare standard deduction vs. itemizing.</strong> With the SALT deduction cap raised to $40,000 for 2026, more taxpayers in high-tax states may find itemizing worthwhile again.</li>
-  <li><strong>Check your EITC eligibility.</strong> Income thresholds for the credit shift each year, so even if you didn't qualify last year, you might in 2026.</li>
+  <li><strong>Review your W-4 withholding</strong> if you had a major life change in 2025 or 2026 (new job, marriage, child, large bonus). Updated bracket thresholds and new OBBBA deductions mean your withholding from last year may no longer match what you'll owe.</li>
+  <li><strong>Max out retirement contributions.</strong> Higher 401(k) and IRA limits give you more room to reduce taxable income. At the 22% bracket, the full $24,500 401(k) contribution saves $5,390 in federal taxes.</li>
+  <li><strong>Compare standard deduction vs. itemizing.</strong> With the SALT deduction cap raised to $40,000 for 2026, more taxpayers in high-tax states may find itemizing worthwhile for the first time since 2018. Run the math before assuming the standard deduction still wins.</li>
+  <li><strong>Check your EITC eligibility.</strong> Income thresholds for the credit shift each year, so even if you didn't qualify last year, you might in 2026. The maximum of $8,231 for families with three or more children is the highest it's ever been.</li>
+  <li><strong>Claim new Schedule 1-A deductions if you qualify.</strong> Workers who received tips, overtime pay, or car loan interest on a new vehicle purchased after December 31, 2024 should ensure their tax software or preparer is applying the new deductions.</li>
 </ol>
 
-<p>Use our <a href="/income-tax-calculator">Federal Income Tax Calculator</a> to estimate your 2026 tax bill based on the updated brackets.</p>
+<h2>How the 2026 Bracket Changes Affect Real Taxpayers</h2>
+<table>
+  <thead><tr><th>Filing Status / Income</th><th>2025 Estimated Tax</th><th>2026 Estimated Tax</th><th>Change</th></tr></thead>
+  <tbody>
+    <tr><td>Single / $50,000</td><td>~$5,374</td><td>~$4,927</td><td>−$447</td></tr>
+    <tr><td>Single / $100,000</td><td>~$14,843</td><td>~$13,962</td><td>−$881</td></tr>
+    <tr><td>Married / $100,000</td><td>~$8,347</td><td>~$6,654</td><td>−$1,693</td></tr>
+    <tr><td>Married / $150,000</td><td>~$17,847</td><td>~$15,254</td><td>−$2,593</td></tr>
+  </tbody>
+</table>
+<p>The reductions above reflect both the higher bracket thresholds and the larger standard deduction — not OBBBA-specific deductions, which would further reduce tax for eligible workers. Use our <a href="/income-tax-calculator">Federal Income Tax Calculator</a> to estimate your specific 2026 tax bill based on the updated brackets and your personal situation.</p>
     `,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
@@ -334,6 +679,17 @@ const blogPosts = [
 
 <h2>What About the Future?</h2>
 <p>The deduction is currently temporary, applying to tax years 2025, 2026, 2027, and 2028. Starting in 2026 and beyond, the IRS plans to work with employers to apply the tip deduction to payroll withholding — meaning eligible workers will see lower withholding on each paycheck rather than waiting to claim the benefit at filing time.</p>
+
+<h2>Tips Still Subject to Payroll Tax</h2>
+<p>An important clarification that trips up many workers: the "no tax on tips" deduction reduces your <strong>federal income tax</strong> only. Payroll taxes — Social Security (6.2%) and Medicare (1.45%) — still apply to all tip income. Tips must still be reported to your employer and included on your W-2. If customers tip in cash and you're paid as an employee, you're still required to report those tips to your employer using Form 4070 (or an equivalent) so they can withhold the correct payroll taxes.</p>
+
+<h2>What If Your Tips Weren't Properly Reported?</h2>
+<p>To claim the deduction, your tips must be documented through an official reporting channel — W-2, 1099, or Form 4137 (used to report tips not reported to an employer). If you've historically under-reported tip income, you cannot retroactively claim the deduction on unreported amounts. Going forward, accurate reporting of all tips is both legally required and now financially beneficial thanks to this deduction.</p>
+
+<h2>Combining Tips and Overtime Deductions</h2>
+<p>Workers who receive both tips and overtime pay can claim <strong>both</strong> deductions on Schedule 1-A, subject to each deduction's individual limits and phase-out thresholds. A server who earned $18,000 in tips and $8,000 in overtime could potentially deduct all $26,000 (both under their respective caps), saving roughly $5,720 in federal income taxes at the 22% bracket — without affecting their payroll tax obligations.</p>
+
+<p>Use our <a href="/income-tax-calculator">Federal Income Tax Calculator</a> and <a href="/payroll-tax-calculator">Payroll Tax Calculator</a> to estimate how the tips deduction affects your overall tax liability and take-home pay.</p>
     `,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
@@ -452,38 +808,50 @@ const blogPosts = [
 <h2>How to Check Your Refund Status</h2>
 
 <h3>1. Where's My Refund? (IRS.gov)</h3>
-<p>The official, free tool at IRS.gov/refunds is updated once per day. You'll need your Social Security number or ITIN, your filing status, and the exact refund amount shown on your return.</p>
+<p>The official, free tool at IRS.gov/refunds is updated once per day — typically overnight. You'll need three things: your Social Security number or ITIN, your filing status, and the exact refund amount shown on your return. The tool becomes available 24 hours after e-filing, or four weeks after mailing a paper return. It can track your refund for the current year and two prior years.</p>
 
 <h3>2. IRS2Go Mobile App</h3>
-<p>The free IRS2Go app (available for iOS and Android) provides the same Where's My Refund? information on your phone, plus payment options and free filing resources.</p>
+<p>The free IRS2Go app (available for iOS and Android) provides the same Where's My Refund? information on your phone, plus payment options, free filing resources, and the ability to make estimated tax payments. It's the fastest way to check status on mobile without navigating a browser.</p>
 
 <h3>3. Automated Phone Line</h3>
-<p>Call 800-829-1954 for automated refund information. The IRS asks that you wait at least 21 days after e-filing (or 6 weeks after mailing a paper return) before calling.</p>
+<p>Call 800-829-1954 for automated refund information 24 hours a day, 7 days a week. The IRS asks that you wait at least 21 days after e-filing (or 6 weeks after mailing a paper return) before calling. Live agents cannot provide more information than the automated line until your return has been processing for 21 days.</p>
 
 <h2>Understanding Your Refund Status Messages</h2>
-<p><strong>Return Received:</strong> The IRS has received your return and is processing it. Most returns stay here for one to three weeks.</p>
-<p><strong>Refund Approved:</strong> Your refund has been approved and a payment date has been set. Direct deposit refunds typically arrive within five business days of approval.</p>
-<p><strong>Refund Sent:</strong> The money has been sent. Direct deposits typically clear within one to two business days.</p>
+<table>
+  <thead><tr><th>Status</th><th>What It Means</th><th>Expected Timeline</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Return Received</strong></td><td>IRS has your return and is processing it</td><td>1–3 weeks</td></tr>
+    <tr><td><strong>Refund Approved</strong></td><td>Refund amount confirmed and payment scheduled</td><td>Direct deposit within 5 business days</td></tr>
+    <tr><td><strong>Refund Sent</strong></td><td>Payment transmitted to your bank or check mailed</td><td>Direct deposit clears in 1–2 business days</td></tr>
+  </tbody>
+</table>
+<p>If your status jumps from "Return Received" directly to "Refund Sent" without showing "Approved" — that's normal and means processing moved quickly.</p>
 
 <h2>Common Reasons for Refund Delays</h2>
 <ul>
-  <li><strong>Claiming EITC or Additional Child Tax Credit:</strong> By law, the IRS cannot issue these refunds before mid-February.</li>
-  <li><strong>Filing a paper return:</strong> Paper returns take significantly longer than e-filed returns.</li>
-  <li><strong>Errors on your return:</strong> Math errors, mismatched Social Security numbers, or missing information trigger manual review.</li>
-  <li><strong>Identity verification:</strong> The IRS may mail a Letter 5071C asking you to verify your identity before releasing the refund.</li>
-  <li><strong>Claiming new OBBBA deductions:</strong> Returns with the new Schedule 1-A may take slightly longer during the first year of the new forms.</li>
-  <li><strong>Amended returns:</strong> Form 1040-X processing can take 16 to 20 weeks.</li>
+  <li><strong>Claiming EITC or Additional Child Tax Credit:</strong> By law (the PATH Act), the IRS cannot issue refunds that include these credits before mid-February, regardless of when you file.</li>
+  <li><strong>Filing a paper return:</strong> Paper returns take 6–8 weeks to process — sometimes longer during peak filing season. E-filing is always faster.</li>
+  <li><strong>Errors on your return:</strong> Math errors, mismatched Social Security numbers, missing forms (W-2, 1099), or incorrect banking information all trigger delays or manual review.</li>
+  <li><strong>Identity verification:</strong> The IRS may mail a Letter 5071C asking you to verify your identity online or by phone before releasing the refund. This is increasingly common as the IRS battles identity theft fraud.</li>
+  <li><strong>Claiming new OBBBA deductions:</strong> Returns with the new Schedule 1-A (tips, overtime, car loan interest, senior deduction) may take slightly longer during the first filing season these forms exist.</li>
+  <li><strong>Amended returns:</strong> Form 1040-X processing currently takes 16 to 20 weeks — and cannot be tracked in Where's My Refund? Use the "Where's My Amended Return?" tool instead.</li>
+  <li><strong>Offset for debts:</strong> If you owe back taxes, child support, student loans, or other federal/state debts, the IRS may reduce your refund through the Treasury Offset Program. You'll receive a notice explaining the reduction.</li>
 </ul>
 
 <h2>How to Get Your Refund Faster</h2>
 <ol>
-  <li><strong>E-file your return.</strong> Electronic filing is faster, more accurate, and provides instant confirmation.</li>
-  <li><strong>Choose direct deposit.</strong> Enter your bank routing and account number carefully — a wrong number can redirect your refund.</li>
-  <li><strong>Double-check your Social Security numbers.</strong> SSN mismatches are one of the most common causes of delays.</li>
-  <li><strong>File as early as possible.</strong> Early filers get processed before the late-season rush.</li>
+  <li><strong>E-file your return.</strong> Electronic filing is faster, more accurate, and provides instant confirmation that the IRS received your return. Free e-filing is available through IRS Free File if your income is $84,000 or below.</li>
+  <li><strong>Choose direct deposit.</strong> Enter your bank routing and account number carefully — a wrong number can send your refund to someone else's account, and recovering it can take months. You can split your direct deposit across up to three accounts.</li>
+  <li><strong>Double-check your Social Security numbers.</strong> SSN mismatches on you, your spouse, or dependents are one of the most common causes of delays and rejections.</li>
+  <li><strong>File as early as possible.</strong> Early filers get processed before the late-season rush, reducing wait times. If you're claiming EITC or ACTC, the mid-February hold applies regardless of when you file — but filing early means you're first in line when that hold lifts.</li>
+  <li><strong>Respond quickly to any IRS correspondence.</strong> If the IRS mails you a notice requesting information or identity verification, respond as quickly as possible — delays in your response directly delay your refund.</li>
 </ol>
 
-<p>Want to estimate what your refund should be before you file? Try our <a href="/tax-refund-calculator">Tax Refund Calculator</a>.</p>
+<h2>What If Your Refund Seems Wrong?</h2>
+<p>The IRS may adjust your refund amount if it finds errors, applies an offset, or corrects a math mistake. If your refund is different from what you expected, the IRS will mail you a notice (CP notice) explaining the adjustment. Common adjustments include math error corrections, offsets for prior-year balances, and changes to credits claimed. If you disagree with an adjustment, the notice will include instructions for responding or requesting a review.</p>
+
+<h2>Plan Ahead: Was Your Refund Too Big?</h2>
+<p>A large refund sounds good, but it means you overwitheld throughout the year — giving the IRS an interest-free loan of your own money. The goal is to have withholding match your actual tax liability as closely as possible. If you regularly receive refunds above $2,000–$3,000, updating your W-4 to reduce withholding puts that money in your pocket throughout the year instead. Use our <a href="/tax-refund-calculator">Tax Refund Calculator</a> to estimate your refund before filing, and our <a href="/income-tax-calculator">Income Tax Calculator</a> to plan your withholding for next year.</p>
     `,
     relatedLinks: [
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
@@ -504,49 +872,86 @@ const blogPosts = [
     ogTitle: "Self-Employed Quarterly Estimated Taxes 2026: Complete Guide",
     ogDescription: "Freelancers and self-employed workers owe quarterly taxes to the IRS. Learn how to calculate estimated tax payments for 2026, when they're due, and how to avoid underpayment penalties.",
     content: `
-<p>When you work for an employer, federal income taxes and payroll taxes are automatically withheld from each paycheck. When you're self-employed — whether as a sole proprietor, freelancer, independent contractor, or gig worker — no one does that for you. The IRS expects you to pay taxes as you earn income throughout the year through <strong>quarterly estimated tax payments</strong>.</p>
-
-<p>Failing to make these payments, or underpaying them, results in an IRS underpayment penalty — even if you end up getting a refund when you file your annual return.</p>
+<p>When you work for an employer, federal income taxes and payroll taxes are automatically withheld from each paycheck. When you're self-employed — whether as a sole proprietor, freelancer, independent contractor, or gig worker — no one does that for you. The IRS expects you to pay taxes as you earn income throughout the year through <strong>quarterly estimated tax payments</strong>. Failing to make these payments, or underpaying them, results in an IRS underpayment penalty — even if you end up getting a refund when you file your annual return.</p>
 
 <h2>Who Needs to Pay Quarterly Estimated Taxes?</h2>
-<p>You generally need to make quarterly estimated tax payments if you expect to owe <strong>at least $1,000 in federal taxes</strong> for the year after accounting for withholding and credits. This typically applies to freelancers, sole proprietors, gig workers, landlords, and investors with significant capital gains or dividend income.</p>
+<p>You generally need to make quarterly estimated tax payments if you expect to owe <strong>at least $1,000 in federal taxes</strong> for the year after accounting for withholding and credits. This typically applies to:</p>
+<ul>
+  <li>Freelancers and independent contractors</li>
+  <li>Sole proprietors and single-member LLC owners</li>
+  <li>Gig economy workers (rideshare, delivery, short-term rental)</li>
+  <li>Partners in partnerships and S corporation shareholders</li>
+  <li>Landlords with rental income</li>
+  <li>Investors with significant capital gains or dividend income not covered by withholding</li>
+</ul>
+<p>W-2 employees with side income may also need to make payments if their withholding from their primary job doesn't cover the additional tax owed on their side earnings.</p>
 
 <h2>The 2026 Quarterly Estimated Tax Due Dates</h2>
 <table>
-  <thead>
-    <tr><th>Payment Period</th><th>Due Date</th></tr>
-  </thead>
+  <thead><tr><th>Payment Period</th><th>Due Date</th><th>Note</th></tr></thead>
   <tbody>
-    <tr><td>January 1 – March 31, 2026</td><td><strong>April 15, 2026</strong></td></tr>
-    <tr><td>April 1 – May 31, 2026</td><td><strong>June 16, 2026</strong></td></tr>
-    <tr><td>June 1 – August 31, 2026</td><td><strong>September 15, 2026</strong></td></tr>
-    <tr><td>September 1 – December 31, 2026</td><td><strong>January 15, 2027</strong></td></tr>
+    <tr><td>Jan 1 – Mar 31, 2026</td><td><strong>April 15, 2026</strong></td><td>Same day as annual filing deadline</td></tr>
+    <tr><td>Apr 1 – May 31, 2026</td><td><strong>June 16, 2026</strong></td><td>Shifted from June 15 (Sunday)</td></tr>
+    <tr><td>Jun 1 – Aug 31, 2026</td><td><strong>September 15, 2026</strong></td><td></td></tr>
+    <tr><td>Sep 1 – Dec 31, 2026</td><td><strong>January 15, 2027</strong></td><td>Can skip if you file by Jan 31</td></tr>
   </tbody>
 </table>
+<p>Missing a due date doesn't mean you owe four times the penalty — the underpayment penalty is calculated separately for each quarter based on how much you underpaid and for how long. Catching up in a later quarter reduces but doesn't eliminate the penalty for the earlier period.</p>
 
 <h2>What Taxes Are You Actually Paying?</h2>
-<p>Your quarterly estimated payments cover two separate federal taxes. First, <strong>federal income tax</strong> based on your net profit calculated using the standard 2026 tax brackets. Second, <strong>self-employment (SE) tax</strong> — the combined employee and employer portions of Social Security and Medicare, totaling 15.3% on net earnings up to the Social Security wage base, then 2.9% above that. The good news: you can deduct half of your SE tax from gross income when calculating your income tax.</p>
+<p>Your quarterly estimated payments cover two separate federal taxes:</p>
+<ol>
+  <li><strong>Federal income tax</strong> — calculated using the standard 2026 tax brackets applied to your net profit (after business deductions)</li>
+  <li><strong>Self-employment tax</strong> — 15.3% on the first $184,500 of net self-employment income (12.4% Social Security + 2.9% Medicare), then 2.9% above the wage base. You can deduct half of your SE tax from gross income when calculating income tax.</li>
+</ol>
+<p>A common mistake: only estimating income tax and forgetting SE tax. For most self-employed people, SE tax alone runs 14–15% of net income — often larger than income tax for lower earners.</p>
 
 <h2>How to Calculate Your Quarterly Payment Amount</h2>
 
-<h3>Method 1: Pay 25% of Last Year's Total Tax (Safe Harbor)</h3>
-<p>The simplest approach. Add up your total federal tax liability from your prior year return (Form 1040, line 24), divide by four, and pay that amount each quarter. This protects you from underpayment penalties even if your income grows significantly this year. If your prior year AGI was above $150,000, you must pay 110% of last year's tax to use the safe harbor.</p>
+<h3>Method 1: Safe Harbor (Simplest)</h3>
+<p>Pay 100% of your prior year's total federal tax liability (Form 1040, line 24), divided into four equal payments. If your prior year AGI exceeded $150,000, pay 110% of the prior year's tax. This method protects you from underpayment penalties regardless of how much your income grows in the current year.</p>
+<p>Example: Your 2025 total tax was $12,000. Divide by 4 = $3,000 per quarter. Pay $3,000 by each due date and you're penalty-free, even if your 2026 income doubles.</p>
 
-<h3>Method 2: Estimate Based on Current-Year Income</h3>
-<p>More accurate if your income is significantly different from last year. Use IRS Form 1040-ES to estimate your current-year income, deductions, and credits, then calculate expected tax owed and divide by four.</p>
+<h3>Method 2: Current-Year Estimate (More Accurate)</h3>
+<p>Use IRS Form 1040-ES to estimate your current-year income, deductions, and credits, then calculate expected tax owed and divide by four. This works better when your income is significantly different from last year — either much higher or much lower.</p>
+
+<h2>A Simple Estimation Shortcut</h2>
+<p>If you want a rough number without completing Form 1040-ES in full:</p>
+<ol>
+  <li>Estimate your net self-employment income for the quarter (gross income minus business expenses)</li>
+  <li>Multiply by 92.35% (the SE tax adjustment factor)</li>
+  <li>Apply 15.3% to get your SE tax portion</li>
+  <li>Estimate income tax by applying your expected bracket rate to your taxable income (after standard deduction and half of SE tax)</li>
+  <li>Add SE tax + income tax, divide by 4</li>
+</ol>
+<p>A practical rule of thumb for most self-employed workers in the 22% bracket: <strong>set aside 28–30% of every payment you receive</strong>. This covers SE tax (~15%) plus income tax (~13–15% effective rate), leaving a small buffer.</p>
 
 <h2>New OBBBA Deductions That May Reduce Your Payments</h2>
-<p>If you receive tips or overtime as a self-employed worker, the new deductions may meaningfully reduce your quarterly payments. Make sure to factor in the tips deduction (up to $25,000), the overtime deduction (up to $12,500 for single filers), the car loan interest deduction (up to $10,000), and the $6,000 senior deduction if you're 65 or older.</p>
+<p>If you're eligible for any of the new deductions from the One Big Beautiful Bill Act, these reduce your taxable income and therefore your quarterly payment amounts:</p>
+<ul>
+  <li><strong>Tips deduction:</strong> Up to $25,000 for workers in qualifying tip occupations</li>
+  <li><strong>Overtime deduction:</strong> Up to $12,500 for workers receiving FLSA overtime pay</li>
+  <li><strong>Car loan interest:</strong> Up to $10,000 on new vehicle loans for personal use</li>
+  <li><strong>Senior deduction:</strong> $6,000 for taxpayers age 65 and older (income limits apply)</li>
+</ul>
+<p>Make sure to factor these into your 1040-ES estimates if you qualify — they can meaningfully reduce quarterly payments.</p>
 
 <h2>How to Make Quarterly Payments</h2>
-<ul>
-  <li><strong>IRS Direct Pay</strong> (IRS.gov/directpay) — free, instant, no account required</li>
-  <li><strong>Electronic Federal Tax Payment System (EFTPS)</strong> — free, allows scheduling future payments</li>
-  <li><strong>IRS2Go app</strong> — pay by debit or credit card (processing fee applies)</li>
-  <li><strong>Mail a check</strong> with Form 1040-ES voucher — slowest option</li>
-</ul>
+<table>
+  <thead><tr><th>Method</th><th>Cost</th><th>Best For</th></tr></thead>
+  <tbody>
+    <tr><td>IRS Direct Pay (IRS.gov/directpay)</td><td>Free</td><td>One-time payments, no account needed</td></tr>
+    <tr><td>EFTPS (eftps.gov)</td><td>Free</td><td>Scheduling future payments in advance</td></tr>
+    <tr><td>IRS2Go app</td><td>Processing fee for cards</td><td>Mobile payments</td></tr>
+    <tr><td>Check with Form 1040-ES voucher</td><td>Postage only</td><td>Those without online access</td></tr>
+  </tbody>
+</table>
+<p>EFTPS is the most robust option for self-employed workers who want to schedule all four payments at the start of the year and not think about it again. Enrollment takes about a week to set up.</p>
 
-<p>Use our <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> to estimate how much SE tax you'll owe in 2026 and get a clearer picture of your quarterly payment amount.</p>
+<h2>What Happens If You Underpay?</h2>
+<p>The IRS underpayment penalty for 2026 is calculated at the federal short-term interest rate plus 3 percentage points (currently around 8% annualized), applied to the underpaid amount for each quarter. The penalty is not catastrophic — but on a $5,000 underpayment over 9 months, it might run $300–$400. More importantly, it comes as a surprise at filing time that you can avoid entirely with accurate quarterly payments.</p>
+
+<p>Use our <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> to estimate your SE tax for 2026 based on your net income. For a full picture including both SE tax and income tax, try our <a href="/income-tax-calculator">Income Tax Calculator</a>.</p>
     `,
     relatedLinks: [
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
@@ -678,39 +1083,62 @@ const blogPosts = [
 
 <h2>Short-Term vs. Long-Term Capital Gains</h2>
 <p><strong>Short-term capital gains</strong> apply to assets held for <strong>12 months or less</strong>. These gains are taxed as ordinary income — subject to your regular federal income tax bracket (10% through 37%). Selling a stock quickly for a profit is treated the same as earning wages from a job.</p>
-
 <p><strong>Long-term capital gains</strong> apply to assets held for <strong>more than 12 months</strong>. These gains receive preferential tax treatment at lower rates — 0%, 15%, or 20%. The one-year holding period is a hard line, which is why tax professionals frequently advise checking it before triggering a sale.</p>
 
 <h2>2026 Long-Term Capital Gains Tax Rates and Thresholds</h2>
 <table>
-  <thead>
-    <tr><th>Rate</th><th>Single Filers (Taxable Income)</th><th>Married Filing Jointly</th></tr>
-  </thead>
+  <thead><tr><th>Rate</th><th>Single Filers (Taxable Income)</th><th>Married Filing Jointly</th><th>Head of Household</th></tr></thead>
   <tbody>
-    <tr><td><strong>0%</strong></td><td>Up to $48,350</td><td>Up to $96,700</td></tr>
-    <tr><td><strong>15%</strong></td><td>$48,351 – $533,400</td><td>$96,701 – $600,050</td></tr>
-    <tr><td><strong>20%</strong></td><td>Over $533,400</td><td>Over $600,050</td></tr>
+    <tr><td><strong>0%</strong></td><td>Up to $48,350</td><td>Up to $96,700</td><td>Up to $64,750</td></tr>
+    <tr><td><strong>15%</strong></td><td>$48,351 – $533,400</td><td>$96,701 – $600,050</td><td>$64,751 – $566,700</td></tr>
+    <tr><td><strong>20%</strong></td><td>Over $533,400</td><td>Over $600,050</td><td>Over $566,700</td></tr>
   </tbody>
 </table>
-
 <p>These thresholds are based on your <strong>taxable income</strong> (after deductions), not gross income. A married couple with $120,000 in wages but $32,200 in standard deductions has taxable income of $87,800 — putting their long-term gains in the 0% bracket if total taxable income (including the gains) stays under $96,700.</p>
 
 <h2>The 0% Capital Gains Rate: An Often-Missed Opportunity</h2>
-<p>If your taxable income is below the threshold ($48,350 single / $96,700 married), you can sell appreciated investments and pay <strong>zero federal capital gains tax</strong>. This is particularly valuable for retirees in early retirement, young investors in lower income years, and families with large unrealized gains in taxable brokerage accounts.</p>
+<p>If your taxable income is below the threshold ($48,350 single / $96,700 married), you can sell appreciated investments and pay <strong>zero federal capital gains tax</strong>. This is particularly valuable for:</p>
+<ul>
+  <li>Retirees in early retirement with low taxable income before Social Security kicks in</li>
+  <li>Young investors in lower-income years with significant unrealized gains</li>
+  <li>Families who can strategically realize gains in a low-income year</li>
+</ul>
+<p>Strategically harvesting gains in low-income years — sometimes called "gain harvesting" — resets your cost basis higher, reducing future taxable gains when you eventually sell at higher income levels.</p>
 
 <h2>Net Investment Income Tax (NIIT)</h2>
-<p>High-income investors face an additional 3.8% Net Investment Income Tax. The NIIT applies if your MAGI exceeds $200,000 for single filers or $250,000 for married couples filing jointly. These thresholds are not adjusted for inflation, meaning more taxpayers get caught each year. High earners could effectively face a 23.8% federal rate on long-term gains (20% + 3.8%).</p>
+<p>High-income investors face an additional 3.8% Net Investment Income Tax on top of capital gains rates. The NIIT applies if your MAGI exceeds $200,000 for single filers or $250,000 for married couples filing jointly. These thresholds are not adjusted for inflation — meaning more taxpayers get caught each year. At the top, high earners effectively face a <strong>23.8% federal rate</strong> on long-term gains (20% + 3.8%).</p>
 
 <h2>Capital Gains on Your Home Sale</h2>
-<p>Qualifying homeowners can exclude up to <strong>$250,000</strong> in profit from federal capital gains tax (single filers), or <strong>$500,000</strong> (married couples filing jointly). To qualify, you must have owned and lived in the home as your primary residence for at least two of the five years before the sale. This exclusion can be used once every two years. Profit above the exclusion amount is taxed as a long-term capital gain.</p>
+<p>Qualifying homeowners can exclude up to <strong>$250,000</strong> in profit from federal capital gains tax (single filers), or <strong>$500,000</strong> (married couples filing jointly). To qualify, you must have owned and lived in the home as your primary residence for at least two of the five years before the sale. This exclusion can be used once every two years. Profit above the exclusion amount is taxed as a long-term capital gain at your applicable rate.</p>
 
 <h2>Capital Loss Harvesting</h2>
-<p>Capital losses can offset capital gains dollar for dollar. If your losses exceed your gains, you can deduct up to <strong>$3,000</strong> of the excess loss against ordinary income per year. Remaining losses carry forward to future years indefinitely. Strategic tax-loss harvesting — selling underperforming investments to generate losses that offset gains elsewhere — is a legitimate way to reduce your tax bill. Just watch out for the wash-sale rule, which prevents you from repurchasing a "substantially identical" investment within 30 days before or after the sale.</p>
+<p>Capital losses can offset capital gains dollar for dollar. Short-term losses offset short-term gains first; long-term losses offset long-term gains first. Remaining losses of either type can then offset gains of the other type. If your total losses exceed your total gains, you can deduct up to <strong>$3,000</strong> of the excess loss against ordinary income per year. Remaining losses carry forward indefinitely to future years.</p>
+<p>Strategic tax-loss harvesting — selling underperforming investments to generate losses that offset gains elsewhere — is a legitimate way to reduce your tax bill. The key rule to avoid: the <strong>wash-sale rule</strong> prevents you from repurchasing a "substantially identical" investment within 30 days before or after the sale. Buying a different ETF in the same sector is generally fine; buying back the same fund is not.</p>
 
 <h2>Cryptocurrency and Capital Gains</h2>
-<p>The IRS treats cryptocurrency as property, not currency. Every time you sell, trade, or use crypto to purchase something, you trigger a capital gain or loss. Short-term crypto gains are taxed as ordinary income; long-term gains held over 12 months receive the preferential rates. Accurate record-keeping of cost basis is essential for crypto investors.</p>
+<p>The IRS treats cryptocurrency as property, not currency. Every time you sell, trade, or use crypto to purchase goods or services, you trigger a capital gain or loss. Key implications:</p>
+<ul>
+  <li>Short-term crypto gains (held ≤12 months) are taxed as ordinary income</li>
+  <li>Long-term crypto gains (held >12 months) receive the 0%/15%/20% preferential rates</li>
+  <li>Trading one crypto for another (BTC → ETH) is a taxable event</li>
+  <li>Using crypto to buy a $5 cup of coffee triggers a capital gain if the crypto appreciated since you acquired it</li>
+</ul>
+<p>Accurate record-keeping of your cost basis — the price you paid for each unit of crypto — is essential and increasingly required by exchanges under expanded 1099-DA reporting rules starting in 2026.</p>
 
-<p>Use our <a href="/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> to estimate what you'll owe on investment profits based on your income and holding period.</p>
+<h2>Capital Gains on Inherited Assets</h2>
+<p>Assets inherited at death receive a <strong>stepped-up basis</strong> to the fair market value at the date of death. This effectively eliminates any gain that accrued during the decedent's lifetime — one of the most significant tax benefits in the code for heirs. An heir who sells inherited stock immediately after inheriting it typically owes no capital gains tax, regardless of how much it appreciated during the original owner's lifetime.</p>
+
+<h2>Strategies to Reduce Capital Gains Tax</h2>
+<ul>
+  <li><strong>Hold for more than one year</strong> to convert short-term gains (ordinary income rates) to long-term gains (preferential rates)</li>
+  <li><strong>Harvest losses</strong> to offset gains in taxable accounts</li>
+  <li><strong>Use tax-advantaged accounts</strong> (IRA, 401(k), Roth IRA) for high-growth investments — gains inside these accounts grow tax-deferred or tax-free</li>
+  <li><strong>Time sales</strong> in lower-income years when your long-term rate may be 0% or 15%</li>
+  <li><strong>Maximize deductions</strong> to reduce taxable income, potentially dropping below the 15% or 0% threshold</li>
+  <li><strong>Donate appreciated assets to charity</strong> — you avoid the capital gains tax entirely and deduct the full fair market value as a charitable contribution</li>
+</ul>
+
+<p>Use our <a href="/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> to estimate what you'll owe on investment profits based on your income and holding period. For your full federal tax picture, try our <a href="/income-tax-calculator">Income Tax Calculator</a>.</p>
     `,
     relatedLinks: [
       { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
@@ -814,43 +1242,69 @@ const blogPosts = [
     ogTitle: "IRS 2026 Tax Inflation Adjustments Explained | MyTaxCalcs",
     ogDescription: "IRS Revenue Procedure 2025-32 updated over 60 tax provisions for 2026. See what changed for brackets, deductions, credits, and retirement limits.",
     content: `
-      <p>On October 9, 2025, the Internal Revenue Service released <strong>Revenue Procedure 2025-32</strong>, its annual announcement of inflation-adjusted tax figures for tax year 2026. The adjustments affect more than 60 tax provisions and also incorporate changes made by the <strong>One Big Beautiful Bill Act (OBBBA)</strong>, signed into law on July 4, 2025.</p>
+<p>On October 9, 2025, the Internal Revenue Service released <strong>Revenue Procedure 2025-32</strong>, its annual announcement of inflation-adjusted tax figures for tax year 2026. The adjustments affect more than 60 tax provisions and also incorporate changes made by the <strong>One Big Beautiful Bill Act (OBBBA)</strong>, signed into law on July 4, 2025. Tax year 2026 returns are generally filed in early 2027.</p>
 
-      <p>Tax year 2026 returns are generally filed in early 2027. Here is a comprehensive breakdown of the most important changes.</p>
+<h2>Key 2026 Figures at a Glance</h2>
+<table>
+  <thead><tr><th>Provision</th><th>2025</th><th>2026</th></tr></thead>
+  <tbody>
+    <tr><td>Standard deduction (single)</td><td>$15,000</td><td>$16,100</td></tr>
+    <tr><td>Standard deduction (married jointly)</td><td>$30,000</td><td>$32,200</td></tr>
+    <tr><td>Top bracket threshold (single)</td><td>$626,350</td><td>$640,600</td></tr>
+    <tr><td>Top bracket threshold (married jointly)</td><td>$751,600</td><td>$768,700</td></tr>
+    <tr><td>Max EITC (3+ children)</td><td>$8,046</td><td>$8,231</td></tr>
+    <tr><td>AMT exemption (single)</td><td>$88,100</td><td>$90,100</td></tr>
+    <tr><td>Estate tax exclusion</td><td>$13,990,000</td><td>$15,000,000</td></tr>
+    <tr><td>Annual gift exclusion</td><td>$18,000</td><td>$19,000</td></tr>
+    <tr><td>401(k) contribution limit</td><td>$23,500</td><td>$24,500</td></tr>
+    <tr><td>IRA contribution limit</td><td>$7,000</td><td>$7,500</td></tr>
+    <tr><td>Health FSA limit</td><td>$3,300</td><td>$3,400</td></tr>
+    <tr><td>Foreign earned income exclusion</td><td>$130,000</td><td>$132,900</td></tr>
+  </tbody>
+</table>
 
-      <h2>Tax Brackets: Same Rates, Higher Thresholds</h2>
-      <p>The seven federal income tax rates remain unchanged at 10%, 12%, 22%, 24%, 32%, 35%, and 37%. However, the income thresholds that determine which rate applies have been adjusted upward for inflation by approximately 2.7% on average. The OBBBA made the TCJA tax rate structure permanent.</p>
-      <p>For single filers, the 37% top rate now applies to income above <strong>$640,600</strong>. For married couples filing jointly, it kicks in above <strong>$768,700</strong>.</p>
+<h2>Tax Brackets: Same Rates, Higher Thresholds</h2>
+<p>The seven federal income tax rates remain unchanged at 10%, 12%, 22%, 24%, 32%, 35%, and 37%. The OBBBA made these rates permanent — ending years of uncertainty about whether the lower TCJA rates would expire after 2025. The income thresholds that determine which rate applies have been adjusted upward by approximately 2.7% for inflation. For single filers, the 37% top rate now applies to income above <strong>$640,600</strong>. For married couples filing jointly, it kicks in above <strong>$768,700</strong>.</p>
 
-      <h2>Standard Deduction Increases</h2>
-      <p>The standard deduction rises for all filing statuses in 2026:</p>
-      <ul>
-        <li><strong>Single / Married Filing Separately:</strong> $16,100 (up from $15,000 in 2025)</li>
-        <li><strong>Married Filing Jointly / Surviving Spouse:</strong> $32,200 (up from $30,000 in 2025)</li>
-        <li><strong>Head of Household:</strong> $24,150 (up from $22,500 in 2025)</li>
-      </ul>
-      <p>The OBBBA also added a new <strong>$6,000 senior deduction</strong> for taxpayers age 65 and older, which phases out at a 6% rate for incomes above $75,000 (single) and $150,000 (joint). This provision expires after the 2028 tax year.</p>
+<h2>Standard Deduction Increases</h2>
+<p>The standard deduction rises for all filing statuses in 2026: $16,100 for single filers and married filing separately (up from $15,000), $32,200 for married filing jointly (up from $30,000), and $24,150 for head of household (up from $22,500). The OBBBA also added a new <strong>$6,000 senior deduction</strong> for taxpayers age 65 and older, which phases out at a 6% rate for incomes above $75,000 (single) and $150,000 (joint). This provision expires after the 2028 tax year.</p>
 
-      <h2>Earned Income Tax Credit (EITC)</h2>
-      <p>The maximum EITC for 2026 increases to <strong>$8,231</strong> for qualifying taxpayers with three or more qualifying children, up from $8,046 in 2025. Income thresholds and phase-out ranges also shift — see IRS Rev. Proc. 2025-32 for the full table.</p>
+<h2>New OBBBA Deductions (2025–2028)</h2>
+<p>Beyond the standard deduction increase, the OBBBA introduced several entirely new deductions available on the new Schedule 1-A:</p>
+<ul>
+  <li><strong>No Tax on Tips:</strong> Up to $25,000 in qualified tip income deductible from federal taxable income (phases out above $150,000 MAGI single / $300,000 married)</li>
+  <li><strong>No Tax on Overtime:</strong> Up to $12,500 in overtime pay deductible per year ($25,000 married jointly; same phase-out thresholds)</li>
+  <li><strong>Car Loan Interest:</strong> Up to $10,000 per year in interest on new vehicle loans originated after December 31, 2024 (phases out above $100,000 MAGI single / $200,000 married)</li>
+  <li><strong>Senior Deduction:</strong> $6,000 additional deduction for taxpayers 65+ (phases out above $75,000 single / $150,000 married)</li>
+</ul>
+<p>These deductions are available whether you take the standard deduction or itemize, and they reduce your Adjusted Gross Income directly.</p>
 
-      <h2>Alternative Minimum Tax (AMT)</h2>
-      <p>The AMT exemption increases to <strong>$90,100</strong> for single filers ($140,200 for married filing jointly). The phase-out threshold starts at $500,000 for single filers and $1,000,000 for joint filers. The OBBBA made AMT exemption amounts and phase-out thresholds permanent.</p>
+<h2>Earned Income Tax Credit (EITC)</h2>
+<p>The maximum EITC for 2026 increases to <strong>$8,231</strong> for qualifying taxpayers with three or more qualifying children (up from $8,046 in 2025). The investment income limit for EITC eligibility rises to $11,950. Many eligible taxpayers miss this credit — check eligibility annually even if you didn't qualify in a prior year, as income thresholds shift each year.</p>
 
-      <h2>Annual Gift Tax Exclusion</h2>
-      <p>The annual gift tax exclusion remains at <strong>$19,000</strong> per recipient for 2026. The exclusion for gifts to a non-citizen spouse increases to <strong>$194,000</strong>, up $4,000 from 2025.</p>
+<h2>Alternative Minimum Tax (AMT)</h2>
+<p>The AMT exemption increases to <strong>$90,100</strong> for single filers and <strong>$140,200</strong> for married filing jointly. The phase-out threshold starts at $635,900 for single filers and $1,271,900 for joint filers — both significantly higher than the old pre-TCJA levels that the OBBBA made permanent.</p>
 
-      <h2>Health and Benefit Plan Limits</h2>
-      <p>The Health FSA contribution limit increases to <strong>$3,400</strong> for 2026 (up $100 from 2025). The maximum FSA carryover amount rises to <strong>$680</strong>. The foreign earned income exclusion climbs to <strong>$132,900</strong>, up from $130,000.</p>
+<h2>Retirement Contribution Limits</h2>
+<p>The 401(k) employee contribution limit rises to <strong>$24,500</strong> (up from $23,500). The IRA contribution limit increases to <strong>$7,500</strong> (up from $7,000), with the catch-up contribution for those 50+ rising to $1,100 — now indexed to inflation for the first time under SECURE 2.0. The Social Security wage base increases to $184,500.</p>
 
-      <h2>Estate Tax Exclusion</h2>
-      <p>The basic estate tax exclusion for decedents dying in 2026 is <strong>$15,000,000</strong>, up from $13,990,000 in 2025. This significant increase reflects both inflation adjustments and the OBBBA's permanent extension of the higher TCJA exemption.</p>
+<h2>Estate and Gift Tax</h2>
+<p>The federal estate tax exclusion jumps to <strong>$15,000,000 per person</strong> for 2026 (up from $13,990,000), or $30,000,000 for married couples using portability. The annual gift tax exclusion remains at $19,000 per recipient; the exclusion for gifts to non-citizen spouses rises to $194,000.</p>
 
-      <h2>Itemized Deductions</h2>
-      <p>The limitation on itemized deductions remains eliminated for most taxpayers — this was originally a TCJA provision and was made permanent by the OBBBA. However, the OBBBA adds a new limitation on the tax benefit of itemized deductions for taxpayers in the highest 37% bracket.</p>
+<h2>SALT Deduction Cap: $40,000 Through 2029</h2>
+<p>One of the most impactful OBBBA changes is the increase of the State and Local Tax (SALT) deduction cap from $10,000 to <strong>$40,000</strong> for tax years 2025–2029 (phases out for MAGI above $500,000, returning to $10,000 floor at $600,000). This change significantly affects itemizing decisions for homeowners in high-tax states.</p>
 
-      <h2>Source</h2>
-      <p>All figures are sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a> and the official IRS announcement <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noopener">IR-2025-103</a>.</p>
+<h2>What This Means for Your 2026 Tax Planning</h2>
+<ul>
+  <li>Review W-4 withholding — higher brackets and standard deductions may mean you're over-withholding</li>
+  <li>Max out 401(k) contributions at the new $24,500 limit to reduce taxable income</li>
+  <li>Check EITC eligibility if your income is in the qualifying range</li>
+  <li>If you're in a high-tax state, recalculate whether itemizing now beats the standard deduction given the higher SALT cap</li>
+  <li>Workers who receive tips or overtime should be sure to claim the new Schedule 1-A deductions</li>
+</ul>
+
+<h2>Source</h2>
+<p>All figures sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a> and <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noopener">IRS IR-2025-103</a>. Use our <a href="/income-tax-calculator">income tax calculator</a> to estimate your 2026 federal tax with the updated brackets and deductions.</p>
     `,
     relatedLinks: [
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
