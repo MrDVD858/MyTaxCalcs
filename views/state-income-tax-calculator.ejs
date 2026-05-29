@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs</title>
-  <meta name="description" content="Free <%= state.name %> income tax calculator for 2025. <%= state.hasIncomeTax ? 'State income tax rates: ' + state.brackets + '.' : state.name + ' has no broad-based state income tax.' %> Estimate your federal income tax instantly.">
+  <title><%= pageTitle %></title>
+  <meta name="description" content="<%= metaDescription %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="<%= canonical %>">
-  <meta property="og:title" content="<%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs">
-  <meta property="og:description" content="Free <%= state.name %> income tax calculator. Estimate your 2025 federal income tax and review state tax information.">
+  <meta property="og:title" content="<%= ogTitle %>">
+  <meta property="og:description" content="<%= ogDescription %>">
   <meta property="og:url" content="<%= canonical %>">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="<%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs">
-  <meta name="twitter:description" content="Estimate your 2025 federal income tax as a <%= state.name %> resident. Free and instant.">
+  <meta name="twitter:title" content="<%= ogTitle %>">
+  <meta name="twitter:description" content="<%= ogDescription %>">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -166,6 +166,20 @@
     .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
     .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
     .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+    .state-tax-facts{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px 24px;margin:20px 0 0}
+    .state-tax-facts h2{font-size:1rem;font-weight:700;color:#111827;margin:0 0 14px}
+    .state-tax-facts table{width:100%;border-collapse:collapse;font-size:.88rem}
+    .state-tax-facts th{background:#f9fafb;padding:9px 12px;text-align:left;font-size:.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #e5e7eb}
+    .state-tax-facts td{padding:10px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
+    .state-tax-facts tr:last-child td{border-bottom:none}
+    .state-tax-facts td:first-child{font-weight:600;color:#111827}
+    .state-resource{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:18px 22px;margin:16px 0 0;display:flex;align-items:center;gap:14px}
+    .state-resource-icon{min-width:38px;height:38px;background:#16a34a;border-radius:10px;display:flex;align-items:center;justify-content:center}
+    .state-resource-body{flex:1}
+    .state-resource-body p{margin:0;font-size:.88rem;color:#374151;line-height:1.5}
+    .state-resource-body strong{color:#111827;font-size:.9rem}
+    .state-resource-link{display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-size:.83rem;font-weight:600;color:#16a34a;text-decoration:none}
+    .state-resource-link:hover{text-decoration:underline}
   </style>
 </head>
 <body>
@@ -231,6 +245,47 @@
         <h2>About <%= state.name %> Income Tax</h2>
         <p><%= state.overview %></p>
       </div>
+
+      <!-- ── STATE TAX FACTS TABLE ── -->
+      <div class="state-tax-facts">
+        <h2><%= state.name %> Tax at a Glance (2025)</h2>
+        <table>
+          <thead>
+            <tr><th>Tax Item</th><th>Details</th></tr>
+          </thead>
+          <tbody>
+            <% if (state.hasIncomeTax) { %>
+            <tr><td>State Income Tax</td><td>Yes — <%= state.brackets %></td></tr>
+            <tr><td>Top Marginal Rate</td><td><%= state.topRate %>%</td></tr>
+            <tr><td>Bottom Rate</td><td><%= state.bottomRate %>%</td></tr>
+            <tr><td>Tax Structure</td><td><%= state.topRate === state.bottomRate ? 'Flat rate — same rate for all income levels' : 'Graduated — higher income taxed at higher rates' %></td></tr>
+            <% } else { %>
+            <tr><td>State Income Tax</td><td>None — <%= state.name %> does not tax personal income</td></tr>
+            <tr><td>Top Marginal Rate</td><td>0%</td></tr>
+            <% } %>
+            <tr><td>Federal Tax (all states)</td><td>10% – 37% (progressive brackets)</td></tr>
+            <tr><td>FICA / Payroll Tax</td><td>7.65% employee share (6.2% SS + 1.45% Medicare)</td></tr>
+            <tr><td>Self-Employment Tax</td><td>15.3% on net self-employment income</td></tr>
+            <tr><td>2025 Federal Standard Deduction</td><td>$15,000 single / $30,000 married filing jointly</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ── OFFICIAL STATE RESOURCE ── -->
+      <% if (state.revenueUrl) { %>
+      <div class="state-resource">
+        <div class="state-resource-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="state-resource-body">
+          <strong>Official <%= state.name %> Tax Authority</strong>
+          <p>For exact <%= state.name %> state tax rates, forms, and filing instructions, visit the official state revenue department.</p>
+          <a class="state-resource-link" href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer">
+            <%= state.revenueUrl.label %> ↗
+          </a>
+        </div>
+      </div>
+      <% } %>
 
       <!-- ── SISTER SITES ── -->
       <div class="sister-sites-box">
