@@ -57,7 +57,7 @@ app.get("/", (req, res) => {
 // ── CALCULATOR HUB ────────────────────────────────────────────────────────────
 app.get("/calculators", (req, res) => {
   res.render("calculators", {
-    pageTitle: "Tax Calculators | MyTaxCalcs",
+    pageTitle: "Free Tax Calculators",
     metaDescription: "Browse all free U.S. tax calculators: income tax, self-employment, capital gains, sales tax, payroll, and refund estimators.",
     ogTitle: "Free Tax Calculators | MyTaxCalcs",
     ogDescription: "Browse all free U.S. tax calculators: income, self-employment, capital gains, sales tax, payroll, and refund.",
@@ -108,14 +108,17 @@ app.get("/:stateSlug-income-tax-calculator", (req, res) => {
   if (!state) {
     return res.status(404).send("State calculator not found.");
   }
-  const stateTaxNote = state.hasIncomeTax
-    ? `State income tax rate range: ${state.brackets}.`
-    : `${state.name} has no broad-based state income tax.`;
+  const metaDesc = state.hasIncomeTax
+    ? `Free ${state.name} income tax calculator for 2025. ${state.name} taxes income at ${state.brackets}. Estimate your federal and state tax instantly.`
+    : `Free ${state.name} income tax calculator for 2025. ${state.name} has no state income tax. Estimate your federal income tax instantly.`;
+  const ogDesc = state.hasIncomeTax
+    ? `${state.name} state income tax rates: ${state.brackets}. Estimate your 2025 federal and ${state.name} income tax free.`
+    : `${state.name} has no state income tax. Estimate your 2025 federal income tax with our free calculator.`;
   res.render("state-income-tax-calculator", {
     pageTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
-    metaDescription: `Free ${state.name} income tax calculator for 2025. ${stateTaxNote} Estimate your federal income tax instantly.`,
+    metaDescription: metaDesc,
     ogTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
-    ogDescription: `Free ${state.name} income tax calculator. Estimate your 2025 federal income tax and review state tax information.`,
+    ogDescription: ogDesc,
     state,
     states,
     result: null,
@@ -128,15 +131,18 @@ app.post("/:stateSlug-income-tax-calculator", (req, res) => {
   if (!state) {
     return res.status(404).send("State calculator not found.");
   }
-  const stateTaxNote = state.hasIncomeTax
-    ? `State income tax rate range: ${state.brackets}.`
-    : `${state.name} has no broad-based state income tax.`;
+  const metaDesc = state.hasIncomeTax
+    ? `Free ${state.name} income tax calculator for 2025. ${state.name} taxes income at ${state.brackets}. Estimate your federal and state tax instantly.`
+    : `Free ${state.name} income tax calculator for 2025. ${state.name} has no state income tax. Estimate your federal income tax instantly.`;
+  const ogDesc = state.hasIncomeTax
+    ? `${state.name} state income tax rates: ${state.brackets}. Estimate your 2025 federal and ${state.name} income tax free.`
+    : `${state.name} has no state income tax. Estimate your 2025 federal income tax with our free calculator.`;
   const result = calculateFederalIncomeTax(req.body);
   res.render("state-income-tax-calculator", {
     pageTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
-    metaDescription: `Free ${state.name} income tax calculator for 2025. ${stateTaxNote} Estimate your federal income tax instantly.`,
+    metaDescription: metaDesc,
     ogTitle: `${state.name} Income Tax Calculator 2025 | MyTaxCalcs`,
-    ogDescription: `Free ${state.name} income tax calculator. Estimate your 2025 federal income tax and review state tax information.`,
+    ogDescription: ogDesc,
     state,
     states,
     result,
