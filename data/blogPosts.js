@@ -355,49 +355,75 @@ const blogPosts = [
     ogDescription: "The IRS set the 2026 business mileage rate at 72.5 cents per mile. Learn who qualifies, how to claim the deduction, and whether actual expenses might save you more.",
     content: `
 <p>The Internal Revenue Service announced in December 2025 that the optional standard mileage rate for business driving will increase to <strong>72.5 cents per mile</strong> for 2026 — up 2.5 cents from the 70-cent rate that applied in 2025. The change takes effect January 1, 2026.</p>
-
 <p>For the millions of self-employed workers, small business owners, and employees who use their personal vehicles for work, this rate increase can translate into a meaningfully larger tax deduction.</p>
 
-<h2>What Are the 2026 Mileage Rates?</h2>
-<ul>
-  <li><strong>Business driving:</strong> 72.5 cents per mile (up from 70¢ in 2025)</li>
-  <li><strong>Medical or moving (active-duty military):</strong> 21 cents per mile</li>
-  <li><strong>Charitable driving:</strong> 14 cents per mile (set by statute — unchanged)</li>
-</ul>
+<h2>What Are the 2026 IRS Mileage Rates?</h2>
+<table>
+  <thead><tr><th>Purpose</th><th>2026 Rate</th><th>2025 Rate</th><th>Change</th></tr></thead>
+  <tbody>
+    <tr><td>Business driving</td><td>72.5¢ per mile</td><td>70¢ per mile</td><td>+2.5¢</td></tr>
+    <tr><td>Medical / moving (active military only)</td><td>21¢ per mile</td><td>21¢ per mile</td><td>No change</td></tr>
+    <tr><td>Charitable driving</td><td>14¢ per mile</td><td>14¢ per mile</td><td>No change</td></tr>
+  </tbody>
+</table>
+<p>The charitable mileage rate is set by statute and does not adjust for inflation — it has been stuck at 14 cents per mile for decades. The medical/moving rate for active-duty military members is adjusted periodically based on variable vehicle costs.</p>
 
 <h2>Who Can Use the Standard Mileage Rate?</h2>
-<p>The standard mileage rate is available to:</p>
+<p>Not everyone is eligible to use the simplified mileage rate. The IRS has specific rules:</p>
 <ul>
-  <li><strong>Self-employed individuals and sole proprietors</strong> who use their personal vehicle for business (reported on Schedule C)</li>
-  <li><strong>Small business owners</strong> who track employee or owner mileage</li>
-  <li><strong>Active-duty military members</strong> moving due to a permanent change of station</li>
-  <li><strong>Volunteers</strong> driving for qualifying charitable organizations</li>
+  <li><strong>Self-employed individuals and small business owners</strong> can use the rate for any vehicle used in their business, including cars, vans, pickups, and panel trucks.</li>
+  <li><strong>W-2 employees</strong> who are not reimbursed by their employer cannot deduct business mileage on their federal return. The Tax Cuts and Jobs Act of 2017 suspended the employee business expense deduction, and the One Big Beautiful Bill Act made that suspension permanent.</li>
+  <li><strong>Five or more vehicles used simultaneously</strong> in your business disqualify you from using the standard rate — you must use the actual expense method instead.</li>
+  <li>You must choose the standard mileage rate in the <em>first year</em> you place a vehicle in service for business. If you use actual expenses in year one, you cannot switch to the standard rate for that vehicle later.</li>
 </ul>
 
-<p>Important: W-2 employees who drive for work and are not reimbursed by their employer <strong>cannot</strong> deduct mileage under current law. The TCJA eliminated the employee business expense deduction for 2018 through 2025, and the OBBBA made that elimination permanent.</p>
-
-<h2>Standard Mileage Rate vs. Actual Expenses</h2>
-<p>Taxpayers generally have two methods to deduct business vehicle costs. The <strong>standard mileage rate</strong> is simple — multiply your business miles by 72.5 cents. If you drove 15,000 business miles in 2026, your deduction is $10,875. The <strong>actual expense method</strong> tracks every vehicle cost and deducts the business-use percentage. It often wins for high-value vehicles but requires more recordkeeping.</p>
-
-<p><strong>Key rule:</strong> If you use the actual expense method in the first year a vehicle is used for business, you must continue using actual expenses for that vehicle in all future years.</p>
-
-<h2>How to Track Mileage Properly</h2>
-<p>The IRS requires contemporaneous records. Your log should include the date, business destination and purpose, and miles driven per trip. Free apps like MileIQ, Everlance, and Stride make automatic mileage tracking simple — the IRS accepts digital logs.</p>
-
-<h2>Calculating Your 2026 Mileage Deduction</h2>
+<h2>Standard Mileage Rate vs. Actual Expense Method</h2>
+<p>The standard mileage rate is simple — multiply your business miles by 72.5 cents. The actual expense method lets you deduct the real costs of operating the vehicle: gas, oil, insurance, registration fees, repairs, tires, and depreciation (or lease payments), multiplied by your business-use percentage.</p>
 <table>
-  <thead>
-    <tr><th>Business Miles Driven</th><th>Deduction at 72.5¢/mile</th></tr>
-  </thead>
+  <thead><tr><th></th><th>Standard Mileage Rate</th><th>Actual Expense Method</th></tr></thead>
   <tbody>
-    <tr><td>5,000 miles</td><td>$3,625</td></tr>
-    <tr><td>10,000 miles</td><td>$7,250</td></tr>
-    <tr><td>20,000 miles</td><td>$14,500</td></tr>
-    <tr><td>30,000 miles</td><td>$21,750</td></tr>
+    <tr><td>Best for</td><td>High-mileage, fuel-efficient vehicles</td><td>Expensive vehicles, high insurance/repair costs</td></tr>
+    <tr><td>Record-keeping</td><td>Mileage log only</td><td>All receipts + mileage log for business %</td></tr>
+    <tr><td>Flexibility</td><td>Can switch to actual in future years</td><td>Cannot switch back to standard rate</td></tr>
+    <tr><td>Depreciation</td><td>Built into the rate</td><td>Separate depreciation calculation required</td></tr>
   </tbody>
 </table>
 
-<p>If you're self-employed and wondering how business deductions like mileage affect your overall tax bill, use our <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> to get a clearer picture.</p>
+<h2>How Much Is the 2026 Mileage Deduction Worth?</h2>
+<table>
+  <thead><tr><th>Annual Business Miles</th><th>2026 Deduction (72.5¢)</th><th>2025 Deduction (70¢)</th><th>Difference</th></tr></thead>
+  <tbody>
+    <tr><td>5,000 miles</td><td>$3,625</td><td>$3,500</td><td>+$125</td></tr>
+    <tr><td>10,000 miles</td><td>$7,250</td><td>$7,000</td><td>+$250</td></tr>
+    <tr><td>20,000 miles</td><td>$14,500</td><td>$14,000</td><td>+$500</td></tr>
+    <tr><td>30,000 miles</td><td>$21,750</td><td>$21,000</td><td>+$750</td></tr>
+  </tbody>
+</table>
+<p>For a self-employed worker in the 22% federal tax bracket who drives 15,000 business miles in 2026, the mileage deduction alone saves roughly <strong>$2,381 in federal income tax</strong> (15,000 × $0.725 × 22%) — plus reduces the net profit subject to self-employment tax.</p>
+
+<h2>What Counts as Business Mileage?</h2>
+<p>Only miles driven for genuine business purposes qualify. Trips that count:</p>
+<ul>
+  <li>Driving to meet clients or customers</li>
+  <li>Travel between two work locations (for those with multiple jobs)</li>
+  <li>Travel to a temporary work location away from your regular workplace</li>
+  <li>Running business errands (office supplies, bank deposits, post office for business mail)</li>
+</ul>
+<p>What does <em>not</em> count:</p>
+<ul>
+  <li><strong>Commuting</strong> — the drive from home to your regular place of business is never deductible, no matter how far</li>
+  <li>Personal errands mixed into a business trip (only the business portion counts)</li>
+</ul>
+
+<h2>Mileage Log Requirements</h2>
+<p>The IRS requires "contemporaneous" records — meaning you should record mileage at or near the time of each trip, not reconstruct it from memory at year-end. A compliant mileage log must capture for each trip: the date, business purpose, starting location and destination, and miles driven. Apps like MileIQ, Everlance, or Stride automatically track mileage via GPS and satisfy IRS record-keeping requirements without a paper log.</p>
+
+<h2>Mileage Deduction and Self-Employment Tax</h2>
+<p>For self-employed individuals, the mileage deduction reduces your net self-employment income, which reduces both your income tax <em>and</em> your self-employment tax. That double benefit makes business mileage one of the most valuable deductions available to freelancers and sole proprietors. Use our <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to see how mileage and other business expenses affect your total SE tax liability.</p>
+
+<h2>Charitable and Medical Mileage</h2>
+<p>If you drive for volunteer work with a qualifying charity, you can deduct <strong>14 cents per mile</strong>. This rate is significantly below the actual cost of operating a vehicle and has been unchanged for many years — it's set by Congress, not adjusted by the IRS. Medical mileage at <strong>21 cents per mile</strong> is deductible for trips to receive medical care, but only if you itemize and only to the extent total medical expenses exceed 7.5% of your AGI. Very few taxpayers benefit from the medical mileage deduction in practice.</p>
+<p>For a broader view of how all your deductions affect your federal tax bill, try our <a href="/income-tax-calculator">income tax calculator</a>.</p>
     `,
     relatedLinks: [
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
@@ -544,24 +570,48 @@ const blogPosts = [
 <p>For eight years, the $10,000 cap on the State and Local Tax (SALT) deduction was a source of major frustration for homeowners in high-tax states like California, New York, New Jersey, Massachusetts, and Illinois. That changed significantly with the <strong>One Big Beautiful Bill Act</strong>, signed on July 4, 2025. The new law raises the SALT deduction cap to <strong>$40,000</strong> for tax years 2025 through 2029.</p>
 
 <h2>What Is the SALT Deduction?</h2>
-<p>The SALT deduction allows taxpayers who itemize their federal deductions to deduct the amount they paid in state and local taxes — including state and local income taxes (or sales taxes), and property taxes on your home. Before 2018, there was no cap on this deduction.</p>
+<p>The SALT deduction allows taxpayers who itemize their federal deductions to deduct the state and local taxes they pay — specifically state and local income taxes (or sales taxes, if you choose that option), real property taxes, and personal property taxes such as annual vehicle registration fees based on value. You can deduct income taxes <em>or</em> sales taxes — not both. Residents of states with no income tax (Texas, Florida, Washington, etc.) typically deduct sales taxes instead using the IRS optional sales tax tables.</p>
+
+<h2>SALT Cap History: From Unlimited to $10,000 to $40,000</h2>
+<table>
+  <thead><tr><th>Tax Years</th><th>SALT Cap</th><th>Law</th></tr></thead>
+  <tbody>
+    <tr><td>Pre-2018</td><td>Unlimited</td><td>Prior law</td></tr>
+    <tr><td>2018–2024</td><td>$10,000</td><td>Tax Cuts and Jobs Act (2017)</td></tr>
+    <tr><td>2025–2029</td><td>$40,000</td><td>One Big Beautiful Bill Act (2025)</td></tr>
+    <tr><td>2030+</td><td>$10,000 (returns to prior cap)</td><td>Requires new legislation to change</td></tr>
+  </tbody>
+</table>
+<p>Before 2018, high-income homeowners in states like California and New York commonly deducted $30,000, $50,000, or more in state income and property taxes. The TCJA's $10,000 cap hit these taxpayers hard, eliminating a large portion of their itemized deductions and pushing many to take the standard deduction for the first time.</p>
 
 <h2>How the New $40,000 Cap Works</h2>
 <ul>
   <li><strong>Cap amount:</strong> $40,000 ($20,000 for married filing separately)</li>
   <li><strong>Income limit:</strong> The full $40,000 cap applies to taxpayers with MAGI at or below $500,000</li>
-  <li><strong>Phase-down:</strong> Above $500,000, the cap is gradually reduced by 30 cents for every dollar over the threshold, until it reaches the $10,000 floor</li>
+  <li><strong>Phase-down:</strong> Above $500,000, the cap is gradually reduced by 30 cents for every dollar over the threshold, until it reaches the $10,000 floor at approximately $600,000 MAGI</li>
   <li><strong>Annual increases:</strong> The cap and income threshold increase by 1% per year from 2026 through 2029</li>
-  <li><strong>After 2029:</strong> The cap returns permanently to $10,000</li>
+  <li><strong>After 2029:</strong> The cap returns to $10,000 unless new legislation is passed</li>
 </ul>
 
-<h2>Should You Itemize or Take the Standard Deduction?</h2>
-<p>With the 2026 standard deduction at $32,200 for married couples ($16,100 for singles), you only benefit from itemizing if your total deductions exceed those amounts. Here's a sample calculation for a married couple:</p>
-
+<h2>Who Benefits Most from the $40,000 Cap?</h2>
+<p>The higher cap is most valuable for homeowners who pay significant state income taxes and property taxes — and who have enough total itemized deductions to exceed the standard deduction. Consider a married couple in New Jersey with $200,000 in combined income and $18,000 in annual property taxes:</p>
 <table>
-  <thead>
-    <tr><th>Deductible Expense</th><th>Example Amount</th></tr>
-  </thead>
+  <thead><tr><th></th><th>Under $10,000 Cap (2024)</th><th>Under $40,000 Cap (2026)</th></tr></thead>
+  <tbody>
+    <tr><td>State income taxes paid</td><td>$12,000</td><td>$12,000</td></tr>
+    <tr><td>Property taxes paid</td><td>$18,000</td><td>$18,000</td></tr>
+    <tr><td>Total SALT paid</td><td>$30,000</td><td>$30,000</td></tr>
+    <tr><td>SALT deduction allowed</td><td>$10,000</td><td>$30,000</td></tr>
+    <tr><td>Additional deduction vs. 2024</td><td>—</td><td>+$20,000</td></tr>
+    <tr><td>Federal tax savings (22% bracket)</td><td>—</td><td>~$4,400</td></tr>
+  </tbody>
+</table>
+<p>This couple saves roughly $4,400 in federal income tax compared to what they paid under the old cap. The higher their combined state income tax and property tax, the greater the benefit — up to the $40,000 ceiling.</p>
+
+<h2>Should You Itemize or Take the Standard Deduction?</h2>
+<p>With the 2026 standard deduction at $32,200 for married filing jointly ($16,100 for singles), itemizing only makes sense if your total deductions exceed those amounts. Here's a sample calculation for a joint filer:</p>
+<table>
+  <thead><tr><th>Deductible Expense</th><th>Example Amount</th></tr></thead>
   <tbody>
     <tr><td>State income tax paid</td><td>$15,000</td></tr>
     <tr><td>Property tax paid</td><td>$12,000</td></tr>
@@ -571,11 +621,29 @@ const blogPosts = [
     <tr><td><strong>Total itemized deductions</strong></td><td><strong>$44,000</strong></td></tr>
   </tbody>
 </table>
+<p>In this example, itemizing ($44,000) beats the standard deduction ($32,200) by $11,800 — saving an additional $2,596 in taxes at the 22% bracket. Under the old $10,000 SALT cap, their itemized total would have been only $27,000 — less than the standard deduction, so they wouldn't have itemized at all.</p>
 
-<p>In this example, itemizing ($44,000) beats the standard deduction ($32,200) by $11,800 — meaning this couple saves an additional $2,596 in taxes at the 22% bracket by itemizing. Under the old $10,000 SALT cap, their itemized total would have been only $27,000 — less than the standard deduction, so they wouldn't have itemized at all.</p>
+<h2>Average Property Taxes by State: Key Input for Your Calculation</h2>
+<p>Property taxes are typically the largest SALT component for homeowners. Average annual property taxes vary dramatically by state:</p>
+<table>
+  <thead><tr><th>State</th><th>Average Annual Property Tax</th></tr></thead>
+  <tbody>
+    <tr><td>New Jersey</td><td>~$9,600</td></tr>
+    <tr><td>Illinois</td><td>~$7,200</td></tr>
+    <tr><td>New Hampshire</td><td>~$7,000</td></tr>
+    <tr><td>Connecticut</td><td>~$6,600</td></tr>
+    <tr><td>New York</td><td>~$6,000</td></tr>
+    <tr><td>California</td><td>~$4,800</td></tr>
+    <tr><td>Texas</td><td>~$4,500</td></tr>
+    <tr><td>Florida</td><td>~$2,500</td></tr>
+  </tbody>
+</table>
 
 <h2>New: Charitable Deduction for Non-Itemizers</h2>
-<p>One less-discussed OBBBA provision: taxpayers who take the standard deduction can now deduct up to $1,000 in charitable contributions ($2,000 for married couples filing jointly) directly from their income. Even non-itemizers now get some tax benefit from charitable giving starting in 2026.</p>
+<p>One less-discussed OBBBA provision: taxpayers who take the standard deduction can now deduct up to <strong>$1,000 in charitable contributions</strong> ($2,000 for married couples filing jointly) directly from their income. Even non-itemizers now get some tax benefit from charitable giving starting in 2026.</p>
+
+<h2>SALT and Pass-Through Entity Tax Workarounds</h2>
+<p>During the years of the $10,000 cap, many states enacted Pass-Through Entity (PTE) tax elections that allowed S corporations, partnerships, and LLCs to pay state income taxes at the entity level. Because the SALT cap applies to individuals, entity-level state tax payments were deductible in full as business expenses. These PTE elections remain available in most states even after the cap increase, and may still benefit business owners with very high state tax liability. Business owners with pass-through income should consult a tax professional to determine whether the PTE election still makes sense for their 2026 return.</p>
 
 <h2>Action Items for Homeowners</h2>
 <ol>
@@ -583,9 +651,9 @@ const blogPosts = [
   <li>Compare the total to the 2026 standard deduction ($32,200 married / $16,100 single)</li>
   <li>If itemizing wins, file Schedule A and capture the full SALT amount up to $40,000</li>
   <li>If you were just under the itemizing threshold before, recalculate — the higher SALT cap may tip the balance</li>
+  <li>Check your state's income tax rates with our <a href="/states">state income tax calculators</a></li>
 </ol>
-
-<p>Use our <a href="/income-tax-calculator">Federal Income Tax Calculator</a> to see how your choice between itemizing and the standard deduction affects your overall tax bill.</p>
+<p>Use our <a href="/income-tax-calculator">Federal Income Tax Calculator</a> to see how your choice between itemizing and the standard deduction affects your overall tax bill. For the full context on 2026 tax changes, see our <a href="/blog/2026-tax-brackets-standard-deduction-changes">2026 tax brackets guide</a>.</p>
     `,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
@@ -802,42 +870,83 @@ const blogPosts = [
     ogTitle: "2026 Standard Deduction: $32,200 Joint, $16,100 Single | MyTaxCalcs",
     ogDescription: "2026 standard deduction amounts by filing status and how the increase from 2025 affects your taxable income and tax bill.",
     content: `
-      <p>The IRS confirmed in <strong>Revenue Procedure 2025-32</strong> that the standard deduction will increase for all filing statuses in tax year 2026. These figures apply to returns filed in early 2027.</p>
+<p>The IRS confirmed in <strong>Revenue Procedure 2025-32</strong> that the standard deduction will increase for all filing statuses in tax year 2026. These figures apply to returns filed in early 2027.</p>
 
-      <h2>2026 Standard Deduction Amounts</h2>
-      <table>
-        <thead><tr><th>Filing Status</th><th>2025 Amount</th><th>2026 Amount</th><th>Increase</th></tr></thead>
-        <tbody>
-          <tr><td>Single</td><td>$15,000</td><td>$16,100</td><td>+$1,100</td></tr>
-          <tr><td>Married Filing Jointly</td><td>$30,000</td><td>$32,200</td><td>+$2,200</td></tr>
-          <tr><td>Head of Household</td><td>$22,500</td><td>$24,150</td><td>+$1,650</td></tr>
-          <tr><td>Married Filing Separately</td><td>$15,000</td><td>$16,100</td><td>+$1,100</td></tr>
-        </tbody>
-      </table>
+<h2>2026 Standard Deduction Amounts</h2>
+<table>
+  <thead><tr><th>Filing Status</th><th>2025 Amount</th><th>2026 Amount</th><th>Increase</th></tr></thead>
+  <tbody>
+    <tr><td>Single</td><td>$15,000</td><td>$16,100</td><td>+$1,100</td></tr>
+    <tr><td>Married Filing Jointly</td><td>$30,000</td><td>$32,200</td><td>+$2,200</td></tr>
+    <tr><td>Head of Household</td><td>$22,500</td><td>$24,150</td><td>+$1,650</td></tr>
+    <tr><td>Married Filing Separately</td><td>$15,000</td><td>$16,100</td><td>+$1,100</td></tr>
+  </tbody>
+</table>
 
-      <h2>Additional Standard Deduction for Age 65+ or Blind</h2>
-      <p>Taxpayers who are age 65 or older, or blind, may claim an additional standard deduction on top of the base amount:</p>
-      <ul>
-        <li><strong>Married (per qualifying spouse):</strong> $1,650</li>
-        <li><strong>Single or Head of Household:</strong> $2,050</li>
-      </ul>
+<h2>Additional Standard Deduction for Age 65+ or Blind</h2>
+<p>Taxpayers who are age 65 or older, or blind, may claim an additional standard deduction on top of the base amount. For 2026:</p>
+<table>
+  <thead><tr><th>Filing Status</th><th>Additional Amount (per qualifying person)</th></tr></thead>
+  <tbody>
+    <tr><td>Married (per qualifying spouse)</td><td>$1,600</td></tr>
+    <tr><td>Single / Head of Household</td><td>$2,000</td></tr>
+  </tbody>
+</table>
+<p>A married couple where both spouses are 65 or older would have a total 2026 standard deduction of <strong>$35,400</strong> ($32,200 + $1,600 + $1,600). If one or both spouses are also blind, each blindness condition adds another $1,600 on top of that.</p>
 
-      <h2>New $6,000 Senior Deduction (OBBBA)</h2>
-      <p>The One Big Beautiful Bill Act added a brand-new <strong>$6,000 deduction for taxpayers age 65 and older</strong> that is available in addition to the standard deduction. This applies for tax years 2025 through 2028. The deduction phases out at 6% of income above:</p>
-      <ul>
-        <li>$75,000 for single filers</li>
-        <li>$150,000 for married filing jointly</li>
-      </ul>
-      <p>At $175,000 of income (single), the full $6,000 deduction phases out completely.</p>
+<h2>New $6,000 Senior Deduction (OBBBA)</h2>
+<p>The One Big Beautiful Bill Act added a brand-new <strong>$6,000 deduction for taxpayers age 65 and older</strong> that is available in addition to the standard deduction. This applies for tax years 2025 through 2028. The deduction phases out at 6% of income above $75,000 for single filers and $150,000 for married filing jointly. At $175,000 of income (single), the full $6,000 deduction phases out completely.</p>
 
-      <h2>Why Did It Increase So Much?</h2>
-      <p>Two factors drove the 2026 increase. First, the standard annual inflation adjustment using the Chained CPI index. Second, the OBBBA boosted the 2025 standard deduction above what inflation alone would have produced — and the 2026 amounts are inflation-adjusted from that higher 2025 baseline.</p>
+<h2>Why Does the Standard Deduction Increase Each Year?</h2>
+<p>The standard deduction is adjusted annually for inflation using the <strong>Chained Consumer Price Index (C-CPI-U)</strong>. This mechanism was permanently embedded in the tax code by the Tax Cuts and Jobs Act of 2017 and kept in place by the One Big Beautiful Bill Act signed July 4, 2025. The idea is straightforward: as prices rise, the deduction rises with them so taxpayers aren't pushed into higher effective tax rates simply because wages kept pace with inflation — a phenomenon called "bracket creep."</p>
+<p>The 2026 increase of roughly 3.7% for single filers reflects moderating but still meaningful inflation compared to the larger jumps seen in 2023 and 2024.</p>
 
-      <h2>Should You Take the Standard Deduction or Itemize?</h2>
-      <p>With the standard deduction at $32,200 for joint filers, you would need more than $32,200 in allowable itemized deductions — mortgage interest, state/local taxes (now capped at $40,000 under OBBBA), charitable contributions, and medical expenses above 7.5% of AGI — to benefit from itemizing. Most taxpayers will continue to find the standard deduction more advantageous.</p>
+<h2>Standard Deduction vs. Itemizing: Which Is Better for You in 2026?</h2>
+<p>The standard deduction is a flat dollar amount you subtract from your adjusted gross income (AGI) without needing to document individual expenses. Itemizing lets you deduct specific qualifying expenses — but only makes financial sense if your total itemized deductions exceed the standard deduction for your filing status.</p>
+<p>Common itemized deductions include:</p>
+<ul>
+  <li><strong>Mortgage interest</strong> on up to $750,000 of qualified loan principal</li>
+  <li><strong>State and local taxes (SALT)</strong> — now capped at $40,000 through 2029 under the One Big Beautiful Bill Act (up from the previous $10,000 cap)</li>
+  <li><strong>Charitable contributions</strong> to qualifying organizations</li>
+  <li><strong>Medical expenses</strong> exceeding 7.5% of your AGI</li>
+  <li><strong>Casualty losses</strong> from federally declared disasters</li>
+</ul>
+<p>With the 2026 standard deduction at $32,200 for joint filers, the bar for itemizing is high. A couple would need more than $32,200 in combined itemized deductions before it becomes worthwhile. Homeowners in high-tax states like California, New York, or New Jersey are the most likely candidates to benefit from itemizing — particularly now that the SALT cap has risen to $40,000. See our guide on the <a href="/blog/salt-deduction-2026-what-homeowners-need-to-know">2026 SALT deduction changes</a> for a full breakdown.</p>
 
-      <h2>Source</h2>
-      <p>All figures sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a>.</p>
+<h2>How the Standard Deduction Reduces Your Tax Bill: A Worked Example</h2>
+<p>Let's say you're a single filer with $75,000 in wages in 2026. Here's how the standard deduction affects your taxable income and tax owed:</p>
+<table>
+  <thead><tr><th></th><th>Without Deduction</th><th>With Standard Deduction</th></tr></thead>
+  <tbody>
+    <tr><td>Gross income</td><td>$75,000</td><td>$75,000</td></tr>
+    <tr><td>Standard deduction</td><td>$0</td><td>−$16,100</td></tr>
+    <tr><td>Taxable income</td><td>$75,000</td><td>$58,900</td></tr>
+    <tr><td>Estimated federal tax</td><td>~$13,234</td><td>~$9,622</td></tr>
+  </tbody>
+</table>
+<p>The standard deduction alone saves this filer roughly <strong>$3,600 in federal tax</strong>. Use our <a href="/income-tax-calculator">free income tax calculator</a> to run the numbers for your specific situation.</p>
+
+<h2>Who Cannot Claim the Standard Deduction?</h2>
+<p>A small number of taxpayers are ineligible for the standard deduction and must itemize:</p>
+<ul>
+  <li>Married individuals filing separately when their spouse itemizes</li>
+  <li>Nonresident aliens</li>
+  <li>Individuals filing a return for a period of less than 12 months due to a change in accounting period</li>
+</ul>
+
+<h2>Dependent Filers: A Lower Standard Deduction Applies</h2>
+<p>If someone can claim you as a dependent on their tax return, your standard deduction is limited. For 2026, it's the <em>greater</em> of $1,350, or your earned income plus $400 (but not exceeding the regular standard deduction for your filing status). This rule primarily affects college students or young adults who are still claimed as dependents but have part-time jobs or investment income.</p>
+
+<h2>What This Means for Your 2026 Tax Planning</h2>
+<p>The increase in the standard deduction is generally good news — more of your income is sheltered from tax before a single dollar of federal income tax applies. A few practical takeaways:</p>
+<ul>
+  <li><strong>Review your W-4 withholding.</strong> If you got a large refund in 2025, the higher deduction in 2026 means you may be over-withholding again. Use our <a href="/tax-refund-calculator">tax refund calculator</a> to check.</li>
+  <li><strong>Don't assume itemizing still beats the standard deduction</strong> just because it did in a prior year. Run the comparison annually — deductions change, and the SALT cap shift may alter the math.</li>
+  <li><strong>Bunch charitable deductions</strong> if you're close to the itemizing threshold. Donating two years' worth of charitable contributions in a single tax year can push you over the standard deduction, letting you itemize that year while taking the standard deduction the next.</li>
+</ul>
+
+<h2>Source</h2>
+<p>All figures sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a>. For the full picture of 2026 tax changes including updated brackets, see our <a href="/blog/2026-tax-brackets-standard-deduction-changes">2026 tax brackets guide</a>.</p>
     `,
     relatedLinks: [
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
@@ -857,48 +966,73 @@ const blogPosts = [
     ogTitle: "2026 EITC, AMT, Estate and Gift Tax Updates | MyTaxCalcs",
     ogDescription: "IRS Rev. Proc. 2025-32 updated the EITC, AMT, estate tax exclusion, and gift tax exclusion for 2026. Here are all the key numbers.",
     content: `
-      <p>IRS Revenue Procedure 2025-32 covers more than just tax brackets and the standard deduction. Here's a focused breakdown of the other important figures updated for tax year 2026.</p>
+<p>IRS Revenue Procedure 2025-32 covers more than just tax brackets and the standard deduction. Here's a focused breakdown of the other important figures updated for tax year 2026 — including the Earned Income Tax Credit, Alternative Minimum Tax, estate and gift tax exclusions, and several lesser-known inflation adjustments that affect millions of filers.</p>
 
-      <h2>Earned Income Tax Credit (EITC)</h2>
-      <p>The EITC is a refundable credit for low-to-moderate income workers. For 2026:</p>
-      <table>
-        <thead><tr><th>Number of Qualifying Children</th><th>Maximum EITC (2026)</th></tr></thead>
-        <tbody>
-          <tr><td>3 or more</td><td>$8,231</td></tr>
-          <tr><td>2</td><td>$7,281 (estimated)</td></tr>
-          <tr><td>1</td><td>$4,390 (estimated)</td></tr>
-          <tr><td>0</td><td>$649 (estimated)</td></tr>
-        </tbody>
-      </table>
-      <p>The maximum for three or more children is confirmed at $8,231 per Rev. Proc. 2025-32. Full phase-out tables are available in the revenue procedure.</p>
+<h2>Earned Income Tax Credit (EITC)</h2>
+<p>The EITC is a refundable credit for low-to-moderate income workers and families. It's one of the most valuable credits in the tax code — "refundable" means it can reduce your tax bill below zero and result in a payment to you even if you owe no tax.</p>
+<p>For 2026, the maximum EITC amounts are:</p>
+<table>
+  <thead><tr><th>Number of Qualifying Children</th><th>Maximum EITC (2026)</th><th>2025 Amount</th></tr></thead>
+  <tbody>
+    <tr><td>3 or more</td><td>$8,231</td><td>$7,830</td></tr>
+    <tr><td>2</td><td>$7,281</td><td>$6,960</td></tr>
+    <tr><td>1</td><td>$4,390</td><td>$4,213</td></tr>
+    <tr><td>0 (childless workers)</td><td>$649</td><td>$632</td></tr>
+  </tbody>
+</table>
+<p>To claim the EITC, your earned income and adjusted gross income must both fall below the income limits for your filing status and number of children. Investment income is also capped — for 2026, you can't have more than <strong>$11,950</strong> in investment income and still claim the credit.</p>
+<p>The EITC phases in as income rises, reaches its maximum, then phases out. Married filers receive a wider phase-out range than single filers, which means married couples can claim the full credit at higher income levels.</p>
 
-      <h2>Alternative Minimum Tax (AMT)</h2>
-      <p>The AMT is a parallel tax system designed to ensure high-income taxpayers pay a minimum level of tax. For 2026:</p>
-      <table>
-        <thead><tr><th>Filing Status</th><th>AMT Exemption</th><th>Phase-out Begins</th></tr></thead>
-        <tbody>
-          <tr><td>Single</td><td>$90,100</td><td>$500,000</td></tr>
-          <tr><td>Married Filing Jointly</td><td>$140,200</td><td>$1,000,000</td></tr>
-          <tr><td>Married Filing Separately</td><td>$70,100</td><td>$500,000</td></tr>
-        </tbody>
-      </table>
-      <p>The OBBBA made these higher exemption amounts permanent, which protects the vast majority of middle-income taxpayers from AMT liability.</p>
+<h2>Alternative Minimum Tax (AMT)</h2>
+<p>The AMT is a parallel tax system designed to ensure higher-income taxpayers pay at least a minimum amount of tax, regardless of deductions. You calculate your taxes under both the regular system and the AMT, then pay whichever is higher.</p>
+<p>For 2026, the AMT exemption amounts — the income threshold below which AMT doesn't apply — are:</p>
+<table>
+  <thead><tr><th>Filing Status</th><th>2026 AMT Exemption</th><th>Phase-out Begins At</th></tr></thead>
+  <tbody>
+    <tr><td>Single / Head of Household</td><td>$90,100</td><td>$635,900</td></tr>
+    <tr><td>Married Filing Jointly</td><td>$140,200</td><td>$1,271,900</td></tr>
+    <tr><td>Married Filing Separately</td><td>$70,100</td><td>$635,900</td></tr>
+    <tr><td>Estates and Trusts</td><td>$31,500</td><td>$105,100</td></tr>
+  </tbody>
+</table>
+<p>The AMT affects relatively few middle-income taxpayers today — the higher exemption amounts introduced by the TCJA and made permanent by the One Big Beautiful Bill Act pushed most households well below the threshold. It's more relevant for high earners with large incentive stock option exercises, significant miscellaneous deductions, or substantial depreciation adjustments.</p>
 
-      <h2>Estate and Gift Taxes</h2>
-      <p>The estate tax basic exclusion amount for 2026 is <strong>$15,000,000</strong> per individual (up from $13,990,000 in 2025). This means a married couple can shield up to $30,000,000 from federal estate tax using portability. The OBBBA made the higher TCJA exclusion permanent.</p>
-      <p>The annual gift tax exclusion remains at <strong>$19,000</strong> per recipient for 2026. You can give up to $19,000 to any number of individuals without filing a gift tax return or reducing your lifetime exemption. The exclusion for gifts to a non-citizen spouse increases to <strong>$194,000</strong>.</p>
+<h2>Estate and Gift Tax</h2>
+<p>The federal estate tax applies to the transfer of wealth at death above a certain exemption amount. The annual gift tax exclusion covers gifts you make during your lifetime.</p>
 
-      <h2>Qualified Transportation Fringe Benefits</h2>
-      <p>The monthly limit for employer-provided transit passes and qualified parking increases to <strong>$340</strong> per month for 2026 (up $15 from 2025). Amounts provided up to this limit are excluded from employee income.</p>
+<h3>Federal Estate Tax Exemption</h3>
+<p>For 2026, the federal estate and gift tax lifetime exemption is <strong>$15,000,000 per person</strong> (up from $13,990,000 in 2025). A married couple can effectively shelter up to <strong>$30,000,000</strong> from federal estate tax by combining their exemptions through portability elections. Estates above this threshold are taxed at rates up to 40%. The vast majority of estates — over 99% — fall below the exemption and owe no federal estate tax.</p>
 
-      <h2>Health FSA Contribution Limit</h2>
-      <p>Employees can contribute up to <strong>$3,400</strong> to a health flexible spending account (FSA) in 2026, up $100 from $3,300 in 2025. For FSA plans that allow a carryover of unused funds, the maximum carryover increases to <strong>$680</strong> (up from $660).</p>
+<h3>Annual Gift Tax Exclusion</h3>
+<p>The annual gift tax exclusion for 2026 is <strong>$19,000 per recipient</strong> (up from $18,000 in 2025). You can give up to $19,000 to any number of people in a calendar year without it counting against your lifetime exemption or requiring a gift tax return. A married couple can give up to $38,000 to each recipient by "gift splitting." The exclusion for gifts to a non-citizen spouse increases to <strong>$194,000</strong>.</p>
 
-      <h2>Foreign Earned Income Exclusion</h2>
-      <p>U.S. citizens and residents living abroad can exclude up to <strong>$132,900</strong> of foreign-earned income from U.S. taxes in 2026, up from $130,000 in 2025. This exclusion is available to qualifying taxpayers under the bona fide residence or physical presence tests.</p>
+<h2>Qualified Transportation Fringe Benefits</h2>
+<p>The monthly limit for employer-provided transit passes and qualified parking increases to <strong>$340</strong> per month for 2026 (up $15 from 2025). Amounts provided up to this limit are excluded from employee income — a straightforward pre-tax benefit worth up to $4,080 per year.</p>
 
-      <h2>Source</h2>
-      <p>All figures sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a> and <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noopener">IRS IR-2025-103</a>.</p>
+<h2>Flexible Spending Account (FSA) Limits</h2>
+<p>Health Flexible Spending Accounts let you set aside pre-tax dollars for qualified medical expenses. For 2026:</p>
+<ul>
+  <li><strong>Health FSA contribution limit:</strong> $3,400 per employee (up from $3,300 in 2025)</li>
+  <li><strong>FSA carryover maximum:</strong> $680 (up from $660)</li>
+  <li><strong>Dependent care FSA:</strong> Remains at $5,000 per household (set by statute, not inflation-adjusted)</li>
+</ul>
+
+<h2>Adoption Credit</h2>
+<p>The maximum adoption credit for 2026 is <strong>$17,280</strong> per eligible child (up from $16,810 in 2025). The credit begins to phase out for taxpayers with modified AGI above $259,190 and is completely phased out at $299,190. Qualifying expenses include adoption fees, court costs, attorney fees, and travel expenses.</p>
+
+<h2>Foreign Earned Income Exclusion</h2>
+<p>U.S. citizens and resident aliens living abroad may exclude up to <strong>$132,900</strong> of foreign earned income from U.S. taxation in 2026 (up from $130,000 in 2025). This exclusion is available to qualifying taxpayers under the bona fide residence or physical presence tests.</p>
+
+<h2>What These Numbers Mean in Practice</h2>
+<ul>
+  <li><strong>If you're a low-to-moderate income worker:</strong> Check EITC eligibility every year — many eligible taxpayers miss the credit. Our <a href="/income-tax-calculator">income tax calculator</a> factors in common credits including the EITC.</li>
+  <li><strong>If you exercise stock options:</strong> AMT planning is critical. A large ISO exercise in a single year can trigger significant AMT liability. Consider spreading exercises across tax years.</li>
+  <li><strong>If you have a taxable estate:</strong> The $15 million exemption is historically high. Annual gifting ($19,000 per recipient) is a simple strategy to gradually reduce estate size.</li>
+  <li><strong>If you have an FSA:</strong> Use-it-or-lose-it rules still apply beyond the carryover limit. Plan your elections carefully at open enrollment.</li>
+</ul>
+
+<h2>Source</h2>
+<p>All figures sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a> and <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noopener">IRS IR-2025-103</a>. For the full picture of 2026 changes, see our guides on <a href="/blog/2026-tax-brackets-standard-deduction-changes">2026 tax brackets</a> and the <a href="/blog/2026-standard-deduction-increase">2026 standard deduction</a>.</p>
     `,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
