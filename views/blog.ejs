@@ -99,18 +99,22 @@
       </div>
 
       <div class="blog-grid">
-        <% posts.forEach(function(post) { %>
-          <a href="/blog/<%= post.slug %>" class="blog-card">
-            <div class="card-meta">
-              <span class="card-category"><%= post.category %></span>
-              <span>•</span>
-              <span><%= post.date %></span>
-            </div>
-            <h2><%= post.title %></h2>
-            <p><%= post.excerpt %></p>
-            <div class="card-author-line">By <%= post.author %></div>
-          </a>
-        <% }) %>
+        <% if (typeof posts !== 'undefined' && posts.length > 0) { %>
+          <% posts.forEach(function(post) { %>
+            <a href="/blog/<%= post.slug %>" class="blog-card">
+              <div class="card-meta">
+                <span class="card-category"><%= post.category %></span>
+                <span>•</span>
+                <span><%= post.date %></span>
+              </div>
+              <h2><%= post.title %></h2>
+              <p><%= post.excerpt %></p>
+              <div class="card-author-line">By <%= post.author %></div>
+            </a>
+          <% }) %>
+        <% } else { %>
+          <p>No blog posts found.</p>
+        <% } %>
       </div>
 
       <div class="ad-zone">
