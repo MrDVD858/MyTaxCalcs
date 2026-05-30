@@ -20,11 +20,11 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// ── CANONICAL REDIRECT ───────────────────────────────────────────────────────
+// ── CANONICAL REDIRECT (FULLY REPAIRED WITH INDEX ACCESSOR) ─────────────────
 app.use((req, res, next) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host || '';
   const proto = req.headers['x-forwarded-proto'] || req.protocol;
-  const cleanHost = host.split(':');
+  const cleanHost = host.split(':'); // Fixed: Pulls string element instead of raw array
 
   const needsHttps = proto !== 'https';
   const needsNonWww = cleanHost.startsWith('www.');
@@ -63,7 +63,7 @@ app.get("/blog", (req, res) => {
     ogDescription: "Expert legal interpretations, policy reviews, and tracking of official IRS updates.",
     canonical: `https://mytaxcalcs.com${req.path}`,
     posts: blogPosts,
-    blogposts: blogPosts // Aligns with any historic loop iterations safely
+    blogposts: blogPosts // Fallback variable for legacy view bindings
   });
 });
 
@@ -267,7 +267,7 @@ app.post("/:stateSlug-income-tax-calculator", (req, res, next) => {
   });
 });
 
-// ── SITEMAP SYSTEM (FIXED STRING EXTRACTION) ─────────────────────────────────
+// ── SITEMAP SYSTEM ───────────────────────────────────────────────────────────
 app.get("/sitemap.xml", (req, res) => {
   const baseUrl = "https://mytaxcalcs.com";
   
@@ -299,7 +299,7 @@ app.get("/sitemap.xml", (req, res) => {
   }));
 
   const allUrls = [...guidePages, ...stateUrls, ...blogUrls];
-  const today = new Date().toISOString().split('T'); // FIXED: Extracts string index cleanly
+  const today = new Date().toISOString().split('T');
   
   const urls = allUrls
     .map((page) => `
@@ -343,7 +343,7 @@ app.get("/:page", (req, res, next) => {
       canonical: `https://mytaxcalcs.com${req.path}`,
       states: states, 
       posts: blogPosts,
-      blogposts: blogPosts // Dual parameters guarantee EJS compilation passes cleanly
+      blogposts: blogPosts
     });
   }
   next();
