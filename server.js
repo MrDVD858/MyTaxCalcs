@@ -54,7 +54,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// ── DYNAMIC BLOG SYSTEM ROUTES ───────────────────────────────────────────────
+// ── DYNAMIC BLOG SYSTEM ROUTES (PLACED HIGH UP FOR PRECEDENCE) ────────────────
 app.get("/blog", (req, res) => {
   res.render("blog", {
     pageTitle: "MyTaxCalcs Editorial Blog | IRS Insights",
@@ -266,7 +266,7 @@ app.post("/:stateSlug-income-tax-calculator", (req, res, next) => {
   });
 });
 
-// ── SITEMAP SYSTEM (DYNAMIC GENERATION) ──────────────────────────────────────
+// ── SITEMAP SYSTEM ───────────────────────────────────────────────────────────
 app.get("/sitemap.xml", (req, res) => {
   const baseUrl = "https://mytaxcalcs.com";
   
@@ -343,7 +343,7 @@ app.get("/ads.txt", (req, res) => {
   res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
 });
 
-// ── CATCH-ALL STATIC PAGES & CORE HUBS (MUST STAY BELOW EXPLICIT ENDPOINTS) ──
+// ── CATCH-ALL STATIC PAGES & HUBS (SAFELY MOVED TO THE VERY BOTTOM) ──────────
 app.get("/:page", (req, res, next) => {
   const page = req.params.page;
   
