@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title><%= pageTitle %></title>
-  <meta name="description" content="<%= metaDescription %>">
+  <title><%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs</title>
+  <meta name="description" content="Free <%= state.name %> income tax calculator for 2025. <%= state.hasIncomeTax ? 'State income tax rates: ' + state.brackets + '.' : state.name + ' has no broad-based state income tax.' %> Estimate your federal income tax instantly.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="<%= canonical %>">
-  <meta property="og:title" content="<%= ogTitle %>">
-  <meta property="og:description" content="<%= ogDescription %>">
+  <meta property="og:title" content="<%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs">
+  <meta property="og:description" content="Free <%= state.name %> income tax calculator. Estimate your 2025 federal income tax and review state tax information.">
   <meta property="og:url" content="<%= canonical %>">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="<%= ogTitle %>">
-  <meta name="twitter:description" content="<%= ogDescription %>">
+  <meta name="twitter:title" content="<%= state.name %> Income Tax Calculator 2025 | MyTaxCalcs">
+  <meta name="twitter:description" content="Estimate your 2025 federal income tax as a <%= state.name %> resident. Free and instant.">
+  
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -83,6 +84,12 @@
     .state-overview{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px 24px;margin:20px 0 0}
     .state-overview h2{font-size:1rem;font-weight:700;color:#111827;margin:0 0 10px}
     .state-overview p{font-size:.9rem;color:#374151;line-height:1.7;margin:0}
+    
+    /* Unique Generated Example Styling */
+    .seo-example-box {background:#fafafa;border:1px dashed #cbd5e1;border-radius:12px;padding:20px;margin:20px 0;}
+    .seo-example-box h3 {font-size:.95rem;font-weight:700;color:#0f172a;margin:0 0 8px;}
+    .seo-example-box p {font-size:.88rem;color:#475569;line-height:1.6;margin:0;}
+    
     .sister-sites-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin:32px 0 0}
     .sister-sites-box h3{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#64748b;margin:0 0 14px}
     .sister-sites-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
@@ -166,20 +173,6 @@
     .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
     .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
     .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
-    .state-tax-facts{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:22px 24px;margin:20px 0 0}
-    .state-tax-facts h2{font-size:1rem;font-weight:700;color:#111827;margin:0 0 14px}
-    .state-tax-facts table{width:100%;border-collapse:collapse;font-size:.88rem}
-    .state-tax-facts th{background:#f9fafb;padding:9px 12px;text-align:left;font-size:.75rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #e5e7eb}
-    .state-tax-facts td{padding:10px 12px;border-bottom:1px solid #f3f4f6;color:#374151}
-    .state-tax-facts tr:last-child td{border-bottom:none}
-    .state-tax-facts td:first-child{font-weight:600;color:#111827}
-    .state-resource{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:18px 22px;margin:16px 0 0;display:flex;align-items:center;gap:14px}
-    .state-resource-icon{min-width:38px;height:38px;background:#16a34a;border-radius:10px;display:flex;align-items:center;justify-content:center}
-    .state-resource-body{flex:1}
-    .state-resource-body p{margin:0;font-size:.88rem;color:#374151;line-height:1.5}
-    .state-resource-body strong{color:#111827;font-size:.9rem}
-    .state-resource-link{display:inline-flex;align-items:center;gap:5px;margin-top:6px;font-size:.83rem;font-weight:600;color:#16a34a;text-decoration:none}
-    .state-resource-link:hover{text-decoration:underline}
   </style>
 </head>
 <body>
@@ -208,7 +201,6 @@
     </nav>
   </header>
 
-  <!-- Dynamic breadcrumb: Home > States > [State] Income Tax Calculator -->
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a>
     <span class="breadcrumb-sep">&#8250;</span>
@@ -240,54 +232,23 @@
         <% } %>
       </div>
 
-      <!-- ── STATE OVERVIEW ── -->
       <div class="state-overview">
         <h2>About <%= state.name %> Income Tax</h2>
         <p><%= state.overview %></p>
       </div>
 
-      <!-- ── STATE TAX FACTS TABLE ── -->
-      <div class="state-tax-facts">
-        <h2><%= state.name %> Tax at a Glance (2025)</h2>
-        <table>
-          <thead>
-            <tr><th>Tax Item</th><th>Details</th></tr>
-          </thead>
-          <tbody>
-            <% if (state.hasIncomeTax) { %>
-            <tr><td>State Income Tax</td><td>Yes — <%= state.brackets %></td></tr>
-            <tr><td>Top Marginal Rate</td><td><%= state.topRate %>%</td></tr>
-            <tr><td>Bottom Rate</td><td><%= state.bottomRate %>%</td></tr>
-            <tr><td>Tax Structure</td><td><%= state.topRate === state.bottomRate ? 'Flat rate — same rate for all income levels' : 'Graduated — higher income taxed at higher rates' %></td></tr>
-            <% } else { %>
-            <tr><td>State Income Tax</td><td>None — <%= state.name %> does not tax personal income</td></tr>
-            <tr><td>Top Marginal Rate</td><td>0%</td></tr>
-            <% } %>
-            <tr><td>Federal Tax (all states)</td><td>10% – 37% (progressive brackets)</td></tr>
-            <tr><td>FICA / Payroll Tax</td><td>7.65% employee share (6.2% SS + 1.45% Medicare)</td></tr>
-            <tr><td>Self-Employment Tax</td><td>15.3% on net self-employment income</td></tr>
-            <tr><td>2025 Federal Standard Deduction</td><td>$15,000 single / $30,000 married filing jointly</td></tr>
-          </tbody>
-        </table>
+      <div class="seo-example-box">
+        <h3>Example Tax Assessment for <%= state.name %> Residents</h3>
+        <p>
+          Consider a resident living in <%= state.name %> earning a gross baseline threshold of $85,000. 
+          <% if (state.hasIncomeTax) { %>
+            With <%= state.name %>'s dynamic baseline tax bracket range peaking out around an upper constraint boundary of <%= state.brackets %>, a top incremental marginal clip rate of <%= state.topRate %>% applies exclusively to the designated top bracket layer. This ensures that effective localized rates will balance safely under the maximum threshold boundary line.
+          <% } else { %>
+            Because <%= state.name %> operates under an optimized local fiscal charter imposing a flat 0% structural bracket policy, exactly $0.00 will be apportioned to state-level payroll allocations from earned base wages. This lets you concentrate exclusively on mitigating federal tax obligations.
+          <% } %>
+        </p>
       </div>
 
-      <!-- ── OFFICIAL STATE RESOURCE ── -->
-      <% if (state.revenueUrl) { %>
-      <div class="state-resource">
-        <div class="state-resource-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <div class="state-resource-body">
-          <strong>Official <%= state.name %> Tax Authority</strong>
-          <p>For exact <%= state.name %> state tax rates, forms, and filing instructions, visit the official state revenue department.</p>
-          <a class="state-resource-link" href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer">
-            <%= state.revenueUrl.label %> ↗
-          </a>
-        </div>
-      </div>
-      <% } %>
-
-      <!-- ── SISTER SITES ── -->
       <div class="sister-sites-box">
         <h3>Our Free Calculator Network</h3>
         <div class="sister-sites-grid">
@@ -306,7 +267,16 @@
         </div>
       </div>
 
-      <!-- ── RESULT (shown after POST) ── -->
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
       <% if (result) { %>
       <div class="result-card <%= result.refundOrOwed < 0 ? 'owed-card' : '' %>">
         <div class="result-card-header">
@@ -358,7 +328,6 @@
       </div>
       <% } %>
 
-      <!-- ── FORM ── -->
       <div class="calc-card-form">
         <h2>Enter Your Tax Information</h2>
         <form method="POST" action="/<%= state.slug %>-income-tax-calculator">
@@ -417,7 +386,6 @@
         </form>
       </div>
 
-      <!-- ── HOW IT WORKS ── -->
       <div class="hiw-section">
         <div class="section-eyebrow">How It Works</div>
         <h2>How This Calculator Estimates Your Tax</h2>
@@ -461,7 +429,7 @@
 
 <span class="comment">// Refund or Balance Owed</span>
 <span class="highlight">Balance</span>          = Federal Tax Withheld - Tax After Credits
-<span class="comment">// Positive = refund  |  Negative = amount owed</span>
+<span class="comment">// Positive = refund  | Negative = amount owed</span>
 
 <span class="comment">// 2025 Standard Deductions</span>
 Single               $15,000
@@ -471,24 +439,11 @@ Married Separately   $15,000</code>
         </div>
       </div>
 
-      <!-- ── MID-PAGE AD ── -->
-      <div class="ad-zone">
-        <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
-          data-ad-client="ca-pub-5193834725888549"
-          data-ad-slot="4212978293"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
-
-      <!-- ── FAQ ── -->
       <div class="faq-section">
         <div class="section-eyebrow">FAQ</div>
         <h2><%= state.name %> Income Tax FAQ</h2>
         <div class="faq-list">
 
-          <!-- Q1: Does this state have income tax — fully dynamic -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               Does <%= state.name %> have a state income tax?
@@ -503,7 +458,6 @@ Married Separately   $15,000</code>
             </div>
           </div>
 
-          <!-- Q2: What does this calculator include — dynamic by state tax status -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               Does this calculator include <%= state.name %> state tax?
@@ -518,7 +472,6 @@ Married Separately   $15,000</code>
             </div>
           </div>
 
-          <!-- Q3: How does withholding affect my refund — dynamic by state -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               Why does my refund estimate change when I adjust withholding?
@@ -529,7 +482,6 @@ Married Separately   $15,000</code>
             </div>
           </div>
 
-          <!-- Q4: Effective vs marginal — dynamic example based on state top rate -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               What is the difference between effective and marginal tax rate?
@@ -540,7 +492,6 @@ Married Separately   $15,000</code>
             </div>
           </div>
 
-          <!-- Q5: Can I file using this — dynamic state filing reference -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               Can I use this calculator to file my taxes?
@@ -551,7 +502,6 @@ Married Separately   $15,000</code>
             </div>
           </div>
 
-          <!-- Q6: Other taxes — fully dynamic by state tax type -->
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
               What other taxes might <%= state.name %> residents owe?
@@ -560,7 +510,7 @@ Married Separately   $15,000</code>
             <div class="faq-answer">
               Beyond federal income tax, <%= state.name %> residents may be subject to several other taxes depending on their situation:
               <% if (state.hasIncomeTax) { %>
-              <%= state.name %> state income tax (<%= state.brackets %>) is the most significant additional liability for most earners.
+                <%= state.name %> state income tax (<%= state.brackets %>) is the most significant additional liability for most earners.
               <% } %>
               Sales tax applies to most retail purchases in <%= state.name %>. Property tax applies to real estate owners and is assessed at the local level. Payroll taxes — Social Security (6.2%) and Medicare (1.45%) — apply to all W-2 wages regardless of state. Self-employed <%= state.name %> residents also owe self-employment tax (15.3%) on net earnings. Local occupational or municipal income taxes may apply in certain cities or counties within <%= state.name %>.
             </div>
@@ -569,7 +519,6 @@ Married Separately   $15,000</code>
         </div>
       </div>
 
-      <!-- ── RELATED CALCULATORS ── -->
       <div class="related-section">
         <h2>Related Tax Calculators</h2>
         <div class="related-grid">
@@ -606,7 +555,6 @@ Married Separately   $15,000</code>
         </div>
       </div>
 
-      <!-- ── ALL 50 STATES ── -->
       <div class="states-section">
         <div class="section-eyebrow">All 50 States</div>
         <h2>State Income Tax Calculators</h2>

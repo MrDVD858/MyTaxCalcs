@@ -145,6 +145,16 @@
         <p>Estimate your 2025 federal income tax, taxable income, refund or amount owed, effective tax rate, and marginal tax rate.</p>
       </div>
 
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
       <% if (result) { %>
       <div class="result-card">
         <div class="result-card-header">
@@ -183,16 +193,6 @@
             <div class="ri-value"><%= (result.marginalRate * 100).toFixed(1) %>%</div>
           </div>
         </div>
-      </div>
-
-      <div class="ad-zone">
-        <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
-          data-ad-client="ca-pub-5193834725888549"
-          data-ad-slot="5205436277"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
       <% } %>
 
