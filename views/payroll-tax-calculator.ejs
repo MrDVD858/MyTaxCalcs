@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Free Payroll Tax Calculator 2025 | MyTaxCalcs</title>
-  <meta name="description" content="Free payroll tax calculator for 2025. Estimate federal withholding, Social Security tax, Medicare tax, state withholding, and net take-home pay per paycheck.">
+  <title><%= pageTitle %></title>
+  <meta name="description" content="<%= metaDescription %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="<%= canonical %>">
-  <meta property="og:title" content="Free Payroll Tax Calculator 2025 | MyTaxCalcs">
-  <meta property="og:description" content="Estimate paycheck withholding, Social Security, Medicare, state withholding, and net pay for 2025.">
+  <meta property="og:title" content="<%= ogTitle %>">
+  <meta property="og:description" content="<%= ogDescription %>">
   <meta property="og:url" content="<%= canonical %>">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Free Payroll Tax Calculator 2025 | MyTaxCalcs">
-  <meta name="twitter:description" content="Estimate your 2025 paycheck taxes and take-home pay for free.">
+  <meta name="twitter:title" content="<%= ogTitle %>">
+  <meta name="twitter:description" content="<%= ogDescription %>">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -164,40 +164,40 @@
         </div>
         <div class="result-primary">
           <span class="result-label">Estimated Net Pay</span>
-          <span class="result-amount">$<%= result.netPay.toFixed(2) %></span>
+          <span class="result-amount">$<%= typeof result.netPay === 'number' ? result.netPay.toFixed(2) : result.netPay %></span>
         </div>
         <div class="result-grid">
           <div class="result-item">
             <div class="ri-label">Gross Pay</div>
-            <div class="ri-value">$<%= result.grossPay.toFixed(2) %></div>
+            <div class="ri-value">$<%= typeof result.grossPay === 'number' ? result.grossPay.toFixed(2) : result.grossPay %></div>
           </div>
           <div class="result-item">
             <div class="ri-label">Federal Withholding Est.</div>
-            <div class="ri-value red">$<%= result.estimatedFederalWithholding.toFixed(2) %></div>
+            <div class="ri-value red">$<%= typeof result.estimatedFederalWithholding === 'number' ? result.estimatedFederalWithholding.toFixed(2) : result.estimatedFederalWithholding %></div>
           </div>
           <div class="result-item">
             <div class="ri-label">Social Security Tax</div>
-            <div class="ri-value red">$<%= result.socialSecurityTax.toFixed(2) %></div>
+            <div class="ri-value red">$<%= typeof result.socialSecurityTax === 'number' ? result.socialSecurityTax.toFixed(2) : result.socialSecurityTax %></div>
           </div>
           <div class="result-item">
             <div class="ri-label">Medicare Tax</div>
-            <div class="ri-value red">$<%= result.medicareTax.toFixed(2) %></div>
+            <div class="ri-value red">$<%= typeof result.medicareTax === 'number' ? result.medicareTax.toFixed(2) : result.medicareTax %></div>
           </div>
           <div class="result-item">
             <div class="ri-label">State Withholding Est.</div>
-            <div class="ri-value red">$<%= result.stateWithholding.toFixed(2) %></div>
+            <div class="ri-value red">$<%= typeof result.stateWithholding === 'number' ? result.stateWithholding.toFixed(2) : result.stateWithholding %></div>
           </div>
           <div class="result-item">
             <div class="ri-label">Total Taxes This Check</div>
-            <div class="ri-value red">$<%= result.totalTaxes.toFixed(2) %></div>
+            <div class="ri-value red">$<%= typeof result.totalTaxes === 'number' ? result.totalTaxes.toFixed(2) : result.totalTaxes %></div>
           </div>
           <div class="result-item">
             <div class="ri-label">Est. Annual Net Pay</div>
-            <div class="ri-value">$<%= result.estimatedAnnualNetPay.toFixed(2) %></div>
+            <div class="ri-value">$<%= typeof result.estimatedAnnualNetPay === 'number' ? result.estimatedAnnualNetPay.toFixed(2) : result.estimatedAnnualNetPay %></div>
           </div>
           <div class="result-item">
             <div class="ri-label">Additional Medicare Tax</div>
-            <div class="ri-value">$<%= result.additionalMedicareTax.toFixed(2) %></div>
+            <div class="ri-value">$<%= typeof result.additionalMedicareTax === 'number' ? result.additionalMedicareTax.toFixed(2) : result.additionalMedicareTax %></div>
           </div>
         </div>
       </div>

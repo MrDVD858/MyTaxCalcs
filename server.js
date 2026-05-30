@@ -222,7 +222,7 @@ app.post("/sales-tax-calculator", (req, res) => {
   });
 });
 
-// ── PAYROLL TAX ───────────────────────────────────────────────────────────────
+// ── PAYROLL TAX ROUTES (FIXED) ───────────────────────────────────────────────
 app.get("/payroll-tax-calculator", (req, res) => {
   res.render("payroll-tax-calculator", {
     pageTitle: "Free Payroll Tax Calculator 2025 | MyTaxCalcs",
@@ -230,8 +230,8 @@ app.get("/payroll-tax-calculator", (req, res) => {
     ogTitle: "Free Payroll Tax Calculator 2025 | MyTaxCalcs",
     ogDescription: "Estimate paycheck withholding, Social Security, Medicare, state withholding, and net pay for 2025.",
     canonical: `https://mytaxcalcs.com${req.path}`,
-    result: null,   // This must be explicitly null on initial load
-    form: {}        // This must be an empty object so form fields don't throw undefined errors
+    result: null,   
+    form: {}        
   });
 });
 
@@ -242,6 +242,7 @@ app.post("/payroll-tax-calculator", (req, res) => {
     metaDescription: "Free payroll tax calculator for 2025. Estimate paycheck withholding, Social Security, Medicare, state withholding, and net take-home pay.",
     ogTitle: "Payroll Tax Calculator 2025 | MyTaxCalcs",
     ogDescription: "Estimate paycheck withholding, FICA taxes, and net take-home pay for 2025.",
+    canonical: `https://mytaxcalcs.com${req.path}`, // Added to fix the template crash
     result,
     form: req.body
   });
