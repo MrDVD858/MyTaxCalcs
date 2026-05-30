@@ -22,24 +22,35 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
   <style>
-    .breadcrumb{max-width:1100px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb{max-width:1000px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
     .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
     .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
-    .ad-zone{text-align:center;margin:32px auto;max-width:1100px;padding:0 24px;min-height:90px}
+    .hub-page{max-width:1000px;margin:0 auto;padding:0 24px 60px}
+    .hub-header{padding:28px 0 32px;border-bottom:1px solid #e5e7eb;margin-bottom:32px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;background:#ecfdf5;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .hub-header h1{font-size:2.2rem;font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .hub-header p{font-size:1.05rem;color:#6b7280;margin:0;max-width:640px;line-height:1.5}
+    .hub-section-title{font-size:1.3rem;font-weight:800;color:#111827;margin:0 0 20px;display:flex;align-items:center;gap:8px}
+    .hub-section-title span{color:#9ca3af;font-size:1rem;font-weight:500}
+    .calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
+    @media(max-width:850px){.calc-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.calc-grid{grid-template-columns:1fr}}
+    .calc-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:24px;text-decoration:none;color:inherit;transition:all .15s;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(0,0,0,.01)}
+    .calc-card:hover{border-color:#16a34a;box-shadow:0 8px 24px rgba(22,163,74,.05);transform:translateY(-2px)}
+    .card-icon-wrap{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    .calc-card h3{font-size:1.05rem;font-weight:700;color:#111827;margin:0 0 8px}
+    .calc-card p{font-size:.88rem;color:#6b7280;line-height:1.5;margin:0 0 16px;flex-grow:1}
+    .card-link{font-size:.82rem;font-weight:700;color:#16a34a;display:inline-flex;align-items:center;gap:4px}
+    .guides-box{background:#f9fafb;border:1px solid #e5e7eb;border-radius:20px;padding:32px}
+    .guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media(max-width:850px){.guides-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:520px){.guides-grid{grid-template-columns:1fr}}
+    .guide-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;text-decoration:none;color:inherit;transition:all .15s;display:flex;flex-direction:column;gap:4px}
+    .guide-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(0,0,0,.03)}
+    .guide-card strong{font-size:.9rem;font-weight:700;color:#111827}
+    .guide-card span{font-size:.78rem;color:#9ca3af}
+    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
     .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
-    .guides-section{max-width:1100px;margin:0 auto;padding:0 24px 48px}
-    .guides-section .section-label{margin-bottom:16px}
-    .guides-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    @media(max-width:700px){.guides-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:440px){.guides-grid{grid-template-columns:1fr}}
-    .guide-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:18px 16px;text-decoration:none;color:inherit;transition:border-color .15s,box-shadow .15s,transform .15s;display:flex;flex-direction:column;gap:6px}
-    .guide-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.1);transform:translateY(-2px)}
-    .guide-card-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
-    .guide-card strong{font-size:.88rem;font-weight:700;color:#111827}
-    .guide-card span{font-size:.78rem;color:#9ca3af;line-height:1.4}
-    .guide-tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:2px;width:fit-content}
-    .guide-tag.official{background:#ecfdf5;color:#16a34a}
-    .guide-tag.projected{background:#fef3c7;color:#92400e}
   </style>
 </head>
 <body>
@@ -64,7 +75,7 @@
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </div>
-      <a class="nav-cta" href="/income-tax-calculator">Get Started</a>
+      <a class="nav-cta" href="/calculators">All Calculators</a>
     </nav>
   </header>
 
@@ -74,282 +85,122 @@
     <span>Calculators</span>
   </nav>
 
-  <section class="calc-hero">
-    <div class="calc-hero-inner">
-      <div class="section-label">Free Tax Tools</div>
-      <h1>Tax Calculators and Guides</h1>
-      <p>Browse free calculators for federal income tax, tax refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates. Plus free tax guides covering every major topic.</p>
-    </div>
-  </section>
+  <main>
+    <div class="hub-page">
 
-  <main class="calc-main">
-
-    <!-- ── ALL CALCULATORS ── -->
-    <div class="section-label" style="margin-bottom:16px;">All Calculators</div>
-    <div class="cards-grid" style="margin-bottom:48px;">
-
-      <a class="calc-card" href="/income-tax-calculator">
-        <div class="calc-card-icon" style="background:#ecfdf5;color:#16a34a;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h4M7 12h8"/></svg>
+      <div class="hub-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+          Financial Array
         </div>
-        <div class="calc-card-body"><h2>Income Tax Calculator</h2><p>Estimate federal taxable income, tax owed, refund, and effective tax rate.</p></div>
-        <span class="calc-card-link">Open Calculator <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-      <a class="calc-card" href="/tax-refund-calculator">
-        <div class="calc-card-icon" style="background:#f0fdf4;color:#15803d;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <div class="calc-card-body"><h2>Tax Refund Calculator</h2><p>Estimate your federal refund or amount owed using withholding, credits, and payments.</p></div>
-        <span class="calc-card-link">Open Calculator <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-      <a class="calc-card" href="/self-employment-tax-calculator">
-        <div class="calc-card-icon" style="background:#eff6ff;color:#2563eb;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <div class="calc-card-body"><h2>Self-Employment Tax Calculator</h2><p>Estimate Social Security and Medicare tax for freelance, contractor, and gig income.</p></div>
-        <span class="calc-card-link">Open Calculator <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-      <a class="calc-card" href="/capital-gains-tax-calculator">
-        <div class="calc-card-icon" style="background:#fef3c7;color:#d97706;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-        </div>
-        <div class="calc-card-body"><h2>Capital Gains Tax Calculator</h2><p>Estimate short-term and long-term tax on stocks, crypto, real estate, or other asset sales.</p></div>
-        <span class="calc-card-link">Open Calculator <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-      <a class="calc-card" href="/sales-tax-calculator">
-        <div class="calc-card-icon" style="background:#fdf4ff;color:#9333ea;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
-        </div>
-        <div class="calc-card-body"><h2>Sales Tax Calculator</h2><p>Estimate sales tax, combined tax rate, discount amount, and final purchase total.</p></div>
-        <span class="calc-card-link">Open Calculator <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-      <a class="calc-card" href="/payroll-tax-calculator">
-        <div class="calc-card-icon" style="background:#fff1f2;color:#e11d48;">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-        </div>
-        <div class="calc-card-body"><h2>Payroll Tax Calculator</h2><p>Estimate paycheck withholding, Social Security, Medicare, state withholding, and net pay.</p></div>
-        <span class="calc-card-link">Open Calculator <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
-
-    </div>
-
-    <!-- ── LEADERBOARD AD ── -->
-    <div class="ad-zone">
-      <div class="ad-zone-label">Advertisement</div>
-      <ins class="adsbygoogle" style="display:block"
-        data-ad-client="ca-pub-5193834725888549"
-        data-ad-slot="5205436277"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <!-- ── TAX GUIDES: all 22 cards ── -->
-    <div class="guides-section">
-      <div class="section-label" style="margin-bottom:16px;">Tax Guides</div>
-      <div class="guides-grid">
-
-        <a class="guide-card" href="/tax-brackets-2025">
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <strong>2025 Tax Brackets</strong>
-          <span>All 7 federal rates and income thresholds by filing status</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/tax-brackets-2026">
-          <div class="guide-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-          <strong>2026 Tax Brackets</strong>
-          <span>Projected thresholds for next tax year planning</span>
-          <span class="guide-tag projected">Projected</span>
-        </a>
-
-        <a class="guide-card" href="/standard-deduction-2025">
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
-          <strong>Standard Deduction 2025</strong>
-          <span>Official amounts by filing status and who qualifies</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/standard-deduction-2026">
-          <div class="guide-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg></div>
-          <strong>Standard Deduction 2026</strong>
-          <span>Projected amounts for forward tax planning</span>
-          <span class="guide-tag projected">Projected</span>
-        </a>
-
-        <a class="guide-card" href="/standard-deduction-vs-itemized">
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-          <strong>Standard vs Itemized Deductions</strong>
-          <span>Which method saves more tax and when to switch</span>
-          <span class="guide-tag official">Evergreen</span>
-        </a>
-
-        <a class="guide-card" href="/capital-gains-tax-rates-2025">
-          <div class="guide-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg></div>
-          <strong>Capital Gains Tax Rates 2025</strong>
-          <span>Long-term and short-term rates, NIIT thresholds</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/capital-gains-tax-rates-2026">
-          <div class="guide-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg></div>
-          <strong>Capital Gains Tax Rates 2026</strong>
-          <span>Projected long-term and short-term rates</span>
-          <span class="guide-tag projected">Projected</span>
-        </a>
-
-        <a class="guide-card" href="/fica-tax-rate-2025">
-          <div class="guide-card-icon" style="background:#fff1f2;color:#e11d48;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
-          <strong>FICA Tax Rate 2025</strong>
-          <span>Social Security and Medicare rates for employees</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/self-employment-tax-rate-2025">
-          <div class="guide-card-icon" style="background:#eff6ff;color:#2563eb;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
-          <strong>Self-Employment Tax Rate 2025</strong>
-          <span>How the 15.3% SE tax rate works</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/quarterly-estimated-taxes">
-          <div class="guide-card-icon" style="background:#f0fdf4;color:#15803d;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <strong>Quarterly Estimated Taxes</strong>
-          <span>Due dates, safe harbor rules, and how to pay</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/tax-filing-deadline-2026">
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <strong>Tax Filing Deadline 2026</strong>
-          <span>April 15 original, October 15 extension, all key dates</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/w2-vs-1099">
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-          <strong>W-2 vs 1099</strong>
-          <span>Employee vs contractor tax differences explained</span>
-          <span class="guide-tag official">Evergreen</span>
-        </a>
-
-        <a class="guide-card" href="/roth-ira-conversion-tax">
-          <div class="guide-card-icon" style="background:#f5f3ff;color:#7c3aed;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <strong>Roth IRA Conversion Tax</strong>
-          <span>How conversions are taxed and when to convert</span>
-          <span class="guide-tag official">Evergreen</span>
-        </a>
-
-        <a class="guide-card" href="/child-tax-credit-2025">
-          <div class="guide-card-icon" style="background:#ecfeff;color:#0891b2;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
-          <strong>Child Tax Credit 2025</strong>
-          <span>Up to $2,000 per child, $1,700 refundable (ACTC)</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-
-        <a class="guide-card" href="/401k-contribution-limits-2025">
-          <div class="guide-card-icon" style="background:#eff6ff;color:#2563eb;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
-          <strong>401(k) Contribution Limits 2025</strong>
-          <span>Employee and employer limits, catch-up rules, tax impact</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/hsa-contribution-limits-2025">
-          <div class="guide-card-icon" style="background:#ecfeff;color:#0891b2;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-          <strong>HSA Contribution Limits 2025</strong>
-          <span>Triple tax advantage, HDHP rules, and 2025 limits</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/marginal-vs-effective-tax-rate">
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-          <strong>Marginal vs Effective Tax Rate</strong>
-          <span>What each rate means and when to use them</span>
-          <span class="guide-tag official">Evergreen</span>
-        </a>
-
-        <a class="guide-card" href="/bonus-tax-rate-2025">
-          <div class="guide-card-icon" style="background:#fef3c7;color:#d97706;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-          <strong>Bonus Tax Rate 2025</strong>
-          <span>How bonuses are withheld and what you actually owe</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/irs-payment-plan-guide">
-          <div class="guide-card-icon" style="background:#fff1f2;color:#dc2626;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-          <strong>IRS Payment Plan Guide</strong>
-          <span>How to set up an installment agreement with the IRS</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/tax-extension-2026">
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
-          <strong>Tax Extension 2026</strong>
-          <span>How to file Form 4868 and what an extension does and doesn't do</span>
-          <span class="guide-tag official">Official</span>
-        </a>
-
-        <a class="guide-card" href="/states">
-
-          <div class="guide-card-icon" style="background:#ecfdf5;color:#16a34a;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
-          <strong>State Tax Calculators</strong>
-          <span>Income tax estimates for all 50 states</span>
-          <span class="guide-tag official">All 50 States</span>
-        </a>
-
+        <h1>Free Financial &amp; Tax Calculators</h1>
+        <p>Select an interactive tool to estimate federal tax brackets, self-employment liabilities, paycheck take-home calculations, or investment capital gains.</p>
       </div>
-    </div>
 
-    <!-- ── MID-PAGE AD ── -->
-    <div class="ad-zone">
-      <div class="ad-zone-label">Advertisement</div>
-      <ins class="adsbygoogle" style="display:block"
-        data-ad-client="ca-pub-5193834725888549"
-        data-ad-slot="4212978293"
-        data-ad-format="auto"
-        data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
 
-    <!-- ── ALL 50 STATES ── -->
-    <section class="states-section" id="state-calculators">
-      <div class="states-section-inner">
-        <div class="section-header">
-          <div class="section-label">All 50 States</div>
-          <h2>State Income Tax Calculators</h2>
-          <p>Choose your state to estimate federal tax and review state-specific income tax information.</p>
-        </div>
-        <div class="state-list">
-          <% states.forEach(function(state) { %>
-            <a href="/<%= state.slug %>-income-tax-calculator"><%= state.name %></a>
-          <% }) %>
+      <h2 class="hub-section-title">Interactive Tax Tools <span>(6)</span></h2>
+      
+      <div class="calc-grid">
+        <a href="/income-tax-calculator" class="calc-card">
+          <div class="card-icon-wrap" style="background:#ecfdf5;color:#16a34a;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+          </div>
+          <h3>Income Tax Calculator</h3>
+          <p>Estimate annual 2025 federal tax liability levels and calculate your effective tax margin progressively.</p>
+          <span class="card-link">Open Calculator &#8594;</span>
+        </a>
+
+        <a href="/tax-refund-calculator" class="calc-card">
+          <div class="card-icon-wrap" style="background:#f0fdf4;color:#15803d;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          </div>
+          <h3>Tax Refund Calculator</h3>
+          <p>Estimate your final year-end IRS tax position using credits, itemized deductions, and withholding data points.</p>
+          <span class="card-link">Open Calculator &#8594;</span>
+        </a>
+
+        <a href="/self-employment-tax-calculator" class="calc-card">
+          <div class="card-icon-wrap" style="background:#eff6ff;color:#2563eb;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Self-Employment Tax</h3>
+          <p>Calculate 1099 freelance or contractor Social Security and Medicare liabilities alongside quarterly estimations.</p>
+          <span class="card-link">Open Calculator &#8594;</span>
+        </a>
+
+        <a href="/capital-gains-tax-calculator" class="calc-card">
+          <div class="card-icon-wrap" style="background:#fef3c7;color:#d97706;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+          </div>
+          <h3>Capital Gains Tax</h3>
+          <p>Analyze transaction margins across stocks or crypto using short-term profiles versus long-term brackets.</p>
+          <span class="card-link">Open Calculator &#8594;</span>
+        </a>
+
+        <a href="/sales-tax-calculator" class="calc-card">
+          <div class="card-icon-wrap" style="background:#fdf4ff;color:#9333ea;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
+          </div>
+          <h3>Sales Tax Calculator</h3>
+          <p>Extrapolate local sales tax increments, final receipt gross values, or break out reverse base calculations.</p>
+          <span class="card-link">Open Calculator &#8594;</span>
+        </a>
+
+        <a href="/payroll-tax-calculator" class="calc-card">
+          <div class="card-icon-wrap" style="background:#fff1f2;color:#e11d48;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          </div>
+          <h3>Payroll Tax Calculator</h3>
+          <p>Compute actual take-home net earnings per pay period by removing progressive withholding lines.</p>
+          <span class="card-link">Open Calculator &#8594;</span>
+        </a>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <div class="guides-box">
+        <h2 class="hub-section-title" style="margin-bottom:24px">Tax Guides &amp; Reference Material</h2>
+        <div class="guides-grid">
+          <a class="guide-card" href="/tax-brackets-2025"><strong>2025 Tax Brackets</strong><span>Ordinary income tax thresholds</span></a>
+          <a class="guide-card" href="/standard-deduction-2025"><strong>Standard Deduction 2025</strong><span>Baseline write-offs by status</span></a>
+          <a class="guide-card" href="/capital-gains-tax-rates-2025"><strong>Capital Gains Rates 2025</strong><span>Long-term asset tax percentages</span></a>
+          <a class="guide-card" href="/child-tax-credit-2025"><strong>Child Tax Credit 2025</strong><span>Qualifications & refund rules</span></a>
+          <a class="guide-card" href="/401k-contribution-limits-2025"><strong>401(k) Limits 2025</strong><span>Maximum tax-advantaged rules</span></a>
+          <a class="guide-card" href="/hsa-contribution-limits-2025"><strong>HSA Limits 2025</strong><span>Health savings pre-tax metrics</span></a>
+          <a class="guide-card" href="/bonus-tax-rate-2025"><strong>Bonus Tax Rate 2025</strong><span>Supplemental wage withholding tax</span></a>
+          <a class="guide-card" href="/marginal-vs-effective-tax-rate"><strong>Marginal vs Effective Rate</strong><span>How tax calculations split</span></a>
+          <a class="guide-card" href="/irs-payment-plan-guide"><strong>IRS Payment Plan</strong><span>Installment rules & fee structures</span></a>
+          <a class="guide-card" href="/tax-extension-2026"><strong>Tax Extension 2026</strong><span>How to request extra time</span></a>
+          <a class="guide-card" href="/w2-vs-1099"><strong>W-2 vs 1099</strong><span>Employee vs contractor tax rules</span></a>
+          <a class="guide-card" href="/quarterly-estimated-taxes"><strong>Quarterly Estimated Taxes</strong><span>Deadlines & safe harbor rules</span></a>
         </div>
       </div>
-    </section>
 
+    </div>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="footer-logo">
-            <span class="logo-mark">
-              <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
-                <rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/>
-                <rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
-                <rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
-                <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
-              </svg>
-            </span>
-            MyTaxCalcs
-          </a>
+          <a href="/" class="footer-logo"><span class="logo-mark"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/></svg></span>MyTaxCalcs</a>
           <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
         </div>
         <div class="footer-column">
@@ -378,9 +229,7 @@
           <a href="/quarterly-estimated-taxes">Quarterly Estimated Taxes</a>
         </div>
       </div>
-      <div class="footer-bottom">
-        <p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p>
-      </div>
+      <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
     </div>
   </footer>
 
