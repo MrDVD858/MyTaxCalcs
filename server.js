@@ -463,28 +463,29 @@ app.get("/tax-extension-2026", (req, res) => {
 });
 
 // ── BLOG HUB ──────────────────────────────────────────────────────────────────
+// ── FIXED BLOG SYSTEM ROUTES ─────────────────────────────────────────────────
 app.get("/blog", (req, res) => {
   res.render("blog", {
-    pageTitle: "Tax Blog: IRS News, Tax Law Changes & Guides | MyTaxCalcs",
-    metaDescription: "Stay current with IRS announcements, inflation adjustments, tax law changes, and plain-language tax guides. All content sourced from official IRS publications.",
-    ogTitle: "Tax Blog: IRS News & Tax Guides | MyTaxCalcs",
-    ogDescription: "IRS announcements, tax law changes, and plain-language guides for 2025 and 2026. All sourced from official IRS publications.",
+    pageTitle: "MyTaxCalcs Editorial Blog | IRS Insights",
+    metaDescription: "Expert legal interpretations, policy reviews, inflation adjustments, and clear tracking of official IRS releases.",
+    ogTitle: "MyTaxCalcs Editorial Blog | IRS Insights",
+    ogDescription: "Expert legal interpretations, policy reviews, and tracking of official IRS updates.",
+    canonical: `https://mytaxcalcs.com${req.path}`, // Feeds header metadata
     posts: blogPosts
   });
 });
 
-// ── BLOG POSTS ────────────────────────────────────────────────────────────────
 app.get("/blog/:slug", (req, res) => {
   const post = blogPosts.find((p) => p.slug === req.params.slug);
   if (!post) {
-    return res.status(404).send("Blog post not found.");
+    return res.status(404).render("404", { 
+      pageTitle: "Page Not Found",
+      canonical: `https://mytaxcalcs.com${req.path}`
+    });
   }
-  res.render("blog-post", {
-    pageTitle: `${post.title} | MyTaxCalcs`,
-    metaDescription: post.metaDescription || post.excerpt,
-    ogTitle: post.ogTitle || `${post.title} | MyTaxCalcs`,
-    ogDescription: post.ogDescription || post.excerpt,
-    post
+  res.render("blog-post", { 
+    post,
+    canonical: `https://mytaxcalcs.com${req.path}` // Added to fix the blank page crash!
   });
 });
 
