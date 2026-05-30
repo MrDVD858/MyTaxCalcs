@@ -60,7 +60,7 @@
     .result-item .ri-value { font-size: 1.15rem; font-weight: 700; color: #111827; }
     .result-item .ri-value.red { color: #dc2626; }
     
-    .ad-zone { text-align: center; margin: 28px 0; min-height: 90px; }
+    .ad-zone { text-align: center; margin: 28px 0; min-height: 120px; }
     .ad-zone-label { font-size: .7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
     
     .hiw-section { margin: 48px 0 0; }
@@ -151,12 +151,51 @@
 
       <div class="ad-zone">
         <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
           data-ad-client="ca-pub-5193834725888549"
           data-ad-slot="5205436277"
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-1');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
+      </div>
+
+      <div style="margin:0 0 24px;padding:16px 0;border-bottom:1px solid #e5e7eb;">
+        <p style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#16a34a;margin:0 0 10px;">Try next</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+        <a href="/income-tax-calculator" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none;color:inherit;" onmouseover="this.style.borderColor='#16a34a'" onmouseout="this.style.borderColor='#e5e7eb'">
+          <span style="font-size:1.3rem;">💰</span>
+          <div>
+            <p style="font-size:.8rem;font-weight:700;color:#111827;margin:0 0 2px;">Income Tax Calculator</p>
+            <p style="font-size:.72rem;color:#9ca3af;margin:0;">Estimate your federal tax bill</p>
+          </div>
+        </a>
+        <a href="/tax-refund-calculator" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none;color:inherit;" onmouseover="this.style.borderColor='#16a34a'" onmouseout="this.style.borderColor='#e5e7eb'">
+          <span style="font-size:1.3rem;">💵</span>
+          <div>
+            <p style="font-size:.8rem;font-weight:700;color:#111827;margin:0 0 2px;">Tax Refund Calculator</p>
+            <p style="font-size:.72rem;color:#9ca3af;margin:0;">Will you get a refund?</p>
+          </div>
+        </a>
+        <a href="/sales-tax-calculator" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none;color:inherit;" onmouseover="this.style.borderColor='#16a34a'" onmouseout="this.style.borderColor='#e5e7eb'">
+          <span style="font-size:1.3rem;">🛒</span>
+          <div>
+            <p style="font-size:.8rem;font-weight:700;color:#111827;margin:0 0 2px;">Sales Tax Calculator</p>
+            <p style="font-size:.72rem;color:#9ca3af;margin:0;">State & local sales tax</p>
+          </div>
+        </a>
+        </div>
       </div>
 
       <% if (result) { %>
