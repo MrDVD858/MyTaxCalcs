@@ -20,14 +20,12 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// ── FIXED CANONICAL REDIRECT ────────────────────────────────────────────────
+// ── CANONICAL REDIRECT ───────────────────────────────────────────────────────
 app.use((req, res, next) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host || '';
   const proto = req.headers['x-forwarded-proto'] || req.protocol;
-  
-  // Explicitly extracting index 0 to ensure it's a string
-  const hostParts = host.split(':');
-  const cleanHost = hostParts; 
+
+  const cleanHost = host.split(':')[0] || '';  // FIX: was assigning array instead of string
 
   const needsHttps = proto !== 'https';
   const needsNonWww = cleanHost.startsWith('www.');
@@ -40,7 +38,8 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname, "public")));
 
-// ── ROUTES ──────────────────────────────────────────────────────────────────
+// ── ROUTES ───────────────────────────────────────────────────────────────────
+
 app.get("/", (req, res) => {
   res.render("index", {
     pageTitle: "Free Tax Calculators & Guides 2025 | MyTaxCalcs",
@@ -50,6 +49,8 @@ app.get("/", (req, res) => {
     canonical: "https://mytaxcalcs.com"
   });
 });
+
+// ── BLOG ─────────────────────────────────────────────────────────────────────
 
 app.get("/blog", (req, res) => {
   res.render("blog", {
@@ -63,7 +64,24 @@ app.get("/blog", (req, res) => {
   });
 });
 
-// Income Tax
+app.get("/blog/:slug", (req, res) => {
+  const post = blogPosts.find(p => p.slug === req.params.slug);
+  if (!post) {
+    return res.status(404).render("404", { pageTitle: "Post Not Found" });
+  }
+  res.render("blog-post", {
+    pageTitle: post.title,
+    metaDescription: post.metaDescription,
+    ogTitle: post.ogTitle,
+    ogDescription: post.ogDescription,
+    canonical: `https://mytaxcalcs.com/blog/${post.slug}`,
+    post: post,
+    posts: blogPosts
+  });
+});
+
+// ── CALCULATORS ──────────────────────────────────────────────────────────────
+
 app.get("/income-tax-calculator", (req, res) => {
   res.render("income-tax-calculator", {
     pageTitle: "Income Tax Calculator 2025",
@@ -89,7 +107,8 @@ app.post("/income-tax-calculator", (req, res) => {
   });
 });
 
-// Catch-all for other calculators/pages
+// ── STATIC & CATCH-ALL PAGES ─────────────────────────────────────────────────
+
 app.get("/:page", (req, res, next) => {
   const page = req.params.page;
   const staticPages = ["about", "contact", "privacy-policy", "terms", "disclaimer", "calculators", "states"];
@@ -105,7 +124,8 @@ app.get("/:page", (req, res, next) => {
   next();
 });
 
-// 404 Fallback
+// ── 404 ──────────────────────────────────────────────────────────────────────
+
 app.use((req, res) => {
   res.status(404).render("404", { pageTitle: "Page Not Found" });
 });
