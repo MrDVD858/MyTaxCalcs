@@ -601,6 +601,12 @@ app.get("/ads.txt", (req, res) => {
   res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
 });
 
+// ── FORCE GOOGLE ADSENSE ADS.TXT ROUTE ───────────────────────────────────────
+app.get("/ads.txt", (req, res) => {
+  res.header("Content-Type", "text/plain");
+  res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
+});
+
 // ── START ─────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
   console.log(`MyTaxCalcs running at http://localhost:${PORT}`);
