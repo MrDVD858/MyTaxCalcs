@@ -24,7 +24,7 @@ app.use(express.json());
 app.use((req, res, next) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host || '';
   const proto = req.headers['x-forwarded-proto'] || req.protocol;
-  const cleanHost = host.split(':'); // Fixed string element extraction
+  const cleanHost = host.split(':');
 
   const needsHttps = proto !== 'https';
   const needsNonWww = cleanHost.startsWith('www.');
@@ -63,7 +63,7 @@ app.get("/blog", (req, res) => {
     ogDescription: "Expert legal interpretations, policy reviews, and tracking of official IRS updates.",
     canonical: `https://mytaxcalcs.com${req.path}`,
     posts: blogPosts,
-    blogposts: blogPosts // Dual passing guarantees line 66 in your original blog.ejs resolves safely
+    blogposts: blogPosts // Dual passing satisfies line 66 in blog.ejs perfectly
   });
 });
 
@@ -201,9 +201,179 @@ app.get("/capital-gains-tax-calculator", (req, res) => {
 });
 
 app.post("/capital-gains-tax-calculator", (req, res) => {
-const result = calculateCapitalGainsTax(req.body);
+  const result = calculateCapitalGainsTax(req.body); // Single CamelCase Word
   res.render("capital-gains-tax-calculator", {
     pageTitle: "Capital Gains Tax Results | MyTaxCalcs",
     metaDescription: "Review asset profits and short-term versus preferential long-term margin options.",
     ogTitle: "Capital Gains Tax Results | MyTaxCalcs",
-    ogDescription: "Review asset profits
+    ogDescription: "Review asset profits and short-term versus preferential long-term margin options.",
+    canonical: `https://mytaxcalcs.com${req.path}`,
+    result,
+    form: req.body
+  });
+});
+
+// Sales Tax Calculator
+app.get("/sales-tax-calculator", (req, res) => {
+  res.render("sales-tax-calculator", {
+    pageTitle: "Free Sales Tax Calculator | MyTaxCalcs",
+    metaDescription: "Extrapolate gross item invoice parameters or extract baseline pre-tax variables seamlessly.",
+    ogTitle: "Free Sales Tax Calculator | MyTaxCalcs",
+    ogDescription: "Extrapolate gross item invoice parameters or extract baseline pre-tax variables seamlessly.",
+    canonical: `https://mytaxcalcs.com${req.path}`,
+    result: null,
+    form: {}
+  });
+});
+
+app.post("/sales-tax-calculator", (req, res) => {
+  const result = calculateSalesTax(req.body);
+  res.render("sales-tax-calculator", {
+    pageTitle: "Sales Tax Computations | MyTaxCalcs",
+    metaDescription: "Review gross checkout totals and itemized assessment breakdowns.",
+    ogTitle: "Sales Tax Computations | MyTaxCalcs",
+    ogDescription: "Review gross checkout totals and itemized assessment breakdowns.",
+    canonical: `https://mytaxcalcs.com${req.path}`,
+    result,
+    form: req.body
+  });
+});
+
+// ── STATE INCOME TAX CALCULATOR ROUTE WHEEL ──────────────────────────────────
+app.get("/:stateSlug-income-tax-calculator", (req, res, next) => {
+  const state = states.find((s) => s.slug === req.params.stateSlug);
+  if (!state) return next();
+
+  res.render("state-income-tax-calculator", {
+    state,
+    states,
+    result: null,
+    form: {},
+    canonical: `https://mytaxcalcs.com${req.path}`
+  });
+});
+
+app.post("/:stateSlug-income-tax-calculator", (req, res, next) => {
+  const state = states.find((s) => s.slug === req.params.stateSlug);
+  if (!state) return next();
+
+  const result = calculateFederalIncomeTax(req.body);
+  res.render("state-income-tax-calculator", {
+    state,
+    states,
+    result,
+    form: req.body,
+    canonical: `https://mytaxcalcs.com${req.path}`
+  });
+});
+
+// ── SITEMAP SYSTEM ───────────────────────────────────────────────────────────
+app.get("/sitemap.xml", (req, res) => {
+  const baseUrl = "https://mytaxcalcs.com";
+  
+  const guidePages = [
+    { path: "",                                 priority: "1.0", freq: "daily"   },
+    { path: "/income-tax-calculator",           priority: "0.9", freq: "weekly"  },
+    { path: "/tax-refund-calculator",           priority: "0.9", freq: "weekly"  },
+    { path: "/self-employment-tax-calculator",  priority: "0.9", freq: "weekly"  },
+    { path: "/capital-gains-tax-calculator",    priority: "0.9", freq: "weekly"  },
+    { path: "/sales-tax-calculator",            priority: "0.9", freq: "weekly"  },
+    { path: "/payroll-tax-calculator",          priority: "0.9", freq: "weekly"  },
+    { path: "/tax-brackets-2025",               priority: "0.8", freq: "monthly" },
+    { path: "/tax-brackets-2026",               priority: "0.8", freq: "monthly" },
+    { path: "/standard-deduction-2025",         priority: "0.8", freq: "monthly" },
+    { path: "/standard-deduction-2026",         priority: "0.8", freq: "monthly" },
+    { path: "/capital-gains-tax-rates-2025",    priority: "0.8", freq: "monthly" },
+    { path: "/capital-gains-tax-rates-2026",    priority: "0.8", freq: "monthly" },
+    { path: "/child-tax-credit-2025",           priority: "0.8", freq: "monthly" },
+    { path: "/child-tax-credit-2026",           priority: "0.8", freq: "monthly" },
+    { path: "/401k-contribution-limits-2025",   priority: "0.8", freq: "monthly" },
+    { path: "/401k-contribution-limits-2026",   priority: "0.8", freq: "monthly" },
+    { path: "/hsa-contribution-limits-2025",    priority: "0.8", freq: "monthly" },
+    { path: "/hsa-contribution-limits-2026",    priority: "0.8", freq: "monthly" },
+    { path: "/bonus-tax-rate-2025",             priority: "0.8", freq: "monthly" },
+    { path: "/bonus-tax-rate-2026",             priority: "0.8", freq: "monthly" },
+    { path: "/marginal-vs-effective-tax-rate",  priority: "0.8", freq: "monthly" },
+    { path: "/irs-payment-plan-guide",          priority: "0.8", freq: "monthly" },
+    { path: "/tax-extension-2026",              priority: "0.8", freq: "monthly" },
+    { path: "/w2-vs-1099",                      priority: "0.8", freq: "monthly" },
+    { path: "/quarterly-estimated-taxes",       priority: "0.8", freq: "monthly" },
+    { path: "/about",                           priority: "0.3", freq: "yearly"  },
+    { path: "/contact",                         priority: "0.3", freq: "yearly"  },
+    { path: "/privacy-policy",                  priority: "0.3", freq: "yearly"  },
+    { path: "/terms",                           priority: "0.3", freq: "yearly"  },
+    { path: "/disclaimer",                      priority: "0.3", freq: "yearly"  },
+  ];
+
+  const stateUrls = states.map((s) => ({
+    path: `/${s.slug}-income-tax-calculator`,
+    priority: "0.7",
+    freq: "monthly"
+  }));
+
+  const blogUrls = blogPosts.map((p) => ({
+    path: `/blog/${p.slug}`,
+    priority: "0.8",
+    freq: "monthly"
+  }));
+
+  const allUrls = [...guidePages, ...stateUrls, ...blogUrls];
+  const today = new Date().toISOString().split('T');
+  const urls = allUrls
+    .map((page) => `
+  <url>
+    <loc>${baseUrl}${page.path}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${page.freq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`)
+    .join("");
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls}
+</urlset>`;
+
+  res.header("Content-Type", "application/xml");
+  res.send(xml);
+});
+
+// ── ADS.TXT ENDPOINT ─────────────────────────────────────────────────────────
+app.get("/ads.txt", (req, res) => {
+  res.header("Content-Type", "text/plain");
+  res.send("google.com, pub-5193834725888549, DIRECT, f08c47fec0942fa0");
+});
+
+// ── CATCH-ALL STATIC PAGES & HUBS (SAFELY MOVED TO THE VERY BOTTOM) ──────────
+app.get("/:page", (req, res, next) => {
+  const page = req.params.page;
+  
+  const staticPages = [
+    "about", "contact", "privacy-policy", "terms", "disclaimer", "calculators", "states"
+  ];
+
+  if (staticPages.includes(page)) {
+    return res.render(page, {
+      pageTitle: `${page.charAt(0).toUpperCase() + page.slice(1).replace('-', ' ')} | MyTaxCalcs`,
+      metaDescription: `Free financial metrics and operational rules for ${page}.`,
+      ogTitle: `${page.charAt(0).toUpperCase() + page.slice(1).replace('-', ' ')} | MyTaxCalcs`,
+      ogDescription: `Free analytical tracking parameters.`,
+      canonical: `https://mytaxcalcs.com${req.path}`,
+      states: states, 
+      posts: blogPosts
+    });
+  }
+  next();
+});
+
+// ── 404 FALLBACK INTERCEPTOR ──────────────────────────────────────────────────
+app.use((req, res) => {
+  res.status(404).render("404", {
+    pageTitle: "Page Not Found | MyTaxCalcs",
+    canonical: `https://mytaxcalcs.com${req.path}`
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
