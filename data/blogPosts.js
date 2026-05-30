@@ -1159,67 +1159,85 @@ const blogPosts = [
     ogTitle: "2026 401(k) and IRA Contribution Limits — All the Numbers | MyTaxCalcs",
     ogDescription: "IRS Notice 2025-67 raised the 2026 401(k) limit to $24,500 and IRA limit to $7,500. See catch-up contributions, Roth phase-outs, and strategies to maximize your retirement savings.",
     content: `
-  <p>On November 13, 2025, the IRS released <strong>IRS Notice 2025-67</strong> (IR-2025-111) announcing updated contribution limits for 401(k) plans, IRAs, and other retirement vehicles for tax year 2026.</p>
+<p>On November 13, 2025, the IRS released <strong>IRS Notice 2025-67</strong> (IR-2025-111) announcing updated contribution limits for 401(k) plans, IRAs, and other retirement vehicles for tax year 2026. The increases apply to contributions made January 1 through December 31, 2026.</p>
 
-  <h2>401(k), 403(b), and 457 Plan Limits</h2>
-  <table>
-    <thead><tr><th>Limit Type</th><th>2025</th><th>2026</th></tr></thead>
-    <tbody>
-      <tr><td>Employee contribution limit</td><td>$23,500</td><td>$24,500</td></tr>
-      <tr><td>Catch-up contribution (age 50–59, 64+)</td><td>$7,500</td><td>$8,000</td></tr>
-      <tr><td>Special catch-up (age 60, 61, 62, 63)</td><td>$11,250</td><td>$11,250</td></tr>
-      <tr><td>Total limit including employer contributions</td><td>$70,000</td><td>$77,000</td></tr>
-    </tbody>
-  </table>
+<h2>All 2026 Retirement Contribution Limits at a Glance</h2>
+<table>
+  <thead><tr><th>Account / Limit Type</th><th>2025</th><th>2026</th><th>Change</th></tr></thead>
+  <tbody>
+    <tr><td>401(k), 403(b), 457 employee limit</td><td>$23,500</td><td>$24,500</td><td>+$1,000</td></tr>
+    <tr><td>Catch-up contribution (age 50–59, 64+)</td><td>$7,500</td><td>$8,000</td><td>+$500</td></tr>
+    <tr><td>Special catch-up (age 60, 61, 62, 63)</td><td>$11,250</td><td>$11,250</td><td>No change</td></tr>
+    <tr><td>Total 401(k) limit incl. employer contributions</td><td>$70,000</td><td>$77,000</td><td>+$7,000</td></tr>
+    <tr><td>Traditional and Roth IRA limit</td><td>$7,000</td><td>$7,500</td><td>+$500</td></tr>
+    <tr><td>IRA catch-up (age 50+)</td><td>$1,000</td><td>$1,100</td><td>+$100</td></tr>
+    <tr><td>SIMPLE IRA employee limit</td><td>$16,500</td><td>$17,000</td><td>+$500</td></tr>
+    <tr><td>SEP-IRA limit</td><td>$69,000</td><td>$70,000</td><td>+$1,000</td></tr>
+    <tr><td>HSA (self-only)</td><td>$4,300</td><td>$4,400</td><td>+$100</td></tr>
+    <tr><td>HSA (family)</td><td>$8,550</td><td>$8,750</td><td>+$200</td></tr>
+  </tbody>
+</table>
 
-  <p>The special higher catch-up contribution for employees aged 60–63 was introduced by SECURE 2.0 and remains at $11,250 for 2026 — higher than the standard $8,000 catch-up for other eligible ages.</p>
+<h2>401(k), 403(b), and 457 Plan Details</h2>
+<p>The employee elective deferral limit — the amount you can contribute from your own paycheck — rises to <strong>$24,500</strong> for 2026. This applies equally to traditional (pre-tax) and Roth 401(k) contributions, and to 403(b) plans (common for teachers and nonprofit workers) and 457(b) plans (common for government employees).</p>
+<p>The total limit including employer matching and profit-sharing contributions increases to <strong>$77,000</strong>. If your employer offers a generous match, you may reach this combined cap even if you don't maximize your own contribution.</p>
+<p>The special SECURE 2.0 catch-up for employees aged <strong>60, 61, 62, or 63</strong> remains at $11,250 — giving workers in that window a total possible contribution of $35,750 ($24,500 + $11,250). This is intentionally higher than the standard age-50+ catch-up of $8,000 ($24,500 + $8,000 = $32,500) to help workers in the final sprint before retirement accelerate their savings.</p>
 
-  <h2>IRA Contribution Limits</h2>
-  <table>
-    <thead><tr><th>Limit Type</th><th>2025</th><th>2026</th></tr></thead>
-    <tbody>
-      <tr><td>Traditional and Roth IRA limit</td><td>$7,000</td><td>$7,500</td></tr>
-      <tr><td>Catch-up contribution (age 50+)</td><td>$1,000</td><td>$1,100</td></tr>
-    </tbody>
-  </table>
+<h2>IRA Contribution Limits and Income Rules</h2>
+<p>The combined contribution limit for traditional and Roth IRAs rises to <strong>$7,500</strong> for 2026. This limit applies across all your IRA accounts combined — you can't contribute $7,500 to a traditional IRA and another $7,500 to a Roth IRA in the same year. The catch-up for those 50 and older rises to $1,100 (now inflation-indexed under SECURE 2.0, up from its 20-year freeze at $1,000).</p>
 
-  <p>The IRA catch-up contribution limit is now indexed to inflation under SECURE 2.0, which is why it increases from $1,000 to $1,100 for 2026. Prior to SECURE 2.0, this amount had been frozen at $1,000 since 2006.</p>
+<h3>Roth IRA Income Phase-Out Ranges for 2026</h3>
+<p>Direct Roth IRA contributions phase out at higher income levels:</p>
+<table>
+  <thead><tr><th>Filing Status</th><th>Phase-out Begins</th><th>Contribution Eliminated</th></tr></thead>
+  <tbody>
+    <tr><td>Single / Head of Household</td><td>$150,000</td><td>$165,000</td></tr>
+    <tr><td>Married Filing Jointly</td><td>$236,000</td><td>$246,000</td></tr>
+    <tr><td>Married Filing Separately</td><td>$0</td><td>$10,000</td></tr>
+  </tbody>
+</table>
+<p>If your MAGI exceeds the upper limit, you can't contribute directly to a Roth IRA — but a <strong>backdoor Roth conversion</strong> (contributing to a non-deductible traditional IRA then converting to Roth) remains available at any income level, subject to the pro-rata rule if you have other pre-tax IRA balances.</p>
 
-  <h2>Roth IRA Income Phase-Out Ranges for 2026</h2>
-  <p>You can contribute to a Roth IRA only if your income falls below certain limits. For 2026:</p>
-  <ul>
-    <li><strong>Single / Head of Household:</strong> Phase-out begins at $150,000, eliminated at $165,000</li>
-    <li><strong>Married Filing Jointly:</strong> Phase-out begins at $236,000, eliminated at $246,000</li>
-    <li><strong>Married Filing Separately:</strong> Phase-out begins at $0, eliminated at $10,000</li>
-  </ul>
+<h3>Traditional IRA Deductibility Phase-Outs for 2026</h3>
+<p>Anyone can contribute to a traditional IRA, but the deduction phases out if you (or your spouse) are covered by a workplace retirement plan:</p>
+<table>
+  <thead><tr><th>Situation</th><th>Phase-out Range</th></tr></thead>
+  <tbody>
+    <tr><td>Single, covered by workplace plan</td><td>$79,000 – $89,000</td></tr>
+    <tr><td>Married filing jointly, covered by workplace plan</td><td>$126,000 – $146,000</td></tr>
+    <tr><td>Married, only spouse is covered</td><td>$236,000 – $246,000</td></tr>
+    <tr><td>Single or married, neither covered</td><td>No limit — full deduction always available</td></tr>
+  </tbody>
+</table>
 
-  <h2>Traditional IRA Deductibility Phase-Outs</h2>
-  <p>If you or your spouse are covered by a workplace retirement plan, your traditional IRA deduction may be limited based on income. For 2026:</p>
-  <ul>
-    <li><strong>Single covered by workplace plan:</strong> Phase-out $79,000–$89,000</li>
-    <li><strong>Married filing jointly, covered by workplace plan:</strong> Phase-out $126,000–$146,000</li>
-    <li><strong>Married, spouse covered but you are not:</strong> Phase-out $236,000–$246,000</li>
-  </ul>
+<h2>The Tax Math: How Much Do These Limits Actually Save?</h2>
+<table>
+  <thead><tr><th>Contribution</th><th>Federal Tax Bracket</th><th>Tax Saved (Traditional)</th></tr></thead>
+  <tbody>
+    <tr><td>$24,500 (full 401k)</td><td>22%</td><td>$5,390</td></tr>
+    <tr><td>$24,500 (full 401k)</td><td>24%</td><td>$5,880</td></tr>
+    <tr><td>$32,500 (age 50+ 401k)</td><td>22%</td><td>$7,150</td></tr>
+    <tr><td>$35,750 (age 60–63 401k)</td><td>22%</td><td>$7,865</td></tr>
+    <tr><td>$7,500 (full IRA)</td><td>22%</td><td>$1,650</td></tr>
+    <tr><td>$8,600 (full IRA age 50+)</td><td>22%</td><td>$1,892</td></tr>
+  </tbody>
+</table>
+<p>These are federal income tax savings only. Traditional contributions also reduce your MAGI, which can unlock other benefits — lower ACA premiums, Roth IRA eligibility, reduced phase-outs for credits.</p>
 
-  <h2>Social Security Wage Base Increases</h2>
-  <p>The Social Security Administration announced that the maximum earnings subject to Social Security tax increases from $176,100 in 2025 to <strong>$184,500</strong> in 2026 — a 4.7% increase. Earnings above this threshold are not subject to the 6.2% Social Security tax (though all earnings remain subject to the 1.45% Medicare tax).</p>
+<h2>Social Security Wage Base for 2026</h2>
+<p>The maximum earnings subject to Social Security tax rises to <strong>$184,500</strong> in 2026 (up from $176,100 in 2025). Income above this threshold still faces the 1.45% Medicare tax but not the 6.2% Social Security tax. For high earners, this represents $184,500 × 6.2% = $11,439 in maximum Social Security tax for the year.</p>
 
-  <h2>Why This Matters</h2>
-  <p>Maxing out your 401(k) in 2026 shelters $24,500 from federal income tax this year (traditional 401(k)) or grows it tax-free (Roth 401(k)). At a 22% marginal rate, a full traditional 401(k) contribution saves $5,390 in federal taxes in the year of contribution. For those in the catch-up age range, the savings are even higher.</p>
+<h2>What to Do Right Now</h2>
+<ul>
+  <li><strong>Update your 401(k) deferral percentage</strong> in your employer's payroll or benefits portal. To hit $24,500 across 26 biweekly pay periods, you need to defer about $942 per paycheck.</li>
+  <li><strong>Verify your age-based catch-up eligibility.</strong> Turn 50 in 2026? You can contribute the extra $8,000 starting with your first paycheck after your birthday. Turn 60–63 in 2026? Your limit jumps to $11,250 in catch-up.</li>
+  <li><strong>Fund your IRA early.</strong> You have until April 15, 2027 to make 2026 IRA contributions — but contributing early in the year gives your money more time in the market.</li>
+  <li><strong>Check Roth vs. traditional.</strong> If you expect to be in a higher bracket in retirement, Roth contributions (no deduction now, tax-free later) may win. If you expect a lower bracket in retirement, traditional (deduction now, taxed later) often wins. When uncertain, splitting between both hedges your bets.</li>
+  <li><strong>Don't forget the HSA.</strong> If you're on a High-Deductible Health Plan, the 2026 HSA limit is $4,400 (self-only) or $8,750 (family). HSA contributions are triple tax-advantaged — deductible going in, tax-free for medical expenses, and tax-free in retirement for medical costs.</li>
+</ul>
 
-  <h2>What Should You Do Now?</h2>
-  <p>The 2026 limit increases offer a concrete opportunity to boost your retirement savings and reduce your tax bill. Here's how to act on these numbers:</p>
-  <ul>
-    <li><strong>Update your 401(k) contribution rate.</strong> If your employer's payroll system allows it, set your 2026 contribution to capture the full $24,500. Divide by your number of pay periods to find your per-paycheck amount ($941/paycheck for 26 biweekly periods).</li>
-    <li><strong>Check if you qualify for catch-up contributions.</strong> If you turn 50 or older in 2026, you can contribute up to $32,500 total to your 401(k) ($24,500 + $8,000 catch-up). If you're 60–63, your limit is $35,750 ($24,500 + $11,250).</li>
-    <li><strong>Max your IRA before April 15, 2027.</strong> You have until the tax filing deadline to make your 2026 IRA contribution. The new $7,500 limit (plus $1,100 catch-up if 50+) applies to Roth and traditional IRAs combined across all accounts.</li>
-    <li><strong>Check Roth IRA eligibility.</strong> If your MAGI falls below the phase-out range, a Roth IRA contribution grows tax-free and has no required minimum distributions. If you're over the income limit, a backdoor Roth conversion may still be available.</li>
-    <li><strong>Consider the MAGI impact.</strong> Traditional 401(k) and IRA contributions reduce your MAGI, which can affect eligibility for other credits and deductions — including the Child Tax Credit phase-out, Roth IRA contribution limits, and ACA premium subsidies.</li>
-  </ul>
-  <p>The key takeaway: retirement contribution limits increase in 2026 across the board. Adjusting your contributions now rather than waiting until year-end maximizes the number of pay periods you benefit from the higher limits.</p>
-
-  <h2>Source</h2>
-  <p>All figures sourced from <a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-rises-to-7500" target="_blank" rel="noopener">IRS IR-2025-111</a> and IRS Notice 2025-67.</p>
+<h2>Source</h2>
+<p>All figures sourced from <a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-rises-to-7500" target="_blank" rel="noopener">IRS IR-2025-111</a> and IRS Notice 2025-67. Use our <a href="/income-tax-calculator">income tax calculator</a> to see how maxing your retirement contributions affects your overall 2026 federal tax bill.</p>
     `,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
