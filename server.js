@@ -5,7 +5,7 @@ require("dotenv").config();
 const states = require("./data/states");
 const blogPosts = require("./data/blogPosts");
 const { calculateTaxRefund } = require("./calculators/taxRefund");
-const { calculatePayrollTax } = require("./calculators/payrollTax\");
+const { calculatePayrollTax } = require("./calculators/payrollTax");
 const { calculateSalesTax } = require("./calculators/salesTax");
 const { calculateFederalIncomeTax } = require("./calculators/federalIncomeTax");
 const { calculateSelfEmploymentTax } = require("./calculators/selfEmploymentTax");
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use((req, res, next) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host || '';
   const proto = req.headers['x-forwarded-proto'] || req.protocol;
-  const cleanHost = host.split(':'); // strip port if present
+  const cleanHost = host.split(':'); 
 
   const needsHttps = proto !== 'https';
   const needsNonWww = cleanHost.startsWith('www.');
@@ -358,7 +358,7 @@ app.get("/:page", (req, res, next) => {
       ogTitle: `${page.charAt(0).toUpperCase() + page.slice(1).replace('-', ' ')} | MyTaxCalcs`,
       ogDescription: `Free analytical tracking parameters.`,
       canonical: `https://mytaxcalcs.com${req.path}`,
-      states: states, // Fallbacks for hub dependencies
+      states: states, 
       posts: blogPosts
     });
   }
