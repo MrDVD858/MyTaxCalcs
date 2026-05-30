@@ -99,8 +99,15 @@
       </div>
 
       <div class="blog-grid">
-        <% if (typeof posts !== 'undefined' && posts.length > 0) { %>
-          <% posts.forEach(function(post) { %>
+        <% 
+          // Fault-tolerant array check fallback
+          let activePosts = [];
+          if (typeof posts !== 'undefined' && posts) { activePosts = posts; }
+          else if (typeof blogposts !== 'undefined' && blogposts) { activePosts = blogposts; }
+        %>
+        
+        <% if (activePosts.length > 0) { %>
+          <% activePosts.forEach(function(post) { %>
             <a href="/blog/<%= post.slug %>" class="blog-card">
               <div class="card-meta">
                 <span class="card-category"><%= post.category %></span>
