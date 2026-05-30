@@ -24,7 +24,7 @@ app.use(express.json());
 app.use((req, res, next) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host || '';
   const proto = req.headers['x-forwarded-proto'] || req.protocol;
-  const cleanHost = host.split(':') // Fixed: Pulls string element instead of raw array
+ const cleanHost = host.split(':');
 
   const needsHttps = proto !== 'https';
   const needsNonWww = cleanHost.startsWith('www.');
