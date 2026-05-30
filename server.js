@@ -225,12 +225,13 @@ app.post("/sales-tax-calculator", (req, res) => {
 // ── PAYROLL TAX ───────────────────────────────────────────────────────────────
 app.get("/payroll-tax-calculator", (req, res) => {
   res.render("payroll-tax-calculator", {
-    pageTitle: "Payroll Tax Calculator 2025 | MyTaxCalcs",
-    metaDescription: "Free payroll tax calculator for 2025. Estimate paycheck withholding, Social Security, Medicare, state withholding, and net take-home pay.",
-    ogTitle: "Payroll Tax Calculator 2025 | MyTaxCalcs",
-    ogDescription: "Estimate paycheck withholding, FICA taxes, and net take-home pay for 2025.",
-    result: null,
-    form: {}
+    pageTitle: "Free Payroll Tax Calculator 2025 | MyTaxCalcs",
+    metaDescription: "Free payroll tax calculator for 2025. Estimate federal withholding, Social Security tax, Medicare tax, state withholding, and net take-home pay per paycheck.",
+    ogTitle: "Free Payroll Tax Calculator 2025 | MyTaxCalcs",
+    ogDescription: "Estimate paycheck withholding, Social Security, Medicare, state withholding, and net pay for 2025.",
+    canonical: `https://mytaxcalcs.com${req.path}`,
+    result: null,   // This must be explicitly null on initial load
+    form: {}        // This must be an empty object so form fields don't throw undefined errors
   });
 });
 
