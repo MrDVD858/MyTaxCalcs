@@ -2,6 +2,15 @@ const express = require("express");
 const path = require("path");
 require("dotenv").config();
 
+const states = require("./data/states");
+const blogPosts = require("./data/blogPosts");
+const { calculateTaxRefund } = require("./calculators/taxRefund");
+const { calculatePayrollTax } = require("./calculators/payrollTax");
+const { calculateSalesTax } = require("./calculators/salesTax");
+const { calculateFederalIncomeTax } = require("./calculators/federalIncomeTax");
+const { calculateSelfEmploymentTax } = require("./calculators/selfEmploymentTax");
+const { calculateCapitalGainsTax } = require("./calculators/capitalGainsTax");
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -11,17 +20,13 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// ── BULLETPROOF CANONICAL REDIRECT ──────────────────────────────────────────
+// ── CANONICAL REDIRECT ───────────────────────────────────────────────────────
 app.use((req, res, next) => {
-  // 1. Force the host to be a string, or default to empty
-  const host = (req.headers['x-forwarded-host'] || req.headers.host || '').toString();
-  const proto = (req.headers['x-forwarded-proto'] || req.protocol || 'http').toString();
+  const host = req.headers['x-forwarded-host'] || req.headers.host || '';
+  const proto = req.headers['x-forwarded-proto'] || req.protocol;
 
-  // 2. Safely extract the domain
-  const hostParts = host.split(':');
-  const cleanHost = hostParts || '';
+  const cleanHost = host.split(':')[0] || '';  // FIX: was assigning array instead of string
 
-  // 3. Logic checks
   const needsHttps = proto !== 'https';
   const needsNonWww = cleanHost.startsWith('www.');
 
@@ -33,18 +38,96 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname, "public")));
 
-// ── MINIMAL ROUTES FOR TESTING ──────────────────────────────────────────────
+// ── ROUTES ───────────────────────────────────────────────────────────────────
+
 app.get("/", (req, res) => {
-  res.send("Server is running correctly.");
+  res.render("index", {
+    pageTitle: "Free Tax Calculators & Guides 2025 | MyTaxCalcs",
+    metaDescription: "Free financial and tax calculators.",
+    ogTitle: "Free Tax Calculators & Guides 2025 | MyTaxCalcs",
+    ogDescription: "Accurate financial tools to model tax liability profiles.",
+    canonical: "https://mytaxcalcs.com"
+  });
 });
+
+// ── BLOG ─────────────────────────────────────────────────────────────────────
 
 app.get("/blog", (req, res) => {
-  res.send("Blog page is now accessible.");
+  res.render("blog", {
+    pageTitle: "MyTaxCalcs Editorial Blog",
+    metaDescription: "Expert tax insights and legal interpretations.",
+    ogTitle: "MyTaxCalcs Editorial Blog",
+    ogDescription: "Expert tax interpretations and policy reviews.",
+    canonical: "https://mytaxcalcs.com/blog",
+    posts: blogPosts,
+    blogposts: blogPosts
+  });
 });
 
-// 404 Fallback
+app.get("/blog/:slug", (req, res) => {
+  const post = blogPosts.find(p => p.slug === req.params.slug);
+  if (!post) {
+    return res.status(404).render("404", { pageTitle: "Post Not Found" });
+  }
+  res.render("blog-post", {
+    pageTitle: post.title,
+    metaDescription: post.metaDescription,
+    ogTitle: post.ogTitle,
+    ogDescription: post.ogDescription,
+    canonical: `https://mytaxcalcs.com/blog/${post.slug}`,
+    post: post,
+    posts: blogPosts
+  });
+});
+
+// ── CALCULATORS ──────────────────────────────────────────────────────────────
+
+app.get("/income-tax-calculator", (req, res) => {
+  res.render("income-tax-calculator", {
+    pageTitle: "Income Tax Calculator 2025",
+    metaDescription: "Estimate federal tax brackets and liabilities.",
+    ogTitle: "Income Tax Calculator 2025",
+    ogDescription: "Model your annualized gross salaries.",
+    canonical: "https://mytaxcalcs.com/income-tax-calculator",
+    result: null,
+    form: {}
+  });
+});
+
+app.post("/income-tax-calculator", (req, res) => {
+  const result = calculateFederalIncomeTax(req.body);
+  res.render("income-tax-calculator", {
+    pageTitle: "Income Tax Estimate Results",
+    metaDescription: "Review your tax assessment profiles.",
+    ogTitle: "Income Tax Estimate Results",
+    ogDescription: "Review your tax assessment profiles.",
+    canonical: "https://mytaxcalcs.com/income-tax-calculator",
+    result,
+    form: req.body
+  });
+});
+
+// ── STATIC & CATCH-ALL PAGES ─────────────────────────────────────────────────
+
+app.get("/:page", (req, res, next) => {
+  const page = req.params.page;
+  const staticPages = ["about", "contact", "privacy-policy", "terms", "disclaimer", "calculators", "states"];
+  if (staticPages.includes(page)) {
+    return res.render(page, {
+      pageTitle: `${page.charAt(0).toUpperCase() + page.slice(1)} | MyTaxCalcs`,
+      canonical: `https://mytaxcalcs.com/${page}`,
+      states: states,
+      posts: blogPosts,
+      blogposts: blogPosts
+    });
+  }
+  next();
+});
+
+// ── 404 ──────────────────────────────────────────────────────────────────────
+
 app.use((req, res) => {
-  res.status(404).send("Page Not Found");
+  res.status(404).render("404", { pageTitle: "Page Not Found" });
 });
 
 app.listen(PORT, () => {
