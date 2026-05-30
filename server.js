@@ -25,9 +25,8 @@ app.use((req, res, next) => {
   const host = req.headers['x-forwarded-host'] || req.headers.host || '';
   const proto = req.headers['x-forwarded-proto'] || req.protocol;
   
-  // Explicitly extracting index 0 to ensure it's a string
-  const hostParts = host.split(':');
-  const cleanHost = hostParts; 
+  // FIXED: Using index ensures we have a string, not an array
+  const cleanHost = host.split(':'); 
 
   const needsHttps = proto !== 'https';
   const needsNonWww = cleanHost.startsWith('www.');
@@ -44,9 +43,6 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", (req, res) => {
   res.render("index", {
     pageTitle: "Free Tax Calculators & Guides 2025 | MyTaxCalcs",
-    metaDescription: "Free financial and tax calculators.",
-    ogTitle: "Free Tax Calculators & Guides 2025 | MyTaxCalcs",
-    ogDescription: "Accurate financial tools to model tax liability profiles.",
     canonical: "https://mytaxcalcs.com"
   });
 });
@@ -54,55 +50,10 @@ app.get("/", (req, res) => {
 app.get("/blog", (req, res) => {
   res.render("blog", {
     pageTitle: "MyTaxCalcs Editorial Blog",
-    metaDescription: "Expert tax insights and legal interpretations.",
-    ogTitle: "MyTaxCalcs Editorial Blog",
-    ogDescription: "Expert tax interpretations and policy reviews.",
     canonical: "https://mytaxcalcs.com/blog",
     posts: blogPosts,
     blogposts: blogPosts
   });
-});
-
-// Income Tax
-app.get("/income-tax-calculator", (req, res) => {
-  res.render("income-tax-calculator", {
-    pageTitle: "Income Tax Calculator 2025",
-    metaDescription: "Estimate federal tax brackets and liabilities.",
-    ogTitle: "Income Tax Calculator 2025",
-    ogDescription: "Model your annualized gross salaries.",
-    canonical: "https://mytaxcalcs.com/income-tax-calculator",
-    result: null,
-    form: {}
-  });
-});
-
-app.post("/income-tax-calculator", (req, res) => {
-  const result = calculateFederalIncomeTax(req.body);
-  res.render("income-tax-calculator", {
-    pageTitle: "Income Tax Estimate Results",
-    metaDescription: "Review your tax assessment profiles.",
-    ogTitle: "Income Tax Estimate Results",
-    ogDescription: "Review your tax assessment profiles.",
-    canonical: "https://mytaxcalcs.com/income-tax-calculator",
-    result,
-    form: req.body
-  });
-});
-
-// Catch-all for other calculators/pages
-app.get("/:page", (req, res, next) => {
-  const page = req.params.page;
-  const staticPages = ["about", "contact", "privacy-policy", "terms", "disclaimer", "calculators", "states"];
-  if (staticPages.includes(page)) {
-    return res.render(page, {
-      pageTitle: `${page.charAt(0).toUpperCase() + page.slice(1)} | MyTaxCalcs`,
-      canonical: `https://mytaxcalcs.com/${page}`,
-      states: states,
-      posts: blogPosts,
-      blogposts: blogPosts
-    });
-  }
-  next();
 });
 
 // 404 Fallback
