@@ -462,7 +462,6 @@ app.get("/tax-extension-2026", (req, res) => {
   });
 });
 
-// ── BLOG HUB ──────────────────────────────────────────────────────────────────
 // ── FIXED BLOG SYSTEM ROUTES ─────────────────────────────────────────────────
 app.get("/blog", (req, res) => {
   res.render("blog", {
@@ -470,13 +469,13 @@ app.get("/blog", (req, res) => {
     metaDescription: "Expert legal interpretations, policy reviews, inflation adjustments, and clear tracking of official IRS releases.",
     ogTitle: "MyTaxCalcs Editorial Blog | IRS Insights",
     ogDescription: "Expert legal interpretations, policy reviews, and tracking of official IRS updates.",
-    canonical: `https://mytaxcalcs.com${req.path}`, // Feeds header metadata
-    posts: blogPosts
+    canonical: `https://mytaxcalcs.com${req.path}`,
+    posts: blogposts // Fixed capital 'P'
   });
 });
 
 app.get("/blog/:slug", (req, res) => {
-  const post = blogPosts.find((p) => p.slug === req.params.slug);
+  const post = blogposts.find((p) => p.slug === req.params.slug); // Fixed capital 'P'
   if (!post) {
     return res.status(404).render("404", { 
       pageTitle: "Page Not Found",
@@ -485,7 +484,7 @@ app.get("/blog/:slug", (req, res) => {
   }
   res.render("blog-post", { 
     post,
-    canonical: `https://mytaxcalcs.com${req.path}` // Added to fix the blank page crash!
+    canonical: `https://mytaxcalcs.com${req.path}`
   });
 });
 
