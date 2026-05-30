@@ -54,7 +54,7 @@ app.get("/", (req, res) => {
   });
 });
 
-// ── DYNAMIC BLOG SYSTEM ROUTES (PLACED HIGH UP FOR PRECEDENCE) ────────────────
+// ── UPDATED BLOG HOME ROUTE ──────────────────────────────────────────────────
 app.get("/blog", (req, res) => {
   res.render("blog", {
     pageTitle: "MyTaxCalcs Editorial Blog | IRS Insights",
@@ -62,7 +62,8 @@ app.get("/blog", (req, res) => {
     ogTitle: "MyTaxCalcs Editorial Blog | IRS Insights",
     ogDescription: "Expert legal interpretations, policy reviews, and tracking of official IRS updates.",
     canonical: `https://mytaxcalcs.com${req.path}`,
-    posts: blogPosts
+    posts: blogPosts,     // Keeps it safe for newer templates
+    blogposts: blogPosts  // FIX: Matches line 66 in your blog.ejs file perfectly!
   });
 });
 
