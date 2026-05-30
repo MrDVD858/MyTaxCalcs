@@ -91,7 +91,7 @@
   <main>
     <div class="article-container">
       
-      <% if (typeof post !== 'undefined') { %>
+      <% if (typeof post !== 'undefined' && post) { %>
       <article class="article-main">
         <div class="post-header">
           <span class="post-category-badge"><%= post.category || 'Tax Insights' %></span>
@@ -129,7 +129,10 @@
       </article>
       <% } else { %>
         <article class="article-main">
-          <p>Content is momentarily unavailable. Please check back shortly.</p>
+          <div class="post-header">
+            <h1>Article Content Temporarily Unavailable</h1>
+          </div>
+          <p>Please return to our <a href="/blog">Tax Blog Index</a> to select another article option.</p>
         </article>
       <% } %>
 
