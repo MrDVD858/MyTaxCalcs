@@ -201,7 +201,7 @@ app.get("/capital-gains-tax-calculator", (req, res) => {
 });
 
 app.post("/capital-gains-tax-calculator", (req, res) => {
-  const result = calculateCapital GainsTax(req.body);
+const result = calculateCapitalGainsTax(req.body);
   res.render("capital-gains-tax-calculator", {
     pageTitle: "Capital Gains Tax Results | MyTaxCalcs",
     metaDescription: "Review asset profits and short-term versus preferential long-term margin options.",
