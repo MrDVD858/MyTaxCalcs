@@ -60,7 +60,7 @@
     .feature-item h3{font-size:1rem;font-weight:700;color:#111827;margin:0 0 8px;display:flex;align-items:center;gap:8px}
     .feature-item p{font-size:.88rem;color:#6b7280;line-height:1.6;margin:0}
     .feature-icon{color:#16a34a;display:flex;align-items:center}
-    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone{text-align:center;margin:28px 0;min-height:120px}
     .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
   </style>
 </head>
@@ -94,7 +94,7 @@
     <section class="hero">
       <div class="hero-inner">
         <h1>Free Financial &amp; Tax Calculators</h1>
-        <p>Run accurate tax assessments instantly. Plan your federal income tax deductions, estimated refunds, payroll withholding allowances, and state tax obligations with clear, secure open tools.</p>
+        <p>Free, instant tax calculators for 2025. Estimate your federal income tax, paycheck withholding, refund, self-employment tax, capital gains, and more -- no signup required.</p>
         <div class="hero-cta-group">
           <a href="/calculators" class="hero-btn primary">Explore All Tools</a>
           <a href="/states" class="hero-btn secondary">State Tax Directory</a>
@@ -104,19 +104,31 @@
 
     <div class="ad-zone">
       <div class="ad-zone-label">Advertisement</div>
-      <ins class="adsbygoogle" style="display:block"
+      <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
         data-ad-client="ca-pub-5193834725888549"
         data-ad-slot="5205436277"
         data-ad-format="auto"
         data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <script>
+        (function() {
+          var ins = document.getElementById('ad-slot-1');
+          if (!ins) return;
+          var obs = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting) {
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              obs.disconnect();
+            }
+          }, { rootMargin: '200px' });
+          obs.observe(ins);
+        })();
+      </script>
     </div>
 
     <div class="home-container">
       <div class="section-title-wrap">
-        <span class="section-eyebrow">Core Core Calculators</span>
-        <h2>Featured Financial Calculators</h2>
-        <p>Select a dynamic model below to parse your localized filing scenarios.</p>
+        <span class="section-eyebrow">Core Calculators</span>
+        <h2>Free Tax Calculators for 2025</h2>
+        <p>Pick a calculator below to get a fast, accurate estimate in seconds.</p>
       </div>
 
       <div class="calc-grid">
@@ -125,7 +137,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
           </div>
           <h3>Income Tax Calculator</h3>
-          <p>Estimate your annual 2025 progressive federal tax bracket depth, total taxable lines, and effective net rate parameters.</p>
+          <p>Estimate your 2025 federal income tax, effective rate, and marginal bracket based on your income and filing status.</p>
           <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 5"/></svg></span>
         </a>
 
@@ -134,7 +146,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
           </div>
           <h3>Tax Refund Calculator</h3>
-          <p>Balance your paycheck tax withholding profiles against annualized parameters to optimize your final refund target.</p>
+          <p>See whether you'll get a refund or owe money based on your income, withholding, and credits.</p>
           <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 5"/></svg></span>
         </a>
 
@@ -143,7 +155,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
           </div>
           <h3>Payroll Tax Calculator</h3>
-          <p>Parse gross per-paycheck metrics down to explicit take-home values by resolving Social Security and Medicare parameters.</p>
+          <p>Calculate your take-home pay after federal income tax, Social Security, and Medicare withholding.</p>
           <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 5"/></svg></span>
         </a>
 
@@ -152,7 +164,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
           <h3>Self-Employment Tax</h3>
-          <p>Compute 1099 contractor FICA liability matrices and locate the above-the-line deduction boundaries effortlessly.</p>
+          <p>Estimate the 15.3% SE tax on your net self-employment income and calculate your above-the-line deduction.</p>
           <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 5"/></svg></span>
         </a>
 
@@ -161,7 +173,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
           </div>
           <h3>Capital Gains Tax</h3>
-          <p>Map asset allocation profits across short-term thresholds versus preferential long-term bracket constraints.</p>
+          <p>Estimate tax on stocks, real estate, or crypto sales -- short-term vs. long-term rates for 2025.</p>
           <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 5"/></svg></span>
         </a>
 
@@ -170,27 +182,39 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
           </div>
           <h3>Sales Tax Calculator</h3>
-          <p>Extract clean pre-tax invoice cost lines or extrapolate final checkout sums by passing regional percentages.</p>
+          <p>Add sales tax to a purchase price or back it out of a total -- enter any rate for any state.</p>
           <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 5"/></svg></span>
         </a>
       </div>
 
       <div class="ad-zone">
         <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-2"
           data-ad-client="ca-pub-5193834725888549"
           data-ad-slot="4212978293"
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-2');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
       </div>
 
       <div class="states-preview-box">
         <div class="states-preview-info">
-          <span class="section-eyebrow">Local Tax Jurisdictions</span>
-          <h2>State Income Tax Systems</h2>
-          <p>Every state structures individual deduction baseline brackets and revenue mandates differently. Select your active regional hub to analyze localized compliance parameters.</p>
-          <a href="/states" class="view-all-states-link">Browse All 50 States &amp; Brackets &#8594;</a>
+          <span class="section-eyebrow">State Tax Rates</span>
+          <h2>State Income Tax by State</h2>
+          <p>State income tax rates vary widely -- from 0% in Texas and Florida to 13.3% in California. Select your state to see its rates and estimate your federal tax.</p>
+          <a href="/states" class="view-all-states-link">Browse All 50 States &amp; Rates &#8594;</a>
         </div>
         <div class="state-tags">
           <a href="/california-income-tax-calculator" class="state-tag">California</a>
@@ -206,18 +230,43 @@
         </div>
       </div>
 
+      <div class="section-title-wrap" style="margin-top:48px;border-top:1px solid #e5e7eb;padding-top:48px">
+        <span class="section-eyebrow">Tax Tips &amp; News</span>
+        <h2>From the Blog</h2>
+        <p>IRS updates, tax law changes, and guides to help you plan smarter.</p>
+      </div>
+      <div class="calc-grid" style="margin-bottom:12px">
+        <% if (typeof posts !== 'undefined' && posts.length > 0) { %>
+          <% posts.slice(0,3).forEach(function(post) { %>
+            <a href="/blog/<%= post.slug %>" class="calc-card">
+              <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#16a34a;margin-bottom:10px"><%= post.category %></div>
+              <h3 style="font-size:.98rem"><%= post.title %></h3>
+              <p><%= post.excerpt %></p>
+              <span class="card-link">Read More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
+            </a>
+          <% }) %>
+        <% } else { %>
+          <a href="/blog" class="calc-card">
+            <h3>Tax Tips &amp; IRS Updates</h3>
+            <p>Stay current on tax law changes, contribution limits, and filing tips.</p>
+            <span class="card-link">Visit the Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
+          </a>
+        <% } %>
+      </div>
+      <div style="margin-bottom:48px"><a href="/blog" style="font-size:.9rem;font-weight:700;color:#16a34a;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">View All Posts &#8594;</a></div>
+
       <div class="features-section">
         <div class="feature-item">
-          <h3><span class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> IRS-Sourced Logic</h3>
-          <p>Our mathematical calculation architecture pulls updates matching statutory parameters directly to protect calculation fidelity.</p>
+          <h3><span class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> IRS-Sourced Data</h3>
+          <p>All brackets, deductions, and rates are updated each year from official IRS publications.</p>
         </div>
         <div class="feature-item">
           <h3><span class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Privacy First</h3>
-          <p>Data parameters are processed ephemerally on execution runtime and never cached permanently on site backend files.</p>
+          <p>Nothing you enter is stored or shared. All calculations run in your browser session only.</p>
         </div>
         <div class="feature-item">
           <h3><span class="feature-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Always Free</h3>
-          <p>Our operational mission statement guarantees open web access to all core utility models with no mandatory premium limits.</p>
+          <p>Every calculator on MyTaxCalcs is free to use with no account, paywall, or hidden fees.</p>
         </div>
       </div>
 
