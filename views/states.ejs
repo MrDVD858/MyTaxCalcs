@@ -34,12 +34,12 @@
     @media(max-width:900px){.states-grid{grid-template-columns:repeat(3,1fr)}}
     @media(max-width:640px){.states-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:400px){.states-grid{grid-template-columns:1fr}}
-    .state-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:all .15s;display:flex;align-items:center;justify-content:between}
+    .state-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:all .15s;display:flex;align-items:center;justify-content:space-between;gap:8px}
     .state-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.04);transform:translateY(-1px)}
     .state-name{font-size:.95rem;font-weight:600;color:#111827}
-    .state-meta{font-size:.8rem;color:#9ca3af;font-weight:500}
+    .state-meta{font-size:.75rem;color:#9ca3af;font-weight:600;background:#f3f4f6;border-radius:4px;padding:2px 6px;flex-shrink:0}
     .state-card:hover .state-name{color:#16a34a}
-    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone{text-align:center;margin:28px 0;min-height:120px}
     .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
   </style>
 </head>
@@ -84,17 +84,29 @@
           Regional Directory
         </div>
         <h1>State Income Tax Calculators</h1>
-        <p>Select your active state below to assess localized deduction parameters, progressive tax brackets, and regulatory fiscal rules.</p>
+        <p>Choose your state to estimate your federal income tax and review state income tax rates, brackets, and key details for 2025.</p>
       </div>
 
       <div class="ad-zone">
         <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
           data-ad-client="ca-pub-5193834725888549"
           data-ad-slot="5205436277"
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-1');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
       </div>
 
       <div class="states-grid">
@@ -108,12 +120,24 @@
 
       <div class="ad-zone" style="margin-top:40px">
         <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-2"
           data-ad-client="ca-pub-5193834725888549"
           data-ad-slot="4212978293"
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-2');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
       </div>
 
     </div>
