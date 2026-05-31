@@ -85,10 +85,14 @@
     .state-overview h2{font-size:1rem;font-weight:700;color:#111827;margin:0 0 10px}
     .state-overview p{font-size:.9rem;color:#374151;line-height:1.7;margin:0}
     
-    /* Unique Generated Example Styling */
-    .seo-example-box {background:#fafafa;border:1px dashed #cbd5e1;border-radius:12px;padding:20px;margin:20px 0;}
-    .seo-example-box h3 {font-size:.95rem;font-weight:700;color:#0f172a;margin:0 0 8px;}
+    /* State Tax Info Box */
+    .seo-example-box {background:#fafafa;border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:20px 0;}
+    .seo-example-box h3 {font-size:.95rem;font-weight:700;color:#0f172a;margin:0 0 12px;}
     .seo-example-box p {font-size:.88rem;color:#475569;line-height:1.6;margin:0;}
+    .brackets-table {width:100%;border-collapse:collapse;font-size:.85rem;margin-bottom:4px;}
+    .brackets-table th {background:#f1f5f9;color:#374151;font-weight:700;padding:8px 12px;text-align:left;border:1px solid #e2e8f0;}
+    .brackets-table td {padding:7px 12px;border:1px solid #e2e8f0;color:#111827;}
+    .brackets-table tbody tr:nth-child(even) {background:#f8fafc;}
     
     .sister-sites-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:20px 24px;margin:32px 0 0}
     .sister-sites-box h3{font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#64748b;margin:0 0 14px}
@@ -130,7 +134,7 @@
     .result-item .ri-label{font-size:.78rem;color:#6b7280;font-weight:500;margin-bottom:3px}
     .result-item .ri-value{font-size:1.15rem;font-weight:700;color:#111827}
     .result-item .ri-value.red{color:#dc2626}
-    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
+    .ad-zone{text-align:center;margin:28px 0;min-height:120px}
     .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
     .hiw-section{margin:48px 0 0}
     .section-eyebrow{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px}
@@ -238,30 +242,53 @@
       </div>
 
       <div class="seo-example-box">
-        <h3>Example Tax Assessment for <%= state.name %> Residents</h3>
-        <p>
-          Consider a resident living in <%= state.name %> earning a gross baseline threshold of $85,000. 
-          <% if (state.hasIncomeTax) { %>
-            With <%= state.name %>'s dynamic baseline tax bracket range peaking out around an upper constraint boundary of <%= state.brackets %>, a top incremental marginal clip rate of <%= state.topRate %>% applies exclusively to the designated top bracket layer. This ensures that effective localized rates will balance safely under the maximum threshold boundary line.
+        <% if (state.hasIncomeTax) { %>
+          <% if (state.topRate === state.bottomRate) { %>
+            <h3><%= state.name %> State Income Tax Rate</h3>
+            <table class="brackets-table">
+              <thead><tr><th>All Taxable Income</th><th>Tax Rate</th></tr></thead>
+              <tbody><tr><td>All income</td><td><%= state.topRate %>%</td></tr></tbody>
+            </table>
+            <p style="margin:12px 0 0;font-size:.85rem;color:#475569;"><%= state.name %> uses a flat income tax rate of <%= state.topRate %>% on all taxable income. To estimate your <%= state.name %> state tax, multiply your taxable income by <%= state.topRate / 100 %>. For example, a resident with $60,000 of taxable income would owe approximately $<%= (60000 * state.topRate / 100).toLocaleString() %> in <%= state.name %> state income tax before credits.</p>
           <% } else { %>
-            Because <%= state.name %> operates under an optimized local fiscal charter imposing a flat 0% structural bracket policy, exactly $0.00 will be apportioned to state-level payroll allocations from earned base wages. This lets you concentrate exclusively on mitigating federal tax obligations.
+            <h3><%= state.name %> State Income Tax Brackets (2025)</h3>
+            <table class="brackets-table">
+              <thead><tr><th>Rate Range</th><th>Top Marginal Rate</th><th>Structure</th></tr></thead>
+              <tbody>
+                <tr><td><%= state.brackets %></td><td><%= state.topRate %>%</td><td>Graduated brackets</td></tr>
+              </tbody>
+            </table>
+            <p style="margin:12px 0 0;font-size:.85rem;color:#475569;"><%= state.name %> uses a graduated income tax where higher income is taxed at higher rates. The bottom rate of <%= state.bottomRate %>% applies to the lowest bracket, and the top rate of <%= state.topRate %>% applies only to income above the top bracket threshold. Most <%= state.name %> residents pay an effective state rate well below the <%= state.topRate %>% top rate because only a portion of their income reaches the highest bracket.</p>
           <% } %>
-        </p>
+          <% if (state.revenueUrl) { %>
+            <p style="margin:10px 0 0;font-size:.83rem;"><a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer" style="color:#16a34a;font-weight:600;"><%= state.revenueUrl.label %> &nearr;</a> — official source for <%= state.name %> tax forms, rates, and filing.</p>
+          <% } %>
+        <% } else { %>
+          <h3><%= state.name %> Has No State Income Tax</h3>
+          <table class="brackets-table">
+            <thead><tr><th>State Income Tax</th><th>Rate</th></tr></thead>
+            <tbody><tr><td>All income</td><td>0%</td></tr></tbody>
+          </table>
+          <p style="margin:12px 0 0;font-size:.85rem;color:#475569;"><%= state.name %> does not impose a state income tax on wages, salaries, or most personal income. As a <%= state.name %> resident, your income tax planning focuses entirely on your federal liability. You may still owe sales tax, property tax, and other state or local taxes depending on your situation.</p>
+          <% if (state.revenueUrl) { %>
+            <p style="margin:10px 0 0;font-size:.83rem;"><a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer" style="color:#16a34a;font-weight:600;"><%= state.revenueUrl.label %> &nearr;</a> — official source for <%= state.name %> tax information.</p>
+          <% } %>
+        <% } %>
       </div>
 
       <div class="sister-sites-box">
         <h3>Our Free Calculator Network</h3>
         <div class="sister-sites-grid">
           <a class="sister-site-card" href="https://myinsurancecalcs.com" target="_blank" rel="noopener noreferrer">
-            <strong>MyInsuranceCalcs.com ↗</strong>
+            <strong>MyInsuranceCalcs.com &nearr;</strong>
             <span>Free insurance calculators for life, auto, home & health</span>
           </a>
           <a class="sister-site-card" href="https://myloancalcs.com" target="_blank" rel="noopener noreferrer">
-            <strong>MyLoanCalcs.com ↗</strong>
+            <strong>MyLoanCalcs.com &nearr;</strong>
             <span>Free loan & mortgage calculators for any borrowing need</span>
           </a>
           <a class="sister-site-card" href="https://mypctcalculator.com" target="_blank" rel="noopener noreferrer">
-            <strong>MyPctCalculator.com ↗</strong>
+            <strong>MyPctCalculator.com &nearr;</strong>
             <span>Free percentage calculators for everyday math</span>
           </a>
         </div>
@@ -269,12 +296,24 @@
 
       <div class="ad-zone">
         <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
           data-ad-client="ca-pub-5193834725888549"
           data-ad-slot="4212978293"
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-1');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
       </div>
 
       <% if (result) { %>
@@ -319,12 +358,24 @@
 
       <div class="ad-zone">
         <div class="ad-zone-label">Advertisement</div>
-        <ins class="adsbygoogle" style="display:block"
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-2"
           data-ad-client="ca-pub-5193834725888549"
           data-ad-slot="5205436277"
           data-ad-format="auto"
           data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-2');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
       </div>
       <% } %>
 
