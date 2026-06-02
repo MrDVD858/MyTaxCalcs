@@ -11,9 +11,13 @@
   <meta property="og:url" content="<%= canonical %>">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="MyTaxCalcs">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://mytaxcalcs.com/images/og-default.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<%= (typeof post !== 'undefined' && post.ogTitle) ? post.ogTitle : '' %>">
   <meta name="twitter:description" content="<%= (typeof post !== 'undefined' && post.ogDescription) ? post.ogDescription : '' %>">
+  <meta name="twitter:image" content="https://mytaxcalcs.com/images/og-default.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/favicon.png">
@@ -53,6 +57,35 @@
     .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
     .sidebar-ad-unit{min-height:250px;display:flex;flex-direction:column;align-items:center}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "<%= (typeof post !== 'undefined' && post.title) ? post.title : '' %>",
+    "description": "<%= (typeof post !== 'undefined' && post.metaDescription) ? post.metaDescription : '' %>",
+    "url": "<%= canonical %>",
+    "datePublished": "<%= (typeof post !== 'undefined' && post.dateISO) ? post.dateISO : '' %>",
+    "dateModified": "<%= (typeof post !== 'undefined' && post.dateISO) ? post.dateISO : '' %>",
+    "author": {
+      "@type": "Organization",
+      "name": "MyTaxCalcs Editorial",
+      "url": "https://mytaxcalcs.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "MyTaxCalcs",
+      "url": "https://mytaxcalcs.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mytaxcalcs.com/favicon.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "<%= canonical %>"
+    }
+  }
+  </script>
 </head>
 <body>
 
