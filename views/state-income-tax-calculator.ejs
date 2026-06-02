@@ -177,6 +177,18 @@
     .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
     .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
     .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+    /* Quick Facts Bar */
+    .state-quick-facts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0 0}
+    @media(max-width:580px){.state-quick-facts{grid-template-columns:1fr 1fr}}
+    .sqf-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;text-align:center}
+    .sqf-label{display:block;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:#9ca3af;margin-bottom:5px}
+    .sqf-value{display:block;font-size:.95rem;font-weight:800;color:#111827}
+    /* Key Facts */
+    .state-key-facts{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:14px;padding:22px 24px;margin:20px 0 0}
+    .state-key-facts h2{font-size:1rem;font-weight:700;color:#14532d;margin:0 0 14px}
+    .skf-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+    .skf-list li{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:#374151;line-height:1.55}
+    .skf-icon{min-width:22px;height:22px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;margin-top:1px}
   </style>
 </head>
 <body>
@@ -275,6 +287,41 @@
             <p style="margin:10px 0 0;font-size:.83rem;"><a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer" style="color:#16a34a;font-weight:600;"><%= state.revenueUrl.label %> &nearr;</a> — official source for <%= state.name %> tax information.</p>
           <% } %>
         <% } %>
+      </div>
+
+      <!-- Quick Facts Bar -->
+      <div class="state-quick-facts">
+        <div class="sqf-item">
+          <span class="sqf-label">State Income Tax</span>
+          <span class="sqf-value"><%= state.hasIncomeTax ? state.brackets : 'None' %></span>
+        </div>
+        <div class="sqf-item">
+          <span class="sqf-label">Avg. Sales Tax</span>
+          <span class="sqf-value"><%= state.salesTax %></span>
+        </div>
+        <div class="sqf-item">
+          <span class="sqf-label">State Filing Deadline</span>
+          <span class="sqf-value"><%= state.filingDeadline %></span>
+        </div>
+        <div class="sqf-item">
+          <span class="sqf-label">Top Rate</span>
+          <span class="sqf-value"><%= state.hasIncomeTax ? state.topRate + '%' : '0%' %></span>
+        </div>
+      </div>
+
+      <!-- Key Facts -->
+      <div class="state-key-facts">
+        <h2>Key Tax Facts: <%= state.name %></h2>
+        <ul class="skf-list">
+          <% state.keyFacts.forEach(function(fact) { %>
+            <li>
+              <span class="skf-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <%= fact %>
+            </li>
+          <% }) %>
+        </ul>
       </div>
 
       <div class="sister-sites-box">
