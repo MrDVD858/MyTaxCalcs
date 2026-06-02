@@ -257,12 +257,41 @@
       <div class="seo-example-box">
         <% if (state.hasIncomeTax) { %>
           <% if (state.topRate === state.bottomRate) { %>
-            <h3><%= state.name %> State Income Tax Rate</h3>
+            <h3><%= state.name %> State Income Tax Rate (2025)</h3>
             <table class="brackets-table">
-              <thead><tr><th>All Taxable Income</th><th>Tax Rate</th></tr></thead>
+              <thead><tr><th>Taxable Income</th><th>Tax Rate</th></tr></thead>
               <tbody><tr><td>All income</td><td><%= state.topRate %>%</td></tr></tbody>
             </table>
             <p style="margin:12px 0 0;font-size:.85rem;color:#475569;"><%= state.name %> uses a flat income tax rate of <%= state.topRate %>% on all taxable income. To estimate your <%= state.name %> state tax, multiply your taxable income by <%= state.topRate / 100 %>. For example, a resident with $60,000 of taxable income would owe approximately $<%= (60000 * state.topRate / 100).toLocaleString() %> in <%= state.name %> state income tax before credits.</p>
+          <% } else if (state.bracketRows && state.bracketRows.length) { %>
+            <h3><%= state.name %> State Income Tax Brackets (2025, Single Filer)</h3>
+            <table class="brackets-table">
+              <thead>
+                <tr><th>Taxable Income</th><th>Rate</th><th>Tax on Bracket</th></tr>
+              </thead>
+              <tbody>
+                <% state.bracketRows.forEach(function(row, idx) { %>
+                  <tr>
+                    <td>
+                      <% if (row.max === null) { %>
+                        Over $<%= row.min.toLocaleString() %>
+                      <% } else { %>
+                        $<%= row.min.toLocaleString() %> – $<%= row.max.toLocaleString() %>
+                      <% } %>
+                    </td>
+                    <td><strong><%= row.rate %>%</strong></td>
+                    <td style="color:#6b7280;font-size:.82rem;">
+                      <% if (row.max === null) { %>
+                        <%= row.rate %>% of amount over $<%= row.min.toLocaleString() %>
+                      <% } else { %>
+                        $<%= Math.round((row.max - row.min) * row.rate / 100).toLocaleString() %> max
+                      <% } %>
+                    </td>
+                  </tr>
+                <% }) %>
+              </tbody>
+            </table>
+            <p style="margin:12px 0 0;font-size:.85rem;color:#475569;"><%= state.name %> uses a graduated income tax — only the income within each bracket is taxed at that bracket's rate. The top rate of <%= state.topRate %>% applies only to income above the top threshold. Most <%= state.name %> residents pay an effective state rate well below <%= state.topRate %>% because lower income is always taxed at lower rates first. Married filing jointly thresholds are generally double the single filer amounts shown above.</p>
           <% } else { %>
             <h3><%= state.name %> State Income Tax Brackets (2025)</h3>
             <table class="brackets-table">
@@ -271,7 +300,7 @@
                 <tr><td><%= state.brackets %></td><td><%= state.topRate %>%</td><td>Graduated brackets</td></tr>
               </tbody>
             </table>
-            <p style="margin:12px 0 0;font-size:.85rem;color:#475569;"><%= state.name %> uses a graduated income tax where higher income is taxed at higher rates. The bottom rate of <%= state.bottomRate %>% applies to the lowest bracket, and the top rate of <%= state.topRate %>% applies only to income above the top bracket threshold. Most <%= state.name %> residents pay an effective state rate well below the <%= state.topRate %>% top rate because only a portion of their income reaches the highest bracket.</p>
+            <p style="margin:12px 0 0;font-size:.85rem;color:#475569;"><%= state.name %> uses a graduated income tax where higher income is taxed at higher rates. The bottom rate of <%= state.bottomRate %>% applies to the lowest bracket, and the top rate of <%= state.topRate %>% applies only to income above the top bracket threshold.</p>
           <% } %>
           <% if (state.revenueUrl) { %>
             <p style="margin:10px 0 0;font-size:.83rem;"><a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer" style="color:#16a34a;font-weight:600;"><%= state.revenueUrl.label %> &nearr;</a> — official source for <%= state.name %> tax forms, rates, and filing.</p>
