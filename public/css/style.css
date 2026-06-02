@@ -1373,3 +1373,188 @@ input:focus, select:focus {
     grid-template-columns: 1fr;
   }
 }
+
+/* ── Guide Sections ── */
+.guide-section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px;
+  margin: 32px 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+}
+.guide-section h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 10px;
+}
+.guide-intro {
+  font-size: .95rem;
+  color: #6b7280;
+  margin: 0 0 28px;
+  line-height: 1.65;
+}
+.guide-pain,
+.guide-steps,
+.guide-mistakes,
+.guide-next {
+  margin-bottom: 28px;
+}
+.guide-pain h3,
+.guide-steps h3,
+.guide-mistakes h3,
+.guide-next h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 10px;
+}
+.guide-pain p,
+.guide-next p {
+  font-size: .9rem;
+  color: #6b7280;
+  line-height: 1.65;
+  margin: 0;
+}
+.guide-ol,
+.guide-ul {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.guide-ol li,
+.guide-ul li {
+  font-size: .9rem;
+  color: #6b7280;
+  line-height: 1.65;
+}
+.guide-ol li strong,
+.guide-ul li strong {
+  color: #111827;
+}
+.guide-ul li a,
+.guide-ol li a,
+.guide-pain a,
+.guide-next a {
+  color: #16a34a;
+  text-decoration: none;
+  font-weight: 600;
+}
+.guide-ul li a:hover,
+.guide-ol li a:hover,
+.guide-next a:hover {
+  text-decoration: underline;
+}
+.mistake-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.mistake-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.mistake-num {
+  min-width: 28px;
+  height: 28px;
+  background: #fee2e2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8rem;
+  font-weight: 800;
+  color: #dc2626;
+}
+.mistake-item div {
+  font-size: .88rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+.mistake-item div strong {
+  color: #111827;
+  display: block;
+  margin-bottom: 4px;
+}
+.mistake-item div a {
+  color: #16a34a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.mistake-item div a:hover {
+  text-decoration: underline;
+}
+.guide-next ul {
+  list-style: disc;
+}
+
+/* ── About Page Additions ── */
+.about-calc-list,
+.about-method-list,
+.about-network-list {
+  padding-left: 20px;
+  margin: 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-calc-list li,
+.about-method-list li,
+.about-network-list li {
+  font-size: .93rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+.about-calc-list li strong,
+.about-method-list li strong {
+  color: #111827;
+}
+.about-calc-list a,
+.about-network-list a {
+  color: #16a34a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.about-calc-list a:hover,
+.about-network-list a:hover {
+  text-decoration: underline;
+}
+.trust-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+.trust-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: .9rem;
+  color: #374151;
+  line-height: 1.6;
+}
+.trust-icon {
+  min-width: 32px;
+  height: 32px;
+  background: #16a34a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.trust-item strong {
+  color: #111827;
+}
