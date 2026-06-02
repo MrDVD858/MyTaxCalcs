@@ -3,6 +3,227 @@
 
 const blogPosts = [
   {
+    slug: "mid-year-tax-checkup-2026",
+    title: "Mid-Year Tax Checkup 2026: 7 Things to Review Before July",
+    date: "June 2, 2026",
+    dateISO: "2026-06-02",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Halfway through 2026 is the ideal time to make sure your withholding, retirement contributions, and estimated payments are on track. Here's a practical checklist.",
+    metaDescription: "Mid-year 2026 tax checkup: 7 things to review now — withholding, estimated payments, SALT changes, retirement contributions, and more. Act before year-end deadlines close.",
+    ogTitle: "Mid-Year Tax Checkup 2026: 7 Things to Review Before July | MyTaxCalcs",
+    ogDescription: "Halfway through 2026 is the perfect time to review your withholding, estimated payments, and retirement contributions. Here's what to check now.",
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes" },
+      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
+      { href: "/standard-deduction-vs-itemized", label: "Standard Deduction vs. Itemizing" },
+    ],
+    content: `
+<p>June is the best time to do a mid-year tax review — early enough to make meaningful changes, late enough to have real income data. Whether you're a W-2 employee, freelancer, or retiree, the next few months are when tax decisions have the most impact. Here are seven things worth reviewing before July.</p>
+
+<h2>1. Check Your Withholding Against Your 2026 Liability</h2>
+<p>The OBBBA changed several provisions that took effect January 1, 2026 — including a higher standard deduction, expanded SALT deduction cap, and a new senior deduction. If your W-4 hasn't been updated since 2024 or 2025, your withholding may not reflect your actual 2026 tax situation.</p>
+<p>The quick test: use our <a href="/income-tax-calculator">federal income tax calculator</a> to estimate your 2026 liability based on your year-to-date income (annualized). Then check your pay stubs to see how much has been withheld so far. If you're tracking significantly short, you have time to submit a new W-4 to your employer and increase withholding for the rest of the year.</p>
+
+<h2>2. Verify Your Quarterly Estimated Payments Are on Track</h2>
+<p>If you're self-employed, have significant investment income, or receive income not subject to withholding, you're generally required to make quarterly estimated payments. The Q2 2026 estimated tax deadline is June 16, 2026. Miss it and you may owe an underpayment penalty even if you pay in full at filing.</p>
+<p>The safe harbor rule: you can avoid penalties by paying either 100% of your 2025 tax liability (110% if your 2025 AGI exceeded $150,000) or 90% of your 2026 liability — whichever is smaller. See our <a href="/quarterly-estimated-taxes">quarterly estimated tax guide</a> for payment deadlines and how to calculate.</p>
+
+<h2>3. Review the New SALT Deduction Cap</h2>
+<p>One of the most significant OBBBA changes for itemizers is the expansion of the SALT (state and local tax) deduction cap from $10,000 to $40,000 for 2026 (phasing out at higher income levels). If you pay significant state income tax and/or property taxes — particularly in high-tax states like California, New York, or New Jersey — this change may make itemizing worthwhile for the first time in years.</p>
+<p>Compare your total itemizable deductions (mortgage interest, state and local taxes up to the new cap, charitable contributions) against the 2026 standard deduction: $15,750 for single filers and $31,500 for married filing jointly. If itemizing beats the standard deduction, update your withholding or estimated payments accordingly. See our <a href="/standard-deduction-vs-itemized">standard deduction vs. itemizing guide</a> for the full comparison.</p>
+
+<h2>4. Max Out Retirement Contributions If You Haven't Already</h2>
+<p>Retirement contributions reduce your taxable income dollar-for-dollar, making them one of the most powerful mid-year tax moves available. For 2026, contribution limits are:</p>
+<ul>
+  <li><strong>401(k) / 403(b):</strong> $23,500 (plus $7,500 catch-up if 50 or older)</li>
+  <li><strong>IRA (traditional or Roth):</strong> $7,000 (plus $1,000 catch-up if 50 or older)</li>
+  <li><strong>HSA:</strong> $4,300 for self-only coverage / $8,550 for family coverage</li>
+  <li><strong>SEP-IRA (self-employed):</strong> Up to 25% of net self-employment income, max $70,000</li>
+</ul>
+<p>If you're behind on 401(k) contributions, contact your HR department to increase your deferral percentage now — changes typically take a pay cycle or two to take effect.</p>
+
+<h2>5. Consider Whether You Qualify for the New Senior Deduction</h2>
+<p>The OBBBA created a temporary above-the-line deduction of up to $6,000 for taxpayers age 65 or older ($12,000 for married couples where both spouses qualify), available for tax years 2025 through 2028. This deduction is in addition to the standard deduction and phases out at higher income levels.</p>
+<p>If you or your spouse turned 65 in 2026 or are already eligible, factor this deduction into your estimated tax calculation — it may reduce your quarterly payment requirement or adjust your withholding needs. See our full breakdown in <a href="/blog/obbba-senior-deduction-2026">The New $6,000 Senior Deduction</a>.</p>
+
+<h2>6. Harvest Investment Losses Before Year-End</h2>
+<p>If you have investments sitting at a loss, mid-year is a good time to evaluate tax-loss harvesting — selling losing positions to offset realized gains elsewhere in your portfolio. Capital losses offset capital gains dollar-for-dollar. If losses exceed gains, up to $3,000 can be deducted against ordinary income annually, with the remainder carried forward.</p>
+<p>Key rule: the wash-sale rule prohibits repurchasing a substantially identical security within 30 days before or after the sale. If you want to stay invested in the same sector, buy a similar-but-not-identical ETF or fund during the 30-day window. See our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate the impact of harvesting a specific position.</p>
+
+<h2>7. Update Your Records for Life Changes</h2>
+<p>Tax liability is highly sensitive to life events. If any of these happened in 2026, your tax situation may have changed substantially — and your withholding or estimated payments should reflect it:</p>
+<ul>
+  <li><strong>Marriage or divorce</strong> — filing status change affects brackets, standard deduction, and FICA</li>
+  <li><strong>New child</strong> — Child Tax Credit ($2,200 per child under OBBBA), dependent care credits</li>
+  <li><strong>Job change</strong> — withholding resets; lump-sum income from severance may need estimated payments</li>
+  <li><strong>Home purchase or sale</strong> — mortgage interest deduction, potential capital gains exclusion</li>
+  <li><strong>Started freelancing</strong> — SE tax now applies; quarterly payments required</li>
+</ul>
+<p>For any of these situations, run a fresh estimate with our <a href="/tax-refund-calculator">tax refund calculator</a> to see where you stand for the year.</p>
+
+<h2>The Bottom Line</h2>
+<p>The best tax moves happen during the year — not at filing time. Mid-year adjustments to withholding, estimated payments, and retirement contributions can meaningfully reduce your April bill or eliminate a penalty. The 2026 tax year brought enough rule changes from the OBBBA that it's worth a fresh look even if nothing in your personal situation has changed.</p>
+    `,
+  },
+  {
+    slug: "obbba-senior-deduction-2026",
+    title: "The New $6,000 Senior Deduction in 2026: Who Qualifies and How to Claim It",
+    date: "June 2, 2026",
+    dateISO: "2026-06-02",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Law Changes",
+    excerpt: "The One Big Beautiful Bill Act created a new above-the-line deduction of up to $6,000 for taxpayers 65 and older. Here's exactly who qualifies, how much you can deduct, and what it means for your 2026 tax bill.",
+    metaDescription: "New $6,000 senior deduction for 2026: who qualifies, income phase-out thresholds, how it stacks with the standard deduction, and what it means for retirees' tax bills.",
+    ogTitle: "The New $6,000 Senior Deduction 2026: Who Qualifies and How to Claim It | MyTaxCalcs",
+    ogDescription: "The OBBBA created a new $6,000 above-the-line deduction for taxpayers 65 and older. Here's who qualifies, the income limits, and how it affects your 2026 taxes.",
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/taxes-in-retirement-what-to-expect", label: "Taxes in Retirement" },
+      { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
+      { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
+    ],
+    content: `
+<p>The One Big Beautiful Bill Act (OBBBA), signed July 4, 2025, created a new federal income tax deduction specifically for older Americans. For tax years 2025 through 2028, taxpayers age 65 or older can claim an additional above-the-line deduction of up to $6,000 — or $12,000 for married couples where both spouses are 65 or older. Here's everything you need to know.</p>
+
+<h2>What Is the Senior Deduction?</h2>
+<p>This is a new above-the-line deduction, meaning you can claim it whether you take the standard deduction or itemize. It is separate from and in addition to the existing additional standard deduction for seniors (which is roughly $1,600–$2,000 depending on filing status and year).</p>
+<p>The deduction is:</p>
+<ul>
+  <li><strong>$6,000</strong> for single filers, heads of household, and married filing separately</li>
+  <li><strong>$12,000</strong> for married filing jointly (if both spouses are 65+)</li>
+  <li><strong>$6,000</strong> for married filing jointly if only one spouse is 65+</li>
+</ul>
+<p>It is available for tax years 2025, 2026, 2027, and 2028 only — after that, Congress would need to extend it.</p>
+
+<h2>Who Qualifies?</h2>
+<p>To claim the full deduction, you must:</p>
+<ul>
+  <li>Be <strong>age 65 or older by December 31</strong> of the tax year (same rule as the existing senior additional standard deduction)</li>
+  <li>Have modified adjusted gross income (MAGI) <strong>below the phase-out threshold</strong> for your filing status</li>
+  <li>File a federal income tax return for 2025, 2026, 2027, or 2028</li>
+</ul>
+<p>The deduction is not limited to retirees. A 65-year-old who still works full-time can claim it, as long as their income falls within the phase-out range.</p>
+
+<h2>Income Phase-Out: How It Works</h2>
+<p>The deduction phases out at higher income levels. The phase-out begins once your MAGI exceeds certain thresholds and reduces the deduction proportionally until it reaches zero. The specific thresholds are set by the IRS and may be adjusted for inflation — consult IRS guidance or a tax professional for the exact phase-out range applicable to your 2026 return.</p>
+<p>General guidance: the deduction is most valuable for middle-income retirees. High-income seniors (those with MAGI well above $100,000 single or $150,000 married) may see a reduced or eliminated deduction. Lower-income seniors who don't owe federal income tax may not benefit in the same way, though the deduction could still reduce their liability if they have some taxable income.</p>
+
+<h2>How It Interacts With the Standard Deduction</h2>
+<p>For 2026, the standard deduction is approximately $15,750 for single filers and $31,500 for married filing jointly. Seniors already receive an additional standard deduction on top of this base amount.</p>
+<p>The new $6,000 senior deduction stacks on top of both. A single filer aged 65+ who takes the standard deduction in 2026 would subtract approximately:</p>
+<ul>
+  <li>$15,750 standard deduction</li>
+  <li>~$1,600 additional senior standard deduction</li>
+  <li>$6,000 new OBBBA senior deduction</li>
+  <li><strong>~$23,350 total deductions from gross income</strong></li>
+</ul>
+<p>That's a meaningful reduction in taxable income — translating to roughly $600–$1,400 in actual tax savings depending on your marginal rate.</p>
+
+<h2>What Does This Mean in Dollar Terms?</h2>
+<p>The tax savings depend on your marginal rate. At common marginal rates for retirees:</p>
+<ul>
+  <li><strong>12% bracket:</strong> $6,000 deduction saves ~$720 in federal tax</li>
+  <li><strong>22% bracket:</strong> $6,000 deduction saves ~$1,320 in federal tax</li>
+  <li><strong>24% bracket:</strong> $6,000 deduction saves ~$1,440 in federal tax</li>
+</ul>
+<p>For a married couple both aged 65+ at a 22% marginal rate, the $12,000 deduction is worth approximately $2,640 in reduced federal tax.</p>
+
+<h2>Planning Implications</h2>
+<ul>
+  <li><strong>Roth conversions:</strong> The new deduction partially offsets the ordinary income added by a Roth conversion in 2026, potentially making a larger conversion more tax-efficient than in prior years.</li>
+  <li><strong>Withholding and estimated payments:</strong> The deduction may reduce your 2026 liability below what has been withheld — you could be due a larger refund, or could reduce quarterly estimated payments going forward.</li>
+  <li><strong>Social Security taxation:</strong> The deduction reduces AGI, which affects how much of your Social Security benefits are subject to federal tax. Lowering AGI below the relevant thresholds ($25,000 single / $32,000 married) may reduce the portion of Social Security that's taxable.</li>
+  <li><strong>State taxes:</strong> Most states do not automatically conform to new federal deductions. The OBBBA senior deduction most likely does not apply at the state level — check your state's tax agency to confirm.</li>
+</ul>
+
+<h2>How to Claim It</h2>
+<p>The deduction will be claimed on your federal Form 1040 for tax year 2026 (filed in early 2027). The IRS will update the form and instructions to include the new line item. Tax software will handle this automatically once IRS forms are finalized. Use our <a href="/income-tax-calculator">federal income tax calculator</a> to estimate your 2026 liability, and see our guide on <a href="/blog/taxes-in-retirement-what-to-expect">taxes in retirement</a> for the broader picture.</p>
+
+<h2>The Bottom Line</h2>
+<p>The new $6,000 senior deduction is a meaningful but temporary benefit for taxpayers 65 and older — available for 2025 through 2028 only. Qualifying seniors should factor it into 2026 tax planning, particularly around withholding, estimated payments, and Roth conversion decisions. Consult a tax professional to confirm your specific eligibility and phase-out amount.</p>
+    `,
+  },
+  {
+    slug: "salt-deduction-2026-expanded",
+    title: "SALT Deduction 2026: The $40,000 Cap and What It Means for Homeowners",
+    date: "June 2, 2026",
+    dateISO: "2026-06-02",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Law Changes",
+    excerpt: "The OBBBA raised the SALT deduction cap from $10,000 to $40,000 for 2026, changing the standard vs. itemizing math for millions of homeowners in high-tax states. Here's how to calculate whether it helps you.",
+    metaDescription: "SALT deduction cap raised to $40,000 in 2026 under the OBBBA. How it affects homeowners in California, New York, and New Jersey — and how to calculate whether itemizing now beats the standard deduction.",
+    ogTitle: "SALT Deduction 2026: The $40,000 Cap Explained for Homeowners | MyTaxCalcs",
+    ogDescription: "The OBBBA raised the SALT cap from $10,000 to $40,000 in 2026. Here's who benefits, the income phase-out, and how to decide between standard and itemized deductions.",
+    relatedLinks: [
+      { href: "/standard-deduction-vs-itemized", label: "Standard Deduction vs. Itemizing" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/states", label: "State Income Tax Calculators" },
+      { href: "/blog/tax-implications-of-buying-a-home", label: "Tax Implications of Buying a Home" },
+    ],
+    content: `
+<p>One of the most widely discussed provisions of the One Big Beautiful Bill Act (OBBBA) is the dramatic expansion of the state and local tax (SALT) deduction cap. After years of the $10,000 limit imposed by the 2017 Tax Cuts and Jobs Act, the OBBBA raised the cap to $40,000 for 2026. For homeowners in high-tax states like California, New York, New Jersey, and Illinois, this reshapes the standard vs. itemizing decision for the first time in years.</p>
+
+<h2>What Changed: $10,000 → $40,000</h2>
+<p>Before the OBBBA, the SALT deduction was capped at $10,000 per return regardless of filing status. A homeowner in New Jersey paying $12,000 in property taxes alone blew through the cap without even counting state income tax. Under the OBBBA, the cap increases to $40,000 for 2026 for most filers — a fourfold increase that allows taxpayers to deduct up to $40,000 in combined state income taxes and property taxes.</p>
+
+<h2>Who Benefits Most?</h2>
+<p>The SALT expansion is most valuable for taxpayers who:</p>
+<ul>
+  <li>Live in high state income tax states (California: up to 13.3%, New York: up to 10.9%, New Jersey: up to 10.75%)</li>
+  <li>Own high-value real estate with significant property tax bills</li>
+  <li>Have total SALT exceeding $10,000 — previously capped but now fully or largely deductible</li>
+  <li>Have enough other itemized deductions to exceed the standard deduction</li>
+</ul>
+<p>For example: a married couple in California earning $200,000 might pay $15,000 in state income tax and $8,000 in property taxes — a combined $23,000 in SALT. Under the old cap, they could only deduct $10,000. Under the $40,000 cap, they deduct the full $23,000.</p>
+
+<h2>The Income Phase-Out</h2>
+<p>The $40,000 cap phases out for higher-income taxpayers, reducing the available SALT deduction once MAGI exceeds certain thresholds, with the cap reducing proportionally until it reaches the old $10,000 floor for very high earners. General guidance: taxpayers with MAGI below approximately $500,000 are most likely to benefit from the full or partial increase. Very high earners above $600,000–$700,000 may see the cap reduced back toward prior levels. Consult IRS guidance or a tax professional for exact phase-out parameters.</p>
+
+<h2>Does Itemizing Now Beat the Standard Deduction for You?</h2>
+<p>The 2026 standard deduction is approximately $15,750 for single filers and $31,500 for married filing jointly. Your key itemized deductions to add up:</p>
+<ul>
+  <li><strong>SALT:</strong> State income tax withheld + property taxes paid (up to $40,000 cap)</li>
+  <li><strong>Mortgage interest:</strong> Interest on loans up to $750,000 of acquisition debt</li>
+  <li><strong>Charitable contributions:</strong> Cash donations to qualifying organizations</li>
+  <li><strong>Medical expenses:</strong> Qualifying expenses exceeding 7.5% of AGI</li>
+</ul>
+
+<h3>Example: Married Couple in New York</h3>
+<ul>
+  <li>State income tax paid: $16,000</li>
+  <li>Property taxes: $9,000</li>
+  <li>Total SALT: $25,000 (under the $40,000 cap — fully deductible)</li>
+  <li>Mortgage interest: $14,000</li>
+  <li>Charitable giving: $3,000</li>
+  <li><strong>Total itemized deductions: $42,000</strong> vs. $31,500 standard deduction</li>
+  <li><strong>Benefit of itemizing: $10,500 more deducted</strong> — worth ~$2,310 in tax savings at 22%</li>
+</ul>
+<p>Under the old $10,000 SALT cap, this couple's total itemized deductions would have been $27,000 — barely exceeding the standard deduction and making the choice much less clear.</p>
+
+<h3>Example: Single Filer in Texas (No State Income Tax)</h3>
+<ul>
+  <li>State income tax: $0</li>
+  <li>Property taxes: $6,500</li>
+  <li>Mortgage interest: $9,000</li>
+  <li>Charitable giving: $1,000</li>
+  <li><strong>Total itemized deductions: $16,500</strong> vs. $15,750 standard deduction</li>
+  <li><strong>Benefit of itemizing: $750</strong> — worth ~$165 at 22%</li>
+</ul>
+<p>This filer could technically itemize but the margin is thin enough that the standard deduction is simpler and nearly equivalent. The SALT expansion doesn't move the needle as much for no-income-tax state residents since their SALT is already limited to property taxes.</p>
+
+<h2>How to Update Your Withholding</h2>
+<p>If the SALT expansion means you'll itemize in 2026 where you previously took the standard deduction, your current withholding may be too high. Submit a new W-4 to your employer to reduce withholding and bring more money home each paycheck rather than waiting for a large refund. Use our <a href="/income-tax-calculator">federal income tax calculator</a> with itemized deductions factored in to estimate your 2026 liability, then compare to your year-to-date withholding.</p>
+
+<h2>State Conformity</h2>
+<p>The SALT deduction is a federal deduction only — it reduces your federal taxable income, not your state taxable income. The OBBBA's SALT expansion has no direct effect on what you owe in state income tax. See our <a href="/states">state income tax pages</a> for state-specific deduction rules.</p>
+
+<h2>The Bottom Line</h2>
+<p>The SALT cap expansion from $10,000 to $40,000 is the most impactful OBBBA change for high-tax-state homeowners. If you own a home and pay significant state income tax, run the numbers now — the standard vs. itemize decision may have flipped in 2026. See our <a href="/standard-deduction-vs-itemized">standard deduction vs. itemizing guide</a> for the full framework.</p>
+    `,
+  },
+  {
     slug: "how-to-calculate-your-effective-tax-rate",
     title: "How to Calculate Your Effective Tax Rate (And Why It Matters More Than Your Bracket)",
     date: "May 29, 2026",
