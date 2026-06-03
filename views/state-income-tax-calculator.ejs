@@ -2,16 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <% var pageTitle = state.name + ' Income Tax Calculator 2025 | MyTaxCalcs'; %>
-  <% var metaDesc = state.hasIncomeTax
-    ? 'Free ' + state.name + ' income tax calculator for 2025. Estimate state and federal income tax, effective rate, and take-home pay. Includes ' + state.name + ' tax brackets and a worked example.'
-    : state.name + ' has no state income tax. Use our free calculator to estimate your federal income tax as a ' + state.name + ' resident for 2025.'; %>
   <title><%= pageTitle %></title>
-  <meta name="description" content="<%= metaDesc %>">
+  <meta name="description" content="<%= metaDescription %>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://mytaxcalcs.com/<%= state.slug %>-income-tax-calculator">
-  <meta property="og:title" content="<%= pageTitle %>">
-  <meta property="og:description" content="<%= metaDesc %>">
+  <meta property="og:title" content="<%= ogTitle %>">
+  <meta property="og:description" content="<%= ogDescription %>">
   <meta property="og:url" content="https://mytaxcalcs.com/<%= state.slug %>-income-tax-calculator">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MyTaxCalcs">
@@ -19,8 +15,8 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<%= pageTitle %>">
-  <meta name="twitter:description" content="<%= metaDesc %>">
+  <meta name="twitter:title" content="<%= ogTitle %>">
+  <meta name="twitter:description" content="<%= ogDescription %>">
   <meta name="twitter:image" content="https://mytaxcalcs.com/images/og-default.png">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -30,55 +26,52 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
   <style>
-    .state-overview-section{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.5rem 1.75rem;margin:1.5rem 0}
-    .state-overview-section h2{font-size:1.2rem;color:#111827;margin-bottom:.75rem}
-    .state-overview-section p{color:#374151;line-height:1.7;margin:0}
-    .key-facts-bar{display:flex;flex-wrap:wrap;gap:1px;background:#e5e7eb;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;margin:1.5rem 0 2rem}
-    .fact-item{flex:1 1 160px;background:#fff;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.25rem}
-    .fact-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#6b7280}
-    .fact-value{font-size:1rem;font-weight:700;color:#111827}
-    .fact-value a{font-size:.85rem;font-weight:600;color:#16a34a;text-decoration:none}
+    /* State page additions */
+    .state-overview-section{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.5rem 1.75rem;margin:2rem 0}
+    .state-overview-section h2{font-size:1.15rem;color:#111827;margin:0 0 .75rem;font-weight:700}
+    .state-overview-section p{color:#374151;line-height:1.7;margin:0;font-size:.95rem}
+    .key-facts-bar{display:flex;flex-wrap:wrap;gap:1px;background:#e5e7eb;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;margin:2rem 0}
+    .fact-item{flex:1 1 150px;background:#fff;padding:1rem 1.25rem;display:flex;flex-direction:column;gap:.25rem}
+    .fact-label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#6b7280}
+    .fact-value{font-size:.95rem;font-weight:700;color:#111827}
+    .fact-value a{font-size:.82rem;font-weight:600;color:#16a34a;text-decoration:none}
     .fact-value a:hover{text-decoration:underline}
     .bracket-section{margin:2rem 0}
-    .bracket-section h2{font-size:1.3rem;color:#111827;margin-bottom:.5rem}
-    .bracket-section>p{color:#4b5563;margin-bottom:1rem}
+    .bracket-section h2{font-size:1.25rem;font-weight:800;color:#111827;margin:0 0 .4rem}
+    .bracket-section>p{color:#4b5563;margin:0 0 1rem;font-size:.9rem}
     .bracket-table-wrap{overflow-x:auto;border-radius:10px;border:1px solid #e5e7eb}
-    .bracket-table{width:100%;border-collapse:collapse;font-size:.95rem}
+    .bracket-table{width:100%;border-collapse:collapse;font-size:.9rem}
     .bracket-table thead{background:#16a34a;color:#fff}
-    .bracket-table thead th{padding:.75rem 1rem;text-align:left;font-weight:600}
+    .bracket-table thead th{padding:.7rem 1rem;text-align:left;font-weight:600}
     .bracket-table tbody tr:nth-child(even){background:#f9fafb}
     .bracket-table tbody tr:hover{background:#f0fdf4}
-    .bracket-table tbody td{padding:.65rem 1rem;color:#111827;border-bottom:1px solid #f3f4f6}
-    .bracket-note{font-size:.8rem;color:#6b7280;margin-top:.5rem}
+    .bracket-table tbody td{padding:.6rem 1rem;color:#111827;border-bottom:1px solid #f3f4f6}
+    .bracket-note{font-size:.78rem;color:#9ca3af;margin:.5rem 0 0}
     .bracket-note a{color:#16a34a}
-    .flat-rate-callout{display:flex;align-items:center;gap:1rem;background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:1.25rem 1.75rem;margin:1rem 0}
-    .flat-rate-number{font-size:2.5rem;font-weight:800;color:#16a34a;line-height:1}
-    .flat-rate-label{font-size:1rem;color:#374151;font-weight:500}
-    .no-tax-callout-section{margin:1.5rem 0}
-    .no-tax-callout{display:flex;align-items:flex-start;gap:1rem;background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:1.25rem 1.75rem;margin-bottom:1rem}
-    .no-tax-icon{font-size:1.75rem;color:#16a34a;font-weight:800;line-height:1;flex-shrink:0}
-    .no-tax-callout h2{font-size:1.15rem;color:#111827;margin:0 0 .35rem}
-    .no-tax-callout p{color:#374151;margin:0}
-    .no-tax-callout-section>p{color:#4b5563;margin-top:.75rem}
+    .flat-rate-callout{display:flex;align-items:center;gap:1.25rem;background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:1.25rem 1.75rem;margin:1rem 0}
+    .flat-rate-number{font-size:2.75rem;font-weight:800;color:#16a34a;line-height:1}
+    .flat-rate-label{font-size:.95rem;color:#374151;font-weight:500}
+    .no-tax-callout{display:flex;align-items:flex-start;gap:1rem;background:#f0fdf4;border:2px solid #16a34a;border-radius:12px;padding:1.25rem 1.75rem;margin:2rem 0}
+    .no-tax-icon{font-size:1.75rem;color:#16a34a;font-weight:800;line-height:1.2;flex-shrink:0}
+    .no-tax-callout h2{font-size:1.1rem;color:#111827;margin:0 0 .35rem;font-weight:700}
+    .no-tax-callout p{color:#374151;margin:0;font-size:.9rem}
     .worked-example-section{margin:2rem 0}
-    .worked-example-section h2{font-size:1.3rem;color:#111827;margin-bottom:.5rem}
-    .worked-example-section>p{color:#4b5563;margin-bottom:1rem}
+    .worked-example-section h2{font-size:1.25rem;font-weight:800;color:#111827;margin:0 0 .4rem}
+    .worked-example-section>p{color:#4b5563;margin:0 0 1rem;font-size:.9rem}
     .example-box{border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
-    .example-scenario{background:#f9fafb;padding:.75rem 1.25rem;font-size:.9rem;color:#374151;border-bottom:1px solid #e5e7eb}
-    .example-table{width:100%;border-collapse:collapse;font-size:.9rem}
-    .example-table th{background:#f3f4f6;padding:.6rem 1.25rem;text-align:left;font-weight:600;color:#374151;border-bottom:1px solid #e5e7eb}
+    .example-scenario{background:#f9fafb;padding:.7rem 1.25rem;font-size:.85rem;color:#374151;border-bottom:1px solid #e5e7eb}
+    .example-table{width:100%;border-collapse:collapse;font-size:.88rem}
+    .example-table th{background:#f3f4f6;padding:.55rem 1.25rem;text-align:left;font-weight:600;color:#374151;border-bottom:1px solid #e5e7eb}
     .example-table th:last-child,.example-table td:last-child{text-align:right}
-    .example-table td{padding:.6rem 1.25rem;color:#111827;border-bottom:1px solid #f3f4f6}
-    .example-table tfoot td{background:#f0fdf4;font-weight:700;color:#15803d;border-top:2px solid #bbf7d0}
+    .example-table td{padding:.55rem 1.25rem;color:#111827;border-bottom:1px solid #f3f4f6}
+    .example-table tfoot td{background:#f0fdf4;font-weight:700;color:#15803d;border-top:2px solid #bbf7d0;border-bottom:none}
     .state-faq-section{margin:2rem 0}
-    .state-faq-section h2{font-size:1.3rem;color:#111827;margin-bottom:1rem}
-    .state-faq-item{border-bottom:1px solid #f3f4f6;padding:1rem 0}
+    .state-faq-section h2{font-size:1.25rem;font-weight:800;color:#111827;margin:0 0 1rem}
+    .state-faq-item{border-bottom:1px solid #f3f4f6;padding:.9rem 0}
     .state-faq-item:last-child{border-bottom:none}
-    .state-faq-item h3{font-size:1rem;font-weight:600;color:#111827;margin:0 0 .4rem}
-    .state-faq-item p{color:#4b5563;margin:0;line-height:1.65}
+    .state-faq-item h3{font-size:.92rem;font-weight:700;color:#111827;margin:0 0 .35rem}
+    .state-faq-item p{color:#4b5563;margin:0;line-height:1.6;font-size:.88rem}
     .state-faq-item a{color:#16a34a}
-    .ri-value.green{color:#16a34a}
-    .ri-value.red{color:#dc2626}
     @media(max-width:600px){
       .key-facts-bar{flex-direction:column;gap:0}
       .fact-item{border-bottom:1px solid #e5e7eb}
@@ -90,8 +83,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "<%= state.name %> Income Tax Calculator 2025",
-    "description": "<%= metaDesc %>",
+    "name": "<%= pageTitle %>",
+    "description": "<%= metaDescription %>",
     "url": "https://mytaxcalcs.com/<%= state.slug %>-income-tax-calculator",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
@@ -114,156 +107,164 @@
             <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
           </svg>
         </span>
-        <span class="logo-text">MyTaxCalcs</span>
+        <span>MyTaxCalcs</span>
       </a>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/calculators">Calculators</a></li>
-        <li><a href="/states">States</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculators">Calculators</a>
+        <a href="/states">States</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="/calculators">All Calculators</a>
     </nav>
   </header>
 
-  <main class="calc-page">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <a href="/states">States</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span><%= state.name %> Income Tax Calculator</span>
+  </nav>
 
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="/">Home</a>
-      <span class="breadcrumb-sep">›</span>
-      <a href="/states">States</a>
-      <span class="breadcrumb-sep">›</span>
-      <span><%= state.name %> Income Tax Calculator</span>
-    </nav>
+  <main>
+    <div class="calc-page">
 
-    <div class="calc-page-header">
-      <div class="page-eyebrow"><%= state.abbr %> State Tax</div>
-      <h1><%= state.name %> Income Tax Calculator</h1>
-      <% if (state.hasIncomeTax) { %>
-        <p>Estimate your 2025 <%= state.name %> state and federal income tax. Includes <%= state.name %> tax brackets, a worked dollar example, and filing tips.</p>
+      <div class="calc-page-header">
+        <div class="page-eyebrow">
+          <%= state.abbr %> State Tax
+        </div>
+        <h1><%= state.name %> Income Tax Calculator</h1>
+        <% if (state.hasIncomeTax) { %>
+          <p>Estimate your 2025 <%= state.name %> state and federal income tax. Includes <%= state.name %> tax brackets, a worked dollar example, and filing tips.</p>
+        <% } else { %>
+          <p><%= state.name %> has no state income tax. Estimate your federal income tax as a <%= state.name %> resident for 2025.</p>
+        <% } %>
+      </div>
+
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5193834725888549" data-ad-slot="4212978293" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- Key Facts Bar -->
+      <div class="key-facts-bar">
+        <div class="fact-item">
+          <span class="fact-label">State Income Tax</span>
+          <span class="fact-value"><%= state.hasIncomeTax ? state.brackets : 'None' %></span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Top Rate</span>
+          <span class="fact-value"><%= state.hasIncomeTax ? state.topRate + '%' : '0%' %></span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Tax Type</span>
+          <span class="fact-value">
+            <% if (!state.hasIncomeTax) { %>No Income Tax<% } else if (state.topRate === state.bottomRate) { %>Flat Rate<% } else { %>Graduated<% } %>
+          </span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Official Source</span>
+          <span class="fact-value"><a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a></span>
+        </div>
+      </div>
+
+      <!-- State Overview -->
+      <div class="state-overview-section">
+        <h2><%= state.name %> State Income Tax Overview</h2>
+        <p><%= state.overview %></p>
+      </div>
+
+      <!-- GRADUATED STATE: bracket table + worked example -->
+      <% if (state.hasIncomeTax && state.bracketRows && state.bracketRows.length > 0) { %>
+      <div class="bracket-section">
+        <h2><%= state.name %> Income Tax Brackets (2025)</h2>
+        <p>These are the <%= state.name %> state income tax brackets for single filers. Only the income within each bracket is taxed at that rate — not your entire income.</p>
+        <div class="bracket-table-wrap">
+          <table class="bracket-table">
+            <thead><tr><th>Taxable Income</th><th>Tax Rate</th></tr></thead>
+            <tbody>
+              <% state.bracketRows.forEach(function(row) { %>
+              <tr>
+                <td><% if (row.max === null) { %>Over $<%= row.min.toLocaleString() %><% } else { %>$<%= row.min.toLocaleString() %> – $<%= row.max.toLocaleString() %><% } %></td>
+                <td><%= row.rate %>%</td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
+        <p class="bracket-note">Source: <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a>. Brackets shown are for single filers. Married filing jointly thresholds may differ.</p>
+      </div>
+      <div class="worked-example-section">
+        <h2>What a <%= state.name %> Resident Actually Pays: A Worked Example</h2>
+        <p>Your effective tax rate is almost always lower than your top bracket. Here is how the math works for a single filer earning $65,000.</p>
+        <div class="example-box">
+          <div class="example-scenario"><strong>Scenario:</strong> Single filer, $65,000 in taxable income</div>
+          <div id="worked-example-output"></div>
+        </div>
+        <script>
+        (function() {
+          var brackets = <%- JSON.stringify(state.bracketRows) %>;
+          var income = 65000;
+          var tax = 0;
+          var rows = [];
+          for (var i = 0; i < brackets.length; i++) {
+            var b = brackets[i];
+            if (income <= b.min) break;
+            var upper = b.max === null ? income : Math.min(b.max, income);
+            var chunk = upper - b.min;
+            var amount = chunk * (b.rate / 100);
+            tax += amount;
+            rows.push({ rate: b.rate, chunk: chunk, amount: amount });
+          }
+          var effectiveRate = (tax / income * 100).toFixed(1);
+          var fmt = function(n) { return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); };
+          var html = '<table class="example-table"><thead><tr><th>Bracket</th><th>Income in Bracket</th><th>Tax</th></tr></thead><tbody>';
+          rows.forEach(function(r) {
+            html += '<tr><td>' + r.rate + '%</td><td>' + fmt(r.chunk) + '</td><td>' + fmt(r.amount) + '</td></tr>';
+          });
+          html += '</tbody><tfoot>';
+          html += '<tr><td colspan="2"><strong>Total State Tax on $65,000</strong></td><td><strong>' + fmt(tax) + '</strong></td></tr>';
+          html += '<tr><td colspan="2"><strong>Effective State Tax Rate</strong></td><td><strong>' + effectiveRate + '%</strong></td></tr>';
+          html += '</tfoot></table>';
+          document.getElementById('worked-example-output').innerHTML = html;
+        })();
+        </script>
+      </div>
+
+      <!-- FLAT RATE STATE -->
+      <% } else if (state.hasIncomeTax && state.topRate === state.bottomRate) { %>
+      <div class="bracket-section">
+        <h2><%= state.name %> Income Tax Rate (2025)</h2>
+        <p><%= state.name %> uses a flat income tax rate — the same percentage applies to all taxable income regardless of how much you earn.</p>
+        <div class="flat-rate-callout">
+          <span class="flat-rate-number"><%= state.topRate %>%</span>
+          <span class="flat-rate-label">Flat rate on all taxable income</span>
+        </div>
+        <p class="bracket-note">Source: <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a></p>
+      </div>
+      <div class="worked-example-section">
+        <h2>What a <%= state.name %> Resident Actually Pays: A Worked Example</h2>
+        <div class="example-box">
+          <div class="example-scenario"><strong>Scenario:</strong> Single filer, $65,000 in taxable income</div>
+          <table class="example-table">
+            <tbody>
+              <tr><td>Taxable Income</td><td>$65,000.00</td></tr>
+              <tr><td><%= state.name %> Flat Rate</td><td><%= state.topRate %>%</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td><strong>Estimated State Tax</strong></td><td><strong>$<%= (650 * state.topRate).toFixed(2) %></strong></td></tr>
+              <tr><td><strong>Effective Rate</strong></td><td><strong><%= state.topRate %>%</strong></td></tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <!-- NO-TAX STATE -->
       <% } else { %>
-        <p><%= state.name %> has no state income tax. Use this calculator to estimate your federal income tax as a <%= state.name %> resident for 2025.</p>
-      <% } %>
-    </div>
-
-    <div class="ad-zone">
-      <div class="ad-zone-label">Advertisement</div>
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5193834725888549" data-ad-slot="4212978293" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <section class="key-facts-bar">
-      <div class="fact-item">
-        <span class="fact-label">State Income Tax</span>
-        <span class="fact-value"><%= state.hasIncomeTax ? state.brackets : 'None' %></span>
-      </div>
-      <div class="fact-item">
-        <span class="fact-label">Top Rate</span>
-        <span class="fact-value"><%= state.hasIncomeTax ? state.topRate + '%' : '0%' %></span>
-      </div>
-      <div class="fact-item">
-        <span class="fact-label">Tax Type</span>
-        <span class="fact-value">
-          <% if (!state.hasIncomeTax) { %>No Income Tax<% } else if (state.topRate === state.bottomRate) { %>Flat Rate<% } else { %>Graduated<% } %>
-        </span>
-      </div>
-      <div class="fact-item">
-        <span class="fact-label">Official Source</span>
-        <span class="fact-value"><a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a></span>
-      </div>
-    </section>
-
-    <section class="state-overview-section">
-      <h2><%= state.name %> State Income Tax Overview</h2>
-      <p><%= state.overview %></p>
-    </section>
-
-    <% if (state.hasIncomeTax && state.bracketRows && state.bracketRows.length > 0) { %>
-    <section class="bracket-section">
-      <h2><%= state.name %> Income Tax Brackets (2025)</h2>
-      <p>These are the <%= state.name %> state income tax brackets for single filers. Only the income within each bracket is taxed at that rate — not your entire income.</p>
-      <div class="bracket-table-wrap">
-        <table class="bracket-table">
-          <thead><tr><th>Taxable Income</th><th>Tax Rate</th></tr></thead>
-          <tbody>
-            <% state.bracketRows.forEach(function(row) { %>
-            <tr>
-              <td><% if (row.max === null) { %>Over $<%= row.min.toLocaleString() %><% } else { %>$<%= row.min.toLocaleString() %> – $<%= row.max.toLocaleString() %><% } %></td>
-              <td><%= row.rate %>%</td>
-            </tr>
-            <% }); %>
-          </tbody>
-        </table>
-      </div>
-      <p class="bracket-note">Source: <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a>. Brackets shown are for single filers. Married filing jointly thresholds may differ.</p>
-    </section>
-    <section class="worked-example-section">
-      <h2>What a <%= state.name %> Resident Actually Pays: A Worked Example</h2>
-      <p>Your effective tax rate is almost always lower than your top bracket. Here is the math for a single filer earning $65,000.</p>
-      <div class="example-box">
-        <div class="example-scenario"><strong>Scenario:</strong> Single filer, $65,000 in taxable income</div>
-        <div id="worked-example-output"></div>
-      </div>
-      <script>
-      (function() {
-        var brackets = <%- JSON.stringify(state.bracketRows) %>;
-        var income = 65000;
-        var tax = 0;
-        var rows = [];
-        for (var i = 0; i < brackets.length; i++) {
-          var b = brackets[i];
-          if (income <= b.min) break;
-          var upper = b.max === null ? income : Math.min(b.max, income);
-          var chunk = upper - b.min;
-          var amount = chunk * (b.rate / 100);
-          tax += amount;
-          rows.push({ rate: b.rate, chunk: chunk, amount: amount });
-        }
-        var effectiveRate = (tax / income * 100).toFixed(1);
-        var fmt = function(n) { return '$' + n.toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2}); };
-        var html = '<table class="example-table"><thead><tr><th>Bracket</th><th>Income in Bracket</th><th>Tax</th></tr></thead><tbody>';
-        rows.forEach(function(r) {
-          html += '<tr><td>' + r.rate + '%</td><td>' + fmt(r.chunk) + '</td><td>' + fmt(r.amount) + '</td></tr>';
-        });
-        html += '</tbody><tfoot>';
-        html += '<tr><td colspan="2"><strong>Total State Tax on $65,000</strong></td><td><strong>' + fmt(tax) + '</strong></td></tr>';
-        html += '<tr><td colspan="2"><strong>Effective State Tax Rate</strong></td><td><strong>' + effectiveRate + '%</strong></td></tr>';
-        html += '</tfoot></table>';
-        document.getElementById('worked-example-output').innerHTML = html;
-      })();
-      </script>
-    </section>
-
-    <% } else if (state.hasIncomeTax && state.topRate === state.bottomRate) { %>
-    <section class="bracket-section">
-      <h2><%= state.name %> Income Tax Rate (2025)</h2>
-      <p><%= state.name %> uses a flat income tax rate — the same percentage applies to all taxable income regardless of how much you earn.</p>
-      <div class="flat-rate-callout">
-        <span class="flat-rate-number"><%= state.topRate %>%</span>
-        <span class="flat-rate-label">Flat rate on all taxable income</span>
-      </div>
-      <p class="bracket-note">Source: <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a></p>
-    </section>
-    <section class="worked-example-section">
-      <h2>What a <%= state.name %> Resident Actually Pays: A Worked Example</h2>
-      <div class="example-box">
-        <div class="example-scenario"><strong>Scenario:</strong> Single filer, $65,000 in taxable income</div>
-        <table class="example-table">
-          <tbody>
-            <tr><td>Taxable Income</td><td>$65,000.00</td></tr>
-            <tr><td><%= state.name %> Flat Rate</td><td><%= state.topRate %>%</td></tr>
-          </tbody>
-          <tfoot>
-            <tr><td><strong>Estimated State Tax</strong></td><td><strong>$<%= (650 * state.topRate).toFixed(2) %></strong></td></tr>
-            <tr><td><strong>Effective Rate</strong></td><td><strong><%= state.topRate %>%</strong></td></tr>
-          </tfoot>
-        </table>
-      </div>
-    </section>
-
-    <% } else { %>
-    <section class="no-tax-callout-section">
       <div class="no-tax-callout">
         <div class="no-tax-icon">✓</div>
         <div>
@@ -271,205 +272,213 @@
           <p><%= state.noTaxNote %></p>
         </div>
       </div>
-      <p>As a <%= state.name %> resident, your state income tax is $0. The calculator below estimates your <strong>federal</strong> income tax, which applies to all U.S. residents regardless of state.</p>
-    </section>
-    <% } %>
+      <p style="color:#4b5563;font-size:.9rem;margin:0 0 2rem">As a <%= state.name %> resident, your state income tax is $0. The calculator below estimates your <strong>federal</strong> income tax, which applies to all U.S. residents regardless of state.</p>
+      <% } %>
 
-    <div class="calc-card-form">
-      <h2>Estimate Your <%= state.hasIncomeTax ? state.name + ' + ' : '' %>Federal Income Tax</h2>
-      <div class="form-grid">
-        <div class="form-field full">
-          <label>Gross Annual Income</label>
-          <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="s-income" placeholder="0" min="0"></div>
-        </div>
-        <div class="form-field">
-          <label>Filing Status</label>
-          <select id="s-status">
-            <option value="single">Single</option>
-            <option value="mfj">Married Filing Jointly</option>
-            <option value="mfs">Married Filing Separately</option>
-            <option value="hoh">Head of Household</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label>Deduction Type</label>
-          <select id="s-ded-type">
-            <option value="standard">Standard Deduction</option>
-            <option value="itemized">Itemized Deduction</option>
-          </select>
-        </div>
-        <div class="form-field full" id="s-itemized-wrap" style="display:none">
-          <label>Itemized Deduction Amount</label>
-          <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="s-itemized" placeholder="0" min="0"></div>
-        </div>
-        <div class="form-field">
-          <label>Federal Tax Withheld</label>
-          <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="s-withheld" placeholder="0" min="0"></div>
-        </div>
-        <div class="form-field">
-          <label>Tax Credits</label>
-          <div class="input-wrap"><span class="input-prefix">$</span><input type="number" id="s-credits" placeholder="0" min="0"></div>
-        </div>
-      </div>
-      <div class="form-actions">
-        <button class="btn-calc" id="s-calc-btn">Calculate Tax Estimate</button>
-      </div>
-      <div id="s-results" style="display:none">
-        <div class="result-card">
-          <div class="result-card-header">
-            <div class="result-icon">📊</div>
-            <h2>Your Tax Estimate</h2>
+      <!-- RESULTS (shown after POST) -->
+      <% if (result) { %>
+      <div class="result-card">
+        <div class="result-card-header">
+          <div class="result-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
           </div>
-          <div class="result-primary">
-            <div class="result-grid">
-              <div class="result-item"><span class="ri-label">Gross Income</span><span class="ri-value" id="r-gross">—</span></div>
-              <div class="result-item"><span class="ri-label">Deduction</span><span class="ri-value" id="r-ded">—</span></div>
-              <div class="result-item"><span class="ri-label">Federal Taxable Income</span><span class="ri-value" id="r-taxable">—</span></div>
-              <div class="result-item"><span class="ri-label">Federal Income Tax</span><span class="ri-value" id="r-fed">—</span></div>
-              <% if (state.hasIncomeTax) { %>
-              <div class="result-item"><span class="ri-label"><%= state.name %> State Tax (Est.)</span><span class="ri-value" id="r-state">—</span></div>
-              <% } %>
-              <div class="result-item"><span class="ri-label">Marginal Federal Rate</span><span class="ri-value" id="r-marginal">—</span></div>
-              <div class="result-item"><span class="ri-label">Effective Federal Rate</span><span class="ri-value" id="r-effective">—</span></div>
-              <div class="result-item"><span class="ri-label">Estimated Refund / Owed</span><span class="ri-value" id="r-refund">—</span></div>
-            </div>
+          <h2>Your Tax Estimate</h2>
+        </div>
+        <div class="result-primary">
+          <span class="result-label"><%= result.refundOrOwed >= 0 ? 'Estimated Refund' : 'Estimated Amount Owed' %></span>
+          <span class="result-amount <%= result.refundOrOwed >= 0 ? '' : 'owed' %>">$<%= Math.abs(Math.round(result.refundOrOwed)).toLocaleString() %></span>
+        </div>
+        <div class="result-grid">
+          <div class="result-item">
+            <div class="ri-label">Gross Income</div>
+            <div class="ri-value">$<%= Math.round(result.grossIncome).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Deduction Used</div>
+            <div class="ri-value">$<%= Math.round(result.deduction).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Taxable Income</div>
+            <div class="ri-value">$<%= Math.round(result.taxableIncome).toLocaleString() %></div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Federal Tax After Credits</div>
+            <div class="ri-value red">$<%= Math.round(result.federalTaxAfterCredits).toLocaleString() %></div>
+          </div>
+          <% if (state.hasIncomeTax && result.stateTax != null) { %>
+          <div class="result-item">
+            <div class="ri-label"><%= state.name %> State Tax (Est.)</div>
+            <div class="ri-value red">$<%= Math.round(result.stateTax).toLocaleString() %></div>
+          </div>
+          <% } %>
+          <div class="result-item">
+            <div class="ri-label">Effective Tax Rate</div>
+            <div class="ri-value"><%= (result.effectiveTaxRate * 100).toFixed(1) %>%</div>
+          </div>
+          <div class="result-item">
+            <div class="ri-label">Marginal Tax Rate</div>
+            <div class="ri-value"><%= (result.marginalRate * 100).toFixed(1) %>%</div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <script>
-      document.getElementById('s-ded-type').addEventListener('change', function() {
-        document.getElementById('s-itemized-wrap').style.display = this.value === 'itemized' ? 'block' : 'none';
-      });
-      document.getElementById('s-calc-btn').addEventListener('click', function() {
-        var gross    = parseFloat(document.getElementById('s-income').value) || 0;
-        var status   = document.getElementById('s-status').value;
-        var dedType  = document.getElementById('s-ded-type').value;
-        var itemized = parseFloat(document.getElementById('s-itemized').value) || 0;
-        var withheld = parseFloat(document.getElementById('s-withheld').value) || 0;
-        var credits  = parseFloat(document.getElementById('s-credits').value) || 0;
-        var stdDed = {single:15000,mfj:30000,mfs:15000,hoh:22500};
-        var ded = dedType === 'itemized' ? itemized : stdDed[status];
-        var taxable = Math.max(0, gross - ded);
-        var brackets = {
-          single:[[11925,.10],[48475,.12],[103350,.22],[197300,.24],[250525,.32],[626350,.35],[Infinity,.37]],
-          mfj:[[23850,.10],[96950,.12],[206700,.22],[394600,.24],[501050,.32],[751600,.35],[Infinity,.37]],
-          mfs:[[11925,.10],[48475,.12],[103350,.22],[197300,.24],[250525,.32],[375800,.35],[Infinity,.37]],
-          hoh:[[17000,.10],[64850,.12],[103350,.22],[197300,.24],[250500,.32],[626350,.35],[Infinity,.37]]
-        };
-        var fedTax = 0, margRate = .10, prev = 0;
-        var bkts = brackets[status];
-        for (var i = 0; i < bkts.length; i++) {
-          if (taxable <= prev) break;
-          var chunk = Math.min(taxable, bkts[i][0]) - prev;
-          fedTax += chunk * bkts[i][1];
-          margRate = bkts[i][1];
-          prev = bkts[i][0];
-        }
-        fedTax = Math.max(0, fedTax - credits);
-        var effectiveRate = gross > 0 ? (fedTax / gross * 100).toFixed(1) : '0.0';
-        var refund = withheld - fedTax;
-        <% if (state.hasIncomeTax) { %>
-        var stateTax = 0;
-        <% if (state.bracketRows && state.bracketRows.length > 0) { %>
-        var sb = <%- JSON.stringify(state.bracketRows) %>;
-        for (var j = 0; j < sb.length; j++) {
-          if (taxable <= sb[j].min) break;
-          var sUpper = sb[j].max === null ? taxable : Math.min(sb[j].max, taxable);
-          stateTax += (sUpper - sb[j].min) * (sb[j].rate / 100);
-        }
-        <% } else { %>
-        stateTax = taxable * (<%= state.topRate %> / 100);
-        <% } %>
-        <% } %>
-        var fmt = function(v) { return '$' + v.toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2}); };
-        document.getElementById('r-gross').textContent = fmt(gross);
-        document.getElementById('r-ded').textContent = fmt(ded);
-        document.getElementById('r-taxable').textContent = fmt(taxable);
-        document.getElementById('r-fed').textContent = fmt(fedTax);
-        <% if (state.hasIncomeTax) { %>
-        document.getElementById('r-state').textContent = fmt(stateTax);
-        <% } %>
-        document.getElementById('r-marginal').textContent = (margRate*100).toFixed(0) + '%';
-        document.getElementById('r-effective').textContent = effectiveRate + '%';
-        var rEl = document.getElementById('r-refund');
-        rEl.textContent = (refund >= 0 ? 'Refund: ' : 'Owed: ') + fmt(Math.abs(refund));
-        rEl.className = 'ri-value ' + (refund >= 0 ? 'green' : 'red');
-        document.getElementById('s-results').style.display = 'block';
-      });
-    </script>
-
-    <div class="ad-zone">
-      <div class="ad-zone-label">Advertisement</div>
-      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5193834725888549" data-ad-slot="5205436277" data-ad-format="auto" data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
-
-    <section class="state-faq-section">
-      <h2>Frequently Asked Questions — <%= state.name %> Income Tax</h2>
-      <% if (state.hasIncomeTax) { %>
-      <div class="state-faq-item">
-        <h3>Does <%= state.name %> have a state income tax?</h3>
-        <p>Yes. <%= state.name %> imposes a state income tax with a <%= state.topRate === state.bottomRate ? 'flat rate of ' + state.topRate + '%' : 'top marginal rate of ' + state.topRate + '%' %>. This is separate from your federal income tax obligation.</p>
-      </div>
-      <div class="state-faq-item">
-        <h3>What is the <%= state.name %> income tax rate for 2025?</h3>
-        <p><% if (state.topRate === state.bottomRate) { %><%= state.name %> uses a flat income tax rate of <%= state.topRate %>% on all taxable income, regardless of income level or filing status.<% } else { %><%= state.name %> uses a graduated income tax system with rates ranging from <%= state.bottomRate %>% to <%= state.topRate %>%. Only the income within each bracket is taxed at that rate — not your entire income.<% } %></p>
-      </div>
-      <div class="state-faq-item">
-        <h3>Do I have to file a <%= state.name %> state tax return?</h3>
-        <p>Most full-year <%= state.name %> residents with income above the state filing threshold must file a state return. Check the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a> for current thresholds and requirements.</p>
-      </div>
-      <div class="state-faq-item">
-        <h3>How accurate is this <%= state.name %> state tax estimate?</h3>
-        <p>This is a planning estimate. The state result uses <%= state.name %>'s published brackets but does not account for all state deductions, credits, exemptions, or local taxes. Verify your actual liability with official <%= state.name %> tax forms or a qualified tax professional.</p>
-      </div>
-      <div class="state-faq-item">
-        <h3>Does this calculator include federal income tax?</h3>
-        <p>Yes. Results show both your estimated <%= state.name %> state income tax and your federal income tax using 2025 federal brackets — so you can see your full combined picture in one place.</p>
-      </div>
-      <div class="state-faq-item">
-        <h3>Where can I find official <%= state.name %> tax forms?</h3>
-        <p>Official forms, instructions, and filing guidance are available at the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a>.</p>
-      </div>
-      <% } else { %>
-      <div class="state-faq-item">
-        <h3>Does <%= state.name %> have a state income tax?</h3>
-        <p>No. <%= state.name %> does not impose a broad-based state income tax on wages, salaries, or most personal income. <%= state.noTaxNote %></p>
-      </div>
-      <div class="state-faq-item">
-        <h3>Do I still owe federal income tax as a <%= state.name %> resident?</h3>
-        <p>Yes. Federal income tax applies to all U.S. residents regardless of state. <%= state.name %> residents pay the same federal brackets as everyone else — only your state income tax liability is $0.</p>
-      </div>
-      <div class="state-faq-item">
-        <h3>What taxes do <%= state.name %> residents pay instead of income tax?</h3>
-        <p><%= state.overview.substring(0, 350) %>...</p>
-      </div>
-      <div class="state-faq-item">
-        <h3>Do I need to file a <%= state.name %> state tax return?</h3>
-        <p><%= state.name %> does not require a personal income tax return for most residents. You must still file a federal return with the IRS. Check the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a> for any state-specific obligations that may apply.</p>
       </div>
       <% } %>
-    </section>
 
-    <section class="related-section">
-      <h2>Related Tax Resources</h2>
-      <div class="related-grid">
-        <a href="/income-tax-calculator" class="related-card"><div class="related-card-icon">💰</div><strong>Federal Income Tax Calculator</strong><span>Estimate your total federal tax bill</span></a>
-        <a href="/tax-refund-calculator" class="related-card"><div class="related-card-icon">💵</div><strong>Tax Refund Calculator</strong><span>Will you get a refund or owe?</span></a>
-        <a href="/tax-brackets-2025" class="related-card"><div class="related-card-icon">📊</div><strong>2025 Federal Tax Brackets</strong><span>Full federal bracket reference</span></a>
-        <a href="/standard-deduction-2025" class="related-card"><div class="related-card-icon">📋</div><strong>Standard Deduction 2025</strong><span>Amounts by filing status</span></a>
-        <a href="/states" class="related-card"><div class="related-card-icon">🗺️</div><strong>All State Calculators</strong><span>Compare all 50 states + D.C.</span></a>
-        <a href="/payroll-tax-calculator" class="related-card"><div class="related-card-icon">💼</div><strong>Payroll Tax Calculator</strong><span>Estimate take-home pay</span></a>
+      <!-- FORM -->
+      <div class="calc-card-form">
+        <h2>Enter Your Tax Information</h2>
+        <form method="POST" action="/<%= state.slug %>-income-tax-calculator">
+          <div class="form-grid">
+            <div class="form-field full">
+              <label for="grossIncome">Gross Annual Income</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="grossIncome" name="grossIncome" min="0" step="any" value="<%= form.grossIncome || '' %>" placeholder="75000" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="filingStatus">Filing Status</label>
+              <select id="filingStatus" name="filingStatus">
+                <option value="single" <%= (!form.filingStatus || form.filingStatus === 'single') ? 'selected' : '' %>>Single</option>
+                <option value="marriedJoint" <%= form.filingStatus === 'marriedJoint' ? 'selected' : '' %>>Married Filing Jointly</option>
+                <option value="marriedSeparate" <%= form.filingStatus === 'marriedSeparate' ? 'selected' : '' %>>Married Filing Separately</option>
+                <option value="headHousehold" <%= form.filingStatus === 'headHousehold' ? 'selected' : '' %>>Head of Household</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="deductionType">Deduction Type</label>
+              <select id="deductionType" name="deductionType">
+                <option value="standard" <%= (!form.deductionType || form.deductionType === 'standard') ? 'selected' : '' %>>Standard Deduction</option>
+                <option value="itemized" <%= form.deductionType === 'itemized' ? 'selected' : '' %>>Itemized Deduction</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="itemizedDeduction">Itemized Deduction Amount</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="itemizedDeduction" name="itemizedDeduction" min="0" step="any" value="<%= form.itemizedDeduction || '' %>" placeholder="0">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="federalWithheld">Federal Tax Withheld</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="federalWithheld" name="federalWithheld" min="0" step="any" value="<%= form.federalWithheld || '' %>" placeholder="0">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="taxCredits">Tax Credits</label>
+              <div class="input-wrap">
+                <span class="input-prefix">$</span>
+                <input type="number" id="taxCredits" name="taxCredits" min="0" step="any" value="<%= form.taxCredits || '' %>" placeholder="0">
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-calc">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+              Calculate Tax Estimate
+            </button>
+          </div>
+        </form>
       </div>
-    </section>
 
-    <div class="page-disclaimer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-      <p><strong>Disclaimer:</strong> Estimates for educational purposes only. State tax results are approximations based on published bracket data and do not account for all deductions, credits, exemptions, local taxes, or individual situations. Not tax, legal, or financial advice. Consult the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a> or a qualified tax professional for guidance specific to your situation.</p>
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5193834725888549" data-ad-slot="5205436277" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <!-- FAQ -->
+      <div class="state-faq-section">
+        <h2>Frequently Asked Questions — <%= state.name %> Income Tax</h2>
+        <% if (state.hasIncomeTax) { %>
+        <div class="state-faq-item">
+          <h3>Does <%= state.name %> have a state income tax?</h3>
+          <p>Yes. <%= state.name %> imposes a state income tax with a <%= state.topRate === state.bottomRate ? 'flat rate of ' + state.topRate + '%' : 'top marginal rate of ' + state.topRate + '%' %>. This is separate from your federal income tax obligation.</p>
+        </div>
+        <div class="state-faq-item">
+          <h3>What is the <%= state.name %> income tax rate for 2025?</h3>
+          <p><% if (state.topRate === state.bottomRate) { %><%= state.name %> uses a flat income tax rate of <%= state.topRate %>% on all taxable income, regardless of income level or filing status.<% } else { %><%= state.name %> uses a graduated income tax system with rates from <%= state.bottomRate %>% to <%= state.topRate %>%. Only the income within each bracket is taxed at that bracket's rate — not your entire income.<% } %></p>
+        </div>
+        <div class="state-faq-item">
+          <h3>Do I have to file a <%= state.name %> state tax return?</h3>
+          <p>Most full-year <%= state.name %> residents with income above the state filing threshold must file a state return. Check the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a> for current thresholds and requirements.</p>
+        </div>
+        <div class="state-faq-item">
+          <h3>How accurate is this <%= state.name %> state tax estimate?</h3>
+          <p>This is a planning estimate. The state result uses <%= state.name %>'s published brackets but does not account for all state deductions, credits, exemptions, or local taxes. Verify with official <%= state.name %> tax forms or a qualified tax professional.</p>
+        </div>
+        <div class="state-faq-item">
+          <h3>Does this calculator include federal income tax?</h3>
+          <p>Yes. The results show your estimated <%= state.name %> state income tax and your federal income tax using 2025 federal brackets — your full combined picture in one place.</p>
+        </div>
+        <div class="state-faq-item">
+          <h3>Where can I find official <%= state.name %> tax forms?</h3>
+          <p>Official forms, instructions, and filing guidance are available at the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a>.</p>
+        </div>
+        <% } else { %>
+        <div class="state-faq-item">
+          <h3>Does <%= state.name %> have a state income tax?</h3>
+          <p>No. <%= state.name %> does not impose a broad-based state income tax on wages, salaries, or most personal income. <%= state.noTaxNote %></p>
+        </div>
+        <div class="state-faq-item">
+          <h3>Do I still owe federal income tax as a <%= state.name %> resident?</h3>
+          <p>Yes. Federal income tax applies to all U.S. residents regardless of state. <%= state.name %> residents pay the same federal tax brackets as everyone else — only your state income tax is $0.</p>
+        </div>
+        <div class="state-faq-item">
+          <h3>What taxes do <%= state.name %> residents pay instead of income tax?</h3>
+          <p><%= state.overview.substring(0, 350) %>...</p>
+        </div>
+        <div class="state-faq-item">
+          <h3>Do I need to file a <%= state.name %> state tax return?</h3>
+          <p><%= state.name %> does not require a personal income tax return for most residents. You must still file a federal return with the IRS. Check the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a> for any state-specific obligations that may apply.</p>
+        </div>
+        <% } %>
+      </div>
+
+      <!-- Related -->
+      <div class="related-section">
+        <h2>Related Tax Resources</h2>
+        <div class="related-grid">
+          <a href="/income-tax-calculator" class="related-card">
+            <div class="related-card-icon">💰</div>
+            <strong>Federal Income Tax Calculator</strong>
+            <span>Estimate your total federal tax bill</span>
+          </a>
+          <a href="/tax-refund-calculator" class="related-card">
+            <div class="related-card-icon">💵</div>
+            <strong>Tax Refund Calculator</strong>
+            <span>Will you get a refund or owe?</span>
+          </a>
+          <a href="/tax-brackets-2025" class="related-card">
+            <div class="related-card-icon">📊</div>
+            <strong>2025 Federal Tax Brackets</strong>
+            <span>Full federal bracket reference</span>
+          </a>
+          <a href="/standard-deduction-2025" class="related-card">
+            <div class="related-card-icon">📋</div>
+            <strong>Standard Deduction 2025</strong>
+            <span>Amounts by filing status</span>
+          </a>
+          <a href="/states" class="related-card">
+            <div class="related-card-icon">🗺️</div>
+            <strong>All State Calculators</strong>
+            <span>Compare all 50 states + D.C.</span>
+          </a>
+          <a href="/payroll-tax-calculator" class="related-card">
+            <div class="related-card-icon">💼</div>
+            <strong>Payroll Tax Calculator</strong>
+            <span>Estimate take-home pay</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-disclaimer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p><strong>Disclaimer:</strong> Estimates for educational purposes only. State tax results are approximations based on published bracket data and do not account for all deductions, credits, exemptions, local taxes, or individual situations. Not tax, legal, or financial advice. Consult the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a> or a qualified tax professional for guidance specific to your situation.</p>
+      </div>
+
     </div>
-
   </main>
 
   <footer class="site-footer">
@@ -484,7 +493,7 @@
               <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
             </svg>
           </span>
-          <span class="logo-text">MyTaxCalcs</span>
+          <span>MyTaxCalcs</span>
         </a>
         <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
       </div>
@@ -518,11 +527,15 @@
 
   <script>
     (function(){
-      var items=document.querySelectorAll('.state-faq-item');
+      var items=document.querySelectorAll('.faq-item');
       items.forEach(function(item){
-        var h3=item.querySelector('h3');
-        if(!h3) return;
-        h3.style.cursor='pointer';
+        var btn=item.querySelector('.faq-question');
+        if(!btn)return;
+        btn.addEventListener('click',function(){
+          var isOpen=item.classList.contains('open');
+          items.forEach(function(i){i.classList.remove('open');var q=i.querySelector('.faq-question');if(q)q.setAttribute('aria-expanded','false');});
+          if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+        });
       });
     })();
   </script>
