@@ -1889,15 +1889,20 @@ input:focus, select:focus {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #f9fafb;
+  border: 1px dashed #e5e7eb;
+  border-radius: 10px;
+  justify-content: flex-start;
+  padding-top: 12px;
 }
 
 .sidebar-ad-label {
-  font-size: 0.65rem;
-  color: #9ca3af;
+  font-size: 0.6rem;
+  color: #d1d5db;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 6px;
+  letter-spacing: 0.1em;
   text-align: center;
+  user-select: none;
 }
 
 @media (min-width: 1280px) {
