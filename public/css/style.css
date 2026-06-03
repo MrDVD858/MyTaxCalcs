@@ -1558,3 +1558,299 @@ input:focus, select:focus {
 .trust-item strong {
   color: #111827;
 }
+/* ============================================================
+   STATE PAGE ADDITIONS — append to existing style.css
+   ============================================================ */
+
+/* Key Facts Bar */
+.key-facts-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  background: #e5e7eb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1.5rem 0 2rem;
+}
+.fact-item {
+  flex: 1 1 160px;
+  background: #fff;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.fact-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+.fact-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+.fact-value a {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #16a34a;
+  text-decoration: none;
+}
+.fact-value a:hover { text-decoration: underline; }
+
+/* State Overview */
+.state-overview-section {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 12px;
+  padding: 1.5rem 1.75rem;
+  margin: 1.5rem 0;
+}
+.state-overview-section h2 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+.state-overview-section p {
+  color: #374151;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Bracket Table */
+.bracket-section {
+  margin: 2rem 0;
+}
+.bracket-section h2 {
+  font-size: 1.3rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+.bracket-section > p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+.bracket-table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+.bracket-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.bracket-table thead {
+  background: #16a34a;
+  color: #fff;
+}
+.bracket-table thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.bracket-table tbody tr:nth-child(even) { background: #f9fafb; }
+.bracket-table tbody tr:hover { background: #f0fdf4; }
+.bracket-table tbody td {
+  padding: 0.65rem 1rem;
+  color: #111827;
+  border-bottom: 1px solid #f3f4f6;
+}
+.bracket-note {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+.bracket-note a { color: #16a34a; }
+
+/* Flat Rate Callout */
+.flat-rate-callout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f0fdf4;
+  border: 2px solid #16a34a;
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  margin: 1rem 0;
+}
+.flat-rate-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #16a34a;
+  line-height: 1;
+}
+.flat-rate-label {
+  font-size: 1rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+/* No-Tax Callout */
+.no-tax-callout-section { margin: 1.5rem 0; }
+.no-tax-callout {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #f0fdf4;
+  border: 2px solid #16a34a;
+  border-radius: 12px;
+  padding: 1.25rem 1.75rem;
+  margin-bottom: 1rem;
+}
+.no-tax-icon {
+  font-size: 1.75rem;
+  color: #16a34a;
+  font-weight: 800;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.no-tax-callout h2 {
+  font-size: 1.15rem;
+  color: #111827;
+  margin: 0 0 0.35rem;
+}
+.no-tax-callout p {
+  color: #374151;
+  margin: 0;
+}
+.no-tax-callout-section > p {
+  color: #4b5563;
+  margin-top: 0.75rem;
+}
+
+/* Worked Example */
+.worked-example-section {
+  margin: 2rem 0;
+}
+.worked-example-section h2 {
+  font-size: 1.3rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+.worked-example-section > p {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+.example-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.example-scenario {
+  background: #f9fafb;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+.example-calc { padding: 0; }
+.example-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.example-table th {
+  background: #f3f4f6;
+  padding: 0.6rem 1.25rem;
+  text-align: left;
+  font-weight: 600;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+}
+.example-table td {
+  padding: 0.6rem 1.25rem;
+  color: #111827;
+  border-bottom: 1px solid #f3f4f6;
+}
+.example-table td:last-child { text-align: right; }
+.example-table th:last-child { text-align: right; }
+.example-table tfoot td {
+  background: #f0fdf4;
+  font-weight: 700;
+  color: #15803d;
+  border-top: 2px solid #bbf7d0;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin: 2rem 0;
+}
+.faq-section h2 {
+  font-size: 1.3rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+.faq-item {
+  border-bottom: 1px solid #f3f4f6;
+  padding: 1rem 0;
+}
+.faq-item:last-child { border-bottom: none; }
+.faq-item h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 0.4rem;
+}
+.faq-item p {
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.65;
+}
+.faq-item a { color: #16a34a; }
+
+/* Related Calculators */
+.related-calculators { margin: 2rem 0; }
+.related-calculators h2 {
+  font-size: 1.2rem;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+.related-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: #374151;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.related-card:hover {
+  border-color: #16a34a;
+  box-shadow: 0 2px 8px rgba(22,163,74,0.1);
+}
+.related-card strong {
+  display: block;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+/* Disclaimer */
+.disclaimer {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  line-height: 1.6;
+}
+.disclaimer a { color: #9ca3af; }
+
+@media (max-width: 600px) {
+  .key-facts-bar { flex-direction: column; gap: 0; }
+  .fact-item { border-bottom: 1px solid #e5e7eb; }
+  .flat-rate-callout { flex-direction: column; gap: 0.5rem; }
+  .no-tax-callout { flex-direction: column; }
+  .related-grid { grid-template-columns: 1fr; }
+}
