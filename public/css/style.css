@@ -1862,7 +1862,9 @@ input:focus, select:focus {
 .page-with-sidebar {
   display: flex;
   align-items: flex-start;
-  gap: 0;
+  /* Content cols (860–1000px) + sidebar (200px) + padding */
+  max-width: 1240px;
+  margin: 0 auto;
   width: 100%;
 }
 
@@ -1873,9 +1875,9 @@ input:focus, select:focus {
 
 .sidebar-ad-col {
   display: none;
-  width: 180px;
+  width: 200px;
   flex-shrink: 0;
-  padding: 24px 0 24px 20px;
+  padding: 32px 0 24px 24px;
   align-self: flex-start;
   position: sticky;
   top: 80px;
