@@ -1854,3 +1854,52 @@ input:focus, select:focus {
   .no-tax-callout { flex-direction: column; }
   .related-grid { grid-template-columns: 1fr; }
 }
+
+/* ─────────────────────────────────────────
+   Sticky Sidebar Ad — desktop only (1280px+)
+───────────────────────────────────────── */
+
+.page-with-sidebar {
+  display: flex;
+  align-items: flex-start;
+  gap: 0;
+  width: 100%;
+}
+
+.page-with-sidebar > main {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.sidebar-ad-col {
+  display: none;
+  width: 180px;
+  flex-shrink: 0;
+  padding: 24px 0 24px 20px;
+  align-self: flex-start;
+  position: sticky;
+  top: 80px;
+}
+
+.sidebar-ad-inner {
+  width: 160px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-ad-label {
+  font-size: 0.65rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+@media (min-width: 1280px) {
+  .sidebar-ad-col {
+    display: block;
+  }
+}
