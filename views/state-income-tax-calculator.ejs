@@ -441,6 +441,36 @@
         <% } %>
       </div>
 
+      <!-- State Guide Section -->
+      <div style="background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px 32px;margin:2rem 0;">
+        <h2 style="font-size:1.3rem;font-weight:800;color:#111827;margin:0 0 16px;">Understanding Your <%= state.name %> Tax Estimate</h2>
+        <p style="font-size:.9rem;color:#4b5563;line-height:1.7;margin:0 0 14px;">Your results show both your estimated federal income tax and your estimated <%= state.name %> state income tax as a combined picture. Here is how to read them and what to do next.</p>
+
+        <h3 style="font-size:.95rem;font-weight:700;color:#111827;margin:18px 0 8px;">Federal vs. State Tax: Two Separate Bills</h3>
+        <p style="font-size:.9rem;color:#4b5563;line-height:1.7;margin:0 0 14px;">Federal income tax is owed to the IRS and is the same rate schedule for all U.S. residents regardless of where you live. <%= state.name %> state income tax is a separate obligation paid to the <%= state.name %> Department of Revenue. You file two separate returns — one federal (Form 1040) and one state — though they are often prepared together using tax software.</p>
+
+        <h3 style="font-size:.95rem;font-weight:700;color:#111827;margin:18px 0 8px;">How the Estimate Is Calculated</h3>
+        <p style="font-size:.9rem;color:#4b5563;line-height:1.7;margin:0 0 14px;">This calculator applies the 2025 federal tax brackets to your taxable income (gross income minus the standard or itemized deduction), then applies <%= state.name %>'s published state brackets to estimate your state liability. The result is a planning estimate — not a filed return. It does not account for all credits, deductions, or individual circumstances that could change your actual bill.</p>
+
+        <h3 style="font-size:.95rem;font-weight:700;color:#111827;margin:18px 0 8px;">Marginal Rate vs. Effective Rate</h3>
+        <p style="font-size:.9rem;color:#4b5563;line-height:1.7;margin:0 0 14px;">Your marginal rate is the rate on your last dollar of income — it is the highest bracket you reach, not what you pay on all income. Your effective rate is your total tax divided by gross income, and is almost always meaningfully lower. For example, a single filer earning $75,000 may be in the 22% federal bracket but pay an effective federal rate of only 14-15%. The same principle applies to <%= state.name %> state brackets.</p>
+
+        <h3 style="font-size:.95rem;font-weight:700;color:#111827;margin:18px 0 8px;">3 Ways to Reduce Your <%= state.name %> Tax Bill</h3>
+        <ul style="font-size:.9rem;color:#4b5563;line-height:1.7;margin:0 0 14px;padding-left:20px;">
+          <li><strong>Maximize pre-tax retirement contributions.</strong> Traditional 401(k) and IRA contributions reduce your federal taxable income. Many states, including <%= state.name %>, also exclude these contributions from state taxable income, reducing both bills simultaneously.</li>
+          <li><strong>Claim all applicable deductions and credits.</strong> Many states offer credits for property taxes, dependent care, education, and energy-efficient home improvements that are separate from federal credits. Check the <a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer" style="color:#16a34a;font-weight:600;text-decoration:none;"><%= state.revenueUrl.label %></a> for <%= state.name %>-specific credits.</li>
+          <li><strong>Consider the standard vs. itemized deduction.</strong> Some states allow itemized deductions even if you take the federal standard deduction — or have their own standard deduction amounts that differ from federal. Checking the state-specific rules can sometimes reveal additional savings.</li>
+        </ul>
+
+        <h3 style="font-size:.95rem;font-weight:700;color:#111827;margin:18px 0 8px;">What to Do After Getting Your Estimate</h3>
+        <ul style="font-size:.9rem;color:#4b5563;line-height:1.7;margin:0;padding-left:20px;">
+          <li>If you expect to <strong>owe money</strong>, consider adjusting your W-4 withholding or making a state estimated tax payment to avoid a balance due at filing time.</li>
+          <li>If you are <strong>self-employed</strong>, your SE tax is separate — use our <a href="/self-employment-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">self-employment tax calculator</a> to estimate that additional obligation.</li>
+          <li>To verify your numbers, use the official <%= state.name %> tax forms or consult a qualified tax professional familiar with <%= state.name %> tax law.</li>
+        </ul>
+      </div>
+
+
       <!-- Related -->
       <div class="related-section">
         <h2>Related Tax Resources</h2>
