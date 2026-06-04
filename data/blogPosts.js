@@ -2,6 +2,217 @@
 // All posts sourced from IRS publications and official announcements.
 
 const blogPosts = [
+// NEW BLOG POSTS — June 4, 2026
+// Add these two objects to the FRONT of the blogPosts array in data/blogPosts.js
+// (after the opening bracket, before the first existing post)
+// They will appear as the newest posts on the blog hub page.
+
+// ============================================================
+// POST 1: Crypto Tax Guide 2026
+// ============================================================
+{
+  slug: "crypto-tax-guide-2026",
+  title: "Crypto Tax Guide 2026: How Cryptocurrency Is Taxed and How to Report It",
+  date: "June 4, 2026",
+  dateISO: "2026-06-04",
+  author: "MyTaxCalcs Editorial",
+  category: "Tax Planning",
+  excerpt: "Every crypto sale, trade, and even purchase is a taxable event. Here is exactly how the IRS taxes cryptocurrency in 2026, what you must report, and strategies to reduce your bill.",
+  metaDescription: "Crypto tax guide 2026: how the IRS taxes Bitcoin, Ethereum, and all cryptocurrency. Covers capital gains rates, taxable events, reporting requirements, and strategies to reduce your bill.",
+  ogTitle: "Crypto Tax Guide 2026: How Cryptocurrency Is Taxed | MyTaxCalcs",
+  ogDescription: "Every crypto sale, trade, and purchase is a taxable event. Learn exactly how the IRS taxes cryptocurrency in 2026 and how to reduce what you owe.",
+  relatedLinks: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+    { href: "/capital-gains-tax-rates-2026", label: "2026 Capital Gains Rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    { href: "/blog/how-to-calculate-capital-gains-on-investments", label: "How to Calculate Capital Gains" },
+  ],
+  content: `
+<p>The IRS treats cryptocurrency as property — not currency. That single classification has significant tax consequences. Every time you sell, trade, or spend crypto, you trigger a taxable event and potentially owe capital gains tax. With the IRS increasing crypto enforcement and requiring exchanges to issue 1099s, understanding how cryptocurrency is taxed in 2026 is no longer optional.</p>
+
+<h2>The Core Rule: Crypto Is Property, Not Currency</h2>
+<p>When the IRS issued <a href="https://www.irs.gov/irb/2014-16_IRB#NOT-2014-21" target="_blank" rel="noopener noreferrer">Notice 2014-21</a>, it established that virtual currency is treated as property for federal tax purposes. This means:</p>
+<ul>
+  <li>Every sale or exchange of crypto is a capital gains event</li>
+  <li>Using crypto to buy goods or services is a taxable event</li>
+  <li>Trading one cryptocurrency for another (e.g., Bitcoin for Ethereum) is taxable</li>
+  <li>Receiving crypto as payment for services is taxable as ordinary income</li>
+  <li>Mining and staking rewards are taxable as ordinary income when received</li>
+</ul>
+<p>The tax treatment is identical to selling stock. You calculate your gain or loss as the difference between what you received (proceeds) and what you originally paid (cost basis), and the holding period determines whether it is short-term or long-term.</p>
+
+<h2>Short-Term vs. Long-Term Crypto Gains in 2026</h2>
+<p>The holding period — how long you held the crypto before selling — determines your tax rate:</p>
+<ul>
+  <li><strong>Short-term (held 1 year or less):</strong> Taxed as ordinary income at your regular federal tax rate — up to 37% for high earners. The same brackets that apply to wages apply here.</li>
+  <li><strong>Long-term (held more than 1 year):</strong> Taxed at preferential capital gains rates — 0%, 15%, or 20% depending on your total taxable income, plus 3.8% NIIT if your income exceeds $200,000 (single) or $250,000 (married filing jointly).</li>
+</ul>
+<p>The holding period begins the day after you acquire the crypto and includes the day you sell. If you bought Bitcoin on January 5, 2025, you must sell on January 6, 2026 or later to qualify for long-term rates. Selling on January 5, 2026 exactly would still be short-term.</p>
+
+<h2>What Counts as a Taxable Event</h2>
+<p>This is where many crypto holders get surprised. Taxable events include:</p>
+<ul>
+  <li><strong>Selling crypto for cash</strong> — selling Bitcoin for dollars, even if you immediately move the money back into crypto</li>
+  <li><strong>Trading crypto for crypto</strong> — swapping Ethereum for Solana is a sale of Ethereum at its current fair market value, triggering a gain or loss</li>
+  <li><strong>Using crypto to buy goods or services</strong> — paying for a purchase with Bitcoin treats the payment as a sale at the current market price</li>
+  <li><strong>Receiving crypto as payment</strong> — if a client pays you in crypto, the fair market value on the date received is ordinary income</li>
+  <li><strong>Mining rewards</strong> — the fair market value of mined crypto on the date you receive it is ordinary income</li>
+  <li><strong>Staking rewards</strong> — treated as ordinary income when received at the current fair market value (following the 2023 Jarrett case guidance)</li>
+  <li><strong>Airdrops</strong> — tokens received via airdrop are taxable as ordinary income at fair market value when you have dominion and control over them</li>
+</ul>
+
+<h2>What Is NOT a Taxable Event</h2>
+<ul>
+  <li><strong>Buying crypto with cash</strong> — purchasing Bitcoin with dollars is not taxable; you are simply establishing a cost basis</li>
+  <li><strong>Transferring crypto between your own wallets</strong> — moving Bitcoin from one wallet you own to another wallet you own is not a sale</li>
+  <li><strong>Gifting crypto</strong> — giving crypto as a gift is not immediately taxable to you (though gift tax rules may apply for large gifts); the recipient takes your cost basis</li>
+  <li><strong>Donating crypto to a charity</strong> — donating appreciated crypto directly to a qualified charity avoids capital gains entirely and gives you a deduction for the fair market value</li>
+</ul>
+
+<h2>How to Calculate Your Crypto Gain or Loss</h2>
+<p>The calculation is straightforward but requires accurate records:</p>
+<ul>
+  <li><strong>Gain/Loss = Proceeds - Cost Basis</strong></li>
+  <li><strong>Proceeds</strong> = the fair market value of what you received (in USD) at the time of the sale or exchange</li>
+  <li><strong>Cost Basis</strong> = what you originally paid for the crypto (in USD), including any fees paid to acquire it</li>
+</ul>
+<p><strong>Example:</strong> You bought 1 Bitcoin for $30,000 in 2023 (including $50 in exchange fees, so cost basis = $30,050). You sold it in 2026 for $65,000. Your long-term capital gain is $65,000 - $30,050 = $34,950.</p>
+
+<h2>Cost Basis Methods for Crypto</h2>
+<p>If you bought crypto at multiple prices, you need a method to determine which units you are selling. The IRS allows several methods:</p>
+<ul>
+  <li><strong>First In, First Out (FIFO):</strong> The default. The oldest units are treated as sold first. In a rising market, this typically results in the largest gains.</li>
+  <li><strong>Specific Identification:</strong> You designate exactly which units you are selling by date and purchase price. This requires documentation but allows you to minimize gains by selling higher-basis units first.</li>
+  <li><strong>Highest Cost First (HIFO):</strong> Sell the highest-cost units first, minimizing current-year gains. This is a form of specific identification.</li>
+</ul>
+<p>The method you choose must be applied consistently. Most crypto tax software tools (CoinTracker, Koinly, TaxBit) allow you to select your preferred method and will calculate gains accordingly.</p>
+
+<h2>Reporting Crypto on Your Tax Return</h2>
+<p>All crypto transactions must be reported on your federal tax return:</p>
+<ul>
+  <li><strong>Form 8949:</strong> Lists each individual crypto sale or exchange with date acquired, date sold, proceeds, cost basis, and gain or loss</li>
+  <li><strong>Schedule D:</strong> Summarizes your total short-term and long-term capital gains from Form 8949</li>
+  <li><strong>Schedule 1 (or Schedule C):</strong> Reports crypto received as income (mining, staking, payment for services)</li>
+  <li><strong>Form 1099-DA:</strong> Starting in 2025, many crypto exchanges are required to issue this new form reporting your transactions to both you and the IRS</li>
+</ul>
+<p>The IRS also includes a question at the top of Form 1040: "At any time during [year], did you receive, sell, exchange, or otherwise dispose of any digital asset?" You must answer this question. Answering "No" when you had transactions is a false statement on a federal return.</p>
+
+<h2>Strategies to Reduce Your Crypto Tax Bill</h2>
+<h3>Hold for Long-Term Treatment</h3>
+<p>The single most impactful move is holding crypto for more than one year before selling. The difference between short-term rates (up to 37%) and long-term rates (0%, 15%, or 20%) can be enormous on large gains. If you are close to the one-year mark, waiting the extra days or weeks before selling can save thousands.</p>
+
+<h3>Tax-Loss Harvesting</h3>
+<p>Unlike stocks, crypto is not subject to the wash-sale rule — you can sell a losing position and immediately repurchase it to realize the loss for tax purposes without waiting 30 days. If you hold crypto at a loss, selling before December 31 locks in a loss that offsets other gains dollar-for-dollar. Net losses up to $3,000 per year can offset ordinary income. This strategy is most effective in volatile markets where unrealized losses exist alongside unrealized gains.</p>
+
+<h3>Donate Appreciated Crypto Directly</h3>
+<p>If you plan to give to charity, donating crypto directly — rather than selling and donating cash — eliminates the capital gains entirely. You receive a deduction for the fair market value, and the charity receives the full value. This is strictly better than selling first.</p>
+
+<h3>Use the 0% Long-Term Rate</h3>
+<p>For 2026, single filers with total taxable income (including crypto gains) under $48,350 pay 0% on long-term crypto gains. Married filers under $96,700 also pay 0%. In a low-income year, strategically realizing gains at the 0% rate is a legitimate planning opportunity.</p>
+
+<h2>Common Crypto Tax Mistakes to Avoid</h2>
+<ul>
+  <li><strong>Not tracking cost basis from the start.</strong> If you lose your purchase records, you may have to use $0 as your cost basis — resulting in 100% of the sale price being taxed as a gain.</li>
+  <li><strong>Ignoring small transactions.</strong> Every sale counts, including small purchases using crypto. These add up and all must be reported.</li>
+  <li><strong>Assuming exchange losses are deductible automatically.</strong> If an exchange goes bankrupt and you cannot access your funds, there are specific IRS rules for when you can claim a loss — the situation must meet certain criteria.</li>
+  <li><strong>Not reporting staking income.</strong> Staking rewards are taxable as ordinary income when received, even if you did not sell the tokens.</li>
+</ul>
+
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate the federal tax on your crypto gains, and see our <a href="/capital-gains-tax-rates-2026">2026 capital gains rate guide</a> for the complete income thresholds at each rate.</p>
+`
+},
+
+// ============================================================
+// POST 2: How to Avoid the IRS Underpayment Penalty
+// ============================================================
+{
+  slug: "how-to-avoid-irs-underpayment-penalty-2026",
+  title: "How to Avoid the IRS Underpayment Penalty in 2026",
+  date: "June 4, 2026",
+  dateISO: "2026-06-04",
+  author: "MyTaxCalcs Editorial",
+  category: "Tax Planning",
+  excerpt: "The IRS charges a penalty if you underpay taxes throughout the year — even if you pay everything by April. Here is exactly how the penalty works and how to avoid it.",
+  metaDescription: "IRS underpayment penalty 2026: how it works, who owes it, how to calculate it, and the safe harbor rules that let you avoid it entirely. Essential for self-employed filers and investors.",
+  ogTitle: "How to Avoid the IRS Underpayment Penalty in 2026 | MyTaxCalcs",
+  ogDescription: "The IRS charges a penalty if you underpay taxes throughout the year. Learn the safe harbor rules and how to avoid it entirely — even if you owe money at filing.",
+  relatedLinks: [
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes Guide" },
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
+  ],
+  content: `
+<p>Many taxpayers assume that as long as they pay their full tax bill by April 15, they are in the clear. That is not how the IRS works. The tax system is pay-as-you-go: you are required to pay taxes throughout the year as you earn income, either through withholding from paychecks or through quarterly estimated payments. If you do not pay enough throughout the year, the IRS charges an underpayment penalty — even if you send a check for the full balance on April 15.</p>
+
+<h2>What Is the IRS Underpayment Penalty?</h2>
+<p>The underpayment penalty (formally called the "failure to pay estimated tax penalty" under IRC Section 6654) is charged when you did not pay enough tax during the year through withholding and/or estimated payments. It is not a punishment for being late — it is more like interest on a short-term loan from the government for the taxes you owed but did not pre-pay.</p>
+<p>The penalty rate for 2026 is the federal short-term rate plus 3 percentage points, calculated quarterly. With current interest rates, this has been running around 7-8% annually. The penalty applies separately to each quarterly period where you underpaid — so underpaying in Q1 generates a penalty for Q1 even if you overpay in Q2.</p>
+
+<h2>Who Typically Owes the Underpayment Penalty</h2>
+<ul>
+  <li><strong>Self-employed workers and freelancers</strong> who are required to make quarterly estimated payments and miss or underpay them</li>
+  <li><strong>W-2 employees</strong> who have significant income outside their paycheck — investments, rental income, side gigs, large bonuses — that is not covered by withholding</li>
+  <li><strong>Investors</strong> who realize large capital gains during the year without adjusting withholding or making estimated payments</li>
+  <li><strong>Retirees</strong> receiving pension, IRA distributions, or Social Security where withholding was not elected or was set too low</li>
+  <li><strong>Anyone who changed jobs mid-year</strong> and had a gap in withholding, or whose new job withheld at a lower rate</li>
+</ul>
+
+<h2>The Safe Harbor Rules: How to Guarantee No Penalty</h2>
+<p>The IRS provides two safe harbor rules. If you meet either one, you owe no underpayment penalty — period — regardless of how much you owe at filing.</p>
+
+<h3>Safe Harbor 1: Pay 90% of This Year's Tax</h3>
+<p>If your total withholding and estimated payments throughout 2026 equal at least 90% of your actual 2026 federal tax liability, no penalty applies. The challenge is that you do not know your exact 2026 liability until the year ends, so this requires estimating your income and adjusting payments as the year progresses.</p>
+
+<h3>Safe Harbor 2: Pay 100% of Last Year's Tax (Most Reliable)</h3>
+<p>If your total withholding and estimated payments equal at least 100% of your 2025 federal tax liability, no underpayment penalty applies for 2026 — regardless of how much you actually owe. This is the most reliable safe harbor because you know the exact number: it is the total tax shown on your 2025 Form 1040 (line 24).</p>
+<p><strong>Important exception:</strong> If your 2025 adjusted gross income exceeded $150,000 (or $75,000 if married filing separately), you must pay 110% of your 2025 tax liability to qualify for this safe harbor — not just 100%.</p>
+
+<h3>Which Safe Harbor to Use</h3>
+<p>For most people, Safe Harbor 2 (prior year tax) is simpler and more reliable. You look at last year's Form 1040, divide the total tax by 4, and pay that amount each quarter. You do not need to estimate this year's income at all. If your income is higher this year, you may owe more at filing — but you will owe no penalty.</p>
+<p>Safe Harbor 1 (90% of current year) is better if your income this year is significantly lower than last year — because you would be over-paying if you used the prior-year amount.</p>
+
+<h2>The 2026 Quarterly Estimated Payment Deadlines</h2>
+<p>Quarterly estimated payments are due four times a year. Note that the periods are not exactly equal quarters:</p>
+<ul>
+  <li><strong>Q1 (January 1 - March 31):</strong> Payment due April 15, 2026</li>
+  <li><strong>Q2 (April 1 - May 31):</strong> Payment due June 16, 2026</li>
+  <li><strong>Q3 (June 1 - August 31):</strong> Payment due September 15, 2026</li>
+  <li><strong>Q4 (September 1 - December 31):</strong> Payment due January 15, 2027</li>
+</ul>
+<p>Payments must be received (not postmarked) by the due date. The easiest and fastest method is IRS Direct Pay at irs.gov — free, no registration required, and you get instant confirmation. You can also pay by check using Form 1040-ES vouchers.</p>
+
+<h2>How to Calculate Your Quarterly Payment Amount</h2>
+<p>Using Safe Harbor 2 (prior year method):</p>
+<ol>
+  <li>Find your 2025 total tax from Form 1040, Line 24</li>
+  <li>If your 2025 AGI was over $150,000, multiply by 110%. Otherwise use 100%.</li>
+  <li>Divide by 4 to get each quarterly payment amount</li>
+  <li>Subtract any withholding for that quarter from your paycheck(s)</li>
+  <li>Pay the remainder as estimated tax by the quarterly due date</li>
+</ol>
+<p><strong>Example:</strong> Your 2025 total tax was $12,000. Your 2025 AGI was $95,000 (under $150,000). Each quarter, pay $12,000 / 4 = $3,000. If your paycheck withholds $500 per quarter, pay $2,500 in estimated tax each quarter. If you do this for all four quarters, you have zero underpayment penalty risk regardless of what your 2026 income turns out to be.</p>
+
+<h2>What If You Already Missed a Quarter?</h2>
+<p>Missing a quarterly deadline does not mean you owe the penalty for the entire year — it means you owe a penalty for the period you underpaid. Making a late payment as soon as possible stops the penalty from accruing further from that point forward.</p>
+<p>If you missed Q1 (April 15) but made a catch-up payment in May, you owe the penalty only for the days between April 15 and your payment date — not the full quarter. The IRS calculates this automatically when you file Form 2210 (or it may be calculated for you when you file your return).</p>
+
+<h2>The Exception: Uneven Income Throughout the Year</h2>
+<p>The standard safe harbor assumes you earn income evenly throughout the year. If your income is heavily concentrated in one quarter — for example, a large stock sale in Q3 or a big freelance contract in Q4 — you may be able to use the "annualized income installment method" (Form 2210, Schedule AI) to match your estimated payments to when you actually earned the income. This can reduce or eliminate penalties for early quarters where you legitimately had low income.</p>
+<p>This method requires more calculation but is worth exploring if your income is seasonal or irregular.</p>
+
+<h2>W-2 Employees: Adjusting Withholding Instead of Making Estimated Payments</h2>
+<p>If you are a W-2 employee with additional income, you do not have to make estimated payments — you can instead increase your withholding by submitting a new W-4 to your employer. The advantage is that withholding is treated as paid evenly throughout the year for safe harbor purposes, even if the actual withholding happens in the last quarter. This means you can wait until late in the year to increase withholding and still satisfy the safe harbor for the full year.</p>
+<p>Use Step 4(c) on Form W-4 to add an extra dollar amount to be withheld each paycheck. Calculate how much additional total withholding you need, divide by remaining paychecks in the year, and enter that amount.</p>
+
+<h2>How the IRS Calculates and Assesses the Penalty</h2>
+<p>The IRS typically calculates the underpayment penalty automatically when you file your return. If you owe a penalty, it appears on Form 1040 as an additional amount owed (Line 38). You generally do not need to file Form 2210 unless you want to use the annualized income method, claim a waiver, or dispute the calculated amount.</p>
+<p>In some cases — first-time penalty situations, unusual circumstances, casualty events — the IRS may waive the underpayment penalty on request. The IRS first-time penalty abatement program applies to the failure-to-file and failure-to-pay penalties but generally not to the estimated tax underpayment penalty. However, a reasonable cause waiver is possible if you can demonstrate the underpayment was due to circumstances beyond your control.</p>
+
+<p>Use our <a href="/quarterly-estimated-taxes">quarterly estimated tax guide</a> for step-by-step payment instructions and deadline details, and our <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to estimate your SE tax obligation for quarterly payment planning.</p>
+`
+},
+
   {
     slug: "mid-year-tax-checkup-2026",
     title: "Mid-Year Tax Checkup 2026: 7 Things to Review Before July",
