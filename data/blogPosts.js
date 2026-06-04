@@ -310,7 +310,30 @@ const blogPosts = [
 <p>Federal effective rate is only part of the picture. Most states also impose an income tax. A California resident earning $75,000 faces a California effective rate of roughly 5–6% on top of their federal rate, bringing their combined effective rate to around 16–17%. Use our <a href="/states">state income tax calculators</a> to estimate your state burden alongside federal tax.</p>
 
 <p>Use our <a href="/income-tax-calculator">federal income tax calculator</a> to get your estimated total federal tax — the calculator shows both your effective and marginal rate in the results.</p>
-    `,
+    
+<h2>Beyond the Calculation: Using Your Effective Rate</h2>
+<p>Once you know your effective tax rate, the number becomes a powerful planning tool. Here's how to interpret it and use it to make better financial decisions throughout the year.</p>
+
+<h3>Why Your Effective Rate Is Always Lower Than Your Marginal Rate</h3>
+<p>The progressive bracket system ensures your first dollars of income are always taxed at low rates (10% and 12%), regardless of how much you ultimately earn. Even a filer in the 35% bracket has their first $11,925 taxed at 10% and the next $36,550 at 12%. These lower-bracket layers drag the average down significantly. A filer with $300,000 of taxable income doesn't pay 35% on all of it — only on the dollars within that specific bracket range.</p>
+
+<h3>When to Use Each Number</h3>
+<ul>
+<li><strong>Use your marginal rate</strong> when deciding whether to make a traditional vs. Roth contribution, whether a deduction is worth pursuing, or what the tax cost of an additional dollar of income will be. Your marginal rate tells you the "price" of each incremental dollar.</li>
+<li><strong>Use your effective rate</strong> when comparing your overall tax burden across years, comparing to others, or assessing the relative efficiency of your overall tax situation. It tells you the total cost, not the marginal cost.</li>
+</ul>
+
+<h3>How the Standard Deduction Changes Your Effective Rate</h3>
+<p>The standard deduction creates a zone of zero taxation at the bottom of everyone's income. A single filer with $60,000 gross income has about $44,250 of taxable income after the 2026 standard deduction. Federal income tax on that amount is approximately $5,069. Their effective rate on gross income is $5,069 ÷ $60,000 = 8.4% — far below the 22% bracket threshold and well below the 12% bracket their taxable income sits in.</p>
+
+<h3>Common Ways People Inadvertently Raise Their Effective Rate</h3>
+<ul>
+<li>Not contributing to pre-tax retirement accounts when in the 22%+ bracket — unused 401(k) capacity is the most commonly missed opportunity to lower effective rate.</li>
+<li>Taking large IRA distributions in high-income years rather than timing them for lower-income years or the Roth conversion window.</li>
+<li>Missing credits they qualify for — particularly the EITC, Child Tax Credit, and education credits.</li>
+</ul>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to compute your exact effective rate alongside your marginal rate, and see our <a href="/marginal-vs-effective-tax-rate">marginal vs. effective tax rate guide</a> for a deeper look at how both figures are calculated.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
@@ -383,7 +406,30 @@ const blogPosts = [
 <h2>How to Check If Your Withholding Is on Track</h2>
 <p>The most accurate tool is the <a href="https://www.irs.gov/individuals/tax-withholding-estimator" target="_blank" rel="noopener">IRS Tax Withholding Estimator</a> at IRS.gov. It tells you whether your current withholding will result in a refund, a balance owed, or a wash — and suggests the specific W-4 changes to reach your preferred outcome.</p>
 <p>You can also use our <a href="/tax-refund-calculator">Tax Refund Calculator</a> for a quick estimate, or our <a href="/income-tax-calculator">Income Tax Calculator</a> to see your full estimated federal tax liability and compare it to what's being withheld from your paychecks.</p>
-    `,
+    
+<h2>Common W-4 Situations and How to Handle Them</h2>
+<p>The 2020 redesign of the W-4 eliminated allowances and introduced a more direct approach to withholding. For most single-job employees, completing only Steps 1 and 5 is sufficient. But life changes and multi-job situations require careful attention to avoid a surprise bill at filing time.</p>
+
+<h3>Dual-Income Couples</h3>
+<p>The most common under-withholding situation. When both spouses work, each employer withholds based on that job alone — but the IRS combines both incomes into a single tax calculation when you file jointly. Both withholding streams are calculated at lower rates than your combined bracket warrants. Fix this by using the IRS Tax Withholding Estimator at irs.gov and completing Step 2 of the W-4 (Multiple Jobs Worksheet), or have one spouse enter an additional flat dollar amount per paycheck in Step 4(c).</p>
+
+<h3>Freelance or Side Gig Income</h3>
+<p>If you have W-2 income plus self-employment income, your employer has no visibility into the additional income. You can address this by entering an additional withholding amount in Step 4(c) of your W-4 to cover income tax on your side income — or by making separate quarterly estimated payments. Note: the SE tax (15.3%) on side income must be paid separately regardless; W-4 withholding only covers income tax, not SE tax.</p>
+
+<h3>Life Events That Require a New W-4</h3>
+<ul>
+<li>Getting married or divorced</li>
+<li>Having a child — adding the Child Tax Credit in Step 3 reduces withholding to reflect the credit</li>
+<li>Starting or stopping a second job</li>
+<li>Spouse starting or stopping work</li>
+<li>Buying a home — mortgage interest may now make itemizing worthwhile, reducing your effective tax rate</li>
+<li>A large capital gain or significant investment income event</li>
+</ul>
+
+<h3>How to Calculate the Right Additional Withholding</h3>
+<p>As a practical self-check: estimate your total tax for the year using our income tax calculator, subtract what's been withheld year-to-date, and divide the remaining amount by the number of paychecks left in the year. That's the additional per-paycheck amount to enter in Step 4(c). For a more precise result, use the IRS Tax Withholding Estimator at irs.gov — it accounts for your specific W-4 settings, deductions, and credits.</p>
+<p>Use our <a href="/income-tax-calculator">federal income tax calculator</a> to estimate your full-year liability, and our <a href="/tax-refund-calculator">refund calculator</a> to see whether your current withholding is on track for the year.</p>
+`,
     relatedLinks: [
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
@@ -471,7 +517,23 @@ const blogPosts = [
 </ul>
 
 <p>Use our <a href="/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> to estimate what you'll owe. For your full federal tax picture, try our <a href="/income-tax-calculator">Income Tax Calculator</a>.</p>
-    `,
+    
+<h2>Strategic Holding Period Planning</h2>
+<p>The difference between short-term and long-term capital gains tax can be dramatic — the same gain might cost significantly more in federal tax if sold a day early. Understanding when the long-term threshold matters most helps you make better sell decisions.</p>
+
+<h3>The One-Year Holding Period: Exactly What It Means</h3>
+<p>Long-term treatment requires holding the asset for <em>more than</em> one year — not one year exactly. If you buy on March 15, 2025, you must sell on March 16, 2026 or later to qualify for long-term rates. The holding period begins the day after purchase (the trade date, not the settlement date) and includes the day of sale. Selling on the one-year anniversary date itself produces a short-term gain and is taxed as ordinary income.</p>
+
+<h3>Inherited Assets: The Stepped-Up Basis</h3>
+<p>Assets inherited from a deceased person receive a stepped-up basis to their fair market value at the date of death — regardless of how long the decedent held them. The heir's holding period is automatically treated as long-term, regardless of how quickly they sell after inheriting. This means decades of appreciation can be passed to heirs essentially tax-free through the step-up in basis — one of the most significant wealth transfer benefits in the tax code.</p>
+
+<h3>Mutual Funds: Embedded Short-Term Gains</h3>
+<p>Even if you've held a mutual fund for years, the fund buys and sells underlying securities throughout the year. At year-end, the fund distributes net capital gains to shareholders — including short-term gains taxed at ordinary income rates, even if you never sold a single fund share yourself. Check a fund's estimated capital gains distributions before year-end to avoid surprise taxable income. Index funds and ETFs generally distribute far fewer capital gains than actively managed funds due to lower portfolio turnover.</p>
+
+<h3>High-Income Filers: The Full Rate Stack</h3>
+<p>For married filers with income over $250,000, the effective capital gains rate includes the 3.8% Net Investment Income Tax on top of the standard 20% rate, bringing the federal rate to 23.8% on long-term gains. Combined with high state income tax rates, the real advantage of long-term treatment narrows — but it still beats ordinary income rates in most cases.</p>
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to model your gain under both short-term and long-term rates, and our <a href="/capital-gains-tax-rates-2026">2026 capital gains rate guide</a> for complete income thresholds at each rate.</p>
+`,
     relatedLinks: [
       { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
@@ -549,7 +611,34 @@ const blogPosts = [
 <p>Because no employer withholds from your pay, you're expected to pay SE tax and income tax quarterly. The 2026 due dates are April 15, June 16, September 15, and January 15, 2027. A practical rule of thumb: set aside <strong>28–30% of every payment you receive</strong> for taxes. This covers SE tax (~15%) plus income tax (~13–15% effective rate) for most self-employed workers in the 22% bracket.</p>
 
 <p>Use our <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> to estimate your exact SE tax for 2026. For your full tax picture including both SE tax and income tax, try our <a href="/income-tax-calculator">Income Tax Calculator</a>.</p>
-    `,
+    
+<h2>The Complete Self-Employment Tax Checklist for 2026</h2>
+<p>Managing SE tax well isn't just about knowing the rate — it's about building systems that prevent surprises. Here's a practical checklist covering everything a self-employed person needs to stay current in 2026.</p>
+
+<h3>Track Income and Expenses Monthly</h3>
+<p>SE tax is calculated on net profit, not gross revenue. Every dollar of legitimate business expense reduces your SE taxable income by the full SE tax rate (15.3%) plus your marginal income tax rate. A $1,000 business expense in the 22% bracket saves approximately $302 in combined federal tax. Waiting until April to categorize expenses means missed deductions and inflated tax bills. Simple tracking options: a dedicated business bank account and credit card, a spreadsheet updated monthly, or accounting software like Wave (free) or QuickBooks Self-Employed.</p>
+
+<h3>Set Aside Tax Each Time You're Paid</h3>
+<p>The standard guidance is to set aside 25–30% of every client payment for federal taxes. For most self-employed people in the 22% bracket, the combined rate (15.3% SE tax plus income tax on net profit) lands close to that range. Transfer this to a separate savings account immediately — don't leave it in the operating account where it might get spent before quarterly deadlines.</p>
+
+<h3>2026 Quarterly Payment Deadlines</h3>
+<ul>
+<li>Q1 (January 1 – March 31): Due April 15, 2026</li>
+<li>Q2 (April 1 – May 31): Due June 16, 2026</li>
+<li>Q3 (June 1 – August 31): Due September 15, 2026</li>
+<li>Q4 (September 1 – December 31): Due January 15, 2027</li>
+</ul>
+<p>Payments are made using IRS Direct Pay (free) at IRS.gov or by mailing Form 1040-ES. For safe harbor, pay the lesser of 90% of this year's expected tax or 100% of last year's total tax (110% if prior-year AGI exceeded $150,000).</p>
+
+<h3>Key Forms You'll File</h3>
+<ul>
+<li><strong>Schedule C:</strong> Reports business profit or loss (attached to Form 1040)</li>
+<li><strong>Schedule SE:</strong> Calculates SE tax based on Schedule C net profit</li>
+<li><strong>Form 1040-ES:</strong> Used to make and track quarterly estimated payments</li>
+<li><strong>Form 1099-NEC:</strong> Received from clients who paid you $600 or more — verify these match your income records</li>
+</ul>
+<p>Use our <a href="/self-employment-tax-calculator">SE tax calculator</a> to estimate your quarterly payment based on current-year income, and our <a href="/quarterly-estimated-taxes">estimated tax guide</a> for step-by-step payment instructions and deadline details.</p>
+`,
     relatedLinks: [
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
@@ -911,7 +1000,23 @@ const blogPosts = [
 <p>Workers who receive both tips and overtime pay can claim <strong>both</strong> deductions on Schedule 1-A, subject to each deduction's individual limits and phase-out thresholds. A server who earned $18,000 in tips and $8,000 in overtime could potentially deduct all $26,000 (both under their respective caps), saving roughly $5,720 in federal income taxes at the 22% bracket — without affecting their payroll tax obligations.</p>
 
 <p>Use our <a href="/income-tax-calculator">Federal Income Tax Calculator</a> and <a href="/payroll-tax-calculator">Payroll Tax Calculator</a> to estimate how the tips deduction affects your overall tax liability and take-home pay.</p>
-    `,
+    
+<h2>Current Law, Proposed Changes, and What Workers Should Do Now</h2>
+<p>The "no tax on tips" concept has had significant political momentum, and with the passage of the One Big Beautiful Bill Act, some changes have been enacted for 2025 and beyond. Here's what's now law and what it means for tipped workers.</p>
+
+<h3>The OBBBA Tip Exemption — What It Does</h3>
+<p>The One Big Beautiful Bill Act enacted a temporary deduction for certain tip income for tax years 2025 through 2028. Qualifying workers in traditionally tipped industries can deduct up to $25,000 in tips from their federal taxable income. This is an above-the-line deduction — it reduces your AGI and doesn't require itemizing. The deduction phases out for higher-income filers. Note that this exemption applies to federal <em>income</em> tax; tips are still subject to FICA (Social Security and Medicare) tax.</p>
+
+<h3>Who Qualifies for the Tip Deduction</h3>
+<p>The deduction applies to employees who receive tips in occupations where tipping was customary as of December 31, 2024. This is expected to include food service workers, bartenders, hotel staff, hair stylists, taxi and rideshare drivers, and similar traditionally tipped roles. Workers in occupations where tipping was not customary do not qualify — the IRS is expected to publish guidance clarifying which occupations are covered.</p>
+
+<h3>How Tips Are Still Taxed Under Current Law</h3>
+<p>Even with the new deduction, all tips must still be reported as income. If you receive $20 or more in tips in a calendar month, you must report them to your employer using Form 4070 by the 10th of the following month. Your employer includes reported tips on your W-2. The deduction is claimed on your tax return and reduces the income tax you owe — it doesn't change your W-2 reporting or your employer's withholding obligation.</p>
+
+<h3>FICA Tax on Tips Remains Unchanged</h3>
+<p>The OBBBA tip deduction applies to income tax only. Tips remain subject to the employee share of FICA (7.65% — Social Security and Medicare). If your wages aren't sufficient to cover FICA on tips, you may need to pay some FICA taxes directly on your return via Form 4137. The employer FICA tip credit (Form 8846) for food and beverage employers also remains in place.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to estimate your federal tax including or excluding tip income, and check our <a href="/blog">tax blog</a> for IRS guidance updates on which occupations qualify for the deduction.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
       { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator" },
@@ -1001,7 +1106,23 @@ const blogPosts = [
 <h2>Charitable and Medical Mileage</h2>
 <p>If you drive for volunteer work with a qualifying charity, you can deduct <strong>14 cents per mile</strong>. This rate is significantly below the actual cost of operating a vehicle and has been unchanged for many years — it's set by Congress, not adjusted by the IRS. Medical mileage at <strong>21 cents per mile</strong> is deductible for trips to receive medical care, but only if you itemize and only to the extent total medical expenses exceed 7.5% of your AGI. Very few taxpayers benefit from the medical mileage deduction in practice.</p>
 <p>For a broader view of how all your deductions affect your federal tax bill, try our <a href="/income-tax-calculator">income tax calculator</a>.</p>
-    `,
+    
+<h2>Maximizing Your Mileage Deduction</h2>
+<p>The IRS standard mileage rate is the simplest way to deduct vehicle costs for business purposes — but there are rules, record-keeping requirements, and strategic choices involved in claiming it correctly and getting the full benefit.</p>
+
+<h3>Standard Rate vs. Actual Expense Method</h3>
+<p>Instead of the standard mileage rate, you can deduct actual vehicle expenses: gas, oil changes, tires, insurance, registration, depreciation, and repairs — multiplied by your business use percentage (business miles ÷ total miles driven). The actual expense method requires more record-keeping but can produce a larger deduction for high-cost or rapidly depreciating vehicles. You must choose one method in the first year you use the vehicle for business; switching from standard mileage to actual is generally allowed, but switching from actual to standard has restrictions.</p>
+
+<h3>Record-Keeping Requirements</h3>
+<p>The IRS requires a contemporaneous mileage log — records kept at or near the time of each trip, not reconstructed at year-end. For each business trip, record: date, business purpose, starting and ending location, and miles driven. Apps like MileIQ or Everlance automate most of this. The IRS has successfully disallowed large mileage deductions where no contemporaneous log existed — the log is the deduction, not an optional backup.</p>
+
+<h3>What Counts as Business Mileage</h3>
+<p>Business mileage includes driving to meet clients, traveling between work locations, running business errands, and attending work-required training or meetings. Commuting — driving from home to your regular work location — is explicitly <em>not</em> deductible. However, if your home qualifies as your principal place of business (qualifying home office), driving from home to a client's location does count as business mileage.</p>
+
+<h3>The Real Tax Value of Mileage Tracking</h3>
+<p>At 70 cents per mile, a self-employed person who drives 10,000 business miles per year can deduct $7,000. In the 22% bracket, that saves approximately $1,540 in federal income tax. Since mileage deductions also reduce net profit, they simultaneously reduce SE taxable income — saving an additional ~$1,071 in SE tax (15.3% × $7,000). Total combined tax savings: approximately $2,611 on 10,000 documented business miles. The mileage log is worth keeping.</p>
+<p>Use our <a href="/self-employment-tax-calculator">SE tax calculator</a> to see how business deductions like mileage reduce your SE tax liability, and our <a href="/income-tax-calculator">income tax calculator</a> to model your total federal tax estimate with and without the deduction.</p>
+`,
     relatedLinks: [
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
@@ -1459,7 +1580,29 @@ const blogPosts = [
 
 <h2>Source</h2>
 <p>All figures sourced from <a href="https://www.irs.gov/newsroom/401k-limit-increases-to-24500-for-2026-ira-limit-rises-to-7500" target="_blank" rel="noopener">IRS IR-2025-111</a> and IRS Notice 2025-67. Use our <a href="/income-tax-calculator">income tax calculator</a> to see how maxing your retirement contributions affects your overall 2026 federal tax bill.</p>
-    `,
+    
+<h2>Contribution Strategies to Maximize Your Limits</h2>
+<p>Knowing the contribution limits is step one. Step two is knowing how to use them most effectively given your income, tax bracket, and retirement timeline. The right sequencing of contributions can make a meaningful difference over time.</p>
+
+<h3>The Priority Order for Most Workers</h3>
+<p>For working-age Americans in the 22% or higher bracket, the generally recommended priority order is: (1) contribute enough to your 401(k) to capture the full employer match — this is a 50–100% immediate return on that contribution; (2) max an HSA if you have a qualifying high-deductible health plan — triple tax advantage; (3) max the 401(k) to the full contribution limit; (4) contribute to an IRA. This sequencing maximizes pre-tax room and lowers AGI, which can improve eligibility for other credits and deductions.</p>
+
+<h3>Income Limits for IRA Deductibility (2025)</h3>
+<p>If you're covered by a workplace retirement plan, your ability to deduct a traditional IRA contribution phases out:</p>
+<ul>
+<li><strong>Single filers:</strong> Full deduction below $79,000; phase-out $79,000–$89,000; no deduction above $89,000</li>
+<li><strong>Married filing jointly (covered spouse):</strong> Full deduction below $126,000; phase-out $126,000–$146,000</li>
+<li><strong>Married filing jointly (non-covered spouse):</strong> Phase-out $236,000–$246,000</li>
+</ul>
+<p>Above these limits, non-deductible traditional IRA contributions (for the backdoor Roth) are still available for most people without existing pre-tax IRA balances.</p>
+
+<h3>Catch-Up Contributions for Age 50+</h3>
+<p>Filers age 50 and older can contribute an additional $7,500 to a 401(k) (total $31,000) and an additional $1,000 to an IRA (total $8,000) in 2025. Under SECURE 2.0, workers aged 60–63 have an enhanced catch-up limit of $11,250 for 401(k) plans in 2025 (total $34,750).</p>
+
+<h3>Self-Employed Contribution Opportunities</h3>
+<p>Self-employed individuals can contribute to both the employee and employer sides of a Solo 401(k). The employee side (up to $23,500) reduces income tax. The employer side (up to 25% of net self-employment income) is a business expense that also reduces net profit — and therefore SE taxable income. Combined contributions up to $70,000 are possible, making the Solo 401(k) one of the most powerful tax tools available to freelancers and independent contractors.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to model how a pre-tax retirement contribution changes your estimated federal tax, and our <a href="/401k-contribution-limits-2025">full contribution limits guide</a> for complete 2025 limit tables and income phase-out details.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
@@ -1544,7 +1687,23 @@ const blogPosts = [
 
 <h2>Source</h2>
 <p>All figures sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a> and <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noopener">IRS IR-2025-103</a>. Use our <a href="/income-tax-calculator">income tax calculator</a> to estimate your 2026 federal tax with the updated brackets and deductions.</p>
-    `,
+    
+<h2>How Inflation Adjustments Affect Your 2026 Tax Bill</h2>
+<p>Each year, the IRS adjusts dozens of tax parameters for inflation using the Chained Consumer Price Index (C-CPI-U). These adjustments are designed to prevent bracket creep — the phenomenon where inflation pushes taxpayers into higher brackets even though their real purchasing power hasn't changed. Understanding them helps you plan accurately for the year.</p>
+
+<h3>Why These Adjustments Matter</h3>
+<p>Without inflation adjustments, a worker who receives a 4% raise in a 4% inflation year hasn't gained any real income — but under a non-indexed tax system, some of that raise would be pushed into higher brackets, increasing their real tax burden. The annual adjustments prevent this by scaling bracket thresholds, the standard deduction, and contribution limits upward with inflation. If your income keeps pace with inflation, your inflation-adjusted tax burden stays roughly constant year over year.</p>
+
+<h3>2026 Bracket Thresholds vs. 2025</h3>
+<p>The 2026 brackets shifted upward from 2025. For a single filer, the 22% bracket threshold rose to $48,475. The 24% bracket threshold moved to $103,350. For married filers, the 22% bracket ceiling moved to $96,950. These adjustments mean the same real, inflation-adjusted income stays in the same bracket year over year — the tax system isn't inadvertently taking a larger share of your purchasing power just because prices rose.</p>
+
+<h3>Gift Tax Annual Exclusion</h3>
+<p>The annual gift tax exclusion increased to $19,000 per recipient for 2026 (from $18,000 in 2025). This means you can give up to $19,000 per person to as many individuals as you like without filing a gift tax return or using any of your lifetime exemption. Married couples can combine to give $38,000 per recipient per year without any filing requirement.</p>
+
+<h3>Alternative Minimum Tax (AMT) Exemptions</h3>
+<p>The AMT exemption adjusts annually to prevent the AMT from expanding into middle-income households. For 2026, the AMT exemption is $89,925 for single filers and $139,850 for married filing jointly. Most middle-income taxpayers are not subject to the AMT due to the higher exemptions established after 2017. High-income filers with large ISO (Incentive Stock Option) exercises or significant preference items should still run an AMT calculation each year.</p>
+<p>Use our <a href="/tax-brackets-2026">2026 tax bracket guide</a> for the complete adjusted bracket tables, and our <a href="/income-tax-calculator">income tax calculator</a> to see how your estimated 2026 tax compares to last year.</p>
+`,
     relatedLinks: [
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
       { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
@@ -1726,7 +1885,29 @@ const blogPosts = [
 
 <h2>Source</h2>
 <p>All figures sourced from <a href="https://www.irs.gov/pub/irs-drop/rp-25-32.pdf" target="_blank" rel="noopener">IRS Revenue Procedure 2025-32</a> and <a href="https://www.irs.gov/newsroom/irs-releases-tax-inflation-adjustments-for-tax-year-2026-including-amendments-from-the-one-big-beautiful-bill" target="_blank" rel="noopener">IRS IR-2025-103</a>. For the full picture of 2026 changes, see our guides on <a href="/blog/2026-tax-brackets-standard-deduction-changes">2026 tax brackets</a> and the <a href="/blog/2026-standard-deduction-increase">2026 standard deduction</a>.</p>
-    `,
+    
+<h2>How These 2026 Updates Affect Real Filers</h2>
+<p>The Earned Income Tax Credit, Alternative Minimum Tax, and estate tax rules all reflect 2026 inflation adjustments and legislative changes. Here's what each update means in practice for different types of filers.</p>
+
+<h3>2026 EITC — Maximum Credit Amounts</h3>
+<ul>
+<li>No qualifying children: up to $649 (single filer)</li>
+<li>One qualifying child: up to $4,328</li>
+<li>Two qualifying children: up to $7,152</li>
+<li>Three or more qualifying children: up to $8,046</li>
+</ul>
+<p>Investment income cannot exceed $11,950 or you're disqualified regardless of earned income. The EITC is one of the most commonly unclaimed credits — particularly among low-income workers without children who qualify for the smaller credit, and self-employed filers who may not realize net self-employment income counts as earned income for EITC purposes.</p>
+
+<h3>Planning Around the EITC Phase-Out</h3>
+<p>If your income is near the EITC phase-out thresholds, small changes in income or filing status can significantly affect your credit amount. Contributing to a pre-tax 401(k) or traditional IRA reduces your AGI — potentially increasing your EITC if you're in the phase-out range. Even a $500 traditional IRA contribution can shift your credit amount meaningfully when you're near the edge of the phase-out.</p>
+
+<h3>AMT in 2026 — Who Needs to Check</h3>
+<p>The Alternative Minimum Tax applies a separate calculation that disallows certain preferences and deductions, then taxes AMTI at 26% (on the first $232,600) or 28% above that. You pay whichever is higher — regular tax or AMT. The 2026 exemption is $89,925 for single filers and $139,850 for married filing jointly. Most middle-income taxpayers are not subject to AMT. However, filers with large ISO (Incentive Stock Option) exercises, significant state tax deductions above the SALT cap, or other preference items should run an AMT check before finalizing their return.</p>
+
+<h3>Estate Tax in 2026</h3>
+<p>The estate and gift tax exemption for 2026 is approximately $13.99 million per individual ($27.98 million for married couples with portability). The top estate tax rate remains 40%. For most families, the estate tax is not a concern at these exemption levels. However, families with estates approaching the $14 million threshold — or anticipating future growth toward it — should consult an estate planning attorney, particularly given the uncertainty around future legislative changes to exemption levels.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to estimate your 2026 federal liability, and see the IRS EITC Assistant at irs.gov to verify your eligibility for the credit.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
@@ -1803,7 +1984,31 @@ const blogPosts = [
 <h2>Taxable Income vs. Gross Income</h2>
 <p>The brackets apply to <em>taxable income</em> -- not your gross salary. Your taxable income is your gross income minus the standard deduction ($15,000 for single filers in 2026, $30,000 for married filing jointly) and any other adjustments. A single filer earning $90,000 in gross income has taxable income of $75,000 after the standard deduction -- putting them in the 22% bracket, not the 24%.</p>
 <p>Use our <a href="/income-tax-calculator">Income Tax Calculator</a> to see exactly how your income breaks down across brackets and what your effective rate actually is.</p>
-    `,
+    
+<h2>Common Bracket Questions — Answered</h2>
+<p>Beyond the basic mechanics, several real-world scenarios trip people up when thinking about brackets. Here's how each one actually works.</p>
+
+<h3>Does a Bonus Push Me Into a Higher Bracket?</h3>
+<p>A bonus can push some of your income into a higher bracket — but only the portion above the bracket threshold gets taxed at the higher rate. If your taxable income without the bonus is $45,000 (single filer, 2026), and you receive a $10,000 bonus, only $3,525 of that bonus crosses into the 22% bracket. The rest is still taxed at 12%. Your employer may withhold at the supplemental flat rate of 22%, which can cause over-withholding — you'll reconcile at filing.</p>
+
+<h3>What About Capital Gains — Do They Use the Same Brackets?</h3>
+<p>No. Long-term capital gains (assets held more than one year) use a separate rate schedule: 0%, 15%, or 20% depending on your total taxable income. These rates are generally lower than ordinary income rates. Short-term capital gains, however, are taxed as ordinary income and do flow through the regular brackets. This distinction is why the holding period matters so much for investors.</p>
+
+<h3>How Retirement Withdrawals Interact With Brackets</h3>
+<p>Traditional IRA and 401(k) withdrawals are taxed as ordinary income — they stack on top of your other income and fill up brackets from the bottom. This is why Roth conversions are often worth modeling carefully: converting in a year when your income is lower can lock in a lower rate on future withdrawals. The interaction between Social Security, RMDs, and bracket thresholds is one of the most complex areas of retirement tax planning.</p>
+
+<h3>How to Use Bracket Awareness in Tax Planning</h3>
+<p>Once you understand that brackets are marginal, you can use that knowledge proactively:</p>
+<ul>
+<li><strong>Fill the current bracket intentionally.</strong> If you're near the top of the 12% bracket, consider doing a Roth conversion, realizing a capital gain at the 0% rate, or taking an extra IRA withdrawal — all taxed at 12% rather than the 22% you'd face after crossing.</li>
+<li><strong>Time deductions to years with higher income.</strong> Bunching charitable contributions, prepaying mortgage interest, or making large business purchases in a higher-income year reduces taxable income where it costs more.</li>
+<li><strong>Understand your marginal rate before deciding on pre-tax vs. Roth contributions.</strong> If you're in the 22% or higher bracket, traditional contributions often make more sense. If you're in the 10% or 12% bracket, Roth contributions are often better because you're locking in a low rate now.</li>
+</ul>
+
+<h3>The Standard Deduction's Role</h3>
+<p>Brackets apply to <em>taxable</em> income after the standard deduction, not your gross income. For 2026, the standard deduction is $15,750 for single filers and $31,500 for married filing jointly. A single earner making $63,000 has taxable income of about $47,250 — sitting near the top of the 12% bracket, not in the 22% bracket at all. Many people assume they're in a higher bracket than they are because they're thinking about gross income rather than taxable income.</p>
+<p>Use our <a href="/income-tax-calculator">federal income tax calculator</a> to see exactly how your income fills each bracket and what your effective rate works out to. The difference between your marginal rate and your effective rate is almost always larger than people expect.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
@@ -1865,7 +2070,25 @@ const blogPosts = [
   <li>Both spouses have high state income taxes plus property taxes hitting the SALT cap</li>
 </ul>
 <p>Use our <a href="/income-tax-calculator">Income Tax Calculator</a> to estimate your liability under both approaches, and our <a href="/standard-deduction-vs-itemized">Standard Deduction vs. Itemized guide</a> for a deeper comparison.</p>
-    `,
+    
+<h2>How to Actually Decide: A Practical Checklist</h2>
+<p>The question of standard vs. itemized deductions comes down to whether your qualifying expenses exceed the standard deduction for your filing status. For most people, the standard deduction wins — especially since the 2017 Tax Cuts and Jobs Act roughly doubled it. But for homeowners in high-tax states and those with significant charitable giving, itemizing can still make sense.</p>
+
+<h3>What Can Be Itemized?</h3>
+<ul>
+<li><strong>State and Local Taxes (SALT):</strong> Property taxes plus either state income taxes or state sales taxes. The SALT cap was raised to $40,000 for 2026 under the OBBBA (phasing out at higher incomes), up from the prior $10,000 cap — making itemizing much more attractive for high-tax-state residents.</li>
+<li><strong>Mortgage interest:</strong> Interest on up to $750,000 of mortgage debt on your primary and one secondary residence.</li>
+<li><strong>Charitable contributions:</strong> Cash donations to qualifying organizations, up to 60% of AGI.</li>
+<li><strong>Medical expenses:</strong> Only the amount exceeding 7.5% of your AGI — a high threshold most people don't clear.</li>
+</ul>
+
+<h3>Who Should Run the Numbers in 2026</h3>
+<p>The expanded SALT cap makes 2026 the most important year to recalculate in nearly a decade. If you own a home in a state with high income or property taxes — California, New York, New Jersey, Illinois — your itemized total may now exceed the standard deduction for the first time since 2017. Add your mortgage interest (from Form 1098), property taxes, state income taxes paid (up to the new cap), and charitable contributions. If the total exceeds your standard deduction, itemizing wins.</p>
+
+<h3>Bunching: A Strategy for Those on the Border</h3>
+<p>If your itemized deductions are close to but slightly below the standard deduction, consider bunching charitable contributions. Instead of giving $5,000 per year, give $10,000 every other year. In the giving year, your itemized total may clear the threshold; in the off year, you take the standard deduction. Over two years, you've claimed the same total deductions but concentrated them into a single itemizing year. Donor-advised funds make this easy — you contribute a lump sum, get the deduction in one year, and distribute to charities on your own timeline.</p>
+<p>See our <a href="/standard-deduction-2026">2026 standard deduction guide</a> for full amounts by filing status, and use our <a href="/income-tax-calculator">income tax calculator</a> to compare your estimated tax under both approaches.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
@@ -1921,7 +2144,28 @@ const blogPosts = [
   <li>Half of self-employment tax (the employer-equivalent portion)</li>
 </ul>
 <p>Use our <a href="/income-tax-calculator">Income Tax Calculator</a> to see how different contribution levels affect your tax bill, and our <a href="/tax-refund-calculator">Tax Refund Calculator</a> to estimate your refund or balance due.</p>
-    `,
+    
+<h2>Strategies to Legally Reduce Your Taxable Income</h2>
+<p>Understanding what taxable income is — your gross income minus all applicable deductions and adjustments — is just the start. The real value comes from knowing which levers you can pull to reduce it. Every dollar of taxable income you eliminate saves you your marginal tax rate in federal income tax plus your state rate. The strategies below are all legitimate and built into the tax code.</p>
+
+<h3>Above-the-Line Deductions (Reduce AGI Directly)</h3>
+<p>These deductions reduce your Adjusted Gross Income before you even get to the standard vs. itemized decision. Lower AGI also helps you qualify for more credits and avoids income-based phase-outs.</p>
+<ul>
+<li><strong>Traditional 401(k) and 403(b) contributions:</strong> Up to $23,500 in 2025 ($31,000 if 50 or older). Pre-tax contributions reduce your taxable income dollar-for-dollar.</li>
+<li><strong>Traditional IRA contributions:</strong> Up to $7,000 ($8,000 if 50+) — deductible if you don't have a workplace plan or if income falls below certain thresholds.</li>
+<li><strong>HSA contributions:</strong> Up to $4,300 for self-only or $8,550 for family coverage in 2025. HSAs are triple tax-advantaged: deductible, grows tax-free, and qualified withdrawals are tax-free.</li>
+<li><strong>SEP-IRA and Solo 401(k) contributions:</strong> For self-employed individuals, these allow contributions up to 25% of net self-employment income, dramatically reducing AGI.</li>
+<li><strong>Student loan interest:</strong> Up to $2,500 per year if your income is below the phase-out threshold.</li>
+<li><strong>Self-employed health insurance premiums:</strong> 100% deductible for self-employed individuals not eligible for employer-sponsored coverage through a spouse.</li>
+</ul>
+
+<h3>Capital Gains Management</h3>
+<p>Tax-loss harvesting — selling assets at a loss to offset gains — is one of the most effective tools for investors with taxable accounts. You can offset unlimited gains with losses, and up to $3,000 of net losses per year can offset ordinary income. Losses carry forward indefinitely to future years.</p>
+
+<h3>Timing Matters More Than You Think</h3>
+<p>If you expect a lower-income year ahead, deferring income (delaying invoices if self-employed, pushing a bonus to January) into that year can result in lower rates. Conversely, accelerating deductions into a high-income year maximizes their value. Year-end tax planning is most effective when done in October and November — not December 31.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to see how different deduction scenarios affect your estimated tax bill, and our <a href="/tax-brackets-2026">2026 tax bracket guide</a> to understand where your income falls in the rate schedule.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
@@ -1979,7 +2223,32 @@ const blogPosts = [
 <h2>Quarterly Estimated Tax Payments</h2>
 <p>Self-employed workers do not have withholding. The IRS expects quarterly estimated payments covering both income tax and SE tax. Miss these and you owe a penalty even if you pay in full at tax time. The 2026 due dates: April 15, June 16, September 15, and January 15, 2027.</p>
 <p>A simple approach: set aside 25-30% of every payment you receive in a separate savings account. Pay quarterly estimates from this account. Use our <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> to find your exact SE tax liability on any net income amount.</p>
-    `,
+    
+<h2>The Full Picture: SE Tax + Income Tax + Quarterly Payments</h2>
+<p>Self-employment tax is only one part of the federal tax obligation for freelancers and independent contractors. Understanding how it interacts with your regular income tax — and how to stay current with quarterly payments — is essential to avoiding a large unexpected bill at filing time.</p>
+
+<h3>Your Total Federal Tax Burden as a Self-Employed Person</h3>
+<ol>
+<li><strong>Self-employment tax (15.3%):</strong> Covers both the employer and employee share of Social Security (12.4%) and Medicare (2.9%). Calculated on 92.35% of net profit.</li>
+<li><strong>Federal income tax:</strong> Applied to your net self-employment income (after deducting half of SE tax and other above-the-line deductions) at ordinary income rates through the progressive bracket system.</li>
+<li><strong>Quarterly estimated payments:</strong> Both must be pre-paid throughout the year. Missing or under-paying triggers an IRS underpayment penalty.</li>
+</ol>
+
+<h3>The 92.35% Rule — Why It Exists</h3>
+<p>The IRS applies SE tax to 92.35% of your net profit — not 100%. This adjustment exists because W-2 employees only pay FICA tax on their share (7.65%), with the employer paying the other half. The 92.35% factor (100% minus 7.65%) approximates this arrangement for self-employed individuals, so the effective rate on gross profit is lower than 15.3%.</p>
+
+<h3>Reducing SE Tax Through Business Structure</h3>
+<p>Once self-employment income exceeds roughly $50,000–$60,000 per year, it's worth consulting a CPA about whether an S-corporation election makes sense. Under an S-corp structure, you pay yourself a reasonable salary (subject to SE tax) and take additional income as owner distributions — which are not subject to SE tax. The potential savings on the distribution portion can be significant, though there are setup costs and compliance requirements to weigh.</p>
+
+<h3>Quarterly Estimated Tax Deadlines</h3>
+<ul>
+<li><strong>Q1 2026 (Jan 1 – Mar 31):</strong> Due April 15, 2026</li>
+<li><strong>Q2 2026 (Apr 1 – May 31):</strong> Due June 16, 2026</li>
+<li><strong>Q3 2026 (Jun 1 – Aug 31):</strong> Due September 15, 2026</li>
+<li><strong>Q4 2026 (Sep 1 – Dec 31):</strong> Due January 15, 2027</li>
+</ul>
+<p>To avoid the underpayment penalty, pay the lesser of 90% of this year's tax or 100% of last year's tax (110% if prior-year AGI exceeded $150,000). Use our <a href="/self-employment-tax-calculator">SE tax calculator</a> to estimate your quarterly payment, and our <a href="/quarterly-estimated-taxes">estimated tax guide</a> for step-by-step payment instructions.</p>
+`,
     relatedLinks: [
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
       { href: "/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide 2026" },
@@ -2048,7 +2317,30 @@ const blogPosts = [
   <li>Political contributions</li>
 </ul>
 <p>Good recordkeeping is what turns legitimate expenses into actual deductions. Keep receipts, note the business purpose of each expense, and track mileage contemporaneously. Our <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> shows how deductions reduce your SE tax and income tax simultaneously.</p>
-    `,
+    
+<h2>Deductions That Freelancers Commonly Miss</h2>
+<p>Most freelancers know they can deduct obvious expenses like a laptop or software subscription. But many miss significant deductions that are fully legitimate — reducing both federal income tax and SE tax simultaneously.</p>
+
+<h3>Home Office Deduction</h3>
+<p>If you use part of your home exclusively and regularly for business, you can deduct a proportional share of housing costs. The two methods:</p>
+<ul>
+<li><strong>Simplified method:</strong> $5 per square foot of dedicated office space, up to 300 square feet ($1,500 maximum). No depreciation recapture risk and easy to calculate.</li>
+<li><strong>Regular method:</strong> Calculate the percentage of your home used for business and apply it to actual costs — rent, utilities, insurance, repairs, and for homeowners, depreciation. More work but often a larger deduction.</li>
+</ul>
+
+<h3>Self-Employed Health Insurance</h3>
+<p>If you're self-employed and not eligible for employer-sponsored health coverage through a spouse, you can deduct 100% of health insurance premiums paid for yourself, your spouse, and dependents. This is an above-the-line deduction — it reduces your AGI directly and doesn't require itemizing. It doesn't reduce SE tax, but it meaningfully reduces income tax.</p>
+
+<h3>Retirement Contributions</h3>
+<p>Solo 401(k) and SEP-IRA contributions are among the most powerful deductions available to freelancers. A SEP-IRA allows contributions up to 25% of net self-employment income (2025 cap: $70,000). The contribution is a business deduction that reduces net profit — and therefore both income tax and SE tax. A Solo 401(k) also allows an employee-side contribution of up to $23,500 on top of the employer contribution.</p>
+
+<h3>Professional Development, Subscriptions, and Insurance</h3>
+<p>Courses, certifications, books, and subscriptions that maintain or improve skills used in your current business are fully deductible. Professional liability (E&amp;O) insurance, trade journals, industry publications, and professional software subscriptions are also deductible. Note: education to qualify for a new career is not deductible — only education that maintains or improves existing business skills qualifies.</p>
+
+<h3>Business Interest and Bank Fees</h3>
+<p>If you have a dedicated business bank account, the fees are deductible. Interest on business loans and credit cards used for business expenses is also fully deductible as a business expense — reducing your net profit and your SE tax along with it.</p>
+<p>See our <a href="/self-employment-tax-calculator">SE tax calculator</a> to see how reducing your net profit through these deductions directly lowers your SE tax burden, and our <a href="/self-employment-tax-rate-2025">SE tax rate guide</a> for the full rate breakdown.</p>
+`,
     relatedLinks: [
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
       { href: "/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide" },
@@ -2102,7 +2394,26 @@ const blogPosts = [
 
 <h2>10. Review Your Withholding</h2>
 <p>Getting a large refund is not a financial win -- it means you gave the government an interest-free loan all year. Conversely, owing a large amount at filing may trigger an underpayment penalty. Adjust your W-4 after major life changes (marriage, new child, side income) to get close to breaking even. Use our <a href="/tax-refund-calculator">Tax Refund Calculator</a> to estimate where you stand and whether a withholding adjustment makes sense.</p>
-    `,
+    
+<h2>Advanced Tax Reduction Strategies</h2>
+<p>Beyond the basics of deductions and credits, several less-commonly-used strategies can meaningfully reduce your total tax liability — for investors, high earners, and retirees alike.</p>
+
+<h3>Qualified Charitable Distributions (QCDs)</h3>
+<p>If you're 70½ or older with a traditional IRA, you can transfer up to $105,000 per year directly to a qualifying charity as a Qualified Charitable Distribution. The amount counts toward your Required Minimum Distribution but is excluded from your taxable income entirely — better than taking the RMD, paying tax on it, and then donating. Because the QCD reduces your AGI rather than just providing a deduction, it also helps minimize Social Security taxation and Medicare IRMAA surcharges.</p>
+
+<h3>Donating Appreciated Stock Instead of Cash</h3>
+<p>If you own appreciated stock, consider donating shares directly to a charity rather than selling and donating cash. The charity receives the full market value, you get a charitable deduction for the full fair market value, and neither you nor the charity pays capital gains tax on the appreciation. This is strictly better than selling first and donating the proceeds.</p>
+
+<h3>The 0% Capital Gains Rate</h3>
+<p>Long-term capital gains are taxed at 0% for taxpayers whose total taxable income (including the gain) falls below certain thresholds — $48,350 for single filers and $96,700 for married filing jointly in 2025. In a low-income year — retirement, sabbatical, career transition — it may be worth deliberately realizing gains to harvest them at 0% before income rises in future years.</p>
+
+<h3>Tax-Loss Harvesting</h3>
+<p>In taxable brokerage accounts, unrealized losses can be realized to offset gains elsewhere. You can offset unlimited gains with losses, and net losses up to $3,000 per year reduce ordinary income. Losses carry forward indefinitely. The wash-sale rule prohibits buying a substantially identical security within 30 days before or after the sale — avoid it by waiting 31 days or substituting a similar-but-not-identical security.</p>
+
+<h3>Maximizing Pre-Tax Retirement Contributions</h3>
+<p>Every dollar contributed to a traditional 401(k) or IRA reduces your current-year taxable income at your marginal rate. In the 22% bracket, maxing the $23,500 401(k) contribution saves $5,170 in federal income tax alone, plus state tax savings on top. The investment then grows tax-deferred until withdrawal. For most working-age earners in the 22%+ bracket, this is the single highest-return tax move available.</p>
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to model different gain scenarios, and see our <a href="/tax-brackets-2026">2026 tax bracket guide</a> to identify your current marginal rate.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
@@ -2153,7 +2464,28 @@ const blogPosts = [
 
 <h2>The Roth Conversion Opportunity</h2>
 <p>If you have traditional IRA or 401(k) balances and experience a low-income year, converting some of that balance to Roth at a lower tax rate can be highly beneficial long-term. The conversion is taxed as ordinary income -- but paying 12% now on money that would otherwise be taxed at 22%+ in retirement is valuable. Use our <a href="/roth-ira-conversion-tax">Roth IRA Conversion Tax calculator</a> to estimate the tax cost of a conversion at any amount.</p>
-    `,
+    
+<h2>How Each Retirement Account Type Is Taxed</h2>
+<p>The tax treatment of retirement accounts is one of the most important — and misunderstood — topics in personal finance. The choice between traditional and Roth accounts isn't just about preference; it's a bet on whether your tax rate will be higher now or in retirement. Getting this right can be worth tens of thousands of dollars over a career.</p>
+
+<h3>Traditional 401(k) and Traditional IRA</h3>
+<p>Contributions reduce your taxable income today. A $23,500 traditional 401(k) contribution in the 22% bracket saves $5,170 in federal income tax in the current year. However, every dollar you withdraw in retirement is taxed as ordinary income at whatever rates apply then. Required Minimum Distributions begin at age 73. Traditional accounts make the most sense when you expect your tax rate in retirement to be lower than your current marginal rate — true for most people during peak earning years.</p>
+
+<h3>Roth 401(k) and Roth IRA</h3>
+<p>Roth contributions are made with after-tax dollars — no deduction now. But qualified withdrawals in retirement are completely tax-free, including all growth. Roth accounts have no RMDs during the owner's lifetime, making them excellent for estate planning and tax flexibility in retirement. They make the most sense when you're in a lower bracket now and expect higher rates later.</p>
+
+<h3>Roth Conversions</h3>
+<p>A Roth conversion moves money from a traditional IRA into a Roth account. The converted amount is added to your taxable income in the year of conversion. The strategy is most powerful when your current rate is low — the years between retirement and age 73 when RMDs begin are often the best window. Converting in those years reduces future RMDs and locks in lower rates on money that would otherwise compound in a fully taxable account.</p>
+
+<h3>2025 Contribution Limits</h3>
+<ul>
+<li><strong>401(k) / 403(b):</strong> $23,500 employee contribution ($31,000 if age 50+)</li>
+<li><strong>IRA (Traditional or Roth):</strong> $7,000 ($8,000 if age 50+)</li>
+<li><strong>SEP-IRA:</strong> 25% of net self-employment income, up to $70,000</li>
+<li><strong>HSA:</strong> $4,300 self-only / $8,550 family</li>
+</ul>
+<p>See our <a href="/401k-contribution-limits-2025">2025 contribution limits guide</a> for full details, and use our <a href="/income-tax-calculator">income tax calculator</a> to model how a traditional vs. Roth contribution changes your estimated tax this year.</p>
+`,
     relatedLinks: [
       { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
       { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
@@ -2217,7 +2549,23 @@ const blogPosts = [
   <li><strong>Cryptocurrency:</strong> Treated as property, not currency. Every sale, exchange, or use is a taxable event subject to capital gains rules.</li>
 </ul>
 <p>Use our <a href="/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> to estimate your tax on any asset sale, and our <a href="/capital-gains-tax-guide-2026">Capital Gains Tax Guide</a> for a deeper reference.</p>
-    `,
+    
+<h2>Real-World Capital Gains Tax Scenarios for 2026</h2>
+<p>Understanding the rules for capital gains tax is one thing — seeing how they interact with your specific situation is another. Here's how 2026 capital gains taxes work across common investor scenarios.</p>
+
+<h3>Scenario 1: The 0% Rate in Action</h3>
+<p>A married couple filing jointly has $60,000 in taxable income (after the standard deduction) and sells appreciated stock with a $30,000 long-term gain. The 0% long-term capital gains rate applies for married filers with combined taxable income (including the gain) up to $96,700. Their combined income of $90,000 stays within the 0% threshold — they owe zero federal capital gains tax on the $30,000 gain. This makes intentional gain harvesting in low-income years a legitimate tax strategy worth planning around.</p>
+
+<h3>Scenario 2: Cryptocurrency Sale</h3>
+<p>An investor bought $15,000 of Bitcoin in 2022 and sold it in 2026 for $42,000 — a $27,000 gain. Because it was held more than a year, it qualifies for long-term rates. If this investor is a single filer with $80,000 in ordinary income, the gain stacks on top: $107,000 combined. The entire $27,000 gain is taxed at 15%. Federal capital gains tax owed: $4,050. State taxes apply separately depending on the investor's home state.</p>
+
+<h3>The Net Investment Income Tax (NIIT) Trigger</h3>
+<p>If your Modified AGI exceeds $200,000 (single) or $250,000 (married), an additional 3.8% NIIT applies to the lesser of your net investment income or the amount of income over the threshold. High earners effectively pay 18.8% (15% + 3.8%) or 23.8% (20% + 3.8%) on long-term capital gains — still below the top ordinary income rate of 37%, but meaningfully higher than the base rates suggest. Planning around the NIIT threshold is worthwhile for those near these income levels.</p>
+
+<h3>Tax-Loss Harvesting to Offset Gains</h3>
+<p>Capital losses offset gains dollar-for-dollar. If you have a $27,000 gain from one sale but a $10,000 loss from another position sold in the same year, only $17,000 is subject to capital gains tax. Net capital losses up to $3,000 per year can also offset ordinary income. Any remaining losses carry forward indefinitely to future tax years, maintaining their character as short-term or long-term.</p>
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to model your specific scenario, and see our <a href="/capital-gains-tax-rates-2026">2026 capital gains rate guide</a> for the complete income thresholds at each rate.</p>
+`,
     relatedLinks: [
       { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
       { href: "/capital-gains-tax-guide-2026", label: "Capital Gains Tax Guide 2026" },
@@ -2267,7 +2615,30 @@ const blogPosts = [
 <h2>Reporting Capital Gains</h2>
 <p>Capital gains and losses are reported on Schedule D and Form 8949. Your brokerage sends a Form 1099-B showing proceeds from sales. You compare that to your records of cost basis to calculate the net gain or loss. Some brokerages report adjusted cost basis directly on the 1099-B; others report only proceeds, leaving basis calculations to you.</p>
 <p>Use our <a href="/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> to estimate the tax on any sale once you have your gain calculated.</p>
-    `,
+    
+<h2>Cost Basis Methods and How They Affect Your Tax</h2>
+<p>The taxable gain on an investment sale isn't just the selling price minus what you remember paying. The IRS requires specific cost basis accounting, and your choice of method can meaningfully change your tax outcome in a given year.</p>
+
+<h3>What Counts in Your Cost Basis</h3>
+<ul>
+<li><strong>Commissions and transaction fees:</strong> Add these to your purchase price. A $10,000 stock purchase with a $10 commission has a $10,010 basis.</li>
+<li><strong>Reinvested dividends:</strong> Dividends automatically reinvested in mutual funds and ETFs create additional shares with their own purchase dates and prices. These add to your cost basis. Missing reinvested dividends is one of the most common ways investors overstate their taxable gain.</li>
+<li><strong>Stock splits:</strong> A 2-for-1 split doubles your shares but halves the per-share basis. Total basis is unchanged.</li>
+<li><strong>Inherited assets:</strong> Inherited assets receive a stepped-up basis to fair market value at the date of death — meaning decades of appreciation can be tax-free to the heir.</li>
+<li><strong>Gifted assets:</strong> Gifted assets generally carry over the donor's original basis (carryover basis), not the current market value.</li>
+</ul>
+
+<h3>Cost Basis Methods for Mutual Funds</h3>
+<ul>
+<li><strong>First In, First Out (FIFO):</strong> The default. Oldest shares sold first. In a rising market, this means the lowest-basis (highest-gain) shares are sold first.</li>
+<li><strong>Specific Identification:</strong> You designate exactly which shares you're selling. Allows you to sell high-basis shares first, minimizing the current-year gain. Requires documentation and communication with your broker but is the most flexible method.</li>
+<li><strong>Average Cost:</strong> Averages your total cost basis across all shares of the same fund. Simplest to calculate; moderates gains without minimizing them.</li>
+</ul>
+
+<h3>Holding Period and the Wash-Sale Rule</h3>
+<p>Each lot of shares has its own holding period starting the day after purchase. To qualify for long-term rates, you must hold for <em>more than</em> one year — selling on the one-year anniversary date is still short-term. The wash-sale rule disallows a loss if you buy a substantially identical security within 30 days before or after the sale. The disallowed loss is added to the basis of the replacement security instead. This rule applies across all your accounts, including IRAs.</p>
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate the tax on your specific gain, and our <a href="/capital-gains-tax-rates-2026">2026 capital gains rate guide</a> for current income thresholds at each rate.</p>
+`,
     relatedLinks: [
       { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
       { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Tax Rates 2026" },
@@ -2311,7 +2682,27 @@ const blogPosts = [
   <li><strong>Reassess retirement contributions:</strong> A spouse who was phased out of Roth IRA contributions as a single may be eligible again (or vice versa) under joint income thresholds.</li>
 </ul>
 <p>Use our <a href="/income-tax-calculator">Income Tax Calculator</a> to compare your tax as single filers versus married filing jointly to see your marriage bonus or penalty.</p>
-    `,
+    
+<h2>Tax Implications of Marriage — Planning Checklist</h2>
+<p>Getting married changes your tax situation in ways that go far beyond simply combining incomes and filing jointly. Some changes are immediately beneficial; others create unexpected obligations. Here's what to plan for in the year you marry and beyond.</p>
+
+<h3>The Marriage Bonus vs. Marriage Penalty</h3>
+<p>The marriage bonus occurs when combining two incomes results in a lower total tax bill — typically when one spouse earns significantly more than the other. The marriage penalty is the opposite: two similar high incomes combined can push the couple into higher brackets faster than the same income would for two single filers. For most couples where one spouse earns significantly more, marriage is a net tax benefit. For dual-income couples where both earn similar high salaries, the penalty can be real near the top brackets.</p>
+
+<h3>Update Your W-4 Immediately</h3>
+<p>Once married, both spouses should submit updated W-4 forms to their employers. The IRS withholding tables changed significantly in 2020, and failing to update your W-4 after marriage frequently results in under-withholding — leading to a tax bill and possible underpayment penalty. Complete Step 2 of the W-4 (Multiple Jobs Worksheet) or use the IRS Tax Withholding Estimator to get the right amount.</p>
+
+<h3>Income Thresholds That Work Against Dual-Income Couples</h3>
+<ul>
+<li><strong>Additional Medicare Tax (0.9%):</strong> Applies above $200,000 for single filers but only $250,000 for married filing jointly — meaning dual-income couples hit this surcharge at a lower combined income than if both remained single.</li>
+<li><strong>Net Investment Income Tax (3.8%):</strong> Same dynamic — $200,000 single vs. $250,000 married.</li>
+<li><strong>Roth IRA income limits:</strong> Phase out at $236,000 for married couples (2025), which may be lower than the combined single thresholds for high-earning couples.</li>
+</ul>
+
+<h3>Standard Deduction Doubles — But So Does the Bar for Itemizing</h3>
+<p>The married filing jointly standard deduction is exactly double the single deduction — $31,500 in 2026 vs. $15,750. However, if one spouse was previously itemizing as a single filer (common for homeowners), the couple now needs to clear the $31,500 threshold to benefit from itemizing. Whether this works in your favor depends on your combined deductible expenses.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to model your combined income under married filing jointly, and our <a href="/tax-brackets-2026">2026 tax bracket guide</a> for the MFJ bracket thresholds.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
@@ -2355,7 +2746,26 @@ const blogPosts = [
 <h2>Non-Deductible Home Costs</h2>
 <p>Mortgage principal, homeowners insurance, general maintenance, and utilities are not deductible for a personal residence. Only interest, property taxes (within the SALT cap), and points create federal tax deductions for most homeowners. Home improvement costs do not generate a current deduction but can increase your cost basis, reducing eventual capital gains when you sell.</p>
 <p>Use our <a href="/income-tax-calculator">Income Tax Calculator</a> to estimate whether your new homeownership deductions are enough to benefit from itemizing.</p>
-    `,
+    
+<h2>Tax Benefits and Obligations of Homeownership</h2>
+<p>Buying a home creates both new tax deductions and new filing responsibilities. The tax picture of homeownership has changed significantly since the 2017 Tax Cuts and Jobs Act — and again in 2026 with the expanded SALT cap. Here's what applies now and what to plan for.</p>
+
+<h3>Mortgage Interest Deduction</h3>
+<p>You can deduct interest paid on up to $750,000 of qualified mortgage debt (reduced from $1 million for loans originated before December 16, 2017). This covers your primary residence and one secondary home. The deduction is only available if you itemize — and it's worth recalculating in 2026 given the expanded SALT deduction cap, which may push more homeowners over the itemizing threshold.</p>
+
+<h3>The Expanded SALT Cap in 2026</h3>
+<p>The OBBBA raised the SALT deduction cap from $10,000 to $40,000 for 2026 (with a phase-out at higher income levels). For homeowners in high-property-tax areas, this is a significant change. If your state income taxes and property taxes combined now clear the old $10,000 cap, the expanded cap may make itemizing worthwhile for the first time in years. Add your mortgage interest on top of the larger SALT deduction and compare to the $31,500 married filing jointly standard deduction.</p>
+
+<h3>Points Paid at Closing</h3>
+<p>If you paid discount points to buy down your interest rate at closing on a primary residence purchase, those points may be fully deductible in the year of purchase. Points on a refinance must be deducted over the life of the loan rather than all at once. Both require itemizing to claim.</p>
+
+<h3>The Home Sale Exclusion</h3>
+<p>When you eventually sell, you can exclude up to $250,000 of gain from capital gains tax ($500,000 for married filing jointly) if the home was your primary residence for at least 2 of the last 5 years. This exclusion can be used once every two years. Gains above the exclusion are taxed as long-term capital gains if you've owned the home longer than a year.</p>
+
+<h3>Home Office Deduction (Self-Employed Only)</h3>
+<p>W-2 employees cannot currently claim a home office deduction — the unreimbursed employee expense deduction was eliminated through at least 2025. Self-employed homeowners, however, can deduct a proportional share of home costs (including mortgage interest and property taxes) for a dedicated office space.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to compare your expected itemized deductions against the standard deduction after purchasing, and our <a href="/standard-deduction-vs-itemized">standard vs. itemized deduction guide</a> for a full comparison.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/salt-deduction-2026-what-homeowners-need-to-know", label: "SALT Deduction 2026" },
@@ -2399,7 +2809,26 @@ const blogPosts = [
 
 <h2>Updating Your Withholding</h2>
 <p>After having a child, update your W-4 to reflect the new credits and deductions you will claim. The Child Tax Credit in particular can significantly reduce your tax liability -- and therefore the withholding you need. Updating your W-4 puts that money in your paycheck throughout the year rather than waiting for a refund. Use our <a href="/tax-refund-calculator">Tax Refund Calculator</a> to estimate your new liability and adjust withholding accordingly.</p>
-    `,
+    
+<h2>Tax Credits and Deductions for Parents — Fully Explained</h2>
+<p>Having a child creates access to several significant tax benefits. The key is understanding which are credits (reduce tax dollar-for-dollar) vs. deductions (reduce taxable income), which are refundable, and what income limits apply.</p>
+
+<h3>Child Tax Credit (CTC) in 2026</h3>
+<p>Under the OBBBA, the Child Tax Credit increased to $2,200 per qualifying child under age 17 for 2026. Up to $1,700 remains refundable (the Additional Child Tax Credit). The credit phases out starting at $200,000 of modified AGI for single filers and $400,000 for married filing jointly — so most families receive the full amount. A family with three qualifying children can receive up to $6,600 in Child Tax Credit, with up to $5,100 of that potentially refundable.</p>
+
+<h3>Child and Dependent Care Credit</h3>
+<p>If you pay for childcare so you can work, you may qualify for the Child and Dependent Care Credit — worth 20–35% of up to $3,000 in expenses for one child ($6,000 for two or more). The percentage is higher for lower-income families. Unlike the CTC, this credit is non-refundable — it can reduce your tax to zero but won't generate a refund beyond what you've paid in.</p>
+
+<h3>Dependent Care FSA (DCFSA)</h3>
+<p>If your employer offers a Dependent Care FSA, you can contribute up to $5,000 pre-tax for childcare expenses, reducing both your W-2 taxable income and your FICA taxes. Important: the DCFSA and the Dependent Care Credit can be coordinated but the same expenses can't be claimed for both. Use the DCFSA first, then claim the credit on any remaining eligible expenses up to the limit.</p>
+
+<h3>Earned Income Tax Credit (EITC)</h3>
+<p>The EITC is one of the most valuable credits for lower-to-middle income families. For 2025, the maximum credit with three or more qualifying children is $8,046 — fully refundable. Income limits for claiming the credit with children range from approximately $49,000–$59,000 depending on filing status. Even part-year workers and self-employed filers with qualifying net earnings may be eligible.</p>
+
+<h3>529 Education Savings Plans</h3>
+<p>529 contributions aren't federally deductible, but 34 states offer a state income tax deduction or credit for contributions. More importantly, 529 growth and qualified withdrawals are entirely tax-free at the federal level. Starting early — even with small contributions — allows compound growth to accumulate tax-free over years or decades.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to model your family's federal tax estimate, and see our <a href="/child-tax-credit-2025">Child Tax Credit guide</a> for income phase-out tables and refundability details.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
@@ -2448,7 +2877,26 @@ const blogPosts = [
 
 <h2>Checking Your Year-End Tax Position</h2>
 <p>Job change years often have unusual income patterns -- a partial year at old salary, possibly a gap period, then a new salary. Run a mid-year tax estimate using our <a href="/income-tax-calculator">Income Tax Calculator</a> once you have started your new job, to determine whether you need to make an estimated tax payment or adjust withholding to avoid a penalty.</p>
-    `,
+    
+<h2>Tax Issues That Come With a Job Change</h2>
+<p>Changing jobs creates a cluster of tax decisions that are easy to overlook when you're focused on the transition itself. Most of these need attention within a few weeks of starting a new position — or before you leave the old one.</p>
+
+<h3>Update Your W-4 Immediately</h3>
+<p>Your new employer uses the W-4 you submit to calculate federal income tax withholding. If you don't submit promptly, they may withhold at the default single rate — potentially under-withholding if you're married or over-withholding if you have significant deductions. If you're changing jobs mid-year, factor in your year-to-date earnings when completing your new W-4, since combined income across both employers determines your annual tax liability.</p>
+
+<h3>Your Old Employer's 401(k) — Your Options</h3>
+<p>You generally have three options with a former employer's 401(k): leave it in place (often allowed for balances over $5,000), roll it into your new employer's 401(k), or roll it into an IRA. A direct rollover (trustee to trustee) avoids withholding and tax consequences. Rolling to an IRA typically provides the most investment flexibility and control. Taking a distribution instead triggers immediate income tax and, if you're under 59½, a 10% early withdrawal penalty.</p>
+
+<h3>Beware of Gap-Year Withholding Issues</h3>
+<p>If there's a gap between jobs, you may under-withhold for the year unless you make a quarterly estimated tax payment for that period. Any income earned during the gap — severance, freelance work, investment income — may require quarterly payments to avoid the underpayment penalty. The Q2 2026 estimated tax deadline is June 16, 2026.</p>
+
+<h3>Two W-2s at Tax Time</h3>
+<p>You'll receive two W-2s — one from each employer — and both incomes are combined on your return. Also verify that total Social Security wages across both employers didn't exceed the 2026 wage base — if you overpaid Social Security tax across two jobs, you can claim the excess as a credit on your Form 1040.</p>
+
+<h3>Signing Bonus Tax Withholding</h3>
+<p>Signing bonuses are typically withheld at the supplemental wage rate (22%) or at your employer's payroll system's method. The withholding may not match your actual marginal rate — you'll reconcile at filing. If the bonus was large, consider making an estimated tax payment to avoid an underpayment penalty on the shortfall.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to estimate your full-year liability with combined income from both jobs, and our <a href="/tax-refund-calculator">refund calculator</a> to see how your combined withholding stacks up.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
@@ -2506,7 +2954,23 @@ const blogPosts = [
   <li><strong>Coordinate Social Security timing:</strong> Delaying Social Security to 70 maximizes the benefit, but also means more years of drawing from taxable accounts first -- potentially at lower tax rates before RMDs begin.</li>
 </ul>
 <p>Use our <a href="/income-tax-calculator">Income Tax Calculator</a> to estimate your retirement income tax across different withdrawal scenarios.</p>
-    `,
+    
+<h2>Retirement Tax Planning: What Changes and What Doesn't</h2>
+<p>The tax rules in retirement are meaningfully different from working years — in ways that catch many retirees off guard. With planning, your retirement tax rate can often be lower than your working-years rate. Here's what changes and how to manage it.</p>
+
+<h3>Social Security Taxation</h3>
+<p>Up to 85% of your Social Security benefits may be subject to federal income tax, depending on your combined income (AGI plus tax-exempt interest plus half your Social Security benefits). Below $25,000 (single) or $32,000 (married), no Social Security is taxable. Between those thresholds and $34,000 / $44,000, up to 50% may be taxable. Above those amounts, up to 85% may be taxable. These thresholds are not inflation-adjusted — they've remained unchanged since 1993 — so more retirees pay tax on Social Security each year as benefit amounts rise.</p>
+
+<h3>Required Minimum Distributions</h3>
+<p>Starting at age 73, you must take Required Minimum Distributions from traditional IRAs and 401(k)s. The amount is calculated by dividing your prior year-end account balance by your life expectancy factor from the IRS Uniform Lifetime Table. RMDs are taxed as ordinary income and are not optional. Failure to take an RMD triggers a 25% excise tax on the amount not withdrawn (reduced to 10% if corrected within two years).</p>
+
+<h3>The Roth Conversion Window</h3>
+<p>The years between retirement and age 73 — when RMDs haven't yet begun — are often the lowest-income years of your post-working life, making them the best opportunity for Roth conversions. Converting traditional IRA funds to Roth during this window taxes the conversion at lower rates and reduces future RMDs. A CPA who specializes in retirement tax planning can model the optimal conversion amount across these years.</p>
+
+<h3>State Taxes on Retirement Income</h3>
+<p>Several states exempt some or all Social Security, pension, and IRA income from state income tax. Others tax all retirement income at ordinary rates. States with favorable treatment include Florida, Texas, Nevada (no state income tax), and states like Pennsylvania that fully exempt most retirement income. The state where you retire can meaningfully affect your total annual tax burden — worth factoring into any relocation decision.</p>
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to model your expected retirement income across sources, and our <a href="/states">state income tax pages</a> to compare the tax treatment in states you're considering retiring to.</p>
+`,
     relatedLinks: [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
