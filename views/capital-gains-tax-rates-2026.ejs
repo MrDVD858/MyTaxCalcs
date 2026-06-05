@@ -113,6 +113,14 @@
     .info-callout{background:#eff6ff;border:1px solid #bfdbfe;border-left:4px solid #3b82f6;border-radius:10px;padding:14px 18px;margin:16px 0}
     .info-callout p{font-size:.88rem;color:#1e3a8a;margin:0;line-height:1.55}
     .tip-callout{background:#fef3c7;border:1px solid #fde68a;border-left:4px solid #f59e0b;border-radius:10px;padding:14px 18px;margin:16px 0}
+    .example-calc{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:20px 24px;margin:16px 0}
+    .example-calc h3{font-size:.9rem;font-weight:700;color:#111827;margin:0 0 14px}
+    .example-row{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid #f3f4f6;font-size:.88rem}
+    .example-row:last-child{border-bottom:none;padding-top:10px;margin-top:4px}
+    .example-row .label{color:#6b7280}
+    .example-row .value{font-weight:700;color:#111827}
+    .example-row.total .label{font-weight:700;color:#111827}
+    .example-row.total .value{color:#d97706;font-size:1rem}
     .tip-callout p{font-size:.88rem;color:#78350f;margin:0;line-height:1.55}
     .faq-section{margin:48px 0 0}
     .faq-section h2{font-size:1.4rem;font-weight:800;color:#111827;margin:0 0 20px}
@@ -219,6 +227,23 @@
         </div>
       </div>
 
+      <div style="margin:0 0 24px;padding:16px 0;border-bottom:1px solid #e5e7eb;">
+        <p style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#16a34a;margin:0 0 10px;">Try these calculators</p>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+          <a href="/capital-gains-tax-calculator" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none;color:inherit;transition:border-color .15s;" onmouseover="this.style.borderColor='#16a34a'" onmouseout="this.style.borderColor='#e5e7eb'">
+            <span style="font-size:1.3rem;">📈</span>
+            <div><p style="font-size:.8rem;font-weight:700;color:#111827;margin:0 0 2px;">Capital Gains Calculator</p><p style="font-size:.72rem;color:#9ca3af;margin:0;">Model your specific gain scenario</p></div>
+          </a>
+          <a href="/capital-gains-tax-rates-2025" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none;color:inherit;transition:border-color .15s;" onmouseover="this.style.borderColor='#16a34a'" onmouseout="this.style.borderColor='#e5e7eb'">
+            <span style="font-size:1.3rem;">📊</span>
+            <div><p style="font-size:.8rem;font-weight:700;color:#111827;margin:0 0 2px;">2025 Rates (Official)</p><p style="font-size:.72rem;color:#9ca3af;margin:0;">Confirmed thresholds for filing now</p></div>
+          </a>
+          <a href="/income-tax-calculator" style="display:flex;align-items:center;gap:10px;padding:12px 14px;border:1px solid #e5e7eb;border-radius:10px;text-decoration:none;color:inherit;transition:border-color .15s;" onmouseover="this.style.borderColor='#16a34a'" onmouseout="this.style.borderColor='#e5e7eb'">
+            <span style="font-size:1.3rem;">🧮</span>
+            <div><p style="font-size:.8rem;font-weight:700;color:#111827;margin:0 0 2px;">Income Tax Calculator</p><p style="font-size:.72rem;color:#9ca3af;margin:0;">See your full federal tax picture</p></div>
+          </a>
+        </div>
+      </div>
       <div class="ad-zone">
         <div class="ad-zone-label">Advertisement</div>
         <ins class="adsbygoogle" style="display:block"
@@ -313,6 +338,52 @@
 
         <div class="tip-callout">
           <p><strong>Planning takeaway:</strong> The projected 2026 thresholds are roughly $1,100 higher than 2025 for single filers. This means a small gain that might have fallen just into the 15% bracket in 2025 could fall into the 0% bracket in 2026 if your other income stays the same. The difference is modest but worth noting if you are near a threshold.</p>
+        </div>
+      </div>
+
+      <div class="qa-section">
+        <div class="section-eyebrow">Worked Example</div>
+        <h2>How 2026 Capital Gains Tax Is Calculated in Practice</h2>
+        <p>A single filer with $55,000 of ordinary taxable income sells stock held for 18 months, realizing a $28,000 long-term capital gain. Here is how the 2026 projected rates apply.</p>
+
+        <div class="example-calc">
+          <h3>Single filer, $55,000 ordinary taxable income, $28,000 long-term gain (2026 projected)</h3>
+          <div class="example-row">
+            <span class="label">Ordinary taxable income</span>
+            <span class="value">$55,000</span>
+          </div>
+          <div class="example-row">
+            <span class="label">Long-term capital gain</span>
+            <span class="value">$28,000</span>
+          </div>
+          <div class="example-row">
+            <span class="label">0% bracket ceiling (projected 2026 single)</span>
+            <span class="value">~$49,500</span>
+          </div>
+          <div class="example-row">
+            <span class="label">Ordinary income already above 0% threshold by</span>
+            <span class="value">$5,500 ($55,000 − $49,500)</span>
+          </div>
+          <div class="example-row">
+            <span class="label">Portion of gain in 0% bracket</span>
+            <span class="value">$0 at 0% (income already exceeds threshold)</span>
+          </div>
+          <div class="example-row">
+            <span class="label">Full $28,000 gain taxed at 15%</span>
+            <span class="value">$4,200</span>
+          </div>
+          <div class="example-row">
+            <span class="label">NIIT check (MAGI ~$83,000 — below $200,000)</span>
+            <span class="value">$0</span>
+          </div>
+          <div class="example-row total">
+            <span class="label">Total federal capital gains tax</span>
+            <span class="value">$4,200</span>
+          </div>
+        </div>
+
+        <div class="info-callout">
+          <p><strong>Compare to 2025:</strong> Under 2025 rates, the same filer with the same income would pay the same 15% on the full $28,000 gain — the 0% threshold in 2025 is $48,350 for single filers, and $55,000 already exceeds it. The 2026 threshold is projected at ~$49,500, which still doesn't help this filer. However, a filer with $48,500 of ordinary income would save ~$150 in 2026 vs. 2025 on the same gain, as a larger portion falls in the 0% bracket.</p>
         </div>
       </div>
 
