@@ -666,6 +666,12 @@
         });
       });
     })();
+    (function(){
+      if(!document.querySelector('.result-card')){
+        var f=document.querySelector('.calc-card-form input,.calc-card-form select');
+        if(f)f.focus();
+      }
+    })();
   </script>
 </body>
 </html>

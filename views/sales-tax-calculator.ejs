@@ -228,6 +228,44 @@
         <p>Estimate sales tax and your final purchase total using a state rate, local rate, and optional discount. Works for any state.</p>
       </div>
 
+      <div class="calc-card-form">
+        <h2>Enter Purchase Details</h2>
+        <form method="POST" action="/sales-tax-calculator">
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="purchaseAmount">Purchase Amount</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="purchaseAmount" name="purchaseAmount" min="0" step="0.01" value="<%= form.purchaseAmount || '' %>" placeholder="250.00" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="discountAmount">Discount Amount</label>
+              <div class="input-wrap"><span class="input-prefix">$</span>
+                <input type="number" id="discountAmount" name="discountAmount" min="0" step="0.01" value="<%= form.discountAmount || '' %>" placeholder="0.00">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="stateTaxRate">State Sales Tax Rate (%)</label>
+              <div class="input-wrap"><span class="input-prefix">%</span>
+                <input type="number" id="stateTaxRate" name="stateTaxRate" min="0" step="0.001" value="<%= form.stateTaxRate || '' %>" placeholder="7.25" required>
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="localTaxRate">Local / Additional Tax Rate (%)</label>
+              <div class="input-wrap"><span class="input-prefix">%</span>
+                <input type="number" id="localTaxRate" name="localTaxRate" min="0" step="0.001" value="<%= form.localTaxRate || '' %>" placeholder="1.00">
+              </div>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-calc">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
+              Calculate Sales Tax
+            </button>
+          </div>
+        </form>
+      </div>
+
       <% if (result) { %>
       <div class="result-card">
         <div class="result-card-header">
@@ -278,44 +316,6 @@
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
       <% } %>
-
-      <div class="calc-card-form">
-        <h2>Enter Purchase Details</h2>
-        <form method="POST" action="/sales-tax-calculator">
-          <div class="form-grid">
-            <div class="form-field">
-              <label for="purchaseAmount">Purchase Amount</label>
-              <div class="input-wrap"><span class="input-prefix">$</span>
-                <input type="number" id="purchaseAmount" name="purchaseAmount" min="0" step="0.01" value="<%= form.purchaseAmount || '' %>" placeholder="250.00" required>
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="discountAmount">Discount Amount</label>
-              <div class="input-wrap"><span class="input-prefix">$</span>
-                <input type="number" id="discountAmount" name="discountAmount" min="0" step="0.01" value="<%= form.discountAmount || '' %>" placeholder="0.00">
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="stateTaxRate">State Sales Tax Rate (%)</label>
-              <div class="input-wrap"><span class="input-prefix">%</span>
-                <input type="number" id="stateTaxRate" name="stateTaxRate" min="0" step="0.001" value="<%= form.stateTaxRate || '' %>" placeholder="7.25" required>
-              </div>
-            </div>
-            <div class="form-field">
-              <label for="localTaxRate">Local / Additional Tax Rate (%)</label>
-              <div class="input-wrap"><span class="input-prefix">%</span>
-                <input type="number" id="localTaxRate" name="localTaxRate" min="0" step="0.001" value="<%= form.localTaxRate || '' %>" placeholder="1.00">
-              </div>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button type="submit" class="btn-calc">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
-              Calculate Sales Tax
-            </button>
-          </div>
-        </form>
-      </div>
 
       <!-- Guide Section -->
       <div class="guide-section">
@@ -615,6 +615,12 @@
           if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
         });
       });
+    })();
+    (function(){
+      if(!document.querySelector('.result-card')){
+        var f=document.querySelector('.calc-card-form input,.calc-card-form select');
+        if(f)f.focus();
+      }
     })();
   </script>
 </body>
