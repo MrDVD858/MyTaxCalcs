@@ -2,6 +2,536 @@
 // All posts sourced from IRS publications and official announcements.
 
 const blogPosts = [
+// NEW BLOG POSTS — Batch 2 — June 4, 2026
+// Add these to the FRONT of blogPosts array in data/blogPosts.js
+// (after "const blogPosts = [" and before existing posts)
+
+  {
+    slug: "hsa-tax-strategy-guide-2026",
+    title: "HSA Tax Strategy: The Triple Tax Advantage Most People Underuse",
+    date: "June 4, 2026",
+    dateISO: "2026-06-04",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "A Health Savings Account offers three separate tax benefits — no other account in the tax code does this. Here is how to use an HSA as a long-term tax strategy, not just a medical expense account.",
+    metaDescription: "HSA tax strategy guide 2026: how to use your Health Savings Account for the triple tax advantage, invest your balance, and turn it into a stealth retirement account.",
+    ogTitle: "HSA Tax Strategy: The Triple Tax Advantage Most People Underuse | MyTaxCalcs",
+    ogDescription: "A Health Savings Account offers three separate tax benefits no other account matches. Learn how to use it as a long-term strategy, not just a medical bill fund.",
+    relatedLinks: [
+      { href: "/hsa-contribution-limits-2025", label: "HSA Contribution Limits 2025" },
+      { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/retirement-accounts-and-taxes-401k-ira-roth", label: "Retirement Accounts and Taxes" },
+    ],
+    content: `
+<p>Most people treat their Health Savings Account as a debit card for medical bills. Pay a copay, swipe the HSA card, move on. This approach leaves significant money on the table. An HSA is the only account in the U.S. tax code that provides three separate tax benefits simultaneously — and when used strategically, it can function as a powerful supplemental retirement account on top of your 401(k) and IRA.</p>
+
+<h2>The Triple Tax Advantage — Explained</h2>
+<p>No other savings account offers all three of these at once:</p>
+<ul>
+  <li><strong>Tax-deductible contributions:</strong> Money you put into an HSA reduces your adjusted gross income dollar-for-dollar, just like a traditional IRA or 401(k) contribution. If you contribute $4,300 (the 2025 self-only limit) and you are in the 22% bracket, you save $946 in federal income tax immediately.</li>
+  <li><strong>Tax-free growth:</strong> Investment gains, interest, and dividends inside the HSA are never taxed — not even when you withdraw them for qualified medical expenses. The money compounds without the annual tax drag that affects taxable brokerage accounts.</li>
+  <li><strong>Tax-free withdrawals for medical expenses:</strong> Qualified medical expenses can be withdrawn completely tax-free at any age — no income tax, no penalty. This is better than a Roth IRA (which requires age 59.5 for tax-free earnings withdrawals) for medical costs.</li>
+</ul>
+<p>A Roth IRA offers two of these (tax-free growth and tax-free withdrawals, but no upfront deduction). A traditional 401(k) offers two (deductible contributions and tax-free growth, but taxable withdrawals). An HSA offers all three — for qualified medical expenses.</p>
+
+<h2>Who Qualifies for an HSA</h2>
+<p>To contribute to an HSA in 2025, you must be enrolled in a High-Deductible Health Plan (HDHP). The IRS defines an HDHP as a plan with:</p>
+<ul>
+  <li>A minimum deductible of $1,650 for self-only coverage or $3,300 for family coverage</li>
+  <li>Maximum out-of-pocket limits of $8,300 for self-only or $16,600 for family</li>
+</ul>
+<p>You cannot contribute to an HSA if you are enrolled in Medicare, covered by a non-HDHP health plan (including a spouse's plan), or claimed as a dependent on someone else's return.</p>
+
+<h2>2025 HSA Contribution Limits</h2>
+<ul>
+  <li><strong>Self-only coverage:</strong> $4,300</li>
+  <li><strong>Family coverage:</strong> $8,550</li>
+  <li><strong>Catch-up contribution (age 55+):</strong> Additional $1,000</li>
+</ul>
+<p>Contributions can be made until the tax filing deadline (April 15, 2026 for the 2025 tax year) — the same as IRA contributions. If you realize in March that you undercontributed for the prior year, you can still top it off.</p>
+
+<h2>The Strategic Play: Invest and Let It Grow</h2>
+<p>Here is where most HSA holders leave money behind. The default for most HSA accounts is a cash savings account earning minimal interest. But most HSA providers allow you to invest your balance in mutual funds or ETFs once you exceed a threshold (often $1,000-$2,000). Once invested, the HSA functions like a Roth IRA — tax-free compounding over decades.</p>
+<p>The strategic approach: if you can afford to pay current medical expenses out of pocket (from your regular checking account), let your HSA balance sit invested and grow untouched. Every medical receipt you pay out of pocket today can be reimbursed from your HSA at any point in the future — there is no deadline. This means you are building a tax-free investment account funded by pre-tax dollars.</p>
+<p><strong>Example:</strong> You have a $500 dental bill. You pay it from your checking account and save the receipt. Five years later, your HSA has grown and you reimburse yourself the $500 tax-free. Meanwhile, that $500 in the HSA earned five years of tax-free investment returns.</p>
+
+<h2>The HSA as a Stealth Retirement Account</h2>
+<p>After age 65, the HSA changes character entirely. Withdrawals for non-medical expenses are allowed without penalty — you simply pay ordinary income tax on them, exactly like a traditional IRA withdrawal. This means after 65, your HSA functions as a traditional IRA with one major advantage: if you use the money for medical expenses (which are substantial for most retirees), the withdrawal is completely tax-free.</p>
+<p>Healthcare costs in retirement are estimated at $300,000+ for a couple over a 20-year retirement. Having a large, invested HSA balance earmarked for these expenses — withdrawable tax-free — is enormously valuable. Medicare premiums, dental, vision, hearing, long-term care insurance premiums, and most out-of-pocket medical costs all qualify.</p>
+
+<h2>Priority Order: Where HSA Fits in Your Savings Strategy</h2>
+<p>If you have access to an HSA, here is the recommended priority order for maximizing tax efficiency:</p>
+<ol>
+  <li><strong>401(k) up to the employer match</strong> — free money, 100% immediate return</li>
+  <li><strong>Max your HSA</strong> — triple tax advantage beats everything else dollar-for-dollar</li>
+  <li><strong>Max your 401(k)</strong> — tax-deferred growth at the full $23,500 limit</li>
+  <li><strong>Roth IRA</strong> — if income allows, for tax-free retirement income diversification</li>
+  <li><strong>Taxable brokerage account</strong> — after all tax-advantaged space is exhausted</li>
+</ol>
+<p>The HSA slots in at #2 — above maxing the 401(k) — because the triple tax advantage is unmatched. Even though the contribution limits are lower ($4,300-$8,550 vs. $23,500), the tax efficiency per dollar is higher.</p>
+
+<h2>Keeping Receipts: The HSA Documentation Rule</h2>
+<p>If you plan to reimburse yourself years later for current medical expenses, you need to keep records. The IRS requires documentation that expenses were qualified and were not previously reimbursed or deducted. Save your Explanation of Benefits (EOB) documents, medical bills, and receipts in a dedicated folder — digital or physical. There is no statute of limitations on when you can reimburse yourself, but you need the receipts to prove the expenses were legitimate.</p>
+
+<h2>Common HSA Mistakes to Avoid</h2>
+<ul>
+  <li><strong>Keeping the HSA in cash.</strong> Low-yield cash savings waste the tax-free growth benefit. Invest it once you have a small cash buffer for near-term medical needs.</li>
+  <li><strong>Using it as a medical debit card for everything.</strong> If you can pay medical bills from regular income, let the HSA compound. Use it strategically.</li>
+  <li><strong>Not contributing at all because you rarely get sick.</strong> The HSA is not just for current medical expenses — it is a tax shelter with a medical-expense mechanism. The health angle is just how you access the money tax-free.</li>
+  <li><strong>Withdrawing for non-qualified expenses before 65.</strong> Before age 65, non-medical withdrawals trigger income tax plus a 20% penalty — much worse than an IRA early withdrawal (which is only 10%).</li>
+</ul>
+
+<p>See our <a href="/hsa-contribution-limits-2025">HSA contribution limits guide</a> for the full 2025 limits and eligibility rules, and our <a href="/401k-contribution-limits-2025">retirement contribution limits guide</a> to see how HSA fits alongside your other accounts.</p>
+
+<h2>HSA vs. FSA: Key Differences</h2>
+<p>A Flexible Spending Account (FSA) is often confused with an HSA, but they are fundamentally different. FSAs have a "use it or lose it" rule — unspent funds at year-end are forfeited (with a limited grace period or $660 rollover option depending on your employer's plan). HSAs have no use-it-or-lose-it rule: the balance rolls over every year indefinitely and belongs to you permanently, even if you change jobs or switch to a non-HDHP health plan.</p>
+<p>Additionally, FSA funds must be spent during the plan year (or grace period) and cannot be invested. HSA funds can be invested and grow tax-free for decades. For long-term wealth building, the HSA is far superior — but you must be enrolled in an HDHP to access it.</p>
+
+<h2>Opening an HSA Outside Your Employer</h2>
+<p>If your employer does not offer an HSA or offers one with poor investment options or high fees, you can open an HSA independently at providers like Fidelity, Lively, or HSA Bank. Contributions made outside payroll do not save FICA taxes (unlike payroll HSA contributions), but you still receive the full income tax deduction. Independent HSA providers often offer better investment menus and lower fees than employer-sponsored plans.</p>
+<p>If your employer does offer an HSA with payroll contributions, those payroll deductions avoid both federal income tax and FICA (Social Security and Medicare) — a 7.65% additional savings on top of the income tax deduction. This makes employer payroll HSA contributions the most tax-efficient way to fund the account.</p>
+`
+  },
+
+  {
+    slug: "inherited-ira-tax-rules-2026",
+    title: "Inherited IRA Tax Rules in 2026: The 10-Year Rule and What Beneficiaries Must Know",
+    date: "June 4, 2026",
+    dateISO: "2026-06-04",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Inheriting an IRA comes with strict new rules that most beneficiaries do not know about. The 10-year rule requires most non-spouse beneficiaries to empty the account within a decade — and the IRS is now enforcing annual RMD requirements within that window.",
+    metaDescription: "Inherited IRA rules 2026: the 10-year rule, annual RMD requirements, spouse vs. non-spouse rules, and strategies to minimize taxes on inherited retirement accounts.",
+    ogTitle: "Inherited IRA Tax Rules 2026: What Every Beneficiary Must Know | MyTaxCalcs",
+    ogDescription: "The 10-year rule requires most beneficiaries to empty an inherited IRA within a decade. Learn what that means for taxes and how to plan distributions strategically.",
+    relatedLinks: [
+      { href: "/blog/retirement-accounts-and-taxes-401k-ira-roth", label: "Retirement Accounts and Taxes" },
+      { href: "/blog/taxes-in-retirement-what-to-expect", label: "Taxes in Retirement" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
+    ],
+    content: `
+<p>Inheriting an IRA can feel like a financial windfall — but it comes attached to tax obligations that many beneficiaries do not discover until they have already made costly mistakes. The SECURE Act of 2019 and the SECURE 2.0 Act of 2022 fundamentally changed inherited IRA rules for most beneficiaries, and IRS enforcement began in earnest starting in 2025. If you inherited an IRA in the last few years, or expect to, understanding these rules is urgent.</p>
+
+<h2>The Old Rules vs. The New Rules</h2>
+<p>Before the SECURE Act (for deaths before January 1, 2020), most beneficiaries could "stretch" distributions from an inherited IRA over their own life expectancy — taking small required minimum distributions each year for decades. This allowed the account to continue growing tax-deferred for a long time.</p>
+<p>For deaths on or after January 1, 2020, the stretch IRA is largely eliminated for most beneficiaries. The new rule requires most non-spouse beneficiaries to fully distribute the inherited IRA within 10 years of the original owner's death.</p>
+
+<h2>Who the 10-Year Rule Applies To</h2>
+<p>The 10-year rule applies to "non-eligible designated beneficiaries" — which covers most people who inherit an IRA from someone other than a spouse. Specifically:</p>
+<ul>
+  <li>Adult children of the deceased (the most common scenario)</li>
+  <li>Grandchildren</li>
+  <li>Siblings, nieces, nephews, and other relatives</li>
+  <li>Friends or non-related individuals named as beneficiaries</li>
+  <li>Trusts in most configurations</li>
+</ul>
+<p>Under the 10-year rule, there is no required annual distribution — you can take money out in any pattern you choose, as long as the account is fully distributed by December 31 of the 10th year after the original owner's death. You could take nothing for 9 years and withdraw everything in year 10, or take equal amounts each year, or any combination.</p>
+
+<h2>The Critical Complication: Annual RMDs Within the 10-Year Window</h2>
+<p>Here is where many beneficiaries have been caught off guard. The IRS clarified in final regulations (released in 2024) that if the original account owner had already reached their Required Beginning Date (age 73 for RMDs) before death, non-spouse beneficiaries must take annual distributions during the 10-year period — not just empty the account by year 10.</p>
+<p>The annual amount is calculated based on the beneficiary's life expectancy using IRS tables. Failing to take these annual distributions triggers the standard RMD penalty: 25% of the amount that should have been withdrawn (reduced to 10% if corrected within two years).</p>
+<p>If the original owner died before their Required Beginning Date (before they started taking RMDs), non-spouse beneficiaries only need to empty the account by the end of year 10 — no annual minimums required.</p>
+
+<h2>Eligible Designated Beneficiaries: The Exceptions</h2>
+<p>Certain beneficiaries are exempt from the 10-year rule and may still use the old stretch rules:</p>
+<ul>
+  <li><strong>Surviving spouses</strong> — have the most flexibility (see below)</li>
+  <li><strong>Minor children of the deceased</strong> — can stretch until age 21, then the 10-year rule kicks in</li>
+  <li><strong>Disabled individuals</strong> (as defined by IRS rules)</li>
+  <li><strong>Chronically ill individuals</strong></li>
+  <li><strong>Beneficiaries not more than 10 years younger than the deceased</strong> — for example, a sibling close in age</li>
+</ul>
+
+<h2>Surviving Spouse Rules: The Most Flexible Options</h2>
+<p>A surviving spouse who inherits an IRA has several choices, more than any other beneficiary:</p>
+<ul>
+  <li><strong>Rollover to own IRA:</strong> Roll the inherited IRA into their own IRA as if it were always theirs. RMDs are based on the spouse's own age, starting at 73. This is usually the best option for younger surviving spouses who do not need the money immediately.</li>
+  <li><strong>Treat as inherited IRA:</strong> Keep it as an inherited IRA. If the spouse is under 59.5 and needs distributions, this avoids the 10% early withdrawal penalty that would apply to their own IRA. This is useful for younger surviving spouses who need income before age 59.5.</li>
+  <li><strong>Elect to be treated as the deceased spouse:</strong> A newer SECURE 2.0 provision allows a surviving spouse to delay RMDs based on when the deceased spouse would have turned 73, which can extend the deferral period.</li>
+</ul>
+<p>The right choice depends heavily on the surviving spouse's age, current income, and whether they need distributions soon. This decision is worth discussing with a financial advisor or CPA.</p>
+
+<h2>Tax Strategy for the 10-Year Distribution Window</h2>
+<p>The biggest mistake non-spouse beneficiaries make is waiting until year 10 to take the entire distribution. If you inherited a $500,000 traditional IRA and withdraw it all in year 10, that $500,000 hits your taxable income in a single year — potentially pushing you into the highest brackets and triggering Medicare surcharges.</p>
+<p>A far better approach: spread distributions over the 10 years in a way that fills up lower tax brackets each year without pushing into higher ones. If your normal income is $60,000 (married filing jointly, in the 12% bracket), you could take an additional $36,950 from the inherited IRA each year to reach the top of the 12% bracket — paying only 12% on those distributions instead of potentially 22% or higher if bunched.</p>
+<p>Model your distributions using our <a href="/income-tax-calculator">income tax calculator</a> to see exactly how different annual withdrawal amounts affect your tax bracket each year.</p>
+
+<h2>Inherited Roth IRA Rules</h2>
+<p>Inherited Roth IRAs follow the same 10-year rule for non-spouse beneficiaries, with one critical difference: distributions from an inherited Roth IRA are generally tax-free (as long as the original account was held for at least 5 years). This makes the distribution timing less urgent from a tax perspective — there is no tax cost to waiting until year 10. The growth continues tax-free, and you pull it all out tax-free at the end.</p>
+<p>For inherited Roth IRAs, the strategy is simpler: let it grow as long as possible (all 10 years if you do not need the money) and take the full distribution in year 10, entirely tax-free.</p>
+
+<h2>Inherited 401(k) Rules</h2>
+<p>Inherited 401(k) accounts follow similar rules to inherited IRAs under the SECURE Act. However, many employer plan administrators require beneficiaries to distribute the account within 5 years rather than 10 — check the plan documents. Rolling an inherited 401(k) into an inherited IRA at a brokerage is often the better move, as it gives you more investment choices and the full 10-year window under IRS rules.</p>
+
+<h2>What to Do If You Have Already Missed Distributions</h2>
+<p>If you inherited an IRA after 2020 and have not been taking required annual distributions (for accounts where the owner died after their Required Beginning Date), the IRS offered penalty relief through 2024. Beginning in 2025, penalties apply. If you have missed distributions, consult a tax professional about whether a penalty waiver request (using Form 5329) is appropriate for your situation.</p>
+
+<p>Use our <a href="/income-tax-calculator">income tax calculator</a> to model how different annual distribution amounts from an inherited IRA affect your total federal tax bill each year.</p>
+
+<h2>Naming Beneficiaries: What Original IRA Owners Should Know</h2>
+<p>If you own an IRA, the beneficiary designations you file with your brokerage override your will entirely. Your IRA does not pass through your estate — it goes directly to whoever is named on the beneficiary form. This makes keeping beneficiary designations current one of the most important estate planning tasks.</p>
+<p>Naming a trust as IRA beneficiary adds complexity — trusts must meet specific requirements to qualify for the stretch or 10-year rules, and some trust structures can force immediate distribution of the entire IRA at the owner's death. If you are considering naming a trust as IRA beneficiary, work with an estate planning attorney who specializes in this area.</p>
+<p>Naming your estate as beneficiary is generally the worst option — it eliminates favorable beneficiary treatment and forces the IRA through probate.</p>
+
+<h2>State Tax on Inherited IRAs</h2>
+<p>Federal rules govern the distribution timing, but state taxes apply separately to the distributions you take. Most states tax inherited IRA distributions as ordinary income at state rates. A handful of states — including Pennsylvania — exempt inherited IRA distributions from state tax entirely. If you are a beneficiary in a high-income-tax state, the state tax implications of your distribution strategy are worth factoring into your planning, particularly if you have flexibility over which years to take larger distributions.</p>
+`
+  },
+
+  {
+    slug: "1099-k-tax-guide-2026",
+    title: "1099-K in 2026: What Payment App Users and Gig Workers Need to Know",
+    date: "June 4, 2026",
+    dateISO: "2026-06-04",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax News",
+    excerpt: "The IRS lowered the 1099-K reporting threshold to $2,500 for 2025 and $600 for 2026. If you use PayPal, Venmo, Cash App, or Stripe for business income, here is exactly what this means for your taxes.",
+    metaDescription: "1099-K guide 2026: the new $600 reporting threshold for PayPal, Venmo, Cash App, and gig platforms. What triggers a 1099-K, what you owe, and how to handle personal vs. business payments.",
+    ogTitle: "1099-K in 2026: What Every Gig Worker and Payment App User Needs to Know | MyTaxCalcs",
+    ogDescription: "The IRS 1099-K threshold dropped to $600 in 2026. If you use payment apps for business, you will receive a form. Here is what it means and what you owe.",
+    relatedLinks: [
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/blog/self-employment-tax-explained-complete-guide", label: "Self-Employment Tax Explained" },
+      { href: "/blog/freelancer-tax-deductions-complete-list", label: "Freelancer Tax Deductions" },
+      { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes" },
+    ],
+    content: `
+<p>For years, the 1099-K reporting threshold was $20,000 and 200 transactions — a level that left most casual sellers and small gig workers below the radar. That era is over. The IRS has been phasing in a dramatically lower threshold, and for 2026, the limit drops to $600 with no transaction minimum. If you received even $600 through PayPal, Venmo, Cash App, Stripe, eBay, Etsy, or any third-party payment processor for business or selling activity, you will receive a 1099-K — and the IRS will too.</p>
+
+<h2>The 1099-K Threshold Timeline</h2>
+<ul>
+  <li><strong>Before 2022:</strong> $20,000 and 200+ transactions</li>
+  <li><strong>2022-2023:</strong> IRS delayed the change; $20,000 threshold remained</li>
+  <li><strong>2024:</strong> $5,000 threshold (transition year)</li>
+  <li><strong>2025:</strong> $2,500 threshold</li>
+  <li><strong>2026 and beyond:</strong> $600 threshold, no transaction minimum</li>
+</ul>
+<p>This change was part of the American Rescue Plan Act of 2021. The IRS delayed implementation several times due to concerns about taxpayer confusion, but the $600 threshold is now fully in effect for 2026 tax reporting.</p>
+
+<h2>What Is a 1099-K and Who Sends It</h2>
+<p>A Form 1099-K is issued by "payment settlement entities" — platforms that process payments on behalf of sellers or service providers. You will receive one if you exceeded the threshold from:</p>
+<ul>
+  <li><strong>Payment apps:</strong> PayPal, Venmo (business accounts), Cash App, Zelle (business use)</li>
+  <li><strong>Gig platforms:</strong> Uber, Lyft, DoorDash, Instacart, TaskRabbit, Fiverr, Upwork</li>
+  <li><strong>Selling platforms:</strong> eBay, Etsy, Amazon, Poshmark, Mercari, Facebook Marketplace</li>
+  <li><strong>Payment processors:</strong> Stripe, Square, PayPal Business</li>
+</ul>
+<p>The form reports the gross amount of payments received — before any fees, refunds, or cost of goods. This is an important distinction: the gross number on the 1099-K is not your taxable income.</p>
+
+<h2>Critical Distinction: Business Income vs. Personal Transactions</h2>
+<p>Not everything on a 1099-K is taxable income. The IRS only taxes income — money you received in exchange for goods or services, or profit from selling property. Personal reimbursements and non-profit transactions are not taxable, even if they appear on a 1099-K.</p>
+<p><strong>Examples of taxable transactions:</strong></p>
+<ul>
+  <li>Payments received for freelance work or gig services</li>
+  <li>Sales of goods at a profit (selling on eBay for more than you paid)</li>
+  <li>Rental income collected through payment apps</li>
+</ul>
+<p><strong>Examples of non-taxable transactions (that should not be on a business 1099-K):</strong></p>
+<ul>
+  <li>Friend splits a dinner bill with you on Venmo</li>
+  <li>Roommate pays their share of rent via PayPal</li>
+  <li>Family member sends you money as a gift</li>
+  <li>You sell personal items (used clothes, furniture) for less than you originally paid</li>
+</ul>
+<p>The problem is that payment platforms may include personal reimbursements in the gross total on your 1099-K if they cannot distinguish between business and personal payments. This is why keeping business and personal payment apps strictly separate is essential.</p>
+
+<h2>How to Handle a 1099-K on Your Tax Return</h2>
+<p>Receiving a 1099-K does not automatically mean you owe tax on the full amount. Here is how to handle it correctly:</p>
+<ol>
+  <li><strong>Report the income:</strong> All business income is taxable and must be reported on Schedule C (for self-employment) or Schedule 1, regardless of whether you received a 1099-K. The 1099-K is simply a reporting document — your obligation to report income exists whether or not you get the form.</li>
+  <li><strong>Deduct your cost of goods sold:</strong> If you sold items on eBay or Etsy, you can deduct what you originally paid for those items. You are only taxed on profit, not gross sales.</li>
+  <li><strong>Deduct legitimate business expenses:</strong> If your 1099-K income is from gig or freelance work, deduct all ordinary and necessary business expenses — platform fees, mileage, equipment, home office, etc.</li>
+  <li><strong>Identify non-taxable amounts:</strong> If personal reimbursements are included on the 1099-K, you will need to reconcile the difference. Keep records of personal transactions so you can document why your reported income is lower than the gross 1099-K amount.</li>
+</ol>
+
+<h2>Separating Business and Personal Payments</h2>
+<p>The single most important step for anyone receiving payments through apps is to use separate accounts for business and personal transactions. Most major apps now offer business accounts or business profiles:</p>
+<ul>
+  <li><strong>PayPal:</strong> Use a PayPal Business account for client payments; personal PayPal for friend/family transactions</li>
+  <li><strong>Venmo:</strong> Venmo Business Profile for business payments; personal Venmo for splitting bills</li>
+  <li><strong>Cash App:</strong> Cash App for Business for client payments</li>
+</ul>
+<p>Keeping these separate means your business 1099-K accurately reflects business income and nothing else — eliminating the reconciliation headache entirely.</p>
+
+<h2>Quarterly Estimated Tax Obligations</h2>
+<p>If your gig or freelance income (net of expenses) exceeds about $1,000 in expected tax for the year, you are required to make quarterly estimated payments. The 1099-K threshold change does not change this obligation — it just makes the IRS better informed about who has income they may not have been reporting.</p>
+<p>For 2026, quarterly payment deadlines are April 15, June 16, September 15, and January 15, 2027. See our <a href="/quarterly-estimated-taxes">quarterly estimated tax guide</a> for payment instructions.</p>
+
+<h2>What If You Receive a 1099-K for Income You Already Reported</h2>
+<p>If you are a legitimate business owner who already reports all income on Schedule C, receiving a 1099-K simply means the IRS now has a matching document. No additional action is required as long as your reported income matches or exceeds the 1099-K amount. The IRS matches 1099-K totals against your return — if your Schedule C gross receipts are at least as large as your total 1099-K amounts, there is no issue.</p>
+
+<h2>What If You Received a 1099-K in Error</h2>
+<p>If a platform issued you a 1099-K for entirely personal transactions (no business activity at all), contact the platform and request a corrected form. If a correction is not possible, you will need to show on your return why the 1099-K amount does not represent taxable income — using Form 1040, Schedule 1, with an offsetting entry and explanation.</p>
+
+<p>Use our <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to estimate the SE tax on your net gig income, and our <a href="/blog/freelancer-tax-deductions-complete-list">freelancer deductions guide</a> to find every expense you can deduct.</p>
+
+<h2>Record-Keeping Best Practices for 1099-K Filers</h2>
+<p>Given that the 1099-K reports gross payment volume rather than taxable income, your records need to bridge the gap. Keep a running log of every transaction that hits your payment accounts, noting whether each is business income, a personal reimbursement, or a sale of personal property. At year-end, you should be able to reconcile your total 1099-K amount to your actual taxable income with documentation for every difference.</p>
+<p>For sellers on platforms like eBay and Poshmark, this means tracking what you originally paid for every item you sell. If you sell a jacket for $80 that you originally bought for $120, that is a $40 loss — not $80 of income. You need the original purchase receipt or a record showing your cost basis to support this.</p>
+
+<h2>State Tax Implications</h2>
+<p>Most states follow federal treatment for 1099-K income — taxable business income is taxable at the state level, and personal reimbursements are not. However, some states have enacted their own reporting requirements that may differ from federal rules. Check your state's department of revenue guidance if you are a high-volume seller or gig worker to ensure you are meeting state-specific obligations in addition to federal reporting.</p>
+
+<h2>The IRS Matching Program</h2>
+<p>The IRS cross-references 1099-K totals against reported income on tax returns through its document matching program. If your reported gross receipts on Schedule C are significantly lower than your total 1099-K amounts, the IRS may send a notice requesting an explanation. Having documentation ready — showing business expenses, cost of goods sold, and non-taxable amounts — is your defense against these notices.</p>
+`
+  },
+
+  {
+    slug: "tax-implications-of-selling-a-home-2026",
+    title: "Tax Implications of Selling Your Home in 2026",
+    date: "June 4, 2026",
+    dateISO: "2026-06-04",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Selling your home triggers capital gains tax rules — but most homeowners qualify for an exclusion that shelters up to $500,000 of profit tax-free. Here is exactly how it works and what to watch out for.",
+    metaDescription: "Tax implications of selling a home 2026: the $250,000/$500,000 exclusion, how to calculate your cost basis, depreciation recapture for rentals, and reporting requirements.",
+    ogTitle: "Tax Implications of Selling Your Home in 2026 | MyTaxCalcs",
+    ogDescription: "Most homeowners can exclude up to $500,000 of home sale profit from capital gains tax. Learn the rules, exceptions, and how to calculate what you actually owe.",
+    relatedLinks: [
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/capital-gains-tax-rates-2026", label: "2026 Capital Gains Rates" },
+      { href: "/blog/tax-implications-of-buying-a-home", label: "Tax Implications of Buying a Home" },
+      { href: "/blog/how-to-calculate-capital-gains-on-investments", label: "How to Calculate Capital Gains" },
+    ],
+    content: `
+<p>For many Americans, their home is their largest asset — and its sale can generate the largest capital gain they will ever realize. The good news is that the tax code provides a substantial exclusion specifically for primary residence sales. The bad news is that the rules have details and exceptions that catch homeowners off guard. Understanding them before you sell can save tens of thousands of dollars.</p>
+
+<h2>The Home Sale Exclusion: The Core Rule</h2>
+<p>Under Section 121 of the Internal Revenue Code, you can exclude from capital gains tax up to:</p>
+<ul>
+  <li><strong>$250,000</strong> of gain if you are a single filer</li>
+  <li><strong>$500,000</strong> of gain if you are married filing jointly</li>
+</ul>
+<p>To qualify, you must have owned and used the home as your primary residence for at least 2 of the last 5 years before the sale. The 2 years do not need to be consecutive — you just need a cumulative total of 24 months of primary residence use in the 60 months before the sale date.</p>
+<p>This exclusion can be used once every two years. If you sell two homes within two years, only the first sale qualifies.</p>
+
+<h2>Calculating Your Home Sale Gain</h2>
+<p>Your taxable gain is not simply the selling price minus what you paid. The correct calculation is:</p>
+<p><strong>Gain = Selling Price - Selling Costs - Adjusted Cost Basis</strong></p>
+
+<h3>Selling Costs</h3>
+<p>These reduce your proceeds and are subtracted before calculating the gain:</p>
+<ul>
+  <li>Real estate agent commissions (typically 5-6% of sale price)</li>
+  <li>Transfer taxes and recording fees</li>
+  <li>Attorney fees for the closing</li>
+  <li>Title insurance paid by seller</li>
+  <li>Advertising costs if you sold without an agent</li>
+</ul>
+
+<h3>Adjusted Cost Basis</h3>
+<p>Your cost basis is not just your original purchase price. It includes:</p>
+<ul>
+  <li><strong>Purchase price</strong> — what you originally paid</li>
+  <li><strong>Closing costs at purchase</strong> — title insurance, recording fees, attorney fees, transfer taxes you paid as buyer</li>
+  <li><strong>Capital improvements</strong> — additions, renovations, and improvements that added value or extended the home's useful life (new roof, kitchen remodel, addition, HVAC replacement, finished basement). Regular maintenance does not count.</li>
+  <li><strong>Minus depreciation</strong> — if you ever used any portion of the home for business or as a rental, you must reduce your basis by the depreciation you claimed (or were entitled to claim) for those periods</li>
+</ul>
+<p><strong>Example:</strong> You bought a home in 2012 for $280,000. You paid $4,500 in closing costs. Over the years, you added a $35,000 kitchen renovation and a $12,000 deck. Your adjusted cost basis is $280,000 + $4,500 + $35,000 + $12,000 = $331,500. You sell in 2026 for $620,000 with $18,000 in selling costs. Your gain is $620,000 - $18,000 - $331,500 = $270,500. As a single filer who lived there 10 years, you exclude $250,000 and owe capital gains tax on $20,500.</p>
+
+<h2>When the Full Exclusion Is Not Available</h2>
+<p>The 2-of-5-year rule has exceptions that allow a partial exclusion if you do not fully meet the test:</p>
+<ul>
+  <li><strong>Job relocation:</strong> If you sold because of a job change that required moving at least 50 miles farther from the home</li>
+  <li><strong>Health reasons:</strong> If the sale was required due to a qualified health condition for you or a family member</li>
+  <li><strong>Unforeseen circumstances:</strong> IRS-defined events such as divorce, death, multiple births from a single pregnancy, or natural disaster</li>
+</ul>
+<p>In these cases, the exclusion is prorated based on how many months of the 24-month requirement you actually met. If you met 18 of the required 24 months, you can exclude 18/24 (75%) of the maximum exclusion amount.</p>
+
+<h2>Home Used Partly for Business or Rental</h2>
+<p>If any portion of your home was used for business (home office deduction) or rented out during your ownership, the exclusion becomes more complex:</p>
+<ul>
+  <li><strong>Home office within your residence:</strong> If you claimed the home office deduction using the actual expense method (not simplified), you may owe depreciation recapture on the portion claimed, taxed as ordinary income at up to 25%.</li>
+  <li><strong>Former rental property:</strong> If the entire property was a rental and you later converted it to your primary residence, the exclusion applies only to the portion of the gain allocated to the primary residence period. Gain allocated to rental periods does not qualify for the exclusion, and depreciation claimed must be recaptured.</li>
+</ul>
+
+<h2>Depreciation Recapture: The Tax Most People Miss</h2>
+<p>If you claimed depreciation on any part of your home — whether through a home office deduction or as a rental — the IRS requires you to "recapture" that depreciation when you sell, even if your overall gain is below the exclusion limit. Depreciation recapture on residential property is taxed at a maximum rate of 25%, not at regular capital gains rates.</p>
+<p>This is one of the most frequently missed tax obligations in home sales. If you deducted a home office for 10 years, carefully track the accumulated depreciation and factor it into your tax calculation.</p>
+
+<h2>Reporting the Sale on Your Tax Return</h2>
+<p>If your gain is fully covered by the exclusion, you generally do not need to report the sale on your return — though some tax professionals recommend reporting it anyway to create a clear record. If any portion of the gain is taxable (above the exclusion), you must report it on Form 8949 and Schedule D.</p>
+<p>You will receive Form 1099-S from the closing agent if the sale price exceeds $250,000 (single) or $500,000 (married). The IRS receives a copy, so the transaction is known to them regardless of whether you report it.</p>
+
+<h2>Married Couples: Special Situations</h2>
+<p>The $500,000 exclusion for married couples requires that both spouses meet the use test (2 of 5 years as primary residence), but only one spouse needs to meet the ownership test (owning the home for 2 of 5 years). If one spouse owned the home before marriage and they later sell it together, the exclusion can still be $500,000 as long as both lived there for the required period.</p>
+<p>If one spouse dies and the surviving spouse sells the home within two years of the death, the full $500,000 exclusion is still available — even though only one spouse remains.</p>
+
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate your federal tax on any gain above the exclusion, and see our <a href="/capital-gains-tax-rates-2026">2026 capital gains rate guide</a> for the current long-term rate thresholds.</p>
+
+<h2>Partial Exclusions: When You Do Not Fully Qualify</h2>
+<p>Even if you do not meet the full 2-of-5-year requirement, you may qualify for a partial exclusion if the sale was due to a change in employment, health reasons, or unforeseen circumstances. The partial exclusion is calculated as the fraction of the 24-month requirement you actually met, multiplied by the maximum exclusion amount.</p>
+<p>For example, if you lived in the home for 12 months (half of the required 24 months) before a job relocation required you to sell, you can exclude up to $125,000 of gain as a single filer (50% of $250,000) or $250,000 as a married couple (50% of $500,000). Document the qualifying reason carefully — a letter from your employer showing the job change, or medical documentation — and attach Form 8949 with an explanation.</p>
+
+<h2>Planning Ahead: Timing Your Sale</h2>
+<p>If you are considering selling and are close to but not yet at the 2-year threshold, waiting can be worth significant money. The difference between selling at 23 months (no exclusion) and 24 months (full exclusion) on a $400,000 gain is potentially $60,000 or more in capital gains tax for a single filer. Run the numbers with our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to see whether waiting makes financial sense in your specific situation.</p>
+<p>Also consider the year of sale: if 2026 will be a high-income year due to other events (a bonus, a business sale, Roth conversions), selling the home in that year could push your gain into the 20% capital gains bracket rather than 15%. In some cases, timing the sale to a lower-income year reduces the tax rate on any gain above the exclusion.</p>
+`
+  },
+
+  {
+    slug: "backdoor-roth-ira-guide-2026",
+    title: "Backdoor Roth IRA: How High Earners Can Still Contribute in 2026",
+    date: "June 4, 2026",
+    dateISO: "2026-06-04",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "High earners who exceed the Roth IRA income limits can still get money into a Roth through the backdoor strategy. Here is exactly how it works, what the pro-rata rule means, and how to execute it correctly.",
+    metaDescription: "Backdoor Roth IRA guide 2026: how to contribute to a Roth IRA even if you exceed the income limits. Covers the pro-rata rule, Form 8606, and step-by-step instructions.",
+    ogTitle: "Backdoor Roth IRA 2026: How High Earners Get Around the Income Limit | MyTaxCalcs",
+    ogDescription: "If you earn too much for a direct Roth IRA contribution, the backdoor Roth lets you get money in anyway. Learn how it works and how to avoid the pro-rata trap.",
+    relatedLinks: [
+      { href: "/blog/retirement-accounts-and-taxes-401k-ira-roth", label: "Retirement Accounts and Taxes" },
+      { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax Guide" },
+      { href: "/401k-contribution-limits-2025", label: "IRA Contribution Limits 2025" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    ],
+    content: `
+<p>The Roth IRA is one of the most powerful tools in the tax code — tax-free growth and tax-free withdrawals in retirement. The catch is the income limit. For 2025, the ability to make direct Roth IRA contributions phases out starting at $150,000 for single filers and $236,000 for married filing jointly. Above $165,000 (single) or $246,000 (married), direct contributions are completely off the table.</p>
+<p>The backdoor Roth IRA is the workaround — a perfectly legal two-step process that allows high earners to get money into a Roth regardless of income. It has been used by millions of taxpayers for over a decade and was explicitly endorsed as legal in Congressional conference committee reports. Here is exactly how it works.</p>
+
+<h2>How the Backdoor Roth Works: Two Steps</h2>
+<p><strong>Step 1: Make a non-deductible traditional IRA contribution.</strong> Anyone with earned income can contribute to a traditional IRA regardless of income — the income limits only affect whether the contribution is deductible. High earners who exceed the deductibility limits simply make a non-deductible contribution. For 2025, the limit is $7,000 ($8,000 if age 50 or older).</p>
+<p><strong>Step 2: Convert the traditional IRA to a Roth IRA.</strong> Shortly after making the contribution (typically within days or a few weeks), convert the traditional IRA balance to a Roth IRA. Because the contribution was non-deductible (made with after-tax dollars), the conversion generates no additional taxable income — you have already paid tax on those dollars.</p>
+<p>The result: money is now inside a Roth IRA, growing tax-free, with tax-free withdrawal eligibility after age 59.5 and 5 years — exactly as if you had made a direct Roth contribution.</p>
+
+<h2>The Pro-Rata Rule: The Critical Trap</h2>
+<p>The backdoor Roth works cleanly only if you have no pre-tax money in any traditional IRA, SEP-IRA, or SIMPLE IRA. If you do, the pro-rata rule complicates things significantly.</p>
+<p>The IRS does not allow you to selectively convert only the non-deductible (after-tax) dollars. Instead, every conversion is treated as coming proportionally from all your IRA money — pre-tax and after-tax combined.</p>
+<p><strong>Example of the pro-rata problem:</strong> You have $93,000 in a traditional IRA from prior pre-tax contributions and $7,000 in a new non-deductible IRA contribution — $100,000 total. Your after-tax proportion is 7% ($7,000 / $100,000). If you convert $7,000 to Roth, only 7% ($490) is tax-free. The remaining 93% ($6,510) is taxable as ordinary income — the opposite of what you intended.</p>
+<p>This is why the backdoor Roth is cleanest for people who have no existing pre-tax IRA balances.</p>
+
+<h2>Solving the Pro-Rata Problem: The Reverse Rollover</h2>
+<p>If you have pre-tax IRA money that would trigger the pro-rata rule, there is a solution: roll the pre-tax IRA balance into your current employer's 401(k) plan before executing the backdoor Roth. Most 401(k) plans accept incoming IRA rollovers. This moves the pre-tax money into the 401(k) — outside of the IRA system — leaving your IRA with zero balance before you make the non-deductible contribution. The backdoor Roth then works cleanly with no pro-rata complication.</p>
+<p>This only works if your employer's 401(k) accepts incoming rollovers (most do) and if the plan is a good one worth rolling into. If the 401(k) has poor investment options or high fees, this trade-off requires more consideration.</p>
+
+<h2>Step-by-Step: Executing the Backdoor Roth</h2>
+<ol>
+  <li><strong>Verify you have no pre-tax IRA balances.</strong> Check all traditional IRAs, SEP-IRAs, and SIMPLE IRAs. If you do, consider the reverse rollover strategy first.</li>
+  <li><strong>Make a non-deductible traditional IRA contribution.</strong> Contribute $7,000 (or $8,000 if 50+) to a traditional IRA at your brokerage. Do not invest it in anything yet — keep it in cash or a money market fund to avoid any earnings before conversion.</li>
+  <li><strong>Convert to Roth immediately.</strong> Within a few days, request a Roth conversion for the full amount. Converting quickly minimizes any earnings that could create a small taxable amount.</li>
+  <li><strong>File Form 8606.</strong> This IRS form tracks non-deductible IRA contributions and must be filed with your tax return for the year of the contribution. It establishes your after-tax basis and prevents double taxation. Do not skip this step.</li>
+</ol>
+
+<h2>The Mega Backdoor Roth: An Even Larger Opportunity</h2>
+<p>Some 401(k) plans offer an even larger version of this strategy. If your employer's plan allows after-tax contributions beyond the standard $23,500 pre-tax limit, and also allows in-service withdrawals or in-plan Roth conversions, you can contribute up to an additional $46,500 in after-tax 401(k) dollars (bringing the total to the $70,000 overall limit for 2025) and then convert those to Roth — either within the plan or by rolling them out to a Roth IRA.</p>
+<p>Not all plans allow this — check with your HR or plan administrator. But for high earners whose plans support it, the mega backdoor Roth allows up to $46,500 of additional Roth contributions per year on top of the standard limits.</p>
+
+<h2>Tax Considerations for the Conversion Year</h2>
+<p>If you execute the backdoor Roth correctly (no pre-tax IRA balances, converting immediately), there is minimal tax impact. Any small earnings between contribution and conversion are taxable as ordinary income — typically just a few dollars if you convert quickly.</p>
+<p>The Roth conversion does add to your income for the year on Form 1040. Even though the taxable amount is near zero for a clean backdoor Roth, make sure this does not inadvertently push you above a threshold that affects other deductions or credits (such as the IRMAA Medicare surcharge threshold or the NIIT threshold).</p>
+
+<h2>Annual Execution</h2>
+<p>The backdoor Roth is an annual strategy. Each year, you make a new non-deductible IRA contribution and convert it to Roth. Many investors execute this in January of the new year (for the current year's contribution) or in the early months of the year (for the prior year's contribution, since IRA contributions can be made up to the April tax deadline for the prior year). Either approach works — some people prefer doing both years' contributions in January of the new year for simplicity.</p>
+
+<p>Use our <a href="/roth-ira-conversion-tax">Roth IRA conversion guide</a> to understand the tax mechanics of conversions in more detail, and our <a href="/401k-contribution-limits-2025">IRA contribution limits page</a> for current year limits and income thresholds.</p>
+
+<h2>Common Backdoor Roth Mistakes</h2>
+<p>The most frequent error is forgetting to file Form 8606. Without this form, the IRS has no record that your IRA contribution was non-deductible. Years later, when you withdraw from the Roth, you could end up being taxed twice — once when you contributed (because you did not deduct it) and again when you withdraw (because the IRS has no record of your after-tax basis). File Form 8606 every single year you make a non-deductible IRA contribution, without exception.</p>
+<p>The second most common mistake is converting an IRA that has earnings accumulated before conversion. If your non-deductible contribution sat in a money market fund for three months and earned $12 in interest before you converted, that $12 is taxable as ordinary income. It is a small amount — but keeping the pre-conversion holding period short minimizes this.</p>
+
+<h2>Will the Backdoor Roth Be Eliminated?</h2>
+<p>Congress has discussed closing the backdoor Roth loophole in various legislative proposals over the years, most notably in the Build Back Better Act in 2021, which was not enacted. As of 2026, the backdoor Roth remains legal and unchanged. Given its widespread use and the difficulty of enforcing a ban, most tax professionals expect it to remain available for the foreseeable future — but it is worth staying informed on legislative developments.</p>
+<p>If you have been putting off the backdoor Roth because you are worried it might go away, that concern actually argues for executing it sooner rather than later — while it is definitively legal — rather than waiting.</p>
+`
+  },
+
+  {
+    slug: "rental-property-tax-guide-2026",
+    title: "Rental Property Taxes 2026: What Every Landlord Needs to Know",
+    date: "June 4, 2026",
+    dateISO: "2026-06-04",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Rental income is taxable, but so are a long list of deductions that most landlords underuse. Here is how rental property is taxed, what you can deduct, how depreciation works, and the passive loss rules that limit deductions for high earners.",
+    metaDescription: "Rental property tax guide 2026: how rental income is taxed, what expenses you can deduct, how depreciation works, passive loss rules, and what happens when you sell.",
+    ogTitle: "Rental Property Taxes 2026: Complete Guide for Landlords | MyTaxCalcs",
+    ogDescription: "Rental income is taxable but deductions are extensive. Learn how depreciation, passive loss rules, and the 20% QBI deduction work for rental property owners.",
+    relatedLinks: [
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/blog/tax-implications-of-selling-a-home-2026", label: "Tax Implications of Selling a Home" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/how-to-reduce-your-tax-bill-legally", label: "How to Reduce Your Tax Bill" },
+    ],
+    content: `
+<p>Rental property sits at the intersection of investment income and business income — a unique tax category with its own rules for income reporting, expense deductions, depreciation, passive loss limitations, and eventually capital gains on sale. Understanding these rules helps landlords maximize legitimate deductions and avoid common mistakes that trigger IRS scrutiny.</p>
+
+<h2>Reporting Rental Income</h2>
+<p>All rental income must be reported on Schedule E (Supplemental Income and Loss) of your Form 1040. Rental income includes:</p>
+<ul>
+  <li>Monthly rent payments</li>
+  <li>Advance rent (rent paid for a future period is income in the year received)</li>
+  <li>Security deposits retained at the end of tenancy (refundable deposits are not income until you keep them)</li>
+  <li>Payments for canceling a lease</li>
+  <li>Services provided by a tenant in lieu of rent (at fair market value)</li>
+</ul>
+<p>Rental income is reported in the year it is received, not when it is earned. If your tenant pays January rent in December, it is December income — for the year they paid it.</p>
+
+<h2>Deductible Rental Expenses</h2>
+<p>The list of deductible rental expenses is extensive. You can deduct ordinary and necessary expenses for managing and maintaining the rental property:</p>
+<ul>
+  <li><strong>Mortgage interest</strong> on the rental property loan (not principal)</li>
+  <li><strong>Property taxes</strong> (no SALT cap for rental property — the SALT cap only applies to personal taxes)</li>
+  <li><strong>Insurance premiums</strong> for the rental property</li>
+  <li><strong>Repairs and maintenance</strong> — fixing a broken window, repainting, plumbing repairs. Must be ordinary maintenance, not improvements.</li>
+  <li><strong>Property management fees</strong> paid to a management company</li>
+  <li><strong>Advertising costs</strong> to find tenants</li>
+  <li><strong>Professional fees</strong> — attorney fees for lease drafting, accountant fees for rental tax preparation</li>
+  <li><strong>Travel expenses</strong> to visit and manage the property (at the standard mileage rate)</li>
+  <li><strong>HOA fees</strong> for rental condos</li>
+  <li><strong>Utilities paid by landlord</strong></li>
+  <li><strong>Depreciation</strong> — this is the largest deduction and requires special attention</li>
+</ul>
+<p>Improvements are not currently deductible — they are capitalized and depreciated over time. The distinction between a repair (deductible now) and an improvement (capitalized) is one of the most litigated areas in rental tax law. A new roof is generally an improvement; patching an existing roof is a repair.</p>
+
+<h2>Depreciation: The Largest Hidden Deduction</h2>
+<p>Depreciation allows you to deduct the cost of the rental property structure (not land) over 27.5 years using the straight-line method. This is a non-cash deduction — you do not spend any money, but you get a tax deduction every year.</p>
+<p><strong>How to calculate annual depreciation:</strong></p>
+<ol>
+  <li>Determine the property's cost basis (purchase price plus buying costs)</li>
+  <li>Allocate between land value (not depreciable) and structure (depreciable). Typically use property tax assessment ratios to split land vs. building.</li>
+  <li>Divide the structure value by 27.5 to get the annual depreciation deduction</li>
+</ol>
+<p><strong>Example:</strong> You buy a rental property for $350,000 (including closing costs). The land is worth $70,000 based on the assessment. Structure basis = $280,000. Annual depreciation = $280,000 / 27.5 = $10,182 per year. You deduct $10,182 every year without spending any money — it simply reflects the theoretical wear and tear on the building.</p>
+<p>Depreciation is one of the most valuable tax benefits of rental ownership. It can turn a cash-flow-positive property into a paper loss for tax purposes — which shelters other income from tax (subject to passive loss rules discussed below).</p>
+
+<h2>The Passive Loss Rules: The Biggest Limitation</h2>
+<p>Rental activities are classified as "passive" by default under the IRS rules, meaning losses from rental properties can generally only offset income from other passive activities — not wages, business income, or investment income.</p>
+<p>This means if your rental property generates a tax loss (after depreciation and all deductions), you typically cannot use that loss to reduce your W-2 income in the current year. The loss is "suspended" and carried forward to offset future rental income or to be released when you sell the property.</p>
+
+<h3>The $25,000 Allowance Exception</h3>
+<p>There is an important exception for "active participants" in rental activities. If your modified AGI is under $100,000 and you actively participate in managing the rental (making management decisions, approving tenants, etc.), you can deduct up to $25,000 of rental losses against ordinary income each year. This allowance phases out between $100,000 and $150,000 AGI — above $150,000, no losses can offset ordinary income.</p>
+
+<h3>Real Estate Professional Exception</h3>
+<p>If you qualify as a "real estate professional" under IRS rules — meaning you spend more than 750 hours per year in real estate activities and real estate is your primary profession — rental losses are not passive and can offset any type of income without limit. This status significantly changes the tax math for full-time landlords and real estate investors.</p>
+
+<h2>The 20% QBI Deduction for Rental Income</h2>
+<p>Under the Tax Cuts and Jobs Act, rental income may qualify for the 20% Qualified Business Income (QBI) deduction — reducing your effective tax rate on net rental income. The IRS issued a safe harbor allowing rental activities to qualify as a "trade or business" for QBI purposes if you maintain separate books, keep records, and spend at least 250 hours per year on rental activities. This deduction is currently scheduled to expire after 2025 unless Congress acts — its status for 2026 and beyond depends on legislation.</p>
+
+<h2>What Happens When You Sell</h2>
+<p>Selling a rental property triggers several tax events:</p>
+<ul>
+  <li><strong>Capital gain:</strong> The difference between your adjusted basis (original cost minus accumulated depreciation) and the selling price, taxed at long-term capital gains rates if held more than a year</li>
+  <li><strong>Depreciation recapture:</strong> All the depreciation you claimed over the years is "recaptured" and taxed at a maximum rate of 25% — not at favorable long-term capital gains rates</li>
+  <li><strong>Release of suspended passive losses:</strong> Any passive losses that were suspended from prior years are released and can offset the gain at sale</li>
+</ul>
+<p>Many landlords are surprised by depreciation recapture at sale — it can result in a significant tax bill even when the overall gain seems modest. Planning for this in advance (through installment sales or 1031 exchanges) is important.</p>
+
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate the federal tax on your rental property sale, and our <a href="/income-tax-calculator">income tax calculator</a> to model how net rental income affects your overall federal tax liability.</p>
+
+<h2>Short-Term Rentals: Airbnb and VRBO</h2>
+<p>Short-term rental properties — those rented for an average of 7 days or less per rental — are not classified as passive rental activities under the IRS rules. Instead, they are treated more like an active business, which has significant implications. Losses from short-term rentals are not subject to the passive loss rules and can offset ordinary income — but this also means you may owe self-employment tax on net income, and the property may be classified as a Schedule C business rather than a Schedule E rental.</p>
+<p>The tax treatment of short-term rentals is one of the most actively evolving areas of tax law, with the IRS increasingly scrutinizing Airbnb and VRBO income. Keep meticulous records of rental days, personal use days, and all expenses. Days of personal use affect the deductibility of expenses — if you use the property personally for more than 14 days or 10% of rental days (whichever is greater), expense deductibility becomes limited by the personal use percentage.</p>
+
+<h2>The 1031 Exchange: Deferring Capital Gains on Sale</h2>
+<p>When you sell a rental property, a 1031 like-kind exchange allows you to defer capital gains and depreciation recapture taxes by reinvesting the proceeds into another qualifying investment property within strict time limits: 45 days to identify the replacement property and 180 days to close. The taxes are not eliminated — they carry over to the new property's basis — but deferral allows you to redeploy the full pre-tax proceeds into a larger property, effectively using the government's share of your gain as an interest-free loan for continued investment.</p>
+<p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate the tax on a potential rental property sale and evaluate whether a 1031 exchange makes sense for your situation.</p>
+`
+  },
+
 // NEW BLOG POSTS — June 4, 2026
 // Add these two objects to the FRONT of the blogPosts array in data/blogPosts.js
 // (after the opening bracket, before the first existing post)
