@@ -83,8 +83,6 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid rgba(34,197,94,0.25);
 }
 
-
-
 .nav-links a {
   font-size: 0.9rem;
   font-weight: 500;
@@ -108,6 +106,86 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* ── HAMBURGER BUTTON (hidden on desktop) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #c5d5ee;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-hamburger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-hamburger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-hamburger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── MOBILE NAV DRAWER ── */
+.nav-mobile-drawer {
+  display: none;
+  background: var(--navy-mid);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 16px 20px 20px;
+}
+
+.nav-mobile-drawer.open {
+  display: block;
+}
+
+.nav-mobile-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.nav-mobile-links a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9aacca;
+  padding: 10px 12px;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.nav-mobile-links a:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--white);
+}
+
+.nav-mobile-cta {
+  display: block;
+  background: var(--green);
+  color: #052212;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 12px 20px;
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
 
 /* ── HERO ── */
 .hero {
@@ -695,7 +773,7 @@ input:focus, select:focus {
 
 .page-card h1 {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem);
   line-height: 1.1;
   margin: 0 0 24px;
   color: #0b1b46;
@@ -810,9 +888,11 @@ input:focus, select:focus {
 }
 
 @media (max-width: 700px) {
-  .nav { flex-wrap: wrap; gap: 14px; padding: 16px 20px; }
-  .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; order: 3; width: 100%; }
-  .nav-cta { margin-left: auto; }
+  /* Nav: show hamburger, hide desktop links and CTA */
+  .nav { padding: 14px 18px; gap: 0; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
 
   .hero { padding: 80px 20px 120px; }
 
@@ -832,6 +912,8 @@ input:focus, select:focus {
   .states-section { padding: 48px 18px; }
 
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+
+  .page-card { padding: 24px 18px; }
 }
 
 /* ── CALCULATOR PAGES ── */
@@ -1093,8 +1175,8 @@ input:focus, select:focus {
 
 @media (max-width: 700px) {
   .calc-hero { padding: 36px 18px 44px; }
-  .calc-main { padding: 28px 18px 48px; }
-  .calc-form-card, .calc-results-card { padding: 22px; }
+  .calc-main { padding: 24px 16px 48px; }
+  .calc-form-card, .calc-results-card { padding: 20px 18px; }
 }
 
 /* ── ABOUT & CONTACT PAGES ── */
@@ -1313,6 +1395,13 @@ input:focus, select:focus {
   }
 }
 
+@media (max-width: 700px) {
+  .about-main-card,
+  .contact-main-card { padding: 22px 18px; }
+  .contact-email-box { flex-direction: column; align-items: flex-start; gap: 12px; padding: 16px 18px; }
+  .contact-email-link { font-size: 0.95rem; word-break: break-all; }
+}
+
 /* ── LEGAL PAGES (Privacy, Terms, Disclaimer) ── */
 .legal-layout {
   display: grid;
@@ -1374,6 +1463,10 @@ input:focus, select:focus {
   .legal-layout {
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 700px) {
+  .legal-card { padding: 22px 18px; }
 }
 
 /* ── Guide Sections ── */
@@ -1498,6 +1591,10 @@ input:focus, select:focus {
   list-style: disc;
 }
 
+@media (max-width: 700px) {
+  .guide-section { padding: 22px 18px; }
+}
+
 /* ── About Page Additions ── */
 .about-calc-list,
 .about-method-list,
@@ -1560,8 +1657,9 @@ input:focus, select:focus {
 .trust-item strong {
   color: #111827;
 }
+
 /* ============================================================
-   STATE PAGE ADDITIONS — append to existing style.css
+   STATE PAGE ADDITIONS
    ============================================================ */
 
 /* Key Facts Bar */
@@ -1637,6 +1735,7 @@ input:focus, select:focus {
 }
 .bracket-table-wrap {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: 10px;
   border: 1px solid #e5e7eb;
 }
@@ -1644,6 +1743,7 @@ input:focus, select:focus {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.95rem;
+  min-width: 320px;
 }
 .bracket-table thead {
   background: #16a34a;
@@ -1653,6 +1753,7 @@ input:focus, select:focus {
   padding: 0.75rem 1rem;
   text-align: left;
   font-weight: 600;
+  white-space: nowrap;
 }
 .bracket-table tbody tr:nth-child(even) { background: #f9fafb; }
 .bracket-table tbody tr:hover { background: #f0fdf4; }
@@ -1749,11 +1850,12 @@ input:focus, select:focus {
   color: #374151;
   border-bottom: 1px solid #e5e7eb;
 }
-.example-calc { padding: 0; }
+.example-calc { padding: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .example-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 0.9rem;
+  min-width: 280px;
 }
 .example-table th {
   background: #f3f4f6;
@@ -1864,7 +1966,6 @@ input:focus, select:focus {
 .page-with-sidebar {
   display: flex;
   align-items: flex-start;
-  /* Content cols (860–1000px) + sidebar (200px) + padding */
   max-width: 1240px;
   margin: 0 auto;
   width: 100%;
@@ -1912,3 +2013,6 @@ input:focus, select:focus {
     display: block;
   }
 }
+
+/* ── NAV HAMBURGER SCRIPT (inline in each page) ── */
+/* The JS is added via a <script> at end of each page's <body> */

@@ -122,7 +122,7 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
+    <header class="site-header">
     <nav class="nav">
       <a href="/" class="logo">
         <span class="logo-mark">
@@ -140,11 +140,25 @@
         <a href="/calculators">Calculators</a>
         <a href="/states">States</a>
         <a href="/blog">Blog</a>
-<a href="/about">About</a>
+        <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </div>
       <a class="nav-cta" href="/income-tax-calculator">Calculate Your Tax</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+    <div class="nav-mobile-drawer" id="nav-mobile-drawer" role="navigation" aria-label="Mobile navigation">
+      <div class="nav-mobile-links">
+        <a href="/">Home</a>
+        <a href="/calculators">Calculators</a>
+        <a href="/states">States</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a class="nav-mobile-cta" href="/income-tax-calculator">Calculate Your Tax</a>
+    </div>
   </header>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -517,6 +531,26 @@
           items.forEach(function(i){i.classList.remove('open');i.querySelector('.faq-question').setAttribute('aria-expanded','false');});
           if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
         });
+      });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      var btn = document.querySelector('.nav-hamburger');
+      var drawer = document.getElementById('nav-mobile-drawer');
+      if (!btn || !drawer) return;
+      btn.addEventListener('click', function() {
+        var open = drawer.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      document.addEventListener('click', function(e) {
+        if (!btn.contains(e.target) && !drawer.contains(e.target)) {
+          drawer.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open menu');
+        }
       });
     })();
   </script>
