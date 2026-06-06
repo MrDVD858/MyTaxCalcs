@@ -2,6 +2,114 @@
 // All posts sourced from IRS publications and official announcements.
 
 const blogPosts = [
+
+  // ── NEW POST — June 5, 2026 ─────────────────────────────────────────────────
+  {
+    slug: "hobby-vs-business-taxes-2026",
+    title: "Hobby vs. Business: Why the IRS Distinction Matters More Than Ever in 2026",
+    date: "June 5, 2026",
+    dateISO: "2026-06-05",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax News",
+    excerpt: "The IRS just reminded millions of side-hustle earners: hobby income is fully taxable, but hobby expenses are not deductible under current law. Here is how the IRS makes the call — and what it means for your taxes.",
+    metaDescription: "IRS hobby vs. business rules 2026: why the distinction matters, how the IRS determines which you have, the 9 key factors, and what the OBBBA made permanent. Essential for side-hustle and gig earners.",
+    ogTitle: "Hobby vs. Business for Tax Purposes 2026: The IRS Rules Explained | MyTaxCalcs",
+    ogDescription: "Hobby income is fully taxable but hobby expenses are not deductible. Learn the 9 IRS factors that separate a hobby from a business — and why it matters more than ever in 2026.",
+    relatedLinks: [
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/freelancer-tax-deductions-complete-list", label: "Freelancer Tax Deductions" },
+      { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes" },
+    ],
+    content: `
+<p>With the rise of online selling, content creation, freelance gig work, and side hustles of every description, millions of Americans are now earning money from activities that started as hobbies. The IRS has noticed. In June 2026, the agency published a fresh reminder — Tax Tip 2026-45 — clarifying that the line between a hobby and a business carries real tax consequences, and that hobby income is taxable regardless of how you classify the activity.</p>
+
+<p>The distinction matters enormously. A business can deduct its expenses, offset losses against other income, and reduce both income tax and self-employment tax. A hobby must report every dollar of income — and since the Tax Cuts and Jobs Act of 2017, which the One Big Beautiful Bill Act made permanent in 2025, cannot deduct a single dollar of related expenses. That asymmetry makes proper classification one of the most consequential tax decisions a side-hustle earner can make.</p>
+
+<h2>The Core Rule: Profit Motive</h2>
+<p>The IRS distinguishes between hobbies and businesses based primarily on <strong>profit motive</strong> — whether you are genuinely trying to make money from the activity, not just enjoying it. As the IRS puts it: "A business operates to make a profit. A hobby is typically pursued for pleasure or recreation."</p>
+<p>Both generate taxable income that must be reported on your federal tax return. The difference is what happens to the expenses and losses:</p>
+<ul>
+  <li><strong>Business:</strong> Ordinary and necessary business expenses are deductible on Schedule C. Net losses from the business can offset other income (wages, investment income) subject to at-risk and passive activity rules. Net profit is subject to self-employment tax (15.3%).</li>
+  <li><strong>Hobby:</strong> All income is taxable and reported on Schedule 1 (Form 1040). No expenses are deductible under current law. No losses to claim. But also no self-employment tax — hobby income is not subject to SE tax.</li>
+</ul>
+
+<h2>Why the OBBBA Made This Worse for Hobbyists</h2>
+<p>Before 2018, taxpayers with hobby income could deduct hobby-related expenses as miscellaneous itemized deductions, subject to a 2% of AGI floor. That meant a hobbyist who earned $5,000 selling handmade ceramics and spent $3,000 on materials and supplies could at least partially offset the income with deductions — though the 2% floor and itemizing requirement reduced the benefit.</p>
+<p>The Tax Cuts and Jobs Act of 2017 suspended all miscellaneous itemized deductions for tax years 2018 through 2025. <strong>The One Big Beautiful Bill Act, signed July 4, 2025, made that suspension permanent.</strong> There is now no mechanism to deduct hobby expenses at the federal level — not as itemized deductions, not as above-the-line adjustments, not on Schedule C. Hobby income is fully taxable; hobby costs are not recoverable. This makes the hobby-vs-business classification more financially consequential than at any point in the past several decades.</p>
+
+<h2>The 9 IRS Factors: How the Agency Decides</h2>
+<p>No single fact determines whether an activity is a hobby or a business. The IRS weighs all facts and circumstances, considering nine specific factors. No factor outweighs the others — it is a totality-of-circumstances analysis. Here is what the IRS looks at:</p>
+
+<h3>1. Do you conduct the activity in a businesslike manner?</h3>
+<p>Keeping separate business bank accounts and records, maintaining a business plan, tracking income and expenses with dedicated software, and having a system for improving profitability all point toward a business. Using a personal PayPal account, mixing personal and business money, and having no records beyond a rough idea of what you earned point toward a hobby.</p>
+
+<h3>2. Does the time and effort you put in indicate you intend to make it profitable?</h3>
+<p>Working at the activity regularly and consistently, especially if you do not have another full-time job, suggests genuine business intent. Dabbling in it occasionally as a break from other activities suggests a hobby. Time alone is not determinative — a weekend photographer who shoots weddings professionally may put in fewer hours than a hobbyist who shoots landscapes for fun — but consistent, work-like engagement matters.</p>
+
+<h3>3. Do you depend on income from the activity for your livelihood?</h3>
+<p>If the activity is your primary or significant source of income, it is likely a business. If you have substantial other income and the activity supplements it modestly, the business argument is weaker — though not impossible, particularly if you are building toward making it your primary income source.</p>
+
+<h3>4. Have you made a profit in the activity in some years — and if so, how substantial were those profits?</h3>
+<p>The IRS uses a presumption: if an activity shows a profit in at least three of the last five consecutive tax years (two of seven years for horse breeding, training, or racing), it is presumed to be a business. This is a rebuttable presumption — the IRS can still argue it is a hobby despite profitable years, and you can still argue it is a business despite losses. But consistent profitability is the strongest single signal of business intent.</p>
+
+<h3>5. Have your losses been due to circumstances beyond your control, or are they normal startup costs?</h3>
+<p>New businesses commonly operate at a loss for their first few years. The IRS recognizes this — startup losses while genuinely working to establish a profitable business are expected and not disqualifying on their own. But losses that persist indefinitely without any realistic prospect of profitability, or losses caused by the taxpayer's own lack of business discipline, weigh against business classification.</p>
+
+<h3>6. Have you changed methods of operation to improve profitability?</h3>
+<p>If you tried one approach, found it unprofitable, and shifted your strategy in response, that is a strong indicator of genuine profit motive. A business owner adjusts; a hobbyist continues doing what they enjoy regardless of financial results. Documented pivots — changing your pricing, your target customer, your product line, your distribution channel — support the business argument.</p>
+
+<h3>7. Do you or your advisors have the knowledge to carry on the activity as a successful business?</h3>
+<p>Operating in an area where you or your advisors have relevant expertise supports business intent. If you trained as a chef and now sell meal prep services on the side, that background is meaningful. If you have no background in an area and are not actively acquiring the knowledge needed to make it profitable, that cuts against the business argument.</p>
+
+<h3>8. Were you successful in making a profit from similar activities in the past?</h3>
+<p>A track record of turning other activities into profitable ventures supports the argument that your current activity is also a genuine business attempt. First-time entrepreneurs do not need this — but prior success is a supportive factor.</p>
+
+<h3>9. Does the activity make a profit in some years, and how large are the profits relative to the losses?</h3>
+<p>Occasional large profits can justify years of smaller losses. A writer who nets $40,000 in a good year from book royalties and loses $5,000 in lean years is in a different position than one who earns $500 occasionally and loses $8,000 annually. The ratio of gains to losses over time informs whether the activity has realistic profit potential.</p>
+
+<h2>Practical Examples: Hobby or Business?</h2>
+
+<h3>Etsy Seller — Likely a Hobby</h3>
+<p>Sarah makes handmade candles as a creative outlet. She has an Etsy shop and earns about $3,000 per year selling them. Her materials cost $2,800. She has never made a net profit in four years of selling, does not track her expenses formally, uses her personal bank account, and sells primarily because she enjoys the craft. Under the IRS factors, this is almost certainly a hobby. Her $3,000 in sales is taxable income — her $2,800 in costs are not deductible.</p>
+
+<h3>Freelance Graphic Designer — Likely a Business</h3>
+<p>Marcus left a corporate design job and began freelancing. He has a dedicated business checking account, tracks all income and expenses in accounting software, maintains a portfolio website, sends professional invoices, and made $45,000 in net profit last year. He relies on the income as his primary livelihood. This is clearly a business — he reports on Schedule C, deducts all ordinary and necessary business expenses, and pays self-employment tax on the net profit.</p>
+
+<h3>Photography Side Hustle — It Depends</h3>
+<p>Jordan takes professional photos at local events on weekends while working full-time as a teacher. She earns $12,000 per year, keeps a separate bank account, maintains records, and has shown a net profit in two of four years. The activity could go either way. To strengthen the business argument: document her pricing strategy, show she is actively marketing for clients, keep detailed records, and demonstrate efforts to grow profitability. If she treats it like a business, the IRS likely will too.</p>
+
+<h2>What to Do If You Have a Hobby That Is Becoming a Business</h2>
+<p>If you are in the gray zone — genuinely trying to make money but not yet consistently profitable — the steps you take now determine how the IRS will view you later:</p>
+<ul>
+  <li><strong>Open a dedicated business bank account</strong> and use it exclusively for the activity's income and expenses. This is the single most important step.</li>
+  <li><strong>Keep detailed records</strong> of all income and expenses, with receipts or documentation for each item.</li>
+  <li><strong>Create a written business plan</strong> — even a simple one — that outlines your path to profitability.</li>
+  <li><strong>Track your time</strong> spent on the activity to demonstrate regular, consistent effort.</li>
+  <li><strong>Consult a professional</strong> in the relevant field to show you are approaching it with knowledge, not just enthusiasm.</li>
+  <li><strong>Document your pivots:</strong> if you tried something and changed course to improve profitability, write it down.</li>
+  <li><strong>File Schedule C</strong> from the beginning if you genuinely intend to profit. Filing as a business from the start creates a consistent record.</li>
+</ul>
+
+<h2>The 1099-K Connection</h2>
+<p>Starting in 2026, the IRS requires payment platforms (PayPal, Venmo, eBay, Etsy, Stripe) to issue Form 1099-K to anyone who receives $600 or more in payments for goods or services. The IRS receives a copy. This means income you might previously have informally tracked — or not tracked at all — is now reported to the IRS automatically.</p>
+<p>Receiving a 1099-K does not determine whether you are a hobby or a business — but it guarantees the IRS knows about the income. Whether that income shows up on Schedule C (business) or Schedule 1 (hobby income) matters for your taxes; the fact that it shows up somewhere is no longer optional. See our <a href="/blog/1099-k-tax-guide-2026">1099-K guide</a> for the full reporting picture.</p>
+
+<h2>Self-Employment Tax: A Reason Some Prefer "Hobby" Status</h2>
+<p>There is one scenario where hobby classification is actually better for the taxpayer: when expenses are low and SE tax avoidance is valuable. Business income on Schedule C is subject to both income tax and self-employment tax (15.3% on the first $184,500 of net earnings). Hobby income reported on Schedule 1 is subject only to income tax — no SE tax applies.</p>
+<p>For a side activity that generates $5,000 in income and $100 in expenses, the SE tax on $4,900 of business profit would be approximately $750. As hobby income with no deductible expenses, the $5,000 is subject only to income tax (roughly $1,100 at the 22% marginal rate, before considering that it is additive to other income). At low income levels with minimal expenses, the SE tax burden can make hobby classification look financially attractive — even though it comes with zero expense deductibility.</p>
+<p>This trade-off disappears at higher income levels or when significant deductible expenses are involved. At $50,000 in revenue and $20,000 in deductible expenses, the SE tax on $30,000 of net business income ($4,590) is far less painful than income tax on $50,000 of hobby income (potentially $11,000+ at the 22% bracket).</p>
+
+<h2>The IRS Audit Risk</h2>
+<p>The IRS specifically flags returns with Schedule C losses that persist over multiple years, particularly when the taxpayer has substantial other income. A writer or photographer who claims six-figure losses against a physician's salary for five consecutive years is a candidate for scrutiny. The audit may result in the IRS reclassifying the activity as a hobby — retroactively disallowing all the deducted expenses and losses, plus interest and potentially penalties.</p>
+<p>Reclassification risk is highest when: losses are large relative to income; the activity has personal enjoyment elements; the taxpayer has no track record of profitability; and record-keeping is poor. Reclassification risk is lowest when: the activity has shown profit in at least three of five years; records are meticulous; a businesslike structure exists; and the taxpayer has relevant expertise.</p>
+
+<h2>Source: IRS Tax Tip 2026-45</h2>
+<p>The IRS addressed this topic directly in <a href="https://www.irs.gov/newsroom/irs-tax-tips" target="_blank" rel="noopener noreferrer">Tax Tip 2026-45</a>, published June 2, 2026, emphasizing that the core question is profit motive and that all nine factors are weighed together. The agency reinforced that both hobby income and business income must be reported — the distinction affects deductibility, not reporting obligation.</p>
+<p>Use our <a href="/income-tax-calculator">federal income tax calculator</a> to estimate how additional side-hustle income affects your overall tax bill, and our <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to see the SE tax cost of treating the activity as a business.</p>
+`
+  },
+
 // NEW BLOG POSTS — Batch 2 — June 4, 2026
 // Add these to the FRONT of blogPosts array in data/blogPosts.js
 // (after "const blogPosts = [" and before existing posts)

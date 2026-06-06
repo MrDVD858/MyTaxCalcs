@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= pageTitle %></title>
+  <meta name="description" content="<%= metaDescription %>">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="<%= canonical %>">
+  <meta property="og:title" content="<%= ogTitle %>">
+  <meta property="og:description" content="<%= ogDescription %>">
+  <meta property="og:url" content="<%= canonical %>">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MyTaxCalcs">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="<%= ogTitle %>">
+  <meta name="twitter:description" content="<%= ogDescription %>">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FS9HCDT0D7"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
+  <style>
+    .breadcrumb{max-width:1000px;margin:0 auto;padding:14px 24px 0;font-size:.8rem;color:#6b7280;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+    .breadcrumb a{color:#16a34a;text-decoration:none}.breadcrumb a:hover{text-decoration:underline}
+    .breadcrumb-sep{color:#d1d5db;font-size:.75rem}
+    .states-page{max-width:1000px;margin:0 auto;padding:0 24px 60px}
+    .states-header{padding:28px 0 32px;border-bottom:1px solid #e5e7eb;margin-bottom:32px}
+    .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;background:#ecfdf5;border-radius:20px;padding:4px 12px;margin-bottom:12px}
+    .states-header h1{font-size:clamp(1.7rem,4vw,2.2rem);font-weight:800;line-height:1.2;margin:0 0 10px;color:#111827}
+    .states-header p{font-size:1.05rem;color:#6b7280;margin:0;max-width:640px;line-height:1.5}
+    .states-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    @media(max-width:900px){.states-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:640px){.states-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:400px){.states-grid{grid-template-columns:1fr}}
+    .state-card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:all .15s;display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .state-card:hover{border-color:#16a34a;box-shadow:0 4px 12px rgba(22,163,74,.04);transform:translateY(-1px)}
+    .state-name{font-size:.95rem;font-weight:600;color:#111827}
+    .state-meta{font-size:.75rem;color:#9ca3af;font-weight:600;background:#f3f4f6;border-radius:4px;padding:2px 6px;flex-shrink:0}
+    .state-card:hover .state-name{color:#16a34a}
+    .ad-zone{text-align:center;margin:28px 0;min-height:120px}
+    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    /* Featured states */
+    .featured-section{margin:0 0 40px}
+    .section-heading{font-size:1.15rem;font-weight:800;color:#111827;margin:0 0 16px}
+    .featured-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:40px}
+    @media(max-width:720px){.featured-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:440px){.featured-grid{grid-template-columns:1fr}}
+    .featured-card{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;transition:all .15s;display:flex;flex-direction:column;gap:6px}
+    .featured-card:hover{border-color:#16a34a;box-shadow:0 6px 18px rgba(22,163,74,.07);transform:translateY(-2px)}
+    .featured-card-top{display:flex;align-items:center;gap:10px}
+    .featured-flag{font-size:1.4rem;line-height:1}
+    .featured-name{font-size:1rem;font-weight:700;color:#111827}
+    .featured-rate{font-size:.8rem;font-weight:600;color:#16a34a;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:6px;padding:2px 8px;width:fit-content}
+    .featured-desc{font-size:.82rem;color:#6b7280;line-height:1.5;margin:0}
+    /* No-tax callout strip */
+    .notax-strip{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:18px 22px;margin-bottom:32px}
+    .notax-strip h2{font-size:1rem;font-weight:700;color:#111827;margin:0 0 10px}
+    .notax-links{display:flex;flex-wrap:wrap;gap:8px}
+    .notax-link{font-size:.85rem;font-weight:600;color:#15803d;background:#fff;border:1px solid #bbf7d0;border-radius:8px;padding:5px 12px;text-decoration:none;transition:all .12s}
+    .notax-link:hover{background:#dcfce7;border-color:#16a34a}
+    /* FAQ */
+    .states-faq{margin:40px 0 0}
+    .states-faq h2{font-size:1.25rem;font-weight:800;color:#111827;margin:0 0 20px}
+    .faq-accordion{display:flex;flex-direction:column;gap:10px}
+    .faq-acc-item{background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden}
+    .faq-acc-btn{width:100%;background:none;border:none;padding:16px 20px;text-align:left;font-size:.92rem;font-weight:600;color:#111827;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;font-family:inherit}
+    .faq-acc-btn:hover{background:#f9fafb}
+    .faq-acc-chevron{min-width:20px;height:20px;border-radius:50%;background:#f3f4f6;display:flex;align-items:center;justify-content:center;transition:transform .2s;flex-shrink:0}
+    .faq-acc-item.open .faq-acc-chevron{transform:rotate(180deg);background:#dcfce7}
+    .faq-acc-answer{display:none;padding:0 20px 16px;font-size:.88rem;color:#4b5563;line-height:1.65}
+    .faq-acc-item.open .faq-acc-answer{display:block}
+    .faq-acc-answer a{color:#16a34a;font-weight:600;text-decoration:none}
+    .faq-acc-answer a:hover{text-decoration:underline}
+    /* Guide content */
+    .states-guide{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:28px 32px;margin:32px 0}
+    @media(max-width:600px){.states-guide{padding:20px 18px}}
+    .states-guide h2{font-size:1.2rem;font-weight:800;color:#111827;margin:0 0 14px}
+    .states-guide p{font-size:.92rem;color:#4b5563;line-height:1.7;margin:0 0 14px}
+    .states-guide p:last-child{margin:0}
+    .states-guide a{color:#16a34a;font-weight:600;text-decoration:none}
+    .states-guide a:hover{text-decoration:underline}
+    .states-guide ul{font-size:.92rem;color:#4b5563;line-height:1.7;padding-left:20px;margin:0 0 14px;display:flex;flex-direction:column;gap:8px}
+    .states-guide ul li strong{color:#111827}
+    /* comparison table */
+    .compare-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:10px;border:1px solid #e5e7eb;margin:16px 0}
+    .compare-table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:420px}
+    .compare-table thead{background:#16a34a;color:#fff}
+    .compare-table thead th{padding:.65rem 1rem;text-align:left;font-weight:600;white-space:nowrap}
+    .compare-table tbody tr:nth-child(even){background:#f9fafb}
+    .compare-table tbody tr:hover{background:#f0fdf4}
+    .compare-table tbody td{padding:.6rem 1rem;color:#111827;border-bottom:1px solid #f3f4f6}
+    .compare-table .rate-high{color:#dc2626;font-weight:700}
+    .compare-table .rate-zero{color:#16a34a;font-weight:700}
+    .compare-table .rate-mid{color:#d97706;font-weight:600}
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="logo">
+        <span class="logo-mark">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/>
+            <rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/>
+            <rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/>
+          </svg>
+        </span>
+        <span>MyTaxCalcs</span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/calculators">Calculators</a>
+        <a href="/states">States</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="/calculators">All Calculators</a>
+      <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="nav-mobile-drawer" id="nav-mobile-drawer" role="navigation" aria-label="Mobile navigation">
+      <div class="nav-mobile-links">
+        <a href="/">Home</a>
+        <a href="/calculators">Calculators</a>
+        <a href="/states">States</a>
+        <a href="/blog">Blog</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <a class="nav-mobile-cta" href="/calculators">All Calculators</a>
+    </div>
+  </header>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a>
+    <span class="breadcrumb-sep">&#8250;</span>
+    <span>State Income Tax Calculators</span>
+  </nav>
+
+  <div class="page-with-sidebar">
+  <main>
+    <div class="states-page">
+
+      <div class="states-header">
+        <div class="page-eyebrow">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a10 10 0 0 0-7.36 16.76L9 22v-2a3 3 0 0 1 3-3h0a3 3 0 0 1 3 3v2l4.36-3.24A10 10 0 0 0 12 2z"/></svg>
+          All 50 States + D.C.
+        </div>
+        <h1>State Income Tax Calculators for All 50 States</h1>
+        <p>Choose your state to estimate your federal and state income tax side by side. Covers 2025 state brackets, worked dollar examples, and filing tips for every U.S. state and D.C.</p>
+      </div>
+
+      <!-- Top Ad -->
+      <div class="ad-zone">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="5205436277"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-1');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
+      </div>
+
+      <!-- Most-searched states -->
+      <div class="featured-section">
+        <h2 class="section-heading">Most-Searched State Calculators</h2>
+        <div class="featured-grid">
+          <a href="/california-income-tax-calculator" class="featured-card">
+            <div class="featured-card-top">
+              <span class="featured-flag">🐻</span>
+              <span class="featured-name">California</span>
+            </div>
+            <span class="featured-rate">1% – 13.3%</span>
+            <p class="featured-desc">Highest top marginal rate in the U.S. Nine graduated brackets for 2025.</p>
+          </a>
+          <a href="/texas-income-tax-calculator" class="featured-card">
+            <div class="featured-card-top">
+              <span class="featured-flag">⭐</span>
+              <span class="featured-name">Texas</span>
+            </div>
+            <span class="featured-rate">No State Income Tax</span>
+            <p class="featured-desc">No personal income tax. Residents still owe full federal income tax.</p>
+          </a>
+          <a href="/new-york-income-tax-calculator" class="featured-card">
+            <div class="featured-card-top">
+              <span class="featured-flag">🗽</span>
+              <span class="featured-name">New York</span>
+            </div>
+            <span class="featured-rate">4% – 10.9%</span>
+            <p class="featured-desc">Nine brackets. NYC residents pay an additional city income tax on top.</p>
+          </a>
+          <a href="/florida-income-tax-calculator" class="featured-card">
+            <div class="featured-card-top">
+              <span class="featured-flag">🌴</span>
+              <span class="featured-name">Florida</span>
+            </div>
+            <span class="featured-rate">No State Income Tax</span>
+            <p class="featured-desc">No personal income tax. One of nine states with no wage income tax.</p>
+          </a>
+          <a href="/illinois-income-tax-calculator" class="featured-card">
+            <div class="featured-card-top">
+              <span class="featured-flag">🌽</span>
+              <span class="featured-name">Illinois</span>
+            </div>
+            <span class="featured-rate">4.95% Flat</span>
+            <p class="featured-desc">Flat income tax rate applied to all taxable income regardless of amount.</p>
+          </a>
+          <a href="/pennsylvania-income-tax-calculator" class="featured-card">
+            <div class="featured-card-top">
+              <span class="featured-flag">🔔</span>
+              <span class="featured-name">Pennsylvania</span>
+            </div>
+            <span class="featured-rate">3.07% Flat</span>
+            <p class="featured-desc">Low flat rate, but localities like Philadelphia add their own income tax.</p>
+          </a>
+        </div>
+      </div>
+
+      <!-- No-income-tax states strip -->
+      <div class="notax-strip">
+        <h2>🟢 States with No Personal Income Tax (2025)</h2>
+        <div class="notax-links">
+          <a href="/alaska-income-tax-calculator" class="notax-link">Alaska</a>
+          <a href="/florida-income-tax-calculator" class="notax-link">Florida</a>
+          <a href="/nevada-income-tax-calculator" class="notax-link">Nevada</a>
+          <a href="/new-hampshire-income-tax-calculator" class="notax-link">New Hampshire</a>
+          <a href="/south-dakota-income-tax-calculator" class="notax-link">South Dakota</a>
+          <a href="/tennessee-income-tax-calculator" class="notax-link">Tennessee</a>
+          <a href="/texas-income-tax-calculator" class="notax-link">Texas</a>
+          <a href="/washington-income-tax-calculator" class="notax-link">Washington</a>
+          <a href="/wyoming-income-tax-calculator" class="notax-link">Wyoming</a>
+        </div>
+      </div>
+
+      <!-- State top rates comparison table -->
+      <div class="states-guide">
+        <h2>State Income Tax Rates at a Glance (2025)</h2>
+        <p>The table below shows the top marginal income tax rate for every state. Your actual rate depends on your income — most states with graduated brackets only apply the top rate to income above a certain threshold.</p>
+        <div class="compare-wrap">
+          <table class="compare-table">
+            <thead>
+              <tr><th>State</th><th>Rate Structure</th><th>Top Rate</th><th>Calculator</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Alabama</td><td>Graduated</td><td class="rate-mid">5.00%</td><td><a href="/alabama-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Alaska</td><td>None</td><td class="rate-zero">0%</td><td><a href="/alaska-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Arizona</td><td>Flat</td><td class="rate-mid">2.50%</td><td><a href="/arizona-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Arkansas</td><td>Graduated</td><td class="rate-mid">3.90%</td><td><a href="/arkansas-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>California</td><td>Graduated</td><td class="rate-high">13.30%</td><td><a href="/california-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Colorado</td><td>Flat</td><td class="rate-mid">4.40%</td><td><a href="/colorado-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Connecticut</td><td>Graduated</td><td class="rate-high">6.99%</td><td><a href="/connecticut-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Delaware</td><td>Graduated</td><td class="rate-mid">6.60%</td><td><a href="/delaware-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Florida</td><td>None</td><td class="rate-zero">0%</td><td><a href="/florida-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Georgia</td><td>Flat</td><td class="rate-mid">5.39%</td><td><a href="/georgia-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Hawaii</td><td>Graduated</td><td class="rate-high">11.00%</td><td><a href="/hawaii-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Idaho</td><td>Flat</td><td class="rate-mid">5.80%</td><td><a href="/idaho-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Illinois</td><td>Flat</td><td class="rate-mid">4.95%</td><td><a href="/illinois-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Indiana</td><td>Flat</td><td class="rate-mid">3.05%</td><td><a href="/indiana-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Iowa</td><td>Flat</td><td class="rate-mid">3.80%</td><td><a href="/iowa-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Kansas</td><td>Graduated</td><td class="rate-mid">5.70%</td><td><a href="/kansas-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Kentucky</td><td>Flat</td><td class="rate-mid">4.00%</td><td><a href="/kentucky-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Louisiana</td><td>Graduated</td><td class="rate-mid">3.00%</td><td><a href="/louisiana-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Maine</td><td>Graduated</td><td class="rate-high">7.15%</td><td><a href="/maine-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Maryland</td><td>Graduated</td><td class="rate-mid">5.75%</td><td><a href="/maryland-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Massachusetts</td><td>Graduated</td><td class="rate-high">9.00%</td><td><a href="/massachusetts-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Michigan</td><td>Flat</td><td class="rate-mid">4.25%</td><td><a href="/michigan-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Minnesota</td><td>Graduated</td><td class="rate-high">9.85%</td><td><a href="/minnesota-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Mississippi</td><td>Flat</td><td class="rate-mid">4.70%</td><td><a href="/mississippi-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Missouri</td><td>Graduated</td><td class="rate-mid">4.70%</td><td><a href="/missouri-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Montana</td><td>Graduated</td><td class="rate-mid">5.90%</td><td><a href="/montana-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Nebraska</td><td>Graduated</td><td class="rate-mid">5.20%</td><td><a href="/nebraska-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Nevada</td><td>None</td><td class="rate-zero">0%</td><td><a href="/nevada-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>New Hampshire</td><td>None</td><td class="rate-zero">0%</td><td><a href="/new-hampshire-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>New Jersey</td><td>Graduated</td><td class="rate-high">10.75%</td><td><a href="/new-jersey-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>New Mexico</td><td>Graduated</td><td class="rate-mid">5.90%</td><td><a href="/new-mexico-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>New York</td><td>Graduated</td><td class="rate-high">10.90%</td><td><a href="/new-york-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>North Carolina</td><td>Flat</td><td class="rate-mid">4.25%</td><td><a href="/north-carolina-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>North Dakota</td><td>Graduated</td><td class="rate-mid">2.50%</td><td><a href="/north-dakota-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Ohio</td><td>Graduated</td><td class="rate-mid">3.50%</td><td><a href="/ohio-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Oklahoma</td><td>Graduated</td><td class="rate-mid">4.75%</td><td><a href="/oklahoma-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Oregon</td><td>Graduated</td><td class="rate-high">9.90%</td><td><a href="/oregon-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Pennsylvania</td><td>Flat</td><td class="rate-mid">3.07%</td><td><a href="/pennsylvania-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Rhode Island</td><td>Graduated</td><td class="rate-mid">5.99%</td><td><a href="/rhode-island-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>South Carolina</td><td>Graduated</td><td class="rate-mid">6.40%</td><td><a href="/south-carolina-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>South Dakota</td><td>None</td><td class="rate-zero">0%</td><td><a href="/south-dakota-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Tennessee</td><td>None</td><td class="rate-zero">0%</td><td><a href="/tennessee-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Texas</td><td>None</td><td class="rate-zero">0%</td><td><a href="/texas-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Utah</td><td>Flat</td><td class="rate-mid">4.55%</td><td><a href="/utah-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Vermont</td><td>Graduated</td><td class="rate-high">8.75%</td><td><a href="/vermont-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Virginia</td><td>Graduated</td><td class="rate-mid">5.75%</td><td><a href="/virginia-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Washington</td><td>None</td><td class="rate-zero">0%</td><td><a href="/washington-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>West Virginia</td><td>Graduated</td><td class="rate-mid">4.00%</td><td><a href="/west-virginia-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Wisconsin</td><td>Graduated</td><td class="rate-high">7.65%</td><td><a href="/wisconsin-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Wyoming</td><td>None</td><td class="rate-zero">0%</td><td><a href="/wyoming-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+              <tr><td>Washington D.C.</td><td>Graduated</td><td class="rate-high">10.75%</td><td><a href="/district-of-columbia-income-tax-calculator" style="color:#16a34a;font-weight:600;text-decoration:none;">Calculate →</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size:.78rem;color:#9ca3af;margin-top:8px">Rates shown are 2025 top marginal rates for single filers. State tax law changes frequently — verify current rates at your state's revenue department website.</p>
+      </div>
+
+      <!-- Full state grid -->
+      <h2 class="section-heading" style="margin:32px 0 16px">All States — Jump to Your Calculator</h2>
+      <div class="states-grid">
+        <% states.forEach(function(item) { %>
+          <a href="/<%= item.slug %>-income-tax-calculator" class="state-card">
+            <span class="state-name"><%= item.name %></span>
+            <span class="state-meta"><%= item.abbr %></span>
+          </a>
+        <% }) %>
+      </div>
+
+      <!-- Mid Ad -->
+      <div class="ad-zone" style="margin-top:40px">
+        <div class="ad-zone-label">Advertisement</div>
+        <ins class="adsbygoogle" style="display:block" id="ad-slot-2"
+          data-ad-client="ca-pub-5193834725888549"
+          data-ad-slot="4212978293"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+        <script>
+          (function() {
+            var ins = document.getElementById('ad-slot-2');
+            if (!ins) return;
+            var obs = new IntersectionObserver(function(entries) {
+              if (entries[0].isIntersecting) {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                obs.disconnect();
+              }
+            }, { rootMargin: '200px' });
+            obs.observe(ins);
+          })();
+        </script>
+      </div>
+
+      <!-- Explainer guide -->
+      <div class="states-guide">
+        <h2>How State Income Tax Works</h2>
+        <p>Most U.S. residents owe two separate income taxes: a <strong>federal income tax</strong> (paid to the IRS) and a <strong>state income tax</strong> (paid to the state where you live and work). Federal tax applies to all U.S. residents regardless of state — the brackets and rates are identical whether you live in California or Texas. State income tax is a separate obligation with its own brackets, deductions, and filing requirements that vary significantly from state to state.</p>
+        <p>Each state calculator on this site shows both taxes side by side: your estimated federal income tax from the 2025 IRS brackets, and your estimated state income tax using your state's published rates and brackets.</p>
+        <h2 style="margin-top:22px">Graduated vs. Flat Rate States</h2>
+        <p>States that have income tax generally fall into two categories:</p>
+        <ul>
+          <li><strong>Graduated rate states</strong> work like the federal system — lower income is taxed at lower rates, higher income at higher rates. Only the income within each bracket pays that bracket's rate. California, New York, Minnesota, and Oregon all use graduated systems.</li>
+          <li><strong>Flat rate states</strong> apply a single percentage to all taxable income regardless of how much you earn. Illinois (4.95%), Pennsylvania (3.07%), and Arizona (2.50%) are examples. Flat states are simpler to calculate but don't offer the lower rates at the bottom that graduated states do.</li>
+        </ul>
+        <h2 style="margin-top:22px">States with No Income Tax</h2>
+        <p>Nine states — Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, and Wyoming — impose no broad-based personal income tax on wages and salaries. This doesn't mean residents pay no taxes at all: these states typically have higher property taxes, sales taxes, or other revenue mechanisms. And federal income tax applies to all residents of all states without exception.</p>
+        <p>Use the <a href="/income-tax-calculator">federal income tax calculator</a> to estimate your IRS tax regardless of your state, and select your state above for a combined federal + state estimate.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div class="states-faq">
+        <h2>Frequently Asked Questions — State Income Taxes</h2>
+        <div class="faq-accordion">
+
+          <div class="faq-acc-item">
+            <button class="faq-acc-btn">
+              Do I have to pay state income tax if I live in a no-tax state?
+              <span class="faq-acc-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-acc-answer">
+              <p>No. If you are a full-year resident of Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, or Wyoming, you owe no state income tax on wages or salary. You still owe federal income tax to the IRS — that obligation applies to all U.S. residents regardless of which state they live in.</p>
+            </div>
+          </div>
+
+          <div class="faq-acc-item">
+            <button class="faq-acc-btn">
+              Which state has the highest income tax rate?
+              <span class="faq-acc-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-acc-answer">
+              <p>California has the highest top marginal state income tax rate at 13.3%, which applies to taxable income over $1 million for single filers. The next highest are Hawaii (11%), New Jersey (10.75%), Washington D.C. (10.75%), New York (10.9%), and Oregon (9.9%). However, these top rates only apply to high earners — most California residents pay an effective state rate well below 13.3%.</p>
+            </div>
+          </div>
+
+          <div class="faq-acc-item">
+            <button class="faq-acc-btn">
+              What if I live in one state and work in another?
+              <span class="faq-acc-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-acc-answer">
+              <p>If you live in one state and work in another, you may owe taxes in both — but most states have reciprocity agreements with neighboring states that let you pay tax only to your home state. If no reciprocity agreement exists, you typically pay income tax to the state where the work is performed, then claim a credit on your home state return for taxes paid to the other state, so you generally are not taxed twice on the same income. The rules vary by state — consult a tax professional if you are in this situation.</p>
+            </div>
+          </div>
+
+          <div class="faq-acc-item">
+            <button class="faq-acc-btn">
+              How is state income tax different from federal income tax?
+              <span class="faq-acc-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-acc-answer">
+              <p>Federal income tax is collected by the IRS under a single uniform rate schedule that applies to all U.S. residents. State income tax is collected by your state's department of revenue under that state's own rules — different brackets, different deductions, different credits, and a separate return. You file Form 1040 for federal taxes and a separate state form for state taxes (if your state has an income tax). The two are calculated independently, though your state return often starts from your federal adjusted gross income as a baseline.</p>
+            </div>
+          </div>
+
+          <div class="faq-acc-item">
+            <button class="faq-acc-btn">
+              How accurate are these state tax estimates?
+              <span class="faq-acc-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-acc-answer">
+              <p>These are planning estimates based on each state's published income tax brackets. They do not account for all state-specific deductions, exemptions, credits, local income taxes (like New York City's), or special situations. The federal estimate uses the 2025 IRS tax brackets. For a final, accurate tax calculation, use your state's official tax forms or consult a qualified tax professional. These calculators are designed to give you a reliable ballpark — not to replace a filed return.</p>
+            </div>
+          </div>
+
+          <div class="faq-acc-item">
+            <button class="faq-acc-btn">
+              Does moving to a no-tax state actually save money?
+              <span class="faq-acc-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-acc-answer">
+              <p>It can — but the full picture includes all taxes, not just income tax. States with no income tax often compensate through higher property taxes, sales taxes, or other fees. Texas has no income tax but some of the highest property tax rates in the country. New Hampshire has no income or sales tax but relatively high property taxes. The net benefit of moving depends heavily on your income level, home ownership status, and spending patterns. High-income earners moving from California (13.3% top rate) to Texas (0%) tend to see the largest savings. Lower-income households may see smaller differences once all taxes are considered.</p>
+            </div>
+          </div>
+
+          <div class="faq-acc-item">
+            <button class="faq-acc-btn">
+              When is state income tax due?
+              <span class="faq-acc-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span>
+            </button>
+            <div class="faq-acc-answer">
+              <p>Most states follow the federal deadline and require state returns to be filed by April 15. Some states have slightly different deadlines. If you file a federal extension (Form 4868), most states automatically grant a matching extension for filing — but not for payment. If you owe state tax, payment is generally still due by the original April deadline even if your filing is extended. Check your state's department of revenue for the exact rules.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Related calculators -->
+      <div class="states-guide" style="margin-top:32px">
+        <h2>Related Federal Tax Calculators</h2>
+        <p>Your state income tax is one part of your total tax picture. Use these calculators to estimate the full federal side:</p>
+        <ul>
+          <li><a href="/income-tax-calculator"><strong>Federal Income Tax Calculator</strong></a> — Estimate your 2025 federal tax, effective rate, and refund or amount owed</li>
+          <li><a href="/tax-refund-calculator"><strong>Tax Refund Calculator</strong></a> — Estimate your federal refund based on income, withholding, and credits</li>
+          <li><a href="/self-employment-tax-calculator"><strong>Self-Employment Tax Calculator</strong></a> — Estimate SE tax on freelance or gig income (15.3% on top of income tax)</li>
+          <li><a href="/payroll-tax-calculator"><strong>Payroll Tax Calculator</strong></a> — Estimate take-home pay and FICA taxes from your gross wages</li>
+          <li><a href="/capital-gains-tax-calculator"><strong>Capital Gains Tax Calculator</strong></a> — Estimate federal tax on investment profits at short-term or long-term rates</li>
+        </ul>
+      </div>
+
+    </div>
+  </main>
+  <aside class="sidebar-ad-col" aria-label="Advertisement" aria-hidden="true">
+    <div class="sidebar-ad-inner">
+      <p class="sidebar-ad-label">Ad</p>
+      <ins class="adsbygoogle"
+           style="display:block;width:160px;min-height:600px"
+           data-ad-client="ca-pub-5193834725888549"
+           data-ad-slot="4041103773"
+           data-ad-format="auto"
+           data-full-width-responsive="false"></ins>
+      <script>
+        (function(){
+          var ins=document.currentScript.previousElementSibling;
+          var io=new IntersectionObserver(function(entries,observer){
+            if(entries[0].isIntersecting){
+              (adsbygoogle=window.adsbygoogle||[]).push({});
+              observer.disconnect();
+            }
+          },{rootMargin:'200px'});
+          io.observe(ins);
+        })();
+      </script>
+    </div>
+  </aside>
+</div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="logo-mark"><svg width="18" height="18" viewBox="0 0 20 20" fill="none"><rect x="1" y="1" width="8" height="8" rx="2" fill="#22c55e"/><rect x="11" y="1" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="1" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.5"/><rect x="11" y="11" width="8" height="8" rx="2" fill="#22c55e" opacity="0.25"/></svg></span>MyTaxCalcs</a>
+          <p>Free tax calculators for income tax, refunds, self-employment tax, capital gains tax, sales tax, payroll tax, and state income tax estimates.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Tax Calculators</h3>
+          <a href="/calculators">All Calculators</a>
+          <a href="/income-tax-calculator">Income Tax Calculator</a>
+          <a href="/tax-refund-calculator">Tax Refund Calculator</a>
+          <a href="/self-employment-tax-calculator">Self-Employment Tax</a>
+          <a href="/capital-gains-tax-calculator">Capital Gains Tax</a>
+          <a href="/sales-tax-calculator">Sales Tax Calculator</a>
+          <a href="/payroll-tax-calculator">Payroll Tax Calculator</a>
+        </div>
+        <div class="footer-column">
+          <h3>Site Links</h3>
+          <a href="/states">State Tax Calculators</a>
+          <a href="/blog">Blog</a>
+          <a href="/about">About</a>
+          <a href="/contact">Contact</a>
+          <a href="/privacy-policy">Privacy Policy</a>
+          <a href="/terms">Terms</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-acc-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-acc-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-acc-item').forEach(function(i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <script>
+    (function() {
+      var btn = document.querySelector('.nav-hamburger');
+      var drawer = document.getElementById('nav-mobile-drawer');
+      if (!btn || !drawer) return;
+      btn.addEventListener('click', function() {
+        var open = drawer.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      document.addEventListener('click', function(e) {
+        if (!btn.contains(e.target) && !drawer.contains(e.target)) {
+          drawer.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open menu');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
