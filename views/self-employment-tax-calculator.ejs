@@ -16,7 +16,6 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://mytaxcalcs.com/images/og-default.png">
-  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free Self-Employment Tax Calculator 2025 | MyTaxCalcs">
   <meta name="twitter:description" content="Estimate 2025 self-employment tax for freelancers, contractors, and gig workers.">
   <link rel="icon" href="/favicon.ico" sizes="any">
@@ -101,15 +100,7 @@
     .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
     .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
     .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
-    .guide-section{margin:48px 0 0;background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px 32px}
-    .guide-section h3{font-size:1rem;font-weight:700;color:#111827;margin:20px 0 8px}
-    .guide-section h3:first-of-type{margin-top:0}
-    .guide-section p{font-size:.9rem;color:#4b5563;line-height:1.7;margin:0 0 14px}
-    .guide-section ul,.guide-section ol{font-size:.9rem;color:#4b5563;line-height:1.7;margin:0 0 14px;padding-left:20px}
-    .guide-section li{margin-bottom:6px}
-    .guide-section strong{color:#111827}
-    .guide-section a{color:#16a34a;font-weight:600;text-decoration:none}
-    .guide-section a:hover{text-decoration:underline}
+    /* guide-section styles handled by style.css */
     .example-block{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;margin:16px 0}
     .example-block p{margin:0 0 10px;font-size:.88rem}
     .example-block ul{margin:0;padding-left:20px;font-size:.88rem;line-height:1.8}
@@ -127,6 +118,7 @@
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "Web",
     "browserRequirements": "Requires JavaScript",
+    "dateModified": "2025-11-01",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -436,18 +428,22 @@ Medicare Tax        = SE Taxable Income x 2.9%
       </div>
 
       <div class="guide-section">
-        <div class="section-eyebrow" style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:16px;display:block;">Understanding Your Results</div>
+        <div class="section-eyebrow">Understanding Your Results</div>
         <h2>What Self-Employment Tax Really Costs You</h2>
-        <p>Freelancers and independent contractors are often caught off guard by self-employment tax. When you are employed, your employer pays half of FICA (7.65%) and you pay the other half through payroll withholding. As a self-employed person, you pay the full 15.3% on top of your regular income tax. Many first-year freelancers end up owing thousands they did not budget for.</p>
+        <p class="guide-intro">Freelancers and independent contractors are often caught off guard by self-employment tax. When you are employed, your employer pays half of FICA (7.65%) and you pay the other half through payroll withholding. As a self-employed person, you pay the full 15.3% on top of your regular income tax. Many first-year freelancers end up owing thousands they did not budget for.</p>
 
+        <div class="guide-steps">
         <h3>How to Interpret Your SE Tax Estimate</h3>
-        <ol>
+        <ol class="guide-ol">
           <li><strong>Note the net earnings figure, not gross revenue.</strong> SE tax is calculated on 92.35% of your net self-employment income. The 7.65% reduction approximates the employer-side deduction W-2 employees get automatically.</li>
           <li><strong>Understand the deductible half.</strong> You can deduct 50% of your SE tax when calculating your adjusted gross income (AGI). This reduces your regular income tax, not your SE tax itself.</li>
           <li><strong>Add SE tax to your income tax estimate.</strong> SE tax and federal income tax are separate obligations. Use this calculator for SE tax, then use our <a href="/income-tax-calculator">income tax calculator</a> for the income tax portion. Your total federal burden is both combined.</li>
           <li><strong>Check the Social Security wage base.</strong> In 2025, the 12.4% Social Security portion only applies to the first $176,100 of net self-employment income. Above that, only the 2.9% Medicare rate applies.</li>
         </ol>
 
+        </div><!-- /guide-steps -->
+
+        <div class="guide-mistakes">
         <h3>3 Common Mistakes When Using This Calculator</h3>
         <div class="mistake-list">
           <div class="mistake-item">
@@ -464,6 +460,9 @@ Medicare Tax        = SE Taxable Income x 2.9%
           </div>
         </div>
 
+        </div><!-- /guide-mistakes -->
+
+        <div class="guide-next">
         <h3>Strategies to Reduce Your SE Tax</h3>
         <p>Self-employment tax is one of the largest tax burdens freelancers face. The IRS allows several strategies to reduce it legally:</p>
         <ul>
@@ -492,7 +491,8 @@ Medicare Tax        = SE Taxable Income x 2.9%
           <li>Read the <a href="/self-employment-tax-rate-2025">self-employment tax rate page</a> for a complete breakdown of the 15.3% rate and the wage base.</li>
           <li>Explore SEP-IRA or Solo 401(k) contributions -- explained in our <a href="/401k-contribution-limits-2025">retirement contribution limits guide</a>.</li>
         </ul>
-      </div>
+        </div><!-- /guide-next -->
+      </div><!-- /guide-section -->
 
       <div class="faq-section">
         <div class="section-eyebrow">FAQ</div>

@@ -96,6 +96,45 @@
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
     "provider": { "@type": "Organization", "name": "MyTaxCalcs", "url": "https://mytaxcalcs.com" }
   }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does <%= state.name %> have a state income tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<% if (!state.hasIncomeTax) { %>No. <%= state.name %> does not impose a state income tax. Residents pay only federal income tax on their earnings.<% } else if (state.topRate === state.bottomRate) { %><%= state.name %> has a flat state income tax rate of <%= state.topRate %>% applied to all taxable income, regardless of income level.<% } else { %><%= state.name %> has a graduated state income tax with rates ranging from <%= state.bottomRate %>% to <%= state.topRate %>%, depending on taxable income.<% } %>"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the top income tax rate in <%= state.name %>?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "<% if (!state.hasIncomeTax) { %><%= state.name %> has no state income tax. The top marginal rate is 0%.<% } else { %>The top marginal state income tax rate in <%= state.name %> is <%= state.topRate %>% for 2025.<% } %>"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I calculate my <%= state.name %> state income tax?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use the free <%= state.name %> income tax calculator above. Enter your gross annual income and filing status to receive an estimate of your 2025 state and federal income tax liability."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does <%= state.name %> use the same tax brackets as the federal government?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. <%= state.name %> sets its own state income tax rules, rates, and brackets separately from the federal tax system. Federal and state income taxes are calculated independently and both are owed to their respective governments."
+        }
+      }
+    ]
+  }
   </script>
 </head>
 <body>
