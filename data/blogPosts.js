@@ -3,6 +3,512 @@
 
 const blogPosts = [
 
+  // ── NEW POSTS — April–June 2026 ────────────────────────────────────────────
+
+  {
+    slug: "tax-loss-harvesting-guide-2026",
+    title: "Tax-Loss Harvesting: How to Use Investment Losses to Cut Your Tax Bill",
+    date: "June 10, 2026",
+    dateISO: "2026-06-10",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Tax-loss harvesting lets you sell losing investments to offset capital gains -- potentially saving hundreds or thousands in taxes. Here is how it works, when to use it, and the wash-sale rule you must avoid.",
+    metaDescription: "Tax-loss harvesting offsets capital gains with investment losses to reduce your tax bill. Learn how it works, the wash-sale rule, and when it makes sense in 2026.",
+    ogTitle: "Tax-Loss Harvesting: Cut Your Capital Gains Tax Bill in 2026",
+    ogDescription: "Tax-loss harvesting lets you sell losing investments to offset capital gains. Learn the strategy, the wash-sale rule, and how to use it in 2026.",
+    relatedLinks: [
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/capital-gains-tax-rates-2025", label: "Capital Gains Tax Rates 2025" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/retirement-accounts-and-taxes-401k-ira-roth", label: "Retirement Accounts and Taxes" },
+    ],
+    content: `
+  <p>If your investment portfolio has positions that are currently worth less than you paid for them, those losses have a hidden value: they can offset capital gains elsewhere in your portfolio and reduce your federal tax bill. This strategy is called tax-loss harvesting, and it is one of the few ways investors can actively reduce taxes within a taxable brokerage account.</p>
+
+  <h2>What Is Tax-Loss Harvesting?</h2>
+  <p>Tax-loss harvesting means selling an investment that has declined in value to realize a capital loss. That loss can then be used to offset capital gains you have realized -- or up to $3,000 of ordinary income per year if your losses exceed your gains. Losses that exceed the annual limit carry forward to future tax years indefinitely.</p>
+  <p>The key mechanic: capital losses first offset capital gains of the same type (short-term losses offset short-term gains, long-term losses offset long-term gains), then cross-offset. Any remaining net loss after all gains are eliminated offsets up to $3,000 of ordinary income.</p>
+
+  <h2>A Worked Example</h2>
+  <p>Suppose you have the following activity in a taxable brokerage account in 2026:</p>
+  <ul>
+    <li>Sold Stock A for a <strong>$8,000 long-term gain</strong></li>
+    <li>Sold Stock B for a <strong>$3,000 short-term gain</strong></li>
+    <li>Stock C is sitting at a <strong>$7,000 unrealized loss</strong></li>
+  </ul>
+  <p>Without harvesting, you owe tax on $11,000 of gains. If you sell Stock C before December 31 to realize the $7,000 loss:</p>
+  <ul>
+    <li>$7,000 loss offsets $7,000 of gains (long-term first: $8,000 - $7,000 = $1,000 long-term gain remaining)</li>
+    <li>You now owe tax on $1,000 long-term gain + $3,000 short-term gain = $4,000 total</li>
+    <li>At a 15% long-term rate and 22% short-term rate, you have saved roughly $1,050 in tax compared to the no-harvest scenario</li>
+  </ul>
+
+  <h2>The Wash-Sale Rule -- The Critical Trap</h2>
+  <p>The IRS wash-sale rule (IRC Section 1091) disallows a loss if you buy a "substantially identical" security within 30 days before or after the sale. The 61-day window (30 days before sale + sale date + 30 days after) is strict. If you trigger a wash sale, the disallowed loss is added to the cost basis of the replacement shares -- you do not lose it permanently, but you do lose the timing benefit.</p>
+  <p><strong>What counts as substantially identical?</strong> The same stock or fund. Switching from a mutual fund to an ETF tracking the same index is generally treated similarly. Most tax advisors treat two funds tracking the same index from different providers as acceptable substitutes, though the IRS has not published definitive guidance.</p>
+
+  <h2>When Tax-Loss Harvesting Makes Sense</h2>
+  <p>The strategy is most valuable when:</p>
+  <ul>
+    <li>You have realized capital gains elsewhere in the portfolio that year</li>
+    <li>You are in a higher tax bracket (22% or above for ordinary income, 15% or above for long-term gains)</li>
+    <li>The position can be replaced with a similar but not substantially identical investment to maintain your target allocation</li>
+    <li>Transaction costs are low (most major brokers have eliminated per-trade commissions)</li>
+  </ul>
+  <p>It makes less sense if you are in the 0% capital gains bracket (taxable income below $48,350 for single filers in 2026), if the loss is small and you would need to stay out of the position for 31 days in a rising market, or if the investment is inside a tax-advantaged account (losses in IRAs and 401(k)s do not generate deductible losses).</p>
+
+  <h2>Practical Year-End Checklist</h2>
+  <ul>
+    <li>Review your taxable accounts for unrealized losses in November and early December</li>
+    <li>Identify offsetting gains already realized that year</li>
+    <li>Check the 30-day window -- did you buy the same position recently?</li>
+    <li>Identify a replacement security that maintains your allocation without triggering wash-sale rules</li>
+    <li>Confirm the trade settles before December 31 (most brokers require trades placed by December 29 or 30)</li>
+  </ul>
+  <p>Use the <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate your current-year gain exposure and see how harvested losses would change your bill. For more on how long-term and short-term rates differ, see the <a href="/capital-gains-tax-rates-2025">2025 capital gains tax rates guide</a>.</p>
+
+  <h2>Source</h2>
+  <p>IRS Publication 550 (Investment Income and Expenses); IRS Topic No. 409 (Capital Gains and Losses); IRC Section 1091 (Wash Sales).</p>
+    `
+  },
+
+  {
+    slug: "gig-economy-taxes-2026",
+    title: "Gig Economy Taxes in 2026: What Uber, DoorDash, and Freelance Workers Owe",
+    date: "June 5, 2026",
+    dateISO: "2026-06-05",
+    author: "MyTaxCalcs Editorial",
+    category: "Self-Employment",
+    excerpt: "If you drive for rideshare, deliver food, or freelance on platforms like Upwork, you are self-employed in the eyes of the IRS -- and that changes how you are taxed. Here is exactly what gig workers owe and how to reduce it.",
+    metaDescription: "Gig economy workers owe self-employment tax plus income tax on net earnings. Learn what Uber, DoorDash, and freelance workers owe in 2026 and how to reduce it.",
+    ogTitle: "Gig Economy Taxes 2026: What Rideshare and Freelance Workers Owe",
+    ogDescription: "Uber drivers, DoorDash couriers, and freelancers are self-employed. Learn the taxes they owe, deductions available, and quarterly payment requirements for 2026.",
+    relatedLinks: [
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes" },
+      { href: "/blog/freelancer-tax-deductions-complete-list", label: "Freelancer Tax Deductions" },
+      { href: "/blog/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide" },
+    ],
+    content: `
+  <p>More than 73 million Americans earn income from gig work -- driving for rideshare platforms, delivering food, freelancing on project platforms, renting out property, or selling goods online. What many of them do not expect is the tax bill that comes with it. Unlike W-2 employees, gig workers receive no withholding and are responsible for tracking, calculating, and paying their own taxes.</p>
+
+  <h2>You Are Treated as Self-Employed</h2>
+  <p>When you work for Uber, Lyft, DoorDash, Instacart, Upwork, Fiverr, or any other platform as an independent contractor, the IRS treats you as self-employed -- regardless of what the platform calls you. This has two major tax consequences:</p>
+  <ul>
+    <li>You owe <strong>self-employment (SE) tax</strong> of 15.3% on net earnings (12.4% Social Security + 2.9% Medicare), which covers both the employer and employee share of FICA</li>
+    <li>You owe <strong>federal income tax</strong> on net profit at your regular marginal rate</li>
+  </ul>
+  <p>The combined tax burden on gig income -- even at relatively modest earnings -- is frequently higher than people expect because there is no employer absorbing half of the FICA tax.</p>
+
+  <h2>How the Math Works: A Real Example</h2>
+  <p>Suppose you earn $20,000 in net gig income in 2026 (after platform fees and deductible expenses), and you also have $50,000 in W-2 wages from a day job.</p>
+  <ul>
+    <li><strong>SE tax:</strong> $20,000 x 92.35% x 15.3% = <strong>$2,835</strong></li>
+    <li><strong>SE tax deduction:</strong> Half of SE tax ($1,417) is deductible above the line, reducing taxable income</li>
+    <li><strong>Income tax on remaining gig profit:</strong> At a 22% marginal rate on $18,583 = <strong>~$4,088</strong></li>
+    <li><strong>Total additional federal tax from gig income: ~$6,923</strong></li>
+  </ul>
+  <p>Use the <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to run your own numbers.</p>
+
+  <h2>The 1099-K Reporting Threshold</h2>
+  <p>For 2026, the IRS has confirmed a $5,000 reporting threshold for 1099-K forms from payment platforms (PayPal, Venmo, Stripe, etc.) for goods and services payments. However, all gig income is taxable regardless of whether you receive a 1099 -- the form is a reporting mechanism, not a threshold for taxability.</p>
+
+  <h2>Deductions That Reduce Your Taxable Gig Income</h2>
+  <p>You can deduct ordinary and necessary business expenses from your gross gig income. Common deductions for gig workers:</p>
+  <ul>
+    <li><strong>Mileage (rideshare/delivery):</strong> The 2026 IRS standard mileage rate is 72.5 cents per mile for business driving. Track every mile -- this is typically the largest deduction for rideshare and delivery workers</li>
+    <li><strong>Phone and data:</strong> The business-use portion of your phone bill</li>
+    <li><strong>Platform fees:</strong> Any fees the platform charges you directly</li>
+    <li><strong>Equipment and supplies:</strong> Insulated delivery bags, phone mounts, dashcams, cleaning supplies</li>
+    <li><strong>Health insurance premiums:</strong> Self-employed individuals can deduct 100% of health insurance premiums above the line</li>
+    <li><strong>Half of SE tax:</strong> Always deductible above the line</li>
+    <li><strong>SEP-IRA or Solo 401(k) contributions:</strong> Up to 25% of net self-employment income, significantly reducing taxable income</li>
+  </ul>
+
+  <h2>Quarterly Estimated Taxes</h2>
+  <p>Because no employer withholds taxes from gig income, you are required to pay estimated taxes quarterly if you expect to owe at least $1,000 in federal tax from self-employment. The 2026 deadlines are April 15, June 16, September 15, and January 15, 2027. See the <a href="/quarterly-estimated-taxes">quarterly estimated taxes guide</a> for exact calculation instructions.</p>
+
+  <h2>Source</h2>
+  <p>IRS Publication 334 (Tax Guide for Small Business); IRS Topic No. 554 (Self-Employment Tax); IRS IR-2024-273 (1099-K threshold guidance); IRS Rev. Proc. 2025-05 (2026 mileage rates).</p>
+    `
+  },
+
+  {
+    slug: "rental-income-taxes-2026",
+    title: "How Rental Income Is Taxed in 2026: Rules, Deductions, and Depreciation",
+    date: "May 30, 2026",
+    dateISO: "2026-05-30",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Rental income is taxable, but landlords can deduct mortgage interest, property taxes, depreciation, repairs, and more. Here is exactly how the IRS taxes rental property income -- and how to legally reduce it.",
+    metaDescription: "Rental income is taxed as ordinary income, but landlords can deduct mortgage interest, depreciation, repairs, and more. Learn the 2026 rules for rental property taxes.",
+    ogTitle: "Rental Income Taxes 2026: Deductions, Depreciation, and What You Owe",
+    ogDescription: "Rental income is taxable, but significant deductions are available. Learn how the IRS taxes rental property income in 2026 and what landlords can deduct.",
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/blog/tax-implications-of-buying-a-home", label: "Tax Implications of Buying a Home" },
+      { href: "/blog/capital-gains-tax-guide-2026", label: "Capital Gains Tax Guide 2026" },
+    ],
+    content: `
+  <p>Rental income -- whether from a long-term tenant, an Airbnb listing, or a second home you rent occasionally -- is generally taxable as ordinary income at the federal level. But rental property comes with a set of deductions that W-2 employees do not have access to, including depreciation, which can significantly reduce or even eliminate taxable rental income on paper.</p>
+
+  <h2>What Counts as Rental Income</h2>
+  <p>The IRS requires you to report all rental income, including:</p>
+  <ul>
+    <li>Monthly rent payments</li>
+    <li>Advance rent paid upfront</li>
+    <li>Security deposits you keep (if applied to rent or to cover damages)</li>
+    <li>Payments for canceling a lease</li>
+    <li>Services provided by a tenant in lieu of rent (valued at fair market value)</li>
+  </ul>
+
+  <h2>The 14-Day Rule for Vacation Rentals</h2>
+  <p>If you rent out a home that you also use personally, special rules apply. If you rent it for <strong>14 days or fewer</strong> per year, the rental income is completely tax-free and does not need to be reported. If you rent it for more than 14 days, the rental income is taxable and you must allocate expenses between personal and rental use based on the number of days each way.</p>
+
+  <h2>Deductible Rental Expenses</h2>
+  <p>Landlords can deduct ordinary and necessary expenses for managing, conserving, and maintaining rental property:</p>
+  <ul>
+    <li><strong>Mortgage interest:</strong> Fully deductible for rental properties (not subject to the $750,000 cap that applies to primary residences)</li>
+    <li><strong>Property taxes:</strong> Deductible as a rental expense (separate from the $10,000 SALT cap on Schedule A)</li>
+    <li><strong>Insurance premiums:</strong> Landlord insurance, liability coverage</li>
+    <li><strong>Repairs and maintenance:</strong> Fixing a leaky roof, replacing appliances, repainting -- costs that maintain the property, not improvements</li>
+    <li><strong>Property management fees</strong></li>
+    <li><strong>Advertising and listing fees</strong></li>
+    <li><strong>Professional fees:</strong> Accounting, legal fees related to the rental</li>
+    <li><strong>Travel:</strong> Miles driven to the property for management purposes at the 72.5 cents/mile 2026 rate</li>
+  </ul>
+
+  <h2>Depreciation: The Most Powerful Rental Deduction</h2>
+  <p>Depreciation allows you to deduct the cost of the property (not including land) over 27.5 years for residential rental property. This is a non-cash deduction -- you do not spend money to claim it; you simply deduct a portion of the property's original value each year.</p>
+  <p><strong>Example:</strong> You bought a rental house for $300,000. The land is worth $60,000, so the depreciable basis is $240,000. Annual depreciation: $240,000 / 27.5 = <strong>$8,727 per year</strong>. If your rental income is $18,000 and other deductible expenses are $12,000, depreciation turns a $6,000 taxable profit into a $2,727 loss on paper.</p>
+  <p>Important: when you sell the property, the IRS recaptures the depreciation you claimed at a rate of up to 25% (depreciation recapture tax). Keep careful records of all depreciation taken.</p>
+
+  <h2>Passive Activity Loss Rules</h2>
+  <p>Rental activities are generally classified as "passive" for tax purposes. Passive losses can normally only offset passive income. However, if your AGI is $100,000 or below and you actively participate in managing the rental, you can deduct up to <strong>$25,000 of rental losses</strong> against ordinary income. This allowance phases out between $100,000 and $150,000 of AGI.</p>
+  <p>If you qualify as a <strong>real estate professional</strong> (more than 750 hours per year in real estate activities), your rental losses are not passive and can offset all income without limit.</p>
+
+  <h2>Source</h2>
+  <p>IRS Publication 527 (Residential Rental Property); IRS Topic No. 414 (Rental Income and Expenses); IRS Form 4562 (Depreciation and Amortization).</p>
+    `
+  },
+
+  {
+    slug: "amended-tax-return-guide-2026",
+    title: "How to File an Amended Tax Return (Form 1040-X) in 2026",
+    date: "May 22, 2026",
+    dateISO: "2026-05-22",
+    author: "MyTaxCalcs Editorial",
+    category: "Filing",
+    excerpt: "Made a mistake on your tax return? You can fix it by filing Form 1040-X. Here is when to amend, how long you have, and exactly how to file -- including the IRS timeline for processing.",
+    metaDescription: "Filed a wrong tax return? Form 1040-X lets you correct errors and claim missed refunds. Learn when and how to file an amended return in 2026.",
+    ogTitle: "How to File an Amended Tax Return (Form 1040-X) in 2026",
+    ogDescription: "Made a mistake on a past tax return? Form 1040-X corrects errors and claims missed refunds. Learn the step-by-step process and IRS timelines for 2026.",
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
+      { href: "/blog/how-to-check-your-tax-refund-status-2026", label: "How to Check Your Refund Status" },
+      { href: "/tax-filing-deadline-2026", label: "Tax Filing Deadline 2026" },
+    ],
+    content: `
+  <p>Mistakes on a tax return happen -- a missed deduction, a forgotten income source, an incorrect filing status. The good news is the IRS provides a clear mechanism to fix them: Form 1040-X, the Amended U.S. Individual Income Tax Return. Filing an amended return can result in a larger refund, reduce an amount owed, or simply correct the record.</p>
+
+  <h2>When to File an Amended Return</h2>
+  <p>Common reasons to file Form 1040-X:</p>
+  <ul>
+    <li>You forgot to claim a deduction or credit (education credits, retirement contributions, business expenses)</li>
+    <li>You reported income incorrectly -- either too much or too little</li>
+    <li>You used the wrong filing status</li>
+    <li>You received a corrected 1099 or W-2 after filing</li>
+    <li>You forgot to claim a dependent</li>
+  </ul>
+  <p>You do not need to file an amended return for simple math errors -- the IRS corrects those automatically. You also do not need to amend if you forgot to attach a W-2; the IRS will contact you if needed.</p>
+
+  <h2>The 3-Year Deadline</h2>
+  <p>To claim a refund on an amended return, you must file within <strong>3 years from the original filing deadline</strong> (including extensions) or <strong>2 years from the date you paid the tax</strong>, whichever is later. For a 2022 return with an April 15, 2023 deadline, the 3-year window closes April 15, 2026.</p>
+
+  <h2>Step-by-Step: How to File Form 1040-X</h2>
+  <ol>
+    <li><strong>Get the right year's form.</strong> Use the Form 1040-X for the tax year you are amending. Download from IRS.gov.</li>
+    <li><strong>Have your original return handy.</strong> You will need the figures from your original 1040 to complete the "original amount" column on the 1040-X.</li>
+    <li><strong>Complete the three-column format.</strong> Column A shows original amounts, Column B shows the net change, Column C shows the corrected amounts.</li>
+    <li><strong>Attach supporting documentation.</strong> If claiming a new deduction, attach the relevant forms. If reporting additional income, attach the corrected 1099 or W-2.</li>
+    <li><strong>Explain the changes.</strong> Part III requires a clear written explanation of each change. Be specific.</li>
+    <li><strong>File electronically or by mail.</strong> The IRS accepts e-filed 1040-X returns for tax years 2019 and later. Earlier years require paper filing.</li>
+    <li><strong>Pay any additional tax owed.</strong> If your amendment increases your liability, pay it when you file to stop interest from accruing.</li>
+  </ol>
+
+  <h2>IRS Processing Times</h2>
+  <p>The IRS typically takes <strong>8 to 12 weeks</strong> to process a paper-filed 1040-X, and up to 20 weeks during peak periods. You can check status at IRS.gov using the "Where's My Amended Return?" tool.</p>
+
+  <h2>Source</h2>
+  <p>IRS Form 1040-X instructions; IRS Topic No. 308 (Amended Returns); IRS Publication 17 (Your Federal Income Tax).</p>
+    `
+  },
+
+  {
+    slug: "social-security-taxes-2026",
+    title: "Are Social Security Benefits Taxable? The 2026 Rules Explained",
+    date: "May 15, 2026",
+    dateISO: "2026-05-15",
+    author: "MyTaxCalcs Editorial",
+    category: "Retirement",
+    excerpt: "Up to 85% of your Social Security benefits may be taxable depending on your combined income. Here is how to calculate the taxable portion and what planning moves can reduce it.",
+    metaDescription: "Up to 85% of Social Security benefits are taxable depending on your combined income. Learn the 2026 thresholds and how to calculate what you owe.",
+    ogTitle: "Social Security Taxes 2026: How Much of Your Benefit Is Taxable?",
+    ogDescription: "Up to 85% of Social Security benefits may be subject to federal income tax. Learn the combined income thresholds and how to calculate the taxable amount.",
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/taxes-in-retirement-what-to-expect", label: "Taxes in Retirement" },
+      { href: "/blog/retirement-accounts-and-taxes-401k-ira-roth", label: "Retirement Accounts and Taxes" },
+      { href: "/marginal-vs-effective-tax-rate", label: "Marginal vs Effective Tax Rate" },
+    ],
+    content: `
+  <p>Many retirees are surprised to learn that Social Security benefits can be taxable. Whether yours are -- and how much -- depends on a figure called "combined income," which the IRS uses to determine how much of your benefit to include in taxable income. The thresholds have not been adjusted for inflation since 1984 and 1993, which means more retirees cross them each year as benefit amounts rise.</p>
+
+  <h2>What Is "Combined Income"?</h2>
+  <p>Combined income is the IRS's specific formula for measuring total income for Social Security taxation purposes:</p>
+  <p style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px 20px;font-size:.95rem;line-height:1.8"><strong>Combined Income = Adjusted Gross Income + Nontaxable Interest + 50% of Social Security Benefits</strong></p>
+  <p>Note: tax-exempt municipal bond interest is included even though it is not normally in AGI.</p>
+
+  <h2>The Three Tiers: 0%, 50%, and 85%</h2>
+  <table>
+    <thead><tr><th>Filing Status</th><th>Combined Income</th><th>Taxable Portion</th></tr></thead>
+    <tbody>
+      <tr><td>Single / Head of Household</td><td>Below $25,000</td><td>0%</td></tr>
+      <tr><td>Single / Head of Household</td><td>$25,000 -- $34,000</td><td>Up to 50%</td></tr>
+      <tr><td>Single / Head of Household</td><td>Above $34,000</td><td>Up to 85%</td></tr>
+      <tr><td>Married Filing Jointly</td><td>Below $32,000</td><td>0%</td></tr>
+      <tr><td>Married Filing Jointly</td><td>$32,000 -- $44,000</td><td>Up to 50%</td></tr>
+      <tr><td>Married Filing Jointly</td><td>Above $44,000</td><td>Up to 85%</td></tr>
+    </tbody>
+  </table>
+
+  <h2>A Worked Example</h2>
+  <p>You are single, receive $24,000 in Social Security benefits, and have $18,000 in IRA withdrawals and $2,000 in interest income.</p>
+  <ul>
+    <li>AGI: $20,000</li>
+    <li>50% of Social Security: $12,000</li>
+    <li>Combined income: $32,000 -- in the 50% tier</li>
+    <li>Taxable portion: lesser of 50% of benefits ($12,000) or 50% of the amount over $25,000 ($3,500)</li>
+    <li><strong>$3,500 of your Social Security is taxable</strong></li>
+  </ul>
+
+  <h2>Planning Strategies</h2>
+  <ul>
+    <li><strong>Roth conversions before claiming Social Security</strong> reduce future RMDs and combined income</li>
+    <li><strong>Qualified Charitable Distributions (QCDs)</strong> satisfy RMDs without increasing AGI</li>
+    <li><strong>HSA spending</strong> for medical expenses avoids adding to AGI</li>
+  </ul>
+
+  <h2>State Taxes on Social Security</h2>
+  <p>Most states do not tax Social Security benefits, but 10 states currently do to varying degrees. Check your <a href="/states">state income tax calculator</a> for state-specific information.</p>
+
+  <h2>Source</h2>
+  <p>IRS Publication 915 (Social Security and Equivalent Railroad Retirement Benefits); Social Security Administration OASDI Fact Sheet 2026.</p>
+    `
+  },
+
+  {
+    slug: "irs-audit-triggers-2026",
+    title: "IRS Audit Triggers in 2026: What Makes Your Return Stand Out",
+    date: "May 8, 2026",
+    dateISO: "2026-05-08",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax News",
+    excerpt: "Most returns are never audited, but certain deductions, income levels, and filing patterns attract IRS attention. Here is what the data says actually triggers audits in 2026.",
+    metaDescription: "Certain deductions and income patterns increase your IRS audit risk. Learn what actually triggers audits in 2026 and how to document your return properly.",
+    ogTitle: "IRS Audit Triggers 2026: What Raises Your Risk and How to Stay Clean",
+    ogDescription: "Most taxpayers are never audited, but certain deductions and patterns draw IRS scrutiny. Learn the real audit triggers for 2026 and how to protect yourself.",
+    relatedLinks: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/irs-dirty-dozen-tax-scams-2026", label: "IRS Dirty Dozen Scams 2026" },
+      { href: "/blog/freelancer-tax-deductions-complete-list", label: "Freelancer Tax Deductions" },
+      { href: "/blog/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide" },
+    ],
+    content: `
+  <p>The IRS audited approximately 0.4% of individual income tax returns in fiscal year 2024 -- less than 1 in 200. The risk is low overall, but it is not evenly distributed. Certain income levels, deduction patterns, and filing characteristics significantly increase the probability of a closer look.</p>
+
+  <h2>How the IRS Selects Returns</h2>
+  <ul>
+    <li><strong>DIF score:</strong> Every return receives a computer-generated score based on what deductions and income patterns look unusual for a given income level. High scores flag returns for human review.</li>
+    <li><strong>Document matching:</strong> The IRS matches income on your return against 1099s and W-2s filed by payers. Discrepancies trigger automatic CP2000 notices.</li>
+    <li><strong>Related examinations:</strong> If someone who paid you is audited, the IRS may examine your return as a related party.</li>
+  </ul>
+
+  <h2>Common Audit Triggers</h2>
+
+  <h3>Large Deductions Relative to Income</h3>
+  <p>The IRS knows what charitable contributions and business expenses look like for a given income level. A $40,000 charitable deduction on a $60,000 income return will score high. Document all deductions thoroughly.</p>
+
+  <h3>Schedule C Losses -- Especially Repeated Losses</h3>
+  <p>Self-employment income on Schedule C draws disproportionate attention because it is self-reported. Businesses showing losses year after year may be reclassified as hobbies. The IRS looks for a profit in at least 3 of the last 5 years as an indicator of profit motive.</p>
+
+  <h3>Home Office Deduction</h3>
+  <p>Legitimate for genuine home-based businesses, but the IRS requires exclusive and regular use of the space for business. Document the square footage and the exclusive business use.</p>
+
+  <h3>Cryptocurrency Transactions</h3>
+  <p>The IRS now requires all taxpayers to answer a digital asset question on the front page of Form 1040. Exchanges file 1099-DAs with the IRS. Underreporting crypto gains is a specific enforcement priority.</p>
+
+  <h3>Mismatched Information Returns</h3>
+  <p>The most common cause of IRS notices: a 1099 is filed with the IRS but not reported on your return. Always verify that every 1099 you received is accounted for on your return.</p>
+
+  <h2>How to Protect Yourself</h2>
+  <ul>
+    <li>Keep receipts and records for at least 3 years (6 years if you substantially underreported income)</li>
+    <li>For mileage, keep a contemporaneous log with date, destination, business purpose, and miles</li>
+    <li>For charitable contributions over $250, obtain a written acknowledgment from the organization</li>
+    <li>Report all income -- including cash, crypto, and side gig income</li>
+  </ul>
+
+  <h2>Source</h2>
+  <p>IRS Data Book FY2024; IRS Publication 556 (Examination of Returns, Appeal Rights, and Claims for Refund).</p>
+    `
+  },
+
+  {
+    slug: "medical-expense-tax-deduction-2026",
+    title: "Medical Expense Tax Deduction 2026: What Qualifies and How to Claim It",
+    date: "May 1, 2026",
+    dateISO: "2026-05-01",
+    author: "MyTaxCalcs Editorial",
+    category: "Deductions",
+    excerpt: "Medical expenses above 7.5% of your adjusted gross income are deductible on Schedule A. Here is what qualifies, what does not, and how to determine if itemizing makes sense for your situation.",
+    metaDescription: "Medical expenses over 7.5% of AGI are deductible if you itemize. Learn what qualifies for the 2026 medical expense deduction and how to calculate it.",
+    ogTitle: "Medical Expense Deduction 2026: What Qualifies and How to Calculate It",
+    ogDescription: "The medical expense deduction covers costs above 7.5% of AGI. Learn what qualifies, what is excluded, and when it makes sense to itemize in 2026.",
+    relatedLinks: [
+      { href: "/standard-deduction-vs-itemized", label: "Standard Deduction vs Itemized" },
+      { href: "/standard-deduction-2025", label: "Standard Deduction 2025" },
+      { href: "/hsa-contribution-limits-2025", label: "HSA Contribution Limits" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    ],
+    content: `
+  <p>If you had significant out-of-pocket medical costs in 2026, you may be able to deduct them on your federal return -- but only qualifying medical expenses that exceed 7.5% of your adjusted gross income (AGI), and only if you itemize deductions rather than taking the standard deduction.</p>
+
+  <h2>The 7.5% AGI Floor</h2>
+  <p>The threshold means you cannot deduct all medical expenses -- only the amount above 7.5% of AGI. For a filer with $60,000 in AGI, the floor is $4,500. If you paid $8,000 in qualifying medical costs, you can deduct <strong>$3,500</strong> ($8,000 - $4,500).</p>
+
+  <h2>What Qualifies</h2>
+  <ul>
+    <li>Doctor, dentist, and specialist visit co-pays and fees not covered by insurance</li>
+    <li>Hospital and surgery costs</li>
+    <li>Prescription medications</li>
+    <li>Medical equipment (wheelchairs, crutches, blood pressure monitors)</li>
+    <li>Eyeglasses, contact lenses, and eye exams</li>
+    <li>Mental health treatment and therapy</li>
+    <li>Long-term care services and eligible long-term care insurance premiums</li>
+    <li>Mileage driven for medical purposes (21 cents per mile in 2026)</li>
+    <li>Hearing aids, fertility treatments, smoking cessation programs</li>
+    <li>Health insurance premiums paid with after-tax dollars (not pre-tax through employer)</li>
+  </ul>
+
+  <h2>What Does Not Qualify</h2>
+  <ul>
+    <li>Over-the-counter medications (unless prescribed)</li>
+    <li>Cosmetic surgery not medically necessary</li>
+    <li>Gym memberships and general wellness programs</li>
+    <li>Premiums paid with pre-tax employer dollars</li>
+    <li>Expenses reimbursed by insurance or an HSA/FSA</li>
+  </ul>
+
+  <h2>The Standard Deduction Comparison</h2>
+  <p>For 2026, the standard deduction is $15,000 (single) and $30,000 (married filing jointly). Your total Schedule A deductions must exceed these amounts to make itemizing worthwhile. The medical expense deduction is most valuable in years with an extraordinary medical event -- major surgery, serious illness, or long-term care costs. For a side-by-side comparison, see the <a href="/standard-deduction-vs-itemized">standard deduction vs. itemized guide</a>.</p>
+
+  <h2>Source</h2>
+  <p>IRS Publication 502 (Medical and Dental Expenses); IRS Topic No. 502; IRS Rev. Proc. 2025-13 (2026 long-term care premium limits).</p>
+    `
+  },
+
+  {
+    slug: "dependent-care-fsa-tax-benefits-2026",
+    title: "Dependent Care FSA and Child Care Tax Benefits in 2026",
+    date: "April 24, 2026",
+    dateISO: "2026-04-24",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Working parents can reduce their child care costs with a Dependent Care FSA or the Child and Dependent Care Tax Credit -- or both. Here is how each works and which one saves more in your situation.",
+    metaDescription: "Working parents can use a Dependent Care FSA or the Child and Dependent Care Tax Credit to offset child care costs. Learn the 2026 limits and how to maximize your savings.",
+    ogTitle: "Dependent Care FSA vs. Child Care Tax Credit 2026: Which Saves More?",
+    ogDescription: "The Dependent Care FSA and Child and Dependent Care Tax Credit both reduce child care costs. Learn the 2026 limits, how they interact, and which saves more.",
+    relatedLinks: [
+      { href: "/child-tax-credit-2025", label: "Child Tax Credit 2025" },
+      { href: "/hsa-contribution-limits-2025", label: "HSA Contribution Limits" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/blog/taxes-when-you-have-a-child", label: "Taxes When You Have a Child" },
+    ],
+    content: `
+  <p>Child care is one of the largest household expenses for working parents, and the tax code offers two mechanisms to offset the cost: the Dependent Care Flexible Spending Account (DC-FSA) and the Child and Dependent Care Tax Credit. Understanding how each works -- and how they interact -- can save a family thousands of dollars per year.</p>
+
+  <h2>Dependent Care FSA (DC-FSA)</h2>
+  <p>A DC-FSA is an employer-sponsored benefit that lets you set aside pre-tax dollars for qualifying dependent care expenses. The 2026 contribution limit is <strong>$5,000 per household</strong> ($2,500 if married filing separately).</p>
+  <p>At a 22% federal rate plus a 6% state rate, contributing $5,000 saves you 28% = <strong>$1,400 in income taxes</strong>, plus the FICA exemption adds roughly $382 more. Total tax savings on a $5,000 contribution: approximately $1,782.</p>
+  <p>Eligible expenses: daycare, after-school programs, summer day camps (not overnight), in-home childcare (nannies, au pairs), and care for a dependent who is incapable of self-care.</p>
+  <p>The "use it or lose it" rule applies -- unused funds are forfeited at year-end unless your plan offers a grace period or rollover (up to $640 in 2026).</p>
+
+  <h2>Child and Dependent Care Tax Credit</h2>
+  <p>For 2026:</p>
+  <ul>
+    <li>Maximum qualifying expenses: <strong>$3,000 for one qualifying person</strong>, <strong>$6,000 for two or more</strong></li>
+    <li>Credit percentage: 20% to 35% depending on AGI. At 20% of $6,000, the maximum credit for most households is <strong>$1,200</strong></li>
+  </ul>
+
+  <h2>How They Interact: You Cannot Double-Count</h2>
+  <p>Expenses reimbursed through a DC-FSA cannot also be used to claim the Child and Dependent Care Tax Credit. You must subtract your DC-FSA reimbursements from the maximum eligible expenses before calculating the credit.</p>
+  <p><strong>Example:</strong> Two children in daycare costing $14,000/year. You contribute $5,000 to a DC-FSA. For the credit, maximum qualifying expenses are $6,000 minus the $5,000 DC-FSA use = $1,000 eligible. At 20%, the credit is $200. Total benefit: $1,782 + $200 = <strong>$1,982</strong>.</p>
+
+  <h2>Which Is Better?</h2>
+  <p>For most households in the 22% bracket or above, the DC-FSA provides a larger benefit because it saves taxes at your marginal rate plus FICA, while the credit tops out at 20% for most income levels. If your employer does not offer a DC-FSA, the credit is your only option. See the <a href="/child-tax-credit-2025">Child Tax Credit guide</a> for information on the separate Child Tax Credit.</p>
+
+  <h2>Source</h2>
+  <p>IRS Publication 503 (Child and Dependent Care Expenses); IRS Form 2441 instructions; IRS Rev. Proc. 2025-19 (2026 FSA limits).</p>
+    `
+  },
+
+  {
+    slug: "backdoor-roth-ira-2026",
+    title: "Backdoor Roth IRA 2026: How High-Income Earners Can Still Contribute",
+    date: "April 17, 2026",
+    dateISO: "2026-04-17",
+    author: "MyTaxCalcs Editorial",
+    category: "Retirement",
+    excerpt: "High earners above the Roth IRA income limits can still get money into a Roth through the backdoor Roth strategy. Here is exactly how it works, the pro-rata rule to watch for, and how to report it on your taxes.",
+    metaDescription: "High-income earners above Roth IRA income limits can use the backdoor Roth strategy to contribute in 2026. Learn the steps, the pro-rata rule, and how to report it.",
+    ogTitle: "Backdoor Roth IRA 2026: The Step-by-Step Guide for High Earners",
+    ogDescription: "Income limits block direct Roth IRA contributions above $165,000 (single) or $246,000 (married). Learn how the backdoor Roth strategy works in 2026.",
+    relatedLinks: [
+      { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
+      { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
+      { href: "/blog/retirement-accounts-and-taxes-401k-ira-roth", label: "Retirement Accounts and Taxes" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    ],
+    content: `
+  <p>Direct Roth IRA contributions are phased out for single filers with MAGI between $150,000 and $165,000, and for married couples filing jointly between $236,000 and $246,000 in 2026. Above those thresholds, you cannot contribute to a Roth IRA directly. But a workaround -- the "backdoor Roth" -- is fully legal and widely used by high-income earners.</p>
+
+  <h2>The Two-Step Process</h2>
+  <ol>
+    <li><strong>Make a non-deductible contribution to a traditional IRA.</strong> Anyone with earned income can contribute regardless of income level. The 2026 limit is $7,500 ($8,600 if age 50 or older). Because you are over the income limit for both Roth contributions and deductible traditional IRA contributions, this contribution is non-deductible. File Form 8606 to record it -- this is critical for avoiding double taxation later.</li>
+    <li><strong>Convert the traditional IRA to a Roth IRA.</strong> Since you already paid tax on the contribution (it was non-deductible), only earnings that accumulated between contribution and conversion are taxable. If you convert quickly, earnings are minimal and the taxable amount is close to zero.</li>
+  </ol>
+
+  <h2>The Pro-Rata Rule: The Most Important Trap</h2>
+  <p>The backdoor Roth works cleanly only if you have <strong>no pre-tax money in any traditional IRA</strong> (including SEP-IRA and SIMPLE IRA). If you do, the pro-rata rule makes the conversion partially taxable.</p>
+  <p><strong>Example:</strong> You contribute $7,500 non-deductible. But you also have $67,500 in a pre-tax rollover IRA. Total IRA balance: $75,000. Pre-tax ratio: 90%. If you convert the $7,500, 90% of it ($6,750) is taxable -- even though you contributed after-tax dollars.</p>
+  <p><strong>Solution:</strong> Roll existing pre-tax IRA funds into your current employer's 401(k) plan (if the plan accepts incoming rollovers) before executing the backdoor Roth. Once the pre-tax IRA is empty, the conversion is clean.</p>
+
+  <h2>How to Report It</h2>
+  <ul>
+    <li><strong>Form 8606, Part I:</strong> Report your non-deductible contribution to establish your basis</li>
+    <li><strong>Form 8606, Part II:</strong> Report the Roth conversion and calculate the taxable amount</li>
+    <li>You will receive a <strong>Form 1099-R</strong> from your IRA custodian showing the conversion</li>
+  </ul>
+  <p>The most common mistake: skipping Form 8606 because you think "I already paid tax on it." Without Form 8606 on file, the IRS has no record of your basis and future distributions will appear fully taxable.</p>
+
+  <h2>Source</h2>
+  <p>IRS Publication 590-A (Contributions to Individual Retirement Arrangements); IRS Form 8606 instructions; IRS Notice 2014-54.</p>
+    `
+  },
+
   // ── NEW POST — June 5, 2026 ─────────────────────────────────────────────────
   {
     slug: "hobby-vs-business-taxes-2026",
