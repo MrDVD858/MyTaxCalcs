@@ -441,6 +441,62 @@ app.get("/bonus-tax-rate-2025", (req, res) => {
   });
 });
 
+
+// ── SEO GUIDES: 2026 FICA, SE TAX, BONUS, CHILD CREDIT, HSA, 401K ────────────
+app.get("/fica-tax-rate-2026", (req, res) => {
+  res.render("fica-tax-rate-2026", {
+    pageTitle: "FICA Tax Rate 2026: Social Security and Medicare Rates",
+    metaDescription: "2026 FICA tax rates: Social Security 6.2% on wages up to an estimated $180,400. Medicare 1.45% on all wages. Self-employed pay 15.3%. Projected figures for planning.",
+    ogTitle: "FICA Tax Rate 2026: SS & Medicare Rates | MyTaxCalcs",
+    ogDescription: "Projected 2026 FICA tax rates for employees, employers, and self-employed. Social Security 6.2%, Medicare 1.45%, projected wage base ~$180,400."
+  });
+});
+
+app.get("/self-employment-tax-rate-2026", (req, res) => {
+  res.render("self-employment-tax-rate-2026", {
+    pageTitle: "Self-Employment Tax Rate 2026: 15.3% Explained",
+    metaDescription: "The 2026 self-employment tax rate is 15.3%: 12.4% Social Security on net earnings up to ~$180,400 and 2.9% Medicare on all earnings. Projected wage base — official SSA figure due October 2026.",
+    ogTitle: "Self-Employment Tax Rate 2026 | MyTaxCalcs",
+    ogDescription: "2026 SE tax rate is 15.3% on 92.35% of net earnings. Projected SS wage base ~$180,400."
+  });
+});
+
+app.get("/bonus-tax-rate-2026", (req, res) => {
+  res.render("bonus-tax-rate-2026", {
+    pageTitle: "Bonus Tax Rate 2026: How Bonuses Are Taxed and What to Expect",
+    metaDescription: "How bonuses are taxed in 2026. The IRS flat withholding rate is 22% for most bonuses. Learn the aggregate method, supplemental wage rules, and strategies to reduce the hit.",
+    ogTitle: "Bonus Tax Rate 2026: How Bonuses Are Taxed | MyTaxCalcs",
+    ogDescription: "How the IRS taxes bonuses in 2026. Flat rate 22% under $1M, 37% above."
+  });
+});
+
+app.get("/child-tax-credit-2026", (req, res) => {
+  res.render("child-tax-credit-2026", {
+    pageTitle: "Child Tax Credit 2026: Amount, Rules, and Who Qualifies",
+    metaDescription: "Child Tax Credit 2026: $2,200 per qualifying child under 17, permanent under the One Big Beautiful Bill Act. Learn income limits, refundable portion, and how to claim it.",
+    ogTitle: "Child Tax Credit 2026: Amount & Rules | MyTaxCalcs",
+    ogDescription: "Child Tax Credit 2026: $2,200 per child permanent under OBBBA. Phase-out at $200K single/$400K MFJ."
+  });
+});
+
+app.get("/hsa-contribution-limits-2026", (req, res) => {
+  res.render("hsa-contribution-limits-2026", {
+    pageTitle: "HSA Contribution Limits 2026: Rules, Tax Benefits, and HDHP Requirements",
+    metaDescription: "2026 HSA contribution limits: projected $4,400 for self-only and $8,750 for family coverage. Triple tax advantage, HDHP requirements, and catch-up rules explained.",
+    ogTitle: "HSA Contribution Limits 2026 | MyTaxCalcs",
+    ogDescription: "Projected 2026 HSA limits: $4,400 self-only, $8,750 family. Triple tax advantage explained."
+  });
+});
+
+app.get("/401k-contribution-limits-2026", (req, res) => {
+  res.render("401k-contribution-limits-2026", {
+    pageTitle: "401(k) Contribution Limits 2026: Employee and Employer Limits",
+    metaDescription: "2026 401(k) contribution limits: employee limit $23,500 unchanged. Total combined limit projected ~$71,000. SECURE 2.0 super catch-up $11,250 for ages 60-63.",
+    ogTitle: "401(k) Contribution Limits 2026 | MyTaxCalcs",
+    ogDescription: "2026 401(k) employee limit $23,500 unchanged. Combined ~$71,000. IRA $7,000."
+  });
+});
+
 // ── SEO GUIDES: TAX HELP ──────────────────────────────────────────────────────
 app.get("/irs-payment-plan-guide", (req, res) => {
   res.render("irs-payment-plan-guide", {
@@ -534,6 +590,12 @@ app.get("/sitemap.xml", (req, res) => {
     { path: "/tax-extension-2026",              priority: "0.9", freq: "monthly" },
     { path: "/w2-vs-1099",                      priority: "0.8", freq: "yearly"  },
     { path: "/bonus-tax-rate-2025",             priority: "0.8", freq: "monthly" },
+    { path: "/fica-tax-rate-2026",              priority: "0.8", freq: "monthly" },
+    { path: "/self-employment-tax-rate-2026",   priority: "0.8", freq: "monthly" },
+    { path: "/bonus-tax-rate-2026",             priority: "0.8", freq: "monthly" },
+    { path: "/child-tax-credit-2026",           priority: "0.8", freq: "monthly" },
+    { path: "/hsa-contribution-limits-2026",    priority: "0.8", freq: "monthly" },
+    { path: "/401k-contribution-limits-2026",   priority: "0.8", freq: "monthly" },
     { path: "/roth-ira-conversion-tax",         priority: "0.8", freq: "yearly"  },
     { path: "/401k-contribution-limits-2025",   priority: "0.8", freq: "monthly" },
     { path: "/hsa-contribution-limits-2025",    priority: "0.8", freq: "monthly" },

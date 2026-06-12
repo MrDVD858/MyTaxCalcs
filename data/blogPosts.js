@@ -5,6 +5,170 @@ const blogPosts = [
 
   // ── NEW POSTS — April–June 2026 ────────────────────────────────────────────
 
+  // ── ADDED June 11, 2026 ────────────────────────────────────────────────────
+
+  {
+  slug: "2026-tax-planning-checklist",
+  title: "2026 Tax Planning Checklist: 12 Moves to Make Before Year-End",
+  date: "June 11, 2026",
+  dateISO: "2026-06-11",
+  author: "MyTaxCalcs Editorial Team",
+  category: "Tax Planning",
+  excerpt: "A practical 12-step year-end tax planning checklist for 2026. Max retirement accounts, review withholding, harvest losses, and reduce your taxable income before December 31.",
+  metaDescription: "2026 tax planning checklist: 12 practical steps to reduce your tax bill before year-end. Max your 401(k), review W-4, harvest losses, fund your HSA, and more.",
+  ogTitle: "2026 Tax Planning Checklist: 12 Year-End Moves | MyTaxCalcs",
+  ogDescription: "12 practical tax planning moves to make before December 31, 2026. Reduce taxable income, max retirement accounts, and avoid surprises at filing.",
+  content: `
+<p>Year-end tax planning is not glamorous, but the moves you make before December 31 can meaningfully reduce what you owe when you file. This checklist covers 12 concrete actions for 2026 &mdash; from retirement contributions to withholding adjustments &mdash; each tied to specific dollar amounts and deadlines.</p>
+
+<div style="background:#fef3c7;border:1px solid #fde68a;border-left:4px solid #f59e0b;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.88rem;color:#78350f;">
+  <strong>December 31 hard deadline:</strong> Most of these items must be completed by December 31, 2026. IRA contributions have until April 15, 2027. HSA contributions also have until April 15, 2027 if made directly (not through payroll).
+</div>
+
+<h2>1. Max Your 401(k) Contributions</h2>
+<p>The 2026 employee elective deferral limit is <strong>$23,500</strong> ($31,000 if 50+, $34,750 if 60&ndash;63). Every pre-tax dollar contributed reduces your taxable income now. If you have not hit the limit, increase your deferral rate with your HR or benefits portal before the final payroll of the year. Contributions must come through payroll &mdash; you cannot make a lump-sum 401(k) contribution after year-end. See our <a href="/401k-contribution-limits-2026" style="color:#16a34a;font-weight:600;">2026 401(k) limits guide</a> for full details.</p>
+
+<h2>2. Fund Your HSA</h2>
+<p>If you have a qualifying HDHP, the projected 2026 HSA limit is <strong>$4,400</strong> (self-only) or <strong>$8,750</strong> (family). HSA contributions are deductible, grow tax-free, and withdraw tax-free for medical expenses &mdash; the only triple-tax-advantaged account. You have until April 15, 2027, to contribute for 2026 if contributing directly (not through payroll). See our <a href="/hsa-contribution-limits-2026" style="color:#16a34a;font-weight:600;">2026 HSA limits guide</a>.</p>
+
+<h2>3. Review Your W-4 Withholding</h2>
+<p>A major life change in 2026 &mdash; marriage, divorce, a new child, a side income, or a significant pay increase &mdash; can cause under-withholding and a surprise balance due at filing. Use our <a href="/payroll-tax-calculator" style="color:#16a34a;font-weight:600;">payroll tax calculator</a> to estimate your year-end position. If you are under-withheld, you can file a new W-4 with your employer to increase withholding for the remaining pay periods, or make a Q4 estimated tax payment by January 15, 2027.</p>
+
+<h2>4. Harvest Tax Losses</h2>
+<p>If you hold investments with unrealized losses in a taxable brokerage account, selling them before December 31 lets you realize the loss and offset capital gains &mdash; or offset up to $3,000 of ordinary income if losses exceed gains. This is called tax-loss harvesting. Be aware of the 30-day wash-sale rule: you cannot repurchase the same or substantially identical security within 30 days before or after the sale and still claim the loss.</p>
+
+<h2>5. Check Your Capital Gains Exposure</h2>
+<p>Long-term capital gains are taxed at 0%, 15%, or 20% depending on your income. If your income for 2026 will be below the 15% threshold (~$47,025 single / ~$94,050 MFJ projected), you may be able to realize long-term gains at a 0% rate. Conversely, if you plan to sell appreciated assets, doing so before your income crosses a threshold can save meaningful tax. See our <a href="/capital-gains-tax-rates-2026" style="color:#16a34a;font-weight:600;">2026 capital gains rates guide</a>.</p>
+
+<h2>6. Make Your Q4 Estimated Tax Payment</h2>
+<p>If you are self-employed, have rental income, or receive significant investment income, your Q4 2026 estimated tax payment is due <strong>January 15, 2027</strong>. To avoid underpayment penalties, your total payments (withholding + estimated) must cover at least 90% of your 2026 tax or 100% of your 2025 tax (110% if 2025 AGI exceeded $150,000). See our <a href="/quarterly-estimated-taxes" style="color:#16a34a;font-weight:600;">quarterly estimated tax guide</a>.</p>
+
+<h2>7. Bunch Charitable Contributions</h2>
+<p>With the 2026 standard deduction projected at ~$15,750 (single) or ~$31,500 (MFJ), most filers take the standard deduction and get no marginal benefit from charitable donations. Consider bunching two years of donations into 2026 to push above the standard deduction threshold, then skip 2027. A donor-advised fund (DAF) lets you contribute a lump sum in 2026, claim the full deduction, and distribute gifts to charities over multiple years.</p>
+
+<h2>8. Take Required Minimum Distributions (RMDs)</h2>
+<p>If you are 73 or older and have traditional IRA or pre-tax 401(k) balances, you must take your 2026 RMD by December 31. Missing an RMD triggers a 25% penalty on the amount not taken (reduced to 10% if corrected promptly). First-year RMDs for those who turned 73 in 2026 can be delayed until April 1, 2027 &mdash; but delaying means two RMDs in 2027, which can push income higher.</p>
+
+<h2>9. Consider a Roth Conversion</h2>
+<p>If your 2026 taxable income is lower than usual &mdash; due to retirement, a sabbatical, or a business loss &mdash; this may be a good year to convert some pre-tax IRA funds to Roth. The conversion amount is added to your taxable income, so the goal is to convert up to the top of your current bracket without crossing into the next. Roth accounts have no RMDs and grow tax-free indefinitely. See our <a href="/roth-ira-conversion-tax" style="color:#16a34a;font-weight:600;">Roth conversion tax guide</a>.</p>
+
+<h2>10. Review Your MAGI for Key Thresholds</h2>
+<p>Several deductions and credits phase out at specific MAGI thresholds. Check where you stand before year-end so you can take action if you are close to a limit:</p>
+<ul style="padding-left:20px;line-height:1.9;color:#374151;">
+  <li><strong>Child Tax Credit</strong> ($2,200/child): phases out at $200,000 single / $400,000 MFJ</li>
+  <li><strong>Roth IRA direct contributions</strong>: phase out $150,000&ndash;$165,000 single / $236,000&ndash;$246,000 MFJ (projected)</li>
+  <li><strong>Traditional IRA deductibility</strong>: phases out at lower thresholds if covered by a workplace plan</li>
+  <li><strong>Net Investment Income Tax (3.8%)</strong>: applies above $200,000 single / $250,000 MFJ</li>
+  <li><strong>Additional Medicare surtax (0.9%)</strong>: same thresholds as NIIT</li>
+</ul>
+<p>Pre-tax retirement contributions (401k, traditional IRA, SEP-IRA) reduce MAGI and can shift you below a threshold. An end-of-year calculation now gives you time to act.</p>
+
+<h2>11. Use Flexible Spending Account Balances</h2>
+<p>Healthcare FSA and Dependent Care FSA balances typically follow use-it-or-lose-it rules, though many plans offer a small grace period or rollover. Check your FSA balance now &mdash; if you have money you might not use, schedule medical appointments, order prescription refills, pick up eligible OTC items (bandages, pain relievers, etc.), or buy prescription eyeglasses before the plan year closes.</p>
+
+<h2>12. Start Gathering Records for Filing</h2>
+<p>Begin organizing documents now so you are ready for the April 15, 2027 filing deadline. Key items to track: all W-2s and 1099s, brokerage year-end statements (for cost basis), records of charitable contributions, home office or vehicle business use logs, and any 1095-A if you received ACA marketplace coverage. If you use a tax professional, book early &mdash; capacity fills up in February and March.</p>
+
+<h2>Important 2026 Tax Deadlines to Know</h2>
+<table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin:16px 0;font-size:.9rem;">
+  <thead>
+    <tr style="background:#f9fafb;">
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Deadline</th>
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">What&rsquo;s Due</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;">December 31, 2026</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">401(k) contributions, RMDs, tax-loss harvesting, charitable gifts</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;">January 15, 2027</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Q4 2026 estimated tax payment</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;">April 15, 2027</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">2026 federal tax return due; IRA and HSA contribution deadline</td></tr>
+    <tr><td style="padding:10px 14px;font-weight:700;">October 15, 2027</td><td style="padding:10px 14px;">Extended return deadline (Form 4868 required by April 15)</td></tr>
+  </tbody>
+</table>
+
+<p>Use our <a href="/income-tax-calculator" style="color:#16a34a;font-weight:600;">income tax calculator</a> to estimate where you stand now, then revisit after making any of these moves to see the impact on your projected tax bill.</p>
+`
+},
+
+// ──────────────────────────────────────────────────────────────────────────────
+
+{
+  slug: "roth-ira-income-limits-2026",
+  title: "Roth IRA Income Limits 2026: Eligibility and Phase-Out Ranges",
+  date: "June 11, 2026",
+  dateISO: "2026-06-11",
+  author: "MyTaxCalcs Editorial Team",
+  category: "Retirement",
+  excerpt: "The 2026 Roth IRA contribution limit is $7,000 ($8,000 if 50+). Income phase-outs: $150,000&ndash;$165,000 single, $236,000&ndash;$246,000 MFJ. Plan ahead with projected figures.",
+  metaDescription: "2026 Roth IRA income limits: phase-out begins at $150,000 for single filers and $236,000 for married filing jointly. Contribution limit $7,000. Projected figures for planning.",
+  ogTitle: "Roth IRA Income Limits 2026 | MyTaxCalcs",
+  ogDescription: "2026 Roth IRA phase-out ranges: $150K&ndash;$165K single, $236K&ndash;$246K MFJ. Contribution limit $7,000.",
+  content: `
+<p>A Roth IRA lets you contribute after-tax dollars and withdraw qualified earnings completely tax-free in retirement. The catch: your ability to contribute directly phases out above certain income thresholds. For 2026, these thresholds are projected to remain near 2025 levels based on current inflation data.</p>
+
+<h2>2026 Roth IRA Contribution Limit</h2>
+<p>The 2026 Roth IRA contribution limit is <strong>$7,000</strong> per person, unchanged from 2025. Account holders aged 50 and older can contribute an additional $1,000 catch-up contribution for a total of <strong>$8,000</strong>. This limit is shared between traditional and Roth IRA contributions combined &mdash; you cannot contribute $7,000 to each.</p>
+
+<h2>2026 Roth IRA Income Phase-Out Ranges (Projected)</h2>
+<p>Your ability to contribute to a Roth IRA phases out over a specific MAGI range based on your filing status. Within the phase-out range, your maximum contribution is reduced proportionally. Above the upper limit, you cannot contribute directly at all.</p>
+
+<table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin:16px 0;font-size:.9rem;">
+  <thead>
+    <tr style="background:#f9fafb;">
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Filing Status</th>
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Phase-Out Begins</th>
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Phase-Out Ends (No Direct Roth)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single / Head of Household</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$150,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$165,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Married Filing Jointly</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$236,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$246,000</td></tr>
+    <tr><td style="padding:10px 14px;">Married Filing Separately</td><td style="padding:10px 14px;">$0</td><td style="padding:10px 14px;">$10,000</td></tr>
+  </tbody>
+</table>
+
+<div style="background:#fef3c7;border:1px solid #fde68a;border-left:4px solid #f59e0b;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.88rem;color:#78350f;">
+  <strong>These are projected figures.</strong> The IRS typically announces official Roth IRA income limits for the upcoming year in November via a news release. For official 2025 limits, see <a href="/blog/2026-401k-ira-contribution-limits" style="color:#78350f;font-weight:700;">our 2026 IRA limits guide</a>.
+</div>
+
+<h2>How the Phase-Out Works</h2>
+<p>Within the phase-out range, your maximum allowable Roth IRA contribution is reduced proportionally. The reduction formula is:</p>
+<div style="background:#111827;border-radius:8px;padding:16px 20px;margin:16px 0;overflow-x:auto;">
+  <code style="font-family:'Courier New',monospace;font-size:.85rem;color:#d1fae5;line-height:1.7;white-space:pre;">Reduced Limit = $7,000 x (Upper Limit - Your MAGI) / Phase-Out Range Width</code>
+</div>
+<p><strong>Example:</strong> Single filer with $157,500 MAGI in 2026 (midpoint of ~$150K&ndash;$165K range). The phase-out range is ~$15,000 wide. Your MAGI is $7,500 into the range.</p>
+<p>Reduced limit = $7,000 &times; ($165,000 &minus; $157,500) / $15,000 = $7,000 &times; 0.50 = <strong>$3,500</strong></p>
+
+<h2>What to Do If You Earn Too Much</h2>
+<p>If your MAGI exceeds the upper phase-out limit, you have two main strategies to get money into a Roth:</p>
+<p><strong>Backdoor Roth IRA:</strong> Contribute to a non-deductible traditional IRA (no income limit) and then immediately convert it to a Roth IRA. This is a well-established strategy, but the pro-rata rule applies if you have other pre-tax IRA balances. See our <a href="/blog/backdoor-roth-ira-guide-2026" style="color:#16a34a;font-weight:600;">backdoor Roth IRA guide</a> for the full process.</p>
+<p><strong>Roth 401(k):</strong> If your employer offers a Roth 401(k) option, there is no income limit for contributions. You can contribute up to $23,500 to a Roth 401(k) in 2026 regardless of income.</p>
+
+<h2>2025 vs. 2026 Roth IRA Limits Comparison</h2>
+<table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin:16px 0;font-size:.9rem;">
+  <thead>
+    <tr style="background:#f9fafb;">
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Item</th>
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">2025 (Official)</th>
+      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">2026 (Projected)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="background:#f0fdf4;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;color:#15803d;">Contribution limit (under 50)</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;color:#15803d;">$7,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;color:#15803d;">$7,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Catch-up limit (age 50+)</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">+$1,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">+$1,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single phase-out start</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$150,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$150,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single phase-out end</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$165,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$165,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">MFJ phase-out start</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$236,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$236,000</td></tr>
+    <tr><td style="padding:10px 14px;">MFJ phase-out end</td><td style="padding:10px 14px;">$246,000</td><td style="padding:10px 14px;">~$246,000</td></tr>
+  </tbody>
+</table>
+
+<h2>IRA Contribution Deadline for 2026</h2>
+<p>You have until the tax filing deadline &mdash; April 15, 2027 &mdash; to make Roth IRA contributions for tax year 2026. Filing for an extension does not extend this deadline. Contributions made between January 1 and April 15, 2027, must be designated for 2026 when submitted to your IRA custodian.</p>
+
+<p>For more retirement planning context, see our guides on <a href="/401k-contribution-limits-2026" style="color:#16a34a;font-weight:600;">401(k) limits for 2026</a> and <a href="/roth-ira-conversion-tax" style="color:#16a34a;font-weight:600;">Roth IRA conversion tax rules</a>.</p>
+`
+},
+
   {
     slug: "tax-loss-harvesting-guide-2026",
     title: "Tax-Loss Harvesting: How to Use Investment Losses to Cut Your Tax Bill",
