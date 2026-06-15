@@ -863,4 +863,29 @@
     <priority>0.3</priority>
   </url>
 
+  <url>
+    <loc>https://mytaxcalcs.com/blog/no-tax-on-overtime-2026</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mytaxcalcs.com/blog/no-tax-on-car-loan-interest-2026</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mytaxcalcs.com/blog/federal-scholarship-tax-credit-2027</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mytaxcalcs.com/blog/trump-accounts-2026-guide</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>

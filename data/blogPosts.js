@@ -3,6 +3,429 @@
 
 const blogPosts = [
 
+
+  // ++ ADDED June 15, 2026 ++++++++++++++++++++++++++++++++++++++++++++++++++
+
+  {
+  slug: "no-tax-on-overtime-2026",
+  title: "No Tax on Overtime: Who Qualifies and How to Claim the Deduction",
+  date: "June 15, 2026",
+  dateISO: "2026-06-15",
+  author: "MyTaxCalcs Editorial Team",
+  category: "Tax Deductions",
+  excerpt: "The One Big Beautiful Bill Act created a federal deduction for qualified overtime pay worth up to $12,500 per return. Here is who qualifies, how the deduction is calculated, and how to claim it on Schedule 1-A.",
+  metaDescription: "The OBBBA no-tax-on-overtime deduction lets eligible workers deduct up to $12,500 in overtime premium pay from federal income taxes for 2025 through 2028. Learn who qualifies and how to file.",
+  ogTitle: "No Tax on Overtime 2026: Who Qualifies and How to Claim It | MyTaxCalcs",
+  ogDescription: "Workers covered by the FLSA may deduct up to $12,500 in overtime pay from federal income taxes. Here is how the deduction works, who qualifies, and how to claim it on Schedule 1-A.",
+  content: `
+<p>If you earn overtime pay at work, a tax deduction created by the One Big Beautiful Bill Act could meaningfully reduce your federal income tax bill. The no-tax-on-overtime provision allows eligible workers to deduct a portion of their qualified overtime compensation from federal taxable income, for tax years 2025 through 2028. Here is everything you need to know about who qualifies, how the deduction is calculated, and how to claim it when you file.</p>
+
+<h2>What Is the No-Tax-on-Overtime Deduction?</h2>
+<p>The no-tax-on-overtime deduction is a federal income tax deduction created by the One Big Beautiful Bill Act (OBBBA), signed into law on July 4, 2025. It allows eligible employees to deduct the "overtime premium" portion of their overtime pay from their federal taxable income. The deduction applies to tax years 2025 through 2028 and is set to expire after December 31, 2028 unless Congress extends it.</p>
+
+<p>The deduction works above the line, meaning you can claim it whether you take the standard deduction or itemize on Schedule A. It reduces your adjusted gross income directly.</p>
+
+<p>One important distinction: this is a deduction, not an exemption. Your employer still withholds federal income tax on overtime pay when you are paid. You recover the tax benefit when you file your annual return by claiming the deduction on Schedule 1-A.</p>
+
+<h2>How Much Can You Deduct?</h2>
+<p>The deduction is capped at $12,500 per return. Married couples filing jointly can deduct up to $25,000 combined if both spouses have qualifying overtime compensation.</p>
+
+<p>What you are actually deducting is the "overtime premium" -- the extra amount you earned above your regular rate for working beyond 40 hours in a workweek. Under the Fair Labor Standards Act (FLSA), overtime must be paid at 1.5 times your regular rate. The overtime premium is that extra 0.5x portion on top of your regular rate.</p>
+
+<p>For example: say your regular hourly rate is $20 per hour. For overtime hours, you earn $30 per hour. The overtime premium is $10 per overtime hour -- the amount above your regular pay. Only that $10 per hour is deductible, not the full $30.</p>
+
+<p>If you worked 200 overtime hours at a $10 premium, your qualifying overtime deduction would be $2,000. If you worked 1,300 overtime hours at the same premium, your qualifying amount would be $13,000 -- but the deduction caps at $12,500 per return.</p>
+
+<h2>Who Qualifies for the Deduction?</h2>
+<p>To claim the no-tax-on-overtime deduction, you must meet all of the following requirements:</p>
+<ul>
+  <li>You must be a W-2 employee covered by the Fair Labor Standards Act. Independent contractors and self-employed individuals do not qualify.</li>
+  <li>The overtime must be required under the FLSA -- meaning hours worked beyond 40 in a workweek at 1.5x your regular rate.</li>
+  <li>You must have a valid Social Security number.</li>
+  <li>You cannot use the Married Filing Separately filing status.</li>
+  <li>Your modified adjusted gross income (MAGI) must fall below the phase-out thresholds (see below).</li>
+</ul>
+
+<p>Rail carrier employees and certain other exempt categories are excluded. Salaried employees who are exempt from FLSA overtime rules also do not qualify, even if their employer voluntarily pays them overtime.</p>
+
+<h2>Income Phase-Out Limits</h2>
+<p>The deduction phases out at higher income levels. The phase-out begins at $150,000 MAGI for single filers and $300,000 for married filing jointly. Above those thresholds, the deduction is reduced and eventually eliminated. If your income is well above these levels, you may receive only a partial deduction or none at all.</p>
+
+<h2>How Do You Find Your Qualifying Overtime Amount?</h2>
+<p>Starting with tax year 2026, employers are required to separately report qualified overtime compensation in Box 12 of your W-2 using Code "TT." This is the number you use when calculating your deduction. If your W-2 shows a Code TT amount, that is your employer's calculation of your qualifying overtime premium for the year.</p>
+
+<p>For 2025 returns (filed in 2026), reporting was handled differently. Because the OBBBA was signed mid-year on July 4, 2025, payroll systems were not ready to track overtime separately from day one. The IRS provided transitional relief and did not penalize employers who failed to report the Code TT amount separately on 2025 W-2s. In that case, employees could use IRS Notice 2025-69 methods to estimate their qualifying overtime deduction based on their own pay records.</p>
+
+<p>If your employer did not report a Code TT figure and you believe you have qualifying overtime, keep your pay stubs and work with a tax professional or use the IRS calculation worksheet to estimate your premium amount.</p>
+
+<h2>How to Claim the Deduction on Your Tax Return</h2>
+<p>The no-tax-on-overtime deduction is claimed on Schedule 1-A (Form 1040), titled "Additional Deductions." This is a new form created specifically for the OBBBA deductions including overtime, tips, and car loan interest.</p>
+
+<p>Here is the basic process:</p>
+<ul>
+  <li>Gather your W-2 and look for the Code TT amount in Box 12. This is your qualifying overtime figure.</li>
+  <li>Complete Schedule 1-A, Part II, using the amount from your W-2.</li>
+  <li>If your income is above the phase-out threshold, complete Part I of Schedule 1-A to determine your reduced deduction amount.</li>
+  <li>The deduction flows from Schedule 1-A to Schedule 1 and reduces your adjusted gross income on Form 1040.</li>
+</ul>
+
+<p>The deduction is claimed on the return for the year in which the overtime was earned. If you worked overtime throughout 2025, you claim it on your 2025 tax return filed in 2026.</p>
+
+<h2>Does It Affect State Taxes?</h2>
+<p>Whether the overtime deduction reduces your state income taxes depends on your state's tax conformity laws. States that use "rolling conformity" -- meaning they automatically adopt federal tax law changes -- will generally allow the deduction. States with "static conformity" that were conformed to a pre-OBBBA version of the tax code may not recognize the deduction, meaning you could still owe state income tax on the full amount of your overtime pay. Several states were updating their conformity rules during 2026 legislative sessions. Check your state's department of revenue or consult a tax professional to confirm how your state handles the deduction.</p>
+
+<h2>Worked Dollar Example</h2>
+<p>Say you are a single filer with a regular hourly rate of $25. You worked 300 overtime hours in 2025, earning $37.50 per hour for those hours. Your overtime premium per hour is $12.50 (the extra 0.5x above your regular rate).</p>
+<ul>
+  <li>Total overtime premium: 300 hours x $12.50 = $3,750</li>
+  <li>Deduction cap: $12,500 (your qualifying amount is well below the cap)</li>
+  <li>Your no-tax-on-overtime deduction: $3,750</li>
+  <li>If you are in the 22% bracket, this deduction saves you approximately $825 in federal income tax.</li>
+</ul>
+
+<p>Now say you worked 1,200 overtime hours at the same rate, putting your total overtime premium at $15,000. The deduction caps at $12,500, so you deduct $12,500. At the 22% bracket, that saves you approximately $2,750 in federal income tax.</p>
+
+<h2>How It Compares to the No-Tax-on-Tips Deduction</h2>
+<p>The no-tax-on-overtime deduction and the <a href="/blog/no-tax-on-tips-who-qualifies-how-to-claim">no-tax-on-tips deduction</a> are both OBBBA provisions, both claimed on Schedule 1-A, and both temporary through 2028. The key differences are who qualifies and what amount is deductible. The tips deduction covers up to $25,000 in qualified tip income and applies to workers in traditionally tipped occupations. The overtime deduction covers up to $12,500 in overtime premium pay and applies to FLSA-covered hourly employees. Some workers may qualify for both if they earn both tips and overtime.</p>
+
+<h2>Key Facts Summary</h2>
+<ul>
+  <li>Deduction amount: up to $12,500 per return ($25,000 married filing jointly)</li>
+  <li>What is deductible: the overtime premium -- the extra 0.5x above your regular rate</li>
+  <li>Who qualifies: W-2 employees covered by the FLSA</li>
+  <li>Who does not qualify: independent contractors, self-employed, FLSA-exempt salaried employees, rail carrier employees</li>
+  <li>Years covered: 2025 through 2028</li>
+  <li>Where to claim: Schedule 1-A, Part II</li>
+  <li>Income phase-out: begins at $150,000 MAGI (single) / $300,000 (married filing jointly)</li>
+  <li>W-2 reporting: Code TT in Box 12 starting with tax year 2026</li>
+</ul>
+
+<p>If you earned significant overtime in 2025 and have not yet filed, or if you are planning ahead for 2026, make sure you are tracking your hours and working with a tax professional or using the IRS Schedule 1-A worksheet to calculate the exact deduction amount you are entitled to. The deduction can produce meaningful savings, especially for workers in trades, manufacturing, healthcare, and transportation who regularly log overtime hours.</p>
+`,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    { href: "/blog/no-tax-on-tips-who-qualifies-how-to-claim", label: "No Tax on Tips Guide" },
+    { href: "/blog/one-big-beautiful-bill-tax-changes-explained", label: "OBBBA Tax Changes Explained" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
+  ]
+},
+
+  {
+  slug: "no-tax-on-car-loan-interest-2026",
+  title: "No Tax on Car Loan Interest: Who Qualifies and How to Claim the Deduction",
+  date: "June 15, 2026",
+  dateISO: "2026-06-15",
+  author: "MyTaxCalcs Editorial Team",
+  category: "Tax Deductions",
+  excerpt: "The OBBBA created a deduction for car loan interest worth up to $10,000 per year on qualifying new vehicles assembled in the United States. Here is who qualifies, what the income limits are, and how to claim it on Schedule 1-A.",
+  metaDescription: "The OBBBA no-tax-on-car-loan-interest deduction lets eligible taxpayers deduct up to $10,000 in auto loan interest per year on new U.S.-assembled vehicles. Learn eligibility rules, income limits, and how to file.",
+  ogTitle: "No Tax on Car Loan Interest 2026: Who Qualifies and How to Claim It | MyTaxCalcs",
+  ogDescription: "Bought a new car assembled in the U.S. after December 31, 2024? You may be able to deduct up to $10,000 in car loan interest from your federal taxes under the OBBBA. Here is how it works.",
+  content: `
+<p>If you took out a loan to buy a new car after December 31, 2024, a provision of the One Big Beautiful Bill Act may allow you to deduct some or all of the interest you pay on that loan from your federal income taxes. The no-tax-on-car-loan-interest deduction can be worth up to $10,000 per year, and unlike many deductions, you do not have to itemize to claim it. Here is what you need to know about eligibility, income limits, and how to file.</p>
+
+<h2>What Is the Car Loan Interest Deduction?</h2>
+<p>Before the OBBBA, interest paid on personal auto loans was not deductible for federal income tax purposes. Car loan interest fell into the category of "personal interest," which has been nondeductible for most taxpayers since the Tax Reform Act of 1986.</p>
+
+<p>The One Big Beautiful Bill Act, signed July 4, 2025, created a specific exception. For tax years 2025 through 2028, eligible taxpayers can deduct up to $10,000 per year in qualified passenger vehicle loan interest. The deduction is above the line, meaning it is available whether you take the standard deduction or itemize.</p>
+
+<h2>Who Qualifies?</h2>
+<p>To claim the car loan interest deduction, the vehicle and loan must meet all of the following requirements:</p>
+
+<h3>Vehicle Requirements</h3>
+<ul>
+  <li>The vehicle must be new -- used vehicles do not qualify under any circumstances.</li>
+  <li>The vehicle must have had its final assembly in the United States. Partially assembled vehicles do not qualify.</li>
+  <li>It must be a passenger vehicle purchased for personal use, not a business or commercial vehicle.</li>
+  <li>The loan must have been originated after December 31, 2024.</li>
+</ul>
+
+<h3>Loan Requirements</h3>
+<ul>
+  <li>The loan must be a purchase loan secured by a first lien on the vehicle.</li>
+  <li>Lease payments do not qualify. This deduction applies to financing, not leasing.</li>
+  <li>You can only deduct interest actually paid during the tax year, up to the $10,000 annual cap.</li>
+</ul>
+
+<p>To verify that your vehicle qualifies based on U.S. final assembly, check the vehicle label at the dealership, the vehicle identification number (VIN), or the National Highway Traffic Safety Administration (NHTSA) website. You will need your vehicle's VIN when you file your tax return to claim the deduction.</p>
+
+<h2>Income Limits and Phase-Out</h2>
+<p>The deduction phases out for higher earners. The phase-out begins at $100,000 modified adjusted gross income (MAGI) for single filers and $200,000 for married couples filing jointly. Taxpayers with MAGI above those thresholds receive a reduced deduction, and the deduction is eliminated entirely for taxpayers with very high incomes.</p>
+
+<p>Taxpayers below those thresholds can claim the full deduction up to the $10,000 cap, provided they meet all vehicle and loan requirements. The $10,000 cap applies per return regardless of filing status -- single filers and married-filing-jointly couples both have the same $10,000 annual limit.</p>
+
+<h2>What About Refinancing?</h2>
+<p>If you refinanced a qualifying vehicle loan, you can generally still deduct the interest -- but only on the original loan balance. If you borrowed additional money beyond the original principal when refinancing, the interest on that extra amount does not qualify. The refinanced loan must still be secured by a lien on the vehicle, and the original loan must have been for the purchase of a qualifying new U.S.-assembled vehicle after December 31, 2024.</p>
+
+<h2>How to Claim the Deduction</h2>
+<p>The car loan interest deduction is claimed on Schedule 1-A (Form 1040), the same form used for the no-tax-on-tips and no-tax-on-overtime deductions. Specifically, you report the qualifying interest in Part IV of Schedule 1-A and include your vehicle's VIN.</p>
+
+<p>For tax year 2025, lenders were not required to issue a formal IRS form for this deduction since the OBBBA was passed mid-year. Instead, lenders provided borrowers with a simple statement showing total qualifying interest paid during 2025. Starting with tax year 2026, lenders are required to provide Form 1098 reporting your qualified vehicle loan interest, similar to the mortgage interest Form 1098 you may already receive.</p>
+
+<p>Here is what to do when filing:</p>
+<ul>
+  <li>Gather your interest statement from your lender (or Form 1098 for 2026 and later).</li>
+  <li>Confirm your vehicle's VIN and verify U.S. final assembly through the NHTSA database if needed.</li>
+  <li>Complete Schedule 1-A, Part IV, entering your qualifying interest and VIN.</li>
+  <li>If your MAGI is above the phase-out threshold, complete Part I of Schedule 1-A to calculate your reduced deduction.</li>
+  <li>The deduction flows to Schedule 1 and reduces your adjusted gross income on Form 1040.</li>
+</ul>
+
+<h2>Worked Dollar Example</h2>
+<p>Say you are a single filer with $75,000 MAGI. In January 2025 you bought a new truck assembled in Ohio for $45,000, financing $38,000 at 7% over 60 months. During 2025, you paid approximately $2,500 in interest on that loan.</p>
+<ul>
+  <li>Vehicle qualifies: new, U.S.-assembled, personal use, loan originated after December 31, 2024</li>
+  <li>Your MAGI of $75,000 is below the $100,000 phase-out start for single filers</li>
+  <li>Your qualifying car loan interest deduction: $2,500</li>
+  <li>At the 22% tax bracket, this saves you approximately $550 in federal income tax</li>
+</ul>
+
+<p>Now say your income is $85,000 and you paid $6,000 in qualifying interest in 2026. You are still below the phase-out threshold, so you can deduct the full $6,000, saving approximately $1,320 at the 22% bracket.</p>
+
+<p>If your income were $130,000, your deduction would be partially phased out since your MAGI exceeds the $100,000 single-filer threshold. You would complete Part I of Schedule 1-A to calculate the reduced amount.</p>
+
+<h2>What Does Not Qualify</h2>
+<p>Several common situations do not qualify for this deduction:</p>
+<ul>
+  <li>Used vehicles, regardless of price or condition</li>
+  <li>Vehicles with final assembly outside the United States</li>
+  <li>Lease payments of any kind</li>
+  <li>Business vehicles (those are deductible through separate business expense rules)</li>
+  <li>Loans originated on or before December 31, 2024</li>
+  <li>Home equity loans or other loans used to buy a car but not secured by the vehicle</li>
+</ul>
+
+<h2>Key Facts Summary</h2>
+<ul>
+  <li>Maximum deduction: $10,000 per return per year (same cap for single and joint filers)</li>
+  <li>Qualifying period: tax years 2025 through 2028</li>
+  <li>Vehicle must be: new, U.S. final assembly, personal use, loan after December 31, 2024</li>
+  <li>Leases: do not qualify</li>
+  <li>Above-the-line: available with standard deduction or itemized deductions</li>
+  <li>Phase-out starts: $100,000 MAGI (single) / $200,000 MAGI (married filing jointly)</li>
+  <li>Where to claim: Schedule 1-A, Part IV, with VIN required</li>
+  <li>Lender reporting: interest statement for 2025; Form 1098 starting with 2026</li>
+</ul>
+
+<p>The car loan interest deduction is one of the more straightforward OBBBA benefits for consumers, but the U.S. final assembly requirement is a real filter. Before assuming your vehicle qualifies, confirm the final assembly location using your VIN. The NHTSA has a free online tool that lets you check assembly information by VIN. If your vehicle does not clear that threshold, the deduction is not available regardless of any other factor. Use our <a href="/income-tax-calculator">income tax calculator</a> to see how this deduction could affect your overall federal tax bill.</p>
+`,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    { href: "/blog/one-big-beautiful-bill-tax-changes-explained", label: "OBBBA Tax Changes Explained" },
+    { href: "/blog/no-tax-on-overtime-2026", label: "No Tax on Overtime Guide" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
+  ]
+},
+
+  {
+  slug: "federal-scholarship-tax-credit-2027",
+  title: "Federal Scholarship Tax Credit: What It Is, Who Qualifies, and When It Takes Effect",
+  date: "June 15, 2026",
+  dateISO: "2026-06-15",
+  author: "MyTaxCalcs Editorial Team",
+  category: "Tax Credits",
+  excerpt: "The OBBBA created a new federal scholarship tax credit worth up to $1,700 per taxpayer for donations to qualifying scholarship organizations. The credit takes effect for tax year 2027. Here is how it works and what to know now.",
+  metaDescription: "The OBBBA Federal Scholarship Tax Credit gives individual taxpayers up to $1,700 for donations to K-12 scholarship organizations. The credit begins in tax year 2027. Here is who qualifies and how to prepare.",
+  ogTitle: "Federal Scholarship Tax Credit: How the OBBBA Education Credit Works | MyTaxCalcs",
+  ogDescription: "A new federal tax credit of up to $1,700 per taxpayer is coming for donations to qualifying K-12 scholarship organizations. It takes effect in 2027. Here is everything you need to know now.",
+  content: `
+<p>The One Big Beautiful Bill Act created the first federal school choice tax credit in U.S. history: the Federal Scholarship Tax Credit (FSTC). Starting with tax year 2027, individual taxpayers in participating states can claim a dollar-for-dollar federal tax credit of up to $1,700 per year for contributions to qualifying scholarship organizations that fund K-12 education. Here is what you need to know about how the credit works, which states are participating, and how it differs from other education tax benefits.</p>
+
+<h2>What Is the Federal Scholarship Tax Credit?</h2>
+<p>The Federal Scholarship Tax Credit is a nonrefundable federal income tax credit created under Section 70411 of the One Big Beautiful Bill Act (OBBBA), signed into law July 4, 2025. It is codified under Internal Revenue Code Section 25F.</p>
+
+<p>The credit works like this: you make a cash contribution to a state-approved Scholarship Granting Organization (SGO) -- a nonprofit that distributes scholarships to K-12 students. In exchange, you receive a dollar-for-dollar federal tax credit reducing your federal income tax bill, up to $1,700 per taxpayer per year.</p>
+
+<p>Married couples filing jointly can each claim the credit on the same return, for a combined maximum credit of $3,400 per year.</p>
+
+<h2>When Does It Take Effect?</h2>
+<p>The credit takes effect for tax years beginning after December 31, 2026. That means the first year anyone can claim the credit is 2027, on returns filed in 2028. Contributions made before January 1, 2027 do not qualify, even if the donation is made to a qualifying SGO in a participating state.</p>
+
+<h2>Who Can Claim It?</h2>
+<p>The credit is available only to individual U.S. citizens and residents. Businesses and corporations cannot claim the Federal Scholarship Tax Credit. There are no income limits -- the credit is available at any income level.</p>
+
+<p>However, there is an important limitation: the credit is only available if you are donating to an SGO in a state that has opted into the program. If your state has not opted in, your donation to an out-of-state SGO may still qualify for the federal credit, but your state's own scholarship credit rules and any state tax treatment will differ.</p>
+
+<h2>Which States Are Participating?</h2>
+<p>State participation is voluntary. Governors or designated state officials can elect to participate on an annual basis by submitting a list of qualified SGOs to the federal government. As of June 2026, the IRS announced that 27 states have elected to participate in the program for 2027. Several governors have formally opted out, and some states where governors vetoed participation bills had their vetoes overridden by state legislatures.</p>
+
+<p>If your state is not participating, students in your state cannot receive scholarships funded under this program. However, donors in non-participating states can still contribute to SGOs in participating states and claim the federal credit.</p>
+
+<h2>What Are Scholarship Granting Organizations (SGOs)?</h2>
+<p>SGOs are state-approved nonprofits that collect donations and distribute scholarships to eligible K-12 students. To be a qualified SGO for purposes of the federal credit, the organization must meet requirements set by both the state and the IRS, including proper certification status. Not every private school scholarship organization automatically qualifies.</p>
+
+<p>Scholarships from qualifying SGOs can be used for tuition, fees, and related expenses at private or public schools. Students must come from households earning no more than 300% of the area median gross income and must be eligible to enroll in K-12 schools.</p>
+
+<h2>Key Credit Rules</h2>
+<p>There are several rules that govern how the credit works in practice:</p>
+
+<h3>No double benefit</h3>
+<p>Contributions you claim for the Federal Scholarship Tax Credit cannot also be deducted as a charitable contribution on Schedule A. You cannot double-dip. If only part of your contribution generates a credit, the remaining uncredited portion may still be deductible as a charitable gift, subject to the standard AGI limits for charitable deductions.</p>
+
+<h3>State credit offset</h3>
+<p>If you are in a state that also offers its own scholarship tax credit (such as Arizona or Georgia, which have long-established state programs), your federal credit is reduced by the amount of any state credit you receive for the same contribution. The two credits cannot fully stack.</p>
+
+<h3>Carryforward</h3>
+<p>Unused credits can be carried forward for up to five years. If your federal income tax liability is zero in the year you make the contribution, you can apply the unused credit against future years' tax bills.</p>
+
+<h3>Nonrefundable</h3>
+<p>The credit is nonrefundable, meaning it can reduce your federal tax bill to zero but cannot generate a refund on its own. If the credit exceeds your tax liability, the excess can be carried forward (see above).</p>
+
+<h2>How Does This Compare to a 529 Plan?</h2>
+<p>A 529 plan is a state-sponsored savings account that grows tax-free and can be used for qualified education expenses. Contributions to a 529 are not federally deductible (though many states offer a state income tax deduction). The Federal Scholarship Tax Credit works differently -- you are not saving for your own child's education; you are donating to an organization that gives scholarships to qualifying students. In return you get a dollar-for-dollar federal tax credit, which is more valuable than a deduction.</p>
+
+<p>The key practical difference: a 529 is for your family. The Federal Scholarship Tax Credit benefits families who receive scholarships from the SGO you fund. Whether a contribution to an SGO makes sense for your tax situation depends on your state's participation, your federal tax liability, and your charitable giving priorities.</p>
+
+<h2>What to Do Now</h2>
+<p>Since the credit does not take effect until 2027, there is no action to take on your 2025 or 2026 tax returns. However, if you are planning ahead, here is what to keep in mind:</p>
+<ul>
+  <li>Confirm your state is participating in the program for 2027. Check your state's department of revenue or the IRS OBBBA guidance page for the current list of participating states.</li>
+  <li>Identify qualified SGOs in your or another participating state. These must meet IRS and state certification requirements -- not all scholarship nonprofits qualify.</li>
+  <li>Make contributions after January 1, 2027 to qualify for the credit.</li>
+  <li>Keep records of your donations. You will need documentation from the SGO showing the amount contributed and its qualified status.</li>
+  <li>Account for any state credit you receive, since it will reduce your federal credit dollar for dollar.</li>
+</ul>
+
+<h2>Key Facts Summary</h2>
+<ul>
+  <li>Credit amount: up to $1,700 per taxpayer per year ($3,400 for married filing jointly)</li>
+  <li>First eligible year: tax year 2027 (filed in 2028)</li>
+  <li>Who qualifies: individual U.S. citizens and residents; no income limits</li>
+  <li>Businesses: cannot claim this credit</li>
+  <li>Contributions must go to: IRS-qualified Scholarship Granting Organizations in participating states</li>
+  <li>State offset: federal credit reduced by any state credit for the same contribution</li>
+  <li>No double benefit: cannot also deduct the credited amount as a charitable contribution</li>
+  <li>Carryforward: up to 5 years for unused credits</li>
+  <li>Nonrefundable: cannot exceed your federal tax liability</li>
+</ul>
+
+<p>The Federal Scholarship Tax Credit is one of the few entirely new federal tax credits to emerge in recent years, and for taxpayers in participating states who regularly make charitable donations to education causes, it could provide meaningful tax savings starting in 2027. Check the IRS OBBBA guidance page regularly as final regulations are still being issued and the list of participating states continues to evolve. See our full <a href="/blog/one-big-beautiful-bill-tax-changes-explained">OBBBA tax changes guide</a> for a broader overview of what the law changed.</p>
+`,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    { href: "/blog/one-big-beautiful-bill-tax-changes-explained", label: "OBBBA Tax Changes Explained" },
+    { href: "/child-tax-credit-2025", label: "Child Tax Credit" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
+  ]
+},
+
+  {
+  slug: "trump-accounts-2026-guide",
+  title: "Trump Accounts: What They Are, How They Work, and Who Can Open One",
+  date: "June 15, 2026",
+  dateISO: "2026-06-15",
+  author: "MyTaxCalcs Editorial Team",
+  category: "Tax Planning",
+  excerpt: "Trump Accounts are new tax-advantaged savings accounts for children under 18, created by the OBBBA. Children born between 2025 and 2028 receive a $1,000 federal seed contribution. Accounts open for contributions on July 4, 2026. Here is how they work.",
+  metaDescription: "Trump Accounts are new OBBBA savings accounts for children under 18. Contributions of up to $5,000 per year grow tax-free. Children born 2025-2028 get a $1,000 federal seed. Here is everything you need to know.",
+  ogTitle: "Trump Accounts 2026: How They Work, Who Qualifies, and How to Open One | MyTaxCalcs",
+  ogDescription: "The OBBBA created Trump Accounts -- tax-advantaged savings accounts for children under 18. Accounts open July 4, 2026. Children born 2025-2028 get a free $1,000 federal seed contribution. Here is the full guide.",
+  content: `
+<p>One of the more novel provisions of the One Big Beautiful Bill Act is the creation of a new type of tax-advantaged savings account for children: the Trump Account. Established under new Internal Revenue Code Section 530A, these accounts combine features of an IRA and a 529 plan, but with a key difference from both -- the money is not locked to education expenses and can be used for anything once the child reaches adulthood. Here is a complete breakdown of how Trump Accounts work, who can open one, and what the tax rules are.</p>
+
+<h2>What Is a Trump Account?</h2>
+<p>A Trump Account is a tax-advantaged individual retirement-style account designed specifically for children under age 18 who are U.S. citizens with a valid Social Security number. The accounts were created by the One Big Beautiful Bill Act (OBBBA), signed July 4, 2025, under OBBBA Section 70204 and codified at IRC Section 530A.</p>
+
+<p>Think of a Trump Account as a specialized IRA for minors. Contributions are made with after-tax dollars (no upfront deduction), but the money grows tax-free during the child's growth period -- from account opening through December 31 of the year the child turns 17. At age 18, the balance rolls into a Rollover Trump Account and the child gains control, able to use the funds for any purpose without restriction.</p>
+
+<h2>Who Can Open a Trump Account?</h2>
+<p>A Trump Account can be opened by any authorized individual: a parent, grandparent, legal guardian, adult sibling, or other adult acting on behalf of an eligible child. To be eligible, a child must:</p>
+<ul>
+  <li>Be a U.S. citizen or resident alien</li>
+  <li>Have a valid Social Security number</li>
+  <li>Be age 17 or younger at the close of the tax year</li>
+</ul>
+
+<p>There are no income limits for parents or guardians opening an account or making contributions.</p>
+
+<h2>The Federal $1,000 Seed Contribution</h2>
+<p>Children born between January 1, 2025, and December 31, 2028, are eligible for a one-time $1,000 pilot program contribution from the federal government -- essentially a free seed deposit into the account.</p>
+
+<p>To receive this $1,000, a parent or guardian must file IRS Form 4547 electing into the program. An online opt-in at trumpaccounts.gov is also expected to be available in mid-2026. The IRS and Treasury will verify eligibility and the contribution will be deposited into the account. No contributions -- from the government or anyone else -- can be made before July 4, 2026.</p>
+
+<p>If you have a child born between 2025 and 2028, filing Form 4547 to claim the $1,000 seed is worth doing even if you do not plan to make additional contributions yourself. The seed grows tax-free until the child turns 18.</p>
+
+<h2>Contribution Limits and Rules</h2>
+<p>Annual contributions to a Trump Account are capped at $5,000 per child for 2026 and 2027, with the limit indexed for inflation in $100 increments starting in 2028. Anyone can contribute -- parents, grandparents, friends, aunts, uncles -- and all contributions count toward the same $5,000 per-child annual limit.</p>
+
+<p>Employers can also contribute to Trump Accounts on behalf of employees' children, up to $2,500 per employee per year. Employer contributions reduce the amount individuals can contribute for that child in the same year. If an employer contributes $2,500, the family can only contribute another $2,500 before hitting the $5,000 cap.</p>
+
+<p>Government entities and qualifying charities can also make general contributions to Trump Accounts for broad classes of beneficiaries, and those contributions are not subject to the $5,000 annual cap.</p>
+
+<p>Contributions are not deductible. You do not get a tax deduction for putting money into a Trump Account, similar to how Roth IRA contributions are not deductible. The tax benefit is on the growth side: earnings accumulate tax-free.</p>
+
+<h2>Investment Rules</h2>
+<p>Trump Accounts have strict investment restrictions during the growth period. Funds must be invested in eligible mutual funds or exchange-traded funds (ETFs) that:</p>
+<ul>
+  <li>Have total annual fees and expenses of no more than 0.1% (10 basis points) of the total investment balance</li>
+  <li>Consist of equity investments in United States companies</li>
+  <li>Track a qualified index</li>
+</ul>
+
+<p>In practice, this means broad U.S. stock index funds with very low expense ratios -- similar to index funds tracking the S&amp;P 500 or total U.S. market. Actively managed funds, international funds, bond funds, and high-fee funds do not qualify during the growth period.</p>
+
+<h2>When Can the Money Be Used?</h2>
+<p>During the growth period -- from account opening until December 31 of the year the child turns 17 -- withdrawals are generally not permitted. On January 1 of the calendar year in which the child turns 18, the balance rolls into a Rollover Trump Account and the now-adult beneficiary can withdraw the funds for any reason without restriction. There is no requirement to spend the money on education, a home purchase, or any other specified purpose.</p>
+
+<p>This is the most significant difference from a 529 plan. A 529 restricts spending to qualified education expenses (with some recent flexibility added for Roth IRA rollovers). A Trump Account has no such restriction at distribution. The child can use the money for college, a down payment, starting a business, or simply to invest further.</p>
+
+<h2>How Are Withdrawals Taxed?</h2>
+<p>The tax treatment at withdrawal depends on the source of the contributions:</p>
+<ul>
+  <li>Distributions attributable to parental or individual after-tax contributions: tax-free at withdrawal, since the contributions were made with after-tax dollars and grew tax-free.</li>
+  <li>Distributions attributable to employer contributions or government contributions: taxable at the beneficiary's ordinary income tax rate at the time of withdrawal, since those contributions were not previously taxed.</li>
+</ul>
+
+<p>This means good record-keeping matters. You will want to track which portion of the account balance came from after-tax individual contributions versus employer or government contributions, since the tax treatment at age 18 differs.</p>
+
+<h2>Gift Tax Considerations</h2>
+<p>Contributions to a Trump Account do not automatically qualify for the annual gift tax exclusion (currently $19,000 in 2026). This is because the child does not have access to the money during the growth period -- a requirement for the "present interest" rule that makes annual exclusion gifts tax-free without filing. As a result, larger contributions from grandparents or others may require filing IRS Form 709 (Gift Tax Return) depending on the amount. Congress did not carve out a specific exception for Trump Accounts the way it did for 529 plans. Watch for potential legislative fixes on this point in future tax bills.</p>
+
+<h2>How to Open a Trump Account</h2>
+<p>Accounts can be opened beginning July 4, 2026 -- one year after the OBBBA was signed. The process involves:</p>
+<ul>
+  <li>Completing IRS Form 4547 or using the trumpaccounts.gov online portal when it becomes available</li>
+  <li>Selecting an authorized trustee (institutions approved by the U.S. Treasury to administer Trump Accounts)</li>
+  <li>Designating the eligible child as beneficiary with their Social Security number</li>
+  <li>Making your first contribution on or after July 4, 2026</li>
+</ul>
+
+<p>If your child was born between January 1, 2025, and December 31, 2028, and you want the $1,000 federal seed contribution, file Form 4547 as soon as the process opens. The seed contribution is contingent on making the election -- it is not automatic.</p>
+
+<h2>Trump Account vs. 529 Plan vs. Roth IRA</h2>
+<p>Here is how Trump Accounts compare to the two most common savings vehicles parents use for children:</p>
+
+<p>Compared to a 529 plan: A 529 offers a state tax deduction in many states for contributions, and withdrawals for qualified education expenses are tax-free. A Trump Account offers no deduction but allows tax-free growth with no restriction on how the money is used at age 18. If you are saving specifically for college, a 529 may still make more sense, especially if your state offers a meaningful deduction. If you want flexibility, the Trump Account wins.</p>
+
+<p>Compared to a custodial Roth IRA: A child can only contribute to a Roth IRA if they have earned income. A Trump Account has no earned income requirement -- anyone can contribute on behalf of any eligible child. A Roth IRA has no age restriction on withdrawals (after age 59.5 and a 5-year holding period). A Trump Account is locked until age 18.</p>
+
+<h2>Key Facts Summary</h2>
+<ul>
+  <li>Account type: tax-advantaged savings account for children under 18 (IRC Section 530A)</li>
+  <li>Annual contribution limit: $5,000 per child (2026-2027); indexed for inflation starting 2028</li>
+  <li>Federal seed: $1,000 for children born January 1, 2025 through December 31, 2028; requires Form 4547 election</li>
+  <li>Who can contribute: anyone -- parents, grandparents, employers (up to $2,500), governments, charities</li>
+  <li>Employer limit: $2,500 per child per year (reduces individual limit)</li>
+  <li>Contributions: after-tax, no deduction</li>
+  <li>Growth: tax-free during growth period</li>
+  <li>Investments: low-cost U.S. equity index funds only; max 0.1% expense ratio</li>
+  <li>Access: beginning January 1 of the year the child turns 18; no spending restrictions</li>
+  <li>Tax at withdrawal: tax-free for individual contributions; ordinary income for employer/government contributions</li>
+  <li>Accounts open: July 4, 2026</li>
+  <li>Income limits: none</li>
+</ul>
+
+<p>Trump Accounts are still new and some regulations remain proposed rather than final. The IRS and Treasury issued Notice 2025-68 and proposed regulations in March 2026, with the final rules expected before the July 4, 2026 opening date. If you are considering opening one, monitor the IRS OBBBA guidance page and trumpaccounts.gov for updates. And if you have a child born between 2025 and 2028, the $1,000 federal seed contribution makes opening an account a straightforward decision -- free money that grows tax-free for up to 18 years is hard to pass up. See our <a href="/blog/one-big-beautiful-bill-tax-changes-explained">OBBBA overview</a> for a full summary of all the tax changes from the One Big Beautiful Bill Act.</p>
+`,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+    { href: "/blog/one-big-beautiful-bill-tax-changes-explained", label: "OBBBA Tax Changes Explained" },
+    { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
+  ]
+},
+
+
   // ── NEW POSTS — April–June 2026 ────────────────────────────────────────────
 
   // ── ADDED June 11, 2026 ────────────────────────────────────────────────────
