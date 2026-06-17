@@ -526,69 +526,79 @@ const blogPosts = [
   ogTitle: "Roth IRA Income Limits 2026 | MyTaxCalcs",
   ogDescription: "2026 Roth IRA phase-out ranges: $150K&ndash;$165K single, $236K&ndash;$246K MFJ. Contribution limit $7,000.",
   content: `
-<p>A Roth IRA lets you contribute after-tax dollars and withdraw qualified earnings completely tax-free in retirement. The catch: your ability to contribute directly phases out above certain income thresholds. For 2026, these thresholds are projected to remain near 2025 levels based on current inflation data.</p>
+<p>A Roth IRA lets you contribute after-tax dollars and withdraw qualified earnings completely tax-free in retirement. The catch: your ability to contribute directly phases out above certain income thresholds based on your modified adjusted gross income (MAGI). For 2026, these thresholds remain at 2025 levels -- the IRS determined that inflation adjustments did not reach the next increment.</p>
 
-<h2>2026 Roth IRA Contribution Limit</h2>
-<p>The 2026 Roth IRA contribution limit is <strong>$7,000</strong> per person, unchanged from 2025. Account holders aged 50 and older can contribute an additional $1,000 catch-up contribution for a total of <strong>$8,000</strong>. This limit is shared between traditional and Roth IRA contributions combined &mdash; you cannot contribute $7,000 to each.</p>
+<h2>2026 Roth IRA Contribution Limits</h2>
+<p>The 2026 Roth IRA contribution limit is <strong>$7,000</strong> per person, unchanged from 2025. Account holders aged 50 and older can contribute an additional $1,000 catch-up contribution for a total of <strong>$8,000</strong>. This limit is shared across all your IRA accounts -- you cannot contribute $7,000 to a Roth and another $7,000 to a traditional IRA in the same year. Your total contributions to all IRAs cannot exceed $7,000 (or $8,000 if 50+).</p>
+<p>There is also an earned income requirement: you cannot contribute more than your taxable compensation for the year. If you earned only $4,000 in 2026, your maximum IRA contribution is $4,000, not $7,000.</p>
 
-<h2>2026 Roth IRA Income Phase-Out Ranges (Projected)</h2>
-<p>Your ability to contribute to a Roth IRA phases out over a specific MAGI range based on your filing status. Within the phase-out range, your maximum contribution is reduced proportionally. Above the upper limit, you cannot contribute directly at all.</p>
+<h2>2026 Roth IRA Income Phase-Out Ranges</h2>
+<p>Your ability to contribute directly to a Roth IRA phases out over a specific MAGI range based on your filing status. Within the phase-out range, your maximum contribution is reduced proportionally. Above the upper limit, direct Roth IRA contributions are not permitted.</p>
 
 <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin:16px 0;font-size:.9rem;">
   <thead>
-    <tr style="background:#f9fafb;">
-      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Filing Status</th>
-      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Phase-Out Begins</th>
-      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Phase-Out Ends (No Direct Roth)</th>
+    <tr style="background:#16a34a;color:#fff;">
+      <th style="padding:10px 14px;text-align:left;">Filing Status</th>
+      <th style="padding:10px 14px;text-align:left;">Phase-Out Begins</th>
+      <th style="padding:10px 14px;text-align:left;">No Direct Roth Above</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single / Head of Household</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$150,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$165,000</td></tr>
-    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Married Filing Jointly</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$236,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$246,000</td></tr>
-    <tr><td style="padding:10px 14px;">Married Filing Separately</td><td style="padding:10px 14px;">$0</td><td style="padding:10px 14px;">$10,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single / Head of Household</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$150,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$165,000</td></tr>
+    <tr style="background:#f9fafb;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Married Filing Jointly</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$236,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$246,000</td></tr>
+    <tr><td style="padding:10px 14px;">Married Filing Separately (lived with spouse)</td><td style="padding:10px 14px;">$0</td><td style="padding:10px 14px;">$10,000</td></tr>
   </tbody>
 </table>
 
-<div style="background:#fef3c7;border:1px solid #fde68a;border-left:4px solid #f59e0b;border-radius:8px;padding:12px 16px;margin:16px 0;font-size:.88rem;color:#78350f;">
-  <strong>These are projected figures.</strong> The IRS typically announces official Roth IRA income limits for the upcoming year in November via a news release. For official 2025 limits, see <a href="/blog/2026-401k-ira-contribution-limits" style="color:#78350f;font-weight:700;">our 2026 IRA limits guide</a>.
-</div>
+<h2>What MAGI Means for Roth IRA Purposes</h2>
+<p>MAGI (modified adjusted gross income) for Roth IRA purposes starts with your AGI and adds back certain deductions: student loan interest, tuition deductions, IRA deductions, foreign income exclusions, and others. For most W-2 employees without complex deductions, MAGI equals AGI. For self-employed individuals or those with foreign income, the adjustment may matter. Your brokerage or tax software will calculate it automatically, but it is worth understanding if you are near a threshold.</p>
 
-<h2>How the Phase-Out Works</h2>
-<p>Within the phase-out range, your maximum allowable Roth IRA contribution is reduced proportionally. The reduction formula is:</p>
-<div style="background:#111827;border-radius:8px;padding:16px 20px;margin:16px 0;overflow-x:auto;">
-  <code style="font-family:'Courier New',monospace;font-size:.85rem;color:#d1fae5;line-height:1.7;white-space:pre;">Reduced Limit = $7,000 x (Upper Limit - Your MAGI) / Phase-Out Range Width</code>
-</div>
-<p><strong>Example:</strong> Single filer with $157,500 MAGI in 2026 (midpoint of ~$150K&ndash;$165K range). The phase-out range is ~$15,000 wide. Your MAGI is $7,500 into the range.</p>
-<p>Reduced limit = $7,000 &times; ($165,000 &minus; $157,500) / $15,000 = $7,000 &times; 0.50 = <strong>$3,500</strong></p>
+<h2>How the Phase-Out Reduction Works</h2>
+<p>Within the phase-out range, your maximum Roth IRA contribution is reduced proportionally. The formula:</p>
+<p style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:14px 18px;font-size:.9rem;font-family:'Courier New',monospace;">Reduced limit = $7,000 x (Upper limit - Your MAGI) / Phase-out range width</p>
+<p><strong>Example (single filer):</strong> Your 2026 MAGI is $157,500 -- midpoint of the $150,000-$165,000 range. The range is $15,000 wide. You are $7,500 into the range.</p>
+<p>Reduced limit = $7,000 x ($165,000 - $157,500) / $15,000 = $7,000 x 0.50 = <strong>$3,500 maximum Roth contribution</strong>.</p>
+<p>If your calculated reduced limit is between $0 and $200, the IRS allows you to contribute $200 -- the minimum. Round your reduced limit to the nearest $10.</p>
 
 <h2>What to Do If You Earn Too Much</h2>
-<p>If your MAGI exceeds the upper phase-out limit, you have two main strategies to get money into a Roth:</p>
-<p><strong>Backdoor Roth IRA:</strong> Contribute to a non-deductible traditional IRA (no income limit) and then immediately convert it to a Roth IRA. This is a well-established strategy, but the pro-rata rule applies if you have other pre-tax IRA balances. See our <a href="/blog/backdoor-roth-ira-guide-2026" style="color:#16a34a;font-weight:600;">backdoor Roth IRA guide</a> for the full process.</p>
-<p><strong>Roth 401(k):</strong> If your employer offers a Roth 401(k) option, there is no income limit for contributions. You can contribute up to $23,500 to a Roth 401(k) in 2026 regardless of income.</p>
+<p>Two main strategies let high earners access Roth accounts when direct contributions are not allowed:</p>
+<p><strong>Backdoor Roth IRA:</strong> Contribute to a non-deductible traditional IRA (no income limit applies) and convert it to a Roth IRA. This is a well-established strategy explicitly acknowledged by Congress. The main complication is the pro-rata rule, which applies if you have pre-tax IRA balances. See our <a href="/blog/backdoor-roth-ira-guide-2026" style="color:#16a34a;font-weight:600;">backdoor Roth IRA guide</a> for full step-by-step instructions.</p>
+<p><strong>Roth 401(k):</strong> If your employer offers a Roth 401(k) option, there is no income limit on contributions. You can contribute up to $23,500 (or $31,000 if age 50+) to a Roth 401(k) in 2026 regardless of your income. If you are age 60-63, the SECURE 2.0 enhanced catch-up contribution applies: up to $34,750 total.</p>
 
-<h2>2025 vs. 2026 Roth IRA Limits Comparison</h2>
+<h2>Excess Contribution Penalty</h2>
+<p>Contributing more than your allowable limit -- whether because your income exceeded the threshold or your contributions across all IRAs exceeded $7,000 -- results in a 6% excise tax on the excess amount for each year it remains in the account. If you contributed too much, you have until the tax filing deadline (including extensions) to withdraw the excess contribution and any earnings attributable to it. Your brokerage can process this as a "return of excess contribution." Acting before the deadline avoids the 6% penalty entirely.</p>
+
+<h2>2025 vs. 2026 Roth IRA Limits at a Glance</h2>
 <table style="width:100%;border-collapse:collapse;background:#fff;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin:16px 0;font-size:.9rem;">
-  <thead>
-    <tr style="background:#f9fafb;">
-      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">Item</th>
-      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">2025 (Official)</th>
-      <th style="padding:10px 14px;text-align:left;font-size:.78rem;font-weight:700;color:#374151;text-transform:uppercase;border-bottom:1px solid #e5e7eb;">2026 (Projected)</th>
-    </tr>
-  </thead>
+  <thead><tr style="background:#f9fafb;"><th style="padding:10px 14px;text-align:left;border-bottom:1px solid #e5e7eb;">Item</th><th style="padding:10px 14px;text-align:left;border-bottom:1px solid #e5e7eb;">2025</th><th style="padding:10px 14px;text-align:left;border-bottom:1px solid #e5e7eb;">2026</th></tr></thead>
   <tbody>
-    <tr style="background:#f0fdf4;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;color:#15803d;">Contribution limit (under 50)</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;color:#15803d;">$7,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;font-weight:700;color:#15803d;">$7,000</td></tr>
-    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Catch-up limit (age 50+)</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">+$1,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">+$1,000</td></tr>
-    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single phase-out start</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$150,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$150,000</td></tr>
-    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single phase-out end</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$165,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$165,000</td></tr>
-    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">MFJ phase-out start</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$236,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">~$236,000</td></tr>
-    <tr><td style="padding:10px 14px;">MFJ phase-out end</td><td style="padding:10px 14px;">$246,000</td><td style="padding:10px 14px;">~$246,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Contribution limit (under 50)</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$7,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$7,000</td></tr>
+    <tr style="background:#f9fafb;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Catch-up (age 50+)</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">+$1,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">+$1,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single phase-out start</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$150,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$150,000</td></tr>
+    <tr style="background:#f9fafb;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single phase-out end</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$165,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$165,000</td></tr>
+    <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">MFJ phase-out start</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$236,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$236,000</td></tr>
+    <tr style="background:#f9fafb;"><td style="padding:10px 14px;">MFJ phase-out end</td><td style="padding:10px 14px;">$246,000</td><td style="padding:10px 14px;">$246,000</td></tr>
   </tbody>
 </table>
 
-<h2>IRA Contribution Deadline for 2026</h2>
-<p>You have until the tax filing deadline &mdash; April 15, 2027 &mdash; to make Roth IRA contributions for tax year 2026. Filing for an extension does not extend this deadline. Contributions made between January 1 and April 15, 2027, must be designated for 2026 when submitted to your IRA custodian.</p>
+<h2>Roth IRA Contribution Deadline</h2>
+<p>You have until the tax filing deadline -- <strong>April 15, 2027</strong> -- to make Roth IRA contributions designated for tax year 2026. Filing for a tax extension does not extend this deadline. Contributions made between January 1 and April 15, 2027, must be explicitly designated for 2026 when submitted to your IRA custodian -- most brokerages ask you to specify the tax year during the contribution process.</p>
 
-<p>For more retirement planning context, see our guides on <a href="/401k-contribution-limits-2026" style="color:#16a34a;font-weight:600;">401(k) limits for 2026</a> and <a href="/roth-ira-conversion-tax" style="color:#16a34a;font-weight:600;">Roth IRA conversion tax rules</a>.</p>
+<h2>Why Roth IRAs Are Valuable Despite the Income Limits</h2>
+<p>The core advantage of a Roth IRA is tax-free growth and tax-free qualified withdrawals in retirement. Unlike traditional IRAs, Roth IRAs have no required minimum distributions (RMDs) during the owner's lifetime -- you can let the account grow indefinitely. Roth IRAs also offer flexible access to contributions (not earnings) without penalty at any age, making them useful as a secondary emergency fund for some investors. For most earners below the phase-out thresholds, contributing the full annual limit to a Roth IRA before funding taxable accounts is a standard financial planning recommendation.</p>
+
+<p>For more retirement planning context, see our guides on <a href="/401k-contribution-limits-2026" style="color:#16a34a;font-weight:600;">401(k) contribution limits for 2026</a> and <a href="/roth-ira-conversion-tax" style="color:#16a34a;font-weight:600;">Roth IRA conversion tax rules</a>.</p>
+
+  <h2>Roth IRA vs. Traditional IRA: The Core Decision</h2>
+  <p>The Roth vs. traditional IRA decision is fundamentally a bet on future tax rates. If you expect to be in a higher tax bracket in retirement than you are today, Roth wins -- you pay tax now at the lower rate and withdraw tax-free later. If you expect to be in a lower bracket in retirement (common for high earners in peak earning years), the traditional IRA's upfront deduction is more valuable. For most people in their 20s and 30s who are in the 12% or 22% bracket, Roth is generally favored. For high earners over 50 in the 32-37% bracket who expect significant income in retirement, the math often tilts toward traditional.</p>
+  <p>A practical consideration: Roth IRAs have no required minimum distributions during the owner's lifetime, which gives them estate planning flexibility that traditional IRAs lack. If you do not need the money in retirement, a Roth IRA can be passed to heirs who then draw it down over 10 years tax-free (under current law). This makes Roth IRAs especially attractive for wealth transfer planning, even when the tax rate arbitrage calculation is close.</p>
+
+  <h2>Spousal Roth IRA Contributions</h2>
+  <p>A non-working spouse can contribute to a Roth IRA based on the working spouse's earned income, provided the couple files a joint return and has sufficient combined earned income. This allows a single-income household to fund two Roth IRAs annually -- up to $14,000 combined in 2026 (or $16,000 if both are 50+). The income limits for spousal Roth contributions use the married filing jointly thresholds ($236,000-$246,000 phase-out range), making this strategy available to most single-income households below those thresholds.</p>
+
+  <h2>Calculating Your Reduced Roth Contribution: Step by Step</h2>
+  <p>If your MAGI falls within the phase-out range, here is the exact calculation to determine your maximum allowable Roth contribution. First, determine how far your MAGI exceeds the phase-out start. Second, divide that excess by the phase-out range width ($15,000 for single filers, $10,000 for married filing separately). Third, multiply the result by the contribution limit ($7,000 or $8,000). Fourth, subtract that amount from the contribution limit. Round the result to the nearest $10. If the result is between $0 and $200, you may still contribute $200.</p>
+  <p>Example for a single filer with $160,000 MAGI: excess above start = $160,000 minus $150,000 = $10,000. Divided by range width $15,000 = 0.667. Multiply by $7,000 = $4,667 reduction. Allowed contribution = $7,000 minus $4,667 = $2,333, rounded to $2,330. If you contribute more than this amount, you will owe the 6% excise tax on the excess.</p>
 `
 },
 
@@ -677,47 +687,75 @@ const blogPosts = [
       { href: "/blog/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide" },
     ],
     content: `
-  <p>More than 73 million Americans earn income from gig work -- driving for rideshare platforms, delivering food, freelancing on project platforms, renting out property, or selling goods online. What many of them do not expect is the tax bill that comes with it. Unlike W-2 employees, gig workers receive no withholding and are responsible for tracking, calculating, and paying their own taxes.</p>
+  <p>More than 73 million Americans earn income from gig work -- driving for rideshare platforms, delivering food, freelancing on project platforms, renting out property, or selling goods online. What many of them do not expect is the tax bill that comes with it. Unlike W-2 employees, gig workers receive no withholding and are responsible for tracking, calculating, and paying their own taxes throughout the year.</p>
 
   <h2>You Are Treated as Self-Employed</h2>
-  <p>When you work for Uber, Lyft, DoorDash, Instacart, Upwork, Fiverr, or any other platform as an independent contractor, the IRS treats you as self-employed -- regardless of what the platform calls you. This has two major tax consequences:</p>
+  <p>When you work for Uber, Lyft, DoorDash, Instacart, Upwork, Fiverr, or any other platform as an independent contractor, the IRS treats you as self-employed -- regardless of what the platform calls you or how much control they exercise over your work schedule. This has two major tax consequences:</p>
   <ul>
-    <li>You owe <strong>self-employment (SE) tax</strong> of 15.3% on net earnings (12.4% Social Security + 2.9% Medicare), which covers both the employer and employee share of FICA</li>
+    <li>You owe <strong>self-employment (SE) tax</strong> of 15.3% on net earnings (12.4% Social Security + 2.9% Medicare), covering both the employer and employee share of FICA</li>
     <li>You owe <strong>federal income tax</strong> on net profit at your regular marginal rate</li>
   </ul>
-  <p>The combined tax burden on gig income -- even at relatively modest earnings -- is frequently higher than people expect because there is no employer absorbing half of the FICA tax.</p>
+  <p>The combined tax burden on gig income is frequently higher than people expect because there is no employer absorbing half of the FICA tax. A W-2 employee pays 7.65% FICA; a self-employed gig worker pays 15.3% (though half is deductible above the line).</p>
 
   <h2>How the Math Works: A Real Example</h2>
   <p>Suppose you earn $20,000 in net gig income in 2026 (after platform fees and deductible expenses), and you also have $50,000 in W-2 wages from a day job.</p>
   <ul>
     <li><strong>SE tax:</strong> $20,000 x 92.35% x 15.3% = <strong>$2,835</strong></li>
-    <li><strong>SE tax deduction:</strong> Half of SE tax ($1,417) is deductible above the line, reducing taxable income</li>
-    <li><strong>Income tax on remaining gig profit:</strong> At a 22% marginal rate on $18,583 = <strong>~$4,088</strong></li>
-    <li><strong>Total additional federal tax from gig income: ~$6,923</strong></li>
+    <li><strong>SE tax deduction:</strong> Half of SE tax ($1,418) is deductible above the line, reducing your AGI</li>
+    <li><strong>Income tax on net gig profit after deduction:</strong> At 22% on $18,582 = <strong>approximately $4,088</strong></li>
+    <li><strong>Total additional federal tax from $20,000 in gig income: approximately $6,923</strong></li>
   </ul>
-  <p>Use the <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to run your own numbers.</p>
+  <p>That is an effective rate of about 34.6% on your gig earnings -- higher than most W-2 workers pay on equivalent income. Use the <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to run your own numbers.</p>
 
-  <h2>The 1099-K Reporting Threshold</h2>
-  <p>For 2026, the IRS has confirmed a $5,000 reporting threshold for 1099-K forms from payment platforms (PayPal, Venmo, Stripe, etc.) for goods and services payments. However, all gig income is taxable regardless of whether you receive a 1099 -- the form is a reporting mechanism, not a threshold for taxability.</p>
+  <h2>The 1099-K Reporting Threshold in 2026</h2>
+  <p>For 2026, the IRS has confirmed a $5,000 reporting threshold for Form 1099-K from payment platforms (PayPal, Venmo, Stripe, Cash App for Business, etc.) for goods and services payments. The threshold will eventually phase down to $600 under the American Rescue Plan Act, but the IRS has continued to delay implementation. However, <strong>all gig income is taxable regardless of whether you receive a 1099-K</strong> -- the form is an information reporting mechanism, not a threshold for taxability. If you earned $800 flipping items on eBay and received no 1099-K, that $800 is still taxable income you must report.</p>
 
   <h2>Deductions That Reduce Your Taxable Gig Income</h2>
-  <p>You can deduct ordinary and necessary business expenses from your gross gig income. Common deductions for gig workers:</p>
+  <p>You can deduct ordinary and necessary business expenses from your gross gig income on Schedule C. Common deductions for gig workers:</p>
   <ul>
-    <li><strong>Mileage (rideshare/delivery):</strong> The 2026 IRS standard mileage rate is 72.5 cents per mile for business driving. Track every mile -- this is typically the largest deduction for rideshare and delivery workers</li>
-    <li><strong>Phone and data:</strong> The business-use portion of your phone bill</li>
-    <li><strong>Platform fees:</strong> Any fees the platform charges you directly</li>
-    <li><strong>Equipment and supplies:</strong> Insulated delivery bags, phone mounts, dashcams, cleaning supplies</li>
-    <li><strong>Health insurance premiums:</strong> Self-employed individuals can deduct 100% of health insurance premiums above the line</li>
-    <li><strong>Half of SE tax:</strong> Always deductible above the line</li>
-    <li><strong>SEP-IRA or Solo 401(k) contributions:</strong> Up to 25% of net self-employment income, significantly reducing taxable income</li>
+    <li><strong>Mileage (rideshare and delivery):</strong> The 2026 IRS standard mileage rate is 72.5 cents per mile for business driving. Track every mile with a mileage app or a log showing date, starting point, destination, business purpose, and miles. This is typically the largest deduction for rideshare and delivery drivers.</li>
+    <li><strong>Phone and data plan:</strong> The business-use percentage of your phone bill. If you use your phone 60% for business, deduct 60% of the monthly bill.</li>
+    <li><strong>Platform fees and commissions:</strong> Any fees the platform charges you directly (Uber's service fee, Upwork's contract fee, etc.)</li>
+    <li><strong>Equipment and supplies:</strong> Insulated delivery bags, phone mounts, dashcams, cleaning supplies for your vehicle, safety equipment</li>
+    <li><strong>Health insurance premiums:</strong> Self-employed individuals can deduct 100% of health insurance premiums paid for themselves and their family above the line -- not on Schedule C, but on Form 1040 Schedule 1</li>
+    <li><strong>Half of SE tax:</strong> Always deductible above the line, automatically calculated on Schedule SE</li>
+    <li><strong>Retirement contributions:</strong> SEP-IRA contributions of up to 25% of net self-employment income (max $70,000 in 2026), or Solo 401(k) contributions, significantly reduce taxable income</li>
+    <li><strong>Home office:</strong> If you use a dedicated space regularly and exclusively for managing your gig business (booking, tracking, accounting), a proportional home office deduction may apply</li>
   </ul>
 
-  <h2>Quarterly Estimated Taxes</h2>
-  <p>Because no employer withholds taxes from gig income, you are required to pay estimated taxes quarterly if you expect to owe at least $1,000 in federal tax from self-employment. The 2026 deadlines are April 15, June 16, September 15, and January 15, 2027. See the <a href="/quarterly-estimated-taxes">quarterly estimated taxes guide</a> for exact calculation instructions.</p>
+  <h2>Quarterly Estimated Taxes: The Requirement Most Gig Workers Miss</h2>
+  <p>Because no employer withholds taxes from gig income, you are required to pay estimated taxes quarterly if you expect to owe at least $1,000 in federal tax from self-employment for the year. Failure to pay estimated taxes on time results in an underpayment penalty -- even if you pay the full amount when you file in April.</p>
+  <p>The 2026 quarterly estimated tax deadlines are:</p>
+  <ul>
+    <li>Q1 (January - March income): <strong>April 15, 2026</strong></li>
+    <li>Q2 (April - May income): <strong>June 16, 2026</strong></li>
+    <li>Q3 (June - August income): <strong>September 15, 2026</strong></li>
+    <li>Q4 (September - December income): <strong>January 15, 2027</strong></li>
+  </ul>
+  <p>A simple approach: set aside 25-30% of every gig payment you receive into a separate savings account designated for taxes. Pay quarterly from that account. See the <a href="/quarterly-estimated-taxes">quarterly estimated taxes guide</a> for exact calculation instructions and safe harbor rules.</p>
+
+  <h2>State Income Taxes on Gig Income</h2>
+  <p>In addition to federal taxes, most states tax self-employment income at the state income tax rate. If you live in a state with income tax, your gig income is subject to state tax as well. Some states also require quarterly estimated state tax payments. Check your <a href="/states">state income tax calculator</a> to understand your combined federal and state tax obligation.</p>
+
+  <h2>Record Keeping Best Practices</h2>
+  <p>Keep records for at least 3 years after the return due date. For gig work specifically:</p>
+  <ul>
+    <li>Screenshot or download earnings summaries from every platform monthly -- do not rely on the platform to have records available years later</li>
+    <li>Use a mileage tracking app (MileIQ, Everlance, Stride) that logs trips automatically</li>
+    <li>Keep receipts for all equipment purchases and business supplies</li>
+    <li>Maintain a separate bank account and credit card for business expenses if possible</li>
+  </ul>
 
   <h2>Source</h2>
-  <p>IRS Publication 334 (Tax Guide for Small Business); IRS Topic No. 554 (Self-Employment Tax); IRS IR-2024-273 (1099-K threshold guidance); IRS Rev. Proc. 2025-05 (2026 mileage rates).</p>
-    `
+  <p>IRS Publication 334 (Tax Guide for Small Business); IRS Topic No. 554 (Self-Employment Tax); IRS IR-2024-273 (1099-K threshold guidance); IRS Rev. Proc. 2025-05 (2026 standard mileage rates).</p>
+
+  <h2>Retirement Savings Options for Gig Workers</h2>
+  <p>One of the underappreciated advantages of self-employment is access to retirement accounts with substantially higher contribution limits than a standard 401(k). A gig worker with net self-employment income can contribute to a SEP-IRA (up to 25% of net SE income, maximum $70,000 in 2026), a Solo 401(k) (up to $23,500 in elective deferrals plus 25% of compensation as employer contributions, total up to $70,000), or a SIMPLE IRA if they have no full-time employees. These contributions directly reduce your Schedule C taxable income, cutting both income tax and SE tax simultaneously.</p>
+  <p>For a gig worker earning $40,000 in net self-employment income, a $10,000 SEP-IRA contribution reduces SE tax by approximately $1,413 (15.3% of the contribution x 92.35%) and income tax by another $2,200 (at a 22% rate). Total immediate tax savings from a $10,000 retirement contribution: approximately $3,613 -- while simultaneously building retirement wealth in a tax-advantaged account.</p>
+
+  <h2>When Gig Income Stops: Estimated Tax Underpayment</h2>
+  <p>Gig workers who have a slow quarter or stop working partway through the year often make the mistake of skipping or underpaying estimated taxes in the slow period and assuming they will square up in April. The IRS calculates underpayment penalties quarterly -- even if you pay everything by April 15, you may still owe penalties for quarters where you were short. The safe harbor rule protects you if you pay either 100% of last year's tax liability in equal quarterly installments (110% if your AGI exceeds $150,000) or 90% of this year's actual tax liability. Using the prior-year safe harbor is simpler for variable-income gig workers because you know the number at the start of the year.</p>
+`
   },
 
   {
@@ -798,39 +836,60 @@ const blogPosts = [
       { href: "/tax-filing-deadline-2026", label: "Tax Filing Deadline 2026" },
     ],
     content: `
-  <p>Mistakes on a tax return happen -- a missed deduction, a forgotten income source, an incorrect filing status. The good news is the IRS provides a clear mechanism to fix them: Form 1040-X, the Amended U.S. Individual Income Tax Return. Filing an amended return can result in a larger refund, reduce an amount owed, or simply correct the record.</p>
+  <p>Mistakes on a tax return happen -- a missed deduction, a forgotten income source, an incorrect filing status. The good news is the IRS provides a clear mechanism to fix them: Form 1040-X, the Amended U.S. Individual Income Tax Return. Filing an amended return can result in a larger refund, reduce an amount owed, or simply correct the record for future reference. The process is more straightforward than many taxpayers assume.</p>
 
   <h2>When to File an Amended Return</h2>
-  <p>Common reasons to file Form 1040-X:</p>
+  <p>Common reasons to file Form 1040-X include:</p>
   <ul>
-    <li>You forgot to claim a deduction or credit (education credits, retirement contributions, business expenses)</li>
+    <li>You forgot to claim a deduction or credit (education credits, retirement contributions, business expenses, medical expenses)</li>
     <li>You reported income incorrectly -- either too much or too little</li>
-    <li>You used the wrong filing status</li>
-    <li>You received a corrected 1099 or W-2 after filing</li>
-    <li>You forgot to claim a dependent</li>
+    <li>You used the wrong filing status (for example, filing as single when you qualify for head of household)</li>
+    <li>You received a corrected 1099 or W-2 (Form 1099-C, 1099-R, or W-2c) after you filed</li>
+    <li>You forgot to claim a dependent who clearly qualifies</li>
+    <li>A net operating loss, capital loss carryback, or other carryback provision applies to a prior year</li>
+    <li>You became aware of a deduction you did not know was available (home office, educator expenses, student loan interest)</li>
   </ul>
-  <p>You do not need to file an amended return for simple math errors -- the IRS corrects those automatically. You also do not need to amend if you forgot to attach a W-2; the IRS will contact you if needed.</p>
+  <p><strong>When you do not need to amend:</strong> Simple math errors -- the IRS corrects those automatically. You also do not need to amend if you forgot to attach a W-2 or a schedule; the IRS will contact you separately if it needs those documents.</p>
 
-  <h2>The 3-Year Deadline</h2>
-  <p>To claim a refund on an amended return, you must file within <strong>3 years from the original filing deadline</strong> (including extensions) or <strong>2 years from the date you paid the tax</strong>, whichever is later. For a 2022 return with an April 15, 2023 deadline, the 3-year window closes April 15, 2026.</p>
+  <h2>The 3-Year Deadline for Refunds</h2>
+  <p>To claim a refund on an amended return, you must file within <strong>3 years from the original filing deadline</strong> (including extensions) or <strong>2 years from the date you paid the tax</strong>, whichever is later. Missing this window forfeits your right to the refund -- the IRS will not pay interest on overpayments you failed to claim in time.</p>
+  <p>Example: For a 2022 return with an original deadline of April 18, 2023, the 3-year window closes April 18, 2026. If you filed on extension and the extension deadline was October 15, 2023, your window extends to October 15, 2026. If you are owed a refund on a 2022 return and you are reading this in mid-2026, act now.</p>
+  <p>There is no deadline for filing an amended return that results in additional tax owed -- but interest and penalties continue to accrue from the original due date, so there is no benefit to delaying.</p>
 
   <h2>Step-by-Step: How to File Form 1040-X</h2>
   <ol>
-    <li><strong>Get the right year's form.</strong> Use the Form 1040-X for the tax year you are amending. Download from IRS.gov.</li>
-    <li><strong>Have your original return handy.</strong> You will need the figures from your original 1040 to complete the "original amount" column on the 1040-X.</li>
-    <li><strong>Complete the three-column format.</strong> Column A shows original amounts, Column B shows the net change, Column C shows the corrected amounts.</li>
-    <li><strong>Attach supporting documentation.</strong> If claiming a new deduction, attach the relevant forms. If reporting additional income, attach the corrected 1099 or W-2.</li>
-    <li><strong>Explain the changes.</strong> Part III requires a clear written explanation of each change. Be specific.</li>
-    <li><strong>File electronically or by mail.</strong> The IRS accepts e-filed 1040-X returns for tax years 2019 and later. Earlier years require paper filing.</li>
-    <li><strong>Pay any additional tax owed.</strong> If your amendment increases your liability, pay it when you file to stop interest from accruing.</li>
+    <li><strong>Get the right year's form.</strong> The IRS updates Form 1040-X periodically. Download the version for the specific tax year you are amending from IRS.gov -- do not use a form from a different year.</li>
+    <li><strong>Have your original return handy.</strong> You will need the figures from your original 1040 to complete the "original amount" column on the 1040-X. If you do not have a copy, request a tax return transcript at IRS.gov/transcripts.</li>
+    <li><strong>Understand the three-column format.</strong> Column A shows the amounts from your original return. Column B shows the net change (positive or negative). Column C shows the corrected amounts after the change. Only lines that are changing need to be completed.</li>
+    <li><strong>Attach supporting documentation.</strong> If claiming a new deduction or credit, attach the relevant forms (Schedule A, Form 8863, etc.). If reporting additional income, attach the corrected 1099 or W-2. If amending because of a corrected information return, include the corrected document.</li>
+    <li><strong>Explain the changes clearly in Part III.</strong> The 1040-X requires a written explanation of each change you are making. Be specific: "Adding Schedule A itemized deductions for $8,500 in medical expenses inadvertently omitted from original return" is better than "forgot deductions."</li>
+    <li><strong>File electronically or by mail.</strong> The IRS accepts e-filed 1040-X returns for tax years 2019 and later through most major tax software. Tax years before 2019 require a paper return mailed to the address listed in the 1040-X instructions for your state.</li>
+    <li><strong>Pay any additional tax owed immediately.</strong> If your amendment increases your liability, pay the tax when you file the 1040-X. Interest accrues from the original due date of the return, not the amendment date -- every day you wait adds to the interest owed.</li>
   </ol>
 
-  <h2>IRS Processing Times</h2>
-  <p>The IRS typically takes <strong>8 to 12 weeks</strong> to process a paper-filed 1040-X, and up to 20 weeks during peak periods. You can check status at IRS.gov using the "Where's My Amended Return?" tool.</p>
+  <h2>Amending Multiple Years</h2>
+  <p>If the same error affects multiple years -- for example, you discover you missed the same deduction for three consecutive years -- you should file a separate Form 1040-X for each year. Each amended return is a standalone document for that specific tax year. Mail them separately (or e-file separately) rather than combining multiple years on one form.</p>
+
+  <h2>What Happens After You File</h2>
+  <p>The IRS typically takes <strong>8 to 12 weeks</strong> to process a paper-filed 1040-X, and up to 20 weeks during peak periods. Electronically filed amended returns generally process faster. The IRS does not automatically deposit amended return refunds -- they arrive by check in the mail unless you specifically request direct deposit at the time of filing.</p>
+  <p>Track the status of your amended return at <strong>IRS.gov</strong> using the "Where's My Amended Return?" tool, which becomes available approximately 3 weeks after you mail your return or within 24 hours for e-filed amendments.</p>
+
+  <h2>Amended Returns and State Taxes</h2>
+  <p>If your federal amendment changes your taxable income, you will almost certainly need to file an amended state return as well. Most states use federal AGI or federal taxable income as the starting point for state taxes, so a change at the federal level flows through to the state. Each state has its own amended return form and deadline -- check your state's department of revenue website for the specific form and instructions. Do not assume the federal amendment automatically updates your state return.</p>
+
+  <h2>Does Filing an Amended Return Increase Audit Risk?</h2>
+  <p>Amending a return does not automatically trigger an audit. The IRS processes amended returns through a separate workflow from original returns, and the amendment itself is not a red flag. What matters is the content of what you are claiming -- a $50,000 deduction claimed on an amendment warrants the same documentation as it would on the original return. Amending to correct an error in your favor (reporting more income or removing a deduction you misapplied) essentially carries no risk at all.</p>
 
   <h2>Source</h2>
-  <p>IRS Form 1040-X instructions; IRS Topic No. 308 (Amended Returns); IRS Publication 17 (Your Federal Income Tax).</p>
-    `
+  <p>IRS Form 1040-X and instructions; IRS Topic No. 308 (Amended Returns); IRS Publication 17 (Your Federal Income Tax); IRS Publication 556 (Examination of Returns, Appeal Rights, and Claims for Refund).</p>
+
+  <h2>Carryback Provisions and Prior-Year Losses</h2>
+  <p>Certain tax situations require amending prior-year returns even when you made no error. If you have a net operating loss (NOL) from a business, capital loss carryback (not generally available for individuals after 2017 unless in specific circumstances), or claim a casualty loss from a federally declared disaster, you may have the right to carry that loss back to a prior tax year and get a refund of taxes paid in that year. NOL carrybacks are generally limited for individuals, but disaster-related losses and other specific provisions can create genuine refund opportunities on prior-year returns.</p>
+  <p>Similarly, if you made a large contribution to a qualified retirement plan in one year that creates excess contributions in a prior year, or if a business deal that closed in a prior year falls apart and generates a bad debt deduction, amending a prior-year return may be appropriate. These situations benefit from professional guidance because the carryback rules are complex and the refund opportunity can be significant.</p>
+
+  <h2>Protecting Yourself After Filing an Amended Return</h2>
+  <p>Once you file a 1040-X, the IRS has the right to examine the entire return for the year being amended -- not just the items you changed. This is not a reason to avoid amending legitimate errors, but it is a reason to ensure your entire return for that year is accurate and well-documented before filing the amendment. If you are amending to claim a large refund, organize all supporting documentation for the deductions and credits on the original return as well, not just the new items you are adding.</p>
+`
   },
 
   {
@@ -851,49 +910,72 @@ const blogPosts = [
       { href: "/marginal-vs-effective-tax-rate", label: "Marginal vs Effective Tax Rate" },
     ],
     content: `
-  <p>Many retirees are surprised to learn that Social Security benefits can be taxable. Whether yours are -- and how much -- depends on a figure called "combined income," which the IRS uses to determine how much of your benefit to include in taxable income. The thresholds have not been adjusted for inflation since 1984 and 1993, which means more retirees cross them each year as benefit amounts rise.</p>
+  <p>Many retirees are surprised to learn that Social Security benefits can be taxable at the federal level. Whether yours are -- and how much -- depends on a figure called "combined income," which the IRS uses to determine how much of your benefit to include in taxable income. The income thresholds that trigger taxation have not been adjusted for inflation since 1984 and 1993, which means more retirees cross them each year as benefit amounts rise with cost-of-living adjustments.</p>
 
   <h2>What Is "Combined Income"?</h2>
-  <p>Combined income is the IRS's specific formula for measuring total income for Social Security taxation purposes:</p>
+  <p>Combined income is the IRS's specific formula for measuring total income when calculating Social Security taxation. It is not the same as AGI or total income on your tax return:</p>
   <p style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:10px;padding:16px 20px;font-size:.95rem;line-height:1.8"><strong>Combined Income = Adjusted Gross Income + Nontaxable Interest + 50% of Social Security Benefits</strong></p>
-  <p>Note: tax-exempt municipal bond interest is included even though it is not normally in AGI.</p>
+  <p>An important nuance: tax-exempt municipal bond interest is included in combined income even though it does not appear in your AGI. This surprises many retirees who hold municipal bonds specifically to reduce their taxable income -- the bonds still push up combined income and can make more of their Social Security taxable.</p>
 
-  <h2>The Three Tiers: 0%, 50%, and 85%</h2>
-  <table>
-    <thead><tr><th>Filing Status</th><th>Combined Income</th><th>Taxable Portion</th></tr></thead>
+  <h2>The Three Tiers: 0%, 50%, and 85% Taxable</h2>
+  <p>Based on combined income and filing status, up to 85% of your Social Security benefits may be included in taxable income. Note that 85% is the maximum -- you are never taxed on more than 85% of your benefit, regardless of income level.</p>
+  <table style="width:100%;border-collapse:collapse;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;margin:16px 0;font-size:.9rem;">
+    <thead style="background:#16a34a;color:#fff;"><tr><th style="padding:10px 14px;text-align:left;">Filing Status</th><th style="padding:10px 14px;text-align:left;">Combined Income</th><th style="padding:10px 14px;text-align:left;">Taxable Portion</th></tr></thead>
     <tbody>
-      <tr><td>Single / Head of Household</td><td>Below $25,000</td><td>0%</td></tr>
-      <tr><td>Single / Head of Household</td><td>$25,000 -- $34,000</td><td>Up to 50%</td></tr>
-      <tr><td>Single / Head of Household</td><td>Above $34,000</td><td>Up to 85%</td></tr>
-      <tr><td>Married Filing Jointly</td><td>Below $32,000</td><td>0%</td></tr>
-      <tr><td>Married Filing Jointly</td><td>$32,000 -- $44,000</td><td>Up to 50%</td></tr>
-      <tr><td>Married Filing Jointly</td><td>Above $44,000</td><td>Up to 85%</td></tr>
+      <tr style="background:#f9fafb;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single / Head of Household</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Below $25,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">0%</td></tr>
+      <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single / Head of Household</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$25,000 -- $34,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Up to 50%</td></tr>
+      <tr style="background:#f9fafb;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Single / Head of Household</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Above $34,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Up to 85%</td></tr>
+      <tr><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Married Filing Jointly</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Below $32,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">0%</td></tr>
+      <tr style="background:#f9fafb;"><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Married Filing Jointly</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">$32,000 -- $44,000</td><td style="padding:10px 14px;border-bottom:1px solid #f3f4f6;">Up to 50%</td></tr>
+      <tr><td style="padding:10px 14px;">Married Filing Jointly</td><td style="padding:10px 14px;">Above $44,000</td><td style="padding:10px 14px;">Up to 85%</td></tr>
     </tbody>
   </table>
 
-  <h2>A Worked Example</h2>
+  <h2>A Worked Dollar Example</h2>
   <p>You are single, receive $24,000 in Social Security benefits, and have $18,000 in IRA withdrawals and $2,000 in interest income.</p>
   <ul>
-    <li>AGI: $20,000</li>
+    <li>AGI: $20,000 (IRA withdrawals + interest)</li>
+    <li>Nontaxable interest: $0</li>
     <li>50% of Social Security: $12,000</li>
-    <li>Combined income: $32,000 -- in the 50% tier</li>
-    <li>Taxable portion: lesser of 50% of benefits ($12,000) or 50% of the amount over $25,000 ($3,500)</li>
-    <li><strong>$3,500 of your Social Security is taxable</strong></li>
+    <li>Combined income: $20,000 + $0 + $12,000 = <strong>$32,000</strong> -- in the 50% tier</li>
+    <li>Taxable SS = lesser of: 50% of benefits ($12,000) OR 50% of combined income over $25,000 ($3,500)</li>
+    <li><strong>$3,500 of your Social Security benefit is included in taxable income</strong></li>
   </ul>
+  <p>At a 12% marginal rate, that $3,500 adds $420 to your tax bill. If your combined income were $40,000 instead, you would be in the 85% tier and the calculation becomes more complex -- up to $20,400 of your $24,000 benefit could be taxable.</p>
 
-  <h2>Planning Strategies</h2>
+  <h2>Why the Thresholds Are a Trap</h2>
+  <p>The $25,000/$32,000 thresholds were set in 1984 and the $34,000/$44,000 thresholds in 1993. Neither has ever been indexed for inflation. A retiree in 1984 needed substantial income to cross the 50% threshold. Today, a retiree with a modest IRA and average Social Security benefit frequently crosses it. The Social Security Administration's annual cost-of-living adjustments (COLAs) push more retirees into taxable territory each year without Congress changing any law.</p>
+
+  <h2>Planning Strategies to Reduce Taxation</h2>
+  <p>Because combined income is the key variable, strategies that reduce it can protect a larger share of your Social Security from tax:</p>
   <ul>
-    <li><strong>Roth conversions before claiming Social Security</strong> reduce future RMDs and combined income</li>
-    <li><strong>Qualified Charitable Distributions (QCDs)</strong> satisfy RMDs without increasing AGI</li>
-    <li><strong>HSA spending</strong> for medical expenses avoids adding to AGI</li>
+    <li><strong>Roth conversions before claiming Social Security:</strong> Converting pre-tax IRA funds to Roth in years before you claim SS reduces future required minimum distributions (RMDs), which would otherwise add to combined income. The conversion itself is taxable in the year it occurs, so timing matters.</li>
+    <li><strong>Qualified Charitable Distributions (QCDs):</strong> If you are 70.5 or older, you can direct up to $105,000 per year (2026) directly from your IRA to a charity. QCDs satisfy your RMD requirement without adding to AGI, which keeps combined income lower.</li>
+    <li><strong>Delay claiming Social Security:</strong> Every year you delay claiming (up to age 70) increases your monthly benefit by approximately 8%. Delaying also compresses the period during which you draw both a high SS benefit and large IRA withdrawals simultaneously.</li>
+    <li><strong>Coordinate IRA withdrawals:</strong> In years before Social Security begins, drawing down pre-tax IRAs (even if you do not need the money) at lower tax rates can reduce the future RMD that would otherwise spike combined income.</li>
+    <li><strong>HSA spending for medical expenses:</strong> Paying qualified medical costs from an HSA rather than from taxable accounts reduces the need for additional withdrawals that would raise combined income.</li>
   </ul>
 
   <h2>State Taxes on Social Security</h2>
-  <p>Most states do not tax Social Security benefits, but 10 states currently do to varying degrees. Check your <a href="/states">state income tax calculator</a> for state-specific information.</p>
+  <p>The above analysis covers federal income tax only. At the state level, the picture is more favorable: the majority of states do not tax Social Security benefits at all. A smaller number of states tax Social Security to varying degrees, some with income-based exemptions. Check your <a href="/states">state income tax calculator</a> for state-specific information on how your state treats Social Security income.</p>
 
   <h2>Source</h2>
-  <p>IRS Publication 915 (Social Security and Equivalent Railroad Retirement Benefits); Social Security Administration OASDI Fact Sheet 2026.</p>
-    `
+  <p>IRS Publication 915 (Social Security and Equivalent Railroad Retirement Benefits); IRS Publication 554 (Tax Guide for Seniors); Social Security Administration OASDI Fact Sheet 2026.</p>
+
+  <h2>How Social Security Benefits Interact With IRA Withdrawals</h2>
+  <p>One of the most consequential retirement tax planning decisions is managing the timing of IRA withdrawals relative to Social Security claiming. Because IRA withdrawals count directly toward combined income, taking large withdrawals in years when you are also receiving Social Security can push you into the 85% taxable tier quickly.</p>
+  <p>A common scenario: a retired couple with $40,000 in annual Social Security benefits and $30,000 in IRA withdrawals. Their combined income is $30,000 AGI + $20,000 (50% of SS) = $50,000 -- well into the 85% tier. Up to $34,000 of their $40,000 in Social Security benefits ($40,000 x 85%) can be included in taxable income. That is a meaningful additional tax bill on income they thought of as partly "tax-free."</p>
+  <p>Contrast this with a couple who delayed Social Security to age 70 and drew down pre-tax IRAs heavily in ages 62-69. They paid tax on IRA withdrawals at lower rates during those years, reduced future RMDs, and when they finally claimed Social Security, their IRA balances were smaller -- resulting in lower combined income and less taxation of their SS benefit.</p>
+
+  <h2>The Effective Marginal Rate Trap ("Tax Torpedo")</h2>
+  <p>When combined income moves through the 50% and 85% thresholds, the effective marginal tax rate on each additional dollar of income spikes temporarily. Each additional $1 of income not only gets taxed at your marginal bracket rate, it also makes an additional 50 cents of Social Security taxable, which gets taxed again at the same rate. The result is an effective marginal rate of 1.5x your stated bracket rate through these transition zones -- sometimes called the "tax torpedo." For a retiree in the 22% bracket, the effective marginal rate through the phase-in zone can reach 33%. This is why Roth conversions and QCDs done before or around Social Security claiming can be especially valuable for managing lifetime tax exposure.</p>
+
+  <h2>Will Social Security Taxation Rules Change?</h2>
+  <p>There have been recurring legislative proposals to adjust or eliminate the taxation of Social Security benefits, including provisions in major tax legislation debated in 2025. The One Big Beautiful Bill Act included a temporary deduction for senior citizens intended to offset Social Security taxation for lower-income retirees. As of mid-2026, check current IRS guidance for any enacted changes that may affect your 2026 return. The combined income thresholds themselves remain unchanged under current law.</p>
+
+  <h2>Married Couples and the "Widow's Penalty"</h2>
+  <p>Married couples filing jointly benefit from higher combined income thresholds for Social Security taxation ($32,000 and $44,000) compared to single filers ($25,000 and $34,000). However, when one spouse dies and the survivor files as a single taxpayer, they face the lower single-filer thresholds while often still receiving the same level of Social Security benefits and portfolio income. This transition -- sometimes called the "widow's penalty" or "widow's tax" -- can significantly increase a surviving spouse's tax burden in the year following the death. Planning for this scenario in advance, through Roth conversions and other income-timing strategies, is a standard component of retirement tax planning for couples.</p>
+`
   },
 
   {
@@ -914,43 +996,65 @@ const blogPosts = [
       { href: "/blog/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide" },
     ],
     content: `
-  <p>The IRS audited approximately 0.4% of individual income tax returns in fiscal year 2024 -- less than 1 in 200. The risk is low overall, but it is not evenly distributed. Certain income levels, deduction patterns, and filing characteristics significantly increase the probability of a closer look.</p>
+  <p>The IRS audited approximately 0.4% of individual income tax returns in fiscal year 2024 -- less than 1 in 200. The overall risk is low, but it is not evenly distributed. Certain income levels, deduction patterns, filing characteristics, and income types significantly increase the probability of a closer look. Understanding what triggers scrutiny lets you prepare adequate documentation and file with confidence.</p>
 
-  <h2>How the IRS Selects Returns</h2>
+  <h2>How the IRS Selects Returns for Audit</h2>
+  <p>Most audits are not random. The IRS uses several overlapping selection methods:</p>
   <ul>
-    <li><strong>DIF score:</strong> Every return receives a computer-generated score based on what deductions and income patterns look unusual for a given income level. High scores flag returns for human review.</li>
-    <li><strong>Document matching:</strong> The IRS matches income on your return against 1099s and W-2s filed by payers. Discrepancies trigger automatic CP2000 notices.</li>
-    <li><strong>Related examinations:</strong> If someone who paid you is audited, the IRS may examine your return as a related party.</li>
+    <li><strong>DIF score (Discriminant Information Function):</strong> Every return receives a computer-generated score comparing your deductions, income, and credits against statistical norms for your income level. Returns with unusually high scores are flagged for human review. The IRS does not publish DIF formulas, but the patterns that drive high scores are well understood from audit data.</li>
+    <li><strong>Document matching (CP2000 program):</strong> The IRS electronically matches every piece of income on your return against 1099s, W-2s, and other information returns filed by payers. A mismatch generates an automatic CP2000 notice -- not a full audit, but it requires a response and can result in additional tax, penalties, and interest.</li>
+    <li><strong>Related examinations:</strong> If a business, partnership, or individual who paid you is audited, the IRS may examine your return as a related party. S-corporation shareholders and business partners are sometimes selected this way.</li>
+    <li><strong>Informant claims:</strong> The IRS accepts tips through its whistleblower program. Unreported cash income from a business is a common subject of informant claims.</li>
   </ul>
 
   <h2>Common Audit Triggers</h2>
 
   <h3>Large Deductions Relative to Income</h3>
-  <p>The IRS knows what charitable contributions and business expenses look like for a given income level. A $40,000 charitable deduction on a $60,000 income return will score high. Document all deductions thoroughly.</p>
+  <p>The IRS knows what charitable contributions, business expenses, and miscellaneous deductions look like for a given income level. A $40,000 charitable deduction on a $60,000 return will score high on the DIF. That does not mean you should not claim legitimate deductions -- it means you should document them thoroughly. Keep written acknowledgments from charities for contributions over $250, appraisals for non-cash gifts over $5,000, and receipts for all claimed expenses.</p>
 
-  <h3>Schedule C Losses -- Especially Repeated Losses</h3>
-  <p>Self-employment income on Schedule C draws disproportionate attention because it is self-reported. Businesses showing losses year after year may be reclassified as hobbies. The IRS looks for a profit in at least 3 of the last 5 years as an indicator of profit motive.</p>
+  <h3>Schedule C Losses -- Especially Repeated Ones</h3>
+  <p>Self-employment income on Schedule C draws disproportionate audit attention because it is self-reported and historically shows higher rates of underreporting. Businesses showing net losses year after year may be reclassified as hobbies, which eliminates the ability to deduct losses against other income. The IRS presumes a profit motive if a business shows a profit in at least 3 of the last 5 years. If you consistently lose money on an activity, document your business plan, marketing efforts, and steps taken to improve profitability.</p>
 
   <h3>Home Office Deduction</h3>
-  <p>Legitimate for genuine home-based businesses, but the IRS requires exclusive and regular use of the space for business. Document the square footage and the exclusive business use.</p>
+  <p>Claiming a home office deduction is legitimate for genuine home-based businesses, but the IRS requires that the space be used <em>regularly and exclusively</em> for business. A desk in a corner of your living room does not qualify. A dedicated room used only for business does. Document the square footage of the office and the total home square footage -- the deduction is proportional. Keep records showing the space is not used for personal activities.</p>
 
-  <h3>Cryptocurrency Transactions</h3>
-  <p>The IRS now requires all taxpayers to answer a digital asset question on the front page of Form 1040. Exchanges file 1099-DAs with the IRS. Underreporting crypto gains is a specific enforcement priority.</p>
+  <h3>Cryptocurrency and Digital Assets</h3>
+  <p>The IRS now requires all taxpayers to answer a digital asset question on the front page of Form 1040, and cryptocurrency exchanges are required to file Form 1099-DA with the IRS. Underreporting crypto gains is a specific enforcement priority. Every taxable event -- a sale, a trade of one crypto for another, or using crypto to purchase goods -- must be reported. The IRS has sent thousands of letters to taxpayers identified through exchange data as having unreported crypto transactions.</p>
 
   <h3>Mismatched Information Returns</h3>
-  <p>The most common cause of IRS notices: a 1099 is filed with the IRS but not reported on your return. Always verify that every 1099 you received is accounted for on your return.</p>
+  <p>The most common cause of IRS notices: a 1099 is filed with the IRS but not reported on your return. This includes 1099-INT (interest), 1099-DIV (dividends), 1099-B (brokerage sales), 1099-NEC (contractor income), and 1099-K (payment platform income). Always cross-check every 1099 you received against your return before filing.</p>
 
-  <h2>How to Protect Yourself</h2>
+  <h3>High Cash Income Businesses</h3>
+  <p>Restaurants, car washes, hair salons, and other businesses with high cash transaction volumes are historically over-represented in audits. The IRS uses industry-specific norms for gross profit margins -- if your reported margins are significantly below the industry average, it suggests unreported cash income.</p>
+
+  <h3>Earned Income Tax Credit (EITC)</h3>
+  <p>EITC claims are audited at higher rates than most other returns because the credit has a historically high improper payment rate. Common EITC audit issues include claiming a child who does not meet the qualifying child rules, overstating self-employment income to maximize the credit, and understating income to stay below phase-out thresholds. If you claim the EITC, keep documentation of the qualifying child's residency and your income sources.</p>
+
+  <h3>Foreign Financial Accounts and Assets</h3>
+  <p>U.S. taxpayers with foreign bank accounts or financial assets above certain thresholds must file FBAR (FinCEN Form 114) and Form 8938. Failure to file these forms carries severe penalties independent of any tax due. The IRS has significantly expanded foreign account enforcement in recent years through international data-sharing agreements.</p>
+
+  <h2>What to Do If You Are Audited</h2>
+  <p>Most audits are correspondence audits -- the IRS sends a letter requesting documentation for a specific item, and you respond by mail. If you receive an audit notice:</p>
   <ul>
-    <li>Keep receipts and records for at least 3 years (6 years if you substantially underreported income)</li>
-    <li>For mileage, keep a contemporaneous log with date, destination, business purpose, and miles</li>
-    <li>For charitable contributions over $250, obtain a written acknowledgment from the organization</li>
-    <li>Report all income -- including cash, crypto, and side gig income</li>
+    <li>Read it carefully to understand exactly what is being questioned</li>
+    <li>Gather the specific documentation requested -- receipts, bank statements, mileage logs, written acknowledgments</li>
+    <li>Respond by the deadline stated in the letter; call the number on the notice if you need an extension</li>
+    <li>Consider consulting a tax professional (CPA, enrolled agent, or tax attorney) if the amount at issue is significant or the audit expands beyond the initial items</li>
   </ul>
 
+  <h2>How Long to Keep Records</h2>
+  <p>The standard IRS statute of limitations for auditing a return is <strong>3 years</strong> from the filing date. Keep records for at least this long. The statute extends to <strong>6 years</strong> if you substantially understated income (omitted more than 25% of gross income). There is no statute of limitations for fraudulent returns or returns that were never filed.</p>
+
   <h2>Source</h2>
-  <p>IRS Data Book FY2024; IRS Publication 556 (Examination of Returns, Appeal Rights, and Claims for Refund).</p>
-    `
+  <p>IRS Data Book FY2024; IRS Publication 556 (Examination of Returns, Appeal Rights, and Claims for Refund); IRS Publication 552 (Recordkeeping for Individuals).</p>
+
+  <h2>The Difference Between an Audit and a CP2000 Notice</h2>
+  <p>Many taxpayers receive IRS correspondence and assume they are being audited. In most cases they are not. The most common IRS letters are CP2000 notices, which are automatically generated when income reported on your return does not match what payers reported to the IRS. A CP2000 is a proposed adjustment, not an audit finding. You can respond by agreeing to the adjustment, disagreeing and providing documentation, or some combination. A full correspondence audit is a separate process that examines your deductions and credits in detail and involves specific document requests.</p>
+  <p>If you receive any IRS notice, read the letter carefully to understand exactly what is being questioned before responding. Most notices have a response deadline and a toll-free number. Never ignore IRS correspondence -- failing to respond converts a proposed adjustment into an assessed liability.</p>
+
+  <h2>Audit Rates by Income Level</h2>
+  <p>The IRS historically audited high-income returns at higher rates. Returns showing income over $1 million faced audit rates of around 2-3% in recent years, compared to less than 0.5% for returns in the $75,000-$100,000 range. However, the IRS has also consistently audited low-income EITC claimants at elevated rates, reflecting the high improper payment rate for that credit. The IRS has stated an intention to increase audit rates for high earners and large partnerships following additional funding under the Inflation Reduction Act, though actual audit rate changes take years to implement and measure.</p>
+`
   },
 
   {
@@ -971,40 +1075,82 @@ const blogPosts = [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
     ],
     content: `
-  <p>If you had significant out-of-pocket medical costs in 2026, you may be able to deduct them on your federal return -- but only qualifying medical expenses that exceed 7.5% of your adjusted gross income (AGI), and only if you itemize deductions rather than taking the standard deduction.</p>
+  <p>If you had significant out-of-pocket medical costs in 2026, you may be able to deduct them on your federal return -- but only qualifying medical expenses that exceed 7.5% of your adjusted gross income (AGI), and only if you itemize deductions rather than taking the standard deduction. For many filers, this deduction only becomes available in years of unusually high medical spending: a major surgery, a serious diagnosis, or extended long-term care.</p>
 
-  <h2>The 7.5% AGI Floor</h2>
-  <p>The threshold means you cannot deduct all medical expenses -- only the amount above 7.5% of AGI. For a filer with $60,000 in AGI, the floor is $4,500. If you paid $8,000 in qualifying medical costs, you can deduct <strong>$3,500</strong> ($8,000 - $4,500).</p>
+  <h2>The 7.5% AGI Floor: How It Works</h2>
+  <p>The threshold means you cannot deduct all medical expenses -- only the amount above 7.5% of AGI. For a filer with $60,000 in AGI, the floor is $4,500. If you paid $8,000 in qualifying medical costs, you can deduct <strong>$3,500</strong> ($8,000 minus $4,500). If you paid only $5,000, your deductible amount is just $500 -- and that small deduction may not be worth giving up the standard deduction.</p>
+  <p>The 7.5% threshold applies for all filers in 2026, regardless of age. It was permanently set at this level by the Tax Cuts and Jobs Act and confirmed by subsequent legislation.</p>
 
-  <h2>What Qualifies</h2>
+  <h2>What Qualifies as a Medical Expense</h2>
+  <p>The IRS defines qualifying medical expenses broadly as amounts paid for the diagnosis, cure, mitigation, treatment, or prevention of disease. Common qualifying expenses include:</p>
   <ul>
     <li>Doctor, dentist, and specialist visit co-pays and fees not covered by insurance</li>
-    <li>Hospital and surgery costs</li>
-    <li>Prescription medications</li>
-    <li>Medical equipment (wheelchairs, crutches, blood pressure monitors)</li>
+    <li>Hospital stays, surgery, and anesthesia</li>
+    <li>Prescription medications (not over-the-counter unless prescribed)</li>
+    <li>Medical equipment: wheelchairs, crutches, blood pressure monitors, CPAP machines</li>
     <li>Eyeglasses, contact lenses, and eye exams</li>
-    <li>Mental health treatment and therapy</li>
-    <li>Long-term care services and eligible long-term care insurance premiums</li>
+    <li>Mental health treatment and therapy sessions</li>
+    <li>Long-term care services and eligible long-term care insurance premiums (subject to age-based limits)</li>
     <li>Mileage driven for medical purposes (21 cents per mile in 2026)</li>
-    <li>Hearing aids, fertility treatments, smoking cessation programs</li>
-    <li>Health insurance premiums paid with after-tax dollars (not pre-tax through employer)</li>
+    <li>Hearing aids and batteries</li>
+    <li>Fertility treatments, including IVF</li>
+    <li>Smoking cessation programs and prescription nicotine patches</li>
+    <li>Health insurance premiums paid with after-tax dollars (not pre-tax through an employer plan)</li>
+    <li>Inpatient treatment for alcohol or drug addiction</li>
+    <li>Weight-loss programs prescribed by a doctor to treat a specific disease (such as obesity or hypertension)</li>
   </ul>
 
   <h2>What Does Not Qualify</h2>
+  <p>The IRS specifically excludes certain health-related expenses that might seem medical:</p>
   <ul>
-    <li>Over-the-counter medications (unless prescribed)</li>
-    <li>Cosmetic surgery not medically necessary</li>
-    <li>Gym memberships and general wellness programs</li>
-    <li>Premiums paid with pre-tax employer dollars</li>
-    <li>Expenses reimbursed by insurance or an HSA/FSA</li>
+    <li>Over-the-counter medications not prescribed by a doctor</li>
+    <li>Cosmetic surgery unless medically necessary to correct a deformity from a congenital abnormality, personal injury, or disease</li>
+    <li>Gym memberships, fitness trackers, and general wellness programs</li>
+    <li>Premiums paid with pre-tax employer dollars (already excluded from income)</li>
+    <li>Expenses fully reimbursed by insurance or paid from an HSA or FSA</li>
+    <li>Teeth whitening</li>
+    <li>Vitamins and supplements unless prescribed for a diagnosed condition</li>
   </ul>
 
+  <h2>A Worked Dollar Example</h2>
+  <p>Consider a single filer with $75,000 in AGI who had the following medical expenses in 2026:</p>
+  <ul>
+    <li>Out-of-network surgery: $9,500</li>
+    <li>Follow-up specialist visits: $1,200</li>
+    <li>Prescription medications: $800</li>
+    <li>Medical mileage (400 miles at 21 cents): $84</li>
+    <li>Total medical expenses: $11,584</li>
+  </ul>
+  <p>AGI floor: $75,000 x 7.5% = $5,625. Deductible amount: $11,584 minus $5,625 = <strong>$5,959</strong>. At a 22% marginal rate, that deduction saves approximately $1,311 in federal income tax -- but only if total itemized deductions exceed the $15,000 standard deduction for single filers.</p>
+
   <h2>The Standard Deduction Comparison</h2>
-  <p>For 2026, the standard deduction is $15,000 (single) and $30,000 (married filing jointly). Your total Schedule A deductions must exceed these amounts to make itemizing worthwhile. The medical expense deduction is most valuable in years with an extraordinary medical event -- major surgery, serious illness, or long-term care costs. For a side-by-side comparison, see the <a href="/standard-deduction-vs-itemized">standard deduction vs. itemized guide</a>.</p>
+  <p>For 2026, the standard deduction is $15,000 for single filers and $30,000 for married filing jointly. Your total Schedule A deductions -- medical expenses plus state and local taxes, mortgage interest, and charitable contributions -- must exceed these amounts for itemizing to be worthwhile.</p>
+  <p>The medical expense deduction is most valuable in years with an extraordinary medical event. A single large deductible medical bill can push total Schedule A deductions above the standard deduction threshold even when other itemized deductions are modest. For a side-by-side comparison of both approaches, see the <a href="/standard-deduction-vs-itemized">standard deduction vs. itemized guide</a>.</p>
+
+  <h2>Long-Term Care Insurance Premiums</h2>
+  <p>Premiums paid for qualified long-term care insurance are deductible as medical expenses, subject to age-based annual limits. For 2026, the deductible limits are approximately $480 (age 40 or under), $900 (age 41-50), $1,800 (age 51-60), $4,770 (age 61-70), and $5,960 (age 71 and older). These are maximums -- the actual deductible amount is still subject to the 7.5% AGI floor.</p>
+
+  <h2>Health Savings Account Interaction</h2>
+  <p>If you pay medical expenses from an HSA, those expenses are not deductible on Schedule A. HSA distributions for qualified medical expenses are already tax-free -- you cannot get a double tax benefit. Only out-of-pocket costs paid directly from non-HSA funds qualify for the Schedule A deduction.</p>
+
+  <h2>How to Claim the Deduction</h2>
+  <p>Report qualifying medical expenses on <strong>Schedule A (Form 1040)</strong>, lines 1 through 4. Line 1 is total qualifying medical expenses; line 3 is your AGI multiplied by 7.5%; line 4 is the deductible amount (line 1 minus line 3, if positive). Attach Schedule A to your Form 1040 in place of taking the standard deduction.</p>
+  <p>Keep receipts, explanation of benefits (EOB) documents from your insurer, and mileage logs for at least three years after filing.</p>
 
   <h2>Source</h2>
   <p>IRS Publication 502 (Medical and Dental Expenses); IRS Topic No. 502; IRS Rev. Proc. 2025-13 (2026 long-term care premium limits).</p>
-    `
+
+  <h2>Bunching Medical Expenses: A Planning Strategy</h2>
+  <p>Because the 7.5% AGI floor is calculated annually, some taxpayers benefit from "bunching" -- deliberately timing elective medical procedures and purchases into a single tax year to push total expenses above the floor. If you need dental implants, new eyeglasses, and a hearing aid, scheduling them in the same calendar year may allow you to deduct a meaningful amount, whereas spreading them across three years might result in no deduction at all.</p>
+  <p>This strategy works best when combined with other Schedule A deductions. A taxpayer who is near the standard deduction threshold might find that bunching medical expenses in a single year pushes them over the line and makes itemizing worthwhile for that year, then takes the standard deduction in alternating years.</p>
+
+  <h2>Self-Employed Health Insurance Deduction</h2>
+  <p>If you are self-employed (including gig workers and independent contractors), you may deduct 100% of health insurance premiums paid for yourself and your family as an above-the-line deduction on Schedule 1, Form 1040 -- not on Schedule A. This deduction is separate from and in addition to any medical expense deduction, and it reduces your AGI directly, which is more valuable than an itemized deduction. You cannot use the same premiums for both the self-employed health insurance deduction and the Schedule A medical expense deduction.</p>
+
+  <h2>Nursing Home and Assisted Living Costs</h2>
+  <p>Long-term care in a nursing home or assisted living facility can be one of the largest medical expense deductions available. If you or a dependent is in a nursing home primarily for medical care, the entire cost -- including meals and lodging -- qualifies as a medical expense. If the primary reason is personal (not medical), only the nursing care portion qualifies. For assisted living facilities where residents receive medical monitoring, custodial care, and medication management, a significant portion of the monthly fees typically qualifies, but you may need a letter from the facility administrator breaking out the medical care component.</p>
+  <p>Given the 7.5% AGI floor, a retired individual with $50,000 in Social Security and IRA income would have a floor of $3,750. Annual nursing home costs of $80,000 to $120,000 would generate a deduction of $76,250 to $116,250 -- easily justifying itemizing and potentially eliminating most of the taxable income for that year. This makes the medical expense deduction especially impactful for families facing major long-term care costs.</p>
+`
   },
 
   {
@@ -1025,31 +1171,76 @@ const blogPosts = [
       { href: "/blog/taxes-when-you-have-a-child", label: "Taxes When You Have a Child" },
     ],
     content: `
-  <p>Child care is one of the largest household expenses for working parents, and the tax code offers two mechanisms to offset the cost: the Dependent Care Flexible Spending Account (DC-FSA) and the Child and Dependent Care Tax Credit. Understanding how each works -- and how they interact -- can save a family thousands of dollars per year.</p>
+  <p>Child care is one of the largest household expenses for working parents, and the tax code offers two mechanisms to offset the cost: the Dependent Care Flexible Spending Account (DC-FSA) and the Child and Dependent Care Tax Credit (CDCTC). Understanding how each works -- and how they interact -- can save a family thousands of dollars per year. For most households in the 22% bracket or above, the DC-FSA delivers the larger benefit.</p>
 
-  <h2>Dependent Care FSA (DC-FSA)</h2>
-  <p>A DC-FSA is an employer-sponsored benefit that lets you set aside pre-tax dollars for qualifying dependent care expenses. The 2026 contribution limit is <strong>$5,000 per household</strong> ($2,500 if married filing separately).</p>
-  <p>At a 22% federal rate plus a 6% state rate, contributing $5,000 saves you 28% = <strong>$1,400 in income taxes</strong>, plus the FICA exemption adds roughly $382 more. Total tax savings on a $5,000 contribution: approximately $1,782.</p>
-  <p>Eligible expenses: daycare, after-school programs, summer day camps (not overnight), in-home childcare (nannies, au pairs), and care for a dependent who is incapable of self-care.</p>
-  <p>The "use it or lose it" rule applies -- unused funds are forfeited at year-end unless your plan offers a grace period or rollover (up to $640 in 2026).</p>
-
-  <h2>Child and Dependent Care Tax Credit</h2>
-  <p>For 2026:</p>
+  <h2>Dependent Care FSA (DC-FSA): The Basics</h2>
+  <p>A DC-FSA is an employer-sponsored benefit that lets you set aside pre-tax dollars for qualifying dependent care expenses. The 2026 contribution limit is <strong>$5,000 per household</strong> ($2,500 if married filing separately). Contributions come out of your paycheck before federal income tax, state income tax, and FICA taxes are applied.</p>
+  <p><strong>Tax savings example at a 22% federal rate plus 6% state rate:</strong></p>
   <ul>
-    <li>Maximum qualifying expenses: <strong>$3,000 for one qualifying person</strong>, <strong>$6,000 for two or more</strong></li>
-    <li>Credit percentage: 20% to 35% depending on AGI. At 20% of $6,000, the maximum credit for most households is <strong>$1,200</strong></li>
+    <li>DC-FSA contribution: $5,000</li>
+    <li>Income tax savings (28%): $1,400</li>
+    <li>FICA savings (7.65% on $5,000): $383</li>
+    <li><strong>Total tax savings: approximately $1,783</strong></li>
+  </ul>
+  <p>This is a guaranteed, risk-free return on dollars you were going to spend on child care anyway.</p>
+
+  <h2>What Expenses Qualify for the DC-FSA</h2>
+  <p>Eligible expenses must be for the care of a qualifying person (a dependent child under age 13, or a dependent or spouse incapable of self-care) so that you -- and your spouse, if married -- can work or look for work:</p>
+  <ul>
+    <li>Licensed daycare centers and preschools</li>
+    <li>Before-school and after-school programs</li>
+    <li>Summer day camps (not overnight camps)</li>
+    <li>In-home childcare: nannies, au pairs, babysitters (if they care for a qualifying person)</li>
+    <li>Adult day care for a qualifying dependent who cannot care for themselves</li>
+  </ul>
+  <p>Expenses that do not qualify include overnight camps, tuition for kindergarten and above, tutoring, and care provided by a dependent or your spouse.</p>
+
+  <h2>The "Use It or Lose It" Rule</h2>
+  <p>Unused DC-FSA funds are forfeited at plan year-end -- they do not roll over to the next year. However, your employer's plan may offer either a grace period (up to 2.5 months after year-end to incur eligible expenses) or a carryover option (up to $640 in unused funds carried to the next plan year in 2026). Check your specific plan documents. Do not contribute more than you are confident you will spend on qualifying care during the plan year.</p>
+
+  <h2>Child and Dependent Care Tax Credit (CDCTC)</h2>
+  <p>The Child and Dependent Care Tax Credit is a non-refundable federal tax credit available to taxpayers who pay for qualifying dependent care. For 2026:</p>
+  <ul>
+    <li>Maximum qualifying expenses: <strong>$3,000 for one qualifying person</strong>, <strong>$6,000 for two or more qualifying persons</strong></li>
+    <li>Credit percentage: 20% to 35% of qualifying expenses, depending on AGI. The 35% rate applies to AGI below $15,000; the rate phases down to 20% for AGI above $43,000 (where most working parents land)</li>
+    <li>At 20% of $6,000, the maximum credit for most households is <strong>$1,200</strong></li>
   </ul>
 
-  <h2>How They Interact: You Cannot Double-Count</h2>
-  <p>Expenses reimbursed through a DC-FSA cannot also be used to claim the Child and Dependent Care Tax Credit. You must subtract your DC-FSA reimbursements from the maximum eligible expenses before calculating the credit.</p>
-  <p><strong>Example:</strong> Two children in daycare costing $14,000/year. You contribute $5,000 to a DC-FSA. For the credit, maximum qualifying expenses are $6,000 minus the $5,000 DC-FSA use = $1,000 eligible. At 20%, the credit is $200. Total benefit: $1,782 + $200 = <strong>$1,982</strong>.</p>
+  <h2>How the DC-FSA and CDCTC Interact: You Cannot Double-Count</h2>
+  <p>This is the most important planning point. Expenses reimbursed through a DC-FSA cannot also be used to claim the Child and Dependent Care Tax Credit. You must reduce the maximum eligible expenses for the CDCTC by the amount you received from a DC-FSA.</p>
+  <p><strong>Example with two children:</strong></p>
+  <ul>
+    <li>Total daycare costs: $14,000</li>
+    <li>DC-FSA reimbursement: $5,000</li>
+    <li>CDCTC maximum qualifying expenses: $6,000 minus $5,000 = <strong>$1,000 remaining</strong></li>
+    <li>Credit at 20%: $200</li>
+    <li>Total tax benefit: $1,783 (DC-FSA) + $200 (CDCTC) = <strong>$1,983</strong></li>
+  </ul>
+  <p>Compare this to using only the CDCTC with no DC-FSA: 20% of $6,000 = $1,200. The DC-FSA delivers $783 more in tax savings for this household, primarily because it saves FICA taxes in addition to income taxes.</p>
 
-  <h2>Which Is Better?</h2>
-  <p>For most households in the 22% bracket or above, the DC-FSA provides a larger benefit because it saves taxes at your marginal rate plus FICA, while the credit tops out at 20% for most income levels. If your employer does not offer a DC-FSA, the credit is your only option. See the <a href="/child-tax-credit-2025">Child Tax Credit guide</a> for information on the separate Child Tax Credit.</p>
+  <h2>When the CDCTC Is Larger Than the DC-FSA Benefit</h2>
+  <p>For households in the 10% or 12% income tax bracket, the CDCTC's 20% credit rate may exceed the income tax savings from the DC-FSA (since the FSA only saves 10% or 12% on the income tax side). In these cases, the choice is less clear-cut and depends on whether FICA savings tip the balance. If your employer does not offer a DC-FSA at all, the CDCTC is your only option.</p>
+
+  <h2>Dependent Care FSA vs. Child Tax Credit: These Are Different</h2>
+  <p>The Dependent Care FSA and Child and Dependent Care Tax Credit are specifically for care expenses that allow you to work. They are entirely separate from the Child Tax Credit, which is a per-child credit that does not require care expenses. A family can claim the DC-FSA benefit, the CDCTC, and the Child Tax Credit simultaneously -- they address different aspects of the tax code. See the <a href="/child-tax-credit-2025">Child Tax Credit guide</a> for details on that separate credit.</p>
+
+  <h2>Nanny Tax Considerations</h2>
+  <p>If you hire an in-home caregiver (nanny, au pair, or babysitter) and pay them $2,700 or more in 2026, you become a household employer subject to the "nanny tax." You are required to withhold Social Security and Medicare taxes from their wages, pay the employer's share of FICA, and potentially pay federal and state unemployment taxes. Expenses for a household employee are eligible for the DC-FSA if the care is for a qualifying person, but you must comply with employer tax obligations. IRS Schedule H is used to report household employment taxes.</p>
+
+  <h2>How to Enroll in a DC-FSA</h2>
+  <p>DC-FSAs are employer-sponsored benefits. Enrollment typically occurs during your employer's open enrollment period (usually in the fall for the following plan year) or within 30 days of a qualifying life event (birth, adoption, change in care needs). You must elect your contribution amount at enrollment -- you cannot change it mid-year except after a qualifying event. If your employer does not offer a DC-FSA, you can only use the CDCTC.</p>
 
   <h2>Source</h2>
-  <p>IRS Publication 503 (Child and Dependent Care Expenses); IRS Form 2441 instructions; IRS Rev. Proc. 2025-19 (2026 FSA limits).</p>
-    `
+  <p>IRS Publication 503 (Child and Dependent Care Expenses); IRS Form 2441 instructions; IRS Rev. Proc. 2025-19 (2026 FSA contribution limits); IRS Publication 926 (Household Employer's Tax Guide).</p>
+
+  <h2>Common DC-FSA Mistakes and How to Avoid Them</h2>
+  <p>The most frequent DC-FSA error is over-contributing. Because unused funds are forfeited, contributing $5,000 when you only have $3,500 in qualifying care expenses costs you money. Before open enrollment, estimate your actual expected care costs conservatively. If your care situation changes mid-year (a child ages out, a caregiver leaves), you can adjust contributions only after a qualifying life event.</p>
+  <p>A second common mistake is using DC-FSA funds for ineligible expenses. Tuition for kindergarten through grade 12 is not eligible, even if the child attends a private school. Overnight camps are not eligible, even if they operate during the summer. If you accidentally pay an ineligible expense with DC-FSA funds, you will owe income tax and a 20% penalty on that amount.</p>
+  <p>Third: forgetting to submit claims before the plan deadline. Many plans have a run-out period after the plan year ends during which you can submit claims for expenses incurred during the plan year. If you miss this deadline, you forfeit the funds even if the expense was eligible. Set a calendar reminder for your plan's claim submission deadline -- typically 90 days after year-end.</p>
+
+  <h2>DC-FSA for Care of Adult Dependents</h2>
+  <p>The DC-FSA is not limited to child care. If you have a spouse or dependent who is physically or mentally incapable of self-care and lives with you, expenses for their daytime care while you work are also eligible. Adult day care centers that provide medical or custodial care qualify. This is an often-overlooked benefit for adult children with disabilities or elderly parents who meet the dependency and self-care requirements.</p>
+`
   },
 
   {
@@ -1070,30 +1261,59 @@ const blogPosts = [
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
     ],
     content: `
-  <p>Direct Roth IRA contributions are phased out for single filers with MAGI between $150,000 and $165,000, and for married couples filing jointly between $236,000 and $246,000 in 2026. Above those thresholds, you cannot contribute to a Roth IRA directly. But a workaround -- the "backdoor Roth" -- is fully legal and widely used by high-income earners.</p>
+  <p>Direct Roth IRA contributions are phased out for single filers with modified adjusted gross income (MAGI) between $150,000 and $165,000, and for married couples filing jointly between $236,000 and $246,000 in 2026. Above those thresholds, you cannot contribute to a Roth IRA directly. The backdoor Roth is a fully legal two-step workaround that has been widely used by high-income earners for over a decade and was explicitly blessed by Congress in a 2018 conference report.</p>
 
   <h2>The Two-Step Process</h2>
   <ol>
-    <li><strong>Make a non-deductible contribution to a traditional IRA.</strong> Anyone with earned income can contribute regardless of income level. The 2026 limit is $7,500 ($8,600 if age 50 or older). Because you are over the income limit for both Roth contributions and deductible traditional IRA contributions, this contribution is non-deductible. File Form 8606 to record it -- this is critical for avoiding double taxation later.</li>
-    <li><strong>Convert the traditional IRA to a Roth IRA.</strong> Since you already paid tax on the contribution (it was non-deductible), only earnings that accumulated between contribution and conversion are taxable. If you convert quickly, earnings are minimal and the taxable amount is close to zero.</li>
+    <li><strong>Make a non-deductible contribution to a traditional IRA.</strong> Anyone with earned income can contribute to a traditional IRA regardless of income level -- the income limits only affect deductibility. The 2026 IRA contribution limit is $7,000 ($8,000 if age 50 or older). Because you are above the income threshold for both Roth contributions and deductible traditional IRA contributions (assuming you also have a workplace plan), this contribution goes in after-tax. File <strong>Form 8606</strong> with your tax return to record it -- this creates your "basis" and is essential for avoiding double taxation later.</li>
+    <li><strong>Convert the traditional IRA to a Roth IRA.</strong> After the contribution settles (typically a few business days), initiate a Roth conversion. Since you already paid tax on the contribution (it was non-deductible), only earnings that accumulated between contribution and conversion are taxable. If you convert quickly, earnings are minimal and the taxable amount rounds to near zero.</li>
   </ol>
 
   <h2>The Pro-Rata Rule: The Most Important Trap</h2>
-  <p>The backdoor Roth works cleanly only if you have <strong>no pre-tax money in any traditional IRA</strong> (including SEP-IRA and SIMPLE IRA). If you do, the pro-rata rule makes the conversion partially taxable.</p>
-  <p><strong>Example:</strong> You contribute $7,500 non-deductible. But you also have $67,500 in a pre-tax rollover IRA. Total IRA balance: $75,000. Pre-tax ratio: 90%. If you convert the $7,500, 90% of it ($6,750) is taxable -- even though you contributed after-tax dollars.</p>
-  <p><strong>Solution:</strong> Roll existing pre-tax IRA funds into your current employer's 401(k) plan (if the plan accepts incoming rollovers) before executing the backdoor Roth. Once the pre-tax IRA is empty, the conversion is clean.</p>
+  <p>The backdoor Roth works cleanly only if you have <strong>no pre-tax money in any traditional IRA</strong>, including SEP-IRAs and SIMPLE IRAs. If you do have pre-tax IRA balances, the pro-rata rule applies -- and it can make the conversion significantly taxable.</p>
+  <p><strong>How the pro-rata rule works:</strong> The IRS looks at your total IRA balance across all traditional IRAs at year-end, not just the account you are converting from. The taxable percentage of your conversion equals the pre-tax portion of your total IRA balance.</p>
+  <p><strong>Example:</strong> You contribute $7,000 non-deductible to a new traditional IRA. But you also have $63,000 in a pre-tax rollover IRA from a previous employer's 401(k). Your total IRA balance is $70,000. Pre-tax ratio: $63,000 / $70,000 = 90%. If you convert the $7,000, 90% of it ($6,300) is taxable -- even though you contributed after-tax dollars. You effectively converted mostly pre-tax money in the IRS's view.</p>
+  <p><strong>The solution:</strong> Roll your existing pre-tax IRA funds into your current employer's 401(k) plan before year-end (the December 31 date is the relevant snapshot for pro-rata). Many 401(k) plans accept incoming rollovers -- check with your plan administrator. Once the pre-tax IRA is empty, the backdoor Roth conversion is clean.</p>
 
-  <h2>How to Report It</h2>
+  <h2>Step-by-Step Execution</h2>
+  <ol>
+    <li>Verify you have no pre-tax IRA balances, or solve the pro-rata problem first</li>
+    <li>Open a traditional IRA at your brokerage if you do not already have one</li>
+    <li>Contribute $7,000 (or $8,000 if 50+) as a non-deductible contribution -- leave it in cash, do not invest it</li>
+    <li>Wait for the contribution to settle (typically 1-3 business days)</li>
+    <li>Initiate a Roth conversion of the full balance from the traditional IRA to a Roth IRA at the same institution -- most brokerages allow this online</li>
+    <li>File Form 8606 (Part I and Part II) with your tax return for the year of the contribution and conversion</li>
+  </ol>
+
+  <h2>How to Report It on Your Tax Return</h2>
   <ul>
-    <li><strong>Form 8606, Part I:</strong> Report your non-deductible contribution to establish your basis</li>
-    <li><strong>Form 8606, Part II:</strong> Report the Roth conversion and calculate the taxable amount</li>
-    <li>You will receive a <strong>Form 1099-R</strong> from your IRA custodian showing the conversion</li>
+    <li><strong>Form 8606, Part I:</strong> Reports your non-deductible contribution and establishes your IRA basis</li>
+    <li><strong>Form 8606, Part II:</strong> Reports the Roth conversion and calculates the taxable amount (should be near zero if done correctly)</li>
+    <li><strong>Form 1099-R:</strong> Your IRA custodian will send this showing the conversion. Box 2a (taxable amount) may show the full amount -- do not panic. Form 8606 overrides this on your return</li>
+    <li><strong>Form 5498:</strong> Confirms the Roth conversion was received -- typically issued the following May</li>
   </ul>
-  <p>The most common mistake: skipping Form 8606 because you think "I already paid tax on it." Without Form 8606 on file, the IRS has no record of your basis and future distributions will appear fully taxable.</p>
+  <p>The most common and costly mistake: skipping Form 8606 because you think "I already paid tax on it." Without Form 8606 on file for every year you made a non-deductible contribution, the IRS has no record of your basis. When you take Roth distributions years later, they may appear fully taxable. File Form 8606 every year you execute a backdoor Roth, even if you owe no additional tax.</p>
+
+  <h2>Mega Backdoor Roth: The 401(k) Version</h2>
+  <p>Some 401(k) plans allow a related strategy called the mega backdoor Roth. If your plan permits after-tax (non-Roth) contributions above the standard $23,500 employee deferral limit, and also allows in-service withdrawals or in-plan Roth conversions, you can contribute up to the total 415 limit ($70,000 in 2026) and convert the after-tax portion to Roth. Not all plans allow this -- check your plan documents or contact your HR department.</p>
+
+  <h2>2026 Roth IRA Income Limits for Reference</h2>
+  <p>If your MAGI is below the phase-out range, you can skip the backdoor entirely and contribute directly. For 2026, direct Roth contributions are fully allowed below $150,000 (single) and $236,000 (married filing jointly). See the full <a href="/blog/roth-ira-income-limits-2026">Roth IRA income limits guide</a> for the complete phase-out calculation.</p>
 
   <h2>Source</h2>
-  <p>IRS Publication 590-A (Contributions to Individual Retirement Arrangements); IRS Form 8606 instructions; IRS Notice 2014-54.</p>
-    `
+  <p>IRS Publication 590-A (Contributions to Individual Retirement Arrangements); IRS Form 8606 instructions; IRS Notice 2014-54 (after-tax rollover rules); Joint Committee on Taxation, JCX-67-17 (2018 conference report acknowledging backdoor Roth).</p>
+
+  <h2>Timing: When to Execute the Backdoor Roth</h2>
+  <p>Many financial advisors recommend doing the contribution and conversion in the same tax year and as close together as possible -- ideally within days of each other. Letting the non-deductible IRA contribution sit invested for months before converting means the account may have accumulated gains, which become taxable on conversion. Converting quickly keeps the taxable amount as close to zero as possible.</p>
+  <p>Some taxpayers spread the contribution and conversion across different calendar years to simplify bookkeeping. This is legal but requires careful tracking. If you contribute in December 2026 and convert in January 2027, you report the non-deductible contribution on your 2026 Form 8606 and the conversion on your 2027 Form 8606. The basis established in 2026 carries forward to offset the 2027 conversion.</p>
+
+  <h2>Does the Backdoor Roth Still Work Under Current Law?</h2>
+  <p>As of 2026, yes. The backdoor Roth has survived multiple rounds of legislative proposals that would have eliminated it, most notably the Build Back Better Act in 2021. Congress has not enacted restrictions on the strategy. The 2018 conference report explicitly acknowledged the backdoor Roth as an accepted practice. There is no guarantee the strategy will remain available indefinitely, which is a reason to use it while it exists. If your income exceeds Roth contribution limits and you are not currently doing backdoor Roth conversions, you are leaving a significant tax advantage unclaimed.</p>
+
+  <h2>Common Backdoor Roth Mistakes</h2>
+  <p>Beyond the pro-rata rule, several other errors trip up first-time backdoor Roth executions. Investing the non-deductible contribution before converting is a common one -- if your $7,000 grows to $7,200 before you convert, $200 is taxable. Convert quickly while the funds are in cash to minimize this. Another mistake: making the contribution to the wrong account. The non-deductible contribution must go into a traditional IRA, not directly into the Roth. Depositing directly into the Roth without going through the traditional IRA step is a direct Roth contribution and counts against the income limits.</p>
+  <p>State tax treatment is another consideration that many taxpayers overlook. Most states follow federal tax treatment for IRA conversions, but a handful do not. Some states do not recognize the basis established by non-deductible contributions, meaning the conversion may be partially taxable at the state level even if it is tax-free federally. Check your state's rules before assuming the conversion is also state-tax-free.</p>
+`
   },
 
   // ── NEW POST — June 5, 2026 ─────────────────────────────────────────────────
