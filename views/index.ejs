@@ -28,7 +28,7 @@
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
   <style>
     /* -- HOME PAGE STYLES -- */
-    .home-container{max-width:1080px;margin:0 auto;padding:44px 28px 60px}
+    .home-container{max-width:1080px;margin:0 auto;padding:36px 28px 56px}
     .section-title-wrap{margin-bottom:28px}
     .section-eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#16a34a;margin-bottom:8px;display:block}
     .section-title-wrap h2{font-size:1.7rem;font-weight:800;color:#111827;margin:0 0 6px;letter-spacing:-.028em;line-height:1.2}
@@ -84,7 +84,7 @@
     .feature-icon{color:#16a34a;display:flex;align-items:center;flex-shrink:0}
 
     /* -- AD ZONE -- */
-    .ad-zone{text-align:center;margin:20px 0;min-height:90px}
+    .ad-zone{text-align:center;margin:16px 0;min-height:80px}
     .ad-zone-label{font-size:.65rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px}
 
     /* -- SECTION DIVIDER -- */
@@ -119,6 +119,25 @@
       }
     ]
   }
+  </script>
+  <script>
+    // Collapse ad zones when ads fail to load or are blocked
+    // Runs after load to catch slow-loading ads
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.querySelectorAll('.ad-zone').forEach(function(zone) {
+          var ins = zone.querySelector('ins.adsbygoogle');
+          if (!ins) return;
+          var h = ins.offsetHeight;
+          var status = ins.getAttribute('data-ad-status');
+          if (h === 0 || status === 'unfilled') {
+            zone.style.margin = '0';
+            zone.style.minHeight = '0';
+            zone.style.padding = '0';
+          }
+        });
+      }, 2800);
+    });
   </script>
 </head>
 <body>
@@ -167,6 +186,53 @@
     <div class="hero-bg-grid"></div>
     <div class="hero-glow hero-glow-1"></div>
     <div class="hero-glow hero-glow-2"></div>
+
+    <!-- Floating tax card accent -- visible on wide desktop only via CSS -->
+    <div class="hero-accent-card" aria-hidden="true">
+      <svg width="220" height="280" viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Card shadow -->
+        <rect x="14" y="14" width="196" height="256" rx="14" fill="rgba(0,0,0,0.4)"/>
+        <!-- Card body -->
+        <rect x="8" y="8" width="196" height="256" rx="14" fill="#161e2e" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+        <!-- Green top stripe -->
+        <rect x="8" y="8" width="196" height="6" rx="4" fill="#22c55e" opacity="0.7"/>
+        <!-- Header row -->
+        <rect x="24" y="32" width="80" height="8" rx="3" fill="rgba(255,255,255,0.12)"/>
+        <rect x="152" y="30" width="36" height="12" rx="3" fill="rgba(34,197,94,0.25)"/>
+        <!-- Divider -->
+        <line x1="24" y1="56" x2="196" y2="56" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <!-- Row 1 -->
+        <rect x="24" y="68" width="60" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
+        <rect x="148" y="68" width="44" height="6" rx="2" fill="rgba(255,255,255,0.22)"/>
+        <!-- Row 2 -->
+        <rect x="24" y="86" width="72" height="6" rx="2" fill="rgba(255,255,255,0.1)"/>
+        <rect x="148" y="86" width="36" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
+        <!-- Row 3 -->
+        <rect x="24" y="104" width="54" height="6" rx="2" fill="rgba(255,255,255,0.1)"/>
+        <rect x="148" y="104" width="48" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
+        <!-- Row 4 -->
+        <rect x="24" y="122" width="66" height="6" rx="2" fill="rgba(255,255,255,0.1)"/>
+        <rect x="148" y="122" width="40" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
+        <!-- Divider 2 -->
+        <line x1="24" y1="142" x2="196" y2="142" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+        <!-- Total row -- highlighted -->
+        <rect x="16" y="152" width="180" height="28" rx="6" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.2)" stroke-width="1"/>
+        <rect x="28" y="162" width="56" height="8" rx="2" fill="rgba(34,197,94,0.5)"/>
+        <rect x="148" y="160" width="48" height="12" rx="3" fill="#22c55e" opacity="0.85"/>
+        <!-- Mini bar chart at bottom -->
+        <rect x="24" y="196" width="18" height="40" rx="3" fill="rgba(34,197,94,0.2)"/>
+        <rect x="48" y="208" width="18" height="28" rx="3" fill="rgba(34,197,94,0.15)"/>
+        <rect x="72" y="188" width="18" height="48" rx="3" fill="rgba(34,197,94,0.3)"/>
+        <rect x="96" y="200" width="18" height="36" rx="3" fill="rgba(34,197,94,0.18)"/>
+        <rect x="120" y="180" width="18" height="56" rx="3" fill="rgba(34,197,94,0.45)"/>
+        <rect x="144" y="192" width="18" height="44" rx="3" fill="rgba(34,197,94,0.25)"/>
+        <rect x="168" y="172" width="18" height="64" rx="3" fill="rgba(34,197,94,0.6)"/>
+        <!-- Bottom label -->
+        <rect x="24" y="248" width="96" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
+        <rect x="148" y="248" width="44" height="5" rx="2" fill="rgba(255,255,255,0.06)"/>
+      </svg>
+    </div>
+
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="eyebrow-dot"></span>
@@ -208,7 +274,7 @@
   <div class="page-with-sidebar">
   <main>
 
-    <div class="ad-zone" style="max-width:1080px;margin:16px auto 0;padding:0 28px">
+    <div class="ad-zone" style="max-width:1080px;margin:12px auto 0;padding:0 28px">
       <div class="ad-zone-label">Advertisement</div>
       <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
         data-ad-client="ca-pub-5193834725888549"
@@ -348,7 +414,7 @@
 
       <!-- BLOG SECTION -->
       <hr class="section-divider">
-      <div class="section-title-wrap" style="margin-top:40px">
+      <div class="section-title-wrap" style="margin-top:36px">
         <span class="section-eyebrow">Tax Tips &amp; News</span>
         <h2>From the Blog</h2>
         <p>IRS updates, tax law changes, and plain-English guides to help you plan smarter.</p>

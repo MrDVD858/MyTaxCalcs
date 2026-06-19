@@ -58,7 +58,7 @@
     .tool-link-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:1px solid #e9edf2;border-radius:9px;text-decoration:none;color:#374151;font-weight:600;font-size:.86rem;transition:all .14s;background:#fafafa}
     .tool-link-item:hover{border-color:#16a34a;color:#15803d;background:#f0fdf4;transform:translateX(2px)}
     .tool-link-arrow{color:#16a34a;font-size:1rem;line-height:1}
-    .ad-zone{text-align:center;margin:18px 0;min-height:90px}
+    .ad-zone{text-align:center;margin:14px 0;min-height:80px}
     .ad-zone-label{font-size:.65rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px}
     .sidebar-ad-unit{min-height:250px;display:flex;flex-direction:column;align-items:center;background:#f9fafb;border-color:#f0f3f7}
   </style>
@@ -90,6 +90,23 @@
       "@id": "<%= canonical %>"
     }
   }
+  </script>
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.querySelectorAll('.ad-zone').forEach(function(zone) {
+          var ins = zone.querySelector('ins.adsbygoogle');
+          if (!ins) return;
+          var h = ins.offsetHeight;
+          var status = ins.getAttribute('data-ad-status');
+          if (h === 0 || status === 'unfilled') {
+            zone.style.margin = '0';
+            zone.style.minHeight = '0';
+            zone.style.padding = '0';
+          }
+        });
+      }, 2800);
+    });
   </script>
 </head>
 <body>
