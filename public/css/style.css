@@ -86,7 +86,7 @@ a { color: inherit; text-decoration: none; }
 .nav-links a {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #9aacca;
+  color: #9eb8d4;
   transition: color 0.15s;
   letter-spacing: 0.01em;
 }
@@ -165,7 +165,7 @@ a { color: inherit; text-decoration: none; }
 .nav-mobile-links a {
   font-size: 0.95rem;
   font-weight: 500;
-  color: #9aacca;
+  color: #9eb8d4;
   padding: 10px 12px;
   border-radius: 8px;
   transition: background 0.15s, color 0.15s;
@@ -455,6 +455,10 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(34,197,94,0.35);
 }
 
+.calc-card:hover .calc-card-icon {
+  background: #ecfdf5;
+}
+
 .calc-card-icon {
   width: 48px;
   height: 48px;
@@ -618,6 +622,7 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(34,197,94,0.35);
   color: #15803d;
   transform: translateY(-2px);
+  box-shadow: 0 3px 8px rgba(22,163,74,0.1);
 }
 
 /* -- DISCLAIMER -- */
@@ -711,8 +716,8 @@ a { color: inherit; text-decoration: none; }
 
 .footer-bottom {
   padding-top: 24px;
-  font-size: 0.82rem;
-  color: #455670;
+  font-size: 0.84rem;
+  color: #5a6e85;
   text-align: center;
 }
 
@@ -2021,9 +2026,9 @@ input:focus, select:focus {
 
 .sidebar-ad-col {
   display: none;
-  width: 184px;
+  width: 176px;
   flex-shrink: 0;
-  padding: 28px 0 24px 20px;
+  padding: 24px 0 24px 16px;
   align-self: flex-start;
   position: sticky;
   top: 80px;
@@ -2070,11 +2075,18 @@ input:focus, select:focus {
    on the wrapper when the ins element has not received a fill (height 0).
    The min-height on the ins itself prevents reflow when ads do load.
 */
-.ad-zone ins[style*="height: 0"] + * { display: none; }
-.ad-zone:has(ins[data-ad-status="unfilled"]) {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
+/* CSS-only ad collapse (modern browsers) */
+.ad-zone:has(ins[data-ad-status="unfilled"]),
+.ad-zone:has(ins[style*="height: 0"]) {
+  margin: 0 !important;
+  padding: 0 !important;
   min-height: 0 !important;
+  line-height: 0 !important;
+}
+/* Hide the "Advertisement" label when its zone collapses */
+.ad-zone:has(ins[data-ad-status="unfilled"]) .ad-zone-label,
+.ad-zone:has(ins[style*="height: 0"]) .ad-zone-label {
+  display: none;
 }
 
 /* -- HERO ACCENT CARD colors (used inline in SVG fill/stroke) -- */

@@ -29,7 +29,7 @@
     .hub-header{padding:24px 0 28px;border-bottom:1px solid #e5e7eb;margin-bottom:28px}
     .page-eyebrow{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#16a34a;background:#ecfdf5;border-radius:20px;padding:4px 12px;margin-bottom:12px}
     .hub-header h1{font-size:2.15rem;font-weight:800;line-height:1.18;margin:0 0 9px;color:#111827;letter-spacing:-.032em}
-    .hub-header p{font-size:1rem;color:#4b5563;margin:0;max-width:600px;line-height:1.62}
+    .hub-header p{font-size:1rem;color:#374151;margin:0;max-width:620px;line-height:1.62}
     .hub-section-title{font-size:1.18rem;font-weight:800;color:#111827;margin:0 0 18px;display:flex;align-items:center;gap:8px;letter-spacing:-.02em}
     .hub-section-title span{color:#9ca3af;font-size:.88rem;font-weight:500}
     .calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px}
@@ -37,6 +37,7 @@
     @media(max-width:520px){.calc-grid{grid-template-columns:1fr}}
     .calc-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px 22px;text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(15,23,42,.04)}
     .calc-card:hover{border-color:#16a34a;box-shadow:0 8px 24px rgba(22,163,74,.09),0 0 0 1px rgba(22,163,74,.18);transform:translateY(-3px)}
+    .calc-card:hover .card-icon-wrap{filter:brightness(1.04)}
     .calc-card:active{transform:translateY(-1px)}
     .card-icon-wrap{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:13px;flex-shrink:0}
     .calc-card h3{font-size:1rem;font-weight:800;color:#111827;margin:0 0 6px;letter-spacing:-.01em}
@@ -48,27 +49,43 @@
     @media(max-width:520px){.guides-grid{grid-template-columns:1fr}}
     .guide-card{background:#fff;border:1px solid #e5e7eb;border-radius:11px;padding:13px 16px;text-decoration:none;color:inherit;transition:border-color .14s,box-shadow .14s,transform .14s;display:flex;flex-direction:column;gap:3px}
     .guide-card:hover{border-color:#16a34a;box-shadow:0 3px 10px rgba(22,163,74,.07);transform:translateY(-1px)}
-    .guide-card strong{font-size:.88rem;font-weight:700;color:#111827}
-    .guide-card span{font-size:.77rem;color:#9ca3af}
-    .ad-zone{text-align:center;margin:14px 0;min-height:80px}
-    .ad-zone-label{font-size:.65rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px}
+    .guide-card strong{font-size:.9rem;font-weight:700;color:#111827}
+    .guide-card span{font-size:.79rem;color:#7d8fa3}
+    .ad-zone{text-align:center;margin:10px 0;min-height:90px}
+    .ad-zone-label{font-size:.67rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
   </style>
   <script>
-    window.addEventListener('load', function() {
-      setTimeout(function() {
+    (function() {
+      function collapseEmptyAdZones() {
         document.querySelectorAll('.ad-zone').forEach(function(zone) {
           var ins = zone.querySelector('ins.adsbygoogle');
           if (!ins) return;
-          var h = ins.offsetHeight;
           var status = ins.getAttribute('data-ad-status');
-          if (h === 0 || status === 'unfilled') {
-            zone.style.margin = '0';
-            zone.style.minHeight = '0';
-            zone.style.padding = '0';
+          var h = ins.offsetHeight || parseInt((ins.style.height || '0'), 10);
+          if (status === 'unfilled' || h === 0) {
+            zone.style.cssText = 'margin:0!important;padding:0!important;min-height:0!important;line-height:0!important;overflow:hidden';
           }
         });
-      }, 2800);
-    });
+      }
+      window.addEventListener('load', function() {
+        setTimeout(collapseEmptyAdZones, 1000);
+        setTimeout(collapseEmptyAdZones, 2500);
+      });
+      if (window.MutationObserver) {
+        var mo = new MutationObserver(function(muts) {
+          muts.forEach(function(m) {
+            if (m.type === 'attributes' && m.attributeName === 'data-ad-status') {
+              collapseEmptyAdZones();
+            }
+          });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('ins.adsbygoogle').forEach(function(ins) {
+            mo.observe(ins, { attributes: true });
+          });
+        });
+      }
+    })();
   </script>
 </head>
 <body>

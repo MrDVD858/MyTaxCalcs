@@ -36,7 +36,7 @@
     .post-header{padding:24px 0 22px;border-bottom:1px solid #e5e7eb;margin-bottom:26px}
     .post-category-badge{display:inline-block;font-size:.67rem;font-weight:700;color:#15803d;background:#dcfce7;padding:3px 9px;border-radius:5px;margin-bottom:11px;text-transform:uppercase;letter-spacing:.08em}
     .post-header h1{font-size:clamp(1.5rem,4vw,2.15rem);font-weight:800;line-height:1.22;color:#111827;margin:0 0 13px;letter-spacing:-.028em}
-    .post-meta{display:flex;gap:14px;font-size:.83rem;color:#6b7280;flex-wrap:wrap;align-items:center}
+    .post-meta{display:flex;gap:14px;font-size:.84rem;color:#5b6778;flex-wrap:wrap;align-items:center}
     .post-meta strong{color:#374151;font-weight:600}
     .post-body-content{font-size:1.04rem;line-height:1.8;color:#374151}
     .post-body-content p{margin:0 0 20px}
@@ -53,13 +53,13 @@
     .article-sidebar{padding-top:26px}
     .sidebar-sticky-wrap{position:sticky;top:24px;display:flex;flex-direction:column;gap:14px}
     .sidebar-widget{background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:18px 20px}
-    .sidebar-widget h3{font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#374151;margin:0 0 12px}
+    .sidebar-widget h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#374151;margin:0 0 12px}
     .related-tools-list{display:flex;flex-direction:column;gap:6px}
-    .tool-link-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:1px solid #e9edf2;border-radius:9px;text-decoration:none;color:#374151;font-weight:600;font-size:.86rem;transition:all .14s;background:#fafafa}
+    .tool-link-item{display:flex;align-items:center;justify-content:space-between;padding:8px 12px;border:1px solid #e9edf2;border-radius:9px;text-decoration:none;color:#374151;font-weight:600;font-size:.88rem;transition:all .14s;background:#fafafa}
     .tool-link-item:hover{border-color:#16a34a;color:#15803d;background:#f0fdf4;transform:translateX(2px)}
     .tool-link-arrow{color:#16a34a;font-size:1rem;line-height:1}
-    .ad-zone{text-align:center;margin:14px 0;min-height:80px}
-    .ad-zone-label{font-size:.65rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.09em;margin-bottom:4px}
+    .ad-zone{text-align:center;margin:10px 0;min-height:90px}
+    .ad-zone-label{font-size:.67rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
     .sidebar-ad-unit{min-height:250px;display:flex;flex-direction:column;align-items:center;background:#f9fafb;border-color:#f0f3f7}
   </style>
   <script type="application/ld+json">
@@ -92,21 +92,37 @@
   }
   </script>
   <script>
-    window.addEventListener('load', function() {
-      setTimeout(function() {
+    (function() {
+      function collapseEmptyAdZones() {
         document.querySelectorAll('.ad-zone').forEach(function(zone) {
           var ins = zone.querySelector('ins.adsbygoogle');
           if (!ins) return;
-          var h = ins.offsetHeight;
           var status = ins.getAttribute('data-ad-status');
-          if (h === 0 || status === 'unfilled') {
-            zone.style.margin = '0';
-            zone.style.minHeight = '0';
-            zone.style.padding = '0';
+          var h = ins.offsetHeight || parseInt((ins.style.height || '0'), 10);
+          if (status === 'unfilled' || h === 0) {
+            zone.style.cssText = 'margin:0!important;padding:0!important;min-height:0!important;line-height:0!important;overflow:hidden';
           }
         });
-      }, 2800);
-    });
+      }
+      window.addEventListener('load', function() {
+        setTimeout(collapseEmptyAdZones, 1000);
+        setTimeout(collapseEmptyAdZones, 2500);
+      });
+      if (window.MutationObserver) {
+        var mo = new MutationObserver(function(muts) {
+          muts.forEach(function(m) {
+            if (m.type === 'attributes' && m.attributeName === 'data-ad-status') {
+              collapseEmptyAdZones();
+            }
+          });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('ins.adsbygoogle').forEach(function(ins) {
+            mo.observe(ins, { attributes: true });
+          });
+        });
+      }
+    })();
   </script>
 </head>
 <body>
