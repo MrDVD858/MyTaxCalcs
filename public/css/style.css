@@ -1,6 +1,6 @@
-/* ─────────────────────────────────────────
-   MyTaxCalcs — Modern Redesign
-───────────────────────────────────────── */
+/* -----------------------------------------
+   MyTaxCalcs -- Modern Redesign
+----------------------------------------- */
 
 :root {
   --navy:       #0d1117;
@@ -34,7 +34,7 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-/* ── HEADER ── */
+/* -- HEADER -- */
 .site-header {
   background: var(--navy);
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -107,7 +107,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
 
-/* ── HAMBURGER BUTTON (hidden on desktop) ── */
+/* -- HAMBURGER BUTTON (hidden on desktop) -- */
 .nav-hamburger {
   display: none;
   flex-direction: column;
@@ -143,7 +143,7 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ── MOBILE NAV DRAWER ── */
+/* -- MOBILE NAV DRAWER -- */
 .nav-mobile-drawer {
   display: none;
   background: var(--navy-mid);
@@ -187,12 +187,12 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
 }
 
-/* ── HERO ── */
+/* -- HERO -- */
 .hero {
   background: var(--navy);
   position: relative;
   overflow: hidden;
-  padding: 120px 28px 160px;
+  padding: 100px 28px 130px;
   text-align: center;
 }
 
@@ -372,7 +372,7 @@ a { color: inherit; text-decoration: none; }
   background: rgba(255,255,255,0.12);
 }
 
-/* ── CALCULATOR CARDS ── */
+/* -- CALCULATOR CARDS -- */
 .cards-wrapper {
   max-width: 1180px;
   margin: -72px auto 0;
@@ -410,9 +410,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .calc-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(15,23,42,0.1);
-  border-color: rgba(34,197,94,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(15,23,42,0.09), 0 0 0 1px rgba(34,197,94,0.2);
+  border-color: rgba(34,197,94,0.35);
 }
 
 .calc-card-icon {
@@ -456,7 +456,7 @@ a { color: inherit; text-decoration: none; }
   gap: 10px;
 }
 
-/* ── POPULAR STATES ── */
+/* -- POPULAR STATES -- */
 .popular-states-wrapper {
   max-width: 1180px;
   margin: 0 auto;
@@ -483,9 +483,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .state-featured-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(15,23,42,0.1);
-  border-color: rgba(34,197,94,0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(15,23,42,0.09), 0 0 0 1px rgba(34,197,94,0.2);
+  border-color: rgba(34,197,94,0.35);
 }
 
 .state-badge {
@@ -521,7 +521,7 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.6;
 }
 
-/* ── ALL 50 STATES ── */
+/* -- ALL 50 STATES -- */
 .states-section {
   background: var(--white);
   border-top: 1px solid var(--border);
@@ -580,7 +580,7 @@ a { color: inherit; text-decoration: none; }
   transform: translateY(-2px);
 }
 
-/* ── DISCLAIMER ── */
+/* -- DISCLAIMER -- */
 .disclaimer-wrapper {
   max-width: 1180px;
   margin: 0 auto;
@@ -607,7 +607,7 @@ a { color: inherit; text-decoration: none; }
   color: #78350f;
 }
 
-/* ── FOOTER ── */
+/* -- FOOTER -- */
 .site-footer {
   background: var(--navy);
   color: #8ba3c7;
@@ -673,7 +673,7 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
 }
 
-/* ── LEGACY / OTHER PAGES ── */
+/* -- LEGACY / OTHER PAGES -- */
 .button, button {
   display: inline-block;
   border: none;
@@ -871,7 +871,7 @@ input:focus, select:focus {
 
 .calculators-directory { margin-top: 34px; }
 
-/* ── RESPONSIVE ── */
+/* -- RESPONSIVE -- */
 @media (max-width: 1020px) {
   .cards-grid,
   .popular-states-grid { grid-template-columns: repeat(2, 1fr); }
@@ -916,7 +916,7 @@ input:focus, select:focus {
   .page-card { padding: 24px 18px; }
 }
 
-/* ── CALCULATOR PAGES ── */
+/* -- CALCULATOR PAGES -- */
 .calc-hero {
   background: var(--navy);
   padding: 48px 28px 56px;
@@ -1179,7 +1179,7 @@ input:focus, select:focus {
   .calc-form-card, .calc-results-card { padding: 20px 18px; }
 }
 
-/* ── ABOUT & CONTACT PAGES ── */
+/* -- ABOUT & CONTACT PAGES -- */
 .about-layout {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -1402,7 +1402,7 @@ input:focus, select:focus {
   .contact-email-link { font-size: 0.95rem; word-break: break-all; }
 }
 
-/* ── LEGAL PAGES (Privacy, Terms, Disclaimer) ── */
+/* -- LEGAL PAGES (Privacy, Terms, Disclaimer) -- */
 .legal-layout {
   display: grid;
   grid-template-columns: 1fr 260px;
@@ -1469,7 +1469,7 @@ input:focus, select:focus {
   .legal-card { padding: 22px 18px; }
 }
 
-/* ── Guide Sections ── */
+/* -- Guide Sections -- */
 .guide-section {
   background: #fff;
   border: 1px solid #e5e7eb;
@@ -1595,7 +1595,7 @@ input:focus, select:focus {
   .guide-section { padding: 22px 18px; }
 }
 
-/* ── About Page Additions ── */
+/* -- About Page Additions -- */
 .about-calc-list,
 .about-method-list,
 .about-network-list {
@@ -1959,9 +1959,9 @@ input:focus, select:focus {
   .related-grid { grid-template-columns: 1fr; }
 }
 
-/* ─────────────────────────────────────────
-   Sticky Sidebar Ad — desktop only (1280px+)
-───────────────────────────────────────── */
+/* -----------------------------------------
+   Sticky Sidebar Ad -- desktop only (1280px+)
+----------------------------------------- */
 
 .page-with-sidebar {
   display: flex;
@@ -2014,5 +2014,5 @@ input:focus, select:focus {
   }
 }
 
-/* ── NAV HAMBURGER SCRIPT (inline in each page) ── */
+/* -- NAV HAMBURGER SCRIPT (inline in each page) -- */
 /* The JS is added via a <script> at end of each page's <body> */
