@@ -22,8 +22,8 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
   <style>
-    .ad-zone{text-align:center;margin:28px 0;min-height:90px}
-    .ad-zone-label{font-size:.7rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+    .ad-zone{text-align:center;margin:10px 0;min-height:0}
+    .ad-zone-label{font-size:.63rem;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
   </style>
 </head>
 <body>
@@ -78,16 +78,16 @@
       </nav>
       <div class="page-hero-eyebrow">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-        50 State Directory
+        50-State Directory
       </div>
       <h1>State Income Tax Calculators</h1>
       <p>Choose your state to review income tax rates, brackets, and filing details for 2025 &mdash; plus a free federal income tax estimate.</p>
       <div class="blog-hero-stats">
         <div class="blog-hero-stat"><strong>50</strong> states covered</div>
         <div class="blog-hero-sep"></div>
-        <div class="blog-hero-stat">2025 tax year rates</div>
+        <div class="blog-hero-stat">2025 tax year data</div>
         <div class="blog-hero-sep"></div>
-        <div class="blog-hero-stat">Free to use</div>
+        <div class="blog-hero-stat">Always free</div>
       </div>
     </div>
   </section>
@@ -96,7 +96,7 @@
   <main>
     <div class="states-page-content">
 
-      <div class="ad-zone">
+      <div class="ad-zone" style="margin:20px 0">
         <div class="ad-zone-label">Advertisement</div>
         <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
           data-ad-client="ca-pub-5193834725888549"
@@ -108,31 +108,84 @@
             var ins = document.getElementById('ad-slot-1');
             if (!ins) return;
             var obs = new IntersectionObserver(function(entries) {
-              if (entries[0].isIntersecting) {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                obs.disconnect();
-              }
+              if (entries[0].isIntersecting) { (adsbygoogle = window.adsbygoogle || []).push({}); obs.disconnect(); }
             }, { rootMargin: '200px' });
             obs.observe(ins);
           })();
         </script>
       </div>
 
-      <div class="states-count-bar">
-        <h2>All 50 States</h2>
-        <span>Select a state to view tax rates and calculator</span>
+      <!-- CALLOUT CARDS: no-tax, high-tax, popular, tip -->
+      <div class="states-callout-grid">
+        <div class="state-callout-card no-tax">
+          <div class="scc-icon">&#127381;</div>
+          <p class="scc-title">No State Income Tax</p>
+          <p class="scc-desc">These 9 states have no individual income tax &mdash; residents pay only federal tax on wages.</p>
+          <div class="scc-links">
+            <a href="/texas-income-tax-calculator" class="scc-link">Texas</a>
+            <a href="/florida-income-tax-calculator" class="scc-link">Florida</a>
+            <a href="/washington-income-tax-calculator" class="scc-link">Washington</a>
+            <a href="/nevada-income-tax-calculator" class="scc-link">Nevada</a>
+            <a href="/wyoming-income-tax-calculator" class="scc-link">Wyoming</a>
+            <a href="/alaska-income-tax-calculator" class="scc-link">Alaska</a>
+            <a href="/south-dakota-income-tax-calculator" class="scc-link">South Dakota</a>
+            <a href="/tennessee-income-tax-calculator" class="scc-link">Tennessee</a>
+            <a href="/new-hampshire-income-tax-calculator" class="scc-link">New Hampshire</a>
+          </div>
+        </div>
+        <div class="state-callout-card high-tax">
+          <div class="scc-icon">&#128200;</div>
+          <p class="scc-title">Highest Rate States</p>
+          <p class="scc-desc">These states have top marginal rates above 9% &mdash; high earners should estimate carefully.</p>
+          <div class="scc-links">
+            <a href="/california-income-tax-calculator" class="scc-link">California 13.3%</a>
+            <a href="/hawaii-income-tax-calculator" class="scc-link">Hawaii 11%</a>
+            <a href="/new-jersey-income-tax-calculator" class="scc-link">New Jersey 10.75%</a>
+            <a href="/oregon-income-tax-calculator" class="scc-link">Oregon 9.9%</a>
+            <a href="/minnesota-income-tax-calculator" class="scc-link">Minnesota 9.85%</a>
+            <a href="/new-york-income-tax-calculator" class="scc-link">New York 10.9%</a>
+          </div>
+        </div>
+        <div class="state-callout-card popular">
+          <div class="scc-icon">&#127968;</div>
+          <p class="scc-title">Most Searched States</p>
+          <p class="scc-desc">The most visited state calculator pages on MyTaxCalcs by U.S. residents estimating their taxes.</p>
+          <div class="scc-links">
+            <a href="/california-income-tax-calculator" class="scc-link">California</a>
+            <a href="/new-york-income-tax-calculator" class="scc-link">New York</a>
+            <a href="/texas-income-tax-calculator" class="scc-link">Texas</a>
+            <a href="/florida-income-tax-calculator" class="scc-link">Florida</a>
+            <a href="/illinois-income-tax-calculator" class="scc-link">Illinois</a>
+            <a href="/pennsylvania-income-tax-calculator" class="scc-link">Pennsylvania</a>
+          </div>
+        </div>
+        <div class="state-callout-card tip">
+          <div class="scc-icon">&#128161;</div>
+          <p class="scc-title">State Tax Tip</p>
+          <p class="scc-desc">State income tax is on top of your federal bill. Most states also have local taxes. Always estimate both layers before setting your withholding.</p>
+          <div class="scc-links">
+            <a href="/income-tax-calculator" class="scc-link">Federal Calculator</a>
+            <a href="/tax-brackets-2025" class="scc-link">2025 Brackets</a>
+          </div>
+        </div>
       </div>
 
-      <div class="states-grid-premium">
+      <!-- FILTER + GRID -->
+      <div class="states-filter-bar">
+        <input type="text" class="states-search" id="state-search" placeholder="Search states..." aria-label="Filter states">
+        <span class="states-count" id="states-shown">Showing all 50 states</span>
+      </div>
+
+      <div class="states-grid-premium" id="states-grid">
         <% states.forEach(function(item) { %>
-          <a href="/<%= item.slug %>-income-tax-calculator" class="state-card-premium">
+          <a href="/<%= item.slug %>-income-tax-calculator" class="state-card-premium" data-name="<%= item.name.toLowerCase() %> <%= item.abbr.toLowerCase() %>">
             <span class="scn"><%= item.name %></span>
             <span class="sca"><%= item.abbr %></span>
           </a>
         <% }) %>
       </div>
 
-      <div class="ad-zone" style="margin-top:40px">
+      <div class="ad-zone" style="margin-top:36px">
         <div class="ad-zone-label">Advertisement</div>
         <ins class="adsbygoogle" style="display:block" id="ad-slot-2"
           data-ad-client="ca-pub-5193834725888549"
@@ -144,10 +197,7 @@
             var ins = document.getElementById('ad-slot-2');
             if (!ins) return;
             var obs = new IntersectionObserver(function(entries) {
-              if (entries[0].isIntersecting) {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                obs.disconnect();
-              }
+              if (entries[0].isIntersecting) { (adsbygoogle = window.adsbygoogle || []).push({}); obs.disconnect(); }
             }, { rootMargin: '200px' });
             obs.observe(ins);
           })();
@@ -156,7 +206,7 @@
 
       <div class="states-seo-section">
         <h2>State Income Tax: What to Know for 2025</h2>
-        <p>State income tax rates vary widely &mdash; from 0% in states like Texas, Florida, and Wyoming, to over 13% in California. Use each state calculator page to see local brackets, rates, standard deductions, and filing thresholds for 2025. All federal income tax estimates on state pages use the same 2025 IRS brackets.</p>
+        <p>State income tax rates vary widely &mdash; from 0% in states like Texas, Florida, and Wyoming, to over 13% in California. Use each state calculator page to see local brackets, rates, standard deductions, and filing thresholds for 2025. All federal income tax estimates use the same 2025 IRS brackets.</p>
       </div>
 
     </div>
@@ -174,10 +224,7 @@
         (function(){
           var ins=document.currentScript.previousElementSibling;
           var io=new IntersectionObserver(function(entries,observer){
-            if(entries[0].isIntersecting){
-              (adsbygoogle=window.adsbygoogle||[]).push({});
-              observer.disconnect();
-            }
+            if(entries[0].isIntersecting){(adsbygoogle=window.adsbygoogle||[]).push({});observer.disconnect();}
           },{rootMargin:'200px'});
           io.observe(ins);
         })();
@@ -234,6 +281,24 @@
           btn.setAttribute('aria-expanded', 'false');
           btn.setAttribute('aria-label', 'Open menu');
         }
+      });
+    })();
+    // State search filter
+    (function() {
+      var input = document.getElementById('state-search');
+      var cards = document.querySelectorAll('#states-grid .state-card-premium');
+      var countEl = document.getElementById('states-shown');
+      if (!input) return;
+      input.addEventListener('input', function() {
+        var q = input.value.trim().toLowerCase();
+        var shown = 0;
+        cards.forEach(function(card) {
+          var name = card.getAttribute('data-name') || '';
+          var visible = !q || name.indexOf(q) > -1;
+          card.style.display = visible ? '' : 'none';
+          if (visible) shown++;
+        });
+        countEl.textContent = q ? 'Showing ' + shown + ' of 50 states' : 'Showing all 50 states';
       });
     })();
   </script>

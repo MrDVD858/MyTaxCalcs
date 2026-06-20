@@ -27,69 +27,89 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-FS9HCDT0D7');</script>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5193834725888549" crossorigin="anonymous"></script>
   <style>
-    /* -- HOME PAGE STYLES -- */
-    .home-container{max-width:1080px;margin:0 auto;padding:36px 28px 56px}
-    .section-title-wrap{margin-bottom:28px}
-    .section-eyebrow{font-size:.74rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#16a34a;margin-bottom:8px;display:block}
-    .section-title-wrap h2{font-size:1.7rem;font-weight:800;color:#111827;margin:0 0 6px;letter-spacing:-.028em;line-height:1.2}
-    .section-title-wrap p{font-size:.95rem;color:#5b6778;margin:0;line-height:1.6}
+    .home-container{max-width:1080px;margin:0 auto;padding:20px 28px 48px}
+    .section-eyebrow{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#16a34a;margin-bottom:6px;display:block}
+    .section-title-wrap{margin-bottom:22px}
+    .section-title-wrap h2{font-size:1.6rem;font-weight:800;color:#111827;margin:0 0 5px;letter-spacing:-.028em;line-height:1.2}
+    .section-title-wrap p{font-size:.92rem;color:#5b6778;margin:0;line-height:1.6}
 
-    /* -- CALC GRID -- */
-    .calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:44px}
+    /* Calc grid */
+    .calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:32px}
     @media(max-width:768px){.calc-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:480px){.calc-grid{grid-template-columns:1fr}}
-    .calc-card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:22px 24px;text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(15,23,42,.04)}
-    .calc-card:hover{border-color:#16a34a;box-shadow:0 8px 24px rgba(22,163,74,.09),0 0 0 1px rgba(22,163,74,.18);transform:translateY(-3px)}
+    .calc-card{background:#fff;border:1.5px solid #e5e7eb;border-radius:15px;padding:20px 22px;text-decoration:none;color:inherit;transition:transform .18s,box-shadow .18s,border-color .18s;display:flex;flex-direction:column;box-shadow:0 2px 8px rgba(15,23,42,.06)}
+    .calc-card:hover{border-color:#16a34a;box-shadow:0 10px 28px rgba(22,163,74,.11),0 0 0 1.5px rgba(22,163,74,.22);transform:translateY(-4px)}
     .calc-card:active{transform:translateY(-1px)}
-    .card-icon-wrap{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;flex-shrink:0}
-    .calc-card h3{font-size:1.02rem;font-weight:800;color:#111827;margin:0 0 6px;letter-spacing:-.01em;line-height:1.3}
-    .calc-card p{font-size:.9rem;color:#4b5563;line-height:1.6;margin:0 0 16px;flex-grow:1}
-    .card-link{font-size:.84rem;font-weight:700;color:#16a34a;display:inline-flex;align-items:center;gap:5px;margin-top:auto}
-    .card-link svg{transition:transform .15s}.calc-card:hover .card-link svg{transform:translateX(4px)}
-    .calc-card:hover .card-icon-wrap{filter:brightness(1.04)}
+    .card-icon-wrap{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex-shrink:0;box-shadow:0 2px 6px rgba(15,23,42,.07)}
+    .calc-card h3{font-size:.98rem;font-weight:800;color:#111827;margin:0 0 5px;letter-spacing:-.01em;line-height:1.3}
+    .calc-card p{font-size:.87rem;color:#4b5563;line-height:1.58;margin:0 0 14px;flex-grow:1}
+    .card-link{font-size:.82rem;font-weight:700;color:#16a34a;display:inline-flex;align-items:center;gap:5px;margin-top:auto;transition:gap .14s}
+    .calc-card:hover .card-link{gap:9px}
 
-    /* -- STATES PREVIEW -- */
-    .states-preview-box{background:#f9fafb;border:1px solid #e5e7eb;border-radius:18px;padding:28px 32px;margin-bottom:44px;display:grid;grid-template-columns:1.05fr 2fr;gap:36px;align-items:center}
-    @media(max-width:768px){.states-preview-box{grid-template-columns:1fr;gap:20px;padding:22px}}
-    .states-preview-info h2{font-size:1.45rem;font-weight:800;color:#111827;margin:0 0 9px;letter-spacing:-.025em}
-    .states-preview-info p{font-size:.9rem;color:#4b5563;line-height:1.65;margin:0 0 18px}
-    .state-tags{display:flex;flex-wrap:wrap;gap:7px}
-    .state-tag{font-size:.82rem;font-weight:600;color:#374151;background:#fff;border:1px solid #d1d5db;border-radius:7px;padding:5px 12px;text-decoration:none;transition:all .14s;line-height:1}
-    .state-tag:hover{border-color:#16a34a;color:#15803d;background:#f0fdf4;transform:translateY(-1px);box-shadow:0 2px 6px rgba(22,163,74,.1)}
-    .view-all-states-link{font-size:.88rem;font-weight:700;color:#16a34a;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:12px}
+    /* Calc section divider accent */
+    .calc-section-wrap{margin-bottom:32px}
+    .calc-section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+    .calc-section-header a{font-size:.82rem;font-weight:700;color:#16a34a;text-decoration:none}
+    .calc-section-header a:hover{text-decoration:underline}
+
+    /* States section */
+    .states-preview-box{background:linear-gradient(135deg,#f8fffe 0%,#f0fdf4 100%);border:1.5px solid #d1fae5;border-radius:18px;padding:24px 28px;margin-bottom:32px;display:grid;grid-template-columns:1.1fr 1.9fr;gap:32px;align-items:start;box-shadow:0 2px 10px rgba(22,163,74,.06)}
+    @media(max-width:768px){.states-preview-box{grid-template-columns:1fr;gap:18px;padding:20px}}
+    .states-preview-info h2{font-size:1.3rem;font-weight:800;color:#111827;margin:0 0 8px;letter-spacing:-.022em}
+    .states-preview-info p{font-size:.88rem;color:#4b5563;line-height:1.65;margin:0 0 14px}
+    .state-tags{display:flex;flex-wrap:wrap;gap:6px}
+    .state-tag{font-size:.79rem;font-weight:600;color:#374151;background:#fff;border:1px solid #d1d5db;border-radius:7px;padding:4px 10px;text-decoration:none;transition:all .13s;line-height:1;box-shadow:0 1px 3px rgba(15,23,42,.04)}
+    .state-tag:hover{border-color:#16a34a;color:#15803d;background:#f0fdf4;transform:translateY(-1px);box-shadow:0 3px 8px rgba(22,163,74,.1)}
+    .view-all-states-link{font-size:.85rem;font-weight:700;color:#16a34a;text-decoration:none;display:inline-flex;align-items:center;gap:5px;margin-top:10px}
     .view-all-states-link:hover{text-decoration:underline}
 
-    /* -- BLOG CARDS (on homepage) -- */
-    .blog-card-home{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:20px 22px;text-decoration:none;color:inherit;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;display:flex;flex-direction:column;box-shadow:0 1px 3px rgba(15,23,42,.04)}
-    .blog-card-home:hover{border-color:#16a34a;box-shadow:0 8px 22px rgba(22,163,74,.08),0 0 0 1px rgba(22,163,74,.16);transform:translateY(-3px)}
-    .blog-card-home:active{transform:translateY(-1px)}
-    .blog-card-cat{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#15803d;background:#dcfce7;border-radius:4px;padding:2px 7px;display:inline-block;margin-bottom:10px;line-height:1.5}
-    .blog-card-home h3{font-size:1rem;font-weight:800;color:#111827;margin:0 0 8px;line-height:1.38;letter-spacing:-.015em}
-    .blog-card-home p{font-size:.875rem;color:#4b5563;line-height:1.6;margin:0 0 14px;flex-grow:1}
-    .blog-card-home .card-link{font-size:.83rem;font-weight:700;color:#16a34a;display:inline-flex;align-items:center;gap:5px;margin-top:auto;letter-spacing:.01em}
-    .blog-card-home .card-link svg{transition:transform .15s}
-    .blog-card-home:hover .card-link svg{transform:translateX(4px)}
+    /* Blog preview */
+    .blog-preview-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-bottom:14px}
+    @media(max-width:768px){.blog-preview-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:480px){.blog-preview-grid{grid-template-columns:1fr}}
+    .blog-card-home{background:#fff;border:1.5px solid #e9edf2;border-radius:14px;padding:18px 20px;text-decoration:none;color:inherit;transition:transform .17s,box-shadow .17s,border-color .17s;display:flex;flex-direction:column;box-shadow:0 1px 4px rgba(15,23,42,.05)}
+    .blog-card-home:hover{border-color:#16a34a;box-shadow:0 8px 22px rgba(22,163,74,.08),0 0 0 1px rgba(22,163,74,.15);transform:translateY(-3px)}
+    .blog-card-cat{font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:#15803d;background:#dcfce7;border-radius:4px;padding:2px 7px;display:inline-block;margin-bottom:8px;line-height:1.5}
+    .blog-card-home h3{font-size:.95rem;font-weight:800;color:#111827;margin:0 0 7px;line-height:1.36;letter-spacing:-.015em}
+    .blog-card-home p{font-size:.84rem;color:#4b5563;line-height:1.58;margin:0 0 12px;flex-grow:1}
+    .blog-card-home .card-link{font-size:.8rem;font-weight:700;color:#16a34a;display:inline-flex;align-items:center;gap:4px;margin-top:auto}
 
-    /* -- HOW IT WORKS -- */
-    .how-it-works-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
-    @media(max-width:768px){.how-it-works-grid{grid-template-columns:1fr;gap:20px}}
-    .how-body-text{font-size:.93rem;color:#4b5563;line-height:1.78;margin:0 0 16px}
+    /* How it works */
+    .hiw-wrap{padding:28px 0 0}
+    .how-it-works-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+    @media(max-width:768px){.how-it-works-grid{grid-template-columns:1fr;gap:18px}}
+    .how-body-text{font-size:.9rem;color:#4b5563;line-height:1.78;margin:0 0 14px}
 
-    /* -- TRUST FEATURES -- */
-    .features-section{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;border-top:1px solid #e5e7eb;padding-top:40px;margin-top:0}
+    /* Key data card */
+    .key-data-card{background:#f9fafb;border:1px solid #e5e7eb;border-radius:14px;padding:22px}
+    .key-data-card h3{font-size:.9rem;font-weight:700;color:#111827;margin:0 0 14px}
+    .key-data-table{width:100%;font-size:.86rem;border-collapse:collapse}
+    .key-data-table tr{border-bottom:1px solid #f3f4f6}
+    .key-data-table tr:last-child{border-bottom:none}
+    .key-data-table td{padding:8px 0;color:#374151;font-weight:600;vertical-align:middle}
+    .key-data-table td:last-child{text-align:right;color:#111827;font-weight:700}
+    .key-data-link{font-size:.8rem;font-weight:700;color:#16a34a;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:12px}
+    .key-data-link:hover{text-decoration:underline}
+    .which-calc-card{background:#f0fdf4;border:1px solid #d1fae5;border-radius:14px;padding:18px;margin-top:14px}
+    .which-calc-card h3{font-size:.9rem;font-weight:700;color:#111827;margin:0 0 8px}
+    .which-calc-list{margin:0;padding:0 0 0 16px;font-size:.84rem;color:#4b5563;line-height:1.85}
+    .which-calc-list a{color:#16a34a;font-weight:600}
+
+    /* Trust features */
+    .features-section{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border-top:1px solid #e9edf2;padding-top:24px;margin-top:6px}
     @media(max-width:768px){.features-section{grid-template-columns:1fr}}
-    .feature-item{background:#fff;border:1px solid #e9edf2;border-radius:14px;padding:18px 20px;transition:box-shadow .15s}
-    .feature-item:hover{box-shadow:0 4px 14px rgba(15,23,42,.06)}
-    .feature-item h3{font-size:.93rem;font-weight:700;color:#111827;margin:0 0 6px;display:flex;align-items:center;gap:8px;line-height:1.3}
-    .feature-item p{font-size:.875rem;color:#4b5563;line-height:1.62;margin:0}
+    .feature-item{background:#fff;border:1px solid #e9edf2;border-radius:12px;padding:15px 17px;box-shadow:0 1px 3px rgba(15,23,42,.03)}
+    .feature-item:hover{box-shadow:0 4px 12px rgba(15,23,42,.06)}
+    .feature-item h3{font-size:.86rem;font-weight:700;color:#111827;margin:0 0 5px;display:flex;align-items:center;gap:7px;line-height:1.3}
+    .feature-item p{font-size:.81rem;color:#4b5563;line-height:1.6;margin:0}
     .feature-icon{color:#16a34a;display:flex;align-items:center;flex-shrink:0}
 
-    /* -- AD ZONE -- */
-    .ad-zone{text-align:center;margin:12px 0;min-height:90px}
-    .ad-zone-label{font-size:.67rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
-
-    /* -- SECTION DIVIDER -- */
+    /* section divider */
     .section-divider{border:none;border-top:1px solid #e9edf2;margin:0}
+
+    /* ad zone */
+    .ad-zone{text-align:center;margin:10px 0;min-height:0}
+    .ad-zone-label{font-size:.63rem;color:#b0bbc9;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
   </style>
   <script type="application/ld+json">
   {
@@ -134,18 +154,14 @@
           }
         });
       }
-      // Fast check: 1s after load covers most blocked/unfilled cases
       window.addEventListener('load', function() {
         setTimeout(collapseEmptyAdZones, 1000);
         setTimeout(collapseEmptyAdZones, 2500);
       });
-      // Watch for AdSense setting data-ad-status on ins elements
       if (window.MutationObserver) {
         var mo = new MutationObserver(function(muts) {
           muts.forEach(function(m) {
-            if (m.type === 'attributes' && m.attributeName === 'data-ad-status') {
-              collapseEmptyAdZones();
-            }
+            if (m.type === 'attributes' && m.attributeName === 'data-ad-status') collapseEmptyAdZones();
           });
         });
         document.addEventListener('DOMContentLoaded', function() {
@@ -198,45 +214,30 @@
     </div>
   </header>
 
-  <!-- DARK NAVY HERO -- unified with global design system -->
   <section class="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-glow hero-glow-1"></div>
     <div class="hero-glow hero-glow-2"></div>
-
-    <!-- Floating tax card accent -- visible on wide desktop only via CSS -->
     <div class="hero-accent-card" aria-hidden="true">
       <svg width="220" height="280" viewBox="0 0 220 280" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <!-- Card shadow -->
         <rect x="14" y="14" width="196" height="256" rx="14" fill="rgba(0,0,0,0.4)"/>
-        <!-- Card body -->
         <rect x="8" y="8" width="196" height="256" rx="14" fill="#161e2e" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
-        <!-- Green top stripe -->
         <rect x="8" y="8" width="196" height="6" rx="4" fill="#22c55e" opacity="0.7"/>
-        <!-- Header row -->
         <rect x="24" y="32" width="80" height="8" rx="3" fill="rgba(255,255,255,0.12)"/>
         <rect x="152" y="30" width="36" height="12" rx="3" fill="rgba(34,197,94,0.25)"/>
-        <!-- Divider -->
         <line x1="24" y1="56" x2="196" y2="56" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <!-- Row 1 -->
         <rect x="24" y="68" width="60" height="6" rx="2" fill="rgba(255,255,255,0.15)"/>
         <rect x="148" y="68" width="44" height="6" rx="2" fill="rgba(255,255,255,0.22)"/>
-        <!-- Row 2 -->
         <rect x="24" y="86" width="72" height="6" rx="2" fill="rgba(255,255,255,0.1)"/>
         <rect x="148" y="86" width="36" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
-        <!-- Row 3 -->
         <rect x="24" y="104" width="54" height="6" rx="2" fill="rgba(255,255,255,0.1)"/>
         <rect x="148" y="104" width="48" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
-        <!-- Row 4 -->
         <rect x="24" y="122" width="66" height="6" rx="2" fill="rgba(255,255,255,0.1)"/>
         <rect x="148" y="122" width="40" height="6" rx="2" fill="rgba(255,255,255,0.18)"/>
-        <!-- Divider 2 -->
         <line x1="24" y1="142" x2="196" y2="142" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-        <!-- Total row -- highlighted -->
         <rect x="16" y="152" width="180" height="28" rx="6" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.2)" stroke-width="1"/>
         <rect x="28" y="162" width="56" height="8" rx="2" fill="rgba(34,197,94,0.5)"/>
         <rect x="148" y="160" width="48" height="12" rx="3" fill="#22c55e" opacity="0.85"/>
-        <!-- Mini bar chart at bottom -->
         <rect x="24" y="196" width="18" height="40" rx="3" fill="rgba(34,197,94,0.2)"/>
         <rect x="48" y="208" width="18" height="28" rx="3" fill="rgba(34,197,94,0.15)"/>
         <rect x="72" y="188" width="18" height="48" rx="3" fill="rgba(34,197,94,0.3)"/>
@@ -244,12 +245,10 @@
         <rect x="120" y="180" width="18" height="56" rx="3" fill="rgba(34,197,94,0.45)"/>
         <rect x="144" y="192" width="18" height="44" rx="3" fill="rgba(34,197,94,0.25)"/>
         <rect x="168" y="172" width="18" height="64" rx="3" fill="rgba(34,197,94,0.6)"/>
-        <!-- Bottom label -->
         <rect x="24" y="248" width="96" height="5" rx="2" fill="rgba(255,255,255,0.08)"/>
         <rect x="148" y="248" width="44" height="5" rx="2" fill="rgba(255,255,255,0.06)"/>
       </svg>
     </div>
-
     <div class="hero-content">
       <div class="hero-eyebrow">
         <span class="eyebrow-dot"></span>
@@ -265,25 +264,13 @@
         <a href="/states" class="btn btn-ghost">State Tax Rates &#8594;</a>
       </div>
       <div class="hero-stats">
-        <div class="stat">
-          <strong>6</strong>
-          <span>Core Calculators</span>
-        </div>
+        <div class="stat"><strong>6</strong><span>Core Calculators</span></div>
         <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>50</strong>
-          <span>State Pages</span>
-        </div>
+        <div class="stat"><strong>50</strong><span>State Pages</span></div>
         <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>2025</strong>
-          <span>IRS Data</span>
-        </div>
+        <div class="stat"><strong>2025</strong><span>IRS Data</span></div>
         <div class="stat-divider"></div>
-        <div class="stat">
-          <strong>Free</strong>
-          <span>Always</span>
-        </div>
+        <div class="stat"><strong>Free</strong><span>Always</span></div>
       </div>
     </div>
   </section>
@@ -291,7 +278,7 @@
   <div class="page-with-sidebar">
   <main>
 
-    <div class="ad-zone" style="max-width:1080px;margin:12px auto 0;padding:0 28px">
+    <div class="ad-zone" style="max-width:1080px;margin:10px auto 0;padding:0 28px">
       <div class="ad-zone-label">Advertisement</div>
       <ins class="adsbygoogle" style="display:block" id="ad-slot-1"
         data-ad-client="ca-pub-5193834725888549"
@@ -303,10 +290,7 @@
           var ins = document.getElementById('ad-slot-1');
           if (!ins) return;
           var obs = new IntersectionObserver(function(entries) {
-            if (entries[0].isIntersecting) {
-              (adsbygoogle = window.adsbygoogle || []).push({});
-              obs.disconnect();
-            }
+            if (entries[0].isIntersecting) { (adsbygoogle = window.adsbygoogle || []).push({}); obs.disconnect(); }
           }, { rootMargin: '200px' });
           obs.observe(ins);
         })();
@@ -316,69 +300,68 @@
     <div class="home-container">
 
       <!-- CALCULATOR GRID -->
-      <div class="section-title-wrap">
-        <span class="section-eyebrow">Core Calculators</span>
-        <h2>Free Tax Calculators for 2025 &amp; 2026</h2>
-        <p>Pick a calculator to get a fast, accurate estimate in seconds.</p>
+      <div class="calc-section-wrap">
+        <div class="calc-section-header">
+          <div>
+            <span class="section-eyebrow">Core Calculators</span>
+            <h2 style="font-size:1.55rem;font-weight:800;color:#111827;margin:0;letter-spacing:-.026em">Free Tax Calculators for 2025 &amp; 2026</h2>
+          </div>
+          <a href="/calculators">View all tools &#8594;</a>
+        </div>
+
+        <div class="calc-grid">
+          <a href="/income-tax-calculator" class="calc-card">
+            <div class="card-icon-wrap" style="background:#ecfdf5;color:#16a34a;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+            </div>
+            <h3>Income Tax Calculator</h3>
+            <p>Estimate your 2025 federal tax liability, effective rate, and marginal bracket by income and filing status.</p>
+            <span class="card-link">Launch Tool <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </a>
+          <a href="/tax-refund-calculator" class="calc-card">
+            <div class="card-icon-wrap" style="background:#f0fdf4;color:#15803d;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <h3>Tax Refund Calculator</h3>
+            <p>See whether you'll get a refund or owe money based on your income, withholding, and credits.</p>
+            <span class="card-link">Launch Tool <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </a>
+          <a href="/payroll-tax-calculator" class="calc-card">
+            <div class="card-icon-wrap" style="background:#fff1f2;color:#e11d48;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <h3>Payroll Tax Calculator</h3>
+            <p>Calculate take-home pay after federal income tax, Social Security, and Medicare withholding.</p>
+            <span class="card-link">Launch Tool <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </a>
+          <a href="/self-employment-tax-calculator" class="calc-card">
+            <div class="card-icon-wrap" style="background:#eff6ff;color:#2563eb;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>Self-Employment Tax</h3>
+            <p>Estimate the 15.3% SE tax on net self-employment income and your above-the-line deduction.</p>
+            <span class="card-link">Launch Tool <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </a>
+          <a href="/capital-gains-tax-calculator" class="calc-card">
+            <div class="card-icon-wrap" style="background:#fef3c7;color:#d97706;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+            </div>
+            <h3>Capital Gains Tax</h3>
+            <p>Estimate tax on stocks, real estate, or crypto sales &mdash; short-term vs. long-term rates for 2025.</p>
+            <span class="card-link">Launch Tool <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </a>
+          <a href="/sales-tax-calculator" class="calc-card">
+            <div class="card-icon-wrap" style="background:#fdf4ff;color:#9333ea;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
+            </div>
+            <h3>Sales Tax Calculator</h3>
+            <p>Add sales tax to a purchase, or back it out of a total &mdash; any rate, any state.</p>
+            <span class="card-link">Launch Tool <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+          </a>
+        </div>
       </div>
 
-      <div class="calc-grid">
-        <a href="/income-tax-calculator" class="calc-card">
-          <div class="card-icon-wrap" style="background:#ecfdf5;color:#16a34a;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
-          </div>
-          <h3>Income Tax Calculator</h3>
-          <p>Estimate your 2025 federal income tax, effective rate, and marginal bracket based on your income and filing status.</p>
-          <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
-        </a>
-
-        <a href="/tax-refund-calculator" class="calc-card">
-          <div class="card-icon-wrap" style="background:#f0fdf4;color:#15803d;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-          </div>
-          <h3>Tax Refund Calculator</h3>
-          <p>See whether you'll get a refund or owe money based on your income, withholding, and credits.</p>
-          <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
-        </a>
-
-        <a href="/payroll-tax-calculator" class="calc-card">
-          <div class="card-icon-wrap" style="background:#fff1f2;color:#e11d48;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-          </div>
-          <h3>Payroll Tax Calculator</h3>
-          <p>Calculate your take-home pay after federal income tax, Social Security, and Medicare withholding.</p>
-          <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
-        </a>
-
-        <a href="/self-employment-tax-calculator" class="calc-card">
-          <div class="card-icon-wrap" style="background:#eff6ff;color:#2563eb;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          </div>
-          <h3>Self-Employment Tax</h3>
-          <p>Estimate the 15.3% SE tax on your net self-employment income and calculate your above-the-line deduction.</p>
-          <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
-        </a>
-
-        <a href="/capital-gains-tax-calculator" class="calc-card">
-          <div class="card-icon-wrap" style="background:#fef3c7;color:#d97706;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
-          </div>
-          <h3>Capital Gains Tax</h3>
-          <p>Estimate tax on stocks, real estate, or crypto sales &mdash; short-term vs. long-term rates for 2025.</p>
-          <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
-        </a>
-
-        <a href="/sales-tax-calculator" class="calc-card">
-          <div class="card-icon-wrap" style="background:#fdf4ff;color:#9333ea;">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
-          </div>
-          <h3>Sales Tax Calculator</h3>
-          <p>Add sales tax to a purchase price, or back it out of a total &mdash; enter any rate for any state.</p>
-          <span class="card-link">Launch Tool <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
-        </a>
-      </div>
-
-      <!-- MID-PAGE AD -->
+      <!-- MID AD -->
       <div class="ad-zone">
         <div class="ad-zone-label">Advertisement</div>
         <ins class="adsbygoogle" style="display:block" id="ad-slot-2"
@@ -391,148 +374,120 @@
             var ins = document.getElementById('ad-slot-2');
             if (!ins) return;
             var obs = new IntersectionObserver(function(entries) {
-              if (entries[0].isIntersecting) {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                obs.disconnect();
-              }
+              if (entries[0].isIntersecting) { (adsbygoogle = window.adsbygoogle || []).push({}); obs.disconnect(); }
             }, { rootMargin: '200px' });
             obs.observe(ins);
           })();
         </script>
       </div>
 
-      <!-- STATE INCOME TAX PREVIEW -->
+      <!-- STATE INCOME TAX -->
       <div class="states-preview-box">
         <div class="states-preview-info">
           <span class="section-eyebrow">State Tax Rates</span>
           <h2>State Income Tax by State</h2>
-          <p>State income tax rates vary widely &mdash; from 0% in Texas and Florida to 13.3% in California. Select your state to see its brackets and estimate your state tax.</p>
-          <a href="/states" class="view-all-states-link">Browse All 50 States &amp; Rates &#8594;</a>
+          <p>Rates range from 0% in Texas and Florida to over 13% in California. Pick your state to see brackets and estimate your state tax.</p>
+          <a href="/states" class="view-all-states-link">All 50 States &amp; Rates &#8594;</a>
         </div>
-        <div class="state-tags">
-          <a href="/california-income-tax-calculator" class="state-tag">California</a>
-          <a href="/texas-income-tax-calculator" class="state-tag">Texas</a>
-          <a href="/new-york-income-tax-calculator" class="state-tag">New York</a>
-          <a href="/florida-income-tax-calculator" class="state-tag">Florida</a>
-          <a href="/illinois-income-tax-calculator" class="state-tag">Illinois</a>
-          <a href="/pennsylvania-income-tax-calculator" class="state-tag">Pennsylvania</a>
-          <a href="/ohio-income-tax-calculator" class="state-tag">Ohio</a>
-          <a href="/georgia-income-tax-calculator" class="state-tag">Georgia</a>
-          <a href="/north-carolina-income-tax-calculator" class="state-tag">North Carolina</a>
-          <a href="/michigan-income-tax-calculator" class="state-tag">Michigan</a>
-          <a href="/washington-income-tax-calculator" class="state-tag">Washington</a>
-          <a href="/arizona-income-tax-calculator" class="state-tag">Arizona</a>
-          <a href="/colorado-income-tax-calculator" class="state-tag">Colorado</a>
-          <a href="/virginia-income-tax-calculator" class="state-tag">Virginia</a>
-          <a href="/new-jersey-income-tax-calculator" class="state-tag">New Jersey</a>
-          <a href="/massachusetts-income-tax-calculator" class="state-tag">Massachusetts</a>
+        <div>
+          <div class="state-tags">
+            <a href="/california-income-tax-calculator" class="state-tag">California</a>
+            <a href="/texas-income-tax-calculator" class="state-tag">Texas</a>
+            <a href="/new-york-income-tax-calculator" class="state-tag">New York</a>
+            <a href="/florida-income-tax-calculator" class="state-tag">Florida</a>
+            <a href="/illinois-income-tax-calculator" class="state-tag">Illinois</a>
+            <a href="/pennsylvania-income-tax-calculator" class="state-tag">Pennsylvania</a>
+            <a href="/ohio-income-tax-calculator" class="state-tag">Ohio</a>
+            <a href="/georgia-income-tax-calculator" class="state-tag">Georgia</a>
+            <a href="/north-carolina-income-tax-calculator" class="state-tag">North Carolina</a>
+            <a href="/michigan-income-tax-calculator" class="state-tag">Michigan</a>
+            <a href="/washington-income-tax-calculator" class="state-tag">Washington</a>
+            <a href="/arizona-income-tax-calculator" class="state-tag">Arizona</a>
+            <a href="/colorado-income-tax-calculator" class="state-tag">Colorado</a>
+            <a href="/virginia-income-tax-calculator" class="state-tag">Virginia</a>
+            <a href="/new-jersey-income-tax-calculator" class="state-tag">New Jersey</a>
+            <a href="/massachusetts-income-tax-calculator" class="state-tag">Massachusetts</a>
+          </div>
         </div>
       </div>
 
-      <!-- BLOG SECTION -->
+      <!-- BLOG PREVIEW -->
       <hr class="section-divider">
-      <div class="section-title-wrap" style="margin-top:36px">
+      <div class="section-title-wrap" style="margin-top:28px">
         <span class="section-eyebrow">Tax Tips &amp; News</span>
         <h2>From the Blog</h2>
-        <p>IRS updates, tax law changes, and plain-English guides to help you plan smarter.</p>
+        <p>IRS updates, tax law changes, and plain-English guides.</p>
       </div>
-      <div class="calc-grid" style="margin-bottom:12px">
+      <div class="blog-preview-grid">
         <% if (typeof posts !== 'undefined' && posts.length > 0) { %>
           <% posts.slice(0,3).forEach(function(post) { %>
             <a href="/blog/<%= post.slug %>" class="blog-card-home">
               <span class="blog-card-cat"><%= post.category %></span>
               <h3><%= post.title %></h3>
               <p><%= post.excerpt %></p>
-              <span class="card-link">Read More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
+              <span class="card-link">Read <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
             </a>
           <% }) %>
         <% } else { %>
           <a href="/blog" class="blog-card-home">
             <h3>Tax Tips &amp; IRS Updates</h3>
             <p>Stay current on tax law changes, contribution limits, and filing tips.</p>
-            <span class="card-link">Visit the Blog <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 19 12"/></svg></span>
+            <span class="card-link">Visit Blog <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
           </a>
         <% } %>
       </div>
-      <div style="margin-bottom:40px"><a href="/blog" style="font-size:.88rem;font-weight:700;color:#16a34a;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">View All Posts &#8594;</a></div>
+      <div style="margin-bottom:32px"><a href="/blog" style="font-size:.85rem;font-weight:700;color:#16a34a;text-decoration:none;display:inline-flex;align-items:center;gap:5px">View All 58+ Posts &#8594;</a></div>
 
       <!-- HOW IT WORKS -->
       <hr class="section-divider">
-      <div style="padding-top:40px">
+      <div class="hiw-wrap">
         <div class="section-title-wrap">
           <span class="section-eyebrow">How These Calculators Work</span>
           <h2>Understanding Your Federal Tax Estimate</h2>
         </div>
         <div class="how-it-works-grid">
           <div>
-            <p class="how-body-text">
-              Every calculator on MyTaxCalcs uses the same formulas the IRS publishes in its official
-              instructions. Start with your gross income, subtract your standard or itemized deduction
-              to arrive at taxable income, then apply the 2025 tax brackets progressively &mdash; not as a
-              flat rate. The result is your estimated federal tax liability before any credits or
-              withholding adjustments.
-            </p>
-            <p class="how-body-text">
-              Tax brackets are marginal, which means only the income inside each bracket is taxed at
-              that rate. A single filer with $80,000 of taxable income does not pay 22% on all $80,000 &mdash;
-              they pay 10% on the first $11,925, 12% on income up to $48,475, and 22% only on the
-              remaining amount above that threshold.
-            </p>
-            <p class="how-body-text" style="margin:0">
-              Results are estimates. They do not account for every individual credit, the Alternative
-              Minimum Tax, passive income rules, or state-level variations. Use them as a planning
-              baseline &mdash; not as a substitute for a CPA, enrolled agent, or tax software.
-            </p>
+            <p class="how-body-text">Every calculator on MyTaxCalcs uses the same formulas the IRS publishes in its official instructions. Start with your gross income, subtract your standard or itemized deduction to arrive at taxable income, then apply the 2025 tax brackets progressively &mdash; not as a flat rate. The result is your estimated federal tax liability before any credits or withholding adjustments.</p>
+            <p class="how-body-text">Tax brackets are marginal, meaning only the income inside each bracket is taxed at that rate. A single filer with $80,000 of taxable income pays 10% on the first $11,925, 12% on income up to $48,475, and 22% only on the remainder above that threshold.</p>
+            <p class="how-body-text" style="margin:0">Results are estimates. They do not account for every individual credit, the Alternative Minimum Tax, or state-level variations. Use them as a planning baseline &mdash; not as a substitute for a CPA or tax software.</p>
           </div>
           <div>
-            <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:24px">
-              <h3 style="font-size:.95rem;font-weight:700;color:#111827;margin:0 0 16px">2025 standard deductions (IRS Rev. Proc. 2024-40)</h3>
-              <table style="width:100%;font-size:.88rem;border-collapse:collapse">
-                <tr style="border-bottom:1px solid #e5e7eb">
-                  <td style="padding:9px 0;color:#374151;font-weight:600">Single</td>
-                  <td style="padding:9px 0;text-align:right;color:#111827;font-weight:700">$15,000</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e5e7eb">
-                  <td style="padding:9px 0;color:#374151;font-weight:600">Married filing jointly</td>
-                  <td style="padding:9px 0;text-align:right;color:#111827;font-weight:700">$30,000</td>
-                </tr>
-                <tr style="border-bottom:1px solid #e5e7eb">
-                  <td style="padding:9px 0;color:#374151;font-weight:600">Head of household</td>
-                  <td style="padding:9px 0;text-align:right;color:#111827;font-weight:700">$22,500</td>
-                </tr>
-                <tr>
-                  <td style="padding:9px 0;color:#374151;font-weight:600">Married filing separately</td>
-                  <td style="padding:9px 0;text-align:right;color:#111827;font-weight:700">$15,000</td>
-                </tr>
+            <div class="key-data-card">
+              <h3>2025 Standard Deductions <span style="font-weight:400;color:#9ca3af;font-size:.8em">(IRS Rev. Proc. 2024-40)</span></h3>
+              <table class="key-data-table">
+                <tr><td>Single</td><td>$15,000</td></tr>
+                <tr><td>Married filing jointly</td><td>$30,000</td></tr>
+                <tr><td>Head of household</td><td>$22,500</td></tr>
+                <tr><td>Married filing separately</td><td>$15,000</td></tr>
               </table>
-              <a href="/standard-deduction-2025" style="font-size:.82rem;font-weight:700;color:#16a34a;text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:14px">Full standard deduction guide &#8594;</a>
+              <a href="/standard-deduction-2025" class="key-data-link">Full standard deduction guide &#8594;</a>
             </div>
-            <div style="background:#f0fdf4;border:1px solid #d1fae5;border-radius:16px;padding:20px;margin-top:16px">
-              <h3 style="font-size:.95rem;font-weight:700;color:#111827;margin:0 0 10px">Which calculator should I use?</h3>
-              <ul style="margin:0;padding:0 0 0 18px;font-size:.87rem;color:#4b5563;line-height:1.8">
-                <li>W-2 employee estimating refund or balance due &rarr; <a href="/tax-refund-calculator" style="color:#16a34a;font-weight:600">Tax Refund Calculator</a></li>
-                <li>Freelancer or 1099 contractor &rarr; <a href="/self-employment-tax-calculator" style="color:#16a34a;font-weight:600">Self-Employment Tax Calculator</a></li>
-                <li>Selling stock, real estate, or crypto &rarr; <a href="/capital-gains-tax-calculator" style="color:#16a34a;font-weight:600">Capital Gains Tax Calculator</a></li>
-                <li>Checking take-home pay after withholding &rarr; <a href="/payroll-tax-calculator" style="color:#16a34a;font-weight:600">Payroll Tax Calculator</a></li>
+            <div class="which-calc-card">
+              <h3>Which calculator should I use?</h3>
+              <ul class="which-calc-list">
+                <li>W-2 employee estimating refund &rarr; <a href="/tax-refund-calculator">Tax Refund Calculator</a></li>
+                <li>Freelancer or 1099 contractor &rarr; <a href="/self-employment-tax-calculator">Self-Employment Tax</a></li>
+                <li>Selling stock, real estate, or crypto &rarr; <a href="/capital-gains-tax-calculator">Capital Gains Calculator</a></li>
+                <li>Checking take-home pay &rarr; <a href="/payroll-tax-calculator">Payroll Tax Calculator</a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- TRUST FEATURES -->
+      <!-- TRUST -->
       <div class="features-section">
         <div class="feature-item">
-          <h3><span class="feature-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> IRS-Sourced Data</h3>
-          <p>All brackets, deductions, and rates are updated each year from official IRS publications.</p>
+          <h3><span class="feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> IRS-Sourced Data</h3>
+          <p>All brackets, deductions, and rates updated annually from official IRS publications.</p>
         </div>
         <div class="feature-item">
-          <h3><span class="feature-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Privacy First</h3>
+          <h3><span class="feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Privacy First</h3>
           <p>Nothing you enter is stored or shared. All calculations run in your browser session only.</p>
         </div>
         <div class="feature-item">
-          <h3><span class="feature-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Always Free</h3>
-          <p>Every calculator on MyTaxCalcs is free to use with no account, paywall, or hidden fees.</p>
+          <h3><span class="feature-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span> Always Free</h3>
+          <p>Every calculator is free with no account, paywall, or hidden fees.</p>
         </div>
       </div>
 
@@ -551,10 +506,7 @@
         (function(){
           var ins=document.currentScript.previousElementSibling;
           var io=new IntersectionObserver(function(entries,observer){
-            if(entries[0].isIntersecting){
-              (adsbygoogle=window.adsbygoogle||[]).push({});
-              observer.disconnect();
-            }
+            if(entries[0].isIntersecting){(adsbygoogle=window.adsbygoogle||[]).push({});observer.disconnect();}
           },{rootMargin:'200px'});
           io.observe(ins);
         })();
@@ -562,7 +514,6 @@
     </div>
   </aside>
 </div>
-
 
   <footer class="site-footer">
     <div class="footer-inner">
@@ -606,18 +557,17 @@
           <a href="/states">State Tax Directory</a>
         </div>
       </div>
-      <div style="margin-top:24px;border-top:1px solid rgba(255,255,255,0.08);padding-top:28px">
-        <p style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,0.35);margin-bottom:16px">Our Calculator Network</p>
-        <div style="display:flex;gap:28px;flex-wrap:wrap">
-          <a href="https://myinsurancecalcs.com" target="_blank" rel="noopener noreferrer" style="font-size:.875rem;color:#6b84a8;font-weight:500;transition:color .15s" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#6b84a8'">MyInsuranceCalcs.com &#8599;</a>
-          <a href="https://myloancalcs.com" target="_blank" rel="noopener noreferrer" style="font-size:.875rem;color:#6b84a8;font-weight:500;transition:color .15s" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#6b84a8'">MyLoanCalcs.com &#8599;</a>
-          <a href="https://mypctcalculator.com" target="_blank" rel="noopener noreferrer" style="font-size:.875rem;color:#6b84a8;font-weight:500;transition:color .15s" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#6b84a8'">MyPctCalculator.com &#8599;</a>
+      <div style="margin-top:24px;border-top:1px solid rgba(255,255,255,0.08);padding-top:24px">
+        <p style="font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,0.3);margin-bottom:14px">Our Calculator Network</p>
+        <div style="display:flex;gap:24px;flex-wrap:wrap">
+          <a href="https://myinsurancecalcs.com" target="_blank" rel="noopener noreferrer" style="font-size:.85rem;color:#6b84a8;font-weight:500" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#6b84a8'">MyInsuranceCalcs.com &#8599;</a>
+          <a href="https://myloancalcs.com" target="_blank" rel="noopener noreferrer" style="font-size:.85rem;color:#6b84a8;font-weight:500" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#6b84a8'">MyLoanCalcs.com &#8599;</a>
+          <a href="https://mypctcalculator.com" target="_blank" rel="noopener noreferrer" style="font-size:.85rem;color:#6b84a8;font-weight:500" onmouseover="this.style.color='#22c55e'" onmouseout="this.style.color='#6b84a8'">MyPctCalculator.com &#8599;</a>
         </div>
       </div>
       <div class="footer-bottom"><p>&#169; 2026 MyTaxCalcs.com. Estimates only. Not tax, legal, accounting, or financial advice.</p></div>
     </div>
   </footer>
-
 
   <script>
     (function() {
