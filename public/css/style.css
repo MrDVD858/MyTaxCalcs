@@ -3186,3 +3186,460 @@ input:focus, select:focus {
 
 /* Ad zone tighter feel */
 .ad-zone { min-height: 0; }
+
+/* ============================================================
+   PREMIUM REFINEMENT PASS v3
+   ============================================================ */
+
+/* ---- AD ZONE: intentional reserved look, never a blank gap ---- */
+.ad-zone {
+  position: relative;
+  text-align: center;
+  min-height: 0;
+  margin: 16px 0;
+  /* subtle dashed border so blocked ads still look deliberate */
+}
+.ad-zone-label {
+  font-size: 0.62rem;
+  color: #c4cfd8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+/* Override old min-height:120px in calc page inline styles via specificity trick */
+.calc-page .ad-zone { min-height: 0; margin: 16px 0; }
+.qa-page .ad-zone { min-height: 0; margin: 16px 0; }
+.blog-hub-wrap .ad-zone { min-height: 0; }
+.states-page-content .ad-zone { min-height: 0; }
+.hub-content .ad-zone { min-height: 0; }
+
+/* ---- PAGE HERO: tighter bottom padding ---- */
+.page-hero { padding: 44px 28px 52px; }
+.article-hero { padding: 38px 28px 46px; }
+
+/* ---- SECTION SPACING: tighter flow after hero ---- */
+.calc-page { padding: 0 24px 52px; }
+.qa-page { padding: 0 24px 52px; }
+.blog-hub-wrap { padding: 0 28px 48px; }
+.states-page-content { padding: 24px 24px 52px; }
+.hub-content { padding: 24px 28px 52px; }
+.about-page-content { padding: 24px 28px 52px; }
+
+/* ---- LEGAL PAGES: polished sidebar ---- */
+.legal-sidebar .about-links-card {
+  background: #0d1117;
+  border-color: rgba(255,255,255,0.07);
+}
+.legal-sidebar .about-links-card h3 {
+  color: #4ade80;
+  font-size: 0.72rem;
+}
+.legal-sidebar .about-links-card a {
+  color: #8ba3c7;
+  border-color: rgba(255,255,255,0.05);
+  padding: 8px 0;
+  transition: color 0.14s, padding-left 0.12s;
+}
+.legal-sidebar .about-links-card a:hover {
+  color: #22c55e;
+  padding-left: 4px;
+}
+.legal-card {
+  padding: 30px 32px;
+}
+.legal-section { margin-bottom: 22px; padding-bottom: 22px; }
+
+/* ---- ABOUT PAGE: tighter sidebar stat card ---- */
+.about-stat-card { padding: 20px 22px; gap: 12px; }
+.about-stat strong { font-size: 1.55rem; }
+
+/* ---- CALC PAGES: elevate form card ---- */
+.calc-card-form {
+  background: #fff;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(15,23,42,0.07), 0 1px 4px rgba(15,23,42,0.04);
+}
+.calc-card-form h2 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f3f4f6;
+}
+/* Premium input focus */
+.form-field input, .form-field select {
+  border: 1.5px solid #e2e8f0;
+  background: #f9fbfd;
+  border-radius: 9px;
+  font-size: 0.93rem;
+  padding: 10px 13px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-field input:focus, .form-field select:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22,163,74,0.1);
+  background: #fff;
+  outline: none;
+}
+/* Elevated calculate button */
+.btn-calc {
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 28px;
+  font-size: 0.97rem;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(22,163,74,0.25);
+  transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+  letter-spacing: -0.01em;
+}
+.btn-calc:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22,163,74,0.32);
+}
+.btn-calc:active { transform: translateY(0); }
+
+/* Result card premium upgrade */
+.result-card {
+  background: linear-gradient(140deg, #f0fdf4 0%, #dcfce7 100%);
+  border: 1.5px solid #86efac;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(22,163,74,0.08);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+.result-primary {
+  background: #fff;
+  border-radius: 12px;
+  padding: 18px 22px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.04);
+}
+.result-primary .result-amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+.result-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 13px 15px;
+  border: 1px solid #f0f4f8;
+  transition: box-shadow 0.14s;
+}
+.result-item:hover { box-shadow: 0 2px 8px rgba(15,23,42,0.06); }
+.result-item .ri-label { font-size: 0.75rem; }
+.result-item .ri-value { font-size: 1.1rem; }
+
+/* HIW steps tighter */
+.hiw-section { margin: 36px 0 0; }
+.hiw-step {
+  padding: 15px 18px;
+  border: 1px solid #f0f4f8;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+}
+.hiw-steps { gap: 10px; margin-bottom: 18px; }
+
+/* FAQ elevation */
+.faq-section { margin: 36px 0 0; }
+.faq-item {
+  border: 1.5px solid #f0f4f8;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.03);
+  transition: border-color 0.15s;
+}
+.faq-item.open { border-color: #d1fae5; }
+.faq-question { padding: 15px 18px; font-size: 0.9rem; }
+.faq-list { gap: 8px; }
+
+/* Related section tighter */
+.related-section { margin: 36px 0 0; }
+.related-card {
+  border: 1.5px solid #f0f4f8;
+  border-radius: 11px;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+  padding: 15px 14px;
+}
+.related-card:hover {
+  border-color: #bbf7d0;
+  box-shadow: 0 4px 12px rgba(22,163,74,0.08);
+}
+
+/* ---- BLOG INDEX: less repetitive grid feel ---- */
+.blog-cat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #9ca3af;
+  margin-bottom: 12px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.blog-cat-label:first-child { margin-top: 0; }
+.blog-cat-label svg { color: #16a34a; flex-shrink: 0; }
+
+.blog-card-compact {
+  background: #fff;
+  border: 1px solid #edf2f7;
+  border-radius: 11px;
+  padding: 14px 16px;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+  gap: 5px;
+}
+.blog-card-compact:hover {
+  border-color: #16a34a;
+  box-shadow: 0 4px 14px rgba(22,163,74,0.07);
+  transform: translateY(-2px);
+}
+.blog-card-compact h2 {
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.38;
+  letter-spacing: -0.01em;
+}
+.blog-card-compact .bcp-date { font-size: 0.72rem; color: #b0bbc9; }
+
+.blog-card-featured {
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 3px 12px rgba(15,23,42,0.06);
+}
+.blog-card-featured h2 { font-size: 1.15rem; }
+
+/* Blog CTA strip refinement */
+.blog-cta-strip {
+  background: linear-gradient(135deg, #0d1117 0%, #0a1a0f 100%);
+  border: 1px solid rgba(34,197,94,0.12);
+  padding: 26px 30px;
+  margin: 20px 0 4px;
+}
+
+/* ---- STATE DIRECTORY: tighter spacing ---- */
+.states-callout-grid { margin: 16px 0 20px; gap: 10px; }
+.state-callout-card { padding: 16px 18px; gap: 5px; }
+.scc-title { font-size: 0.85rem; }
+.scc-desc { font-size: 0.78rem; }
+.scc-links { margin-top: 6px; gap: 5px; }
+.scc-link { font-size: 0.73rem; padding: 2px 7px; }
+.states-filter-bar { margin-bottom: 14px; }
+.states-count-bar { margin-bottom: 16px; }
+
+/* State cards richer hover */
+.state-card-premium {
+  border: 1px solid #e9edf2;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+}
+.state-card-premium:hover {
+  border-color: #16a34a;
+  box-shadow: 0 5px 16px rgba(22,163,74,0.1), 0 0 0 1px rgba(22,163,74,0.18);
+}
+
+/* ---- CALCULATOR HUB: polish ---- */
+.calc-tool-card {
+  border: 1.5px solid #e5e7eb;
+  box-shadow: 0 3px 10px rgba(15,23,42,0.06);
+}
+.calc-tool-card:hover {
+  box-shadow: 0 12px 32px rgba(22,163,74,0.12), 0 0 0 1.5px rgba(22,163,74,0.28);
+}
+.ctc-icon {
+  box-shadow: 0 2px 8px rgba(15,23,42,0.1);
+}
+.ctc-tag {
+  font-size: 0.6rem;
+  background: #f0fdf4;
+  color: #15803d;
+  border: 1px solid #d1fae5;
+  border-radius: 5px;
+  padding: 2px 8px;
+  letter-spacing: 0.07em;
+  margin-bottom: 6px;
+}
+.guides-hub {
+  background: linear-gradient(135deg, #0d1117 0%, #0c1910 100%);
+  border: 1px solid rgba(34,197,94,0.08);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  padding: 26px 26px 22px;
+  margin-top: 20px;
+}
+.guide-hub-card {
+  padding: 11px 13px;
+  border-radius: 9px;
+}
+.guide-hub-card strong { font-size: 0.8rem; }
+.guide-hub-card span { font-size: 0.7rem; }
+
+/* ---- HOMEPAGE: elevate section flow ---- */
+.section-title-wrap { margin-bottom: 18px; }
+.section-title-wrap h2 { font-size: 1.5rem; }
+.calc-section-header { margin-bottom: 14px; }
+
+/* States preview box more premium */
+.states-preview-box {
+  background: linear-gradient(140deg, #f0fdf4 0%, #ecfdf5 50%, #f0fdf4 100%);
+  border: 1.5px solid #bbf7d0;
+  box-shadow: 0 4px 16px rgba(22,163,74,0.07);
+  margin-bottom: 28px;
+}
+.states-preview-info h2 { font-size: 1.28rem; }
+
+/* Blog preview cards */
+.blog-card-home {
+  border: 1.5px solid #edf2f7;
+  box-shadow: 0 2px 6px rgba(15,23,42,0.05);
+}
+.blog-card-home:hover {
+  border-color: #16a34a;
+  box-shadow: 0 8px 20px rgba(22,163,74,0.09), 0 0 0 1px rgba(22,163,74,0.14);
+}
+
+/* HIW section cards */
+.key-data-card {
+  border: 1px solid #e9edf2;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.04);
+}
+.which-calc-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+  border: 1.5px solid #d1fae5;
+}
+.which-calc-list { line-height: 1.9; }
+
+/* Trust features */
+.feature-item {
+  border: 1px solid #edf2f7;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.04);
+}
+.feature-item:hover { box-shadow: 0 4px 14px rgba(15,23,42,0.07); border-color: #d1fae5; }
+
+/* ---- HEADER: slight polish ---- */
+.nav-links a { font-size: 0.88rem; letter-spacing: 0; }
+.nav-cta {
+  font-size: 0.84rem;
+  padding: 8px 18px;
+  border-radius: 8px;
+}
+
+/* ---- FOOTER: slightly tighter ---- */
+.site-footer { padding: 48px 28px 24px; }
+.footer-grid { gap: 32px; padding-bottom: 32px; }
+.footer-column a { margin-bottom: 8px; }
+.footer-bottom { padding-top: 20px; font-size: 0.82rem; }
+
+/* ---- MOBILE refinements ---- */
+@media (max-width: 700px) {
+  .page-hero { padding: 32px 18px 40px; }
+  .article-hero { padding: 28px 18px 36px; }
+  .states-callout-grid { grid-template-columns: 1fr; }
+  .blog-featured-row { gap: 12px; }
+  .blog-cta-strip { padding: 20px 18px; }
+  .guides-hub { padding: 20px 18px 16px; }
+  .legal-card { padding: 22px 18px; }
+  .calc-card-form { padding: 18px 16px; }
+  .result-card { padding: 20px 18px; }
+  .result-primary { padding: 16px 18px; }
+  .result-primary .result-amount { font-size: 1.9rem; }
+  .hub-content { padding: 16px 18px 44px; }
+  .states-page-content { padding: 16px 18px 44px; }
+  .site-footer { padding: 36px 18px 20px; }
+  .blog-standard-grid { gap: 10px; }
+}
+
+/* ---- ABOUT page sidebar stat cards ---- */
+.about-stat-card {
+  background: linear-gradient(135deg, #0d1117 0%, #0c1910 100%);
+  border: 1px solid rgba(34,197,94,0.1);
+}
+.about-stat strong { color: #4ade80; }
+.about-links-card {
+  border: 1px solid #edf2f7;
+}
+.about-contact-card {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+}
+
+/* ---- CONTACT page form enhancements ---- */
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  border: 1.5px solid #e2e8f0;
+  background: #f9fbfd;
+  border-radius: 9px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(22,163,74,0.1);
+  background: #fff;
+  outline: none;
+}
+.contact-submit {
+  background: #16a34a;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 0.97rem;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(22,163,74,0.22);
+  transition: background 0.15s, transform 0.12s, box-shadow 0.15s;
+  letter-spacing: -0.01em;
+}
+.contact-submit:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22,163,74,0.3);
+}
+
+/* ---- STATE INDIVIDUAL PAGES: key-facts-bar and bracket table polish ---- */
+.key-facts-bar {
+  border-radius: 12px;
+  border: 1.5px solid #e9edf2;
+  margin: 1.2rem 0 1.5rem;
+  box-shadow: 0 1px 4px rgba(15,23,42,0.04);
+}
+.fact-item { padding: 0.9rem 1.1rem; }
+.fact-label { font-size: 0.72rem; }
+.fact-value { font-size: 0.97rem; }
+.bracket-table thead { background: #15803d; }
+.bracket-table thead th { font-size: 0.85rem; padding: 0.65rem 0.9rem; }
+.bracket-table tbody td { font-size: 0.88rem; padding: 0.6rem 0.9rem; }
+.related-card { padding: 0.9rem 1.1rem; }
+
+/* ---- GUIDE PAGES: qa-section card polish ---- */
+.qa-section { margin: 28px 0 0; }
+
+/* ---- SUPPRESS old min-height on .ad-zone globally ---- */
+/* (catches inline-style-set min-height:120px in EJS files via cascade) */
+.ad-zone ins.adsbygoogle[data-ad-status="unfilled"],
+.ad-zone ins.adsbygoogle[style*="height: 0"] {
+  max-height: 0 !important;
+  overflow: hidden !important;
+}
+
+/* ---- calc-main: tighter top padding for legal/about pages ---- */
+.calc-main { padding-top: 0; }
+.legal-layout { padding-top: 24px; gap: 22px; }
+.about-layout { padding-top: 24px; gap: 22px; }
+.contact-layout { padding-top: 24px; gap: 22px; }
+
+/* Override calc-main padding for non-calculator pages */
+.legal-layout, .about-layout, .contact-layout {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 28px 52px;
+}
+@media (max-width: 700px) {
+  .legal-layout, .about-layout, .contact-layout { padding: 16px 18px 44px; }
+}
