@@ -178,22 +178,34 @@
     </div>
   </header>
 
+
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-inner">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="hbc-sep">&#8250;</span>
+        <a href="/states">States</a>
+        <span class="hbc-sep">&#8250;</span>
+        <span class="hbc-current"><%= state.name %> Income Tax Calculator</span>
+      </nav>
+      <div class="page-hero-eyebrow">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+        <%= state.abbr %> State Tax
+      </div>
+      <h1><%= state.name %> Income Tax Calculator</h1>
+      <% if (state.hasIncomeTax) { %>
+        <p>Estimate your 2025 <%= state.name %> state and federal income tax. Includes <%= state.name %> tax brackets, a worked dollar example, and filing tips.</p>
+      <% } else { %>
+        <p><%= state.name %> has no state income tax. Estimate your federal income tax as a <%= state.name %> resident for 2025.</p>
+      <% } %>
+    </div>
+  </section>
+
   <div class="page-with-sidebar">
   <main>
     <div class="calc-page">
-
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="/">Home</a>
-        <span class="breadcrumb-sep">&#8250;</span>
-        <a href="/states">States</a>
-        <span class="breadcrumb-sep">&#8250;</span>
-        <span><%= state.name %> Income Tax Calculator</span>
-      </nav>
-
-      <div class="calc-page-header">
-        <div class="page-eyebrow">
-          <%= state.abbr %> State Tax
-        </div>
         <h1><%= state.name %> Income Tax Calculator</h1>
         <% if (state.hasIncomeTax) { %>
           <p>Estimate your 2025 <%= state.name %> state and federal income tax. Includes <%= state.name %> tax brackets, a worked dollar example, and filing tips.</p>

@@ -166,13 +166,29 @@
     </div>
   </header>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a>
-    <span class="breadcrumb-sep">&#8250;</span>
-    <a href="/blog">Tax Blog</a>
-    <span class="breadcrumb-sep">&#8250;</span>
-    <span><%= (typeof post !== 'undefined' && post.title) ? post.title : 'Article' %></span>
-  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-bg"></div>
+    <div class="article-hero-glow"></div>
+    <div class="article-hero-inner">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="hbc-sep">&#8250;</span>
+        <a href="/blog">Tax Blog</a>
+        <span class="hbc-sep">&#8250;</span>
+        <span class="hbc-current"><%= (typeof post !== 'undefined' && post.title) ? post.title.substring(0, 50) + (post.title.length > 50 ? '...' : '') : 'Article' %></span>
+      </nav>
+      <% if (typeof post !== 'undefined' && post) { %>
+      <div class="article-cat-badge"><%= post.category || 'Tax Insights' %></div>
+      <h1><%= post.title %></h1>
+      <div class="article-hero-meta">
+        <span>Published: <strong><%= post.date %></strong></span>
+        <div class="article-hero-sep"></div>
+        <span>By <strong><%= post.author %></strong></span>
+      </div>
+      <% } %>
+    </div>
+  </section>
 
   <div class="page-with-sidebar">
   <main>
@@ -180,15 +196,6 @@
 
       <% if (typeof post !== 'undefined' && post) { %>
       <article class="article-main">
-        <div class="post-header">
-          <span class="post-category-badge"><%= post.category || 'Tax Insights' %></span>
-          <h1><%= post.title %></h1>
-          <div class="post-meta">
-            <span>Published: <strong><%= post.date %></strong></span>
-            <span>&#183;</span>
-            <span>By <strong><%= post.author %></strong></span>
-          </div>
-        </div>
 
         <div class="ad-zone">
           <div class="ad-zone-label">Advertisement</div>

@@ -2090,3 +2090,543 @@ input:focus, select:focus {
 }
 
 /* -- HERO ACCENT CARD colors (used inline in SVG fill/stroke) -- */
+
+/* ============================================================
+   PREMIUM DARK HERO -- applies to all non-homepage pages
+   .page-hero is used on: blog, states, calculators hub,
+   guide pages, blog posts, about, contact, legal pages.
+   calc-hero (already in CSS above) is used on calculator pages.
+   ============================================================ */
+
+.page-hero {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  padding: 52px 28px 60px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.page-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  width: 500px;
+  height: 500px;
+  background: rgba(34,197,94,0.09);
+  top: -180px;
+  right: -80px;
+}
+
+.page-hero-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.22);
+  color: #4ade80;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 18px;
+}
+
+.page-hero h1 {
+  font-size: clamp(1.65rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  margin: 0 0 14px;
+  max-width: 680px;
+}
+
+.page-hero p {
+  color: #8ba3c7;
+  font-size: 1rem;
+  line-height: 1.65;
+  max-width: 540px;
+  margin: 0;
+}
+
+.page-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.page-hero-meta span {
+  font-size: 0.8rem;
+  color: #5a7599;
+}
+
+.page-hero-meta .hero-meta-sep {
+  width: 3px;
+  height: 3px;
+  background: #3a5070;
+  border-radius: 50%;
+}
+
+/* Dark breadcrumb (sits inside .page-hero above the eyebrow) */
+.hero-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  margin-bottom: 20px;
+}
+
+.hero-breadcrumb a {
+  color: #4a6a8a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.hero-breadcrumb a:hover {
+  color: #4ade80;
+}
+
+.hero-breadcrumb .hbc-sep {
+  color: #2a4a6a;
+  font-size: 0.7rem;
+}
+
+.hero-breadcrumb .hbc-current {
+  color: #6a8aaa;
+  font-weight: 500;
+}
+
+/* ---- BLOG INDEX premium styles ---- */
+.blog-hero-stats {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 22px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+}
+
+.blog-hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.82rem;
+  color: #6a8aaa;
+  font-weight: 500;
+}
+
+.blog-hero-stat strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.blog-hero-sep {
+  width: 1px;
+  height: 22px;
+  background: rgba(255,255,255,0.1);
+}
+
+/* Blog grid premium styles */
+.blog-grid-premium {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 850px) {
+  .blog-grid-premium { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 550px) {
+  .blog-grid-premium { grid-template-columns: 1fr; }
+}
+
+.blog-card-premium {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 3px rgba(15,23,42,0.04);
+}
+
+.blog-card-premium:hover {
+  border-color: #16a34a;
+  box-shadow: 0 8px 22px rgba(22,163,74,0.08), 0 0 0 1px rgba(22,163,74,0.16);
+  transform: translateY(-3px);
+}
+
+.blog-card-premium:active { transform: translateY(-1px); }
+
+.bcp-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.bcp-cat {
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background: #dcfce7;
+  color: #15803d;
+  padding: 2px 8px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.bcp-date {
+  font-size: 0.8rem;
+  color: #7d8fa3;
+}
+
+.blog-card-premium h2 {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 8px;
+  line-height: 1.38;
+  letter-spacing: -0.015em;
+}
+
+.blog-card-premium p {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0 0 14px;
+  flex-grow: 1;
+}
+
+.bcp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #f3f4f6;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.bcp-author {
+  font-size: 0.79rem;
+  color: #7d8fa3;
+}
+
+.bcp-arrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #16a34a;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+/* ---- STATES page premium grid ---- */
+.states-page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+}
+
+.states-count-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.states-count-bar h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+.states-count-bar span {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.states-grid-premium {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .states-grid-premium { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .states-grid-premium { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 400px) {
+  .states-grid-premium { grid-template-columns: 1fr; }
+}
+
+.state-card-premium {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.state-card-premium:hover {
+  border-color: #16a34a;
+  box-shadow: 0 4px 12px rgba(22,163,74,0.08);
+  transform: translateY(-1px);
+}
+
+.state-card-premium .scn { font-size: 0.93rem; font-weight: 600; color: #111827; }
+.state-card-premium:hover .scn { color: #16a34a; }
+.state-card-premium .sca {
+  font-size: 0.72rem;
+  color: #9ca3af;
+  font-weight: 600;
+  background: #f3f4f6;
+  border-radius: 4px;
+  padding: 2px 6px;
+  flex-shrink: 0;
+}
+
+/* ---- CALCULATORS HUB premium styles ---- */
+.hub-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 28px 60px;
+}
+
+/* ---- ARTICLE (blog-post) premium styles ---- */
+.article-hero {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  padding: 44px 28px 52px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.article-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.article-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  width: 400px;
+  height: 400px;
+  background: rgba(34,197,94,0.07);
+  top: -120px;
+  right: -40px;
+}
+
+.article-hero-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.article-cat-badge {
+  display: inline-block;
+  font-size: 0.67rem;
+  font-weight: 700;
+  color: #4ade80;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.22);
+  padding: 3px 10px;
+  border-radius: 99px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+
+.article-hero h1 {
+  font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  line-height: 1.18;
+  color: var(--white);
+  margin: 0 0 14px;
+  letter-spacing: -0.03em;
+  max-width: 760px;
+}
+
+.article-hero-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.82rem;
+  color: #5a7599;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.article-hero-meta strong {
+  color: #8ba3c7;
+  font-weight: 600;
+}
+
+.article-hero-sep {
+  width: 3px;
+  height: 3px;
+  background: #3a5070;
+  border-radius: 50%;
+}
+
+/* ---- CALC HERO upgrade (add grid/glow to existing .calc-hero) ---- */
+.calc-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.calc-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+
+.calc-hero-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  width: 500px;
+  height: 500px;
+  background: rgba(34,197,94,0.08);
+  top: -180px;
+  right: -60px;
+}
+
+.calc-hero-inner { position: relative; z-index: 2; }
+
+.calc-hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(34,197,94,0.1);
+  border: 1px solid rgba(34,197,94,0.22);
+  color: #4ade80;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 16px;
+}
+
+/* ---- ABOUT page premium styles ---- */
+.about-page-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 28px 60px;
+}
+
+/* ---- CONTACT page premium styles ---- */
+.contact-page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 28px 60px;
+}
+
+/* ---- LEGAL pages premium styles ---- */
+.legal-page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 28px 60px;
+}
+
+/* ---- DARK BREADCRUMB (light pages -- below hero) ---- */
+.page-breadcrumb {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* ---- RESPONSIVE .page-hero ---- */
+@media (max-width: 700px) {
+  .page-hero { padding: 36px 18px 44px; }
+  .article-hero { padding: 32px 18px 40px; }
+}
+
+/* ---- STATES SEO content section below the grid ---- */
+.states-seo-section {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+
+.states-seo-section h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 10px;
+}
+
+.states-seo-section p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0;
+}
+
+/* ---- GUIDE pages width wrapper ---- */
+.guide-page-content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px 60px;
+}

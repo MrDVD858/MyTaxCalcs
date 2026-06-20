@@ -221,28 +221,32 @@
     </div>
   </header>
 
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Home</a>
-    <span class="breadcrumb-sep">&#8250;</span>
-    <a href="/calculators">Calculators</a>
-    <span class="breadcrumb-sep">&#8250;</span>
-    <span>Sales Tax Calculator</span>
-  </nav>
+
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-glow"></div>
+    <div class="page-hero-inner">
+      <nav class="hero-breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span class="hbc-sep">&#8250;</span>
+        <a href="/calculators">Calculators</a>
+        <span class="hbc-sep">&#8250;</span>
+        <span class="hbc-current">Sales Tax Calculator</span>
+      </nav>
+      <div class="page-hero-eyebrow">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+        Purchase Price Calculator
+      </div>
+      <h1>Free Sales Tax Calculator</h1>
+      <p>Add sales tax to any purchase or back it out of a total price using any rate.</p>
+    </div>
+  </section>
 
   <div class="page-with-sidebar">
   <main>
     <div class="calc-page">
 
-      <div class="calc-page-header">
-        <div class="page-eyebrow">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 001.98 1.61h9.72a2 2 0 001.98-1.61L23 6H6"/></svg>
-          Purchase Tax Estimator
-        </div>
-        <h1>Sales Tax Calculator</h1>
-        <p>Estimate sales tax and your final purchase total using a state rate, local rate, and optional discount. Works for any state.</p>
-      </div>
-
-      <div class="calc-card-form">
+<div class="calc-card-form">
         <h2>Enter Purchase Details</h2>
         <form method="POST" action="/sales-tax-calculator">
           <div class="form-grid">
