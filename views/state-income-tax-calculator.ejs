@@ -76,6 +76,10 @@
     .state-faq-item h3{font-size:.92rem;font-weight:700;color:#111827;margin:0 0 .35rem}
     .state-faq-item p{color:#4b5563;margin:0;line-height:1.6;font-size:.88rem}
     .state-faq-item a{color:#16a34a}
+    .key-tax-facts-card{background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem 1.5rem;margin:1.5rem 0}
+    .key-tax-facts-card h3{font-size:.85rem;font-weight:700;color:#15803d;margin:0 0 .75rem;text-transform:uppercase;letter-spacing:.05em}
+    .key-tax-facts-list{margin:0;padding:0 0 0 1.1rem;display:flex;flex-direction:column;gap:.4rem}
+    .key-tax-facts-list li{font-size:.88rem;color:#374151;line-height:1.5}
     @media(max-width:600px){
       .key-facts-bar{flex-direction:column;gap:0}
       .fact-item{border-bottom:1px solid #e5e7eb}
@@ -237,10 +241,29 @@
           </span>
         </div>
         <div class="fact-item">
+          <span class="fact-label">Sales Tax Rate</span>
+          <span class="fact-value"><%= state.salesTax || "N/A" %></span>
+        </div>
+        <div class="fact-item">
+          <span class="fact-label">Filing Deadline</span>
+          <span class="fact-value"><%= state.filingDeadline || "April 15" %></span>
+        </div>
+        <div class="fact-item">
           <span class="fact-label">Official Source</span>
           <span class="fact-value"><a href="<%= state.revenueUrl.url %>" target="_blank" rel="noopener noreferrer"><%= state.revenueUrl.label %></a></span>
         </div>
       </div>
+
+      <% if (state.keyFacts && state.keyFacts.length) { %>
+      <div class="key-tax-facts-card">
+        <h3>Key Tax Facts: <%= state.name %></h3>
+        <ul class="key-tax-facts-list">
+          <% state.keyFacts.forEach(function(fact) { %>
+          <li><%= fact %></li>
+          <% }); %>
+        </ul>
+      </div>
+      <% } %>
 
       <!-- State Overview -->
       <div class="state-overview-section">
