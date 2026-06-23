@@ -3,6 +3,256 @@
 
 const blogPosts = [
 
+  {
+    slug: "home-office-deduction-2026",
+    title: "Home Office Deduction 2026: Who Qualifies and How to Calculate It",
+    date: "June 22, 2026",
+    dateISO: "2026-06-22",
+    author: "MyTaxCalcs Editorial",
+    category: "Deductions",
+    excerpt: "The home office deduction can reduce self-employment tax by hundreds or thousands of dollars, but the rules are strict. Here is exactly who qualifies, how to calculate the deduction both ways, and what mistakes to avoid.",
+    metaDescription: "Home office deduction 2026: who qualifies, simplified vs. regular method, how to calculate square footage, and common mistakes that trigger IRS scrutiny.",
+    ogTitle: "Home Office Deduction 2026: Who Qualifies & How to Calculate It | MyTaxCalcs",
+    ogDescription: "Self-employed? Learn who qualifies for the home office deduction in 2026, how to calculate it using the simplified or regular method, and what the IRS looks for.",
+    content: `
+      <p>The home office deduction is one of the most valuable tax breaks available to self-employed workers, freelancers, and small business owners. For someone running a business from a 200-square-foot room in their home, the deduction can easily save $500 to $2,000 or more in federal tax every year. But the rules are specific, and claiming it incorrectly is a reliable way to draw IRS attention.</p>
+      <p>This guide covers who qualifies, how to calculate the deduction using both available methods, what expenses you can include, and the key mistakes that get home office deductions disallowed.</p>
+
+      <h2>Who Can Take the Home Office Deduction</h2>
+      <p>The home office deduction is available to self-employed individuals, sole proprietors, independent contractors, and partners in a partnership who use part of their home for business. Remote employees who work for someone else cannot claim this deduction for tax years 2018 through 2025 under current law (the Tax Cuts and Jobs Act suspended the employee home office deduction).</p>
+      <p>To qualify, your home office must meet two requirements set by the IRS:</p>
+      <p><strong>1. Regular and exclusive use.</strong> The space must be used regularly for business and exclusively for business. A dedicated room that functions as your office qualifies. A kitchen table where you also eat, or a guest bedroom where clients occasionally sleep, does not. The exclusivity requirement is strict and frequently litigated.</p>
+      <p><strong>2. Principal place of business.</strong> The home office must be your principal place of business, or a place where you regularly meet clients, or a separate structure used for business. Most home-based workers satisfy the principal place of business test because they do most of their administrative and management work from home.</p>
+
+      <h2>The Two Calculation Methods</h2>
+      <p>The IRS gives you a choice of two methods: the simplified method and the regular method. You pick one each year and can switch between years.</p>
+
+      <h3>Simplified Method</h3>
+      <p>The simplified method lets you deduct $5 per square foot of your home office, up to a maximum of 300 square feet. That caps the deduction at $1,500 per year.</p>
+      <p><strong>Example:</strong> Your home office is 150 square feet. Your deduction is 150 x $5 = $750. No receipts or percentage calculations required.</p>
+      <p>The simplified method is easy to calculate and leaves no depreciation to recapture when you sell your home. The trade-off is a lower deduction for larger offices or expensive homes.</p>
+
+      <h3>Regular Method</h3>
+      <p>The regular method uses the actual percentage of your home dedicated to business. You calculate your office square footage divided by your total home square footage, then apply that percentage to actual home expenses.</p>
+      <p><strong>Example:</strong> Your home is 1,800 square feet. Your office is 180 square feet. Business use percentage = 180 / 1,800 = 10%.</p>
+      <p>You can then deduct 10% of eligible home expenses: mortgage interest or rent, real estate taxes, homeowners or renters insurance, utilities, repairs and maintenance, and depreciation of the home itself.</p>
+      <p>If your home expenses are $24,000 per year (mortgage interest $12,000, utilities $3,600, insurance $1,800, repairs $600, depreciation $6,000), then 10% = $2,400 deduction. That is $900 more than the simplified method in this example.</p>
+
+      <h2>Expenses You Can Include Under the Regular Method</h2>
+      <p>The regular method allows two categories of home expenses:</p>
+      <p><strong>Direct expenses</strong> are costs that apply only to the office itself, such as painting the office or installing a dedicated phone line. These are 100% deductible, not subject to the business-use percentage.</p>
+      <p><strong>Indirect expenses</strong> are costs for the whole home, deducted at your business-use percentage. These include rent or mortgage interest, real estate taxes, homeowners or renters insurance, utilities (electric, gas, water), general home repairs, and home depreciation.</p>
+      <p>Home depreciation is calculated on the home's cost basis (purchase price minus land value), depreciated over 39 years using the straight-line method. For a home with a $300,000 depreciable basis, annual depreciation is $7,692. At a 10% business use percentage, you deduct $769 per year for depreciation. Note that when you sell the home, you must recapture that depreciation at up to 25%.</p>
+
+      <h2>The Deduction Cannot Exceed Your Business Income</h2>
+      <p>One important limitation: the home office deduction cannot create or increase a net business loss. If your business income after other deductions is $2,000 and your home office calculation produces a $3,000 deduction, you can only deduct $2,000 this year. The unused $1,000 carries forward to the next year under the regular method (but not the simplified method).</p>
+
+      <h2>Where to Claim the Deduction</h2>
+      <p>Self-employed individuals claim the home office deduction on <strong>Form 8829</strong> (for the regular method) or on Schedule C directly (for the simplified method). The deduction flows to Schedule C and reduces your net self-employment income, which lowers both your income tax and your self-employment tax. That double benefit is what makes this deduction particularly valuable.</p>
+
+      <h2>Common Mistakes That Get This Deduction Challenged</h2>
+      <p><strong>Mixed personal use.</strong> The most common problem is using the office space for personal activities. A dedicated office that also houses a treadmill or a kids' homework area does not meet the exclusive use test. The IRS does not require that the space be partitioned by walls, but it does require that the use be genuinely exclusive.</p>
+      <p><strong>Claiming too large a percentage.</strong> Claiming 40% business use on a modest home with a small office raises questions. Measure carefully and document the square footage.</p>
+      <p><strong>Employees claiming the deduction.</strong> W-2 employees cannot claim this deduction under current law, regardless of whether their employer requires them to work from home.</p>
+      <p><strong>Failing to recapture depreciation on home sale.</strong> If you used the regular method and depreciated your home, the IRS requires recapture of that depreciation as ordinary income (up to 25%) when you sell, even if you otherwise qualify for the $250,000 / $500,000 home sale exclusion.</p>
+
+      <h2>Simplified vs. Regular: Which Is Better?</h2>
+      <p>The simplified method wins on convenience. The regular method almost always produces a larger deduction for offices larger than 300 square feet or for homes with high expenses. For a small home office in an inexpensive location, the $1,500 cap on the simplified method may actually come close to what the regular method produces, without the recordkeeping burden.</p>
+      <p>Run both calculations before filing. If the regular method produces a meaningfully larger number, the additional recordkeeping is worth it. If the difference is small, the simplified method saves time and avoids depreciation recapture risk.</p>
+
+      <h2>Use the Self-Employment Tax Calculator</h2>
+      <p>The home office deduction reduces net self-employment income, which directly lowers your self-employment tax bill. Use the <a href="/self-employment-tax-calculator">Self-Employment Tax Calculator</a> to see how much you could save by claiming this deduction. The <a href="/income-tax-calculator">Income Tax Calculator</a> can show you the combined federal income and SE tax impact.</p>
+    `,
+    relatedTools: [
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/self-employment-tax-rate-2025", label: "Self-Employment Tax Rate 2025" },
+      { href: "/freelancer-tax-deductions-complete-list", label: "Freelancer Tax Deductions: Complete List" }
+    ]
+  },
+  {
+    slug: "secure-2-catch-up-contributions-2026",
+    title: "SECURE 2.0 Catch-Up Contributions 2026: The Super Catch-Up Explained",
+    date: "June 22, 2026",
+    dateISO: "2026-06-22",
+    author: "MyTaxCalcs Editorial",
+    category: "Retirement",
+    excerpt: "SECURE 2.0 created a new super catch-up contribution limit for workers aged 60 to 63. In 2026, those workers can contribute up to $34,750 to a 401(k). Here is how the rules work and who benefits most.",
+    metaDescription: "SECURE 2.0 super catch-up contributions 2026: workers aged 60-63 can contribute up to $34,750 to a 401(k). Rules, income limits, and strategies explained.",
+    ogTitle: "SECURE 2.0 Catch-Up Contributions 2026: Super Catch-Up Rules | MyTaxCalcs",
+    ogDescription: "In 2026, workers aged 60-63 can contribute up to $34,750 to a 401(k) using the SECURE 2.0 super catch-up. Learn who qualifies and how it works.",
+    content: `
+      <p>The SECURE 2.0 Act, signed into law in December 2022, made dozens of changes to retirement account rules. One of the most impactful for workers nearing retirement is the super catch-up contribution provision that became effective January 1, 2025. In 2026, workers in the right age window can shelter significantly more income from taxes than was possible under previous rules.</p>
+      <p>Here is a complete breakdown of how the super catch-up works, who qualifies, and how to use it strategically.</p>
+
+      <h2>Standard 401(k) Limits for 2026</h2>
+      <p>Before explaining the super catch-up, it helps to understand the baseline. For 2026, the standard employee contribution limit to a 401(k), 403(b), or 457(b) plan is <strong>$23,500</strong> (unchanged from 2025). Workers aged 50 and older can make an additional standard catch-up contribution of <strong>$7,750</strong>, bringing their total to $31,250.</p>
+      <p>The total combined limit (employee + employer contributions) for 2026 is approximately $71,000, up from $70,000 in 2025.</p>
+
+      <h2>The SECURE 2.0 Super Catch-Up</h2>
+      <p>Starting in 2025, workers who are aged 60, 61, 62, or 63 at any point during the tax year qualify for a higher catch-up contribution — the super catch-up. This replaces the standard $7,750 catch-up for that age group.</p>
+      <p>For 2026, the super catch-up amount is the greater of $10,000 or 150% of the standard catch-up limit. At $7,750 x 150% = $11,625, and since $11,625 exceeds $10,000, the super catch-up for 2026 is <strong>$11,250</strong> (after inflation adjustment — the IRS announced the 2026 figure as $11,250).</p>
+      <p>Total 401(k) contribution for a worker aged 60-63 in 2026: $23,500 + $11,250 = <strong>$34,750</strong>.</p>
+
+      <h2>Age Rules: Exactly Who Qualifies</h2>
+      <p>The age window is precise: you must turn 60, 61, 62, or 63 at any point during the tax year. Age 64 workers do not qualify for the super catch-up — they fall back to the standard $7,750 catch-up. Age 59 workers are not yet eligible.</p>
+      <p>Practically: if you turn 60 in any month of 2026, you qualify for the full $11,250 super catch-up for all of 2026. If you turn 64 in January 2026, you do not qualify and are limited to $7,750.</p>
+
+      <h2>Which Plans Are Eligible</h2>
+      <p>The super catch-up applies to:</p>
+      <ul>
+        <li>401(k) plans (traditional and Roth)</li>
+        <li>403(b) plans</li>
+        <li>Governmental 457(b) plans</li>
+        <li>SIMPLE IRA plans have a separate super catch-up: $3,850 in 2026 for ages 60-63</li>
+      </ul>
+      <p>Traditional IRAs and Roth IRAs are not affected by the SECURE 2.0 super catch-up. The IRA catch-up limit remains $1,000 for all workers 50 and older.</p>
+
+      <h2>Roth Requirement for High Earners</h2>
+      <p>SECURE 2.0 includes a rule that catch-up contributions for workers with wages above $145,000 (indexed for inflation) must be made as Roth catch-up contributions — meaning they go into a Roth 401(k) rather than a traditional pre-tax account. This rule was originally supposed to take effect in 2024 but the IRS delayed enforcement through 2025. As of 2026, plan sponsors are expected to implement this requirement.</p>
+      <p>The practical implication: if your W-2 wages from your employer exceeded $145,000 in the prior year, your employer's plan must route your catch-up contributions (including the super catch-up) to a Roth designated account rather than pre-tax. This means you pay tax on those contributions now but distributions are tax-free in retirement.</p>
+
+      <h2>How Much Can You Save in Taxes</h2>
+      <p>The tax benefit depends on your marginal rate. For a worker in the 22% bracket making the full $34,750 contribution in 2026 (vs. the $23,500 limit that applied before catch-up eligibility):</p>
+      <ul>
+        <li>Extra tax-deferred amount via catch-up: $11,250</li>
+        <li>Immediate federal tax savings at 22%: approximately $2,475</li>
+        <li>Plus reduced state income tax where applicable</li>
+      </ul>
+      <p>For a worker in the 32% bracket, the same $11,250 super catch-up saves approximately $3,600 in federal income tax in 2026 alone. Over four years in the 60-63 window, that is up to $14,400 in federal tax deferral from the super catch-up alone.</p>
+
+      <h2>Coordinating With Other Retirement Accounts</h2>
+      <p>The super catch-up applies per plan, not per person. If you have a 401(k) with your current employer, you can contribute $34,750. You cannot split the contribution across two employers' 401(k) plans to get double the limit — the IRS treats the total contributions to all 401(k) plans from the same employee as subject to one combined limit.</p>
+      <p>However, you can simultaneously contribute the maximum to an IRA ($7,000 in 2026, plus the $1,000 catch-up for those 50+) in addition to your 401(k) super catch-up, subject to Roth IRA income limits and traditional IRA deductibility rules.</p>
+
+      <h2>When to Max Out the Super Catch-Up</h2>
+      <p>The four years between 60 and 63 represent a limited window. Workers who have not been able to save as aggressively earlier in their careers should prioritize maxing out the super catch-up during this period if cash flow allows. The tax-deferred compounding on an additional $11,250 per year for four years (at a 6% return) adds roughly $52,000 in pre-tax retirement assets by the time you turn 64 -- before accounting for employer match on those contributions, which some plans extend to catch-up amounts.</p>
+
+      <h2>Use the 401(k) Contribution Limits Guide</h2>
+      <p>For the full breakdown of all 2026 retirement account limits including traditional and Roth IRA limits, the total plan contribution cap, and SIMPLE IRA limits, see the <a href="/401k-contribution-limits-2026">401(k) Contribution Limits 2026</a> guide. The <a href="/income-tax-calculator">Income Tax Calculator</a> can show how increasing your 401(k) contribution reduces your taxable income and estimated federal tax bill.</p>
+    `,
+    relatedTools: [
+      { href: "/401k-contribution-limits-2026", label: "401(k) Contribution Limits 2026" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/retirement-accounts-and-taxes-401k-ira-roth", label: "Retirement Accounts and Taxes" },
+      { href: "/2026-401k-ira-contribution-limits", label: "2026 401(k) and IRA Contribution Limits" }
+    ]
+  },
+  {
+    slug: "marriage-tax-penalty-bonus-2026",
+    title: "Marriage Tax Penalty vs. Bonus: What Couples Actually Owe in 2026",
+    date: "June 22, 2026",
+    dateISO: "2026-06-22",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "Getting married changes your tax situation in ways most couples do not expect. Some couples pay more as married filers (the marriage penalty). Others pay less (the marriage bonus). Here is how to calculate which applies to you.",
+    metaDescription: "Marriage tax penalty vs. bonus 2026: which couples pay more after marriage and which pay less. Calculate the difference using 2026 tax brackets and standard deductions.",
+    ogTitle: "Marriage Tax Penalty vs. Bonus 2026: What Couples Actually Owe | MyTaxCalcs",
+    ogDescription: "Some couples pay more in taxes after marriage, others pay less. Here is how the marriage tax penalty and bonus work in 2026 and how to calculate which applies to you.",
+    content: `
+      <p>Marriage affects taxes in ways that surprise most couples. Some pairs end up paying significantly more in combined federal income tax after getting married than they would as two single filers. This is the marriage penalty. Others end up paying less than they would separately. This is the marriage bonus. Whether you face a penalty or bonus depends almost entirely on how similar or different your incomes are.</p>
+      <p>Here is exactly how it works in 2026, with numbers.</p>
+
+      <h2>How the Marriage Penalty Works</h2>
+      <p>The marriage penalty occurs when two people with similar incomes marry and find that their combined income pushes them into a higher joint tax bracket than they would have reached individually.</p>
+      <p>Consider two filers who each earn $100,000 in 2026. Filing as single, each would use the single filer brackets. The 22% rate applies to single income between $48,475 and $103,350. Both filers fall mostly in the 22% bracket individually.</p>
+      <p>As married filing jointly (MFJ), their combined $200,000 in income hits the 24% bracket (which starts at $206,700 for MFJ in 2026). Wait -- in this case they actually avoid the 24% bracket entirely. But extend this example: if each earns $130,000 ($260,000 combined), as single filers each would be in the 24% bracket (which starts at $103,350 for single). As MFJ, $260,000 puts them in the 24% bracket as well -- but the MFJ bracket starts at $206,700, not $206,700 x2. The brackets are not perfectly doubled for all income levels, which is where the penalty or bonus appears.</p>
+
+      <h2>Where the Penalty Is Most Severe: The 32% Bracket</h2>
+      <p>The 2026 tax brackets show the penalty most clearly at higher incomes. The 32% bracket begins at $197,300 for single filers and $394,600 for MFJ. This is exactly doubled -- no penalty at this threshold. But the 35% bracket begins at $250,525 for single and $501,050 for MFJ. Again, exactly doubled.</p>
+      <p>For most income ranges in 2026, Congress has structured the MFJ brackets as exactly twice the single brackets, largely eliminating the marriage penalty at ordinary income levels. However, the penalty still surfaces in two places:</p>
+      <p><strong>1. Capital gains and NIIT thresholds.</strong> The 0% long-term capital gains rate applies to single filers with taxable income up to $48,350 and MFJ filers up to $96,700. That is exactly doubled. But the 3.8% Net Investment Income Tax kicks in at $200,000 for single and only $250,000 for MFJ -- not doubled. A couple each earning $175,000 ($350,000 combined) would both owe NIIT as MFJ but would each avoid it as single filers.</p>
+      <p><strong>2. The Alternative Minimum Tax (AMT).</strong> The AMT exemption for single filers in 2026 is approximately $88,100 and for MFJ is approximately $137,000 -- not doubled. High-income couples with significant AMT preference items may face a larger AMT exposure as MFJ than as two single filers.</p>
+
+      <h2>The Marriage Bonus: When Marriage Reduces Taxes</h2>
+      <p>The marriage bonus occurs when one spouse earns significantly more than the other -- or when one spouse earns nothing. In this case, the higher-earning spouse effectively gets to share the lower-income spouse's bracket space.</p>
+      <p><strong>Example:</strong> One spouse earns $180,000, the other earns $30,000. As single filers in 2026, the higher earner would owe approximately $34,200 in federal income tax, and the lower earner approximately $3,100, for a combined $37,300.</p>
+      <p>As MFJ, their combined $210,000 is taxed using joint brackets. The standard deduction is $30,000 (MFJ 2026), making taxable income $180,000. Their estimated tax comes out to approximately $30,000 to $32,000 -- several thousand less than filing separately. That difference is the marriage bonus.</p>
+      <p>The bonus is largest when one spouse earns all or most of the household income and the other earns little or nothing. The high earner gets to fill up the wide lower brackets shared with a $0-earning spouse.</p>
+
+      <h2>Standard Deduction Comparison</h2>
+      <p>The 2026 standard deduction is $15,750 for single filers and $31,500 for married filing jointly. This is exactly doubled, so there is no advantage or disadvantage on the standard deduction alone. A couple with no itemized deductions gets the same benefit whether measured as two singles or as one joint filer.</p>
+
+      <h2>Married Filing Separately: Usually Not the Answer</h2>
+      <p>Some couples assume they can avoid the marriage penalty by filing as married filing separately (MFS). In practice, MFS is almost always worse. The MFS standard deduction is $15,750 (same as single), but MFS filers lose eligibility for the Earned Income Credit, most education credits, the child and dependent care credit (in most cases), and deduction for student loan interest. MFS also disqualifies higher earners from Roth IRA contributions entirely at lower income thresholds.</p>
+      <p>The only common scenarios where MFS makes sense: one spouse has very large medical expenses (limited by 7.5% of AGI, so lower AGI helps) or specific income-driven student loan repayment situations where keeping incomes separate on the return is required.</p>
+
+      <h2>How to Calculate Your Marriage Penalty or Bonus</h2>
+      <p>The calculation is straightforward:</p>
+      <ol>
+        <li>Calculate each spouse's federal tax as if filing single with their own income and the single standard deduction.</li>
+        <li>Add the two amounts together.</li>
+        <li>Calculate the couple's joint federal tax using MFJ brackets and the $31,500 MFJ standard deduction.</li>
+        <li>Subtract the joint tax from the combined single tax. Positive result = marriage bonus. Negative result = marriage penalty.</li>
+      </ol>
+      <p>Use the <a href="/income-tax-calculator">Income Tax Calculator</a> to run both scenarios. Enter each spouse's income as a single filer, record both tax estimates, then enter the combined income as married filing jointly to see the joint tax. The difference is your penalty or bonus.</p>
+
+      <h2>Planning Opportunities</h2>
+      <p>If you face a marriage penalty, there are a few planning tools. Maximizing pre-tax retirement contributions (401k, traditional IRA) reduces both spouses' AGI and may pull income below key thresholds. Timing the realization of capital gains or Roth conversions to years when combined income is lower can also help. If both spouses have flexibility in their W-4 withholding, recalculating withholding right after marriage prevents underpayment surprises at filing time.</p>
+    `,
+    relatedTools: [
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
+      { href: "/how-getting-married-affects-your-taxes", label: "How Getting Married Affects Your Taxes" },
+      { href: "/standard-deduction-2026", label: "Standard Deduction 2026" }
+    ]
+  },
+  {
+    slug: "estate-tax-planning-2026",
+    title: "Federal Estate Tax 2026: Exemption Amount, Rates, and Planning Strategies",
+    date: "June 22, 2026",
+    dateISO: "2026-06-22",
+    author: "MyTaxCalcs Editorial",
+    category: "Tax Planning",
+    excerpt: "The federal estate tax exemption in 2026 is $13.99 million per person. Under current law, that amount is set to drop sharply in 2026 unless Congress acts. Here is what the estate tax currently covers and what to watch for.",
+    metaDescription: "Federal estate tax 2026: $13.99 million exemption per person, 40% top rate, and what happens to the exemption if the TCJA provisions expire. Planning strategies explained.",
+    ogTitle: "Federal Estate Tax 2026: Exemption, Rates, and Planning | MyTaxCalcs",
+    ogDescription: "The 2026 federal estate tax exemption is $13.99 million per person. Learn the 40% rate, how the marital deduction works, and key planning strategies before the exemption changes.",
+    content: `
+      <p>The federal estate tax affects only a small percentage of estates each year, but for those it does affect, the impact is substantial. Understanding the current exemption, the top rate, and the potential changes on the horizon is essential for anyone with significant assets doing long-term planning.</p>
+
+      <h2>The 2026 Federal Estate Tax Exemption</h2>
+      <p>For 2026, the federal estate tax exemption is <strong>$13,990,000 per person</strong>, up from $13,610,000 in 2025. This exemption is indexed for inflation. For a married couple, the combined exemption is effectively $27,980,000 if proper planning is in place (specifically, portability of the deceased spouse's unused exemption, known as DSUEA).</p>
+      <p>The estate tax applies only to the amount of an estate's taxable value that exceeds the exemption. An estate worth $15 million in 2026 would have a taxable estate of approximately $1,010,000 after applying the $13,990,000 exemption.</p>
+
+      <h2>The Top Estate Tax Rate</h2>
+      <p>The top federal estate tax rate is <strong>40%</strong> on taxable estate value above the exemption. The rate structure is technically graduated but effectively reaches 40% quickly above the exemption threshold. For the $1,010,000 taxable estate in the example above, the estate tax bill would be approximately $404,000.</p>
+      <p>In addition to federal estate tax, some states impose their own estate or inheritance taxes with lower exemption thresholds. Massachusetts and Oregon, for example, have state estate tax exemptions as low as $1 million.</p>
+
+      <h2>The Marital and Charitable Deductions</h2>
+      <p>Two deductions can significantly reduce the taxable estate:</p>
+      <p><strong>Unlimited marital deduction.</strong> Assets passed to a surviving U.S. citizen spouse are fully deductible from the gross estate, meaning no estate tax is owed on those transfers regardless of amount. The estate tax is deferred, not eliminated -- it becomes due on the surviving spouse's estate, offset by their own exemption and any DSUEA from the first spouse.</p>
+      <p><strong>Charitable deduction.</strong> Assets left to qualifying charities are fully deductible from the gross estate. Charitable bequests can reduce or eliminate estate tax for estates with philanthropic goals.</p>
+
+      <h2>Portability: The DSUEA</h2>
+      <p>The Deceased Spouse's Unused Exemption Amount (DSUEA) allows a surviving spouse to inherit any unused portion of the deceased spouse's estate tax exemption. For a couple where the first spouse dies with a $5 million estate in 2026 (using $5 million of the $13,990,000 exemption), the surviving spouse can inherit the unused $8,990,000, adding it to their own $13,990,000 exemption for a total of $22,980,000.</p>
+      <p>Portability is not automatic -- the estate of the first spouse must file a federal estate tax return (Form 706) within nine months of death (15 months with extension) to elect portability, even if no estate tax is owed.</p>
+
+      <h2>Annual Gift Tax Exclusion</h2>
+      <p>One key planning tool that works alongside the estate tax is the annual gift tax exclusion. In 2026, each person can give up to <strong>$19,000 per recipient</strong> per year without the gift counting against their lifetime exemption. A couple can combine exclusions to give $38,000 per recipient per year. Consistent annual gifting over many years can meaningfully reduce a taxable estate without using any lifetime exemption.</p>
+
+      <h2>The One Big Beautiful Bill and Estate Tax</h2>
+      <p>The One Big Beautiful Bill Act, signed in 2025, made the elevated estate tax exemption permanent rather than allowing it to revert to approximately $7 million per person as the original TCJA sunset provisions would have required. Under current law following OBBBA, the $13.99 million (2026) exemption continues in future years with inflation adjustments. This removes the planning urgency that existed prior to OBBBA passage, when advisors were recommending accelerated gifting before a potential 2026 exemption reduction.</p>
+
+      <h2>Who Needs Estate Tax Planning</h2>
+      <p>With the exemption at $13.99 million per person, the vast majority of Americans will never owe federal estate tax. IRS statistics consistently show that fewer than 0.2% of estates pay federal estate tax in any given year. However, estate planning remains important for reasons beyond federal estate tax: state estate taxes (which have lower exemptions), income tax planning for inherited assets, probate avoidance, and ensuring assets pass to intended beneficiaries efficiently.</p>
+      <p>For estates approaching or exceeding $14 million per person, strategies such as irrevocable trusts, qualified personal residence trusts (QPRTs), grantor retained annuity trusts (GRATs), and charitable remainder trusts can reduce the taxable estate while achieving other planning goals.</p>
+
+      <h2>Step-Up in Cost Basis</h2>
+      <p>One significant tax benefit for inherited assets is the step-up in cost basis. When someone inherits an asset, the cost basis for capital gains purposes is reset to the fair market value at the date of the decedent's death. This means capital gains that accrued during the decedent's lifetime are effectively forgiven. For heirs inheriting appreciated stock or real estate, this can eliminate hundreds of thousands of dollars in capital gains tax that would have applied if the decedent had sold the assets during their lifetime.</p>
+      <p>The step-up in basis applies to assets in taxable accounts. IRAs and other retirement accounts do not receive a step-up -- inherited retirement accounts are taxed as ordinary income when distributions are taken, under rules that generally require full distribution within 10 years for most non-spouse beneficiaries (under the SECURE Act).</p>
+
+      <h2>Learn More</h2>
+      <p>The <a href="/2026-eitc-amt-estate-tax-updates">2026 EITC, AMT, and Estate Tax Updates</a> guide covers the inflation adjustments for 2026 across all three provisions. For capital gains planning that intersects with estate strategies, see the <a href="/capital-gains-tax-rates-2026">Capital Gains Tax Rates 2026</a> guide.</p>
+    `,
+    relatedTools: [
+      { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Tax Rates 2026" },
+      { href: "/2026-eitc-amt-estate-tax-updates", label: "2026 EITC, AMT, and Estate Tax Updates" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/tax-brackets-2026", label: "2026 Tax Brackets" }
+    ]
+  },
+
 
   // ++ ADDED June 15, 2026 ++++++++++++++++++++++++++++++++++++++++++++++++++
 
