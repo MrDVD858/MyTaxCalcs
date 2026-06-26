@@ -768,6 +768,13 @@ const blogPosts = [
   <p>Even organized filers routinely miss a few moves that cost them money. The three most common: failing to update withholding after a life event (resulting in a surprise balance due), forgetting to take required minimum distributions before December 31 (triggering a 25% penalty on the missed amount), and waiting until April to make IRA contributions (missing months of potential tax-free growth). A fourth common mistake is letting FSA balances expire unused at year-end -- money that was contributed pre-tax, forfeited back to the plan because a claim wasn't submitted in time.</p>
   <p>Set a calendar reminder each October to run through this checklist with your current income figures. Adjustments made in October and November have the most remaining pay periods to take effect through payroll withholding changes. December fixes are limited to the last few payroll cycles and lump-sum estimated tax payments. The earlier you review, the more options you have.</p>
 `
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" }
+  ]
 },
 
 // ──────────────────────────────────────────────────────────────────────────────
@@ -858,6 +865,13 @@ const blogPosts = [
   <p>If your MAGI falls within the phase-out range, here is the exact calculation to determine your maximum allowable Roth contribution. First, determine how far your MAGI exceeds the phase-out start. Second, divide that excess by the phase-out range width ($15,000 for single filers, $10,000 for married filing separately). Third, multiply the result by the contribution limit ($7,000 or $8,000). Fourth, subtract that amount from the contribution limit. Round the result to the nearest $10. If the result is between $0 and $200, you may still contribute $200.</p>
   <p>Example for a single filer with $160,000 MAGI: excess above start = $160,000 minus $150,000 = $10,000. Divided by range width $15,000 = 0.667. Multiply by $7,000 = $4,667 reduction. Allowed contribution = $7,000 minus $4,667 = $2,333, rounded to $2,330. If you contribute more than this amount, you will owe the 6% excise tax on the excess.</p>
 `
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax", description: "How conversions are taxed" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/401k-contribution-limits-2025", label: "401(k) Limits 2025", description: "401(k) contribution limits" }
+  ]
 },
 
   {
@@ -945,7 +959,14 @@ const blogPosts = [
   <h2>Source</h2>
   <p>IRS Publication 550 (Investment Income and Expenses); IRS Topic No. 409 (Capital Gains and Losses); IRC Section 1091 (Wash Sales).</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator", description: "Estimate tax on investment sales" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
 
   {
     slug: "gig-economy-taxes-2026",
@@ -1034,7 +1055,14 @@ const blogPosts = [
   <h2>When Gig Income Stops: Estimated Tax Underpayment</h2>
   <p>Gig workers who have a slow quarter or stop working partway through the year often make the mistake of skipping or underpaying estimated taxes in the slow period and assuming they will square up in April. The IRS calculates underpayment penalties quarterly -- even if you pay everything by April 15, you may still owe penalties for quarters where you were short. The safe harbor rule protects you if you pay either 100% of last year's tax liability in equal quarterly installments (110% if your AGI exceeds $150,000) or 90% of this year's actual tax liability. Using the prior-year safe harbor is simpler for variable-income gig workers because you know the number at the start of the year.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/w2-vs-1099", label: "W-2 vs 1099", description: "Employee vs contractor tax differences" }
+  ]
+},
 
   {
     slug: "rental-income-taxes-2026",
@@ -1114,7 +1142,14 @@ const blogPosts = [
   <h2>Source</h2>
   <p>IRS Publication 527 (Residential Rental Property); IRS Schedule E instructions; IRS Topic No. 414 (Rental Income and Expenses); IRS Rev. Proc. 2019-38 (QBI rental safe harbor).</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
 
   {
     slug: "amended-tax-return-guide-2026",
@@ -1188,7 +1223,14 @@ const blogPosts = [
   <h2>Protecting Yourself After Filing an Amended Return</h2>
   <p>Once you file a 1040-X, the IRS has the right to examine the entire return for the year being amended -- not just the items you changed. This is not a reason to avoid amending legitimate errors, but it is a reason to ensure your entire return for that year is accurate and well-documented before filing the amendment. If you are amending to claim a large refund, organize all supporting documentation for the deductions and credits on the original return as well, not just the new items you are adding.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
 
   {
     slug: "social-security-taxes-2026",
@@ -1274,7 +1316,14 @@ const blogPosts = [
   <h2>Married Couples and the "Widow's Penalty"</h2>
   <p>Married couples filing jointly benefit from higher combined income thresholds for Social Security taxation ($32,000 and $44,000) compared to single filers ($25,000 and $34,000). However, when one spouse dies and the survivor files as a single taxpayer, they face the lower single-filer thresholds while often still receiving the same level of Social Security benefits and portfolio income. This transition -- sometimes called the "widow's penalty" or "widow's tax" -- can significantly increase a surviving spouse's tax burden in the year following the death. Planning for this scenario in advance, through Roth conversions and other income-timing strategies, is a standard component of retirement tax planning for couples.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator", description: "Calculate take-home pay" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
 
   {
     slug: "irs-audit-triggers-2026",
@@ -1353,7 +1402,14 @@ const blogPosts = [
   <h2>Audit Rates by Income Level</h2>
   <p>The IRS historically audited high-income returns at higher rates. Returns showing income over $1 million faced audit rates of around 2-3% in recent years, compared to less than 0.5% for returns in the $75,000-$100,000 range. However, the IRS has also consistently audited low-income EITC claimants at elevated rates, reflecting the high improper payment rate for that credit. The IRS has stated an intention to increase audit rates for high earners and large partnerships following additional funding under the Inflation Reduction Act, though actual audit rate changes take years to implement and measure.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
 
   {
     slug: "medical-expense-tax-deduction-2026",
@@ -1449,7 +1505,14 @@ const blogPosts = [
   <p>Long-term care in a nursing home or assisted living facility can be one of the largest medical expense deductions available. If you or a dependent is in a nursing home primarily for medical care, the entire cost -- including meals and lodging -- qualifies as a medical expense. If the primary reason is personal (not medical), only the nursing care portion qualifies. For assisted living facilities where residents receive medical monitoring, custodial care, and medication management, a significant portion of the monthly fees typically qualifies, but you may need a letter from the facility administrator breaking out the medical care component.</p>
   <p>Given the 7.5% AGI floor, a retired individual with $50,000 in Social Security and IRA income would have a floor of $3,750. Annual nursing home costs of $80,000 to $120,000 would generate a deduction of $76,250 to $116,250 -- easily justifying itemizing and potentially eliminating most of the taxable income for that year. This makes the medical expense deduction especially impactful for families facing major long-term care costs.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/standard-deduction-vs-itemized", label: "Standard vs Itemized", description: "Which deduction to take" }
+  ]
+},
 
   {
     slug: "dependent-care-fsa-tax-benefits-2026",
@@ -1539,7 +1602,14 @@ const blogPosts = [
   <h2>DC-FSA for Care of Adult Dependents</h2>
   <p>The DC-FSA is not limited to child care. If you have a spouse or dependent who is physically or mentally incapable of self-care and lives with you, expenses for their daytime care while you work are also eligible. Adult day care centers that provide medical or custodial care qualify. This is an often-overlooked benefit for adult children with disabilities or elderly parents who meet the dependency and self-care requirements.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/child-tax-credit-2025", label: "Child Tax Credit 2025", description: "2025 child tax credit rules" }
+  ]
+},
 
   {
     slug: "backdoor-roth-ira-2026",
@@ -1612,7 +1682,14 @@ const blogPosts = [
   <p>Beyond the pro-rata rule, several other errors trip up first-time backdoor Roth executions. Investing the non-deductible contribution before converting is a common one -- if your $7,000 grows to $7,200 before you convert, $200 is taxable. Convert quickly while the funds are in cash to minimize this. Another mistake: making the contribution to the wrong account. The non-deductible contribution must go into a traditional IRA, not directly into the Roth. Depositing directly into the Roth without going through the traditional IRA step is a direct Roth contribution and counts against the income limits.</p>
   <p>State tax treatment is another consideration that many taxpayers overlook. Most states follow federal tax treatment for IRA conversions, but a handful do not. Some states do not recognize the basis established by non-deductible contributions, meaning the conversion may be partially taxable at the state level even if it is tax-free federally. Check your state's rules before assuming the conversion is also state-tax-free.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax", description: "How conversions are taxed" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/401k-contribution-limits-2025", label: "401(k) Limits 2025", description: "401(k) contribution limits" }
+  ]
+},
 
   // ── NEW POST — June 5, 2026 ─────────────────────────────────────────────────
   {
@@ -1719,7 +1796,14 @@ const blogPosts = [
 <p>The IRS addressed this topic directly in <a href="https://www.irs.gov/newsroom/irs-tax-tips" target="_blank" rel="noopener noreferrer">Tax Tip 2026-45</a>, published June 2, 2026, emphasizing that the core question is profit motive and that all nine factors are weighed together. The agency reinforced that both hobby income and business income must be reported — the distinction affects deductibility, not reporting obligation.</p>
 <p>Use our <a href="/income-tax-calculator">federal income tax calculator</a> to estimate how additional side-hustle income affects your overall tax bill, and our <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to see the SE tax cost of treating the activity as a business.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/w2-vs-1099", label: "W-2 vs 1099", description: "Employee vs contractor tax differences" }
+  ]
+},
 
 // NEW BLOG POSTS — Batch 2 — June 4, 2026
 // Add these to the FRONT of blogPosts array in data/blogPosts.js
@@ -1811,7 +1895,14 @@ const blogPosts = [
 <p>If your employer does not offer an HSA or offers one with poor investment options or high fees, you can open an HSA independently at providers like Fidelity, Lively, or HSA Bank. Contributions made outside payroll do not save FICA taxes (unlike payroll HSA contributions), but you still receive the full income tax deduction. Independent HSA providers often offer better investment menus and lower fees than employer-sponsored plans.</p>
 <p>If your employer does offer an HSA with payroll contributions, those payroll deductions avoid both federal income tax and FICA (Social Security and Medicare) — a 7.65% additional savings on top of the income tax deduction. This makes employer payroll HSA contributions the most tax-efficient way to fund the account.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/hsa-contribution-limits-2025", label: "HSA Limits 2025", description: "HSA contribution limits and rules" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
 
   {
     slug: "inherited-ira-tax-rules-2026",
@@ -1897,7 +1988,14 @@ const blogPosts = [
 <h2>State Tax on Inherited IRAs</h2>
 <p>Federal rules govern the distribution timing, but state taxes apply separately to the distributions you take. Most states tax inherited IRA distributions as ordinary income at state rates. A handful of states — including Pennsylvania — exempt inherited IRA distributions from state tax entirely. If you are a beneficiary in a high-income-tax state, the state tax implications of your distribution strategy are worth factoring into your planning, particularly if you have flexibility over which years to take larger distributions.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax", description: "How conversions are taxed" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
 
   {
     slug: "1099-k-tax-guide-2026",
@@ -1996,7 +2094,14 @@ const blogPosts = [
 <h2>The IRS Matching Program</h2>
 <p>The IRS cross-references 1099-K totals against reported income on tax returns through its document matching program. If your reported gross receipts on Schedule C are significantly lower than your total 1099-K amounts, the IRS may send a notice requesting an explanation. Having documentation ready — showing business expenses, cost of goods sold, and non-taxable amounts — is your defense against these notices.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/w2-vs-1099", label: "W-2 vs 1099", description: "Employee vs contractor tax differences" }
+  ]
+},
 
   {
     slug: "tax-implications-of-selling-a-home-2026",
@@ -2089,7 +2194,14 @@ const blogPosts = [
 <p>If you are considering selling and are close to but not yet at the 2-year threshold, waiting can be worth significant money. The difference between selling at 23 months (no exclusion) and 24 months (full exclusion) on a $400,000 gain is potentially $60,000 or more in capital gains tax for a single filer. Run the numbers with our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to see whether waiting makes financial sense in your specific situation.</p>
 <p>Also consider the year of sale: if 2026 will be a high-income year due to other events (a bonus, a business sale, Roth conversions), selling the home in that year could push your gain into the 20% capital gains bracket rather than 15%. In some cases, timing the sale to a lower-income year reduces the tax rate on any gain above the exclusion.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator", description: "Estimate tax on investment sales" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
 
   {
     slug: "backdoor-roth-ira-guide-2026",
@@ -2156,7 +2268,14 @@ const blogPosts = [
 <p>Congress has discussed closing the backdoor Roth loophole in various legislative proposals over the years, most notably in the Build Back Better Act in 2021, which was not enacted. As of 2026, the backdoor Roth remains legal and unchanged. Given its widespread use and the difficulty of enforcing a ban, most tax professionals expect it to remain available for the foreseeable future — but it is worth staying informed on legislative developments.</p>
 <p>If you have been putting off the backdoor Roth because you are worried it might go away, that concern actually argues for executing it sooner rather than later — while it is definitively legal — rather than waiting.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax", description: "How conversions are taxed" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/401k-contribution-limits-2025", label: "401(k) Limits 2025", description: "401(k) contribution limits" }
+  ]
+},
 
   {
     slug: "rental-property-tax-guide-2026",
@@ -2249,7 +2368,14 @@ const blogPosts = [
 <p>When you sell a rental property, a 1031 like-kind exchange allows you to defer capital gains and depreciation recapture taxes by reinvesting the proceeds into another qualifying investment property within strict time limits: 45 days to identify the replacement property and 180 days to close. The taxes are not eliminated — they carry over to the new property's basis — but deferral allows you to redeploy the full pre-tax proceeds into a larger property, effectively using the government's share of your gain as an interest-free loan for continued investment.</p>
 <p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate the tax on a potential rental property sale and evaluate whether a 1031 exchange makes sense for your situation.</p>
 `
-  },
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" }
+  ]
+},
 
 // NEW BLOG POSTS — June 4, 2026
 // Add these two objects to the FRONT of the blogPosts array in data/blogPosts.js
@@ -2369,6 +2495,13 @@ const blogPosts = [
 
 <p>Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate the federal tax on your crypto gains, and see our <a href="/capital-gains-tax-rates-2026">2026 capital gains rate guide</a> for the complete income thresholds at each rate.</p>
 `
+,
+  relatedTools: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator", description: "Estimate tax on investment sales" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
 },
 
 // ============================================================
@@ -2460,6 +2593,13 @@ const blogPosts = [
 
 <p>Use our <a href="/quarterly-estimated-taxes">quarterly estimated tax guide</a> for step-by-step payment instructions and deadline details, and our <a href="/self-employment-tax-calculator">self-employment tax calculator</a> to estimate your SE tax obligation for quarterly payment planning.</p>
 `
+,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
 },
 
   {
@@ -2533,7 +2673,13 @@ const blogPosts = [
   <h2>Year-Round Recordkeeping Pays Off at Tax Time</h2>
   <p>Mid-year is also a good time to audit your recordkeeping. For deductible expenses -- business mileage, home office, charitable donations, medical costs -- records must be contemporaneous. A mileage log created in December for trips made in January is vulnerable in an audit. Receipts for expenses over $250 must come from the organization, not be self-generated. If you have been lax about tracking, restart now: six months of clean records is significantly better than none. A simple system -- a folder (physical or digital) organized by category -- is all that is required. Use the mid-year checkpoint to get current and stay current through December.</p>
 `,
-  },
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
   {
     slug: "obbba-senior-deduction-2026",
     title: "The New $6,000 Senior Deduction in 2026: Who Qualifies and How to Claim It",
@@ -2620,7 +2766,13 @@ const blogPosts = [
   <h2>Outlook After 2028</h2>
   <p>The OBBBA senior deduction is a temporary provision, applying only to tax years 2025, 2026, 2027, and 2028. It will expire after the 2028 tax year unless Congress acts to extend it. For planning purposes, treat it as available through 2028 and plan for its expiration in 2029. Seniors who use Roth conversions, QCDs, or other income management strategies to stay within beneficial tax thresholds may want to accelerate those moves during the four years the deduction is available, given that the combined benefit of the deduction plus lower conversion rates may not repeat after 2028.</p>
 `,
-  },
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-vs-itemized", label: "Standard vs Itemized", description: "Which deduction to take" }
+  ]
+},
   {
     slug: "salt-deduction-2026-expanded",
     title: "SALT Deduction 2026: The $40,000 Cap and What It Means for Homeowners",
@@ -2708,7 +2860,13 @@ const blogPosts = [
   <h2>Pass-Through Entity SALT Workaround</h2>
   <p>Many states have enacted Pass-Through Entity (PTE) tax elections that allow partnerships, S-corporations, and multi-member LLCs to pay state income taxes at the entity level. Since the individual SALT cap applies to personal deductions, entity-level payments are deductible as business expenses without being subject to the personal SALT cap. Self-employed business owners and partners with high state income tax liability should evaluate whether the PTE election still makes sense now that the individual cap has risen to $40,000. For those with state tax liability under $40,000, the personal deduction now covers the full amount, reducing the appeal of the PTE election. Those with state tax liability approaching or exceeding $40,000 may still benefit from the entity-level approach.</p>
 `,
-  },
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/standard-deduction-vs-itemized", label: "Standard vs Itemized", description: "Which deduction to take" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
   {
     slug: "how-to-calculate-your-effective-tax-rate",
     title: "How to Calculate Your Effective Tax Rate (And Why It Matters More Than Your Bracket)",
@@ -2821,7 +2979,14 @@ const blogPosts = [
 <p>Use our <a href="/income-tax-calculator">income tax calculator</a> to compute your exact effective rate alongside your marginal rate, and see our <a href="/marginal-vs-effective-tax-rate">marginal vs. effective tax rate guide</a> for a deeper look at how both figures are calculated.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/marginal-vs-effective-tax-rate", label: "Marginal vs Effective Rate", description: "Understanding your real tax rate" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
       { href: "/marginal-vs-effective-tax-rate", label: "Marginal vs. Effective Rate Guide" },
     ],
@@ -2920,7 +3085,14 @@ const blogPosts = [
   <p>The W-4 is not a set-and-forget document. Life changes, tax law changes, and income changes all affect whether your current withholding is accurate. Reviewing it annually -- especially in a year with major OBBBA changes affecting deductions for tips, overtime, car loan interest, and the senior deduction -- is the simplest, most effective way to avoid a tax surprise at filing time. Use the IRS Tax Withholding Estimator at IRS.gov for the most precise guidance, and our <a href="/tax-refund-calculator">Tax Refund Calculator</a> for a quick check on whether you are tracking toward a refund or a balance due.</p>
 `,
     relatedLinks: [
-      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
+      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator", description: "Calculate take-home pay" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator" },
     ],
@@ -3027,7 +3199,14 @@ const blogPosts = [
   <p>The tax rate difference between short-term and long-term treatment is often significant enough to change investment decisions. A $20,000 gain taxed as ordinary income at 22% costs $4,400. The same gain after one year of holding costs $3,000 at the 15% long-term rate -- a $1,400 difference on the same profit, simply by waiting two additional months. For larger gains or higher earners, the savings are proportionally larger. The one-year rule is one of the most straightforward and reliable tax strategies available to individual investors, requiring no professional help or complex planning -- just patience and an awareness of your purchase dates.</p>
 `,
     relatedLinks: [
-      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" ,
+  relatedTools: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator", description: "Estimate tax on investment sales" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/blog/capital-gains-tax-guide-2026", label: "Capital Gains Tax Guide 2026" },
     ],
@@ -3138,7 +3317,14 @@ const blogPosts = [
   <p>The two most common SE tax mistakes are forgetting to make quarterly estimated payments (resulting in both underpayment penalties and a large April bill) and failing to deduct legitimate business expenses before calculating net income. Every business expense you miss means you paid both SE tax and income tax on that amount unnecessarily. A second common mistake is forgetting the half-SE-tax deduction: the deductible portion reduces your AGI and therefore your income tax, and it appears on Schedule 1 of Form 1040. Failure to take this deduction is money left on the table every year.</p>
 `,
     relatedLinks: [
-      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" ,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/fica-tax-rate-2025", label: "FICA Tax Rate 2025", description: "Social Security and Medicare rates" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/blog/self-employed-quarterly-taxes-guide-2026", label: "Quarterly Estimated Tax Guide" },
     ],
@@ -3222,7 +3408,14 @@ const blogPosts = [
   <p>If a tax offer sounds too good to be true or a communication seems urgent and threatening, treat it with maximum skepticism. Verify directly at IRS.gov before taking any action.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" }
+  ]
+},
       { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
       { href: "/blog", label: "More Tax News & Guides" },
     ],
@@ -3332,7 +3525,14 @@ const blogPosts = [
   <p>Beyond the standard inflation adjustments, 2026 is the first full tax year under the One Big Beautiful Bill Act, which introduced several new deductions on Schedule 1-A: tips (up to $25,000), overtime pay (up to $12,500), car loan interest on new vehicles (up to $10,000), and a senior deduction for taxpayers 65 and older ($6,000). Workers eligible for any of these deductions will see their effective 2026 tax rate reduced beyond what the bracket adjustments alone would produce. Use our <a href="/income-tax-calculator">federal income tax calculator</a> to model your 2026 tax with any applicable Schedule 1-A deductions included.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" }
+  ]
+},
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
       { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
     ],
@@ -3418,7 +3618,14 @@ const blogPosts = [
   <p>For taxpayers in none of these categories -- a renter in a low-tax state without tips or overtime income, under age 65 -- the most significant OBBBA benefit is the permanence of the lower tax rates. Before the OBBBA, the TCJA's lower rates were scheduled to expire after 2025, which would have raised marginal rates for most filers starting in 2026. That expiration is now canceled. The rates you pay in 2026 are the same as 2025 -- a continuation, not the increase that many had been anticipating. Use our <a href="/income-tax-calculator">income tax calculator</a> to model your full 2026 federal tax including any OBBBA deductions you qualify for.</p>
 `,
     relatedLinks: [
-      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
+      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/child-tax-credit-2025", label: "Child Tax Credit 2025", description: "2025 child tax credit rules" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
     ],
@@ -3540,7 +3747,14 @@ const blogPosts = [
   <p>The tips deduction reduces your Adjusted Gross Income, which affects eligibility for other income-based benefits. A lower AGI can: make more of your income eligible for the Earned Income Tax Credit (increasing the credit amount or making you newly eligible), reduce the portion of Social Security benefits that are taxable if you are a retired tipped worker receiving both, and keep you below income thresholds for certain credits. Workers with tip income near income-based phase-out thresholds should model the effect of the deduction on their full tax picture -- not just the direct income tax savings from the deduction itself. Use our <a href="/income-tax-calculator">federal income tax calculator</a> with the tips deduction applied to see your full estimated 2026 liability.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator", description: "Calculate take-home pay" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/fica-tax-rate-2025", label: "FICA Tax Rate 2025", description: "Social Security and Medicare rates" }
+  ]
+},
       { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator" },
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
     ],
@@ -3646,7 +3860,14 @@ const blogPosts = [
 <p>Use our <a href="/self-employment-tax-calculator">SE tax calculator</a> to see how business deductions like mileage reduce your SE tax liability, and our <a href="/income-tax-calculator">income tax calculator</a> to model your total federal tax estimate with and without the deduction.</p>
 `,
     relatedLinks: [
-      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" ,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
       { href: "/blog", label: "More Tax Guides" },
     ],
@@ -3724,7 +3945,14 @@ const blogPosts = [
   <p>The IRS issued more than 1.1 million identity theft flags on returns in recent years. If someone files a fraudulent return using your Social Security number before you do, your legitimate return will be rejected. Signs of tax identity theft: your e-filed return is rejected with a message that a return was already filed with your SSN, or you receive an IRS notice about a return or income you did not report. The IRS's Identity Protection PIN (IP PIN) program assigns you a six-digit PIN that must be included on your return -- making it impossible for a fraudster to file using your SSN without the current-year PIN. Enrollment at IRS.gov is free. Once enrolled, you receive a new IP PIN each January by mail. If you have ever been a victim of tax identity theft, the IP PIN is assigned automatically. For others, voluntary enrollment is strongly recommended.</p>
 `,
     relatedLinks: [
-      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
+      { href: "/tax-refund-calculator", label: "Tax Refund Calculator" ,
+  relatedTools: [
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
       { href: "/blog", label: "More Tax Filing Tips" },
     ],
@@ -3830,7 +4058,14 @@ const blogPosts = [
   <p>Missing a quarterly estimated tax deadline does not mean you owe the entire penalty immediately. The IRS underpayment penalty is calculated separately for each quarter based on the amount underpaid and the number of days it was underpaid. If you missed Q2 but paid Q3 and Q4 on time, you owe a penalty only for the Q2 underpayment period. The annual Form 2210 (Underpayment of Estimated Tax by Individuals, Estates, and Trusts) is used to calculate the penalty, and the IRS may compute it for you if you leave that section of the return blank. In practice, the penalty is often less severe than feared -- but it is fully avoidable with timely payments. Use IRS Direct Pay or EFTPS to pay electronically and get instant confirmation that your payment was received and applied to the correct quarter.</p>
 `,
     relatedLinks: [
-      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" ,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/fica-tax-rate-2025", label: "FICA Tax Rate 2025", description: "Social Security and Medicare rates" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
     ],
@@ -3943,7 +4178,14 @@ const blogPosts = [
   <p>For married couples who file separately, the SALT cap is cut in half -- $20,000 per return under the new $40,000 cap, rather than the full $40,000. This is an important consideration for couples deciding whether to file jointly or separately. In most cases, the halved SALT cap is one of several reasons that married filing separately results in a higher combined tax bill than filing jointly. If one spouse has a specific reason to file separately (such as income-driven student loan repayment calculations or concerns about joint liability), be sure to factor in the reduced SALT cap as part of the overall analysis. Use our <a href="/income-tax-calculator">income tax calculator</a> with both filing status options to compare your total tax under each scenario.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/standard-deduction-vs-itemized", label: "Standard vs Itemized", description: "Which deduction to take" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
       { href: "/blog", label: "More Tax Law Guides" },
     ],
@@ -4028,7 +4270,14 @@ const blogPosts = [
   <p>The most overlooked opportunity: the 0% long-term capital gains rate for those below the income threshold. A retiree managing withdrawals carefully, or a young investor in a low-income year, can realize substantial gains at zero federal tax cost. This requires proactive planning -- calculating available headroom below the threshold and harvesting gains up to that amount rather than waiting for an arbitrary sell decision. Our <a href="/capital-gains-tax-calculator">Capital Gains Tax Calculator</a> and <a href="/income-tax-calculator">Income Tax Calculator</a> together make this analysis straightforward.</p>
 `,
     relatedLinks: [
-      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" ,
+  relatedTools: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator", description: "Estimate tax on investment sales" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/income-tax-calculator", label: "Federal Income Tax Calculator" },
       { href: "/blog", label: "More Tax Guides" },
     ],
@@ -4149,7 +4398,14 @@ const blogPosts = [
 <p>Use our <a href="/income-tax-calculator">income tax calculator</a> to model how a pre-tax retirement contribution changes your estimated federal tax, and our <a href="/401k-contribution-limits-2025">full contribution limits guide</a> for complete 2025 limit tables and income phase-out details.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax", description: "How conversions are taxed" },
+    { href: "/hsa-contribution-limits-2025", label: "HSA Limits 2025", description: "HSA contribution limits and rules" }
+  ]
+},
       { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
       { href: "/blog", label: "More Tax Guides" },
     ],
@@ -4252,7 +4508,14 @@ const blogPosts = [
   <p>See also our <a href="/tax-brackets-2026">complete 2026 tax bracket guide</a> for the full table of single, married, and head-of-household thresholds.</p>
 `,
     relatedLinks: [
-      { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
+      { href: "/tax-brackets-2026", label: "2026 Tax Brackets" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" }
+  ]
+},
       { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
     ]
@@ -4354,7 +4617,14 @@ const blogPosts = [
   <p>The One Big Beautiful Bill Act's new Schedule 1-A deductions -- tips (up to $25,000), overtime (up to $12,500), car loan interest (up to $10,000), and the senior deduction ($6,000 for those 65 and older) -- are above-the-line deductions that reduce your AGI. They are independent of the standard deduction and available whether you itemize or take the standard deduction. A single filer who takes the $16,100 standard deduction and also qualifies for the $25,000 tips deduction and the $6,000 senior deduction would deduct a combined $47,100 from gross income before applying tax rates. That level of deduction effectively eliminates federal income tax for many moderate-income seniors who work in tipped occupations. Use our <a href="/income-tax-calculator">income tax calculator</a> to estimate your 2026 liability with all applicable deductions applied.</p>
 `,
     relatedLinks: [
-      { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
+      { href: "/tax-brackets-2026", label: "2026 Tax Brackets" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
     ]
@@ -4462,7 +4732,14 @@ const blogPosts = [
 <p>Use our <a href="/income-tax-calculator">income tax calculator</a> to estimate your 2026 federal liability, and see the IRS EITC Assistant at irs.gov to verify your eligibility for the credit.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" }
+  ]
+},
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
       { href: "/capital-gains-tax-rates-2026", label: "2026 Capital Gains Rates" },
     ]
@@ -4567,7 +4844,14 @@ const blogPosts = [
   <p>Planning around this distinction matters: when deciding whether to make a deductible retirement contribution, the savings rate is your marginal rate (the rate that applies to the last dollars you earned, which would be reduced). When thinking about your overall tax burden, the effective rate is the right lens. Both numbers appear in our <a href="/income-tax-calculator">income tax calculator</a> results for any income scenario you enter.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/marginal-vs-effective-tax-rate", label: "Marginal vs Effective Rate", description: "Understanding your real tax rate" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
       { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
       { href: "/marginal-vs-effective-tax-rate", label: "Marginal vs. Effective Tax Rate" },
@@ -4656,7 +4940,14 @@ const blogPosts = [
   <p>If you are subject to the Alternative Minimum Tax, most itemized deductions are either disallowed or recalculated under AMT rules. The SALT deduction is completely disallowed under the AMT system. Miscellaneous itemized deductions are also disallowed. Mortgage interest is allowed under the AMT but only for acquisition debt, not home equity lines. If your regular tax itemized deductions bring you close to AMT territory, run an AMT calculation to verify that itemizing still produces a lower total tax than the standard deduction would after AMT adjustments.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/standard-deduction-vs-itemized", label: "Standard vs Itemized", description: "Which deduction to take" }
+  ]
+},
       { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
       { href: "/standard-deduction-vs-itemized", label: "Standard Deduction vs. Itemized" },
       { href: "/salt-deduction-2026-what-homeowners-need-to-know", label: "SALT Deduction 2026" },
@@ -4744,7 +5035,14 @@ const blogPosts = [
   <p>Use our <a href="/income-tax-calculator">income tax calculator</a> to model your taxable income with all applicable above-the-line deductions applied, and see our <a href="/tax-brackets-2026">2026 tax bracket guide</a> for the rate that applies at your taxable income level.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" }
+  ]
+},
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
       { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
@@ -4838,7 +5136,14 @@ const blogPosts = [
   <p>Self-employment income creates Social Security credits just as W-2 wages do. In 2026, you earn one Social Security credit for every $1,810 in earned income, up to four credits per year. These credits count toward eligibility for Social Security retirement benefits, Social Security Disability Insurance, and Medicare. This is the upside of paying SE tax: unlike passive income from investments, self-employment income actively builds your Social Security and Medicare eligibility. Even modest self-employment income each year keeps your Social Security earnings record active and contributes to the 40 credits needed for full retirement benefit eligibility. The SE tax you pay is not just a cost -- it is also a contribution to your future benefit calculation.</p>
 `,
     relatedLinks: [
-      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" ,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/fica-tax-rate-2025", label: "FICA Tax Rate 2025", description: "Social Security and Medicare rates" }
+  ]
+},
       { href: "/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide 2026" },
       { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes" },
       { href: "/self-employed-quarterly-taxes-guide-2026", label: "Quarterly Taxes for the Self-Employed" },
@@ -4933,7 +5238,14 @@ const blogPosts = [
   <p>The most important thing to understand about business deductions for self-employed taxpayers is that they reduce both income tax and SE tax simultaneously. For a freelancer in the 22% federal income tax bracket, a $1,000 business deduction reduces income tax by $220 and SE tax by approximately $141 (15.3% of the $920 reduction in the SE tax base after the 92.35% adjustment). Total federal tax savings from a $1,000 deduction: approximately $361. After adding state income tax savings, a $1,000 legitimate business deduction may save $400 or more in combined taxes. This is why thorough expense tracking pays off disproportionately for self-employed people compared to W-2 employees, who cannot deduct most business expenses at all. Every subscription, every piece of equipment, every business mile tracked accurately is worth significantly more in tax savings than the face value might suggest. The investment in good bookkeeping -- whether through software or a bookkeeper -- typically pays for itself many times over in deductions recovered.</p>
 `,
     relatedLinks: [
-      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" },
+      { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator" ,
+  relatedTools: [
+    { href: "/self-employment-tax-calculator", label: "Self-Employment Tax Calculator", description: "Estimate SE tax and deduction" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes", description: "How and when to pay estimated tax" },
+    { href: "/w2-vs-1099", label: "W-2 vs 1099", description: "Employee vs contractor tax differences" }
+  ]
+},
       { href: "/self-employment-tax-guide-2026", label: "Self-Employment Tax Guide" },
       { href: "/w2-vs-1099", label: "W-2 vs. 1099" },
       { href: "/quarterly-estimated-taxes", label: "Quarterly Estimated Taxes" },
@@ -5009,7 +5321,14 @@ const blogPosts = [
   <p>The most effective tax reduction strategy is consistent application of the basics -- maxing retirement accounts, funding an HSA, timing deductions -- over many years. Exotic strategies and one-time moves matter less than the compounding effect of doing the fundamentals every year. Start with the highest-impact items (401(k) first, then HSA, then IRA) and add complexity only as your situation warrants it. Use our <a href="/income-tax-calculator">income tax calculator</a> to see the dollar impact of each move before committing to it.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/hsa-contribution-limits-2025", label: "HSA Limits 2025", description: "HSA contribution limits and rules" }
+  ]
+},
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
       { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
       { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
@@ -5093,7 +5412,14 @@ const blogPosts = [
   <p>An often-overlooked retirement account is the Health Savings Account. After age 65, HSA funds can be withdrawn for any purpose and are taxed as ordinary income -- exactly like a traditional IRA withdrawal. But for qualified medical expenses (which are substantial in retirement), HSA withdrawals remain permanently tax-free. This makes an HSA invested in growth assets during working years a powerful tax-free reserve for retirement healthcare costs, which average tens of thousands of dollars per person. Maximizing HSA contributions during working years and leaving them invested builds a dedicated tax-free medical fund for retirement.</p>
 `,
     relatedLinks: [
-      { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
+      { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax", description: "How conversions are taxed" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/401k-contribution-limits-2025", label: "401(k) Limits 2025", description: "401(k) contribution limits" }
+  ]
+},
       { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
       { href: "/2026-401k-ira-contribution-limits", label: "2026 401(k) and IRA Limits" },
@@ -5178,7 +5504,14 @@ const blogPosts = [
   <p>For larger portfolios or more complex situations -- multiple properties, concentrated stock positions from employer equity, substantial cryptocurrency gains, or business sales -- the stakes are high enough that a CPA specializing in capital gains and investment taxation can frequently save more in tax than their fee. The most costly capital gains mistakes (selling before the one-year mark, missing the primary residence exclusion, ignoring the NIIT) are all preventable with basic awareness of the rules. Use our <a href="/capital-gains-tax-calculator">capital gains tax calculator</a> to estimate your specific liability and our <a href="/capital-gains-tax-rates-2026">2026 rates guide</a> for income thresholds at each rate.</p>
 `,
     relatedLinks: [
-      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" ,
+  relatedTools: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator", description: "Estimate tax on investment sales" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/capital-gains-tax-guide-2026", label: "Capital Gains Tax Guide 2026" },
       { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Tax Rates 2026" },
       { href: "/short-term-vs-long-term-capital-gains-2026", label: "Short vs. Long-Term Capital Gains" },
@@ -5261,7 +5594,14 @@ const blogPosts = [
   <p>Tax software (TurboTax, H&R Block, FreeTaxUSA) can import your 1099-B directly from most brokerages, which reduces manual entry errors significantly. After import, review the summary for any flagged issues before filing.</p>
 `,
     relatedLinks: [
-      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
+      { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" ,
+  relatedTools: [
+    { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator", description: "Estimate tax on investment sales" },
+    { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Rates 2026", description: "2026 long-term capital gains rates" },
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Tax Rates 2026" },
       { href: "/short-term-vs-long-term-capital-gains-2026", label: "Short vs. Long-Term Capital Gains" },
       { href: "/income-tax-calculator", label: "Income Tax Calculator" },
@@ -5334,7 +5674,14 @@ const blogPosts = [
   <p>FICA taxes (Social Security and Medicare) are calculated per employee, not per household. Your marital status has no effect on FICA. Each spouse continues to pay 6.2% Social Security tax on wages up to the Social Security wage base ($184,500 in 2026) and 1.45% Medicare tax on all wages. However, the Additional Medicare Tax of 0.9% applies above $200,000 for single filers but only $250,000 for married filing jointly -- not double the single threshold. This means a couple where each spouse earns $180,000 ($360,000 combined) would not owe the Additional Medicare Tax as singles (each under $200,000), but may owe it as married filers if their employer withholds at the incorrect rate. Employers withhold the Additional Medicare Tax on individual wages above $200,000 without regard to filing status -- so married couples may find they overpaid or underpaid this tax depending on each spouse's individual earnings. Form 8959 reconciles any discrepancy at filing.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
       { href: "/tax-brackets-2026", label: "2026 Tax Brackets" },
       { href: "/standard-deduction-2026", label: "2026 Standard Deduction" },
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
@@ -5403,7 +5750,14 @@ const blogPosts = [
   <p>Beyond deductions, homeowners may qualify for federal energy tax credits for qualifying improvements. The Energy Efficient Home Improvement Credit (25C) allows up to $3,200 per year for qualifying heat pumps, water heaters, insulation, windows, and doors. The Residential Clean Energy Credit (25D) provides a 30% credit for solar panels, solar water heaters, battery storage, and geothermal heat pumps. Unlike deductions, these are dollar-for-dollar reductions in your tax bill and do not require itemizing. Energy credits are among the most valuable homeowner tax benefits and are often overlooked entirely.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" },
+    { href: "/standard-deduction-vs-itemized", label: "Standard vs Itemized", description: "Which deduction to take" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" }
+  ]
+},
       { href: "/salt-deduction-2026-what-homeowners-need-to-know", label: "SALT Deduction 2026" },
       { href: "/standard-deduction-vs-itemized", label: "Standard Deduction vs. Itemized" },
       { href: "/capital-gains-tax-calculator", label: "Capital Gains Tax Calculator" },
@@ -5472,7 +5826,14 @@ const blogPosts = [
   <p>Your child may need to file their own federal tax return depending on their income. For 2026, a dependent child must file if they have earned income over $14,600, unearned income (dividends, interest) over $1,350, or gross income exceeding the greater of $1,350 or earned income plus $400. If your child has unearned income above $2,700 in 2026 and is under age 19 (or under 24 and a full-time student), the "kiddie tax" applies: unearned income above that threshold is taxed at the parent's marginal rate, not the child's lower rate. This prevents the strategy of shifting investment income to low-bracket children. For children with modest earned income from a part-time job, filing a return may generate a small refund of withheld taxes even if they are below the filing threshold.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/child-tax-credit-2025", label: "Child Tax Credit 2025", description: "2025 child tax credit rules" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
       { href: "/child-tax-credit-2025", label: "Child Tax Credit" },
       { href: "/hsa-contribution-limits-2025", label: "HSA Contribution Limits" },
@@ -5546,7 +5907,14 @@ const blogPosts = [
   <p>If your former employer's 401(k) plan sends the distribution check directly to you rather than doing a direct trustee-to-trustee transfer, you have exactly 60 days to deposit the full amount into a qualifying account (IRA or new employer's 401(k)) to avoid taxes and penalties. The plan is required to withhold 20% of the distribution for federal income taxes -- meaning if your 401(k) balance was $50,000, you receive a check for $40,000 and the plan sends $10,000 to the IRS. To complete a tax-free rollover, you must deposit the full $50,000 into the new account within 60 days -- including the $10,000 that was withheld. You would fund that $10,000 from other sources and receive it back as a tax refund when you file. Missing the 60-day window turns the entire distribution into taxable income plus a 10% early withdrawal penalty if you're under 59.5. This is one of the most expensive mistakes in the job change process -- always request a direct rollover (payable to the new institution, not to you) to avoid the withholding issue entirely.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/payroll-tax-calculator", label: "Payroll Tax Calculator", description: "Calculate take-home pay" },
+    { href: "/tax-refund-calculator", label: "Tax Refund Calculator", description: "See if you owe or get a refund" },
+    { href: "/w2-vs-1099", label: "W-2 vs 1099", description: "Employee vs contractor tax differences" }
+  ]
+},
       { href: "/tax-refund-calculator", label: "Tax Refund Calculator" },
       { href: "/w4-withholding-guide-2026", label: "W-4 Withholding Guide 2026" },
       { href: "/bonus-tax-rate-2025", label: "Bonus Tax Rate" },
@@ -5626,7 +5994,14 @@ const blogPosts = [
   <p>The One Big Beautiful Bill Act created a new $6,000 above-the-line deduction for taxpayers aged 65 and older, available for tax years 2025 through 2028. For a married couple both aged 65 or older, this is $12,000 in additional deductions that reduce AGI directly -- reducing income tax, potentially reducing Social Security taxation by lowering combined income, and reducing Medicare IRMAA surcharges to the extent the lower AGI keeps them below a threshold. See our full <a href="/blog/obbba-senior-deduction-2026">OBBBA senior deduction guide</a> for eligibility details and phase-out thresholds.</p>
 `,
     relatedLinks: [
-      { href: "/income-tax-calculator", label: "Income Tax Calculator" },
+      { href: "/income-tax-calculator", label: "Income Tax Calculator" ,
+  relatedTools: [
+    { href: "/income-tax-calculator", label: "Income Tax Calculator", description: "Estimate your federal income tax" },
+    { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax", description: "How conversions are taxed" },
+    { href: "/tax-brackets-2026", label: "2026 Tax Brackets", description: "2026 federal income tax brackets" },
+    { href: "/standard-deduction-2026", label: "Standard Deduction 2026", description: "2026 standard deduction amounts" }
+  ]
+},
       { href: "/roth-ira-conversion-tax", label: "Roth IRA Conversion Tax" },
       { href: "/401k-contribution-limits-2025", label: "401(k) Contribution Limits" },
       { href: "/capital-gains-tax-rates-2026", label: "Capital Gains Tax Rates" },

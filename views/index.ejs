@@ -255,25 +255,98 @@
         Free &middot; No Signup &middot; Instant Results
       </div>
       <h1>U.S. Tax Calculators<br><em>Built for Real Numbers</em></h1>
-      <p class="hero-sub">Estimate your federal income tax, take-home pay, self-employment tax, capital gains, and more &mdash; using the exact IRS brackets for 2025 and 2026.</p>
-      <div class="hero-actions">
-        <a href="/income-tax-calculator" class="btn btn-primary">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
-          Start Calculating
-        </a>
-        <a href="/states" class="btn btn-ghost">State Tax Rates &#8594;</a>
+      <p class="hero-sub">Pick your situation and get an instant estimate &mdash; using exact IRS brackets for 2025 and 2026. No account required.</p>
+      <div class="hero-calc-picks">
+        <p class="hero-picks-label">What do you need to calculate?</p>
+        <div class="hero-picks-grid">
+          <a href="/income-tax-calculator" class="hero-pick">
+            <span class="hero-pick-icon" style="background:rgba(34,197,94,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h4M7 12h8"/></svg>
+            </span>
+            <span class="hero-pick-text">
+              <strong>Income Tax</strong>
+              <em>How much tax will I owe?</em>
+            </span>
+            <svg class="hero-pick-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/tax-refund-calculator" class="hero-pick">
+            <span class="hero-pick-icon" style="background:rgba(34,197,94,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </span>
+            <span class="hero-pick-text">
+              <strong>Tax Refund</strong>
+              <em>Will I get a refund or owe?</em>
+            </span>
+            <svg class="hero-pick-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/self-employment-tax-calculator" class="hero-pick">
+            <span class="hero-pick-icon" style="background:rgba(34,197,94,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </span>
+            <span class="hero-pick-text">
+              <strong>Self-Employment Tax</strong>
+              <em>Freelancer or 1099 contractor?</em>
+            </span>
+            <svg class="hero-pick-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/capital-gains-tax-calculator" class="hero-pick">
+            <span class="hero-pick-icon" style="background:rgba(34,197,94,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/></svg>
+            </span>
+            <span class="hero-pick-text">
+              <strong>Capital Gains Tax</strong>
+              <em>Selling stocks, real estate, or crypto?</em>
+            </span>
+            <svg class="hero-pick-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/payroll-tax-calculator" class="hero-pick">
+            <span class="hero-pick-icon" style="background:rgba(34,197,94,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </span>
+            <span class="hero-pick-text">
+              <strong>Take-Home Pay</strong>
+              <em>What hits my bank account?</em>
+            </span>
+            <svg class="hero-pick-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/states" class="hero-pick">
+            <span class="hero-pick-icon" style="background:rgba(34,197,94,0.15);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            </span>
+            <span class="hero-pick-text">
+              <strong>State Income Tax</strong>
+              <em>What does my state charge?</em>
+            </span>
+            <svg class="hero-pick-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
       </div>
       <div class="hero-stats">
         <div class="stat"><strong>6</strong><span>Core Calculators</span></div>
         <div class="stat-divider"></div>
         <div class="stat"><strong>50</strong><span>State Pages</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><strong>2025</strong><span>IRS Data</span></div>
+        <div class="stat"><strong>2026</strong><span>IRS Data</span></div>
         <div class="stat-divider"></div>
         <div class="stat"><strong>Free</strong><span>Always</span></div>
       </div>
     </div>
   </section>
+
+  <style>
+    .hero-calc-picks{margin:20px 0 0}
+    .hero-picks-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,0.45);margin:0 0 10px}
+    .hero-picks-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    @media(max-width:520px){.hero-picks-grid{grid-template-columns:1fr}}
+    .hero-pick{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:10px;text-decoration:none;color:#fff;transition:background .15s,border-color .15s;cursor:pointer}
+    .hero-pick:hover{background:rgba(34,197,94,0.12);border-color:rgba(34,197,94,0.35)}
+    .hero-pick-icon{width:32px;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .hero-pick-text{flex:1;min-width:0}
+    .hero-pick-text strong{display:block;font-size:.83rem;font-weight:700;color:#fff;line-height:1.2;margin-bottom:1px}
+    .hero-pick-text em{display:block;font-size:.72rem;font-style:normal;color:rgba(255,255,255,0.5);line-height:1.3}
+    .hero-pick-arrow{flex-shrink:0;transition:transform .15s}
+    .hero-pick:hover .hero-pick-arrow{transform:translateX(3px)}
+  </style>
 
   <div class="page-with-sidebar">
   <main>
