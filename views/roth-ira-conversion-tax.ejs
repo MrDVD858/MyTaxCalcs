@@ -49,6 +49,30 @@
           "@type": "Answer",
           "text": "No. There is no income limit for Roth IRA conversions. Anyone can convert a traditional IRA or eligible retirement account to a Roth IRA regardless of their income level. This is different from direct Roth IRA contributions, which are phased out at higher incomes."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "Does a Roth conversion affect Medicare premiums (IRMAA)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A large Roth conversion raises your modified adjusted gross income in the conversion year. Medicare uses MAGI from two years prior to set Part B and Part D premiums. If your MAGI crosses an IRMAA threshold, you will pay higher Medicare premiums two years after the conversion. In 2025, surcharges begin at $106,000 MAGI for single filers and $212,000 for married filing jointly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the pro-rata rule and how does it affect a Roth conversion?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The pro-rata rule requires that any conversion be treated as coming proportionally from your pre-tax and after-tax IRA balances combined across all traditional, SEP, and SIMPLE IRAs. You cannot selectively convert only after-tax money. If you have $90,000 pre-tax and $10,000 after-tax in IRAs, then 90% of any conversion is taxable regardless of which account the money comes from."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I pay the Roth conversion tax from the IRA or from outside funds?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pay the tax from outside funds if at all possible. If you withhold from the converted amount itself to pay the tax and you are under 59.5, the withheld portion is treated as a taxable distribution and subject to the 10% early withdrawal penalty. Even if you are over 59.5, using outside cash preserves more money inside the Roth for tax-free growth."
+        }
       }
     ]
   }
@@ -128,6 +152,33 @@
     .page-disclaimer{margin:40px 0 0;background:#f9fafb;border:1px solid #e5e7eb;border-radius:12px;padding:16px 20px;display:flex;gap:10px;align-items:flex-start}
     .page-disclaimer svg{color:#9ca3af;min-width:18px;margin-top:1px}
     .page-disclaimer p{font-size:.82rem;color:#6b7280;margin:0;line-height:1.55}
+    /* Roth conversion calculator */
+    .roth-calc-wrap{background:#fff;border:2px solid #ddd6fe;border-radius:16px;padding:28px;margin:32px 0}
+    .roth-calc-wrap h2{font-size:1.25rem;font-weight:800;color:#111827;margin:0 0 6px}
+    .roth-calc-wrap .calc-sub{font-size:.85rem;color:#6b7280;margin:0 0 20px}
+    .roth-calc-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+    @media(max-width:520px){.roth-calc-fields{grid-template-columns:1fr}}
+    .roth-field label{display:block;font-size:.75rem;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.05em;margin-bottom:5px}
+    .roth-field select,.roth-field input[type=number]{width:100%;padding:10px 12px;border:1px solid #d1d5db;border-radius:8px;font-size:.92rem;color:#111827;background:#f9fafb;box-sizing:border-box;outline:none}
+    .roth-field select:focus,.roth-field input[type=number]:focus{border-color:#7c3aed;background:#fff}
+    .roth-calc-btn{display:block;width:100%;padding:13px;background:#7c3aed;color:#fff;border:none;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer;margin-top:6px;transition:background .15s}
+    .roth-calc-btn:hover{background:#6d28d9}
+    .roth-result{display:none;margin-top:20px;border-top:1px solid #e5e7eb;padding-top:20px}
+    .roth-result.show{display:block}
+    .roth-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+    @media(max-width:480px){.roth-result-grid{grid-template-columns:1fr}}
+    .roth-result-card{background:#f5f3ff;border-radius:10px;padding:14px 16px}
+    .roth-result-card.green{background:#f0fdf4}
+    .roth-result-card .rc-label{font-size:.73rem;font-weight:600;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+    .roth-result-card .rc-val{font-size:1.15rem;font-weight:800;color:#7c3aed}
+    .roth-result-card.green .rc-val{color:#15803d}
+    .roth-result-note{font-size:.8rem;color:#6b7280;line-height:1.55;margin:0}
+    .blog-link-strip{background:#f5f3ff;border:1px solid #ddd6fe;border-radius:12px;padding:18px 20px;margin:32px 0}
+    .blog-link-strip h3{font-size:.75rem;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.08em;margin:0 0 12px}
+    .blog-link-list{display:flex;flex-direction:column;gap:8px}
+    .blog-link-item{display:flex;align-items:center;gap:10px;font-size:.88rem;color:#4c1d95;text-decoration:none;font-weight:600}
+    .blog-link-item:hover{color:#7c3aed;text-decoration:underline}
+    .blog-link-item svg{min-width:16px;color:#7c3aed}
   </style>
 </head>
 <body>
@@ -247,6 +298,130 @@
         <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
       </div>
 
+      <!-- ROTH CONVERSION TAX CALCULATOR -->
+      <div class="roth-calc-wrap">
+        <h2>Roth Conversion Tax Calculator</h2>
+        <p class="calc-sub">Estimate the federal tax cost of converting a traditional IRA or 401(k) to a Roth IRA.</p>
+        <div class="roth-calc-fields">
+          <div class="roth-field">
+            <label for="rc-filing">Filing Status</label>
+            <select id="rc-filing">
+              <option value="single">Single</option>
+              <option value="mfj">Married Filing Jointly</option>
+              <option value="mfs">Married Filing Separately</option>
+              <option value="hoh">Head of Household</option>
+            </select>
+          </div>
+          <div class="roth-field">
+            <label for="rc-income">Other Taxable Income ($)</label>
+            <input type="number" id="rc-income" placeholder="e.g. 60000" min="0" max="9999999">
+          </div>
+          <div class="roth-field">
+            <label for="rc-conversion">Conversion Amount ($)</label>
+            <input type="number" id="rc-conversion" placeholder="e.g. 20000" min="0" max="9999999">
+          </div>
+          <div class="roth-field">
+            <label for="rc-year">Tax Year</label>
+            <select id="rc-year">
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+          </div>
+        </div>
+        <button class="roth-calc-btn" onclick="calcRothTax()">Calculate Conversion Tax</button>
+        <div class="roth-result" id="roth-result">
+          <div class="roth-result-grid">
+            <div class="roth-result-card">
+              <div class="rc-label">Extra Tax from Conversion</div>
+              <div class="rc-val" id="rc-extra-tax">--</div>
+            </div>
+            <div class="roth-result-card">
+              <div class="rc-label">Effective Rate on Conversion</div>
+              <div class="rc-val" id="rc-eff-rate">--</div>
+            </div>
+            <div class="roth-result-card green">
+              <div class="rc-label">Tax Without Conversion</div>
+              <div class="rc-val" id="rc-tax-before">--</div>
+            </div>
+            <div class="roth-result-card green">
+              <div class="rc-label">Tax With Conversion</div>
+              <div class="rc-val" id="rc-tax-after">--</div>
+            </div>
+          </div>
+          <p class="roth-result-note" id="rc-bracket-note"></p>
+        </div>
+      </div>
+
+      <script>
+      (function(){
+        var BRACKETS = {
+          2025: {
+            single:    [[11925,10],[48475,12],[103350,22],[197300,24],[250525,32],[626350,35],[Infinity,37]],
+            mfj:       [[23850,10],[96950,12],[206700,22],[394600,24],[501050,32],[751600,35],[Infinity,37]],
+            mfs:       [[11925,10],[48475,12],[103350,22],[197300,24],[250525,32],[375800,35],[Infinity,37]],
+            hoh:       [[17000,10],[64850,12],[103350,22],[197300,24],[250500,32],[626350,35],[Infinity,37]]
+          },
+          2026: {
+            single:    [[12100,10],[49150,12],[104950,22],[200300,24],[254350,32],[635550,35],[Infinity,37]],
+            mfj:       [[24200,10],[98300,12],[209850,22],[400600,24],[508700,32],[762600,35],[Infinity,37]],
+            mfs:       [[12100,10],[49150,12],[104950,22],[200300,24],[254350,32],[381300,35],[Infinity,37]],
+            hoh:       [[17250,10],[65900,12],[104950,22],[200300,24],[254350,32],[635550,35],[Infinity,37]]
+          }
+        };
+        var STD_DED = {
+          2025: {single:15000, mfj:30000, mfs:15000, hoh:22500},
+          2026: {single:15700, mfj:31400, mfs:15700, hoh:23350}
+        };
+        function calcTax(taxable, brackets) {
+          var tax = 0, prev = 0;
+          for (var i = 0; i < brackets.length; i++) {
+            var top = brackets[i][0], rate = brackets[i][1] / 100;
+            if (taxable <= prev) break;
+            tax += (Math.min(taxable, top) - prev) * rate;
+            prev = top;
+            if (taxable <= top) break;
+          }
+          return tax;
+        }
+        function fmt(n) {
+          return '$' + Math.round(n).toLocaleString('en-US');
+        }
+        window.calcRothTax = function() {
+          var filing = document.getElementById('rc-filing').value;
+          var income = parseFloat(document.getElementById('rc-income').value) || 0;
+          var conversion = parseFloat(document.getElementById('rc-conversion').value) || 0;
+          var year = document.getElementById('rc-year').value;
+          if (conversion <= 0) { alert('Please enter a conversion amount.'); return; }
+          var brackets = BRACKETS[year][filing];
+          var stdDed = STD_DED[year][filing];
+          var taxableBefore = Math.max(0, income - stdDed);
+          var taxableAfter = Math.max(0, income + conversion - stdDed);
+          var taxBefore = calcTax(taxableBefore, brackets);
+          var taxAfter = calcTax(taxableAfter, brackets);
+          var extra = taxAfter - taxBefore;
+          var effRate = conversion > 0 ? (extra / conversion * 100) : 0;
+          // find marginal bracket
+          var marginalRate = 0;
+          var prev2 = 0;
+          for (var i = 0; i < brackets.length; i++) {
+            if (taxableAfter > prev2) { marginalRate = brackets[i][1]; }
+            prev2 = brackets[i][0];
+            if (taxableAfter <= brackets[i][0]) break;
+          }
+          document.getElementById('rc-extra-tax').textContent = fmt(extra);
+          document.getElementById('rc-eff-rate').textContent = effRate.toFixed(1) + '%';
+          document.getElementById('rc-tax-before').textContent = fmt(taxBefore);
+          document.getElementById('rc-tax-after').textContent = fmt(taxAfter);
+          document.getElementById('rc-bracket-note').textContent =
+            'Your marginal bracket after conversion is ' + marginalRate + '%. The effective rate on the conversion ('
+            + effRate.toFixed(1) + '%) is lower because the progressive system only taxes amounts that fall in each bracket at that bracket\'s rate. Estimate only -- does not include state tax, IRMAA, AMT, or other adjustments.';
+          var result = document.getElementById('roth-result');
+          result.classList.add('show');
+          result.scrollIntoView({behavior:'smooth', block:'nearest'});
+        };
+      })();
+      </script>
+
       <div class="qa-section">
         <div class="section-eyebrow">How It Is Taxed</div>
         <h2>How a Roth IRA Conversion Is Taxed</h2>
@@ -306,7 +481,7 @@
               <li>Tax diversification in retirement</li>
               <li>Heirs inherit tax-free</li>
               <li>No income limit to convert</li>
-              <li>Flexible — convert any amount any year</li>
+              <li>Flexible -- convert any amount any year</li>
             </ul>
           </div>
           <div class="con-card">
@@ -330,7 +505,7 @@
       <div class="qa-section">
         <div class="section-eyebrow">Bracket-Filling Strategy</div>
         <h2>How Much to Convert Each Year: The Bracket-Filling Approach</h2>
-        <p>One of the most tax-efficient Roth conversion strategies is to convert just enough each year to fill up your current tax bracket without crossing into the next one. This is especially powerful during low-income years — early retirement before Social Security, a sabbatical year, or a year with large deductions.</p>
+        <p>One of the most tax-efficient Roth conversion strategies is to convert just enough each year to fill up your current tax bracket without crossing into the next one. This is especially powerful during low-income years -- early retirement before Social Security, a sabbatical year, or a year with large deductions.</p>
 
         <table class="facts-table">
           <thead>
@@ -374,6 +549,61 @@
             <tr class="highlight-row"><td>After age 59.5</td><td>5-year clock still matters for earnings, not for conversions</td><td>No penalty after 59.5 regardless of holding period</td></tr>
           </tbody>
         </table>
+      </div>
+
+      <div class="qa-section">
+        <div class="section-eyebrow">The Pro-Rata Rule</div>
+        <h2>The Pro-Rata Rule: Why Non-Deductible IRAs Complicate Conversions</h2>
+        <p>If you have a mix of pre-tax (deductible) and after-tax (non-deductible) money in any traditional IRA, the IRS requires you to treat every withdrawal and conversion as coming proportionally from both pools. You cannot choose to convert only your non-deductible contributions tax-free. This is the pro-rata rule, and ignoring it is one of the most expensive mistakes in Roth conversion planning.</p>
+
+        <div class="example-calc">
+          <h3>Example: $90,000 pre-tax IRA + $10,000 non-deductible IRA, convert $10,000 to Roth</h3>
+          <div class="example-row"><span class="label">Total IRA balance (all accounts combined)</span><span class="value">$100,000</span></div>
+          <div class="example-row"><span class="label">After-tax (non-deductible) basis</span><span class="value">$10,000</span></div>
+          <div class="example-row"><span class="label">Tax-free percentage of any conversion</span><span class="value">10% ($10K / $100K)</span></div>
+          <div class="example-row"><span class="label">Conversion amount</span><span class="value">$10,000</span></div>
+          <div class="example-row"><span class="label">Tax-free portion of conversion</span><span class="value">$1,000 (10%)</span></div>
+          <div class="example-row total"><span class="label">Taxable portion of conversion</span><span class="value">$9,000 (90%)</span></div>
+        </div>
+
+        <div class="warning-callout">
+          <p><strong>The backdoor Roth only works cleanly with no pre-existing IRA balance.</strong> High earners who do a backdoor Roth conversion get hit with the pro-rata rule if they have any pre-tax IRA money elsewhere. The cleanest solution is to roll your traditional IRA balance into a current employer 401(k) before doing the backdoor conversion -- 401(k) balances are excluded from the pro-rata calculation.</p>
+        </div>
+
+        <table class="facts-table">
+          <thead>
+            <tr><th>Situation</th><th>Pro-Rata Impact</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Only pre-tax IRA money</td><td>No issue -- 100% of any conversion is taxable, as expected</td></tr>
+            <tr><td>Only non-deductible IRA contributions, no growth</td><td>No issue -- 100% tax-free conversion (classic backdoor Roth)</td></tr>
+            <tr><td>Mix of pre-tax and after-tax IRA money</td><td>Pro-rata rule applies -- partial tax on every conversion</td></tr>
+            <tr class="highlight-row"><td>Pre-tax 401(k) rolled to IRA before backdoor Roth</td><td>Creates pro-rata problem -- consider rolling into employer plan instead</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Blog cross-links -->
+      <div class="blog-link-strip">
+        <h3>From the Blog</h3>
+        <div class="blog-link-list">
+          <a class="blog-link-item" href="/blog/backdoor-roth-ira-guide-2026">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Backdoor Roth IRA Guide 2026: How High-Income Earners Can Still Contribute
+          </a>
+          <a class="blog-link-item" href="/blog/roth-ira-income-limits-2026">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Roth IRA Income Limits 2026: Eligibility and Phase-Out Ranges
+          </a>
+          <a class="blog-link-item" href="/blog/retirement-accounts-and-taxes-401k-ira-roth">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Retirement Accounts and Taxes: 401(k), IRA, and Roth Compared
+          </a>
+          <a class="blog-link-item" href="/blog/taxes-in-retirement-what-to-expect">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            Taxes in Retirement: What to Expect and How to Plan
+          </a>
+        </div>
       </div>
 
       <div class="ad-zone">
@@ -421,10 +651,23 @@
             <div class="faq-answer">No. Roth conversions are separate from annual Roth contribution limits. In 2025 you can contribute up to $7,000 ($8,000 if 50 or older) directly to a Roth IRA if your income qualifies. You can also convert any amount from traditional accounts on top of that. They do not count against each other.</div>
           </div>
 
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Does a Roth conversion affect Medicare premiums (IRMAA)?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Yes. A large Roth conversion raises your modified adjusted gross income (MAGI) in the conversion year. Medicare uses MAGI from two years prior to set Part B and Part D premiums. If your MAGI crosses an IRMAA threshold, you will pay higher Medicare premiums two years after the conversion year. In 2025, surcharges begin at $106,000 MAGI for single filers and $212,000 for married filing jointly. This is an often-overlooked cost that can add $600 to $6,000 or more annually in premium surcharges depending on income level.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">What is the pro-rata rule and how does it affect my conversion?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">The pro-rata rule requires that any conversion be treated as coming proportionally from your pre-tax and after-tax IRA balances. If you have $90,000 in a traditional IRA (pre-tax) and $10,000 in non-deductible contributions (after-tax), then 90% of any conversion is taxable regardless of which dollars you think you are converting. You cannot selectively convert just the after-tax money. The rule applies across all your traditional, SEP, and SIMPLE IRAs combined -- not per account.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">Can I do a Roth conversion from a 401(k) instead of an IRA?<span class="faq-chevron"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></span></button>
+            <div class="faq-answer">Yes, if your employer plan allows in-service withdrawals or you have separated from your employer. A direct rollover from a 401(k) to a Roth IRA is a conversion and is taxed the same way -- the pre-tax amount rolled over is added to your ordinary income. One important difference: 401(k) balances are not included in the pro-rata calculation for IRA conversions, which is why some people roll traditional IRA money back into a 401(k) before doing a backdoor Roth to avoid the pro-rata rule.</div>
+          </div>
+
         </div>
       </div>
-
-      <div class="related-section">
         <h2>Related Calculators and Guides</h2>
         <div class="related-grid">
           <a class="related-card" href="/income-tax-calculator">
@@ -461,7 +704,7 @@
       </div>
 
       
-      <!-- ── RELATED GUIDES ── -->
+      <!-- RELATED GUIDES -->
       <div class="related-section" style="margin-top:40px">
         <h2>Related Guides</h2>
         <div class="related-grid">
